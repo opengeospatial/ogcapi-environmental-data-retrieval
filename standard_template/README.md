@@ -1,6 +1,6 @@
 # Standard template
 
-This GitHub repository contains the content for an OGC standard.
+This GitHub repository contains the content for the OGC API - Environmental Data Retrieval standard.
 
 The repo is organized as follows:
 
