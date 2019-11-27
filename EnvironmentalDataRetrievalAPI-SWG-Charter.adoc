@@ -1,0 +1,246 @@
+:Title: OGC (Environmental Data Retrieval API SWG Charter)
+:titletext: {Title}
+:doctype: book
+:encoding: utf-8
+:lang: en
+:toc:
+:toc-placement!:
+:toclevels: 4
+:numbered:
+:sectanchors:
+:source-highlighter: pygments
+
+<<<
+[cols = ">",frame = "none",grid = "none"]
+|===
+|{set:cellbgcolor:#FFFFFF}
+|[big]*Open Geospatial Consortium*
+|Submission Date: <2019-09-25>
+|Approval Date:   <2019-11-26>
+|Internal reference number of this OGC(R) document:    19-055r1
+|Category: OGC(R) Standards Working Group Charter
+|Authors:   Chris Little, Steve Olson, Frédéric Guillaud
+|===
+
+[cols = "^", frame = "none"]
+|===
+|[big]*{titletext}*
+|===
+
+[cols = "^", frame = "none", grid = "none"]
+|===
+|*Copyright notice*
+|Copyright (C) 2019 Open Geospatial Consortium
+|To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
+|===
+
+<<<
+
+To: OGC members & interested parties
+
+A new OGC Standards Working Group is being formed. The OGC members listed below have proposed the OGC Environmental Data Retrieval API SWG.  The SWG proposal provided in this document meets the requirements of the OGC Technical Committee (TC) Policies and Procedures.
+
+The SWG name, statement of purpose, scope, list of deliverables, audience, and language specified in the proposal will constitute the SWG's official charter. Technical discussions may occur no sooner than the SWG's first meeting.
+
+This SWG will operate under the OGC IPR Policy. The eligibility requirements for becoming a participant in the SWG at the first meeting (see details below) are that:
+
+* You must be an employee of an OGC member organization or an individual
+member of OGC;
+
+* The OGC member must have signed the OGC Membership agreement;
+
+* You must notify the SWG chair of your intent to participate to the first meeting. Members may do so by logging onto the OGC Portal and navigating to the Observer page and clicking on the link for the SWG they wish to join and;
+
+* You must attend meetings of the SWG. The first meeting of this SWG is at the time and date fixed below. Attendance may be by teleconference.
+
+Of course, participants also may join the SWG at any time. The OGC and the SWG welcomes all interested parties.
+
+Non-OGC members who wish to participate may contact us about joining the OGC. In addition, the public may access some of the resources maintained for each SWG: the SWG public description, the SWG Charter, Change Requests, and public comments, which will be linked from the SWG’s page.
+
+Please feel free to forward this announcement to any other appropriate lists. The OGC is an open standards organization; we encourage your feedback.
+
+== Purpose of the Standards Working Group
+
+The Environmental Data Retrieval API Standards Working Group will standardize several APIs, defined with OpenAPI (Version 3), to retrieve various common data patterns from a relatively persistent data store. The data patterns will include, but are not restricted to, data at a point in space and time, time series at a point, data along a trajectory, which may be 2, 3, or 4 dimensional, and covering a specified polygon or rectangular tile.
+
+The APIs will allow service users to retrieve, in effect, transient resources over a discrete sampling geometry, created by the service in response to a standardized query pattern.
+
+The APIs will provide 'building blocks' allowing the construction of more complex services.
+
+== Business Value Proposition
+
+Much environmental data is truly 'Big Data', as the data cannot be readily copied and distributed in reasonable timescales for many uses. By specifying precisely just the data required in a convenient pattern familiar to the user, a service provider can extract and serve the requested data, simplying access for the user. This then hides the service implementation details, while being scaleable both in terms of the underlying data volumes and the number of supported simultaneous users. 
+
+By using stable and standardized service APIs based on simple data retrieval patterns, it is envisaged that access and use of data and information will be improved in different domains, including geospatial, facilitating more innovation and value.  Lowering the barrier to and extending the reach of environmental data can result in increased use, new science as well as integration with non-traditional information communities.
+
+The standard will be consistent with the strategic direction established by "OGC API - Features - Part 1: Core" and the future OGC API - Common as part of evolving OGC API efforts.
+
+The service APIs will support both traditional and cloud-based approaches to computing and also enable a mix of public and private business models on a 'level playing field'. For example, no one country is capable of supplying weather forecast data at the highest useful resolutions for the whole globe. Therefore a distributed scalable approach is essential, enabling both advanced countries and the Least Developed Countries to contribute to global strategic initiatives of sustainability and development.
+
+The Environmental Data Retrieval API will support and be consistent with the HTTP and HTTPS protocols that are ubiquitous on the Web, and, where available, will use existing industry standards commonly used by developers, rather than geospatial specific resources. For example, security will be addressed by the use of OpenAPI (Version 3), allowing the use of security schemes that are common and familiar to Web developers, such as OAuth2 or JWT.
+
+The API will allow the server to provide details to guide the user of the API, such as allowing the choice of common, web-based, modern encodings such as JSON (GeoJSON/CoverageJSON), though this is not mandated.
+
+== Scope of Work
+
+The original requirements for this proposed standard were evolved in the Met Ocean Domain Working Group as the Weather on the Web (WotW). However, many of the data patterns are applicable in other environmental sciences, or even other domains. The data retrieval patterns to access weather and climate data have been stable for many years. Such patterns include, but are not restricted to, point data, time-series at a point, vertical profiles, trajectories (whether in 2, 3 or 4 dimensions), polygons, or rectangular tiles from a tileset.
+
+There are two main use cases: 
+
+1. An end user requires some convenient data for a specific, familiar purpose, such as a forecast surface temperature at a point or over an area, or a timeseries of water flow at a river location, or wind speed and direction along a proposed trajectory or route. However the user does not need the full range of data that modern weather or climate predictions, or other Big Data systems, provide.
+
+2. A service provider of many value-added products and information services needs an architecture that decouples the provision of data to many evolving distributed applications from the underlying stable, operational, centralized bulk data production systems. 
+
+The underlying bulk data may be based on regular calculation grids as used in numerical weather prediction or environmental modelling, or may be point-cloud observation based, or other structures.
+
+The planned service APIs will return the requested data in a specified structured payload format, such as JSON and derivatives, but will not be limited to only JSON.
+
+Queries against the service endpoints using the APIs will return all the information that users should need to use the services successfully.
+
+=== Statement of relationship of planned work to the current OGC standards baseline
+
+There is no existing OGC standard that directly addresses the above requirements.
+
+The use of the OpenAPI (Version 3) framework is proposed to define the APIs, which is consistent with the "OGC API - Features - Part 1: Core" specification. Previous experiments, proof-of-concepts and prototyping work have confirmed the feasibility of a consistent approach. 
+
+Once the SWG is established, a candidate standard will be developed within one year.
+
+=== What is Out of Scope?
+
+The SWG will only standardize data retrieval orientated APIs, not product-based APIs that need business specific logic and rules.
+
+Initially, the SWG will not standardize any data patterns other than: point, timeseries, vertical profile, trajectory, corridor, polygon or rectangular tile. Other common patterns, such as a 2D plume, vertical cross-section, or aggregate patterns, may be considered later.
+
+Initially, the SWG will not standardize data patterns that involve the return of ensemble values or probability distribution functions (the fifth dimension), but envisage that it should be straightforward to generalize to support these use cases.
+
+The SWG will not specify mechanisms for finding data retrieval services and their endpoints.
+
+As the standard will be modular and multi-part, using the concept of core and extensions will allow a customized approach to implementing service APIs by implementors and data/service providers.  If a community needs to develop a profile, it should be specified and governed by that community.
+
+=== Specific Existing Work Used as Starting Point
+
+The SWG work is based on:
+
+1. The Met Ocean Domain WG work to specify various Best Practices;
+
+2. The WCS Met Ocean Application profiles done in the WCS SWG https://portal.opengeospatial.org/files/?artifact_id=81773&version=2 ,  https://portal.opengeospatial.org/files/?artifact_id=81789&version=1 , https://portal.opengeospatial.org/files/?artifact_id=81778&version=1 ;
+
+3. The OGC API - Features - Part 1: Core standard https://github.com/opengeospatial/ogcapi-features ;
+
+4. A Met Ocean DWG Hackathon held in December 2018 in Washington DC, USA;
+
+5. The OGC Hackathon held in June 2019 in London, England, UK;
+
+6. The Weather on the Web API Engineering Report https://github.com/opengeospatial/Weather-on-the-Web-ER .
+
+7. Any relevant published or draft Engineering Reports from the OGC Innovation Programme.
+
+=== Is This a Persistent SWG
+
+[x] YES
+
+[ ] NO
+
+=== When can the SWG be Inactivated
+
+As there are several data pattern APIs to be standardized, persistent SWG status is proposed, but when all the initial deliverables are finished, inactivation will be considered.
+
+== Description of deliverables
+
+A series of APIs will be standardized for different data retrieval patterns. The Met Ocean DWG and other interested parties have already prioritized the patterns at various OGC meetings.
+
+The Met Ocean DWG will also produce a Best Practice document for implementing these APIs within an operational meteorological context.
+
+=== Initial Deliverables
+
+1. API to retrieve data values at a specified location altitude and time (x,y,z,t). Several operational versions of this pattern already exist in different countries for several years.
+
+2. API to retrieve a time series of values at a specified location and height (x,y,z), whether elevation or altitude with a specific vertical CRS. This pattern also has some operational implementations.
+
+=== Additional SWG Tasks
+
+3. API to retrieve a vertical profile of values at a specified location and time (x,y,t).
+
+4. API to retrieve an array of values across a rectangular area (tile). Operational immplementation of this pattern has started.
+
+5. API to retrieve a set of values across a polygonal area.
+
+5. API to retrieve a series of values along a specified trajectory, whether 2,3, or 4 dimension.
+
+6. API to retrieve a series of values within a 'corridor', that is, a trajectory with a surrounding buffer region along its length.
+
+== IPR Policy for this SWG
+
+[x] RAND-Royalty Free
+
+[ ] RAND for fee
+
+== Anticipated Audience / Participants
+
+Non-expert users of small timely subsets of large data repositories. Use cases vary from rapid, safety-critical environments to research retrievals from long term archives.
+
+Web developers, who are not experts in the characteristics of the data, but have compelling perhaps novel, applications using data from disparate domains.
+
+== Domain Working Group Endorsement
+
+The Met Ocean DWG discussed and endorsed the establishment of this SWG and presented to the OGC Technical Committee in Plenary in Leuven in June 2019.
+
+== Other informative information about the work of this SWG
+
+=== Collaboration
+
+Liaise with the OGC API Features SWG and OWS Common SWG, and other SWGs and DWGs, to ensure consistency of approach to API standardization.
+
+Other collaborators are expected to include, beside the Met Ocean DWG: the Hydrology DWG, WFS/FES SWG.
+
+As it is expected the W3C Best Practices for Data, and Spatial Data, on the Web will be relevant, there may be collaboration with the W3C Spatial Data on the Web Interest Group. 
+
+There may also be the possibility of collaboration with the Research Data Alliance (RDA), and in particular their Data and Metadata Granularity Task Force, part of the Data Discovery Paradigms Interest Group. Granular metadata should be closely related to practical data query patterns.
+
+=== Similar or Applicable Standards Work (OGC and Elsewhere)
+
+The UK Government has mandated the use of OpenAPI Version 3 as a national standard for documenting UK government RESTful APIs. https://www.gov.uk/government/publications/recommended-open-standards-for-government/describing-restful-apis-with-openapi-3 
+
+The Netherlands Government is working towards standardizing access to geospatial data with APIs. https://geonovum.github.io/KP-APIs/#api-designrules 
+
+=== Details of first meeting
+
+An Ad Hoc Working Group meeting will be convened in Banff, September 2019 to discuss and hopefully approve this charter.
+
+An initial teleconference will be organized after Charter adoption, and the first face-to-face meeting will be at the OGC TC Toulouse meeting in November 2019.
+
+=== Projected on-going meeting schedule
+
+There will be face-to-face meetings organized at each OGC Technical Committee meeting. GoToMeeting teleconferences will be arranged, probably fortnightly, between TC meetings, and the documents will be developed on an OGC public GitHub repository. Email notifications of the issues being discussed will be made available for those unable to access the GitHub.
+
+=== Supporters of this Charter
+
+The following people support this proposal and are committed to the Charter and projected meeting schedule. These members are known as SWG Founding or Charter members. The charter members agree to the SoW and IPR terms as defined in this charter. The charter members have voting rights beginning the day the SWG is officially formed. Charter Members are shown on the public SWG page. Extend the table as necessary.
+
+|===
+|Name             |Organization
+|Chris Little     |UK Met Office
+|Steve Olson      |US National Weather Service
+|Frédéric Guillaud|Météo-France
+|Dave Blodgett    |US Geological Survey
+|Tom Kralidis     |Meteorological Service of Canada
+|Roope Tervo      |Finnish Meteorological Institute
+|Bruce Bannerman  |Individual
+|Chris Lynnes     |NASA
+|Ethan Davis      |UCAR
+|Cristiano Lopes  |ESA
+|Iain Burnell     |DSTL
+|Keith Ryden      |ESRI
+|===
+
+=== Conveners
+
+Chris Little: Chair, Met Ocean Domain WG
+
+== References
+
+Weather on the Web Draft Engineering Report https://github.com/opengeospatial/Weather-on-the-Web-ER
+
+OGC WCS Met Ocean Application Profile https://portal.opengeospatial.org/files/?artifact_id=81773&version=2
+
+OGC API - Features - Part 1: Core https://github.com/opengeospatial/WFS_FES
