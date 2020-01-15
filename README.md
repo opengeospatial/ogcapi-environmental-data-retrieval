@@ -7,6 +7,6 @@ It contains:
   
   Standard document, as a work-in-progress draft.
 
-It will also contain the plan of work and links to other relevant documents. 
+It will also contain the plan of work and links to other relevant documents such as minutes, actions and notes of meetings. 
 
  
