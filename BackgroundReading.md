@@ -1,6 +1,6 @@
 ## Background Reading and Information ##
 
-1. Early work on the Environmental Data Retrieval API was done by the Met Ocean Domain Working Group, who used the name Weather on the Web (wotW). They have drafted an Engineering Rport to summarise the experiences and recommendations. See https://github.com/opengeospatial/Weather-on-the-Web-ER 
+1. Early work on the Environmental Data Retrieval API was done by the Met Ocean Domain Working Group, who used the name Weather on the Web (WotW). They have drafted an Engineering Rport to summarise the experiences and recommendations. See https://github.com/opengeospatial/Weather-on-the-Web-ER 
 
 2. The Met Ocean Domain Working Group will produce an OGC Best Practice document to give guidance to implementers of services in a meteorological context. This will be in a new OGC GitHub repository.
 
