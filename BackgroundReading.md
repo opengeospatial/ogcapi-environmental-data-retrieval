@@ -14,4 +14,8 @@
 
 7. The API work across OGC is strongly informed by the W3C Recommmendation: Data on the Web Best Practices https://www.w3.org/TR/dwbp/ and the W3C Candidate Recommendation and Technical Note: Spatial Data on the Web Best Practices https://www.w3.org/TR/sdw-bp/, jointly developed by OGC and W3C.
 
-8. OGC's current Best Practice for developing APIs is at https://github.com/opengeospatial/OGC-Web-API-Guidelines .
+8. OGC's current Best Practice for developing APIs is at https://github.com/opengeospatial/OGC-Web-API-Guidelines 
+
+9. The EDR API SWG will follow wherever possible the approach of the first modern API standard from OGC, the "OGC API - Features" at https://github.com/opengeospatial/ogcapi-features and docs.opengeospatial.org/is/17-069r3/17-069r3.html but bearing in mind we are not dealing with pre-defined features with identifiers.
+
+10. The EDR API SWG is also obliged by OGC Policy to be compatible with the "OGC API - Common" emerging standard at https://github.com/opengeospatial/oapi_common wherever possiblre, and to liaise with the appropriate Standards Working Groups and document incompatible essential differences, for future work.
