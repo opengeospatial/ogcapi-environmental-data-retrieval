@@ -6,7 +6,7 @@
 
 3. There are some simple use cases or scenarios at https://github.com/opengeospatial/weather-on-the-web/tree/master/use-cases 
 
-4. There is some more background material in the Weather on the Web repo at https://github.com/opengeospatial/weather-on-the-web . The README.md file is a good place to start. SOmeo fo the challenges are at https://github.com/opengeospatial/Weather-on-the-Web-ER/blob/master/7-challenges.adoc
+4. There is some more background material in the Weather on the Web repo at https://github.com/opengeospatial/weather-on-the-web . The README.md file is a good place to start. Some fo the challenges are at https://github.com/opengeospatial/Weather-on-the-Web-ER/blob/master/7-challenges.adoc
 
 5. The minutes of this group should highlight the decisions that have been made. See https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki 
 
