@@ -12,6 +12,6 @@
 
 6. The background for an API, rather than protocol, serialisation or data format, approach is at https://docs.opengeospatial.org/wp/16-019r4/16-019r4.html and the blog entry at https://www.opengeospatial.org/blog/2996 
 
-7. The API work across OGC is strongly informed by the W3C Recommmendation: Data on the Web Best Practices https://www.w3.org/TR/dwbp/ and the W3C CAndidate Recommendation and Technical Note: Spatial Data on the Web Best Practices https://www.w3.org/TR/sdw-bp/, jointly developed by OGC and W3C.
+7. The API work across OGC is strongly informed by the W3C Recommmendation: Data on the Web Best Practices https://www.w3.org/TR/dwbp/ and the W3C Candidate Recommendation and Technical Note: Spatial Data on the Web Best Practices https://www.w3.org/TR/sdw-bp/, jointly developed by OGC and W3C.
 
 8. OGC's current Best Practice for developing APIs is at https://github.com/opengeospatial/OGC-Web-API-Guidelines .
