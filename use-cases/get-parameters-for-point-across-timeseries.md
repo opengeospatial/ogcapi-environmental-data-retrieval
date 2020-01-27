@@ -1,8 +1,8 @@
 ## Get Parameters for point across a timeseries
-**Contributed by:** @RichCarne - UK Met Office
+**Contributed by:** @chris-little - UK Met Office
 
 ## Typical user scenario:
-Developers creating applications requireing simple access to weather infromation at surface level wish to make a position based requests which result in a collection of weather parameters being returned for a specified time period. It should be possible for the request to be made both forwards and backwards from the current time.
+Developers creating applications requiring simple access to weather infromation at surface level wish to make a position based requests which result in a collection of weather parameters being returned for a specified time duration. It should be possible for the request to be made both forwards and backwards from the current time.
 
 ## Actors: 
 Developer Application
