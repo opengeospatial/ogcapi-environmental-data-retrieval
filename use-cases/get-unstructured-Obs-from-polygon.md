@@ -1,7 +1,7 @@
 
 ## get unstructured Obs from polygon
 
-**Contributed by:** @RichCarne - Met Office
+**Contributed by:** @chris-little - Met Office
 
 ## Typical user scenario:
 Observation data is naturally unstructured in terms of its position, it should be possible for a developer to make a request for a timeseries of observation data for a given area represented by a polygon.
