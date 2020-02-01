@@ -1,0 +1,13 @@
+{
+  "description":"An error occurred",
+  "content": {
+      "application/json": {
+          "schema": {
+              "href": "https://raw.githubusercontent.com/opengeospatial/OAPI_Common/master/core/openapi/schemas/exception.yaml"
+              }
+          },
+      "text/html": {
+          "schema": {"type": "string"}
+          }   
+     }
+}

@@ -1,0 +1,84 @@
+==== Parameters
+
+==== Parameter coords
+
+include::../REQ_rc-coords-definition.adoc[]
+
+include::../REQ_rc-coords-response.adoc[]
+
+"Intersects" means that the rectangular area specified in the parameter `coords` includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries (e.g. for curves the start and end position and for surfaces the outer and inner rings).
+
+The polygon query supports two Well Know Text geometry types Polygon and Multipolygon, the polygon query SHOULD support 3D queries allowing the definition of a vertical level value (z) therefore coordinates for geometries may be 2D (x, y) or 3D (x, y, z).  If a height level is not specified all available levels SHOULD be returned.
+
+All polygons in a MULTIPOLYGON request must either by 2D or 3D a request MUST not contain a mix a 2D and 3D definitions.
+
+
+.A polygon covering the UK 
+=================
+An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)
+
+`coords=POLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
+
+=================
+
+
+.A polygon covering the UK for a specific vertical level
+=================
+An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S) at 500hPa
+
+`coords=POLYGON\((-15 48.8 500,-15 60.95 500,5 60.85 500,5 48.8 500,-15 48.8 500))`
+
+=================
+
+
+.A polygon covering the UK multiple heights 
+=================
+An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S) at 10m and 80m 
+
+`coords=MULTIPOLYGON\((-15 48.8 10,-15 60.95 10,5 60.85 10,5 48.8 10,-15 48.8 10),(-15 48.8 80,-15 60.95 80,5 60.85 80,5 48.8 80,-15 48.8 80))`
+=================
+
+
+.Multiple areas  
+=================
+Selecting data for two different regions
+
+`coords=MULTIPOLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
+=================
+
+==== Parameter interpolationX
+
+include::../REQ_rc-interpolationX-definition.adoc[]
+
+<<<
+
+include::../REQ_rc-interpolationX-response.adoc[]
+
+If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.
+
+
+.An interpolationX
+=================
+Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value
+
+`interpolationX=R10/linear`
+=================
+
+==== Parameter interpolationY
+
+include::../REQ_rc-interpolationY-definition.adoc[]
+
+<<<
+    
+include::../REQ_rc-interpolationY-response.adoc[]
+
+If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
+
+
+.An interpolationY
+=================
+Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value 
+
+`interpolationY=R3/nearest-neighbour`
+=================
+

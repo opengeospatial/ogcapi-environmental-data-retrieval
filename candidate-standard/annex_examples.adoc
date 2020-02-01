@@ -1,0 +1,29 @@
+[appendix]
+:appendix-caption: Annex
+== Examples (Informative)
+
+[[landing-page-examples]]
+=== Example Landing Pages
+
+include::examples/landing_page_JSON_1.adoc[]
+
+[[oas-examples]]
+=== API Description Examples
+
+NOTE: include::examples/tbd.adoc[]
+
+[[conformance-response-examples]]
+=== Conformance Examples
+
+include::examples/conformance_response_JSON_1.adoc[]
+
+[[collections-metadata-examples]]
+=== Collections Metadata Examples
+
+include::examples/collections_metadata_JSON_1.adoc[]
+
+[[collection-information-examples]]
+=== Collection Information Examples
+
+NOTE: include::examples/tbd.adoc[]
+

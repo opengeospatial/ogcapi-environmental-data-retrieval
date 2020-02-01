@@ -1,0 +1,46 @@
+[[overview]]
+== Overview
+
+=== Evolution from OGC Web Services
+
+OGC Web Service (OWS) standards implement a Remote-Procedure-Call-over-HTTP architectural style using XML for payloads. This was the state-of-the-art when OGC Web Services (OWS) were originally designed in the late 1990s. However, times have changed. New Resource-Oriented APIs have begun to replace Service-Oriented Web Services. And new OGC API standards are under development to provide 
+API alternatives to the OWS standards.
+
+OGC API (OAPI) Common specifies the common kernel of this API approach to services that follows the current Web architecture. In particular, the <<SDWBP,W3C/OGC best practices for sharing Spatial Data on the Web>> as well as the <<DWBP,W3C best practices for sharing Data on the Web>>.
+
+Beside the general alignment with the architecture of the Web (e.g., consistency with HTTP/HTTPS, hypermedia controls), another goal for OGC API standards is modularization. This goal has several facets:
+
+* Clear separation between common core requirements and more resource specific capabilities. This document specifies the core or _common_ requirements that are relevant for almost everyone who wants to build a spatial API. Additional capabilities that several communities are using today will be specified as extensions to the Common API.
+* Technologies that change more frequently are decoupled and specified in separate modules ("conformance classes" in OGC terminology). This enables, for example, the use/re-use of new encodings for spatial data or API descriptions.
+* Modularization is not just about a single "service". OGC APIs will provide building blocks that can be reused in APIs in general. In other words, a server supporting the OGC-Feature API should not be seen as a standalone service.  Rather it should be viewed as a collection of API building blocks which together implement API-Feature capabilities. A corollary of this is that it should be possible to implement an API that simultaneously conforms to conformance classes from the Feature, Coverage, and other OGC Web API standards.
+
+Implementations of OGC API Common are intended to support two different approaches for how clients can use the API.
+
+In the first approach, clients are implemented with knowledge about this standard and its resource types. The clients navigate the resources based on this knowledge and based on the responses provided by the API. The API definition may be used to determine details, e.g., on filter parameters, but this may not be necessary depending on the needs of the client. These are clients that are in general able to use multiple APIs as long as they implement OGC API Common.
+
+The other approach targets developers that are not familiar with the OGC API standards, but want to interact with spatial data provided by an API that happens to implement OGC API Common. In this case the developer will study and use the API definition, typically an OpenAPI document, to understand the API and implement client code to interact with the API. This assumes familiarity with the API definition language and the related tooling, but it should not be necessary to study the OGC API standards.
+
+=== Encodings
+
+NOTE: Arguably this requires a conformance class for every possible encoding. Do we really want a conformance class for GeoTIFF? or NITF?, or Protobuf? Should this requirement be limited to those resources defined in this standard? 
+
+This standard does not mandate any encoding or format. But it does provide extensions for encodings which are commonly used in OGC APIs.  In addition to HTML as the standard encoding for Web content, rules for commonly used encodings for spatial data on the web are provided (GeoJSON).
+
+None of these encodings is mandatory. An implementation of the _Core_ requirements class does not have to support any of them. It may instead implement an entirely different set of encodings.
+
+Support for HTML is <<rec_html,recommended>>. HTML is the core language of the World Wide Web. An API that supports HTML will support browsing the spatial resources with a web browser and will also enable search engines to crawl and index those resources.
+
+GeoJSON is a commonly used format that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, GeoJSON is <<rec_geojson,recommended>> for APIs which expose feature data *and* where GeoJSON is capable of supporting the intended use.
+
+Some examples of cases that are out-of-scope for GeoJSON are:
+
+* When solids are used for geometries (e.g. in a 3D city model),
+* Geometries that include non-linear curve interpolations that cannot be simplified (e.g., use of arcs in authoritative geometries),
+* Geometries that have to be represented in a coordinate reference system that is not based on WGS 84 longitude/latitude (e.g. an authoritative national reference system),
+* Features that have more than one geometric property.
+
+The recommendations for using HTML and GeoJSON reflect the importance of HTML and the current popularity of JSON-based data formats. As the practices in the Web community evolve, these recommendations will likely be updated in future versions of this standard to provide guidance on using other encodings.
+
+This part of the OAPI standard does not provide any guidance on other encodings. The supported encodings, or more precisely the media types of the supported encodings, can be determined from the API definition. The desired encoding is selected using HTTP content negotiation.
+
+For example, if the server supports link:https://tools.ietf.org/html/rfc8142[GeoJSON Text Sequences] an encoding that is based on JSON text sequences and GeoJSON to support streaming by making the data incrementally parseable, the media type `application/geo+json-seq` would be used.

@@ -1,0 +1,12 @@
+[[req_edr_interpolationZ-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* |*/req/edr/interpolationZ-response*
+^|A|If the `interpolationZ` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z intervals.
+^|B |The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :
+
+[source,java]
+----
+interpolationZ = "R" intervals "/" intervalinterpolation-method
+----
+|===

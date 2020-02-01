@@ -1,0 +1,31 @@
+[[ats_collections_rc-bbox-definition]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-bbox-definition*
+^|Test Purpose |Validate that the bounding box query parameters are constructed correctly.
+^|Requirement |<<req_collections_rc-bbox-definition,/req/collections/rc-bbox-definition>>
+^|Test Method |Verify that the `bbox` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: bbox
+in: query
+required: false
+schema:
+  type: array
+  minItems: 4
+  maxItems: 6
+  items:
+    type: number
+style: form
+explode: false
+----
+
+Use a bounding box with four numbers in all requests:
+
+* Lower left corner, WGS 84 longitude
+* Lower left corner, WGS 84 latitude
+* Upper right corner, WGS 84 longitude
+* Upper right corner, WGS 84 latitude
+
+|===

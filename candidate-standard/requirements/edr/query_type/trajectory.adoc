@@ -1,0 +1,55 @@
+==== Parameters
+
+==== Parameter coords
+
+include::../REQ_rc-coords-definition.adoc[]
+
+include::../REQ_rc-coords-response.adoc[]
+
+"Intersects" means that the area specified by the parameter `coords`, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
+
+The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoc time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  
+
+If the collection has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned
+
+If the collection does not have a height dimension but time values are required in the WKT geometry the z value SHOULD always be 0.
+
+
+
+.A basic surface route 
+=================
+From Bristol to Exeter
+
+`coords=LINESTRING(51.14 -2.98,51.36 -2.87,51.03 -3.15,50.74 -3.48,50.9 -3.36)`
+
+=================
+
+.A basic surface route with defined time intervals
+=================
+From Bristol to Exeter 
+
+`coords=LINESTRING(51.14 -2.98 0 1560507000,51.36 -2.87 0 1560507600,51.03 -3.15 0 1560508200,50.74 -3.48 0 1560508500,50.9 -3.36 0 1560510240)`
+=================
+
+<<<
+
+==== Parameter interpolation
+    
+include::../REQ_rc-interpolation-definition.adoc[]
+    
+include::../REQ_rc-interpolation-response.adoc[]
+    
+If not specified the query will not perform any interpolation of the data points specified in the `coords` query parameter.  If the `interpolation` method does not match an entry in the defined list of valid `interpolation` methods for the collection a 403 message SHOULD be returned.
+    
+    
+
+<<<
+    
+==== Parameter interpolationZ
+    
+include::../REQ_rc-interpolationZ-definition.adoc[]
+    
+include::../REQ_rc-interpolationZ-response.adoc[]
+    
+If not specified the query will not perform any interpolation of data along the height axis.  If the `interpolationZ` method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
+    

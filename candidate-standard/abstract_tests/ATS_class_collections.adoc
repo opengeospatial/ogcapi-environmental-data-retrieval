@@ -1,0 +1,53 @@
+[[ats_cllections]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-common/1.0/conf/collections
+|Target type |Web API
+|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi_common/1.0/req/collections>>
+|Dependency |<<ats_core,Conformance Class "OAPI Core">>
+|===
+
+==== General Tests
+
+===== CRS 84
+
+include::collections/ATS_crs84.adoc[]
+
+==== Feature Collections {root}/collections
+
+include::collections/ATS_rc-md-op.adoc[]
+
+include::collections/ATS_rc-md-success.adoc[]
+
+==== Feature Collection {root}/collections/{collectionId}
+
+include::collections/ATS_src-md-op.adoc[]
+
+include::collections/ATS_src-md-success.adoc[]
+
+==== Features {root}/collections/{collectionId}/items
+
+NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
+
+include::collections/ATS_rc-op.adoc[]
+
+include::collections/ATS_rc-response.adoc[]
+
+==== Second Tier Tests
+These tests are invoked by other tests.
+
+===== Extent
+
+include::collections/ATS_rc-md-extent.adoc[]
+
+===== Items
+
+include::collections/ATS_rc-md-items.adoc[]
+
+include::collections/ATS_rc-md-items-links.adoc[]
+
+===== Links
+
+include::collections/ATS_rc-md-links.adoc[]
+

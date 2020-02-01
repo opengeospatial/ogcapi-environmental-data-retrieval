@@ -1,0 +1,49 @@
+.Collection metadata response document
+=================
+This feature collection metadata example response in JSON is for a dataset with a single collection "buildings". It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+
+There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
+
+Representations of this resource in other formats are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "alternate".
+
+An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".
+
+A bulk download of all the features in the dataset is referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "enclosure"
+
+Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").
+
+Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
+Gregorian calendar).
+
+----
+{
+  "links": [
+    { "href": "http://data.example.org/collections.json",
+      "rel": "self", "type": "application/json", "title": "this document" },
+    { "href": "http://data.example.org/collections.html",
+      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
+    { "href": "http://schemas.example.org/1.0/foobar.xsd",
+      "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
+  ],
+  "collections": [
+    {
+      "id": "buildings",
+      "title": "Buildings",
+      "description": "Buildings in the city of Bonn.",
+      "extent": {
+        "spatial": [ 7.01, 50.63, 7.22, 50.78 ],
+        "temporal": [ "2010-02-15T12:34:56Z", "2018-03-18T12:11:00Z" ]
+      },
+      "links": [
+        { "href": "http://data.example.org/collections/buildings/items",
+          "rel": "items", "type": "application/geo+json",
+          "title": "Buildings" },
+        { "href": "http://example.org/concepts/building.html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Feature catalogue for buildings" }
+      ]
+    }
+  ]
+}
+----
+=================
