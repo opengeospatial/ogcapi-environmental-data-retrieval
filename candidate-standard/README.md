@@ -2,6 +2,16 @@
 
 This candidate specification for Environmental-Data-Retrieval-API (EDR) is based on some key principles
 
+### A Collection
+
+The definition of a `Collection` with this candidate is very basic, all data parameters in a collection `MUST` follow these rules:
+
+1. Share the same Geo-Temporal dimension units of measurement.
+2. Can all be re-gridded to any of the output CRS values advertised by the `Collection`
+3. Can all be transformed into the outputFormats advertised by the `Collecton`
+
+
+
 ### The API is completly datasource agnostic
 
 With this approach each `Collection` is treated as a `black box` with a defined set of interfaces, regardless of the underlying structure of the data it is the data publishers responsibility to make the `Collection` conform to the API contract.  This does mean that a `Collection` can be a dynamically generated set of values or a query on a physical datasource as long as the interface to the `Collection` conforms with the defined API contracts. 
