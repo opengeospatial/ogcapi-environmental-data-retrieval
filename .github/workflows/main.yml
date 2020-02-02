@@ -5,7 +5,7 @@ on:
     branches-ignore:
       - 'master'
     paths:
-      - 'standard/EDR-candidate-specification.adoc'
+      - 'candidate-standard/EDR-candidate-specification.adoc'
 
 jobs:
   build:
