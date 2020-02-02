@@ -317,6 +317,12 @@ include::requirements/edr/query_type/cube.adoc[]
 include::requirements/edr/query_type/trajectory.adoc[]
 
 
+<<<
+
+=== Item 
+
+include::requirements/edr/query_type/item.adoc[]
+
 [[collection-general-requirements]]
 === General Requirements
 

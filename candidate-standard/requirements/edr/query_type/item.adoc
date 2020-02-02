@@ -1,0 +1,26 @@
+==== Parameters
+
+Due to the concept of `Collections` in EDR the item query is a powerful and flexible tool, but retains only simple options. It could be used to rerun a previously run query but with a replacement for one or more of the input parameters; this would be achieved by using the id field value from the successful output from a previous query as the input id query parameter of item query, then the API user could override one or more of the original query parameters by just entering the query parameters that they want to change (i.e. a trajectory query where the same route is used every day with the same interpolation options, crs and outputFormat and the user just needs to enter the new time range).
+
+Again this is dependant on the data publisher implementing support for the functionality.
+
+.id
+=================
+return information for the requested id
+
+id=gfs-query-2020-01-31
+
+=================
+
+As in the EDR concept a `Collection` is a black box it would be possible to overload the id query parameter to perform different actions, as it is the `Collection` black box that interprets how it handles the parameter; for instance in the Metar collection it could be combined with the parametername query parameter and the time parameter to return all Metars for ICAO id KIAD for the requested time period
+
+.
+=================
+return information for the requested id
+
+/collections/metar/raw/item?id=KIAD&parametername=icao_id&time=2020-01-31T00:00:00Z/2020-02-01T04:00:00Z
+
+=================
+
+This example does have a flaw in that the EDR API provides no mechanism for the user to discover the available icao id's in the metadata (the id's are available in the query results but not in any of the available metadata outputs).
+
