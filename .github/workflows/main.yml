@@ -1,0 +1,43 @@
+name: CreateDocs
+
+on:
+  push:
+    branches-ignore:
+      - 'master'
+    paths:
+      - 'standard/EDR-candidate-specification.adoc'
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@$GITHUB_REF
+
+    - name: Setup Node
+      uses: actions/setup-node@v1
+    - name: Cache node modules
+      uses: actions/cache@v1
+      with:
+        path: node_modules
+        key: modules-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          modules-
+    - name: NPM Install
+      run: npm install
+      env:
+        CI: true
+    - name: AsciiDoctor-PDF
+      run: npm run generate-pdf
+    - name: Commit files
+      run: |
+        git config --global user.email "actions@github.com"
+        git config --global user.name "Actions"
+        git add standard/EDR-candidate-specification.*
+        git commit -m 'AsciiDoctor-PDF build from Actions'
+    - name: Push changes
+      uses: $GITHUB_ACTOR/github-push-action@$GITHUB_REF
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}    
