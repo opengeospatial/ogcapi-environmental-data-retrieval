@@ -22,6 +22,26 @@ include::examples/conformance_response_JSON_1.adoc[]
 
 include::examples/collections_metadata_JSON_1.adoc[]
 
+
+[[instance-metadata-examples]]
+=== Collection Instance Metadata Examples
+
+include::examples/instance_metadata_JSON_gfs.adoc[]
+
+include::examples/instance_metadata_JSON_Metar.adoc[]
+
+include::examples/instance_metadata_JSON_DEM.adoc[]
+
+[[query-metadata-examples]]
+=== Collection Query Metadata Examples
+
+include::examples/query_metadata_JSON_gfs.adoc[]
+
+include::examples/query_metadata_JSON_metar.adoc[]
+
+include::examples/query_metadata_JSON_dem.adoc[]
+
+
 [[collection-information-examples]]
 === Collection Information Examples
 

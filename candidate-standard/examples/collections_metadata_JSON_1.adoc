@@ -43,7 +43,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/metar/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
@@ -60,6 +59,9 @@ Gregorian calendar).
         { "href": "http://data.example.org/collections/metars?outputFormat=html",
           "rel": "instances", "type": "text/html",
           "title": "Instances of the Metar collection" }
+        { "href": "ttps://data.example.org/collection/metar/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the Metar collection" }
       ]
     },
     {
@@ -80,7 +82,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
@@ -96,7 +97,10 @@ Gregorian calendar).
           "title": "Instances of the gfs_time-height_above_ground-lat-lon collection" },
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon?outputFormat=html",
           "rel": "instances", "type": "text/html",
-          "title": "Instances of the gfs_time-height_above_ground-lat-lon collection" }
+          "title": "Instances of the gfs_time-height_above_ground-lat-lon collection" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the gfs_time-height_above_ground-lat-lon collection" }
       ]
     },
     {
@@ -115,7 +119,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/dem/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/dem/link-for-more-details"
@@ -131,7 +134,10 @@ Gregorian calendar).
           "title": "Instances of the dem collection" },
         { "href": "http://data.example.org/collections/dem?outputFormat=html",
           "rel": "instances", "type": "text/html",
-          "title": "Instances of the dem collection" }
+          "title": "Instances of the dem collection" },
+        { "href": "https://data.example.org/collection/dem/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the dem collection" }          
       ]
     }
 

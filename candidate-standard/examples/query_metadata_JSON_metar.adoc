@@ -1,6 +1,6 @@
 .Collection instance metadata response document
 =================
-This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+This metadata example response in JSON is for a the Raw instance of the "Metar" Collection. It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
 There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
 
@@ -50,9 +50,9 @@ Gregorian calendar).
       "self": "Point"
     }
   ],
-  "id": "metar",
-  "title": "Metar observations",
-  "description": "Last 36 Hours of Global Metar observations",
+  "id": "metar_raw",
+  "title": "Raw Metar observations",
+  "description": "Last 36 Hours of Global Raw Metar observations",
   "parameters": {
     "air_temperature": {
       "description": {
@@ -73,6 +73,9 @@ Gregorian calendar).
           "en": "Temperature"
         }
       },
+      "measurementType": {
+        "method":"instantaneous"
+      },       
       "extent": {
         "horizontal": {
           "name": [

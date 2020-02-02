@@ -1,6 +1,6 @@
-.Collection instance metadata response document
+.Collection metadata response document
 =================
-This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+This collection metadata example response in JSON lists the available instances of the DEM collection. It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
 There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
 
@@ -25,7 +25,7 @@ Gregorian calendar).
     { "href": "http://schemas.example.org/1.0/foobar.xsd",
       "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
   ],
-  "collections": [
+  "instances": [
     {
       "id": "data",
       "title": "data",
@@ -42,7 +42,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/dem/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/dem/link-for-more-details"
@@ -58,7 +57,10 @@ Gregorian calendar).
           "title": "Metadata for the dem collection" },
         { "href": "http://data.example.org/collections/dem/data?outputFormat=html",
           "rel": "metadata", "type": "text/html",
-          "title": "Metadata for the dem collection" }
+          "title": "Metadata for the dem collection" },
+        { "href": "https://data.example.org/collection/dem/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the dem collection" }
       ]
     }
 

@@ -7,7 +7,6 @@
     "required": [
         "@context",
         "dc:accessRights",
-        "dc:license",
         "dc:source",
         "dc:publisher",
         "dc:created",
@@ -55,12 +54,6 @@
         },
         "dc:accessRights": {
             "type": "object"
-        },
-        "dc:license": {
-            "type": "string",
-            "examples": [
-                "https://www.licence.org/licence-doc"
-            ]
         },
         "dc:source": {
             "type": "object",

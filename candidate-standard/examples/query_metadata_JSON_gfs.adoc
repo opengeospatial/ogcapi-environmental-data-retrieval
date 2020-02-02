@@ -1,6 +1,6 @@
 .Collection instance metadata response document
 =================
-This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+This metadata example response in JSON is for a the  latest instance of the fs_time-height_above_ground-lat-lon collection. It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
 There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
 
@@ -57,9 +57,9 @@ Gregorian calendar).
       "self": "Polygon"
     }
   ],
-  "id": "gfs_025_time-height_above_ground-lat-lon",
-  "title": "Global Forecast System (GFS) time height_above_ground lat lon",
-  "description": "Global Forecast System (GFS) Model Global 0.25 degree Data time height_above_ground lat lon",
+  "id": "gfs_time-height_above_ground-lat-lon-latest",
+  "title": "Latest Global Forecast System (GFS) time height_above_ground lat lon",
+  "description": "Lates Global Forecast System (GFS) Model Global 0.25 degree Data time height_above_ground lat lon",
   "parameters": {
     "Apparent_temperature_height_above_ground": {
       "description": {

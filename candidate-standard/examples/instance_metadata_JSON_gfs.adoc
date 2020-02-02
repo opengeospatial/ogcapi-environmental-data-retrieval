@@ -1,6 +1,6 @@
 .Collection instance metadata response document
 =================
-This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+This collection metadata example response in JSON lists the available instances for the gfs_time-height_above_ground-lat-lon gfs collection. It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
 There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
 
@@ -44,7 +44,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
@@ -60,7 +59,10 @@ Gregorian calendar).
           "title": "Metadata for the latest run" },
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest?outputFormat=html",
           "rel": "metadata", "type": "text/html",
-          "title": "Metadata for the latest run" }
+          "title": "Metadata for the latest run" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the latest run" }          
       ]
     },
     {
@@ -81,7 +83,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
@@ -97,7 +98,10 @@ Gregorian calendar).
           "title": "Metadata for the 2020-02-01T12:00:00Z run" },
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T12:00:00Z?outputFormat=html",
           "rel": "instances", "type": "text/html",
-          "title": "Metadata for the 2020-02-01T12:00:00Z run" }
+          "title": "Metadata for the 2020-02-01T12:00:00Z run" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the 2020-02-01T12:00:00Z run" }  
       ]
     },
     {
@@ -118,7 +122,6 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
@@ -134,7 +137,10 @@ Gregorian calendar).
           "title": "Metadata for the 2020-02-01T00:00:00Z run" },
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T00:00:00Z?outputFormat=html",
           "rel": "instances", "type": "text/html",
-          "title": "Metadata for the 2020-02-01T00:00:00Z run" }
+          "title": "Metadata for the 2020-02-01T00:00:00Z run" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the 2020-02-01T00:00:00Z run" }  
       ]
     }
 
