@@ -10,7 +10,7 @@
 
 5. The minutes of this group should highlight the decisions that have been made. See https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki .
 
-6. The background for an API, rather than protocol, serialisation or data format, approach is at https://docs.opengeospatial.org/wp/16-019r4/16-019r4.html and the blog entry at https://www.opengeospatial.org/blog/2996 .
+6. The background for an API, rather than protocol, serialisation or data format, approach is at https://docs.opengeospatial.org/wp/16-019r4/16-019r4.html and the blog entry at https://www.opengeospatial.org/blog/2996 . The European Union Joint Research Centre (JRC) has also published a report on Web APIs https://op.europa.eu/en/publication-detail/-/publication/7144b6b0-0cf9-11ea-8c1f-01aa75ed71a1/language-en .
 
 7. The API work across OGC is strongly informed by the W3C Recommmendation: Data on the Web Best Practices https://www.w3.org/TR/dwbp/ and the W3C Candidate Recommendation and Technical Note: Spatial Data on the Web Best Practices https://www.w3.org/TR/sdw-bp/, jointly developed by OGC and W3C.
 
