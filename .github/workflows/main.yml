@@ -22,7 +22,7 @@ jobs:
       uses: actions/cache@v1
       with:
         path: node_modules
-        key: modules-${{ hashFiles('**/candidate-standard/package-lock.json') }}
+        key: modules-${{ hashFiles('**/package-lock.json') }}
         restore-keys: |
           modules-
     - name: NPM Install
