@@ -220,6 +220,7 @@ include::requirements/core/REQ_http.adoc[]
 |`404` |The requested resource does not exist on the server. For example, a path parameter had an incorrect value.
 |`405` |The request method is not supported. For example, a POST request was submitted, but the resource only supports GET requests.
 |`406` |Content negotiation failed. For example, the `Accept` header submitted in the request did not support any of the media types supported by the server for the requested resource.
+|`413` |Request entity too large. For example the query would involve returning more data than the server is capable of processing, the implementation should return a message explaining the query limits imposed by the server implementation.
 |`500` |An internal error occurred in the server.
 !===
 

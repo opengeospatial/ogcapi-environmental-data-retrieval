@@ -42,7 +42,9 @@ Gregorian calendar).
               "dcam":"http://purl.org/dc/dcam/"
           },
 
-          "dc:accessRights": {},
+          "dc:accessRights": {
+            
+          },
           "dc:source": {
               "dc:title":"datasource name",
               "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"

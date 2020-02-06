@@ -14,7 +14,7 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@$GITHUB_REF
+      uses: actions/checkout@v1
 
     - name: Setup Node
       uses: actions/setup-node@v1
@@ -38,7 +38,7 @@ jobs:
         git add standard/EDR-candidate-specification.*
         git commit -m 'AsciiDoctor-PDF build from Actions'
     - name: Push changes
-      uses: $GITHUB_ACTOR/github-push-action@$GITHUB_REF
+      uses: $GITHUB_ACTOR/github-push-action@v1
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}        
 
