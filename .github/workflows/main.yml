@@ -17,7 +17,7 @@ jobs:
       uses: actions/checkout@master
 
     - name: Setup Node
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@master
     - name: Cache node modules
       uses: actions/cache@master
       with:

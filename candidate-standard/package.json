@@ -1,7 +1,7 @@
 {
     "name": "Environmental-Data-Retrieval-API",
     "version": "1.0.0",
-    "description": "A cheat sheet for GitHub Actions",
+    "description": "Environmental-Data-Retrieval-API PDF generator",
     "main": "index.js",
     "scripts": {
       "generate-pdf": "asciidoctor-pdf EDR-candidate-specification.adoc"
