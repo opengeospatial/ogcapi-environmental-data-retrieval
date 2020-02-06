@@ -37,9 +37,7 @@ jobs:
         git config --global user.name "Actions"
         git add standard/EDR-candidate-specification.*
         git commit -m 'AsciiDoctor-PDF build from Actions'
-    - name: Push changes
-      uses: ${$GITHUB_ACTOR}/github-push-action@v1
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}        
+        git push https://${{github.actor}}:${{secrets.GITHUB_TOKEN}}@github.com/${{github.repository}}.git HEAD:${{ github.ref }}
+  
 
 
