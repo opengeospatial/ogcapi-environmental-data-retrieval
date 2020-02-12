@@ -196,18 +196,15 @@ paths:
         - Data
       summary: 'Query end point for point queries of instance {instanceId} of collection {collectionId}'
       description: Query end point for point queries
-      operationId: getDataFromPoint
+      operationId: getDataForPoint
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/outputFormat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
-        - name: crs
-          in: query
-          description: 'The label for the coordinate system of the X and Y values (i.e. EPSG:3857), if not defined X and Y will default to EPSG:4326 longitude and latitude values. The list of the supported CRS values are supplied by the metadata queries'
-          schema:
-            type: string
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/interpolation'
         - name: within
           in: query
           description: Defines radius of area around defined coordinates to include in the data selection
@@ -222,14 +219,6 @@ paths:
           example: "KM"
           schema:
              type: string
-        - name: interpolation
-          in: query
-          description: |
-            This defines the algorithm that identifies the best data match for the requested location
-            The valid interpolation method values are available in the results of the 
-            capabilities query methods of this API
-          schema:
-            type: string
         - name: coords
           in: query
           description: |
@@ -297,22 +286,14 @@ paths:
         - Data
       summary: 'Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon'
       description: Return the data values for the data Polygon defined by the query parameters
-      operationId: GetDataFromArea
+      operationId: GetDataForArea
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/outputFormat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
-        - name: crs
-          in: query
-          description: |-
-            Coordinate system that the data should be returned in, defined as an EPSG code 
-            value e.g. EPSG:4326.  If not specified output will be in the native coordinate 
-            system of the data
-          required: false
-          schema:
-            type: string
+        - $ref: '#/components/parameters/crs'
         - name: coords
           in: query
           description: |-
@@ -419,6 +400,438 @@ paths:
             text/html:
               schema:
                 type: string
+  '/collections/{collectionId}/{instanceId}/cube':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube'
+      description: Return the data values for the data Cube defined by the query parameters
+      operationId: GetDataForCube
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the cube
+            are selected. 
+
+            The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
+            
+            coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
+
+            which are values in the coordinate system defined by the crs query parameter 
+            if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
+
+            For instance a cube that roughly describes an area that contains 
+            South West England in WGS84 would look like
+
+            coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))
+
+            `If the WKT does not define a Rectangle the service will generate an error message`
+            
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+            
+          required: true
+          schema:
+            type: string
+        - name: interpolationX
+          in: query
+          description: |+
+            This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
+
+            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+
+            The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
+
+            The valid interpolation method values are available in the results of the capabilities query methods of this API
+
+          schema:
+            type: string
+        - name: interpolationY
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native Y coordinate 
+            resolution, the format is:
+
+            interpolationY=R<interpolation resolution>/<interpolation method> 
+            e.g.
+            interpolationY=R5/linear
+
+            The interpolation resolution is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The valid interpolation method values are available in the results of the 
+            capabilities query methods of this API
+          schema:
+            type: string
+        - name: minZ
+          in: query
+          required: true
+          description: |
+            Define the location of the bottom of the cube 
+            i.e. minZ=level
+
+            for instance if bottom of cube is at the 950hPa pressure level
+
+            minZ=850
+            
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - name: maxZ
+          in: query
+          required: true
+          description: |
+            Define the location of the top of the cube 
+            i.e. maxZ=level
+
+            for instance if top of cube is at the 650hPa pressure level
+
+            maxZ=650
+            
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - name: interpolationZ
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native Z coordinate 
+            resolution, the format is
+      
+            interpolationZ=R<interpolation resolution>/<interpolation method>/<cube height> 
+            e.g.
+            interpolationZ=R5/cubic spline/200
+      
+            The interpolation resolution is the number of intervals the user requires between
+            the a Z value of the bounding box and the maximum Z value of the bounding box.
+      
+            The `cube height` MUST always equal maxZ - minZ
+      
+            The valid interpolation method values are available in the results of the 
+            capabilities query methods of this API
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+  '/collections/{collectionId}/{instanceId}/trajectory':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for trajectory queries of instance {instanceId} of collection {collectionId} defined by a wkt linestring and a iso8601 time period'
+      description: Return the data values for the data Polygon defined by the query parameters
+      operationId: GetDataForTrajectory
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/interpolation'        
+        - $ref: '#/components/parameters/interpolationZ'        
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the linestring
+            are selected. 
+
+            The trajectory is defined using a Well Known Text string following 
+
+            coords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)
+
+            which are values in the coordinate system defined by the crs query parameter 
+            (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+            a trajectory which involves changes in height would be defined as follows
+            
+            coords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)
+
+            where z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           
+            
+            For instance a polygon that roughly describes an area that follows a section
+            of the M5 Motorway in WGS84 would look like 
+
+            coords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)
+
+            if changes in height were also required 
+
+            coords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)
+
+
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+            The coords parameter will only support 2D POLYGON definitions
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+  '/collections/{collectionId}/{instanceId}/corridor':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for Corridor queries of instance {instanceId} of collection {collectionId} defined by a polygon'
+      description: Return the data values for the Corridor defined by the query parameters
+      operationId: GetDataForCorridor
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the linestring
+            are selected. 
+
+            The trajectory is defined using a Well Known Text string following 
+
+            coords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)
+
+            which are values in the coordinate system defined by the crs query parameter 
+            (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+            a trajectory which involves changes in height would be defined as follows
+            
+            coords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)
+
+            where z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           
+            
+            For instance a polygon that roughly describes an area that follows a section
+            of the M5 Motorway in WGS84 would look like 
+
+            coords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)
+
+            if changes in height were also required 
+
+            coords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)
+
+
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+            The coords parameter will only support 2D POLYGON definitions
+          required: true
+          schema:
+            type: string        
+        - name: interpolationX
+          in: query
+          description: |+
+            This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
+    
+            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+    
+            The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
+    
+            The valid interpolation method values are available in the results of the capabilities query methods of this API
+    
+          schema:
+            type: string
+        - name: interpolationXY
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native coordinate 
+            resolution, the format is
+
+            interpolationXY=R<interpolation resolution>/<interpolation method>/<corridor width> 
+            e.g.
+            interpolationXY=R5/linear/10
+
+            The `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. 
+          
+            The `interpolation resolution` is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
+          schema:
+            type: string
+        - name: interpolationZ
+          in: query
+          description: |
+            This is defined if the query requires interpolation in the vertical axis
+
+            interpolationZ=R<interpolation resolution>/<interpolation method>/<corridor height> 
+            e.g.
+            interpolationZ=R5/cubic_spline/10
+
+            The `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. 
+          
+            The `interpolation resolution` is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+  '/collections/{collectionId}/{instanceId}/item':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for item queries of instance {instanceId} of collection {collectionId} defined by an item id'
+      description: Return the item defined by itemID
+      operationId: GetDataForItem
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - name: itemID
+          in: query
+          description: |-
+            Retreive an object generated by another EDR query, using its uniques identifier.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
 components:
   schemas:
     exception:
@@ -582,6 +995,11 @@ components:
         extent:
           $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.yaml'
         itemType:
+          type: string
+          description:  Structure of the returned output from the query 
+          enum : ["Grid", "Point", "Profile", "Trajectory", "PointSeries"] 
+          example: "Grid"
+        supportedQueryTypes:
           $ref: '#/components/schemas/supportedQueryTypes'
         crs:
           description: 'The coordinate reference systems in which geometries may be retrieved. Coordinate reference systems are identified by a URI. The first coordinate reference system is the coordinate reference system that is used by default. This is always "http://www.opengis.net/def/crs/OGC/1.3/CRS84", i.e. WGS84 longitude/latitude.'
@@ -1473,6 +1891,14 @@ components:
       required: true
       schema:
         type: string
+    crs:
+      name: crs
+      required: true
+      in: path
+      description: identifier (id) of the coordinate system to return data in list of valid crs identifiers for the chosen collection are defined in the metadata responses.  If not supplied the coordinate reference system will default to WGS84.
+      example: native
+      schema:
+        type: string
     groupId:
       name: groupId
       in: path
@@ -1507,6 +1933,34 @@ components:
         type: array
         items:
           type: string    
+    interpolation:
+      name: interpolation
+      in: query
+      description: |
+        This defines the algorithm that identifies the best data match for the requested location
+          The valid interpolation method values are available in the results of the 
+          capabilities query methods of this API
+      schema:
+        type: string    
+    interpolationZ:
+      name: interpolationZ
+      in: query
+      description: |
+        This is defined if the query doesn't require data at its native Z coordinate 
+        resolution, the format is:
+
+        interpolationZ=R<interpolation resolution>/<interpolation method> 
+        e.g.
+        interpolationZ=R5/linear
+
+        The interpolation resolution is the number of intervals the user requires between
+        the a Z value of the bounding box and the maximum Z value of the bounding box.
+
+        The valid interpolation method values are available in the results of the 
+        capabilities query methods of this API
+      schema:
+        type: string
+    
 tags:
   - name: Capabilities
     description: Essential characteristics of the information available from the API.

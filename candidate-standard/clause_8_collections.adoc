@@ -294,32 +294,32 @@ If not specified the query will return data in the native format of the collecti
 === QueryType specific Operations
 The following describes the query parameters that are unique or specialised to the individual query types:
 
-=== Point
+==== Point
 
 include::requirements/edr/query_type/point.adoc[]
 
 <<<
 
-=== Polygon
+==== Polygon
 
 include::requirements/edr/query_type/polygon.adoc[]
 
 <<<
 
-=== Cube
+==== Cube
 
 include::requirements/edr/query_type/cube.adoc[]
 
 <<<
 
-=== Trajectory (corridor)
+==== Trajectory (corridor)
 
 include::requirements/edr/query_type/trajectory.adoc[]
 
 
 <<<
 
-=== Item 
+==== Item 
 
 include::requirements/edr/query_type/item.adoc[]
 
