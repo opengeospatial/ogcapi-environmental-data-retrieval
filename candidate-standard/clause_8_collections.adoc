@@ -110,7 +110,7 @@ include::requirements/collections/REQ_rc-md-links.adoc[]
 
 Additional information may be available to assist in understanding and using this dataset. Links to those resources should be provided as well.
 
-include::recommendations/collections/REC_rc-md-instance-descriptions.adoc[]
+
 
 The `instance` property of the Collection Metadata provides a description of each instance. These descriptions are based on the link:https://raw.githubusercontent.com/opengeospatial/Environmental-Data-Retrieval-API/master/standard/openapi/schemas/instanceInfo_edr.json[EDR Collection Instance Information Schema]. This schema is described in detail in the <<collection-instance-information>> section of this Standard. The following requirements and recommendations govern the use of Collection Instance Information in the Collection Instance Metadata.
 
