@@ -1,6 +1,6 @@
-==== Parameters
+===== Parameters
 
-==== Parameter coords
+====== Parameter coords
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -42,7 +42,7 @@ From AMSTERDAM to LONDON (height in hPa)
 
 <<<
 
-==== Parameter interpolationWidth
+====== Parameter interpolationWidth
 
 include::../REQ_rc-interpolationWidth-definition.adoc[]
 
@@ -58,7 +58,7 @@ Return five values in a corridor 50km wide centred on the requested coordinates 
 `interpolationWidth=R5/linear/50`
 =================
 
-==== Parameter interpolationHeight
+====== Parameter interpolationHeight
 
 include::../REQ_rc-interpolationHeight-definition.adoc[]
 
@@ -77,7 +77,7 @@ return values at 50hPa intervals using a cubic_spline interpolation
 
 <<<
 
-==== Parameter interpolation
+====== Parameter interpolation
     
 include::../REQ_rc-interpolation-definition.adoc[]
     
@@ -96,7 +96,7 @@ Use the defined linear algorithm to return 10 values between each of the X,Y,T c
 <<<
 
 
-==== Parameter interpolationZ
+====== Parameter interpolationZ
     
 include::../REQ_rc-interpolationZ-definition.adoc[]
     

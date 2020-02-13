@@ -1,6 +1,6 @@
-==== Parameters
+===== Parameters
 
-==== Parameter coords
+====== Parameter coords
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -35,7 +35,7 @@ include::../REQ_rc-coords-response.adoc[]
 
 
 
-==== Parameter interpolationX
+====== Parameter interpolationX
 
 include::../REQ_rc-interpolationX-definition.adoc[]
 
@@ -53,7 +53,7 @@ Use the defined linear algorithm to return 10 values between the minimum X value
 `interpolationX=R10/linear`
 =================
 
-==== Parameter interpolationY
+====== Parameter interpolationY
 
 include::../REQ_rc-interpolationY-definition.adoc[]
 
@@ -71,7 +71,7 @@ Use the defined nearest-neighbour algorithm to return 3 values between the minim
 `interpolationY=R3/nearest-neighbour`
 =================
 
-==== Parameter minZ
+====== Parameter minZ
 
 Define the height of the bottom of the cube 
 i.e. minZ=level
@@ -85,7 +85,7 @@ if bottom of cube is at the 950hPa pressure level
 minZ=950
 =================
 
-==== Parameter maxZ
+====== Parameter maxZ
 
 Define the height of the top of the cube 
 i.e. maxZ=level
@@ -99,7 +99,7 @@ if top of cube is at the 650hPa pressure level
 minZ=650
 =================
 
-==== Parameter interpolationZ
+====== Parameter interpolationZ
 
 include::../REQ_rc-interpolationZ-definition.adoc[]
 

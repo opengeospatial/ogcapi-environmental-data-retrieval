@@ -1,5 +1,5 @@
 :comment:
-:title: EDR Candidate Specification API
+:Title: EDR Candidate Specification API
 :titletext: OGC API - Environmental Data Retrieval Standard
 :doctype: book
 :encoding: utf-8
@@ -11,7 +11,7 @@
 :sectanchors:
 //:source-highlighter: pygments
 
-= {title}
+= {Title}
 
 <<<
 [cols = ">",frame = "none",grid = "none"]

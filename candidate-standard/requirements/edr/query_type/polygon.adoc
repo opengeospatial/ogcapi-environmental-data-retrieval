@@ -89,7 +89,7 @@ i.e. Z=level
 for instance if the 850hPa pressure level is being queried
 
 Z=850
-
+===========
 `When not specified the API MUST return data from the lowest (i.e. nearest the surface) level of data in the collection instance (if the instance has a height dimension).`
 
 

@@ -1,5 +1,5 @@
-==== Parameters
-==== Parameter coords
+===== Parameters
+====== Parameter coords
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -58,7 +58,7 @@ retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E,
 
 <<<
     
-==== Parameter interpolation
+====== Parameter interpolation
 
 include::../REQ_rc-interpolation-definition.adoc[]
 
@@ -81,13 +81,13 @@ Use the defined nearest neighbour algorithm to get the best data match for the r
 `interpolation=nearest-neighbour`
 =================
 
-==== Parameter within
+====== Parameter within
 
 include::../REQ_rc-within-definition.adoc[]
 
 include::../REQ_rc-within-response.adoc[]
 
-==== Parameter withinUnits
+====== Parameter withinUnits
 
 include::../REQ_rc-withinUnits-definition.adoc[]
 
