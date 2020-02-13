@@ -50,7 +50,8 @@ Gregorian calendar).
           "dcam:domainIncludes": ["height"]
             
       },
-      "supportedQueryTypes": {"point","polygon","trajectory"}      
+      "itemType": "Grid",
+      "supportedQueryTypes": {"point","polygon","trajectory"},      
       "links": [
         { "href": "http://data.example.org/collections/dem/data",
           "rel": "metadata", "type": "application/json",

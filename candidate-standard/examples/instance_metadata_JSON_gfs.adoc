@@ -52,7 +52,8 @@ Gregorian calendar).
           "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
             
       },
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"}      
+      "itemType": "Grid",
+      "supportedQueryTypes": {"point","polygon","cube","trajectory"},      
       "links": [
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest",
           "rel": "metadata", "type": "application/json",
