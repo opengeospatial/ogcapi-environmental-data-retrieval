@@ -1,0 +1,9 @@
+[[rec_core_cross-origin]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/asynchronous-query* 
+^|A |If a requests will require significant time to execute, asynchronous queries SHOULD be supported.
+^|B | User SHOULD be redirected to a URI location where the result will be available once completed using a HTTP statuts code of 308 with a header field of _Location_ containing the URI.
+^|C | The result URI SHOULD return a HTTP statuts code of 202 with a header field of _Retry_after_ with a recommendation in seconds of how long to wait before retrying the request.
+^|D | Once the data is available the result URI SHOULD return a HTTP statuts code of 200 with the data.
+|===

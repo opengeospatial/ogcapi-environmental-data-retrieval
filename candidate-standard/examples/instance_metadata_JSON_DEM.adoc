@@ -1,0 +1,70 @@
+.Collection metadata response document
+=================
+This collection metadata example response in JSON lists the available instances of the DEM collection. It includes links to the collection resource in all formats that are supported by the API (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+
+There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
+
+Representations of this resource in other formats are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "alternate".
+
+An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".
+
+A bulk download of all the features in the dataset is referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "enclosure"
+
+Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").
+
+Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
+Gregorian calendar).
+
+----
+{
+  "links": [
+    { "href": "http://data.example.org/collections.json",
+      "rel": "self", "type": "application/json", "title": "this document" },
+    { "href": "http://data.example.org/collections.html",
+      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
+    { "href": "http://schemas.example.org/1.0/foobar.xsd",
+      "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
+  ],
+  "instances": [
+    {
+      "id": "data",
+      "title": "data",
+      "description": "Global Digital Elevation Model height data",
+      "extent": {
+        "spatial": [ -180.0, -89.9, 180, 89.9 ]
+      },
+      "dataDetails": {
+          "@context": {
+              "@version": 1.1,
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "dc": "http://purl.org/dc/terms/",
+              "dcam":"http://purl.org/dc/dcam/"
+          },
+
+          "dc:accessRights": {},
+          "dc:source": {
+              "dc:title":"datasource name",
+              "dc:identifier" : "https://data.example.org/collection/dem/link-for-more-details"
+          },
+          "dc:publisher" : "contact@example.org",
+          "dcam:domainIncludes": ["height"]
+            
+      },
+      "supportedQueryTypes": {"point","polygon","trajectory"}      
+      "links": [
+        { "href": "http://data.example.org/collections/dem/data",
+          "rel": "metadata", "type": "application/json",
+          "title": "Metadata for the dem collection" },
+        { "href": "http://data.example.org/collections/dem/data?outputFormat=html",
+          "rel": "metadata", "type": "text/html",
+          "title": "Metadata for the dem collection" },
+        { "href": "https://data.example.org/collection/dem/licence-doc",
+          "rel": "licence", "type": "text/html",
+          "title": "Licence for the dem collection" }
+      ]
+    }
+
+  ]
+}
+----
+=================

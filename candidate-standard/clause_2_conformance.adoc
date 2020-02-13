@@ -1,0 +1,36 @@
+== Conformance
+Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+
+The one Standardization Target for this standard is Web APIs.
+
+OGC API-Common provides a common foundation for OGC API standards. It is anticipated that this standard will only be implemented through inclusion in other standards. Therefore, all the relevant abstract tests in Annex A shall be included or referenced in the Abstract Test Suite in each separate standard that normatively references this standard.
+
+This standard identifies five conformance classes. The conformance classes implemented by an API are advertised through the /conformance path on the landing page. Each conformance class is defined by one requirements class. The tests in Annex A are organized by Requirements Class. So an implementation of the _Core_ conformance class must pass all tests specified in Annex A for the _Core_ requirements class.
+
+The requirements classes for OGC API-Common are:
+
+* <<rc_core-section,Core>>
+
+The _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this requirements class are mandatory for all OGC APIs
+
+Additional capabilities such as support for transactions, complex data structures, and rich queries are specified in additional OGC API standards and in OGC managed API extensions. Those standards and extensions build on the API-Common foundation to provide the full functionality required of the API implementation. 
+
+* <<rc_collections-section,Collections>>
+
+The _Collections Requirements Class_ extends the _Core_ to enable fine-grained access to spatial resources. This requirements class is mandatory for all OGC APIs which expose spatial resources.
+
+The structure and organziation of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The _Collections Requirements Class_ specifies the requirements necessary to discover and understand that structure and organization. Requirements governing the resource collections themselves are specified in the resource-specific OGC API standards.  
+
+* <<rc_html-section,HTML>>
+* <<rc_geojson-section,GeoJSON>>
+* <<rc_covjson-section,CovJSON>>
+
+
+Neither the nor _Core_ nor _Collections_ requirements class mandate a specific encoding or format for representing resources. The _HTML_ and _GeoJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web. _CovJSON_ is a more sructured format for representing geo-spatial information.
+
+None of these encodings are mandatory. An implementation of the _EDR_ standard may decide to implement another encoding instead of, or in addition those listed but a common format does simplifies interoperability so support for _CovJSON_ is highly recommended.
+
+* <<rc_oas30-section,OpenAPI 3.0>>
+
+Whilst thehe _OGC API-Common_ does not mandate any encoding or format for the formal definition of the API. The prefered option is the OpenAPI 3.0 specification. Therefore the EDR API's will be defined in _OpenAPI 3.0_.
+

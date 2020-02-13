@@ -1,0 +1,47 @@
+== Requirements classes for encodings
+
+=== Overview
+
+This clause specifies two pre-defined requirements classes for encodings to be used by an OGC API implementation. These encodings are commonly used encodings for spatial data on the web:
+
+* <<rc_html-section,HTML>>
+* <<rc_geojson-section,GeoJSON>>
+
+Neiter of these encodings are mandatory and an implementation of the <<rc_core-section,Core>> requirements class may implement either, both, or none of them. <<overview,Clause 7 (Overview)>> includes a discussion about recommended encodings.
+
+[[rc_html-section]]
+=== Requirement Class "HTML"
+
+Geographic information that is only accessible in formats like GeoJSON or GML has two issues:
+
+* The data is not discoverable using the most common mechanism for discovering information, that is the search engines of the Web,
+* The data can not be viewed directly in a browser - additional tools are required to view the data.
+
+Therefore, sharing data on the Web should include publication in HTML. To be consistent with the Web, it should be done in a way that enables users and search engines to access all data.
+
+This is discussed in detail in <<SDWBP,W3C Best Practice>>. This standard therefore <<rec_html,recommends>> supporting HTML as an encoding.
+
+include::requirements/requirements_class_html.adoc[]
+
+include::requirements/html/REQ_definition.adoc[]
+
+include::requirements/html/REQ_content.adoc[]
+
+include::recommendations/html/REC_schema-org.adoc[]
+
+[[rc_geojson-section]]
+=== Requirement Class "GeoJSON"
+
+GeoJSON is a commonly used format that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended if the resource can be represented in GeoJSON for the intended use.
+
+include::requirements/requirements_class_geojson.adoc[]
+
+include::requirements/geojson/REQ_definition.adoc[]
+
+include::requirements/geojson/REQ_content.adoc[]
+
+NOTE: The following schema names are from API-Features and need to be updated.
+
+Templates for the definition of the schemas for the GeoJSON responses in JSON Schema definitions are available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collections.yaml[collections.yaml] and link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.yaml[collectionInfo.yaml].
+
+These are generic schemas that do not include any application schema information about specific resource types or their properties.

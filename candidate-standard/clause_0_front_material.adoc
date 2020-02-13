@@ -1,0 +1,58 @@
+== Introduction
+
+[big]*i.     Abstract*
+
+The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs, these standards are based on a common foundation upon which all OGC APIs will be built. This document defines the Environmental Data Retrevial (EDR) API which aims to simplify access to geo-spatial data.
+
+An Environmental Data Retrevial (EDR) API provides a family of lighweight interfaces to access the resources. The resources addressed by EDR API each map to a defined query pattern. These patterns are described in section <<rc_core-section,8>>, Requirement Class Core.
+
+The  EDR Common standard defines resources and access paths that are supported by all EDR APIs. These are listed in <<tldnr>>. 
+
+[#tldnr,reftext='{table-caption} {counter:table-num}']
+.Overview of Resources
+[cols="32,23,15,30",options="header"]
+!===
+^|Resource ^|Path ^|HTTP Method ^|Document Reference
+|Landing page |`/` ^|GET |<<landing-page,API Landing Page>>
+|API definition |`/api` ^|GET |<<api-definition,API Definition>>
+|Conformance classes |`/conformance` ^|GET |<<conformance-classes,Declaration of Conformance Classes>>
+|Collections metadata |`/collections` ^|GET |<<collections-metadata,Collections Metadata>>
+|Collection instance metadata |`/collections/{collection_id}` ^|GET |<<Collecttion-metadata,Collection Metadata>>
+|Collection instance metadata |`/collections/{collection_id}/{instance_id}` ^|GET |<<instance-metadata,Collection Instance Metadata>>
+!===
+
+The resources identified in <<tldnr>> primarily support Discovery operations. Discovery operations allow clients the interrogate the API to determine its capabilities and retrieve information (metadata) about this distribution of the resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.
+
+This standard extends the common Query operations for OGC APIs. Query operations allow resources or values extracted from those resources to be retrieved from the underlying data store. The information to be returned is based upon selection criteria (query string) provided by the client. This standard only defines simple query parameters which should be applicable to all resource types. Other OGC API standards may define additional query capabilities specific to their resource type. 
+
+[big]*ii.    Keywords*
+
+The following are keywords to be used by search engines and document catalogues.
+
+ogcdoc, OGC document, property, geographic information, spatial data, spatial things, dataset, distribution, API, geojson, covJSON,, html, OpenAPI, AsyncAPI, REST, Common
+
+[big]*iii.   Preface*
+
+*OGC Declaration*
+
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium Inc. shall not be held responsible for identifying any or all such patent rights.
+
+Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
+
+[big]*iv.    Submitting organizations*
+
+The following organizations submitted this Document to the Open Geospatial Consortium (OGC):
+
+* Met Office
+* others TBD
+
+[big]*v.     Submitters*
+
+All questions regarding this submission should be directed to the editors or the submitters:
+
+|===
+|*Name* |*Affiliation*
+| Mark Burgoyne _(editor)_ |Met Office
+|others |TBD
+|===
+

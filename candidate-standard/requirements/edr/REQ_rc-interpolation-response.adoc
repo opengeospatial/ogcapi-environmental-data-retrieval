@@ -1,0 +1,11 @@
+[[req_edr_interpolation-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* |*/req/edr/interpolation-response*
+^|A|If the `interpolation` parameter is defined the result set SHALL to data point that is the best match based on the chosen algorithm.
+^|B|The interpolation information is an interpolation method. The available interpolation methods should be part of the collection response:
+[source,java]
+----
+interpolation = interpolation-method 
+----
+|===

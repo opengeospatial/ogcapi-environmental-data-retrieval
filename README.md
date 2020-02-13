@@ -1,4 +1,4 @@
-# Environmental-Data-Retrieval-API
+# Candidate specification for the Environmental-Data-Retrieval-API
 
 [![Join the chat at https://gitter.im/opengeospatial/Environmental-Data-Retrieval-API](https://badges.gitter.im/opengeospatial/Environmental-Data-Retrieval-API.svg)](https://gitter.im/opengeospatial/Environmental-Data-Retrieval-API?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 

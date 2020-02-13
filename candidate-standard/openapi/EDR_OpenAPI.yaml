@@ -1,0 +1,1970 @@
+openapi: 3.0.2
+info:
+  title: Environmental Data Retreival API's
+  description: Example of Candidate Environmental Data Retreival API OpenAPI docs
+  version: 0.0.1
+servers:
+  - url: 'http://www.example.org/edr'
+    description: ''
+paths:
+  /:
+    get:
+      tags:
+        - Capabilities
+      summary: landing page of this API
+      description: 'The landing page provides links to the API definition, the Conformance statements and the metadata about the feature data in this dataset.'
+      operationId: getLandingPage
+      responses:
+        '200':
+          description: links to the API capabilities
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/root'
+            text/html:
+              schema:
+                type: string
+      parameters:
+        - $ref: '#/components/parameters/outputFormat'
+  /conformance:
+    get:
+      tags:
+        - Capabilities
+      summary: information about standards that this API conforms to
+      description: list all requirements classes specified in a standard that the server conforms to
+      operationId: getRequirementsClasses
+      responses:
+        '200':
+          description: the URIs of all requirements classes supported by the server
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/req-classes'
+            text/html:
+              schema:
+                type: string
+      parameters:
+        - $ref: '#/components/parameters/outputFormat'
+  /groups:
+    get:
+      tags:
+        - Capabilities
+      summary: Provide a list of avialable data groups
+      operationId: listGroups
+      responses:
+        '200':
+          description: List the available data groups.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/groups'
+            text/html:
+              schema:
+                type: string
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+      parameters:
+        - $ref: '#/components/parameters/outputFormat'
+  '/groups/{groupId}':
+    get:
+      tags:
+        - Capabilities
+      summary: List of links to information available in the group
+      operationId: groupInfomation
+      responses:
+        '200':
+          description: List the available data for a group.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/groups'
+            text/html:
+              schema:
+                type: string
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+    parameters:
+      - $ref: '#/components/parameters/groupId'
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/time'
+      - $ref: '#/components/parameters/outputFormat'
+  /collections:
+    get:
+      tags:
+        - Capabilities
+      summary: List the avialable collections from the service
+      operationId: listCollections
+      responses:
+        '200':
+          description: Metdata about the Environmental data collections shared by this API.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/content'
+            text/html:
+              schema:
+                type: string
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+    parameters:
+      - $ref: '#/components/parameters/bbox'
+      - $ref: '#/components/parameters/time'
+      - $ref: '#/components/parameters/outputFormat'
+  '/collections/{collectionId}':
+    get:
+      tags:
+        - Metadata
+      summary: 'list data instances of  {collectionId}'
+      description: This will provide information about the available instances for the chosen collection Use content negotiation to request HTML or JSON.
+      operationId: getCollection
+      responses:
+        '200':
+          description: 'Metadata about the {collectionId} collection shared by this API.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/collectionDetail'
+            text/html:
+              schema:
+                type: string
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+    parameters:
+      - $ref: '#/components/parameters/collectionId'
+      - $ref: '#/components/parameters/outputFormat'
+  '/collections/{collectionId}/{instanceId}':
+    get:
+      tags:
+        - Metadata
+      summary: 'list data instances of  {collectionId}'
+      description: This will provide metadata for the chosen instance of a collection Use content negotiation to request HTML or JSON.
+      operationId: getCollectionInstance
+      responses:
+        '200':
+          description: 'Metadata about the instance of {collectionId} collection shared by this API.'
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/instanceDetail'
+            text/html:
+              schema:
+                type: string
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+    parameters:
+      - $ref: '#/components/parameters/collectionId'
+      - $ref: '#/components/parameters/instanceId'
+      - $ref: '#/components/parameters/outputFormat'
+  '/collections/{collectionId}/{instanceId}/point':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for point queries of instance {instanceId} of collection {collectionId}'
+      description: Query end point for point queries
+      operationId: getDataForPoint
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/interpolation'
+        - name: within
+          in: query
+          description: Defines radius of area around defined coordinates to include in the data selection
+          required: false
+          example: 10
+          schema:
+             type: number             
+        - name: withinUnits
+          in: query
+          description: Distance units for the within parameter
+          required: false
+          example: "KM"
+          schema:
+             type: string
+        - name: coords
+          in: query
+          description: |
+            location(s) to return data for, the coordinates are defined by a Well Known Text
+            (wkt) string. to retrieve a single location :
+
+            POINT(x y) i.e. POINT(0 51.48) for Greenwich, London
+
+            And for a list of locations
+
+            MULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))
+
+            i.e.
+            MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))
+
+
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+            the coordinate values will depend on the CRS parameter, if this is not defined
+            the values will be assumed to WGS85 values (i.e x=longitude and y=latitude)
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+  '/collections/{collectionId}/{instanceId}/polygon':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon'
+      description: Return the data values for the data Polygon defined by the query parameters
+      operationId: GetDataForArea
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the polygon
+            are selected. 
+
+            The polygon is defined using a Well Known Text string following 
+
+            coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))
+
+            which are values in the coordinate system defined by the crs query parameter 
+            (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+            For instance a polygon that roughly describes an area that contains 
+            South West England in WGS84 would look like: 
+
+            coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))
+
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+            The coords parameter will only support 2D POLYGON definitions
+          required: true
+          schema:
+            type: string
+        - name: interpolationX
+          in: query
+          description: |+
+            This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
+
+            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+
+            The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
+
+            The valid interpolation method values are available in the results of the capabilities query methods of this API
+
+          schema:
+            type: string
+        - name: interpolationY
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native Y coordinate 
+            resolution, the format is:
+
+            interpolationY=R<interpolation resolution>/<interpolation method> 
+            e.g.
+            interpolationY=R5/linear
+
+            The interpolation resolution is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The valid interpolation method values are available in the results of the 
+            capabilities query methods of this API
+          schema:
+            type: string
+        - name: z
+          in: query
+          description: |
+            Define the vertical level to return data from 
+            i.e. Z=level
+
+            for instance if the 850hPa pressure level is being queried
+
+            Z=850
+
+            When not specified data from the lowest (i.e. nearest the surface) level of
+            data in the collection.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
+  '/collections/{collectionId}/{instanceId}/cube':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube'
+      description: Return the data values for the data Cube defined by the query parameters
+      operationId: GetDataForCube
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the cube
+            are selected. 
+
+            The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
+            
+            coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
+
+            which are values in the coordinate system defined by the crs query parameter 
+            if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
+
+            For instance a cube that roughly describes an area that contains 
+            South West England in WGS84 would look like
+
+            coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))
+
+            `If the WKT does not define a Rectangle the service will generate an error message`
+            
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+            
+          required: true
+          schema:
+            type: string
+        - name: interpolationX
+          in: query
+          description: |+
+            This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
+
+            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+
+            The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
+
+            The valid interpolation method values are available in the results of the capabilities query methods of this API
+
+          schema:
+            type: string
+        - name: interpolationY
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native Y coordinate 
+            resolution, the format is:
+
+            interpolationY=R<interpolation resolution>/<interpolation method> 
+            e.g.
+            interpolationY=R5/linear
+
+            The interpolation resolution is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The valid interpolation method values are available in the results of the 
+            capabilities query methods of this API
+          schema:
+            type: string
+        - name: minZ
+          in: query
+          required: true
+          description: |
+            Define the location of the bottom of the cube 
+            i.e. minZ=level
+
+            for instance if bottom of cube is at the 950hPa pressure level
+
+            minZ=850
+            
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - name: maxZ
+          in: query
+          required: true
+          description: |
+            Define the location of the top of the cube 
+            i.e. maxZ=level
+
+            for instance if top of cube is at the 650hPa pressure level
+
+            maxZ=650
+            
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - name: interpolationZ
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native Z coordinate 
+            resolution, the format is
+      
+            interpolationZ=R<interpolation resolution>/<interpolation method>/<cube height> 
+            e.g.
+            interpolationZ=R5/cubic spline/200
+      
+            The interpolation resolution is the number of intervals the user requires between
+            the a Z value of the bounding box and the maximum Z value of the bounding box.
+      
+            The `cube height` MUST always equal maxZ - minZ
+      
+            The valid interpolation method values are available in the results of the 
+            capabilities query methods of this API
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+  '/collections/{collectionId}/{instanceId}/trajectory':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for trajectory queries of instance {instanceId} of collection {collectionId} defined by a wkt linestring and a iso8601 time period'
+      description: Return the data values for the data Polygon defined by the query parameters
+      operationId: GetDataForTrajectory
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/interpolation'        
+        - $ref: '#/components/parameters/interpolationZ'        
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the linestring
+            are selected. 
+
+            The trajectory is defined using a Well Known Text string following 
+
+            coords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)
+
+            which are values in the coordinate system defined by the crs query parameter 
+            (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+            a trajectory which involves changes in height would be defined as follows
+            
+            coords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)
+
+            where z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           
+            
+            For instance a polygon that roughly describes an area that follows a section
+            of the M5 Motorway in WGS84 would look like 
+
+            coords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)
+
+            if changes in height were also required 
+
+            coords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)
+
+
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+            The coords parameter will only support 2D POLYGON definitions
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+  '/collections/{collectionId}/{instanceId}/corridor':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for Corridor queries of instance {instanceId} of collection {collectionId} defined by a polygon'
+      description: Return the data values for the Corridor defined by the query parameters
+      operationId: GetDataForCorridor
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'
+        - name: coords
+          in: query
+          description: |-
+            Only data that has a geometry that intersects the area defined by the linestring
+            are selected. 
+
+            The trajectory is defined using a Well Known Text string following 
+
+            coords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)
+
+            which are values in the coordinate system defined by the crs query parameter 
+            (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+            a trajectory which involves changes in height would be defined as follows
+            
+            coords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)
+
+            where z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           
+            
+            For instance a polygon that roughly describes an area that follows a section
+            of the M5 Motorway in WGS84 would look like 
+
+            coords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)
+
+            if changes in height were also required 
+
+            coords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)
+
+
+            see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+            The coords parameter will only support 2D POLYGON definitions
+          required: true
+          schema:
+            type: string        
+        - name: interpolationX
+          in: query
+          description: |+
+            This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
+    
+            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+    
+            The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
+    
+            The valid interpolation method values are available in the results of the capabilities query methods of this API
+    
+          schema:
+            type: string
+        - name: interpolationXY
+          in: query
+          description: |
+            This is defined if the query doesn't require data at its native coordinate 
+            resolution, the format is
+
+            interpolationXY=R<interpolation resolution>/<interpolation method>/<corridor width> 
+            e.g.
+            interpolationXY=R5/linear/10
+
+            The `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. 
+          
+            The `interpolation resolution` is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
+          schema:
+            type: string
+        - name: interpolationZ
+          in: query
+          description: |
+            This is defined if the query requires interpolation in the vertical axis
+
+            interpolationZ=R<interpolation resolution>/<interpolation method>/<corridor height> 
+            e.g.
+            interpolationZ=R5/cubic_spline/10
+
+            The `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. 
+          
+            The `interpolation resolution` is the number of intervals the user requires between
+            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+
+            The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+  '/collections/{collectionId}/{instanceId}/item':
+    get:
+      tags:
+        - Data
+      summary: 'Query end point for item queries of instance {instanceId} of collection {collectionId} defined by an item id'
+      description: Return the item defined by itemID
+      operationId: GetDataForItem
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/instanceId'
+        - name: itemID
+          in: query
+          description: |-
+            Retreive an object generated by another EDR query, using its uniques identifier.
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service. 
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string                
+components:
+  schemas:
+    exception:
+      required:
+        - code
+      type: object
+      properties:
+        code:
+          type: string
+        description:
+          type: string
+    root:
+      required:
+        - links
+      type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/'
+              rel: self
+              type: application/json
+              title: this document
+            - href: 'http://data.example.org/api'
+              rel: service
+              type: application/openapi+json;version=3.0
+              title: the API definition
+            - href: 'http://data.example.org/conformance'
+              rel: conformance
+              type: application/json
+              title: WFS 3.0 conformance classes implemented by this server
+            - href: 'http://data.example.org/groups'
+              rel: data
+              type: application/json
+              title: List of available groups
+            - href: 'http://data.example.org/collections'
+              rel: data
+              type: application/json
+              title: List the available collections
+    req-classes:
+      required:
+        - conformsTo
+      type: object
+      properties:
+        conformsTo:
+          type: array
+          items:
+            type: string
+          example:
+            - 'http://www.opengis.net/spec/wfs-1/3.0/req/core'
+            - 'http://www.opengis.net/spec/wfs-1/3.0/req/oas30'
+            - 'http://www.opengis.net/spec/wfs-1/3.0/req/html'
+            - 'http://www.opengis.net/spec/wfs-1/3.0/req/geojson'
+    link:
+      required:
+        - href
+      type: object
+      properties:
+        href:
+          type: string
+        rel:
+          type: string
+          example: prev
+        type:
+          type: string
+          example: application/geo+json
+        hreflang:
+          type: string
+          example: en
+    groups:
+      required:
+        - links
+        - members
+      type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/collections.json'
+              rel: self
+              type: application/json
+              title: this document
+            - href: 'http://data.example.org/collections.html'
+              rel: alternate
+              type: text/html
+              title: this document as HTML
+            - href: 'http://schemas.example.org/1.0/foobar.xsd'
+              rel: describedBy
+              type: application/xml
+              title: XML schema for Acme Corporation data
+        members:
+          type: array
+          items:
+            type: array
+            items:
+              $ref: '#/components/schemas/link'
+    content:
+      required:
+        - links
+        - collections
+      type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/collections.json'
+              rel: self
+              type: application/json
+              title: this document
+            - href: 'http://data.example.org/collections.html'
+              rel: alternate
+              type: text/html
+              title: this document as HTML
+            - href: 'http://schemas.example.org/1.0/foobar.xsd'
+              rel: describedBy
+              type: application/xml
+              title: XML schema for Acme Corporation data
+        collections:
+          type: array
+          items:
+            $ref: '#/components/schemas/collectionInfo'
+    collectionInfo:
+      required:
+        - id
+        - links
+      type: object
+      properties:
+        id:
+          description: identifier for the collection
+          type: string
+          example: 'GFSSurf'
+        title:
+          description: human readable title for the collection
+          type: string
+          example: 'GFS Surface Data'
+        description:
+          description: a description of the collection instance
+          type: string
+          example: 'NOAA Global Forecast surface values'
+        dataDetails:
+          $ref: '#/components/schemas/dataDetails'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/collections/observations'
+              rel: item
+              type: application/geo+json
+              title: Observation data
+            - href: 'http://example.org/concepts/building.html'
+              rel: describedBy
+              type: text/html
+              title: List of available observation types
+        extent:
+          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.yaml'
+        itemType:
+          type: string
+          description:  Structure of the returned output from the query 
+          enum : ["Grid", "Point", "Profile", "Trajectory", "PointSeries"] 
+          example: "Grid"
+        supportedQueryTypes:
+          $ref: '#/components/schemas/supportedQueryTypes'
+        crs:
+          description: 'The coordinate reference systems in which geometries may be retrieved. Coordinate reference systems are identified by a URI. The first coordinate reference system is the coordinate reference system that is used by default. This is always "http://www.opengis.net/def/crs/OGC/1.3/CRS84", i.e. WGS84 longitude/latitude.'
+          default:
+            - 'http://www.opengis.net/def/crs/OGC/1.3/CRS84'
+          type: array
+          items:
+            $ref: '#/components/schemas/crsObject'
+    collectionDetail:
+      required:
+        - links
+        - instances
+      type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/collections/observations'
+              rel: item
+              type: application/geo+json
+              title: Observation data
+            - href: 'http://example.org/concepts/building.html'
+              rel: describedBy
+              type: text/html
+              title: List of available observation types
+        instances:
+          type: array
+          items:
+            $ref: '#/components/schemas/instanceInfo'
+        name:
+          description: name of the collection
+          type: string
+          example: Metar data
+        title:
+          description: title of the collection
+          type: string
+          example: Metar observations
+        parameters:
+          description: list of the data parameters available in the collection
+          type: array
+          items:
+            type: string
+    instanceInfo:
+      required:
+        - id
+        - links
+      type: object
+      properties:
+        id:
+          description: identifier for the instance of the collection
+          type: string
+          example: '2019-08-01T00:00:00Z'
+        title:
+          description: human readable title for the collection instance
+          type: string
+          example: '2019-08-01T00:00:00Z model run'
+        description:
+          description: a description of the collection instance
+          type: string
+          example: 'NOAA Global Forecast surface values from the 2019-08-01T00:00:00Z model run'
+        dataDetails:
+          $ref: '#/components/schemas/dataDetails'
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/collections/observations'
+              rel: item
+              type: application/geo+json
+              title: Observation data
+            - href: 'http://example.org/concepts/building.html'
+              rel: describedBy
+              type: text/html
+              title: List of available observation types
+        extent:
+          $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.yaml'
+    instanceDetail:
+      required:
+        - links
+        - collection
+      type: object
+      properties:
+        links:
+          type: array
+          items:
+            $ref: '#/components/schemas/link'
+          example:
+            - href: 'http://data.example.org/collections/observations'
+              rel: item
+              type: application/geo+json
+              title: Observation data
+            - href: 'http://example.org/concepts/building.html'
+              rel: describedBy
+              type: text/html
+              title: List of available observation types
+        id:
+          description: identifier for the instance of the collection
+          type: string
+          example: '2019-08-01T00:00:00Z'
+        title:
+          description: human readable title for the collection instance
+          type: string
+          example: '2019-08-01T00:00:00Z model run'
+        description:
+          description: a description of the collection instance
+          type: string
+          example: 'NOAA Global Forecast surface values from the 2019-08-01T00:00:00Z model run'
+        extent:
+          $ref: '#/components/schemas/instanceAxes'
+        parameters:
+          type: array
+          items:
+            $ref: '#/components/schemas/Parameter'
+        outputCRS:
+          type: array
+          items:
+            $ref: '#/components/schemas/crsObject'
+        polygonQuery:
+          type: object
+          properties:
+            interpolationX:
+              description: X coordinate interpolation options
+              type: array
+              items:
+                type: string
+            interpolationY:
+              description: Y coordinate interpolation options
+              type: array
+              items:
+                type: string
+            BBOXOnly:
+              type: boolean
+              description: If true this flag defines that the API will only support simple polygons defined by a rectangular area.
+        pointQuery:
+          type: object
+          properties:
+            interpolation:
+              description: interpolation options
+              type: array
+              items:
+                type: string
+            withinUnits:
+              type: array
+              items:
+                type: string
+                description: supported distance units if the query supports a within a defined radius query.  If withinUnits is not defined the API does not support the radius query. 
+                example: km
+        outputFormat:
+          description: output format options for the query
+          type: array
+          items:
+            type: string
+    parameterExtent:
+      description: Definition of the geo-temporal extent of a parameter
+      required:
+        - dimensions
+        - wkt
+        - horizontal
+      type: object
+      properties:
+        dimensions:
+          $ref: '#/components/schemas/dimension'
+        wkt:
+          description: |-
+            Well Known Text description of the collections coordinate reference system
+            see http://docs.opengeospatial.org/is/12-063r5/12-063r5.html
+          type: string
+        horizontal:
+          $ref: '#/components/schemas/horizontal'
+        vertical:
+          $ref: '#/components/schemas/vertical'
+        temporal:
+          $ref: '#/components/schemas/temporal'
+      example:
+        dimensions:
+          x: 92
+          'y': 33
+          z: 8
+          time: 98
+        wkt: 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"],TIMEEXTENT[2019-05-28T06:00:00Z,2019-05-30T06:00:00Z],VERTICALEXTENT[2.0,2.0,LENGTHUNIT["metre",1.0]]]'
+        horizontal:
+          name:
+            - longitude
+            - latitude
+          coordinates:
+            - x
+            - 'y'
+          geographic: 'BBOX[359.875,90.125,-0.125,-90.125]'
+        vertical:
+          name:
+            - height_above_ground
+          coordinates:
+            - z
+          range:
+            - 36.47
+            - 99.07
+        temporal:
+          name: time
+          coordinates:
+            - time
+          range:
+            - '2019-05-28T06:00:00Z'
+            - '2019-05-28T18:00:00Z'
+            - '2019-05-29T06:00:00Z'
+            - '2019-05-29T18:00:00Z'
+            - '2019-05-30T06:00:00Z'
+    measurementType:
+      type: object
+      title: Parameter measurement type
+      description: Approach to calaculating the data values
+      required: ["method"]
+      properties:
+        method:
+          type: string
+          example : "mean"
+        duration:
+          type: string
+          title : Measurement time duartion
+          description: The time duration that the value was calculated for as an RFC3339 duration value.  If the method value is instantaneous this value is not required.
+          example: PT10M
+    dimension:
+      title: Root Type for dimension
+      description: definition of the resolution of the collection
+      required:
+        - x
+        - 'y'
+      type: object
+      properties:
+        x:
+          format: int32
+          description: x coordinate resolution
+          type: integer
+        'y':
+          format: int32
+          description: y coordinate resolution
+          type: integer
+        z:
+          format: int32
+          description: vertical level resolution
+          type: integer
+        time:
+          format: int32
+          description: Time step resolution
+          type: integer
+      example:
+        x: 720
+        'y': 360
+        z: 1
+        time: 5
+    horizontal:
+      title: Root Type for horizontal
+      description: Definition of the spatial aspects of the collection
+      required:
+        - coordinates
+        - geographic
+      type: object
+      properties:
+        name:
+          description: A list of the names of the coordinates MUST be in the same order as the values in the coordinates array
+          type: array
+          items: {}
+        coordinates:
+          description: A list of the coordinates
+          type: array
+          items:
+            type: string
+        geographic:
+          description: Definition of the area covered by the collection as a Well Know Text Bounding Box
+          type: string
+      example:
+        name:
+          - longitude
+          - latitude
+        coordinates:
+          - x
+          - 'y'
+        geographic: 'BBOX[359.875,90.125,-0.125,-90.125]'
+    vertical:
+      title: Root Type for vertical
+      description: 'Description of the vertical dimensions of the collection '
+      required:
+        - name
+        - coordinates
+        - range
+      type: object
+      properties:
+        name:
+          description: Name of the coordinates
+          type: array
+          items:
+            type: string
+        coordinates:
+          description: coordinate
+          type: array
+          items:
+            type: string
+        range:
+          type: array
+          items:
+            type: number
+      example:
+        name:
+          - height_above_ground
+        coordinates:
+          - z
+        range:
+          - 2
+    temporal:
+      title: Root Type for temporal
+      description: Description of the time dimensions of the collection
+      required:
+        - coordinates
+        - name
+        - range
+      type: object
+      properties:
+        name:
+          description: Array of coordinate names MUST be in the same order as the coordinates array
+          type: string
+        coordinates:
+          description: Coordinate axes names
+          type: array
+          items:
+            type: string
+        range:
+          description: List of the available time dimension values in the collection
+          type: array
+          items:
+            type: string
+      example:
+        name: time
+        coordinates:
+          - time
+        range:
+          - '2019-05-28T06:00:00Z'
+          - '2019-05-28T18:00:00Z'
+          - '2019-05-29T06:00:00Z'
+          - '2019-05-29T18:00:00Z'
+          - '2019-05-30T06:00:00Z'
+    Parameter:
+      title: Parameter name
+      description: Definition of data parameter
+      required:
+        - type
+        - unit
+        - description
+        - observedProperty
+        - id
+      type: object
+      properties:
+        type:
+          description: type
+          enum:
+            - Parameter
+        description:
+          $ref: '#/components/schemas/descriptionInfo'
+        unit:
+          $ref: '#/components/schemas/units'
+        observedProperty:
+          $ref: '#/components/schemas/ObservedProperty'
+        extent:
+          $ref: '#/components/schemas/parameterExtent'
+        id:
+          description: 'Unique ID of the parameter, this is the value used for querying the data'
+          type: string
+        measurementType:
+          $ref: '#/components/schemas/measurementType'
+      example:
+        type: Parameter
+        id: sea_ice
+        description:
+          en: Sea Ice concentration (ice=1;no ice=0)
+        unit:
+          label:
+            en: Ratio
+          symbol:
+            value: '1'
+            type: 'http://www.opengis.net/def/uom/UCUM/'
+        observedProperty:
+          id: 'http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/'
+          label:
+            en: Sea Ice Concentration
+    units:
+      title: Root Type for units
+      description: definition of data units
+      required:
+        - symbol
+        - label
+      type: object
+      properties:
+        label:
+          type: string
+          properties:
+            en:
+              type: string
+        symbol:
+          $ref: '#/components/schemas/symbol'
+      example:
+        label:
+          en: <unit Label>
+        symbol:
+          value: <unit symbol>
+          type: <href to unit metadata description>
+    symbol:
+      title: Root Type for symbol
+      description: Information about the symbol used to describe the units
+      required:
+        - value
+        - type
+      type: object
+      properties:
+        value:
+          $ref: '#/components/schemas/link'
+      example:
+        value: hPa
+        type: 'http://www.opengis.net/def/uom/UCUM/'
+    descriptionInfo:
+      required:
+        - summary
+        - created
+        - axes
+      type: object
+      properties:
+        summary:
+          description: brief description of the collection
+          type: string
+        created:
+          format: dateTime
+          description: time that the coverage collection was created/modified
+          type: string
+        axes:
+          $ref: '#/components/schemas/axesInfo'
+    axesInfo:
+      required:
+        - x
+        - 'y'
+        - t
+      type: object
+      properties:
+        x:
+          $ref: '#/components/schemas/axesDefInfo'
+        'y':
+          $ref: '#/components/schemas/axesDefInfo'
+        z:
+          $ref: '#/components/schemas/axesListDefInfo'
+        t:
+          $ref: '#/components/schemas/axesDefInfo'
+      example:
+        x:
+          units: some text
+          lowerBound: some text
+          upperBound: some text
+        'y':
+          units: some text
+          lowerBound: some text
+          upperBound: some text
+        z:
+          units: some text
+          values:
+            - some text
+            - some text
+        t:
+          units: some text
+          lowerBound: some text
+          upperBound: some text
+    axesDefInfo:
+      description: Definition of the axis coordinate range
+      required:
+        - units
+        - lowerBound
+        - upperBound
+      type: object
+      properties:
+        units:
+          $ref: '#/components/schemas/units'
+        lowerBound:
+          description: minimum value of the axes
+          type: string
+        upperBound:
+          description: maximum value of the axes
+          type: string
+      example:
+        units:
+          label:
+            en: some text
+          symbol:
+            value: some text
+            type: some text
+        lowerBound: some text
+        upperBound: some text
+    axesListDefInfo:
+      description: Definition for those axis which are not based on regular intervals
+      required:
+        - units
+        - values
+      type: object
+      properties:
+        units:
+          $ref: '#/components/schemas/units'
+        values:
+          description: list of the valid values for the axis
+          type: array
+          items:
+            type: string
+      example:
+        units:
+          label:
+            en: some text
+          symbol:
+            value: some text
+            type: some text
+        values:
+          - some text
+          - some text
+    ObservedProperty:
+      title: Root Type for ObservedProperty
+      description: Observed property detail
+      required:
+        - id
+        - label
+      type: object
+      properties:
+        id:
+          description: |-
+            URI linking to an external registry which contains the definitive definition of
+            the observed property
+          type: string
+        label:
+          $ref: '#/components/schemas/descriptionInfo'
+      example:
+        id: 'http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/'
+        label:
+          en: Sea Ice Concentration
+    CoverageJSON:
+      title: Root Type for CoverageJSON
+      description: 'JSON output format '
+      required:
+        - type
+        - domain
+        - parameters
+        - ranges
+      type: object
+      properties:
+        type:
+          description: Coverage domain type
+          enum:
+            - Coverage
+        domain:
+          $ref: '#/components/schemas/Domain'
+        parameters:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/Parameter'
+        ranges:
+          type: object
+          additionalProperties:
+            $ref: '#/components/schemas/range'
+    Domain:
+      title: Root Type for Domain
+      description: Coverage geotemporal area description
+      required:
+        - axes
+        - domainType
+        - type
+      type: object
+      properties:
+        type:
+          description: Type
+          enum:
+            - Domain
+        domainType:
+          description: Domain type
+          enum:
+            - Grid
+            - Point
+            - Trajectory
+            - PointSeries
+            - PolygonSeries
+            - MultiPolygon
+            - MultiPoint
+        axes:
+          $ref: '#/components/schemas/axes'
+      example:
+        type: Domain
+        domainType: Grid
+        axes:
+          x:
+            values:
+              - -10
+              - -5
+              - 0
+          'y':
+            values:
+              - 40
+              - 50
+          z:
+            values:
+              - 5
+          t:
+            values:
+              - '2010-01-01T00:12:20Z'
+    axes:
+      title: Root Type for axes
+      description: geotemporal axes for a CoverageJSON domain
+      required:
+        - t
+        - x
+        - 'y'
+      type: object
+      properties:
+        x:
+          $ref: '#/components/schemas/numeric_axis_values'
+        'y':
+          $ref: '#/components/schemas/numeric_axis_values'
+        z:
+          type: array
+          items:
+            $ref: '#/components/schemas/string_axis_values'
+        t:
+          $ref: '#/components/schemas/string_axis_values'
+      example:
+        x:
+          values:
+            - -10
+            - -5
+            - 0
+        'y':
+          values:
+            - 40
+            - 50
+        z:
+          values:
+            - 5
+        t:
+          values:
+            - '2010-01-01T00:12:20Z'
+    numeric_axis_values:
+      title: Root Type for numeric_axis_values
+      description: numeric coordinates definition
+      required:
+        - values
+      type: object
+      properties:
+        values:
+          description: Array of numeric values
+          type: array
+          items:
+            type: number
+      example:
+        - -10
+        - -5
+        - 0
+    string_axis_values:
+      title: Root Type for numeric_axis_values
+      description: string coordinates definition
+      required:
+        - values
+      type: object
+      properties:
+        values:
+          description: Array of numeric values
+          type: array
+          items:
+            type: string
+      example:
+        - '2010-01-01T00:12:20Z'
+        - '2010-01-02T00:12:20Z'
+    range:
+      title: Root Type for range
+      description: Data values for a parameter
+      required:
+        - type
+        - dataType
+        - values
+        - axisNames
+      type: object
+      properties:
+        type:
+          description: Definition of the data structure
+          enum:
+            - NdArray
+        dataType:
+          description: Format of the data values in the array
+          enum:
+            - int
+            - long
+            - float
+            - double
+            - string
+        axisNames:
+          description: References to the axes the data values map to
+          type: array
+          items:
+            type: string
+        shape:
+          description: Structure of the array data
+          type: array
+          items:
+            type: number
+        values:
+          description: Parameter data values
+          type: array
+          items: {}
+      example:
+        type: NdArray
+        dataType: float
+        axisNames:
+          - t
+          - z
+          - 'y'
+          - x
+        shape:
+          - 1
+          - 1
+          - 2
+          - 3
+        values:
+          - 0.5
+          - 0.6
+          - 0.4
+          - 0.6
+          - 0.2
+          - null
+    instanceAxes:
+      type: object
+      properties:
+        x:
+          $ref: '#/components/schemas/axisExtent'
+        'y':
+          $ref: '#/components/schemas/axisExtent'
+        t:
+          $ref: '#/components/schemas/axisExtent'
+        z:
+          $ref: '#/components/schemas/axisExtent'
+        m:
+          $ref: '#/components/schemas/axisExtent'
+        crs:
+          $ref: '#/components/schemas/crsObject'
+      required:
+        - x
+        - y
+      example:
+        x:
+          label: Longitude
+          lowerBound: -180
+          upperBound: 180
+          uomLabel: degrees
+        'y':
+          label: Latitude
+          lowerBound: -90
+          upperBound: 90
+          uomLabel: degrees
+        z:
+          label: Height
+          lowerBound: 10
+          upperBound: 100
+          uomLabel: m
+          attributes:
+            wkt: ...
+            proj4: ...
+    axisExtent:
+      type: object
+      properties:
+        label:
+          type: string
+        lowerBound:
+          type: string
+        upperBound:
+          type: string
+        uomLabel:
+          type: string
+        attributes:
+          type: object
+          additionalProperties:
+            type: string         
+      required:
+        - label
+        - lowerBound
+        - upperBound
+        - uomLabel
+    dataDetails:
+      type: object
+      properties: 
+        "@context":
+          type: object
+          required: [ "@version", "xsd", "dc", "dcam"]
+          properties:
+            "@version":
+              type: number
+              example: [1.1]
+            xsd:
+              type: string
+              title: "XSD schema location"
+              default: "http://www.w3.org/2001/XMLSchema#"
+              example: "http://www.w3.org/2001/XMLSchema#"
+            dc:
+              type: string
+              title: "Dublin Core Metadata terms"
+              default: "http://purl.org/dc/terms/"
+              example: "http://purl.org/dc/terms/"
+            dcam:
+              type: string
+              title: "Terms used in the description of Dublin Core Metatdata Items"
+              default: "http://purl.org/dc/dcam/"
+              example: "http://purl.org/dc/dcam/"
+        "dc:accessRights":
+          type: object
+        "dc:source":
+          type: object
+          title: "Detailed Information about the source dataset"
+          required: ["dc:title","dc:identifier"]
+          properties:
+            "dc:title":
+              type: string
+              example: ["datasource name"]
+            "dc:identifier": 
+              type: string
+              example: "https://www.link_to_datasource_details.org"
+
+        "dc:created":
+          type: string
+          title: "Date that the source dataset was created"
+          example: "2018-01-01T20:00:15Z"
+        "dc:publisher":
+          type: string
+          title: "Contact details for the publisher of the collection"
+          example: "contact@publisher.org"
+        "dcam:domainIncludes":
+          type : array
+          title : list of the names of the parameters available in the collection
+          items: 
+            type: string
+            example: "temperature"
+    supportedQueryTypes:
+      type: array
+      title: list of the query types supported by the collection
+      items:
+        type: string
+        enum: ["wfs","wms","wcs","cube","point","polygon","trajectory","corridor"]
+        example: ["wfs","point","polygon"]
+    crsObject:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "CRS84"
+        wkt:
+          type: string
+          example: "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+  parameters:
+    bbox:
+      name: bbox
+      in: query
+      description: |
+        Only features that have a geometry that intersects the bounding box are selected. The bounding box is provided as four or six numbers, depending on whether the coordinate reference system includes a vertical axis (elevation or depth):
+        * Lower left corner, coordinate axis 1 * Lower left corner, coordinate axis 2 * Lower left corner, coordinate axis 3 (optional) * Upper right corner, coordinate axis 1 * Upper right corner, coordinate axis 2 * Upper right corner, coordinate axis 3 (optional)
+        The coordinate reference system of the values is WGS84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84) unless a different coordinate reference system is specified in the parameter `bbox-crs`.
+        For WGS84 longitude/latitude the values are in most cases the sequence of minimum longitude, minimum latitude, maximum longitude and maximum latitude. However, in cases where the box spans the antimeridian the first value (west-most box edge) is larger than the third value (east-most box edge).
+        If a feature has multiple spatial geometry properties, it is the decision of the server whether only a single spatial geometry property is used to determine the extent or all relevant geometries.
+      required: false
+      style: form
+      explode: false
+      schema:
+        maxItems: 6
+        minItems: 4
+        type: array
+        items:
+          type: number
+    time:
+      name: time
+      in: query
+      description: |-
+        Either a date-time or a period string that adheres to RFC 3339. Examples:
+        * A date-time: "2018-02-12T23:20:50Z" * A period: "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z" or "2018-02-12T00:00:00Z/P1M6DT12H31M12S"
+        Only features that have a temporal property that intersects the value of `time` are selected.
+        If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.
+      required: false
+      style: form
+      explode: false
+      schema:
+        type: string
+    collectionId:
+      name: collectionId
+      in: path
+      description: Identifier (id) of a specific collection
+      required: true
+      schema:
+        type: string
+    crs:
+      name: crs
+      required: true
+      in: path
+      description: identifier (id) of the coordinate system to return data in list of valid crs identifiers for the chosen collection are defined in the metadata responses.  If not supplied the coordinate reference system will default to WGS84.
+      example: native
+      schema:
+        type: string
+    groupId:
+      name: groupId
+      in: path
+      description: Identifier (name) of a specific group
+      required: true
+      schema:
+        type: string
+    instanceId:
+      name: instanceId
+      in: path
+      description: Identifier (id) of a specific instance of a collection
+      required: true
+      schema:
+        type: string
+    outputFormat:
+      name: outputFormat
+      in: query
+      description: Format to return query results in
+      required: false
+      schema:
+        type: string
+    parametername:
+      name: parametername
+      in: query
+      description: |-
+        comma delimited list of parameters to retrieve data for.  Valid parameters are
+        listed in the collections metadata
+      required: true
+      explode: false
+      schema:
+        minItems: 1
+        type: array
+        items:
+          type: string    
+    interpolation:
+      name: interpolation
+      in: query
+      description: |
+        This defines the algorithm that identifies the best data match for the requested location
+          The valid interpolation method values are available in the results of the 
+          capabilities query methods of this API
+      schema:
+        type: string    
+    interpolationZ:
+      name: interpolationZ
+      in: query
+      description: |
+        This is defined if the query doesn't require data at its native Z coordinate 
+        resolution, the format is:
+
+        interpolationZ=R<interpolation resolution>/<interpolation method> 
+        e.g.
+        interpolationZ=R5/linear
+
+        The interpolation resolution is the number of intervals the user requires between
+        the a Z value of the bounding box and the maximum Z value of the bounding box.
+
+        The valid interpolation method values are available in the results of the 
+        capabilities query methods of this API
+      schema:
+        type: string
+    
+tags:
+  - name: Capabilities
+    description: Essential characteristics of the information available from the API.
+  - name: Metadata
+    description: Essential characteristics of the collection including information about the data.
+  - name: Data
+    description: Data queries.

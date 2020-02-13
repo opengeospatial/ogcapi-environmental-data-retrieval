@@ -1,0 +1,65 @@
+==== Parameters
+==== Parameter coords
+
+include::../REQ_rc-coords-definition.adoc[]
+
+include::../REQ_rc-coords-response.adoc[]
+
+The point query supports two types of Well Known Text geometries, Point for as single location and Multipoint for a list of locations.  The point query only supports 2D geometries
+
+.Point
+=================
+retrieve data for a single location 51.2 N, 3.2 W
+
+`coords=POINT(-3.2 51.2)`
+=================
+
+.Multipoint
+=================
+retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
+
+`coords=MULTIPOINT\((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
+=================
+
+
+<<<
+    
+==== Parameter interpolation
+
+include::../REQ_rc-interpolation-definition.adoc[]
+
+include::../REQ_rc-interpolation-response.adoc[]
+
+If not specified the query will use the default interpolation method for the chosen collection.  If the interpolation method does not match an entry in the defined list of valid interpolation methods for the collection a 403 message SHOULD be returned.
+
+.An interpolation
+=================
+Use the defined nearest neighbour algorithm to get the best data match for the requested locations 
+
+`interpolation=nearest-neighbour`
+=================
+
+<<<
+    
+.An interpolation
+=================
+Use the defined nearest neighbour algorithm to get the best data match for the requested locations 
+
+`interpolation=nearest-neighbour`
+=================
+
+==== Parameter within
+
+include::../REQ_rc-within-definition.adoc[]
+
+include::../REQ_rc-within-response.adoc[]
+
+If not specified the query will return the information for the location defined by the coords parameter. 
+
+==== Parameter withinUnits
+
+include::../REQ_rc-withinunits-definition.adoc[]
+
+include::../REQ_rc-withinunits-response.adoc[]
+
+

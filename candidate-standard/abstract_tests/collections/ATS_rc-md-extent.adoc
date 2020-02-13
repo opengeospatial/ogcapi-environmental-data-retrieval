@@ -1,0 +1,10 @@
+[[ats_collections_rc-md-extent]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/coollections/rc-md-extent* 
+^|Test Purpose |Validate that the `extent` property if it is present
+^|Requirement |<<req_collections_rc-md-extent,/req/collections/rc-md-extent>>
+^|Test Method |. Verify that the `extent` provides bounding boxes that include all spatial geometries
+. Verify that if the `extent` provides time intervals that include all temporal geometries in this collection. 
+. A temporal extent of `null` indicates an open time interval.
+|===

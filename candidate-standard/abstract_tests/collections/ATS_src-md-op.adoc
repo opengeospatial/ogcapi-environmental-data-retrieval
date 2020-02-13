@@ -1,0 +1,10 @@
+[[ats_collections_src-md-op]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/src-md-op*
+^|Test Purpose |Validate that the Collection content can be retrieved from the expected location.
+^|Requirement |<<req_collections_src-md-op,/req/collections/src-md-op>>
+^|Test Method |For every Feature Collection described in the Collections content, issue an HTTP GET request to the URL `/collections/{collectionId}` where `{collectionId}` is the `id` property for the collection.
+. Validate that a Collection was returned with a status code 200
+. Validate the contents of the returned document using test <<ats_collections_src-md-success,/ats/collections/src-md-success>>.
+|===

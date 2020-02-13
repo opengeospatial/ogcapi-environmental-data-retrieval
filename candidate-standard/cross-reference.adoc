@@ -1,0 +1,182 @@
+== Change Matrix
+
+=== Landing Page
+
+==== Common
+
+include::requirements/core/REQ_root-op.adoc[]
+
+include::requirements/core/REQ_root-success.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_root-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_root-success.adoc[]
+
+=== API Definition
+
+==== Common
+
+include::requirements/core/REQ_api-definition-op.adoc[]
+
+include::requirements/core/REQ_api-definition-success.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_api-definition-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_api-definition-success.adoc[]
+
+=== Conformance
+
+==== Common
+
+include::requirements/core/REQ_conformance-op.adoc[]
+
+include::requirements/core/REQ_conformance-success.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_conformance-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_conformance-success.adoc[]
+
+=== CRS 84 (1)
+
+==== Common
+
+include::requirements/core/REQ_crs84.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_crs84.adoc[]
+
+=== HTTP (1)
+
+==== Common
+
+include::requirements/core/REQ_http.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_http.adoc[]
+
+=== Bounding Box
+
+==== Common
+
+include::requirements/core/REQ_rc-bbox-definition.adoc[]
+
+include::requirements/core/REQ_rc-bbox-response.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-bbox-definition.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-bbox-response.adoc[]
+
+=== Extent (1)
+
+==== Common
+
+include::requirements/core/REQ_rc-md-extent.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-md-extent.adoc[]
+
+=== Items
+
+==== Common
+
+include::requirements/core/REQ_rc-md-items.adoc[]
+
+include::requirements/core/REQ_rc-md-items-links.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-md-items.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-md-items-links.adoc[]
+
+=== Links (1)
+
+==== Common
+
+include::requirements/core/REQ_rc-md-links.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-md-links.adoc[]
+
+=== MD
+
+==== Common
+
+include::requirements/core/REQ_rc-md-op.adoc[]
+
+include::requirements/core/REQ_rc-md-success.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-md-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-md-success.adoc[]
+
+=== RC-op
+
+==== Common
+
+include::requirements/core/REQ_rc-op.adoc[]
+
+include::requirements/core/REQ_rc-response.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-response.adoc[]
+
+=== Time
+
+==== Common
+
+include::requirements/core/REQ_rc-time-definition.adoc[]
+
+include::requirements/core/REQ_rc-time-response.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-time-definition.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-time-response.adoc[]
+
+=== Root
+
+==== Common
+
+include::requirements/core/REQ_root-op.adoc[]
+
+include::requirements/core/REQ_root-success.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_root-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_root-success.adoc[]
+
+=== src-md
+
+==== Common
+
+include::requirements/core/REQ_src-md-op.adoc[]
+
+include::requirements/core/REQ_src-md-success.adoc[]
+
+==== Features
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_sfc-md-op.adoc[]
+
+include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_sfc-md-success.adoc[]

@@ -1,0 +1,8 @@
+[[req_edr_withinUnits-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* | */req/edr/within-response* 
+^|A |If the `within` parameter is provided, all selected information within the specified radius SHALL be part of the result set.
+^|B |If a `withinUnits` parameter is not provided, the distance units will default to the requested CRS default units.
+
+|===

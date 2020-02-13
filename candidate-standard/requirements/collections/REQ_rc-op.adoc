@@ -1,0 +1,8 @@
+[[req_collections_rc-op]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/collections/rc-op* 
+^|A|For every resource collection identified in the resource collections response (path `/collections`), the API SHALL support the HTTP GET operation at the path `/collections/{collectionId}/items`.
+
+* The parameter `collectionId` is each `id` property in the resource collections response (JSONPath: `$.collections[*].id`).
+|===

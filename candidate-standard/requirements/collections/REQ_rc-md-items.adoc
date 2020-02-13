@@ -1,0 +1,7 @@
+[[req_collections_rc-md-items]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/collections/rc-md-items* 
+^|A |For each spatial resource collection accessible through this API, metadata describing that collection SHALL be provided in the `collections` property of the Collections Metadata.
+^|B |This metadata shall be based on the same schema as the Collection Information resource.
+|===
