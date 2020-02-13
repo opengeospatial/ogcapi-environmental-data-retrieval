@@ -1,4 +1,4 @@
-:Title: EDR Candidate Specification
+:title: EDR Candidate Specification
 :titletext: OGC API - Environmental Data Retrieval Standard
 :doctype: book
 :encoding: utf-8
@@ -10,7 +10,7 @@
 :sectanchors:
 //:source-highlighter: pygments
 
-= {Title}
+= {title}
 
 <<<
 [cols = ">",frame = "none",grid = "none"]
