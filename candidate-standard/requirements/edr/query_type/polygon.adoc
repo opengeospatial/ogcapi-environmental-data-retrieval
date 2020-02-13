@@ -6,36 +6,32 @@ include::../REQ_rc-coords-definition.adoc[]
 
 include::../REQ_rc-coords-response.adoc[]
 
-"Intersects" means that the rectangular area specified in the parameter `coords` includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries (e.g. for curves the start and end position and for surfaces the outer and inner rings).
+    Only data that has a geometry that intersects the area defined by the polygon
+    are selected. 
 
-The polygon query supports two Well Know Text geometry types Polygon and Multipolygon, the polygon query SHOULD support 3D queries allowing the definition of a vertical level value (z) therefore coordinates for geometries may be 2D (x, y) or 3D (x, y, z).  If a height level is not specified all available levels SHOULD be returned.
+    The polygon is defined using a Well Known Text string following 
 
-All polygons in a MULTIPOLYGON request must either by 2D or 3D a request MUST not contain a mix a 2D and 3D definitions.
+    coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))
+
+    which are values in the coordinate system defined by the crs query parameter 
+    (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+    For instance a polygon that roughly describes an area that contains 
+    South West England in WGS84 would look like: 
+
+    coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))
+
+    see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+    `The coords parameter will only support 2D POLYGON`
 
 
 .A polygon covering the UK 
 =================
 An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)
 
-`coords=POLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
+`coords=POLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
 
-=================
-
-
-.A polygon covering the UK for a specific vertical level
-=================
-An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S) at 500hPa
-
-`coords=POLYGON\((-15 48.8 500,-15 60.95 500,5 60.85 500,5 48.8 500,-15 48.8 500))`
-
-=================
-
-
-.A polygon covering the UK multiple heights 
-=================
-An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S) at 10m and 80m 
-
-`coords=MULTIPOLYGON\((-15 48.8 10,-15 60.95 10,5 60.85 10,5 48.8 10,-15 48.8 10),(-15 48.8 80,-15 60.95 80,5 60.85 80,5 48.8 80,-15 48.8 80))`
 =================
 
 
@@ -43,7 +39,7 @@ An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°
 =================
 Selecting data for two different regions
 
-`coords=MULTIPOLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
+`coords=MULTIPOLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
 =================
 
 ==== Parameter interpolationX
@@ -81,4 +77,19 @@ Use the defined nearest-neighbour algorithm to return 3 values between the minim
 
 `interpolationY=R3/nearest-neighbour`
 =================
+
+==== Parameter z
+
+Define the vertical level to return data from 
+i.e. Z=level
+
+.A Z value
+===========
+
+for instance if the 850hPa pressure level is being queried
+
+Z=850
+
+`When not specified the API MUST return data from the lowest (i.e. nearest the surface) level of data in the collection instance (if the instance has a height dimension).`
+
 

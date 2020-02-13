@@ -1,0 +1,120 @@
+==== Parameters
+
+==== Parameter coords
+
+include::../REQ_rc-coords-definition.adoc[]
+
+include::../REQ_rc-coords-response.adoc[]
+
+    Only data that has a geometry that intersects the area defined by the cube
+    are selected. 
+
+    The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
+    
+    coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
+
+    which are values in the coordinate system defined by the crs query parameter 
+    if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
+
+    For instance a cube that roughly describes an area that contains 
+    South West England in WGS84 would look like
+
+   
+
+    `If the WKT does not define a Rectangle the service will generate an error message`
+    
+    see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+
+.A cube covering the South West of the UK
+=================
+
+`coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))`
+
+=================
+
+
+
+==== Parameter interpolationX
+
+include::../REQ_rc-interpolationX-definition.adoc[]
+
+<<<
+
+include::../REQ_rc-interpolationX-response.adoc[]
+
+If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.
+
+
+.An interpolationX
+=================
+Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value
+
+`interpolationX=R10/linear`
+=================
+
+==== Parameter interpolationY
+
+include::../REQ_rc-interpolationY-definition.adoc[]
+
+<<<
+    
+include::../REQ_rc-interpolationY-response.adoc[]
+
+If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
+
+
+.An interpolationY
+=================
+Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value 
+
+`interpolationY=R3/nearest-neighbour`
+=================
+
+==== Parameter minZ
+
+Define the height of the bottom of the cube 
+i.e. minZ=level
+
+The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+
+.A minZ
+=================
+if bottom of cube is at the 950hPa pressure level
+
+minZ=950
+=================
+
+==== Parameter maxZ
+
+Define the height of the top of the cube 
+i.e. maxZ=level
+
+The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+
+.A maxZ
+=================
+if top of cube is at the 650hPa pressure level
+
+minZ=650
+=================
+
+==== Parameter interpolationZ
+
+include::../REQ_rc-interpolationZ-definition.adoc[]
+
+<<<
+    
+include::../REQ_rc-interpolationZ-response.adoc[]
+
+If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationZ method does not match an entry in the defined list of valid interpolationZ methods for the collection a 403 message SHOULD be returned.
+
+
+.An interpolationZ
+=================
+Use the defined cubic-spline algorithm to return 3 values between the minimum Z value and the maximum Z value 
+
+`interpolationZ=R3/cubic-spline`
+=================
+
+
