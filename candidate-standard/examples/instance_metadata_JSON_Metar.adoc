@@ -90,7 +90,8 @@ Gregorian calendar).
           "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
             
       },
-      "supportedQueryTypes": {"point"}      
+      "itemType":"PointSeries",
+      "supportedQueryTypes": {"point"},      
       "links": [
         { "href": "http://data.example.org/collections/metars/initial_qc",
           "rel": "metadata", "type": "application/json",

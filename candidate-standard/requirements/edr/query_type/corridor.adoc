@@ -1,83 +1,83 @@
-==== Parameters
+===== Parameters
 
-==== Parameter coords
+====== Parameter coords
 
 include::../REQ_rc-coords-definition.adoc[]
 
 include::../REQ_rc-coords-response.adoc[]
 
-"Intersects" means that the area specified by the parameter `coords`, `corridor-width` and `corridor-height` includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
+Only data that has a geometry that intersects the area defined by the linestring are selected. 
 
-The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoc time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  
+The centre of the cooridor is defined using a Well Known Text string following 
 
-If the collection has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned
+coords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)
 
-If the collection does not have a height dimension but time values are required in the WKT geometry the z value SHOULD always be 0.
+which are values in the coordinate system defined by the crs query parameter 
+`if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates.`  
+
+a corridor which involves changes in height would be defined as follows
+
+coords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)
+
+where z is the height value.  
+`If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`
+
+For instance a linestring that roughly describes an route that follows a section
+of the M5 Motorway in WGS84 would look like 
 
 
+
+see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+
+.A route along the M5 motorway
+==============================
+coords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)
 
 .An imaginary flight route 
-=================
+==========================
 From AMSTERDAM to LONDON (height in hPa)
 
 `coords=LINESTRING(53.33 4.76 1000 1560507000,51.90 3.17 400 1560507600,51.8 2.24 400 1560508200,50.74 -3.48 0 1560508500,51.75 2.20 500 1560510240,51.69 1.41 800 1560510960,51.49 0.48 1000 1560511560)`
 
-=================
-
 <<<
 
-==== Parameter corridor_width
+====== Parameter interpolationWidth
 
-include::../REQ_rc-corridor_width-definition.adoc[]
+include::../REQ_rc-interpolationWidth-definition.adoc[]
 
-include::../REQ_rc-corridor_width-response.adoc[]
+include::../REQ_rc-interpolationWidth-response.adoc[]
 
 If not specified the query will not interpolate the data along a corridor width and only return values for the defined `corridor` parameter values. 
 
 
-.A corridor_width
+.An interpolationWidth
 =================
-Get a corridor 50km wide centred on the requested coordinates 
+Return five values in a corridor 50km wide centred on the requested coordinates using linear interpolation
 
-`corridor_width=25/km`
+`interpolationWidth=R5/linear/50`
 =================
 
-==== Parameter corridor_height
+====== Parameter interpolationHeight
 
-include::../REQ_rc-corridor_height-definition.adoc[]
+include::../REQ_rc-interpolationHeight-definition.adoc[]
 
-include::../REQ_rc-corridor_height-response.adoc[]
+include::../REQ_rc-interpllationHeight-response.adoc[]
 
 If not specified the query will not interpolate the data along the corridor height and only return values for the defined `corridor` parameter values. 
 
 
-.A corridor_height
+.An interpolationHeight
 =================
-Get a corridor 100hPa high centred on the requested coordinates 
+return values at 50hPa intervals using a cubic_spline interpolation
 
-`corridor_height=50/hPa`
+`interpolationHeight=R3/cubic_spline/150`
 =================
 
-
-==== Parameter interpolationWidth
-    
-include::../REQ_rc-interpolation_width-definition.adoc[]
-    
-include::../REQ_rc-interpolation_width-response.adoc[]
-    
-If not specified the query will not perform any interpolation of data along the `corridor_width`.  If the `interpolationWidth` method does not match an entry in the defined list of valid `interpolationWidth` methods for the collection a 403 message SHOULD be returned.
-    
-    
-.An interpolation_width
-=================
-Use the defined linear algorithm to return 10 values in the range defined by the `corridor_width` value.
-    
-`interpolationWidth=R10/linear`
-=================
 
 <<<
 
-==== Parameter interpolation
+====== Parameter interpolation
     
 include::../REQ_rc-interpolation-definition.adoc[]
     
@@ -96,7 +96,7 @@ Use the defined linear algorithm to return 10 values between each of the X,Y,T c
 <<<
 
 
-==== Parameter interpolationZ
+====== Parameter interpolationZ
     
 include::../REQ_rc-interpolationZ-definition.adoc[]
     

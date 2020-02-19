@@ -323,7 +323,9 @@ paths:
           description: |+
             This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
 
-            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+            interpolationX=R{interpolation resolution}/{interpolation method}
+            
+            e.g. interpolationX=R15/linear
 
             The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
 
@@ -337,7 +339,7 @@ paths:
             This is defined if the query doesn't require data at its native Y coordinate 
             resolution, the format is:
 
-            interpolationY=R<interpolation resolution>/<interpolation method> 
+            interpolationY=R{interpolation resolution}/{interpolation method} 
             e.g.
             interpolationY=R5/linear
 
@@ -444,7 +446,10 @@ paths:
           description: |+
             This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
 
-            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
+            interpolationX=R{interpolation resolution
+            }/{interpolation method}
+            
+            e.g. interpolationX=R15/linear
 
             The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
 
@@ -458,7 +463,7 @@ paths:
             This is defined if the query doesn't require data at its native Y coordinate 
             resolution, the format is:
 
-            interpolationY=R<interpolation resolution>/<interpolation method> 
+            interpolationY=R{interpolation resolution}/{interpolation method} 
             e.g.
             interpolationY=R5/linear
 
@@ -503,14 +508,12 @@ paths:
             This is defined if the query doesn't require data at its native Z coordinate 
             resolution, the format is
       
-            interpolationZ=R<interpolation resolution>/<interpolation method>/<cube height> 
-            e.g.
-            interpolationZ=R5/cubic spline/200
+            interpolationZ=R{interpolation resolution}/{interpolation method} 
+            
+            e.g. interpolationZ=R5/cubic spline
       
             The interpolation resolution is the number of intervals the user requires between
             the a Z value of the bounding box and the maximum Z value of the bounding box.
-      
-            The `cube height` MUST always equal maxZ - minZ
       
             The valid interpolation method values are available in the results of the 
             capabilities query methods of this API
@@ -657,6 +660,7 @@ paths:
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/interpolation'        
         - name: coords
           in: query
           description: |-
@@ -692,50 +696,36 @@ paths:
           required: true
           schema:
             type: string        
-        - name: interpolationX
-          in: query
-          description: |+
-            This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
-    
-            interpolationX=R<interpolation resolution>/<interpolation method> e.g. interpolationX=R15/linear
-    
-            The interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.
-    
-            The valid interpolation method values are available in the results of the capabilities query methods of this API
-    
-          schema:
-            type: string
-        - name: interpolationXY
+        - name: interpolationWidth
           in: query
           description: |
             This is defined if the query doesn't require data at its native coordinate 
             resolution, the format is
 
-            interpolationXY=R<interpolation resolution>/<interpolation method>/<corridor width> 
-            e.g.
-            interpolationXY=R5/linear/10
+            interpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} 
+            
+            e.g. interpolationWidth=R5/linear/10
 
             The `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. 
           
-            The `interpolation resolution` is the number of intervals the user requires between
-            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+            The `interpolation resolution` is the number of intervals the user requires in the specified cooridor with
+            
 
             The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
           schema:
             type: string
-        - name: interpolationZ
+        - name: interpolationHeight
           in: query
           description: |
             This is defined if the query requires interpolation in the vertical axis
 
-            interpolationZ=R<interpolation resolution>/<interpolation method>/<corridor height> 
-            e.g.
-            interpolationZ=R5/cubic_spline/10
+            interpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} 
+            
+            e.g. interpolationZ=R5/cubic_spline/10
 
             The `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. 
           
-            The `interpolation resolution` is the number of intervals the user requires between
-            the minimum Y value of the bounding box and the maximum Y value of the bounding box.
+            The `interpolation resolution` is the number of intervals the user requires within the specified corridor height.
 
             The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
           schema:
@@ -1949,9 +1939,9 @@ components:
         This is defined if the query doesn't require data at its native Z coordinate 
         resolution, the format is:
 
-        interpolationZ=R<interpolation resolution>/<interpolation method> 
+        interpolationZ=R{interpolation resolution}/{interpolation method}/{height}
         e.g.
-        interpolationZ=R5/linear
+        interpolationZ=R5/linear/10
 
         The interpolation resolution is the number of intervals the user requires between
         the a Z value of the bounding box and the maximum Z value of the bounding box.

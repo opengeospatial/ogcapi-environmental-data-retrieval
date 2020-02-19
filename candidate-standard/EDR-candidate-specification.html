@@ -29761,7 +29761,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 </head>
 <body class="article">
 <div class="title-document">
-  <h1>{Title}</h1>
+  <h1>EDR Candidate Specification API</h1>
 </div>
 <div id="content" class="content">
 <div id="preamble">
@@ -29785,16 +29785,16 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   2020-02-02</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   2020-02-13</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/" class="bare">http://www.opengis.net/doc/</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    20-x</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    19-086</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.1</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.2</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Implementation Specification</p></td>
@@ -29810,7 +29810,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">EDR Candidate Specification</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">OGC API - Environmental Data Retrieval Standard</strong></p></td>
 </tr>
 </tbody>
 </table>
@@ -29979,41 +29979,23 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <li><a href="#_parameter_outputformat">9.4.5. Parameter outputFormat</a></li>
 </ul>
 </li>
-<li><a href="#_querytype_specific_operations">9.5. QueryType specific Operations</a></li>
-<li><a href="#_point">9.6. Point</a>
+<li><a href="#_querytype_specific_operations">9.5. QueryType specific Operations</a>
 <ul class="sectlevel3">
-<li><a href="#_parameters">9.6.1. Parameters</a></li>
-<li><a href="#_parameter_coords_2">9.6.2. Parameter coords</a></li>
-<li><a href="#_parameter_interpolation">9.6.3. Parameter interpolation</a></li>
-<li><a href="#_parameter_within">9.6.4. Parameter within</a></li>
-<li><a href="#_parameter_withinunits">9.6.5. Parameter withinUnits</a></li>
+<li><a href="#_point">9.5.1. Point</a></li>
+<li><a href="#_polygon">9.5.2. Polygon</a></li>
+<li><a href="#_parameters_2">9.5.3. Parameters</a></li>
+<li><a href="#_parameter_coords_3">9.5.4. Parameter coords</a></li>
+<li><a href="#_parameter_interpolationx">9.5.5. Parameter interpolationX</a></li>
+<li><a href="#_parameter_interpolationy">9.5.6. Parameter interpolationY</a></li>
+<li><a href="#_parameter_z">9.5.7. Parameter z</a></li>
+<li><a href="#_cube">9.5.8. Cube</a></li>
+<li><a href="#_trajectory_corridor">9.5.9. Trajectory (corridor)</a></li>
+<li><a href="#_item">9.5.10. Item</a></li>
 </ul>
 </li>
-<li><a href="#_polygon">9.7. Polygon</a>
+<li><a href="#collection-general-requirements">9.6. General Requirements</a>
 <ul class="sectlevel3">
-<li><a href="#_parameters_2">9.7.1. Parameters</a></li>
-<li><a href="#_parameter_coords_3">9.7.2. Parameter coords</a></li>
-<li><a href="#_parameter_interpolationx">9.7.3. Parameter interpolationX</a></li>
-<li><a href="#_parameter_interpolationy">9.7.4. Parameter interpolationY</a></li>
-</ul>
-</li>
-<li><a href="#_cube">9.8. Cube</a></li>
-<li><a href="#_trajectory_corridor">9.9. Trajectory (corridor)</a>
-<ul class="sectlevel3">
-<li><a href="#_parameters_3">9.9.1. Parameters</a></li>
-<li><a href="#_parameter_coords_4">9.9.2. Parameter coords</a></li>
-<li><a href="#_parameter_interpolation_2">9.9.3. Parameter interpolation</a></li>
-<li><a href="#_parameter_interpolationz">9.9.4. Parameter interpolationZ</a></li>
-</ul>
-</li>
-<li><a href="#_item">9.10. Item</a>
-<ul class="sectlevel3">
-<li><a href="#_parameters_4">9.10.1. Parameters</a></li>
-</ul>
-</li>
-<li><a href="#collection-general-requirements">9.11. General Requirements</a>
-<ul class="sectlevel3">
-<li><a href="#_coordinate_reference_systems">9.11.1. Coordinate Reference Systems</a></li>
+<li><a href="#_coordinate_reference_systems">9.6.1. Coordinate Reference Systems</a></li>
 </ul>
 </li>
 </ul>
@@ -31446,7 +31428,7 @@ Arguably this requires a conformance class for every possible encoding. Do we re
 <div class="paragraph">
 <p>It will not always be possible to respond to queries synchronously, if the query requires handling asynchronously the system should respond with a HTTP code  of 308 and include a <code>Location</code> response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of 202 and include a <code>Retry-after</code> response header field with a suggested interval in seconds to retry the data retrieval.</p>
 </div>
-<table id="rec_core_cross-origin" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="rec_core_asynchronous-query" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -32058,12 +32040,12 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
             },
         "extent": {"$href": "extent.json"},
         "itemType": {
-            "type": "string",
-            "default": "unknown"
-            },
-        "supportedQueryTypes" : {
-            "type": "string",
-             "enum": ["cube","item","point","polygon","trajectory","profile"]
+            "type": "array",
+            "items": {
+               "type":"string",
+               "enum": ["cube","item","point","polygon","trajectory","profile"],
+               "example" : ["wfs","cube","point"]
+            }
         },
         "crs": {
             "description": "the list of coordinate reference systems supported by the API; the first item is the default coordinate reference system",
@@ -32133,9 +32115,6 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 <p>Additional information may be available to assist in understanding and using this dataset. Links to those resources should be provided as well.</p>
 </div>
 <div class="paragraph">
-<p>Unresolved directive in clause_8_collections.adoc - include::recommendations/collections/REC_rc-md-instance-descriptions.adoc[]</p>
-</div>
-<div class="paragraph">
 <p>The <code>instance</code> property of the Collection Metadata provides a description of each instance. These descriptions are based on the <a href="https://raw.githubusercontent.com/opengeospatial/Environmental-Data-Retrieval-API/master/standard/openapi/schemas/instanceInfo_edr.json">EDR Collection Instance Information Schema</a>. This schema is described in detail in the <a href="#collection-instance-information">Collection Instance Information</a> section of this Standard. The following requirements and recommendations govern the use of Collection Instance Information in the Collection Instance Metadata.</p>
 </div>
 <table id="req_collections_rc-md-items" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -32166,9 +32145,6 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 </table>
 <div class="paragraph">
 <p>While it is prefered that the Collection Instance Metadata fully describe the collection instance through the API, in some cases that is impractical. Developers have an option to only return a subset, as long as they provide a way to retrieve the remaining metadata as well.</p>
-</div>
-<div class="paragraph">
-<p>Unresolved directive in clause_8_collections.adoc - include::recommendations/collection/PER_rc-md-instance-items.adoc[]</p>
 </div>
 </div>
 <div class="sect4">
@@ -33213,15 +33189,12 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>The following describes the query parameters that are unique or specialised to the individual query types:</p>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_point"><a class="anchor" href="#_point"></a>9.6. Point</h3>
 <div class="sect3">
-<h4 id="_parameters"><a class="anchor" href="#_parameters"></a>9.6.1. Parameters</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_parameter_coords_2"><a class="anchor" href="#_parameter_coords_2"></a>9.6.2. Parameter coords</h4>
+<h4 id="_point"><a class="anchor" href="#_point"></a>9.5.1. Point</h4>
+<div class="sect4">
+<h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_parameter_coords_2"><a class="anchor" href="#_parameter_coords_2"></a>Parameter coords</h6>
 <table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33305,34 +33278,83 @@ explode: false</code></pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The point query supports two types of Well Known Text geometries, Point for as single location and Multipoint for a list of locations.  The point query only supports 2D geometries</p>
+<p>location(s) to return data for, the coordinates are defined by a Well Known Text
+(wkt) string. to retrieve a single location :</p>
+</div>
+<div class="paragraph">
+<p>POINT(x y)</p>
+</div>
+<div class="paragraph">
+<p>A point at height <code>z</code>
+POINT(x y z)</p>
+</div>
+<div class="paragraph">
+<p>And for a list of locations</p>
+</div>
+<div class="paragraph">
+<p>MULTIPOINTx y),(x1 y1),(x2 y2),(x3 y3</p>
+</div>
+<div class="paragraph">
+<p>And for a list of locations at defined heights</p>
+</div>
+<div class="paragraph">
+<p>MULTIPOINTx y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3</p>
+</div>
+<div class="paragraph">
+<p>see <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a></p>
+</div>
+<div class="paragraph">
+<p>the coordinate values will depend on the CRS parameter, if this is not defined
+the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 7. Point</div>
 <div class="content">
 <div class="paragraph">
-<p>retrieve data for a single location 51.2 N, 3.2 W</p>
+<p>retrieve data for Greenwich, London</p>
 </div>
 <div class="paragraph">
-<p><code>coords=POINT(-3.2 51.2)</code></p>
+<p><code>coords=POINT(0 51.48)</code></p>
 </div>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 8. Multipoint</div>
+<div class="title">Example 8. Point for a specific height</div>
+<div class="content">
+<div class="paragraph">
+<p>retrieve data for Mount Everest</p>
+</div>
+<div class="paragraph">
+<p><code>coords=POINT(86.95 27.99 8848)</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 9. Multiple locations</div>
 <div class="content">
 <div class="paragraph">
 <p>retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W</p>
 </div>
 <div class="paragraph">
-<p><code>coords=MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))</code></p>
+<p><code>coords=MULTIPOINT38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 10. Multiple locations with specified heights</div>
+<div class="content">
+<div class="paragraph">
+<p>retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W</p>
+</div>
+<div class="paragraph">
+<p><code>coords=MULTIPOINT-77.02 38.94 72.3),(-3.50 50.72 36.35),(1.43 43.63 135.63),(117.23 39.13 10.04),(144.96 -37.80 33.83</code></p>
 </div>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect3">
-<h4 id="_parameter_interpolation"><a class="anchor" href="#_parameter_interpolation"></a>9.6.3. Parameter interpolation</h4>
+<div class="sect5">
+<h6 id="_parameter_interpolation"><a class="anchor" href="#_parameter_interpolation"></a>Parameter interpolation</h6>
 <table id="req_edr_interpolation-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33348,7 +33370,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolation`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter <code>interpolation</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -33385,7 +33407,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the collection response:</p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -33393,13 +33415,22 @@ explode: false</code></pre>
 </div>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>If not specified the query will use the default interpolation method for the chosen collection.  If the interpolation method does not match an entry in the defined list of valid interpolation methods for the collection a 403 message SHOULD be returned.</p>
-</div>
 <div class="exampleblock">
-<div class="title">Example 9. An interpolation</div>
+<div class="title">Example 11. An interpolation</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined nearest neighbour algorithm to get the best data match for the requested locations</p>
@@ -33411,7 +33442,7 @@ explode: false</code></pre>
 </div>
 <div style="page-break-after: always;"></div>
 <div class="exampleblock">
-<div class="title">Example 10. An interpolation</div>
+<div class="title">Example 12. An interpolation</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined nearest neighbour algorithm to get the best data match for the requested locations</p>
@@ -33422,8 +33453,8 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a>9.6.4. Parameter within</h4>
+<div class="sect5">
+<h6 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a>Parameter within</h6>
 <table id="req_edr_within-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33440,6 +33471,12 @@ explode: false</code></pre>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>Each resource collection operation MAY support a parameter `within`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the instance metadata does not provide <code>withinUnits</code> values the API SHALL NOT support <code>within</code> queries:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -33455,7 +33492,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_withinUnits-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_edr_within-response" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -33476,34 +33513,85 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If a <code>withinUnits</code> parameter is not provided, the distance units will default to the requested CRS default units.</p>
+<p>If a <code>withinUnits</code> parameter is not provided, a 403 error WILL be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>If not specified the query will return the information for the location defined by the coords parameter.</p>
 </div>
+<div class="sect5">
+<h6 id="_parameter_withinunits"><a class="anchor" href="#_parameter_withinunits"></a>Parameter withinUnits</h6>
+<table id="req_edr_withinUnits-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 36</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/withinUnits-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation MAY support a parameter `withinUnits`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A withinUnits value MUST be one of the values defined in the instance metadata:</p>
 </div>
-<div class="sect3">
-<h4 id="_parameter_withinunits"><a class="anchor" href="#_parameter_withinunits"></a>9.6.5. Parameter withinUnits</h4>
-<div class="paragraph">
-<p>Unresolved directive in requirements/edr/query_type/point.adoc - include::../REQ_rc-withinunits-definition.adoc[]</p>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: withinUnits
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in requirements/edr/query_type/point.adoc - include::../REQ_rc-withinunits-response.adoc[]</p>
-</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="req_edr_withinUnits-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 37</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/within-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>withinUnits</code> parameter defines the distance units of the <code>within</code> query parameter value .</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_polygon"><a class="anchor" href="#_polygon"></a>9.7. Polygon</h3>
+</div>
 <div class="sect3">
-<h4 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>9.7.1. Parameters</h4>
+<h4 id="_polygon"><a class="anchor" href="#_polygon"></a>9.5.2. Polygon</h4>
 
 </div>
 <div class="sect3">
-<h4 id="_parameter_coords_3"><a class="anchor" href="#_parameter_coords_3"></a>9.7.2. Parameter coords</h4>
+<h4 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>9.5.3. Parameters</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_parameter_coords_3"><a class="anchor" href="#_parameter_coords_3"></a>9.5.4. Parameter coords</h4>
 <table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33511,7 +33599,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 36</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -33548,7 +33636,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 37</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -33586,45 +33674,57 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>"Intersects" means that the rectangular area specified in the parameter <code>coords</code> includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries (e.g. for curves the start and end position and for surfaces the outer and inner rings).</p>
+<div class="literalblock">
+<div class="content">
+<pre>Only data that has a geometry that intersects the area defined by the polygon
+are selected.</pre>
 </div>
-<div class="paragraph">
-<p>The polygon query supports two Well Know Text geometry types Polygon and Multipolygon, the polygon query SHOULD support 3D queries allowing the definition of a vertical level value (z) therefore coordinates for geometries may be 2D (x, y) or 3D (x, y, z).  If a height level is not specified all available levels SHOULD be returned.</p>
 </div>
-<div class="paragraph">
-<p>All polygons in a MULTIPOLYGON request must either by 2D or 3D a request MUST not contain a mix a 2D and 3D definitions.</p>
+<div class="literalblock">
+<div class="content">
+<pre>The polygon is defined using a Well Known Text string following</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>which are values in the coordinate system defined by the crs query parameter
+(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For instance a polygon that roughly describes an area that contains
+South West England in WGS84 would look like:</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`The coords parameter will only support 2D POLYGON`</pre>
+</div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 11. A polygon covering the UK</div>
+<div class="title">Example 13. A polygon covering the UK</div>
 <div class="content">
 <div class="paragraph">
 <p>An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)</p>
 </div>
 <div class="paragraph">
-<p><code>coords=POLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))</code></p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="title">Example 12. A polygon covering the UK for a specific vertical level</div>
-<div class="content">
-<div class="paragraph">
-<p>An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S) at 500hPa</p>
-</div>
-<div class="paragraph">
-<p><code>coords=POLYGON((-15 48.8 500,-15 60.95 500,5 60.85 500,5 48.8 500,-15 48.8 500))</code></p>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="title">Example 13. A polygon covering the UK multiple heights</div>
-<div class="content">
-<div class="paragraph">
-<p>An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S) at 10m and 80m</p>
-</div>
-<div class="paragraph">
-<p><code>coords=MULTIPOLYGON((-15 48.8 10,-15 60.95 10,5 60.85 10,5 48.8 10,-15 48.8 10),(-15 48.8 80,-15 60.95 80,5 60.85 80,5 48.8 80,-15 48.8 80))</code></p>
+<p><code>coords=POLYGON-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8</code></p>
 </div>
 </div>
 </div>
@@ -33635,13 +33735,13 @@ explode: false</code></pre>
 <p>Selecting data for two different regions</p>
 </div>
 <div class="paragraph">
-<p><code>coords=MULTIPOLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))</code></p>
+<p><code>coords=MULTIPOLYGON-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3</code></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameter_interpolationx"><a class="anchor" href="#_parameter_interpolationx"></a>9.7.3. Parameter interpolationX</h4>
+<h4 id="_parameter_interpolationx"><a class="anchor" href="#_parameter_interpolationx"></a>9.5.5. Parameter interpolationX</h4>
 <table id="req_edr_interpolationX-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33649,7 +33749,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 38</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-definition</strong></p>
 </div></div></td>
@@ -33681,7 +33781,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 39</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-response</strong></p>
 </div></div></td>
@@ -33696,6 +33796,18 @@ explode: false</code></pre>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>The interpolationX information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -33721,7 +33833,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameter_interpolationy"><a class="anchor" href="#_parameter_interpolationy"></a>9.7.4. Parameter interpolationY</h4>
+<h4 id="_parameter_interpolationy"><a class="anchor" href="#_parameter_interpolationy"></a>9.5.6. Parameter interpolationY</h4>
 <table id="req_edr_interpolationY-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33729,7 +33841,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 40</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 42</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-definition</strong></p>
 </div></div></td>
@@ -33761,7 +33873,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 41</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-response</strong></p>
 </div></div></td>
@@ -33775,12 +33887,30 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number.</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-java" data-lang="java">interpolationY = "R"interval "/" interpolation-method</code></pre>
 </div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -33799,24 +33929,35 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
-</div>
-<div class="sect2">
-<h3 id="_cube"><a class="anchor" href="#_cube"></a>9.8. Cube</h3>
+<div class="sect3">
+<h4 id="_parameter_z"><a class="anchor" href="#_parameter_z"></a>9.5.7. Parameter z</h4>
 <div class="paragraph">
-<p>Unresolved directive in clause_8_collections.adoc - include::requirements/edr/query_type/cube.adoc[]</p>
+<p>Define the vertical level to return data from
+i.e. Z=level</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 17. A Z value</div>
+<div class="content">
+<div class="paragraph">
+<p>for instance if the 850hPa pressure level is being queried</p>
+</div>
+<div class="paragraph">
+<p>Z=850</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p><code>When not specified the API MUST return data from the lowest (i.e. nearest the surface) level of data in the collection instance (if the instance has a height dimension).</code></p>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect2">
-<h3 id="_trajectory_corridor"><a class="anchor" href="#_trajectory_corridor"></a>9.9. Trajectory (corridor)</h3>
 <div class="sect3">
-<h4 id="_parameters_3"><a class="anchor" href="#_parameters_3"></a>9.9.1. Parameters</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a>9.9.2. Parameter coords</h4>
+<h4 id="_cube"><a class="anchor" href="#_cube"></a>9.5.8. Cube</h4>
+<div class="sect4">
+<h5 id="_parameters_3"><a class="anchor" href="#_parameters_3"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a>Parameter coords</h6>
 <table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33824,7 +33965,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 42</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -33861,7 +34002,475 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 43</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 45</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/coords-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Only those resources that have a spatial geometry that intersects the area defined by the <code>coords</code> parameter SHALL be part of the result set.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The coordinates SHALL consist of a Well Known Text (WKT) geometry string</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The coordinate reference system of the values SHALL be interpreted as WGS84 longitude/latitude</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>WKT: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>EPSG: http://www.opengis.net/def/crs/OGC/1.3/CRS84</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>unless a  different coordinate reference system is specified in a parameter <code>crs</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="literalblock">
+<div class="content">
+<pre>Only data that has a geometry that intersects the area defined by the cube
+are selected.</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>which are values in the coordinate system defined by the crs query parameter
+if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>For instance a cube that roughly describes an area that contains
+South West England in WGS84 would look like</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>`If the WKT does not define a Rectangle the service will generate an error message`</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 18. A cube covering the South West of the UK</div>
+<div class="content">
+<div class="paragraph">
+<p><code>coords=POLYGON-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_interpolationx_2"><a class="anchor" href="#_parameter_interpolationx_2"></a>Parameter interpolationX</h6>
+<table id="req_edr_interpolationX-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 46</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/interpolationX-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation MAY support a parameter `interpolationX`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationX
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<table id="req_edr_interpolationX-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 47</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/interpolationX-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the <code>interpolationX</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed x intervals.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolationX information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationX = "R"interval "/" interpolation-method</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 19. An interpolationX</div>
+<div class="content">
+<div class="paragraph">
+<p>Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value</p>
+</div>
+<div class="paragraph">
+<p><code>interpolationX=R10/linear</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_interpolationy_2"><a class="anchor" href="#_parameter_interpolationy_2"></a>Parameter interpolationY</h6>
+<table id="req_edr_interpolationY-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 48</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/interpolationY-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation MAY support a parameter `interpolationY`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationY
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<table id="req_edr_interpolationY-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 49</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/interpolationY-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the <code>interpolationY</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y intervals.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationY = "R"interval "/" interpolation-method</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 20. An interpolationY</div>
+<div class="content">
+<div class="paragraph">
+<p>Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value</p>
+</div>
+<div class="paragraph">
+<p><code>interpolationY=R3/nearest-neighbour</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_minz"><a class="anchor" href="#_parameter_minz"></a>Parameter minZ</h6>
+<div class="paragraph">
+<p>Define the height of the bottom of the cube
+i.e. minZ=level</p>
+</div>
+<div class="paragraph">
+<p>The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 21. A minZ</div>
+<div class="content">
+<div class="paragraph">
+<p>if bottom of cube is at the 950hPa pressure level</p>
+</div>
+<div class="paragraph">
+<p>minZ=950</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_maxz"><a class="anchor" href="#_parameter_maxz"></a>Parameter maxZ</h6>
+<div class="paragraph">
+<p>Define the height of the top of the cube
+i.e. maxZ=level</p>
+</div>
+<div class="paragraph">
+<p>The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 22. A maxZ</div>
+<div class="content">
+<div class="paragraph">
+<p>if top of cube is at the 650hPa pressure level</p>
+</div>
+<div class="paragraph">
+<p>minZ=650</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_interpolationz"><a class="anchor" href="#_parameter_interpolationz"></a>Parameter interpolationZ</h6>
+<table id="req_edr_interpolationZ-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 50</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/interpolationZ-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation MAY support a parameter `interpolationZ`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationZ
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+<table id="req_edr_interpolationZ-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 51</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/interpolationZ-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the <code>interpolationZ</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z intervals.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationZ = "R" intervals "/" intervalinterpolation-method</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationZ method does not match an entry in the defined list of valid interpolationZ methods for the collection a 403 message SHOULD be returned.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 23. An interpolationZ</div>
+<div class="content">
+<div class="paragraph">
+<p>Use the defined cubic-spline algorithm to return 3 values between the minimum Z value and the maximum Z value</p>
+</div>
+<div class="paragraph">
+<p><code>interpolationZ=R3/cubic-spline</code></p>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_trajectory_corridor"><a class="anchor" href="#_trajectory_corridor"></a>9.5.9. Trajectory (corridor)</h4>
+<div class="sect4">
+<h5 id="_parameters_4"><a class="anchor" href="#_parameters_4"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a>Parameter coords</h6>
+<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 52</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/coords-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation SHALL support a parameter <code>coords</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: coords
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>coords</code> string value will be a Well Known Text of representation geometry as defined in <a href="http://www.opengeospatial.org/standards/sfa">Simple Feature Access - Part 1: Common Architecture</a>.  The representation type will depend on the queryType of the API</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 53</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -33906,13 +34515,13 @@ explode: false</code></pre>
 <p>The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoc time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).</p>
 </div>
 <div class="paragraph">
-<p>If the collection has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned</p>
+<p>If the collection instance has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned</p>
 </div>
 <div class="paragraph">
 <p>If the collection does not have a height dimension but time values are required in the WKT geometry the z value SHOULD always be 0.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 17. A basic surface route</div>
+<div class="title">Example 24. A basic surface route</div>
 <div class="content">
 <div class="paragraph">
 <p>From Bristol to Exeter</p>
@@ -33923,7 +34532,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 18. A basic surface route with defined time intervals</div>
+<div class="title">Example 25. A basic surface route with defined time intervals</div>
 <div class="content">
 <div class="paragraph">
 <p>From Bristol to Exeter</p>
@@ -33935,8 +34544,8 @@ explode: false</code></pre>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect3">
-<h4 id="_parameter_interpolation_2"><a class="anchor" href="#_parameter_interpolation_2"></a>9.9.3. Parameter interpolation</h4>
+<div class="sect5">
+<h6 id="_parameter_interpolation_2"><a class="anchor" href="#_parameter_interpolation_2"></a>Parameter interpolation</h6>
 <table id="req_edr_interpolation-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -33944,7 +34553,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 44</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 54</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-definition</strong></p>
 </div></div></td>
@@ -33952,7 +34561,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolation`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter <code>interpolation</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -33975,7 +34584,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 45</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 55</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-response</strong></p>
 </div></div></td>
@@ -33989,7 +34598,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the collection response:</p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -33997,15 +34606,24 @@ explode: false</code></pre>
 </div>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>If not specified the query will not perform any interpolation of the data points specified in the <code>coords</code> query parameter.  If the <code>interpolation</code> method does not match an entry in the defined list of valid <code>interpolation</code> methods for the collection a 403 message SHOULD be returned.</p>
-</div>
 <div style="page-break-after: always;"></div>
 </div>
-<div class="sect3">
-<h4 id="_parameter_interpolationz"><a class="anchor" href="#_parameter_interpolationz"></a>9.9.4. Parameter interpolationZ</h4>
+<div class="sect5">
+<h6 id="_parameter_interpolationz_2"><a class="anchor" href="#_parameter_interpolationz_2"></a>Parameter interpolationZ</h6>
 <table id="req_edr_interpolationZ-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -34013,7 +34631,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 46</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 56</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-definition</strong></p>
 </div></div></td>
@@ -34044,7 +34662,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 47</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 57</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-response</strong></p>
 </div></div></td>
@@ -34066,18 +34684,34 @@ explode: false</code></pre>
 </div>
 </div></div></td>
 </tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+</div></div></td>
+</tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>If not specified the query will not perform any interpolation of data along the height axis.  If the <code>interpolationZ</code> method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.</p>
-</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_item"><a class="anchor" href="#_item"></a>9.10. Item</h3>
+</div>
 <div class="sect3">
-<h4 id="_parameters_4"><a class="anchor" href="#_parameters_4"></a>9.10.1. Parameters</h4>
+<h4 id="_item"><a class="anchor" href="#_item"></a>9.5.10. Item</h4>
+<div class="sect4">
+<h5 id="_parameters_5"><a class="anchor" href="#_parameters_5"></a>Parameters</h5>
 <div class="paragraph">
 <p>Due to the concept of <code>Collections</code> in EDR the item query is a powerful and flexible tool, but retains only simple options. It could be used to rerun a previously run query but with a replacement for one or more of the input parameters; this would be achieved by using the id field value from the successful output from a previous query as the input id query parameter of item query, then the API user could override one or more of the original query parameters by just entering the query parameters that they want to change (i.e. a trajectory query where the same route is used every day with the same interpolation options, crs and outputFormat and the user just needs to enter the new time range).</p>
 </div>
@@ -34085,7 +34719,7 @@ explode: false</code></pre>
 <p>Again this is dependant on the data publisher implementing support for the functionality.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 19. id</div>
+<div class="title">Example 26. id</div>
 <div class="content">
 <div class="paragraph">
 <p>return information for the requested id</p>
@@ -34116,13 +34750,14 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="collection-general-requirements"><a class="anchor" href="#collection-general-requirements"></a>9.11. General Requirements</h3>
+<h3 id="collection-general-requirements"><a class="anchor" href="#collection-general-requirements"></a>9.6. General Requirements</h3>
 <div class="paragraph">
 <p>The following general requirements and recomendations apply to all OGC APIs which host Spatial Resources.</p>
 </div>
 <div class="sect3">
-<h4 id="_coordinate_reference_systems"><a class="anchor" href="#_coordinate_reference_systems"></a>9.11.1. Coordinate Reference Systems</h4>
+<h4 id="_coordinate_reference_systems"><a class="anchor" href="#_coordinate_reference_systems"></a>9.6.1. Coordinate Reference Systems</h4>
 <div class="paragraph">
 <p>As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <a href="#SDWBP">Best Practices document</a>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geographic data and it is important to be clear about the coordinate reference system that coordinates are in.</p>
 </div>
@@ -34136,7 +34771,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 48</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 58</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/crs84</strong></p>
 </div></div></td>
@@ -34236,7 +34871,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 49</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 59</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/html/definition</strong></p>
 </div></div></td>
@@ -34256,7 +34891,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 50</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 60</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/html/content</strong></p>
 </div></div></td>
@@ -34339,7 +34974,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 51</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 61</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/geojson/definition</strong></p>
 </div></div></td>
@@ -34369,7 +35004,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 52</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 62</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/geojson/content</strong></p>
 </div></div></td>
@@ -34460,7 +35095,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 53</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 63</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/oas-definition-1</strong></p>
 </div></div></td>
@@ -34495,7 +35130,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 54</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 64</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/oas-definition-2</strong></p>
 </div></div></td>
@@ -34518,7 +35153,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 55</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 65</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/oas30/oas-impl</strong></p></td>
 </tr>
 <tr>
@@ -34537,7 +35172,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 56</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 66</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/completeness</strong></p>
 </div></div></td>
@@ -34572,7 +35207,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 57</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 67</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/exceptions-codes</strong></p>
 </div></div></td>
@@ -34586,7 +35221,7 @@ The following schema names are from API-Features and need to be updated.
 </tbody>
 </table>
 <div class="exampleblock">
-<div class="title">Example 20. An exception response object definition</div>
+<div class="title">Example 27. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -34612,7 +35247,7 @@ content:
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 58</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 68</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/security</strong></p>
 </div></div></td>
@@ -36353,7 +36988,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>B.1. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 21. JSON Landing Page</div>
+<div class="title">Example 28. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -36392,7 +37027,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>B.3. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 22. Conformance Response</div>
+<div class="title">Example 29. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -36415,7 +37050,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>B.4. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 23. Collection metadata response document</div>
+<div class="title">Example 30. Collection metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -36578,7 +37213,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>B.5. Collection Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 24. Collection instance metadata response document</div>
+<div class="title">Example 31. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the gfs_time-height_above_ground-lat-lon gfs collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -36640,7 +37275,8 @@ Gregorian calendar).</p>
           "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
 
       },
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"}
+      "itemType": "Grid",
+      "supportedQueryTypes": {"point","polygon","cube","trajectory"},
       "links": [
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest",
           "rel": "metadata", "type": "application/json",
@@ -36739,7 +37375,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 25. Collection instance metadata response document</div>
+<div class="title">Example 32. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the Metar collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -36839,7 +37475,8 @@ Gregorian calendar).</p>
           "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
 
       },
-      "supportedQueryTypes": {"point"}
+      "itemType":"PointSeries",
+      "supportedQueryTypes": {"point"},
       "links": [
         { "href": "http://data.example.org/collections/metars/initial_qc",
           "rel": "metadata", "type": "application/json",
@@ -36856,7 +37493,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 26. Collection metadata response document</div>
+<div class="title">Example 33. Collection metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances of the DEM collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -36916,7 +37553,8 @@ Gregorian calendar).</p>
           "dcam:domainIncludes": ["height"]
 
       },
-      "supportedQueryTypes": {"point","polygon","trajectory"}
+      "itemType": "Grid",
+      "supportedQueryTypes": {"point","polygon","trajectory"},
       "links": [
         { "href": "http://data.example.org/collections/dem/data",
           "rel": "metadata", "type": "application/json",
@@ -36940,7 +37578,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="query-metadata-examples"><a class="anchor" href="#query-metadata-examples"></a>B.6. Collection Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 27. Collection instance metadata response document</div>
+<div class="title">Example 34. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the  latest instance of the fs_time-height_above_ground-lat-lon collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -37522,7 +38160,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 28. Collection instance metadata response document</div>
+<div class="title">Example 35. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the Raw instance of the "Metar" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -38451,7 +39089,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 29. Collection instance metadata response document</div>
+<div class="title">Example 36. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the data instance of the "DEM" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>

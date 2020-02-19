@@ -1,4 +1,4 @@
-==== Parameters
+===== Parameters
 
 Due to the concept of `Collections` in EDR the item query is a powerful and flexible tool, but retains only simple options. It could be used to rerun a previously run query but with a replacement for one or more of the input parameters; this would be achieved by using the id field value from the successful output from a previous query as the input id query parameter of item query, then the API user could override one or more of the original query parameters by just entering the query parameters that they want to change (i.e. a trajectory query where the same route is used every day with the same interpolation options, crs and outputFormat and the user just needs to enter the new time range).
 
