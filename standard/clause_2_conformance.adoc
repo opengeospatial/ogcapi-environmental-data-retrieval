@@ -1,0 +1,46 @@
+== Conformance
+Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance, are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+
+The one Standardization Target for this standard is Web APIs.
+
+OGC API-Common provides a common foundation for OGC API standards. Therefore, this standard should be viewed as an extension to API-Common. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common. 
+
+This standard identifies eleven (11) Conformance Classes. The Conformance Classes implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class has an associated Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+
+The Requirements Classes for OGC API-EDR are:
+
+* *Core*
+* *RC-2*
+* *RC-3*
+* *RC-3*
+* *RC-4*
+* *RC-5*
+* *RC-6*
+* *HTML*
+* *XML*
+* *HTML*
+* *OpenAPI 3.0*
+
+The _Core_ Requirements Class is the minimal useful service interface for an OGC EDR API. The requirements specified in this Requirements Class are mandatory for all implementations of API-EDR.
+
+The _RC-1_ Requirements Class defines the requirements needed to (_enter description of functionality here_).
+
+The _RC-2_ Requirements Class defines the requirements needed to (_enter description of functionality here_).
+
+The _RC-3_ Requirements Class defines the requirements to (_enter description of functionality here_).
+
+The _RC-4_ Requirements Class defines the requirements needed to (_enter description of functionality here_).
+
+The _RC-5_ Requirements Class defines the requirements needed to (_enter description of functionality here_).
+
+The _RC-6_ Requirements Class defines the requirements needed to (_enter description of functionality here_).
+
+The _JSON_ Requirements Class defines the requirements for a JSON representation of an environmental data resource. This is an illustration of extending the JSON Conformance Class.
+
+The _XML_ Requirements Class defines the requirements for an XML representation of an environmental data resource. This is an illustration of extending the XML Conformance Class.
+
+The _HTML_ Requirements Class defines the requirements for an HTML representation of aan environmental data resource. This is an illustration of extending the HTML Conformance Class.
+
+The _OpenAPI 3.0_ Requirements Class addresses the use of the OpenAPI 3.0 standard to document and communicate the API Definition. 
+
+
