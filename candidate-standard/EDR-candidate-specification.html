@@ -29761,7 +29761,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 </head>
 <body class="article">
 <div class="title-document">
-  <h1>{Title}</h1>
+  <h1>EDR Candidate Specification API</h1>
 </div>
 <div id="content" class="content">
 <div id="preamble">
@@ -29785,7 +29785,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   2020-02-13</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Publication Date:   2020-02-24</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/" class="bare">http://www.opengis.net/doc/</a></p></td>
@@ -29794,7 +29794,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    19-086</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.2</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.3</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Implementation Specification</p></td>
@@ -29965,11 +29965,11 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <li><a href="#spatial-resources-requirements">9.2. Spatial Resources</a>
 <ul class="sectlevel3">
 <li><a href="#collections-metadata">9.2.1. Collections Metadata</a></li>
-<li><a href="#collection-metadata">9.2.2. Collection Metadata</a></li>
-<li><a href="#collection-instance-information">9.2.3. Collection Instance Information</a></li>
+<li><a href="#collection-information">9.2.2. Collection Information</a></li>
+<li><a href="#collection-resource">9.2.3. Collection Resource</a></li>
 </ul>
 </li>
-<li><a href="#collection-information-resources">9.3. Information Resources</a></li>
+<li><a href="#collection-information-queries">9.3. Query Resources</a></li>
 <li><a href="#_parameter_modules">9.4. Parameter Modules</a>
 <ul class="sectlevel3">
 <li><a href="#_parameter_coords">9.4.1. Parameter coords</a></li>
@@ -29979,7 +29979,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <li><a href="#_parameter_outputformat">9.4.5. Parameter outputFormat</a></li>
 </ul>
 </li>
-<li><a href="#_querytype_specific_operations">9.5. QueryType specific Operations</a>
+<li><a href="#query-resources">9.5. QueryType specific Operations</a>
 <ul class="sectlevel3">
 <li><a href="#_point">9.5.1. Point</a></li>
 <li><a href="#_polygon">9.5.2. Polygon</a></li>
@@ -29990,7 +29990,8 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <li><a href="#_parameter_z">9.5.7. Parameter z</a></li>
 <li><a href="#_cube">9.5.8. Cube</a></li>
 <li><a href="#_trajectory_corridor">9.5.9. Trajectory (corridor)</a></li>
-<li><a href="#_item">9.5.10. Item</a></li>
+<li><a href="#_items">9.5.10. Items</a></li>
+<li><a href="#_instance">9.5.11. Instance</a></li>
 </ul>
 </li>
 <li><a href="#collection-general-requirements">9.6. General Requirements</a>
@@ -31644,18 +31645,6 @@ Arguably this requires a conformance class for every possible encoding. Do we re
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rfc3339">RFC 3339 (Date and Time on the Internet: Timestamps)</a></p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rfc2413">RFC 2413 (Dublin Core Metadata for Resource Discovery)</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ogc06-103r4">OGC 103r4 (Simple feature access - Part 1:Common architecture)</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ogc18-010r7">18-010r7 (Well-known text representation of coordinate reference systems)</a></p></td>
-</tr>
 </tbody>
 </table>
 <div class="sect2">
@@ -31696,7 +31685,7 @@ Arguably this requires a conformance class for every possible encoding. Do we re
 </div>
 <div class="literalblock">
 <div class="content">
-<pre>/collections/{collectionId}/{instanceId}/{queryType}</pre>
+<pre>/collections/{collectionId}/items</pre>
 </div>
 </div>
 <div class="paragraph">
@@ -31724,12 +31713,8 @@ Arguably this requires a conformance class for every possible encoding. Do we re
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the collection with the unique identifier <code>{collectionId}</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{instanceId}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the instance or version of the collection with the unique identifier <code>{collectionId}</code> parameter and with the unique identifier <code>{instanceId}</code> parameter.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{instanceId}/{queryType}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Spatial query type to perform against the resource with the unique identifier <code>{collectionId}</code> parameter and with the unique identifier <code>{instanceId}</code> parameter.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/items</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The spatial collection resource identified by the <code>{collectionId}</code> parameter.</p></td>
 </tr>
 </tbody>
 </table>
@@ -31890,7 +31875,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 </tbody>
 </table>
 <div class="paragraph">
-<p>The <code>collections</code> property of the Collections Metadata provides a description of each collection. These descriptions are based on the <a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json">Collection Information Schema</a>. This schema is described in detail in the <a href="#collection-information">[collection-information]</a> section of this Standard. The following requirements and recommendations govern the use of Collection Information in the Collections Metadata.</p>
+<p>The <code>collections</code> property of the Collections Metadata provides a description of each collection. These descriptions are based on the <a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json">Collection Information Schema</a>. This schema is described in detail in the <a href="#collection-information">Collection Information</a> section of this Standard. The following requirements and recommendations govern the use of Collection Information in the Collections Metadata.</p>
 </div>
 <table id="req_collections_rc-md-items" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -31950,220 +31935,12 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 </div>
 </div>
 <div class="sect3">
-<h4 id="collection-metadata"><a class="anchor" href="#collection-metadata"></a>9.2.2. Collection Metadata</h4>
+<h4 id="collection-information"><a class="anchor" href="#collection-information"></a>9.2.2. Collection Information</h4>
 <div class="paragraph">
-<p>Each resource collection can support one or more instances or versions of the collection. The metadata that describes the instances that are available for a collection is accessed directly using the <code>/collections/{collectionId}</code> path</p>
+<p>Each resource collection is described by a set of metadata. That metadata is accessed directly using the <code>/collections/{collectionId}</code> path or as an entry in the <code>collections</code> property of the Collections Metadata resource.</p>
 </div>
 <div class="sect4">
 <h5 id="_operation_5"><a class="anchor" href="#_operation_5"></a>Operation</h5>
-<table id="req_collections_rc-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/collections/rc-md-op</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The API SHALL support the HTTP GET operation at the path <code>/collections</code>.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect4">
-<h5 id="_response_5"><a class="anchor" href="#_response_5"></a>Response</h5>
-<table id="req_collections_rc-md-success" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 13</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/collections/rc-md-success</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A successful execution of the operation SHALL be reported as a response with a HTTP status code <code>200</code>.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The content of that response SHALL be based upon the JSON schema link:https://raw.githubusercontent.com/opengeospatial/
-Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr.json[collections_edr.json].</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The collections metadata returned by this operation is based on the  <a href="https://raw.githubusercontent.com/opengeospatial/Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr.json">EDR Collection Metadata Schema</a>. Examples of collection metadata are provided in <a href="#edr-collection-metadata-examples">[edr-collection-metadata-examples]</a>.</p>
-</div>
-<div class="listingblock">
-<div class="title">Collection information</div>
-<div class="content">
-<pre class="highlight"><code class="language-JSON" data-lang="JSON">{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Collection Information Schema",
-    "description": "This schema defines metadata resource returned from /collections/{collectionId}.",
-    "type": "object",
-    "required": [
-        "id",
-        "links"
-        ],
-    "properties": {
-        "id": {
-            "type": "string"
-            },
-        "title": {
-            "type": "string"
-            },
-        "description": {
-            "type": "string"
-            },
-        "dataDetails": {
-            "$href": "dataDefinition.json"
-        },
-        "links": {
-            "type": "array",
-            "items": {"$href": "link.json"}
-            },
-        "extent": {"$href": "extent.json"},
-        "itemType": {
-            "type": "array",
-            "items": {
-               "type":"string",
-               "enum": ["cube","item","point","polygon","trajectory","profile"],
-               "example" : ["wfs","cube","point"]
-            }
-        },
-        "crs": {
-            "description": "the list of coordinate reference systems supported by the API; the first item is the default coordinate reference system",
-            "type": "array",
-            "items": {
-                "type": "object",
-                "properties": {
-                    "name": {"type":"string"},
-                    "wkt":{"type":"string"}
-                }
-            },
-            "default": [
-                {"name":"EPSG:4326","wkt":"GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"}
-                ],
-            "example": [
-                {"name":"EPSG:4326","wkt":"GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"},
-                {"name":"CUSTOM_EXAMPLE","wkt":"GEODCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1.0]]],CS[ellipsoidal,3],AXIS[\"(lat)\",north,ANGLEUNIT[\"degree\",0.0174532925199433]],AXIS[\"(lon)\",east,ANGLEUNIT[\"degree\",0.0174532925199433]],AXIS[\"ellipsoidal height (h)\",up,LENGTHUNIT[\"metre\",1.0]]]"}
-                ]
-            }
-        }
-    }</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This schema is further constrained by the following requirements and recomendations.</p>
-</div>
-<div class="paragraph">
-<p>To support hypermedia navigation, the <code>links</code> property must be populated with sufficient hyperlinks to navigate through the whole dataset.</p>
-</div>
-<table id="req_collections_rc-md-links" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/collections/rc-md-links</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A <code>200</code>-response SHALL include the following links in the <code>links</code> property of the response:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>a link to this response document (relation: <code>self</code>),</p>
-</li>
-<li>
-<p>a link to the response document in every other media type supported by the API (relation: <code>alternate</code>).</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>All links SHALL include the <code>rel</code> and <code>type</code> link parameters.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>Additional information may be available to assist in understanding and using this dataset. Links to those resources should be provided as well.</p>
-</div>
-<div class="paragraph">
-<p>The <code>instance</code> property of the Collection Metadata provides a description of each instance. These descriptions are based on the <a href="https://raw.githubusercontent.com/opengeospatial/Environmental-Data-Retrieval-API/master/standard/openapi/schemas/instanceInfo_edr.json">EDR Collection Instance Information Schema</a>. This schema is described in detail in the <a href="#collection-instance-information">Collection Instance Information</a> section of this Standard. The following requirements and recommendations govern the use of Collection Instance Information in the Collection Instance Metadata.</p>
-</div>
-<table id="req_collections_rc-md-items" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 15</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/collections/rc-md-items</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>For each spatial resource collection accessible through this API, metadata describing that collection SHALL be provided in the <code>collections</code> property of the Collections Metadata.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>This metadata shall be based on the same schema as the Collection Information resource.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>While it is prefered that the Collection Instance Metadata fully describe the collection instance through the API, in some cases that is impractical. Developers have an option to only return a subset, as long as they provide a way to retrieve the remaining metadata as well.</p>
-</div>
-</div>
-<div class="sect4">
-<h5 id="_error_situations_5"><a class="anchor" href="#_error_situations_5"></a>Error situations</h5>
-<div class="paragraph">
-<p>See <a href="#http-status-codes">HTTP Status Codes</a> for general guidance.</p>
-</div>
-<div class="paragraph">
-<p>If the parameter <code>collectionId</code> does not exist on the server, the status code of the response will be <code>404</code> (see <a href="#status-codes">Table 4</a>).</p>
-</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="collection-instance-information"><a class="anchor" href="#collection-instance-information"></a>9.2.3. Collection Instance Information</h4>
-<div class="paragraph">
-<p>Each instance of a resource collection is described by a set of metadata. That metadata is accessed directly using the <code>/collections/{collectionId}/{instanceId}</code> path or as an entry in the <code>collections</code> property of the Collections Metadata resource.</p>
-</div>
-<div class="sect4">
-<h5 id="_operation_6"><a class="anchor" href="#_operation_6"></a>Operation</h5>
 <table id="req_collections_src-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -32171,7 +31948,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 16</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 12</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/src-md-op</strong></p>
 </div></div></td>
@@ -32192,7 +31969,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 </table>
 </div>
 <div class="sect4">
-<h5 id="_response_6"><a class="anchor" href="#_response_6"></a>Response</h5>
+<h5 id="_response_5"><a class="anchor" href="#_response_5"></a>Response</h5>
 <table id="req_collections_src-md-success" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -32200,7 +31977,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 17</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/src-md-success</strong></p>
 </div></div></td>
@@ -32227,286 +32004,55 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_
 </tbody>
 </table>
 <div class="paragraph">
-<p>Collection Information is based on the link:https://raw.githubusercontent.com/opengeospatial/
-Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_edr.json[Collection Information Schema]. Examples of Collection Information are provided in <a href="#collection-information-examples">Collection Information Examples</a>.</p>
+<p>Collection Information is based on the <a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json">Collection Information Schema</a>. Examples of Collection Information are provided in <a href="#collection-information-examples">Collection Information Examples</a>.</p>
 </div>
 <div class="listingblock">
 <div class="title">Collection Information Schema</div>
 <div class="content">
 <pre class="highlight"><code class="language-JSON" data-lang="JSON">{
     "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Collection Instance Information Schema",
-    "description": "This schema defines metadata resource returned from /collections/{collectionId}/{instanceId}.",
+    "title": "Collection Information Schema",
+    "description": "This schema defines metadata resource returned from /collections/{collectionId}.",
     "type": "object",
     "required": [
         "id",
-        "title",
-        "description",
-        "parameters"
-    ],
+        "links"
+        ],
     "properties": {
         "id": {
             "type": "string"
-        },
+            },
         "title": {
             "type": "string"
-        },
+            },
         "description": {
             "type": "string"
-        },
-        "dataDetails": {
-            "$href": "dataDefinition.json"
-        },
-        "pointQuery" :{
-            "type" : "object",
-            "description" : "Enumerated value lists for those query parameters that only apply to point queries.",
-            "properties": {
-                "interpolation" : {
-                    "type" : "array",
-                    "description" : "List of the interpolation approaches supported by the point query for the collection",
-                    "items": {
-                        "type" : "string"
-                    }
+            },
+        "links": {
+            "type": "array",
+            "items": {"$href": "link.json"}
+            },
+        "extent": {"$href": "extent.json"},
+        "itemType": {
+            "type": "string",
+            "default": "unknown"
+            },
+        "crs": {
+            "description": "the list of coordinate reference systems supported by the API; the first item is the default coordinate reference system",
+            "type": "array",
+            "items": {
+                "type": "string"
                 },
-                "withinUnits" : {
-                    "type" : "array",
-                    "description" : "List of the distance units supported if the query supports a within a defined radius query",
-                    "items": {
-                        "type" : "string"
-                    }
-                }</code></pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    }
-},
-"polygonQuery" :{
-    "type" : "object",
-    "description" : "Enumerated value lists for those query parameters that only apply to point queries.",
-    "properties": {
-        "interpolationX" : {
-            "type" : "array",
-            "description" : "List of the X axis interpolation approaches supported by the polygon query for the collection",
-            "items": {
-                "type" : "string"
-            }
-        },
-        "interpolationY" : {
-            "type" : "array",
-            "description" : "List of the Y axis interpolation approaches supported by the polygon query for the collection",
-            "items": {
-                "type" : "string"
-            }
-        },
-        "BBOXonly" : {
-            "type" : "boolean",
-            "description" : "If set to true the collection will only support simple polygon queries defined by a rectangular area."
-        }</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    }
-},
-"parameters": {
-    "$ref": "#/definitions/mapParameter"
-},
-"definitions": {
-    "mapLang": {
-        "type": "object",
-        "additionalProperties": {
-            "type": "string"
-        }
-    },
-    "mapParameter": {
-        "type": "object",
-        "title": "Parameter metadata Schema",
-        "description": "This schema defines properties required to describe a collection data parameter.",
-        "additionalProperties": {
-            "type": "object",
-                "required": [
-                    "description",
-                    "unit",
-                    "type",
-                    "observedProperty",
-                    "extent"
+            "default": [
+                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
                 ],
-                "properties": {
-                    "description": {
-                        "type": "object",
-                        "required": [
-                            "en"
-                        ],
-                        "properties": {
-                            "$ref": "#/definitions/mapLang"
-                        }
-                    }
-                },
-                "unit": {
-                    "type": "object",
-                    "required": [
-                        "label",
-                        "symbol"
-                    ],
-                    "properties": {
-                        "label": {
-                            "$ref": "#/definitions/mapLang"
-                        },
-                        "symbol": {
-                            "type": "object",
-                            "required": [
-                                "value",
-                                "type"
-                            ],
-                            "properties": {
-                                "value": {
-                                    "type": "string"
-                                },
-                                "type": {
-                                    "type": "string"
-                                }
-                            }
-                        }
-                    }
-                },
-                "measurementType": {
-                    "type": "object",
-                    "title": "Parameter measurement type",
-                    "description": "This schema describes the type of calculation that a parameter is dirived from and the length of time it represents.",
-                    "required": [
-                        "method",
-                        "period"
-                    ],
-                    "properties": {
-                        "method": {
-                            "type": "string",
-                            "examples": ["instantaneous", "sum", "maximum"]
-                        },
-                        "duration": {
-                            "title": "Time duration",
-                            "description" : "The time duration that the parameter value is calculated over expressed as an RFC3339 duration value, if the method is instantaneous this property is not needed.",
-                            "type": "string"
-                        }
-                    },
-                    "observedProperty": {
-                        "type": "object",
-                        "required": [
-                            "id",
-                            "label"
-                        ],
-                        "properties": {
-                            "id": {
-                                "type": "string"
-                            },
-                            "label": {
-                                "$ref": "#/definitions/mapLang"
-                            }
-                        }
-                    },
-                    "extent": {
-                        "type": "object",
-                        "required": [
-                            "horizontal"
-                        ],
-                        "properties": {
-                            "horizontal": {
-                                "type": "object",
-                                "required": [
-                                    "name",
-                                    "coordinates",
-                                    "geographic"
-                                ],
-                                "properties": {
-                                    "name": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "coordinates": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        }
-                                    },
-                                    "geographic": {
-                                        "type": "string"
-                                    }
-                                }
-                            },
-                            "vertical": {
-                                "type": "object",
-                                "required": [
-                                    "name",
-                                    "coordinates",
-                                    "range"
-                                ],
-                                "properties": {
-                                    "name": {
-                                        "type": "array",
-                                        "items": {
-                                            "type": "string"
-                                        },
-                                        "coordinates": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "range": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        }
-                                    }
-                                },
-                                "temporal": {
-                                    "type": "object",
-                                    "required": [
-                                        "name",
-                                        "coordinates",
-                                        "range"
-                                    ],
-                                    "properties": {
-                                        "name": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "coordinates": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        },
-                                        "range": {
-                                            "type": "array",
-                                            "items": {
-                                                "type": "string"
-                                            }
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>    }
-}</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>        }
-    }
-}</pre>
+            "example": [
+                "http://www.opengis.net/def/crs/OGC/1.3/CRS84",
+                "http://www.opengis.net/def/crs/EPSG/0/4326"
+                ]
+            }
+        }
+    }</code></pre>
 </div>
 </div>
 <div class="paragraph">
@@ -32522,7 +32068,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 18</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/rc-md-items-links</strong></p>
 </div></div></td>
@@ -32596,7 +32142,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 19</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/rc-md-extent</strong></p>
 </div></div></td>
@@ -32669,33 +32215,104 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_
 </table>
 </div>
 <div class="sect4">
-<h5 id="_error_situations_6"><a class="anchor" href="#_error_situations_6"></a>Error situations</h5>
+<h5 id="_error_situations_5"><a class="anchor" href="#_error_situations_5"></a>Error situations</h5>
 <div class="paragraph">
 <p>See <a href="#http-status-codes">HTTP Status Codes</a> for general guidance.</p>
 </div>
 <div class="paragraph">
-<p>If either of the parameters <code>collectionId</code> or <code>instanceId</code> does not exist on the server, the status code of the response will be <code>404</code> (see <a href="#status-codes">Table 4</a>).</p>
+<p>If the parameter <code>collectionId</code> does not exist on the server, the status code of the response will be <code>404</code> (see <a href="#status-codes">Table 4</a>).</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="collection-resource"><a class="anchor" href="#collection-resource"></a>9.2.3. Collection Resource</h4>
+<div class="paragraph">
+<p>A collection resource is the content of the collection as opposed to metadata about that collection. This standard defines the general behavior of this operation, but detailed requirements are the purvue of the API standard for that resource type.</p>
+</div>
+<div class="sect4">
+<h5 id="_operation_6"><a class="anchor" href="#_operation_6"></a>Operation</h5>
+<table id="req_collections_rc-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 16</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/collections/rc-op</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>For every resource collection identified in the resource collections response (path <code>/collections</code>), the API SHALL support the HTTP GET operation at the path <code>/collections/{collectionId}/items</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The parameter <code>collectionId</code> is each <code>id</code> property in the resource collections response (JSONPath: <code>$.collections[*].id</code>).</p>
+</li>
+</ul>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_response_6"><a class="anchor" href="#_response_6"></a>Response</h5>
+<table id="req_collections_rc-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 17</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/collections/rc-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A successful execution of the operation SHALL be reported as a response with a HTTP status code <code>200</code>.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The response SHALL only include resources selected by the request.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect4">
+<h5 id="_error_situations_6"><a class="anchor" href="#_error_situations_6"></a>Error situations</h5>
+<div class="paragraph">
+<p>See <a href="#http-status-codes">HTTP Status Codes</a> for general guidance.</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect2">
-<h3 id="collection-information-resources"><a class="anchor" href="#collection-information-resources"></a>9.3. Information Resources</h3>
+<h3 id="collection-information-queries"><a class="anchor" href="#collection-information-queries"></a>9.3. Query Resources</h3>
 <div class="paragraph">
-<p>Information Resources are non-spatial resources which support the operation of the API or the access and use of the Spatial Resources. They are described in the <a href="#information-resources">Information Resources</a> section.</p>
+<p>Query Resources are spatial queries which support the operation of the API or the access and use of the Spatial Resources. They are described in the <a href="#query-resources">QueryType specific Operations</a> section.</p>
 </div>
 <div class="paragraph">
-<p>Information Resources related to Spatial Resources can exposed using the path template:</p>
+<p>Query Resources related to Spatial Resources can exposed using the path template:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>/collections/{collectionId}/{resourceType}</p>
+<p>/collections/{collectionId}/{queryType}</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The resources returned from each node in this template are described in <a href="#information-resource-paths">Table 6</a>.</p>
+<p>The resources returned from each node in this template are described in <a href="#query-resource-paths">[query-resource-paths]</a>.</p>
 </div>
 <table id="information-resource-paths" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 6. Information Resource Paths</caption>
@@ -32719,18 +32336,73 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies a collection with the unique identifier <code>{collectionId}</code></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{instanceId}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata that describes the instance with unique identifier {instanceId} associated with the <code>{collectionId}</code> collection.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{instanceId}/{queryType}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Query of type {queryType} that acts on the unique {instanceId} instance associated with the <code>{collectionId}</code> collection.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{queryType}</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies an Information Resource of type {resourceType} associated with the <code>{collectionId}</code> collection.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The OGC EDR will have a defined a list of Query Types the can be invoked. The <a href="#query-type-resource-table">[query-type-resource-table]</a> provides a mapping of the current query types supported by the the standard.</p>
+<p>The OGC API-Common standard does not define any Information Resource types. However <a href="#query-resource-table">Table 7</a> provides a mapping of the intial query types proposed for the EDR API.</p>
 </div>
+<table id="query-resource-table" class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 7. Query Types</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 66.6667%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><strong>Path Template</strong></th>
+<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><strong>Query Type</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Description</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/point</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Point</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested point location</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/polygon</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Polygon</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested polygon area</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/cube</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cube</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for a spatial cube</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/trajectory</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Trajectory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data along a defined trajectory</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/corridor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Corridor</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data within a spatial corridor</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/items</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Item</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Items associated with the <code>{collectionId}</code> collection.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/instance</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">List the available instances of the collection</p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect2">
 <h3 id="_parameter_modules"><a class="anchor" href="#_parameter_modules"></a>9.4. Parameter Modules</h3>
@@ -32746,7 +32418,7 @@ Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 20</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 18</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -32783,7 +32455,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 21</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 19</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -32831,7 +32503,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 22</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 20</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/rc-time-definition</strong></p>
 </div></div></td>
@@ -32862,7 +32534,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 23</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 21</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/rc-time-response</strong></p>
 </div></div></td>
@@ -32970,7 +32642,7 @@ datetime            = date-time / interval</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 24</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 22</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/parameters-definition</strong></p>
 </div></div></td>
@@ -33003,7 +32675,7 @@ schema:
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 25</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 23</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/parameters-response</strong></p>
 </div></div></td>
@@ -33058,7 +32730,7 @@ schema:
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 26</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 24</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/outputCRS-definition</strong></p>
 </div></div></td>
@@ -33089,7 +32761,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 27</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 25</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/outputCRS-response</strong></p>
 </div></div></td>
@@ -33109,7 +32781,7 @@ explode: false</code></pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The value of the crs query parameter will be one of the name values described in the instance metadata for supported crs transformations.</p>
+<p>The value of the crs query parameter will be one of the name values described in the collection metadata for supported crs transformations.</p>
 </div>
 </div>
 <div class="sect3">
@@ -33121,7 +32793,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 28</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 26</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/outputFormat-definition</strong></p>
 </div></div></td>
@@ -33152,7 +32824,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 29</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 27</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/outputFormat-response</strong></p>
 </div></div></td>
@@ -33185,7 +32857,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_querytype_specific_operations"><a class="anchor" href="#_querytype_specific_operations"></a>9.5. QueryType specific Operations</h3>
+<h3 id="query-resources"><a class="anchor" href="#query-resources"></a>9.5. QueryType specific Operations</h3>
 <div class="paragraph">
 <p>The following describes the query parameters that are unique or specialised to the individual query types:</p>
 </div>
@@ -33202,7 +32874,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 30</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 28</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -33239,7 +32911,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 31</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 29</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -33362,7 +33034,7 @@ the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 32</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 30</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-definition</strong></p>
 </div></div></td>
@@ -33393,7 +33065,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 33</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 31</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-response</strong></p>
 </div></div></td>
@@ -33462,7 +33134,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 34</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 32</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/within-definition</strong></p>
 </div></div></td>
@@ -33499,7 +33171,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 35</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 33</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/within-response</strong></p>
 </div></div></td>
@@ -33528,7 +33200,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 36</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 34</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/withinUnits-definition</strong></p>
 </div></div></td>
@@ -33565,7 +33237,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 37</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 35</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/within-response</strong></p>
 </div></div></td>
@@ -33599,7 +33271,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 38</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 36</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -33636,7 +33308,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 39</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 37</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -33749,7 +33421,7 @@ South West England in WGS84 would look like:</pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 40</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-definition</strong></p>
 </div></div></td>
@@ -33781,7 +33453,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 41</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-response</strong></p>
 </div></div></td>
@@ -33841,7 +33513,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 42</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-definition</strong></p>
 </div></div></td>
@@ -33873,7 +33545,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 43</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-response</strong></p>
 </div></div></td>
@@ -33965,7 +33637,7 @@ i.e. Z=level</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 44</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 42</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -34002,7 +33674,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 45</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -34096,7 +33768,7 @@ South West England in WGS84 would look like</pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 46</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-definition</strong></p>
 </div></div></td>
@@ -34128,7 +33800,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 47</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-response</strong></p>
 </div></div></td>
@@ -34188,7 +33860,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 48</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-definition</strong></p>
 </div></div></td>
@@ -34220,7 +33892,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 49</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 47</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-response</strong></p>
 </div></div></td>
@@ -34328,7 +34000,7 @@ i.e. maxZ=level</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 50</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 48</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-definition</strong></p>
 </div></div></td>
@@ -34360,7 +34032,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 51</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 49</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-response</strong></p>
 </div></div></td>
@@ -34433,7 +34105,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 52</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 50</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -34470,7 +34142,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 53</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 51</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -34553,7 +34225,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 54</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 52</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-definition</strong></p>
 </div></div></td>
@@ -34584,7 +34256,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 55</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 53</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-response</strong></p>
 </div></div></td>
@@ -34631,7 +34303,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 56</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 54</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-definition</strong></p>
 </div></div></td>
@@ -34662,7 +34334,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 57</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 55</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-response</strong></p>
 </div></div></td>
@@ -34709,7 +34381,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_item"><a class="anchor" href="#_item"></a>9.5.10. Item</h4>
+<h4 id="_items"><a class="anchor" href="#_items"></a>9.5.10. Items</h4>
 <div class="sect4">
 <h5 id="_parameters_5"><a class="anchor" href="#_parameters_5"></a>Parameters</h5>
 <div class="paragraph">
@@ -34748,6 +34420,93 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>This example does have a flaw in that the EDR API provides no mechanism for the user to discover the available icao id&#8217;s in the metadata (the id&#8217;s are available in the query results but not in any of the available metadata outputs).</p>
 </div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_instance"><a class="anchor" href="#_instance"></a>9.5.11. Instance</h4>
+<div class="paragraph">
+<p>It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
+</div>
+<div class="sect4">
+<h5 id="_parameters_6"><a class="anchor" href="#_parameters_6"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_parameter_instanceid"><a class="anchor" href="#_parameter_instanceid"></a>Parameter instanceId</h6>
+<div class="paragraph">
+<p>A unique identifier for the instance of the collection</p>
+</div>
+<div class="paragraph">
+<p>/collections/{collectionId}/instance/{instanceId}</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Return the Raw data instance metadata (instanceId = raw) for the Metar ((collectionId = metar) collection</p>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>/collections/metar/instance/raw</p>
+</div>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Return the Level 1 Quality controlled data instance (instanceId = qc_lvl_1) metadata for the Metar (collectionId = metar) collection</p>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>/collections/metar/instance/qc_lvl_1</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_querytype"><a class="anchor" href="#_parameter_querytype"></a>Parameter queryType</h6>
+<div class="paragraph">
+<p>The queryType options are exactly the same as those available to collections that don&#8217;t have multiple instances and support the same query parameters and functionality.  See the &lt;query-resource-table&gt;&gt; for the  mappings of the intial query types proposed for the EDR API.</p>
+</div>
+<div class="paragraph">
+<p>/collections/{collectionId}/instance/{instanceId}/{queryType}</p>
+</div>
+<div class="paragraph">
+<p>see the <a href="#query-resources">QueryType specific Operations</a> section for details of the query parameters supported by the queryTypes.</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A point query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) collection</p>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>/collections/metar/instance/raw/point</p>
+</div>
+</div>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A trajectory query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) collection</p>
+</li>
+</ol>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>/collections/metar/instance/raw/trajectory</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -34762,7 +34521,7 @@ explode: false</code></pre>
 <p>As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <a href="#SDWBP">Best Practices document</a>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geographic data and it is important to be clear about the coordinate reference system that coordinates are in.</p>
 </div>
 <div class="paragraph">
-<p>For the reasons discussed in the Best Practices, OGC APIs use WGS84 longitude and latitude as the default coordinate reference system.</p>
+<p>For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.</p>
 </div>
 <table id="req_collections_crs84" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
@@ -34771,7 +34530,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 58</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 56</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/crs84</strong></p>
 </div></div></td>
@@ -34785,7 +34544,7 @@ explode: false</code></pre>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The implementations compliant with the Core are not required to support publishing geometries in coordinate reference systems other than <a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a>. The Core also does not specify a capability to request geometries in a different reference system than the native one of the published resource. Such a capability will be specified in other OGC API standards.</p>
+<p>The implementations compliant with the Core are not required to support publishing geometries in coordinate reference systems other than <a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a>.</p>
 </div>
 </div>
 </div>
@@ -34871,7 +34630,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 59</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 57</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/html/definition</strong></p>
 </div></div></td>
@@ -34891,7 +34650,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 60</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 58</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/html/content</strong></p>
 </div></div></td>
@@ -34974,7 +34733,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 61</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 59</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/geojson/definition</strong></p>
 </div></div></td>
@@ -35004,7 +34763,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 62</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 60</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/geojson/content</strong></p>
 </div></div></td>
@@ -35095,7 +34854,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 63</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 61</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/oas-definition-1</strong></p>
 </div></div></td>
@@ -35130,7 +34889,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 64</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 62</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/oas-definition-2</strong></p>
 </div></div></td>
@@ -35153,7 +34912,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 65</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 63</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/oas30/oas-impl</strong></p></td>
 </tr>
 <tr>
@@ -35172,7 +34931,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 66</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 64</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/completeness</strong></p>
 </div></div></td>
@@ -35207,7 +34966,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 67</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 65</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/exceptions-codes</strong></p>
 </div></div></td>
@@ -35247,7 +35006,7 @@ content:
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 68</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 66</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/security</strong></p>
 </div></div></td>
@@ -35486,7 +35245,7 @@ The OpenAPI media type has not been registered yet with IANA and may change.
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate the landing page for all supported media types using the resources and tests identified in <a href="#landing-page-schema">Table 7</a></p>
+<p>Validate the landing page for all supported media types using the resources and tests identified in <a href="#landing-page-schema">Table 8</a></p>
 </div>
 <div class="paragraph">
 <p>For formats that require manual inspection, perform the following:</p>
@@ -35511,7 +35270,7 @@ The OpenAPI media type has not been registered yet with IANA and may change.
 <p>The landing page may be retrieved in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the landing page against that schema. All supported formats should be exercised.</p>
 </div>
 <table id="landing-page-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 7. Schema and Tests for Landing Pages</caption>
+<caption class="title">Table 8. Schema and Tests for Landing Pages</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -35867,7 +35626,7 @@ The OpenAPI media type has not been registered yet with IANA and may change.
 <p>In case the response includes a "crs" property, validate that the first value is either "http://www.opengis.net/def/crs/OGC/1.3/CRS84" or "http://www.opengis.net/def/crs/OGC/0/CRS84h"</p>
 </li>
 <li>
-<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 8</a></p>
+<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 9</a></p>
 </li>
 </ol>
 </div></div></td>
@@ -35878,7 +35637,7 @@ The OpenAPI media type has not been registered yet with IANA and may change.
 <p>The Collections content may be retrieved in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
 <table id="collections-metadata-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 8. Schema and Tests for Collections content</caption>
+<caption class="title">Table 9. Schema and Tests for Collections content</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -36337,7 +36096,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_items"><a class="anchor" href="#_items"></a>Items</h5>
+<h5 id="_items_2"><a class="anchor" href="#_items_2"></a>Items</h5>
 <table id="ats_collections_rc-md-items" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -36379,7 +36138,7 @@ explode: false</code></pre>
 <p>Verify that if the collection entry includes an extent property, that that property complies with <a href="#ats_collections_rc-md-extent">/collections/rc-md-extent</a></p>
 </li>
 <li>
-<p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 9</a></p>
+<p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 10</a></p>
 </li>
 </ol>
 </div></div></td>
@@ -36390,7 +36149,7 @@ explode: false</code></pre>
 <p>The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
 <table id="collection-entry-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 9. Schema and Tests for Collection Entries</caption>
+<caption class="title">Table 10. Schema and Tests for Collection Entries</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -37105,19 +36864,25 @@ Gregorian calendar).</p>
           "dc:accessRights": {
 
           },
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
 
       },
-      "supportedQueryTypes": {"point"}
       "links": [
         { "href": "http://data.example.org/collections/metars",
-          "rel": "instances", "type": "application/json",
+          "rel": "metadata", "type": "application/json",
           "title": "Instances of the Metar collection" },
+        { "href": "https://data.example.org/collection/metar/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the Metar data" },
+        { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },
+        { "href": "http://data.example.org/collections/metars/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the Metar collection" },
+        { "href": "http://data.example.org/collections/metars/polygon",
+          "rel": "polygon", "type": "application/json",
+          "title": "Polygon query for the Metar collection" },
         { "href": "http://data.example.org/collections/metars?outputFormat=html",
           "rel": "instances", "type": "text/html",
           "title": "Instances of the Metar collection" }
@@ -37267,26 +37032,35 @@ Gregorian calendar).</p>
           },
 
           "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
 
       },
       "itemType": "Grid",
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"},
       "links": [
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest",
           "rel": "metadata", "type": "application/json",
-          "title": "Metadata for the latest run" },
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest?outputFormat=html",
           "rel": "metadata", "type": "text/html",
-          "title": "Metadata for the latest run" },
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/polygon",
+          "rel": "polygon", "type": "application/json",
+          "title": "Polygon query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/trajectory",
+          "rel": "trajectory", "type": "application/json",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
         { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
           "rel": "licence", "type": "text/html",
-          "title": "Licence for the latest run" }
+          "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }
       ]
     },
     {
@@ -37428,15 +37202,9 @@ Gregorian calendar).</p>
           },
 
           "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
 
       },
-      "supportedQueryTypes": {"point"}
       "links": [
         { "href": "http://data.example.org/collections/metars/raw",
           "rel": "metadata", "type": "application/json",
@@ -37446,7 +37214,16 @@ Gregorian calendar).</p>
           "title": "Metadata for Raw Metar data" },
         { "href": "https://data.example.org/collection/metar/licence-doc",
           "rel": "licence", "type": "text/html",
-          "title": "Licence for Raw Metar data" }
+          "title": "Licence for Raw Metar data" },
+        { "href": "https://data.example.org/collection/metar/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the Metar data" },
+        { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },
+        { "href": "http://data.example.org/collections/metars/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the Metar collection" }
       ]
     },
     {
@@ -37545,20 +37322,26 @@ Gregorian calendar).</p>
           },
 
           "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/dem/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["height"]
 
       },
       "itemType": "Grid",
-      "supportedQueryTypes": {"point","polygon","trajectory"},
       "links": [
         { "href": "http://data.example.org/collections/dem/data",
           "rel": "metadata", "type": "application/json",
           "title": "Metadata for the dem collection" },
+        { "href": "https://data.example.org/collection/dem/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the DEM data" },
+        { "href": "https://data.example.org/collection/dem/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },
+        { "href": "http://data.example.org/collections/dem/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the DEM collection" },
+        { "href": "http://data.example.org/collections/dem/polygon",
+          "rel": "polygon", "type": "application/json",
+          "title": "Polygon query for the DEM collection" },
         { "href": "http://data.example.org/collections/dem/data?outputFormat=html",
           "rel": "metadata", "type": "text/html",
           "title": "Metadata for the dem collection" },
