@@ -26,12 +26,7 @@
             },
         "extent": {"$href": "extent.json"},
         "itemType": {
-            "type": "array",
-            "items": {
-               "type":"string",
-               "enum": ["cube","item","point","polygon","trajectory","profile"],
-               "example" : ["wfs","cube","point"]
-            }
+            "type": "string"
         },
         "crs": {
             "description": "the list of coordinate reference systems supported by the API; the first item is the default coordinate reference system",
