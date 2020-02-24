@@ -29761,7 +29761,7 @@ Paged.registerHandlers(RepeatingTableHeaders);
 </head>
 <body class="article">
 <div class="title-document">
-  <h1>EDR Candidate Specification API</h1>
+  <h1><strong>{Title}</strong></h1>
 </div>
 <div id="content" class="content">
 <div id="preamble">
@@ -30131,12 +30131,6 @@ Paged.registerHandlers(RepeatingTableHeaders);
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>/collections/{collection_id}</code></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GET</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#Collecttion-metadata">Collection Metadata</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Collection instance metadata</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>/collections/{collection_id}/{instance_id}</code></p></td>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">GET</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#instance-metadata">Collection Instance Metadata</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -31162,10 +31156,10 @@ Arguably this requires a conformance class for every possible encoding. Do we re
 <div class="ulist">
 <ul>
 <li>
-<p>/collections/{collectionId}/{instanceId}/{queryType}</p>
+<p>/collections/{collectionId}/{queryType}</p>
 </li>
 <li>
-<p>}/{instanceId}/{queryType}</p>
+<p>/collections/{collectionId}/instance/{instanceId}/{queryType}</p>
 </li>
 </ul>
 </div>
@@ -31226,6 +31220,10 @@ Arguably this requires a conformance class for every possible encoding. Do we re
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Trajectory</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/trajectory</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/instance</p></td>
 </tr>
 </tbody>
 </table>
