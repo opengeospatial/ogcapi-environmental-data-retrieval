@@ -10,3 +10,9 @@ It contains:
 - [Standard document, as a work-in-progress draft](./standard_template/standard).
 
 It will also contain the plan of work and links to other relevant documents such as minutes, actions and notes of meetings. 
+
+## Draft Spec
+
+The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/asciidoctor.json) file):
+
+* [OGC API - Environmental Data Retrieval Standard](http://docs.opengeospatial.org/DRAFTS/19-086.html)
