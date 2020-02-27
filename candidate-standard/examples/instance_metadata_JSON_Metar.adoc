@@ -43,15 +43,9 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
             
-      },
-      "supportedQueryTypes": {"point"}      
+      },     
       "links": [
         { "href": "http://data.example.org/collections/metars/raw",
           "rel": "metadata", "type": "application/json",
@@ -61,7 +55,16 @@ Gregorian calendar).
           "title": "Metadata for Raw Metar data" },
         { "href": "https://data.example.org/collection/metar/licence-doc",
           "rel": "licence", "type": "text/html",
-          "title": "Licence for Raw Metar data" }          
+          "title": "Licence for Raw Metar data" },
+        { "href": "https://data.example.org/collection/metar/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the Metar data" },
+        { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },          
+        { "href": "http://data.example.org/collections/metars/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the Metar collection" }                    
       ]
     },
     {

@@ -42,20 +42,26 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/dem/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["height"]
             
       },
-      "itemType": "Grid",
-      "supportedQueryTypes": {"point","polygon","trajectory"},      
+      "itemType": "Grid",     
       "links": [
         { "href": "http://data.example.org/collections/dem/data",
           "rel": "metadata", "type": "application/json",
           "title": "Metadata for the dem collection" },
+        { "href": "https://data.example.org/collection/dem/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the DEM data" },
+        { "href": "https://data.example.org/collection/dem/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },          
+        { "href": "http://data.example.org/collections/dem/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the DEM collection" },
+        { "href": "http://data.example.org/collections/dem/polygon",
+          "rel": "polygon", "type": "application/json",
+          "title": "Polygon query for the DEM collection" },          
         { "href": "http://data.example.org/collections/dem/data?outputFormat=html",
           "rel": "metadata", "type": "text/html",
           "title": "Metadata for the dem collection" },
