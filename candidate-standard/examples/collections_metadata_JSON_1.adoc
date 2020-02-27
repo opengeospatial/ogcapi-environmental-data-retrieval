@@ -45,19 +45,25 @@ Gregorian calendar).
           "dc:accessRights": {
             
           },
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
             
-      },
-      "supportedQueryTypes": {"point"}      
+      },  
       "links": [
         { "href": "http://data.example.org/collections/metars",
-          "rel": "instances", "type": "application/json",
+          "rel": "metadata", "type": "application/json",
           "title": "Instances of the Metar collection" },
+        { "href": "https://data.example.org/collection/metar/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the Metar data" },
+        { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },          
+        { "href": "http://data.example.org/collections/metars/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the Metar collection" },
+        { "href": "http://data.example.org/collections/metars/polygon",
+          "rel": "polygon", "type": "application/json",
+          "title": "Polygon query for the Metar collection" },
         { "href": "http://data.example.org/collections/metars?outputFormat=html",
           "rel": "instances", "type": "text/html",
           "title": "Instances of the Metar collection" }

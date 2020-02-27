@@ -2,7 +2,7 @@
 == Requirement Class "Collections"
 :sectnums:
 
-include::requirements/edr/requirements_class_edr_collections.adoc[]
+include::requirements/requirements_class_collections.adoc[]
 
 [[collections-overview]]
 === Overview
@@ -26,7 +26,7 @@ Detailed requirements for each Spatial Resource type are dealt with in the resou
 
 Spatial Resources are exposed using the path template.
 
- /collections/{collectionId}/{instanceId}/{queryType}
+ /collections/{collectionId}/items
 
 The resources returned from each node in this template are described in <<spatial-resource-paths>>.
 
@@ -37,9 +37,7 @@ The resources returned from each node in this template are described in <<spatia
 ^|**Path Template** ^|**Resource**
 |/collections |Metadata describing the spatial collections available from this API.
 |/collections/{collectionId} |Metadata describing the collection with the unique identifier `{collectionId}`
-|/collections/{collectionId}/{instanceId} |Metadata describing the instance or version of the collection with the unique identifier `{collectionId}` parameter and with the unique identifier `{instanceId}` parameter.
-|/collections/{collectionId}/{instanceId}/{queryType}| Spatial query type to perform against the resource with the unique identifier `{collectionId}` parameter and with the unique identifier `{instanceId}` parameter.
-
+|/collections/{collectionId}/items |The spatial collection resource identified by the `{collectionId}` parameter.
 |===
 
 [[collections-metadata]]
@@ -83,53 +81,10 @@ include::recommendations/collections/PER_rc-md-items.adoc[]
 
 See <<http-status-codes>> for general guidance.
 
-[[collection-metadata]]
-==== Collection Metadata
+[[collection-information]]
+==== Collection Information
 
-Each resource collection can support one or more instances or versions of the collection. The metadata that describes the instances that are available for a collection is accessed directly using the `/collections/{collectionId}` path
-
-===== Operation
-
-include::requirements/collections/REQ_rc-md-op.adoc[]
-
-===== Response
-
-include::requirements/collections/REQ_rc-md-success.adoc[]
-
-The collections metadata returned by this operation is based on the  link:https://raw.githubusercontent.com/opengeospatial/Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr.json[EDR Collection Metadata Schema]. Examples of collection metadata are provided in <<edr-collection-metadata-examples>>.
-
-.Collection information
-[source, JSON]
-include::openapi/schemas/collectionInfo_edr.json[]
-
-This schema is further constrained by the following requirements and recomendations.
-
-To support hypermedia navigation, the `links` property must be populated with sufficient hyperlinks to navigate through the whole dataset.
-
-include::requirements/collections/REQ_rc-md-links.adoc[]
-
-Additional information may be available to assist in understanding and using this dataset. Links to those resources should be provided as well.
-
-
-
-The `instance` property of the Collection Metadata provides a description of each instance. These descriptions are based on the link:https://raw.githubusercontent.com/opengeospatial/Environmental-Data-Retrieval-API/master/standard/openapi/schemas/instanceInfo_edr.json[EDR Collection Instance Information Schema]. This schema is described in detail in the <<collection-instance-information>> section of this Standard. The following requirements and recommendations govern the use of Collection Instance Information in the Collection Instance Metadata.
-
-include::requirements/collections/REQ_rc-md-items.adoc[]
-
-While it is prefered that the Collection Instance Metadata fully describe the collection instance through the API, in some cases that is impractical. Developers have an option to only return a subset, as long as they provide a way to retrieve the remaining metadata as well.
-
-
-===== Error situations
-
-See <<http-status-codes>> for general guidance.
-
-If the parameter `collectionId` does not exist on the server, the status code of the response will be `404` (see <<status-codes>>).
-
-
-[[collection-instance-information]]
-==== Collection Instance Information
-
-Each instance of a resource collection is described by a set of metadata. That metadata is accessed directly using the `/collections/{collectionId}/{instanceId}` path or as an entry in the `collections` property of the Collections Metadata resource.
+Each resource collection is described by a set of metadata. That metadata is accessed directly using the `/collections/{collectionId}` path or as an entry in the `collections` property of the Collections Metadata resource.
 
 ===== Operation
 
@@ -137,14 +92,13 @@ include::requirements/collections/REQ_src-md-op.adoc[]
 
 ===== Response
 
-include::requirements/collections/REQ_src-md-success_edr.adoc[]
+include::requirements/collections/REQ_src-md-success.adoc[]
 
-Collection Information is based on the link:https://raw.githubusercontent.com/opengeospatial/
-Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collectionInfo_edr.json[Collection Information Schema]. Examples of Collection Information are provided in <<collection-information-examples>>.
+Collection Information is based on the link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[Collection Information Schema]. Examples of Collection Information are provided in <<collection-information-examples>>.
 
 .Collection Information Schema
 [source, JSON]
-include::openapi/schemas/instanceInfo_edr.json[]
+include::openapi/schemas/collectionInfo.json[]
 
 This schema is further constrained by the following requirements and recomendations.
 
@@ -168,19 +122,35 @@ include::recommendations/collections/PER_rc-md-extent-extensions.adoc[]
 
 See <<http-status-codes>> for general guidance.
 
-If either of the parameters `collectionId` or `instanceId` does not exist on the server, the status code of the response will be `404` (see <<status-codes>>).
+If the parameter `collectionId` does not exist on the server, the status code of the response will be `404` (see <<status-codes>>).
 
+[[collection-resource]]
+==== Collection Resource
 
-[[collection-information-resources]]
-=== Information Resources
+A collection resource is the content of the collection as opposed to metadata about that collection. This standard defines the general behavior of this operation, but detailed requirements are the purvue of the API standard for that resource type.
 
-Information Resources are non-spatial resources which support the operation of the API or the access and use of the Spatial Resources. They are described in the <<information-resources>> section.
+===== Operation
 
-Information Resources related to Spatial Resources can exposed using the path template:
+include::requirements/collections/REQ_rc-op.adoc[]
 
-* /collections/{collectionId}/{resourceType}
+===== Response
 
-The resources returned from each node in this template are described in <<information-resource-paths>>.
+include::requirements/collections/REQ_rc-response.adoc[]
+
+===== Error situations
+
+See <<http-status-codes>> for general guidance.
+
+[[collection-information-queries]]
+=== Query Resources
+
+Query Resources are spatial queries which support the operation of the API or the access and use of the Spatial Resources. They are described in the <<query-resources>> section.
+
+Query Resources related to Spatial Resources can exposed using the path template:
+
+* /collections/{collectionId}/{queryType}
+
+The resources returned from each node in this template are described in <<query-resource-paths>>.
 
 [#information-resource-paths,reftext='{table-caption} {counter:table-num}']
 .Information Resource Paths
@@ -189,11 +159,25 @@ The resources returned from each node in this template are described in <<inform
 ^|**Path Template** ^|**Resource**
 |/collections |The root resource describing the spatial collections available from this API.
 |/collections/{collectionId} |Identifies a collection with the unique identifier `{collectionId}`
-|/collections/{collectionId}/{instanceId} |Metadata that describes the instance with unique identifier {instanceId} associated with the `{collectionId}` collection.
-|/collections/{collectionId}/{instanceId}/{queryType} |Query of type {queryType} that acts on the unique {instanceId} instance associated with the `{collectionId}` collection.
+|/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {resourceType} associated with the `{collectionId}` collection.
 |===
 
-The OGC EDR will have a defined a list of Query Types the can be invoked. The <<query-type-resource-table>> provides a mapping of the current query types supported by the the standard.
+The OGC API-Common standard does not define any Information Resource types. However <<query-resource-table>> provides a mapping of the intial query types proposed for the EDR API.
+
+[#query-resource-table,reftext='{table-caption} {counter:table-num}']
+.Query Types
+[width="90%",cols="2,4",options="header"]
+|===
+^|**Path Template** ^|**Query Type** ^|**Description**
+|/collections/{collectionId}/point | Point | Return data for the requested point location
+|/collections/{collectionId}/polygon | Polygon | Return data for the requested polygon area
+|/collections/{collectionId}/cube | Cube | Return data for a spatial cube
+|/collections/{collectionId}/trajectory | Trajectory | Return data along a defined trajectory
+|/collections/{collectionId}/corridor | Corridor | Return data within a spatial corridor
+|/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` collection.
+|/collections/{collectionId}/instance | Instance | List the available instances of the collection
+|===
+
 
 === Parameter Modules
 
@@ -274,7 +258,7 @@ include::requirements/edr/REQ_rc-outputCRS-definition.adoc[]
 
 include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
 
-The value of the crs query parameter will be one of the name values described in the instance metadata for supported crs transformations. 
+The value of the crs query parameter will be one of the name values described in the collection metadata for supported crs transformations. 
 
 ==== Parameter outputFormat
 
@@ -290,6 +274,8 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 
 If not specified the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection a 403 message SHOULD be returned.
 
+
+[[query-resources]]
 === QueryType specific Operations
 The following describes the query parameters that are unique or specialised to the individual query types:
 
@@ -318,9 +304,15 @@ include::requirements/edr/query_type/trajectory.adoc[]
 
 <<<
 
-==== Item 
+==== Items 
 
 include::requirements/edr/query_type/item.adoc[]
+
+<<<
+
+==== Instance 
+
+include::requirements/edr/query_type/instance.adoc[]
 
 [[collection-general-requirements]]
 === General Requirements
@@ -331,8 +323,10 @@ The following general requirements and recomendations apply to all OGC APIs whic
 
 As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geographic data and it is important to be clear about the coordinate reference system that coordinates are in.
 
-For the reasons discussed in the Best Practices, OGC APIs use WGS84 longitude and latitude as the default coordinate reference system.
+For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.
 
 include::requirements/collections/REQ_crs84.adoc[]
 
-The implementations compliant with the Core are not required to support publishing geometries in coordinate reference systems other than http://www.opengis.net/def/crs/OGC/1.3/CRS84. The Core also does not specify a capability to request geometries in a different reference system than the native one of the published resource. Such a capability will be specified in other OGC API standards.
+The implementations compliant with the Core are not required to support publishing geometries in coordinate reference systems other than http://www.opengis.net/def/crs/OGC/1.3/CRS84. 
+
+

@@ -44,26 +44,35 @@ Gregorian calendar).
           },
 
           "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
           "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
             
       },
-      "itemType": "Grid",
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"},      
+      "itemType": "Grid",    
       "links": [
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest",
           "rel": "metadata", "type": "application/json",
-          "title": "Metadata for the latest run" },
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest?outputFormat=html",
           "rel": "metadata", "type": "text/html",
-          "title": "Metadata for the latest run" },
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details",
+          "rel": "source", "type": "application/json",
+          "title": "Further information about the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
+          "rel": "publisher", "type": "application/json",
+          "title": "Further information about the data publisher" },          
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/point",
+          "rel": "point", "type": "application/json",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/polygon",
+          "rel": "polygon", "type": "application/json",
+          "title": "Polygon query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/trajectory",
+          "rel": "trajectory", "type": "application/json",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },                       
         { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
           "rel": "licence", "type": "text/html",
-          "title": "Licence for the latest run" }          
+          "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }          
       ]
     },
     {
