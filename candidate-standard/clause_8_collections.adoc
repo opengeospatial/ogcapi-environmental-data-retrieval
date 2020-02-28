@@ -175,7 +175,7 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 |/collections/{collectionId}/trajectory | Trajectory | Return data along a defined trajectory
 |/collections/{collectionId}/corridor | Corridor | Return data within a spatial corridor
 |/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` collection.
-|/collections/{collectionId}/instance | Instance | List the available instances of the collection
+|/collections/{collectionId}/instances | Instance | List the available instances of the collection
 |===
 
 
@@ -310,7 +310,7 @@ include::requirements/edr/query_type/item.adoc[]
 
 <<<
 
-==== Instance 
+==== Instances 
 
 include::requirements/edr/query_type/instance.adoc[]
 

@@ -159,7 +159,7 @@ Information Resources are non-spatial resources which support the operation of t
 Information Resources can exposed using two path templates:
 
 * /collections/{collectionId}/{queryType}
-* /collections/{collectionId}/instance/{instanceId}/{queryType}
+* /collections/{collectionId}/instances/{instanceId}/{queryType}
 
 Where 
 
@@ -186,7 +186,7 @@ The EDR API standard has identified an initial set of common `queryTypes` to imp
 |Point | /point
 |Polygon | /polygon
 |Trajectory | /trajectory
-|Instance | /instance
+|Instances | /instances
 |===
 
 [[general-requirements]]

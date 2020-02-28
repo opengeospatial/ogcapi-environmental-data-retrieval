@@ -838,7 +838,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance':
+  '/collections/{collectionId}/instances':
     get:
       tags:
         - Metadata
@@ -851,7 +851,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/instanceDetail'
+                $ref: '#/components/schemas/instanceInfo'
             text/html:
               schema:
                 type: string
@@ -867,7 +867,7 @@ paths:
     parameters:
       - $ref: '#/components/parameters/collectionId'
       - $ref: '#/components/parameters/outputFormat'
-  '/collections/{collectionId}/instance/{instanceId}/point':
+  '/collections/{collectionId}/instances/{instanceId}/point':
     get:
       tags:
         - Data
@@ -957,7 +957,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/polygon':
+  '/collections/{collectionId}/instances/{instanceId}/polygon':
     get:
       tags:
         - Data
@@ -1079,7 +1079,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/cube':
+  '/collections/{collectionId}/instances/{instanceId}/cube':
     get:
       tags:
         - Data
@@ -1234,7 +1234,7 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/instance/{instanceId}/trajectory':
+  '/collections/{collectionId}/instances/{instanceId}/trajectory':
     get:
       tags:
         - Data
@@ -1323,7 +1323,7 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/instance/{instanceId}/corridor':
+  '/collections/{collectionId}/instances/{instanceId}/corridor':
     get:
       tags:
         - Data
@@ -1445,7 +1445,7 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/instance/{instanceId}/items':
+  '/collections/{collectionId}/instances/{instanceId}/items':
     get:
       tags:
         - Data
@@ -1495,7 +1495,7 @@ paths:
             text/html:
               schema:
                 type: string                                
-  '/collections/{collectionId}/instance/{instanceId}/items/{itemID}':
+  '/collections/{collectionId}/instances/{instanceId}/items/{itemID}':
     get:
       tags:
         - Data
