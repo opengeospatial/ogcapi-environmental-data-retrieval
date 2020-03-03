@@ -1,0 +1,1 @@
+Development applications often require an environmental impact assessment, This will usually be associated with a named property or lot or tract. Access to EIA data keyed to a named feature, such as a property or lot-number, rather than its geometry (which may not be as well known) is needed to support re-use of data submitted under such a program. 
