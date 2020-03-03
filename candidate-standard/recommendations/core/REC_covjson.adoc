@@ -1,0 +1,6 @@
+[[rec_core_covjson]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/covjson*
+^|A |If the resource can be represented for the intended use in CoverageJSON, implementations SHOULD consider to support CoverageJSON as an encoding.
+|===

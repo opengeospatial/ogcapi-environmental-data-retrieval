@@ -1,0 +1,18 @@
+[[req_edr_within-definition]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* |*/req/edr/within-definition* 
+^|A |Each resource collection operation MAY support a parameter `within`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|B | If the instance metadata does not provide `withinUnits` values the API SHALL NOT support `within` queries:
+
+[source,YAML]
+----
+name: within
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

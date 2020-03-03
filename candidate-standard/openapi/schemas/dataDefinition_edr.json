@@ -1,0 +1,76 @@
+{
+    "definitions": {},
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "$id": "http://example.com/root.json",
+    "type": "object",
+    "title": "The Datadetails Schema",
+    "required": [
+        "@context",
+        "dc:accessRights",
+        "dc:source",
+        "dc:publisher",
+        "dc:created",
+        "dcam:domainIncludes"
+    ],
+    "properties": {
+        "@context": {
+            "type": "object",
+            "required": [
+                "@version",
+                "xsd",
+                "dc",
+                "dcam"
+            ],
+            "properties": {
+                "@version": {
+                    "type": "number",
+                    "examples": [
+                        1.1
+                    ]
+                },
+                "xsd": {
+                    "type": "string",
+                    "title": "The Xsd Schema",
+                    "default": "http://www.w3.org/2001/XMLSchema#",
+                    "examples": [
+                        "http://www.w3.org/2001/XMLSchema#"
+                    ]
+                },
+                "dc": {
+                    "type": "string",
+                    "default": "http://purl.org/dc/terms/",
+                    "examples": [
+                        "http://purl.org/dc/terms/"
+                    ]
+                },
+                "dcam": {
+                    "type": "string",
+                    "default": "http://purl.org/dc/dcam/",
+                    "examples": [
+                        "http://purl.org/dc/dcam/"
+                    ]
+                }
+            }
+        },
+        "dc:accessRights": {
+            "type": "object"
+        },
+        "dc:created": {
+            "type": "string"
+        },
+        "dc:creator": {
+            "type": "string"
+        },
+        "dcam:domainIncludes": {
+            "type": "array",
+            "items": {
+                "type": "string",
+                "examples": [
+                    "temperature",
+                    "u-component",
+                    "v-component"
+                ]
+            }
+        }
+    }
+}

@@ -1,0 +1,23 @@
+[[ats_collections_rc-md-items]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-md-items*
+^|Test Purpose |Validate that each collection provided by the server is described in the Collections Metadata.
+^|Requirement |<<req_collections_rc-md-items,/req/collections/rc-md-items>>
+^|Test Method |. Verify that there is an entry in the `collections` array of the Collections Metadata for each feature collection provided by the API.
+. Verify that each collection entry includes an identifier.
+. Verify that each collection entry includes links in accordance with <<ats_collections_rc-md-items-links,/collections/rc-md-items-links>>.
+. Verify that if the collection entry includes an extent property, that that property complies with <<ats_collections_rc-md-extent,/collections/rc-md-extent>>
+. Validate each collection entry for all supported media types using the resources and tests identified in <<collection-entry-schema>>
+|===
+
+The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.
+
+[#collection-entry-schema,reftext='{table-caption} {counter:table-num}']
+.Schema and Tests for Collection Entries
+[width="90%",cols="3",options="header"]
+|===
+|Format |Schema Document |Test ID
+|HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json]|<<ats_html_content,/ats/html/content>>
+|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_geojson_content,/ats/geojson/content>>
+|===

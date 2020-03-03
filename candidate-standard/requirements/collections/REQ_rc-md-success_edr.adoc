@@ -1,0 +1,8 @@
+[[req_collections_rc-md-success_edr]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/collections/rc-md-success_edr* 
+^|A |A successful execution of the operation SHALL be reported as a response with a HTTP status code `200`.
+^|B |The content of that response SHALL be based upon the JSON schema link:https://raw.githubusercontent.com/opengeospatial/
+Environmental-Data-Retrieval-API/master/standard/openapi/schemas/collections_edr.json[collections_edr.json].
+|===
