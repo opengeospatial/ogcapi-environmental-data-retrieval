@@ -1,0 +1,1 @@
+Investment in environmental interventions by government is typically in response to environmental chnages in specified areas, such as census-tracts, local-government-areas, parliamentary districts. Access to snapshots and time-series keyed to a 'named' area (feature) from a specific geography (catchments, electoral, statistical, government) would be needed to support this. 
