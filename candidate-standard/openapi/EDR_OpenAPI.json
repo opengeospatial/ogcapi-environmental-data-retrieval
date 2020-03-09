@@ -292,6 +292,9 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
+            "$ref": "#/components/parameters/pointCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -305,15 +308,6 @@
           },
           {
             "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -390,6 +384,9 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
+            "$ref": "#/components/parameters/radiusCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -402,33 +399,10 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "within",
-            "in": "query",
-            "description": "Defines radius of area around defined coordinates to include in the data selection",
-            "required": true,
-            "example": 10,
-            "schema": {
-              "type": "number"
-            }
+            "$ref": "#/components/parameters/within"
           },
           {
-            "name": "withinUnits",
-            "in": "query",
-            "description": "Distance units for the within parameter",
-            "required": true,
-            "example": "KM",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/withinUnits"
           }
         ],
         "responses": {
@@ -505,6 +479,9 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
+            "$ref": "#/components/parameters/polygonCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -517,37 +494,13 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/polygonInterpolationX"
           },
           {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/polygonInterpolationY"
           },
           {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "z",
-            "in": "query",
-            "description": "Define the vertical level to return data from \ni.e. Z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nZ=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/polygonZ"
           }
         ],
         "responses": {
@@ -624,6 +577,9 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
+            "$ref": "#/components/parameters/cubeCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -636,55 +592,19 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate an error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeInterpolationX"
           },
           {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution\n}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeInterpolationY"
           },
           {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeMinZ"
           },
           {
-            "name": "minZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the bottom of the cube \ni.e. minZ=level\n\nfor instance if bottom of cube is at the 950hPa pressure level\n\nminZ=850\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeMaxZ"
           },
           {
-            "name": "maxZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the top of the cube \ni.e. maxZ=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmaxZ=650\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationZ",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeInterpolationZ"
           }
         ],
         "responses": {
@@ -761,6 +681,9 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
+            "$ref": "#/components/parameters/trajectoryCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -777,15 +700,6 @@
           },
           {
             "$ref": "#/components/parameters/interpolationZ"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -862,6 +776,9 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
+            "$ref": "#/components/parameters/corridorCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -877,29 +794,10 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/corridorInterpolationWidth"
           },
           {
-            "name": "interpolationWidth",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationHeight",
-            "in": "query",
-            "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/corridorInterpolationHeight"
           }
         ],
         "responses": {
@@ -1198,6 +1096,9 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
+            "$ref": "#/components/parameters/pointCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -1211,15 +1112,6 @@
           },
           {
             "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -1299,6 +1191,9 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
+            "$ref": "#/components/parameters/radiusCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -1311,33 +1206,10 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "within",
-            "in": "query",
-            "description": "Defines radius of area around defined coordinates to include in the data selection",
-            "required": false,
-            "example": 10,
-            "schema": {
-              "type": "number"
-            }
+            "$ref": "#/components/parameters/within"
           },
           {
-            "name": "withinUnits",
-            "in": "query",
-            "description": "Distance units for the within parameter",
-            "required": false,
-            "example": "KM",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/withinUnits"
           }
         ],
         "responses": {
@@ -1417,6 +1289,9 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
+            "$ref": "#/components/parameters/polygonCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -1429,37 +1304,13 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/polygonInterpolationX"
           },
           {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/polygonInterpolationY"
           },
           {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "z",
-            "in": "query",
-            "description": "Define the vertical level to return data from \ni.e. Z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nZ=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/polygonZ"
           }
         ],
         "responses": {
@@ -1539,6 +1390,9 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
+            "$ref": "#/components/parameters/cubeCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -1551,55 +1405,19 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate an error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeInterpolationX"
           },
           {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution\n}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeInterpolationY"
           },
           {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeMinZ"
           },
           {
-            "name": "minZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the bottom of the cube \ni.e. minZ=level\n\nfor instance if bottom of cube is at the 950hPa pressure level\n\nminZ=850\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeMaxZ"
           },
           {
-            "name": "maxZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the top of the cube \ni.e. maxZ=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmaxZ=650\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationZ",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/cubeInterpolationZ"
           }
         ],
         "responses": {
@@ -1679,6 +1497,9 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
+            "$ref": "#/components/parameters/trajectoryCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -1695,15 +1516,6 @@
           },
           {
             "$ref": "#/components/parameters/interpolationZ"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -1783,6 +1595,9 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
+            "$ref": "#/components/parameters/corridorCoords"
+          },
+          {
             "$ref": "#/components/parameters/outputFormat"
           },
           {
@@ -1798,29 +1613,10 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/corridorInterpolationWidth"
           },
           {
-            "name": "interpolationWidth",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationHeight",
-            "in": "query",
-            "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/corridorInterpolationHeight"
           }
         ],
         "responses": {
@@ -3621,6 +3417,162 @@
         "name": "interpolationZ",
         "in": "query",
         "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{height}\ne.g.\ninterpolationZ=R5/linear/10\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "within": {
+        "name": "within",
+        "in": "query",
+        "description": "Defines radius of area around defined coordinates to include in the data selection",
+        "required": true,
+        "example": 10,
+        "schema": {
+          "type": "number"
+        }
+      },
+      "withinUnits": {
+        "name": "withinUnits",
+        "in": "query",
+        "description": "Distance units for the within parameter",
+        "required": true,
+        "example": "KM",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "pointCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "radiusCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "polygonCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "polygonInterpolationX": {
+        "name": "interpolationX",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "polygonInterpolationY": {
+        "name": "interpolationY",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "polygonZ": {
+        "name": "z",
+        "in": "query",
+        "description": "Define the vertical level to return data from \ni.e. Z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nZ=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate an error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeInterpolationX": {
+        "name": "interpolationX",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution\n}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeInterpolationY": {
+        "name": "interpolationY",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeMinZ": {
+        "name": "minZ",
+        "in": "query",
+        "required": true,
+        "description": "Define the location of the bottom of the cube \ni.e. minZ=level\n\nfor instance if bottom of cube is at the 950hPa pressure level\n\nminZ=850\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeMaxZ": {
+        "name": "maxZ",
+        "in": "query",
+        "required": true,
+        "description": "Define the location of the top of the cube \ni.e. maxZ=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmaxZ=650\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeInterpolationZ": {
+        "name": "interpolationZ",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "trajectoryCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "corridorCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "corridorInterpolationWidth": {
+        "name": "interpolationWidth",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "corridorInterpolationHeight": {
+        "name": "interpolationHeight",
+        "in": "query",
+        "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
         "schema": {
           "type": "string"
         }
