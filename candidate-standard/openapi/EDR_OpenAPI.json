@@ -405,7 +405,7 @@
             "name": "within",
             "in": "query",
             "description": "Defines radius of area around defined coordinates to include in the data selection",
-            "required": false,
+            "required": true,
             "example": 10,
             "schema": {
               "type": "number"
@@ -415,7 +415,7 @@
             "name": "withinUnits",
             "in": "query",
             "description": "Distance units for the within parameter",
-            "required": false,
+            "required": true,
             "example": "KM",
             "schema": {
               "type": "string"
