@@ -307,6 +307,101 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
+            "name": "coords",
+            "in": "query",
+            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/radius": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Query end point for with a radius of queries  of collection {collectionId}",
+        "description": "Query end point to return all values within the defined radius of a specified location",
+        "operationId": "getDataWithinDefinedRadius",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
+          },
+          {
             "name": "within",
             "in": "query",
             "description": "Defines radius of area around defined coordinates to include in the data selection",
@@ -329,7 +424,7 @@
           {
             "name": "coords",
             "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
             "required": true,
             "schema": {
               "type": "string"
@@ -1118,6 +1213,104 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
+            "name": "coords",
+            "in": "query",
+            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/instances/{instanceId}/radius": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Query end point to return all data with a defined radius of a location for an instance {instanceId} of collection {collectionId}",
+        "description": "Query end point to return all data from within a defined radius of a location",
+        "operationId": "getInstanceDataWithinDefinedRadius",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
+          },
+          {
             "name": "within",
             "in": "query",
             "description": "Defines radius of area around defined coordinates to include in the data selection",
@@ -1140,7 +1333,7 @@
           {
             "name": "coords",
             "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
             "required": true,
             "schema": {
               "type": "string"
