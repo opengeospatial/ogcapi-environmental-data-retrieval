@@ -2,27 +2,9 @@
 
 [big]*i.     Abstract*
 
-The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs, these standards are based on a common foundation upon which all OGC APIs will be built. This document defines the Environmental Data Retrevial (EDR) API which aims to simplify access to geo-spatial data.
+The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs, these standards are based on a common foundation upon which all OGC APIs will be built. This document extends that foundation to define the Environmental Data Retrevial (EDR) API.
 
-An Environmental Data Retrevial (EDR) API provides a family of lighweight interfaces to access the resources. The resources addressed by EDR API each map to a defined query pattern. These patterns are described in section <<rc_core-section,8>>, Requirement Class Core.
-
-The  EDR Common standard defines resources and access paths that are supported by all EDR APIs. These are listed in <<tldnr>>. 
-
-[#tldnr,reftext='{table-caption} {counter:table-num}']
-.Overview of Resources
-[cols="32,23,15,30",options="header"]
-!===
-^|Resource ^|Path ^|HTTP Method ^|Document Reference
-|Landing page |`/` ^|GET |<<landing-page,API Landing Page>>
-|API definition |`/api` ^|GET |<<api-definition,API Definition>>
-|Conformance classes |`/conformance` ^|GET |<<conformance-classes,Declaration of Conformance Classes>>
-|Collections metadata |`/collections` ^|GET |<<collections-metadata,Collections Metadata>>
-|Collection instance metadata |`/collections/{collection_id}` ^|GET |<<Collecttion-metadata,Collection Metadata>>
-!===
-
-The resources identified in <<tldnr>> primarily support Discovery operations. Discovery operations allow clients the interrogate the API to determine its capabilities and retrieve information (metadata) about this distribution of the resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.
-
-This standard extends the common Query operations for OGC APIs. Query operations allow resources or values extracted from those resources to be retrieved from the underlying data store. The information to be returned is based upon selection criteria (query string) provided by the client. This standard only defines simple query parameters which should be applicable to all resource types. Other OGC API standards may define additional query capabilities specific to their resource type. 
+An Environmental Data Retrevial (EDR) API provides a family of lighweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. These patterns are described in the <<rc_core-section,Requirement Class Core>> section.
 
 [big]*ii.    Keywords*
 

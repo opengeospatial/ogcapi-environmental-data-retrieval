@@ -1,5 +1,5 @@
-:Title: EDR Candidate Specification API
-:titletext: OGC API - Environmental Data Retrieval Standard
+:Title: OGC API - Environmental Data Retrieval Standard - Part 1 - Core
+:titletext: {Title}
 :doctype: book
 :encoding: utf-8
 :lang: en
@@ -18,8 +18,8 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   2020-02-24
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/
+|Publication Date:   2020-03-06
+|External identifier of this OGC(R) document: http://www.opengis.net/doc/is/ogcapi-edr-1/1.0
 |Internal reference number of this OGC(R) document:    19-086
 |Version: 0.0.3
 |Category: OGC(R) Implementation Specification

@@ -1,160 +1,145 @@
 [[rc_core-section]]
-== Requirement Class "Core"
-:sectnums:
-
-include::requirements/requirements_class_core.adoc[]
-
 [[core-overview]]
 === Overview
 
-[[resources-introduction]]
-==== Resources
+include::requirements/requirements_class_core.adoc[]
 
-An OGC API provides a lighweight interface to access one or more resources. The resources addressed by OGC APIs fall into three categories; Foundation Resources, Spatial Resources, and Information Resources.
+The `Core` Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources. The `Core` Requirements Class is presented in five sections:
 
-Foundation Resources are those resources which are common across all OGC APIs. Those resources are defined in this OGC API-Common standard. Other OGC API standards re-use these resources and, where necessary, extend them to address their unique requirements.
+. <<api-platform-section,API Platform>>: a set of common capabilities
+. <<collection-access-section,Collection Access>>: operations for accessing collections of environmental data.
+. <<TBD-access-section,TBD Access>>: operations for accessing environmental data resources
+. <<parameters-section,Parameters>>: parameters for use in the API-EDR operations.
+. <<general-section,General>>: general principles for use with this standard.
 
-Spatial Resources are the resources which we usually think of as Geospatial Data. They include Features, Coverages, and Images. This Standard defines basic patterns for accessing Spatial Resources. Additional OGC API Standards have been developed to address specific API requirements for each Spatial Resource type.
+[[core-dependencies-section]]
+=== Dependencies
 
-Information Resources are non-spatial resources which support the operation of the API or the access and use of the Spatial Resources. 
+The OGC API-EDR standard is an extension of the OGC API-Common standard. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
 
-[[modular-API-introduction]]
-==== Modular APIs
+include::requirements/core/REQ_api-common.adoc[]
 
-A goal of OGC API standards is to provide rapid and easy access to spatial resources. To meet this goal, the needs of both the resource provider and the resource consumer must be considered. Our approach is to provide a modular framework of API components. This framework provides a consistent "look and feel" across all OGC APIs. When API servers and clients are built from the same set of modules, the likelyhood that they will integrate at run-time is greatly enhanced.
+[[api-platform-section]]
+=== Platform
 
-A more detailed discussion of modular APIs can be found in the API-Common link:https://github.com/opengeospatial/oapi_common/blob/master/19-072BP.html#modular-api[Best Practices] document.
-
-[[navigation-introduction]]
-==== Navigation
-
-OGC APIs are designed to support two access patterns; Hypermedia Access, and Direct Access. OGC APIs support both access patterns through the use of API Definition documents, standardized paths, and standardized hypermedia schemas. 
-
-[[hypermedia-access-introduction]]
-===== Hypermedia Access
-
-Hypermedia Access is the use of hypermedia links to navigate from one resource to another. This pattern is typical of the Web Browser environment. A resource consumer (typically a human) starts from a landing page, selects a link on that page, then moves on to the referenced resource.
-
-Navigation of hyperlinks is facilitated if the hyperlink includes information about the resource type at the link destination. Therefore, OGC APIs use a set of common link relationships. These link relationships are described in <<link-relations-table>>.  
-
-[#link-relations-table,reftext='{table-caption} {counter:table-num}']
-.Link Relations
-[width="90%",cols="2,6",options="header"]
-|===
-^|**Link Relation** ^|**Purpose**
-|`alternate` |links to this resource in another media type (the media type is specified in the `type` link attribute)
-|`conformance`|links to conformance information
-|`data`|links to an information resource
-|`describedBy`|links to external resources which further describe the subject resource
-|`items`|links to each individual resource which is included in a collection resource
-|`self`|links to this resource,
-|`service-desc`|links to the API Definition 
-|`service-doc`|an alternative to `service-desc`
-|===
-
-OGC API hyperlinks are defined using the following link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/link.json[Hyperlink Schema].
-
-.Hyperlink Schema
-[source, JSON]
-include::openapi/schemas/link.json[]
-
-[[direct-access-introduction]]
-===== Direct Access
-
-Direct Access requires that the resource consumer possesses knowlege of the path to the resouce prior to attempting access. Typically this knowlege comes from the use of standard paths, receiving the path from another entity, or by processing an API definition resource. Direct access is particularly applicable to software analytics where there is no human in the loop.
-
-Direct access is facilitated by the use of standard URL paths. The requirements in this Requirements Class are organized around these standard paths.
-
-[[foundation-resources]]
-=== Foundation Resources
-
-Foundation resources are those resources which are provided by every OGC API.
-
-The standard paths defined in this Standard for Foundation Resources are:
-
-. "/" - the landing page
-. "/api" - the API Definition document for this API
-. "/conformance" - the conformance information for this API
+API-Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.
 
 [[landing-page]]
 ==== API landing page
 
-Each OGC API has a single `LandingPage` (path `/`).
+The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API-Common already requires some common links. Those links are sufficient for this standard.
 
-The purpose of the landing page is to provide users with the basic information they need to use this API as well as links to the resources exposed through the API.
-
-===== Operation
-
-include::requirements/core/REQ_root-op.adoc[]
-
-===== Response
-
-include::requirements/core/REQ_root-success.adoc[]
-
-In addition to the required resources, links to additional resources may be included in the Landing Page.
-
-The landing page returned by this operation is based on the following link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/landingPage.json[Landing Page Schema]. Examples of OGC landing pages are provided in <<landing-page-examples>>.
-
-.Landing Page Schema
-[source, JSON]
-include::openapi/schemas/landingPage.json[]
-
-===== Error Situations
-
-See <<http-status-codes>> for general guidance.
-
-[[api-definition]]
-==== API Definition
-
-Every API is expected to provide a definition that describes capabilities provided by the API. This document can be used by developers to understand the API, by software clients to connect to the server, and by development tools to support the implementation of servers and clients.
+.Dependencies
+[width="90%"]
+|====
+|http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|====
 
 ===== Operation
 
-include::requirements/core/REQ_api-definition-op.adoc[]
+The `Landing Page` operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class specifies only one way of performing this operation:
+
+. Issue a `GET` request on the `{root}/` path
+
+Support for `GET` on the `{root}/` path is required by API-Common.
 
 ===== Response
 
-include::requirements/core/REQ_api-definition-success.adoc[]
+A successful response to the `Landing Page` operation is defined in API-Common. The schema for this resource is provided in <<landingPage-schema>>.
 
-include::recommendations/core/REC_api-definition-oas.adoc[]
+[#landingPage-schema,reftext='Landing Page Response Schema']
+.Landing Page Response Schema
+[source,yaml]
+----
+include::openapi/schemas/common/landingPage.yaml[]
+----
 
-If multiple API definition formats are supported, use content negotiation to select the desired representation.
+The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
 
-===== Error Situations
-
-See <<http-status-codes>> for general guidance.
-
-[[conformance-classes]]
-==== Declaration of Conformance Classes
-
-To support "generic" clients that want to accessing OGC APIs in general - and not "just" a specific API / server, the API has to declare the conformance classes it implements and conforms to.
-
-===== Operation
-
-include::requirements/core/REQ_conformance-op.adoc[]
-
-===== Response
-
-include::requirements/core/REQ_conformance-success.adoc[]
-
-The conformance resource returned by this operation is based on the following link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/confClasses.json[Conformance Schema]. Examples of OGC conformance resources are provided in <<conformance-response-examples>>.
-
-.Conformance Schema
-[source, JSON]
-include::openapi/schemas/confClasses.json[]
+[#landingPage-example,reftext=`Landing Page Example`]
+.Landing Page Example
+[source,json]
+----
+include::examples/JSON/landingPage_example.json[]
+----
 
 ===== Error situations
 
-See <<http-status-codes>> for general guidance.
+The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
 
-=== Spatial Resources
+[[api-definition]]
+==== API definition
 
-There is no requirement that every OGC API support Spatial Resources. Therefore, Spatial Resources are addressed in a separate `Collections` Requirement Class. This class is described in the <<rc_collections-section,Collections>> section.
+Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
 
-[[information-resources]]
-=== Information Resources
+.Dependencies
+[width="90%"]
+|====
+|http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|====
 
-Information Resources are non-spatial resources which support the operation of the API or the access and use of the Spatial Resources. These resources are usually specific to a spatial resource type and will be defined in the appropriate API standards.
+===== Operation
+
+This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class describes two ways of performing this operation:
+
+. Issue a `GET` request on the `{root}/api` path
+. Follow the `service-desc` or `service-doc` link on the landing page
+
+Only the link is required by API-Common.
+
+===== Response
+
+A successful response to the API Definition request is a resource which documents the design of the API. API-Common leaves the selection of format for the API Definition response to the API implementor. However, the options are limited to those which have been defined in the API-Common standard. At this time OpenAPI 3.0 is the only option provided.
+
+===== Error situations
+
+The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
+
+[[conformance-classes]]
+==== Declaration of conformance classes
+
+To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API / server, the API has to declare the conformance classes it claims to have implemented.
+
+.Dependencies
+[width="90%"]
+|====
+|http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|====
+
+===== Operation
+
+This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class describes two ways of performing this operation:
+
+. Issue a `GET` request on the `{root}/conformance` path
+. Follow the `conformance` link on the landing page
+
+Both techniques are required by API-Common.
+
+===== Response
+
+A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this API claims conformance. The schema for this resource is defined in API-Common and provided for reference in <<conformance-schema>>.
+
+include::requirements/core/REQ_core_conformance.adoc[]
+
+[#conformance-schema,reftext='Conformance Response Schema']
+.Conformance Response Schema
+[source,yaml]
+----
+include::openapi/schemas/common/confClasses.yaml[]
+----
+
+The following JSON fragment is an example of a response to an OGC API-EDR conformance operation.
+
+[#conformance-example,reftext=`Conformance Information Example`]
+.Conformance Information Example
+[source,json]
+----
+include::examples/JSON/conformance_example.json[]
+----
+
+===== Error situations
+
+The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
 
 Information Resources can exposed using two path templates:
 
