@@ -1,148 +1,6 @@
-[[rc_collections-section]]
-== Requirement Class "Collections"
-:sectnums:
-
-include::requirements/requirements_class_collections.adoc[]
-
-[[collections-overview]]
-=== Overview
-
-Spatial Resources are the resources which we usually think of as Geospatial Data. They include Features, Coverages, and Images. This Conformance Class defines basic patterns for accessing Spatial Resources. Additional OGC API Standards have been developed to address specific API requirements for each Spatial Resource type.
-
-OGC APIs are designed to support two access patterns; Hypermedia Access, and Direct Access. OGC APIs support both access patterns through the use of API Definition documents, standardized paths, and standardized hypermedia schemas.
-
-Hypermedia Access was described in the <<navigation-introduction>> section of Clause 8. For Spatial Resources, hypermedia navigation is enabled through the links included in each schema defined by this Reqirement Class. 
-
-Direct access is the use of know URL paths to access a resource directly. The requirements in this Requirement Class are organized around the standard paths for Spatial Data. 
-
-[[spatial-resources-requirements]]
-=== Spatial Resources
-
-Detailed requirements for each Spatial Resource type are dealt with in the resource-specific API standards. However, this API Common standard has the responsiblity to see that all OGC API standards work together by:
-
-. Providing specifications for the description of each collection (/collections/{collectionId}), and the list of collections (/collections)
-. Providing a consistent framework for serving spatial data from the OGC API, regardless of the type. Consistent means that #1 works exactly the same (potentially with type-specific additional properties) and that the different types of data can all be collections on the same OGC API end-point.
-. Providing a tie point for other OGC API modules to connect to and reference (processes inputs & outputs, cataloging, searching and filtering collections, detailed metadata, tiles, styles, clipping and intersecting bounding boxes in common) Just by virtue of understanding that /collections/{collectionId} points to a spatial **data layer**.
-
-Spatial Resources are exposed using the path template.
-
- /collections/{collectionId}/items
-
-The resources returned from each node in this template are described in <<spatial-resource-paths>>.
-
-[#spatial-resource-paths,reftext='{table-caption} {counter:table-num}']
-.Spatial Resource Paths
-[width="90%",cols="3,4",options="header"]
-|===
-^|**Path Template** ^|**Resource**
-|/collections |Metadata describing the spatial collections available from this API.
-|/collections/{collectionId} |Metadata describing the collection with the unique identifier `{collectionId}`
-|/collections/{collectionId}/items |The spatial collection resource identified by the `{collectionId}` parameter.
-|===
-
-[[collections-metadata]]
-==== Collections Metadata
-
-OGC APIs typically organize their Spatial Resources into collections. Information about those collections is accessed through the /collections path.
-
-===== Operation
-
-include::requirements/collections/REQ_rc-md-op.adoc[]
-
-===== Response
-
-include::requirements/collections/REQ_rc-md-success.adoc[]
-
-The collections metadata returned by this operation is based on the link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collections.json[Collections Metadata Schema]. Examples of collections metadata are provided in <<collections-metadata-examples>>.
-
-.Collections Metadata Schema
-[source, JSON]
-include::openapi/schemas/collections.json[]
-
-This schema is further constrained by the following requirements and recomendations.
-
-To support hypermedia navigation, the `links` property must be populated with sufficient hyperlinks to navigate through the whole dataset.
-
-include::requirements/collections/REQ_rc-md-links.adoc[]
-
-Additional information may be available to assist in understanding and using this dataset. Links to those resources should be provided as well.
-
-include::recommendations/collections/REC_rc-md-descriptions.adoc[]
-
-The `collections` property of the Collections Metadata provides a description of each collection. These descriptions are based on the link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[Collection Information Schema]. This schema is described in detail in the <<collection-information>> section of this Standard. The following requirements and recommendations govern the use of Collection Information in the Collections Metadata.
-
-include::requirements/collections/REQ_rc-md-items.adoc[]
-
-While it is prefered that the Collections Metadata describe all of the collections accessible through the API, in some cases that is impractical. Developers have an option to only return a subset, as long as they provide a way to retrieve the remaining metadata as well.
-
-include::recommendations/collections/PER_rc-md-items.adoc[]
-
-===== Error situations
-
-See <<http-status-codes>> for general guidance.
-
-[[collection-information]]
-==== Collection Information
-
-Each resource collection is described by a set of metadata. That metadata is accessed directly using the `/collections/{collectionId}` path or as an entry in the `collections` property of the Collections Metadata resource.
-
-===== Operation
-
-include::requirements/collections/REQ_src-md-op.adoc[]
-
-===== Response
-
-include::requirements/collections/REQ_src-md-success.adoc[]
-
-Collection Information is based on the link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[Collection Information Schema]. Examples of Collection Information are provided in <<collection-information-examples>>.
-
-.Collection Information Schema
-[source, JSON]
-include::openapi/schemas/collectionInfo.json[]
-
-This schema is further constrained by the following requirements and recomendations.
-
-To support hypermedia navigation, the `links` property must be polulated with sufficient hyperlinks to navigate through the whole dataset.
-
-include::requirements/collections/REQ_rc-md-items-links.adoc[]
-
-Additional information may be available to assist in understanding and using this dataset. Links to those resources should be provided as well.
-
-include::recommendations/collections/REC_rc-md-items-descriptions.adoc[]
-
-Additional requirements and recomendations apply to the `extent` propery of the Collection Information.
-
-include::requirements/collections/REQ_rc-md-extent.adoc[]
-
-include::recommendations/collections/REC_rc-md-extent-single.adoc[]
-
-include::recommendations/collections/PER_rc-md-extent-extensions.adoc[]
-
-===== Error situations
-
-See <<http-status-codes>> for general guidance.
-
-If the parameter `collectionId` does not exist on the server, the status code of the response will be `404` (see <<status-codes>>).
-
-[[collection-resource]]
-==== Collection Resource
-
-A collection resource is the content of the collection as opposed to metadata about that collection. This standard defines the general behavior of this operation, but detailed requirements are the purvue of the API standard for that resource type.
-
-===== Operation
-
-include::requirements/collections/REQ_rc-op.adoc[]
-
-===== Response
-
-include::requirements/collections/REQ_rc-response.adoc[]
-
-===== Error situations
-
-See <<http-status-codes>> for general guidance.
-
 [[collection-information-queries]]
 === Query Resources
+:sectnums:
 
 Query Resources are spatial queries which support the operation of the API or the access and use of the Spatial Resources. They are described in the <<query-resources>> section.
 
@@ -178,7 +36,6 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 |/collections/{collectionId}/instance | Instance | List the available instances of the collection
 |===
 
-
 === Parameter Modules
 
 Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR standard defines the following as standard parameters for use in EDR API standards.
@@ -192,9 +49,9 @@ include::requirements/edr/REQ_rc-coords-response.adoc[]
 
 ==== Parameter datetime
 
-include::requirements/collections/REQ_rc-time-definition.adoc[]
+include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
-include::requirements/collections/REQ_rc-time-response.adoc[]
+The datetime parameter is defined in API-Common. The following information is provided as a convinience to the user.
 
 "Intersects" means that the time (instant or period) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or period). For time periods this includes the start and end time.
  
@@ -274,10 +131,11 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 
 If not specified the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection a 403 message SHOULD be returned.
 
-
 [[query-resources]]
 === QueryType specific Operations
 The following describes the query parameters that are unique or specialised to the individual query types:
+
+NOTE: The following include statements import files which in turn import files already imported above. That results in duplicate section identifiers.
 
 ==== Point
 
@@ -313,20 +171,4 @@ include::requirements/edr/query_type/item.adoc[]
 ==== Instance 
 
 include::requirements/edr/query_type/instance.adoc[]
-
-[[collection-general-requirements]]
-=== General Requirements
-
-The following general requirements and recomendations apply to all OGC APIs which host Spatial Resources.
-
-==== Coordinate Reference Systems
-
-As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geographic data and it is important to be clear about the coordinate reference system that coordinates are in.
-
-For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.
-
-include::requirements/collections/REQ_crs84.adoc[]
-
-The implementations compliant with the Core are not required to support publishing geometries in coordinate reference systems other than http://www.opengis.net/def/crs/OGC/1.3/CRS84. 
-
 

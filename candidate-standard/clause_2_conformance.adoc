@@ -19,9 +19,10 @@ NOTE: Validate that this description is accurate.
 
 The _Collections Requirements Class_ defines the requirements specific to the query and retrieval of Environmental Data Resources.
 
-* <<rc_html-section,HTML>>
-* <<rc_geojson-section,GeoJSON>>
-* <<rc_covjson-section,CovJSON>>
+* Encodings
+** <<rc_html-section,HTML>>
+** <<rc_geojson-section,GeoJSON>>
+** <<rc_covjson-section,CovJSON>>
 
 Neither the nor _Core_ nor _Collections_ requirements class mandate a specific encoding or format for representing resources. The _HTML_, _GeoJSON_ and _CovJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
 

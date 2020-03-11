@@ -18,7 +18,7 @@
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
 |Approval Date:   <yyyy-mm-dd>
-|Publication Date:   2020-03-06
+|Publication Date:   2020-03-11
 |External identifier of this OGC(R) document: http://www.opengis.net/doc/is/ogcapi-edr-1/1.0
 |Internal reference number of this OGC(R) document:    19-086
 |Version: 0.0.3
@@ -91,6 +91,8 @@ include::clause_6_overview.adoc[]
 include::clause_7_core.adoc[]
 
 include::clause_8_collections.adoc[]
+
+include::clause_9_general.adoc[]
 
 include::clause_9_encodings.adoc[]
 

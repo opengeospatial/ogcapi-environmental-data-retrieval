@@ -1,22 +1,17 @@
 [[overview]]
 == Overview
 
-General
+=== General
 
 The OGC API family of standards enable access to resources using the HTTP protocol and its' associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of features which are applicable to all OGC APIs. Other OGC standards extend API-Common with features specific to a resource type. This OGC API-EDR standard defines an API with two goals:
 
 NOTE: What are the goals of API_EDR?
 
-. { TBD-1}
-. { TBD-2}
+. To allow service users to retrieve, in effect, transient resources over a discrete sampling geometry, created by the service in response to a standardized query pattern.
+. To provide 'building blocks' allowing the construction of more complex services
 
-Resources exposed through an OGC API may be accessed through a Universal Resource Identifier (URI). URIs are composed of three sections:
-
-* Service Offering: The service endpoint (subsequently referred to as Base URI or {root})
-* Access Paths: Unique paths to Resources
-* Query: Parameters to adjust the representation of a Resource or Resources like encoding format or subsetting
-
-Some resources are also accessible through links on previously accessed resources. Unique relation types are used for each resource.
+[[resource-paths]]
+=== Resource Paths
 
 <<edr-paths>> summarizes the access paths and relation types defined in this standard.
 

@@ -3,21 +3,17 @@
 
 === Basic requirements
 
-APIs conforming to this requirements class document themselves by an link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#oasDocument[OpenAPI Document].
-
 include::requirements/requirements_class_oas30.adoc[]
 
-include::requirements/oas30/REQ_oas-definition-1.adoc[]
+The OpenAPI 3.0 Requirements Class is applicable to API-EDR as well. So an implementation of API-EDR which supports OpenAPI 3.0 as an API Description format must also comply with the API-Common oas30 Conformance Class.
 
-CAUTION: link:https://github.com/opengeospatial/WFS_FES/issues/117[ISSUE 117] +
+include::requirements/oas30/REQ_oas-common.adoc[]
 
-The OpenAPI media type has not been registered yet with IANA and will likely change. We need to update the media type after registration.
+Implementations must also advertise conformance with this Requirements Class.
 
-include::requirements/oas30/REQ_oas-definition-2.adoc[]
+include::requirements/oas30/REQ_oas-conformance.adoc[]
 
 Two example OpenAPI documents are included in <<oas-examples,Annex B>>.
-
-include::requirements/oas30/REQ_oas-impl.adoc[]
 
 === Complete definition
 
