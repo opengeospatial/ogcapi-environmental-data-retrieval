@@ -4,7 +4,7 @@
 
 The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs, these standards are based on a common foundation upon which all OGC APIs will be built. This document extends that foundation to define the Environmental Data Retrevial (EDR) API.
 
-An Environmental Data Retrevial (EDR) API provides a family of lighweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. These patterns are described in the <<rc_core-section,Requirement Class Core>> section.
+An Environmental Data Retrevial (EDR) API provides a family of lightweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. These patterns are described in the <<rc_core-section,Requirement Class Core>> section.
 
 The API-Common standard defines resources and access paths that are supported by all OGC APIs. These are listed in <<common-paths>>.
 
