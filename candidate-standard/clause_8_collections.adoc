@@ -24,7 +24,7 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
-[width="90%",cols="2,4",options="header"]
+[width="90%",cols="2,1,4",options="header"]
 |===
 ^|**Path Template** ^|**Query Type** ^|**Description**
 |/collections/{collectionId}/point | Point | Return data for the requested point location
@@ -45,7 +45,6 @@ Query parameters are used in URLs to define the resources which are returned on 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
-
 
 ==== Parameter datetime
 
@@ -83,13 +82,11 @@ March 18, 2018, 12:31:12 UTC or earlier:
 
 A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml[datetime.yaml].
 
-
 ==== Parameter parametername
 
 include::requirements/edr/REQ_rc-parameters-definition.adoc[]
 
 include::requirements/edr/REQ_rc-parameters-response.adoc[]
-
 
 .A single parameter
 =================
@@ -133,6 +130,7 @@ If not specified the query will return data in the native format of the collecti
 
 [[query-resources]]
 === QueryType specific Operations
+
 The following describes the query parameters that are unique or specialised to the individual query types:
 
 NOTE: The following include statements import files which in turn import files already imported above. That results in duplicate section identifiers.

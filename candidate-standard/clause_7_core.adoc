@@ -7,7 +7,8 @@ The `Core` Requirements Class defines the requirements for locating, understandi
 
 . <<api-platform-section,API Platform>>: a set of common capabilities
 . <<collection-access-section,Collection Access>>: operations for accessing collections of environmental data.
-. <<TBD-access-section,TBD Access>>: operations for accessing environmental data resources
+. <<environmental-resources-section,Environmental Resources>>: operations for accessing environmental data resources
+. <<query-resources-section,Query Resources>>: operations for accessing environmental data resources through queries
 . <<parameters-section,Parameters>>: parameters for use in the API-EDR operations.
 . <<general-section,General>>: general principles for use with this standard.
 
