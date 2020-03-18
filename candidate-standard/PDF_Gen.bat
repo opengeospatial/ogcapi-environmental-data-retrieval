@@ -1,1 +1,1 @@
-asciidoctor -r asciidoctor-pdf --trace -b pdf -o ..\19-072.pdf OAPI_Common.adoc
+asciidoctor -r asciidoctor-pdf --trace -b pdf -o ..\EDR_Candidate.pdf EDR-candidate-specification.adoc

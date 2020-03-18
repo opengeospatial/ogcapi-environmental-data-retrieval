@@ -1,0 +1,6 @@
+[[req_oas30_security]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/oas30/security* 
+^|A|For cases, where the operations of the API are access-controlled, the security scheme(s) and requirements SHALL be documented in the OpenAPI definition.
+|===
