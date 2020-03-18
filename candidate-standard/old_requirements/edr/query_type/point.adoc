@@ -1,0 +1,96 @@
+===== Parameters
+====== Parameter coords
+
+include::../REQ_rc-coords-definition.adoc[]
+
+include::../REQ_rc-coords-response.adoc[]
+
+location(s) to return data for, the coordinates are defined by a Well Known Text
+(wkt) string. to retrieve a single location :
+
+POINT(x y) 
+
+A point at height `z`
+POINT(x y z)
+
+And for a list of locations
+
+MULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))
+
+And for a list of locations at defined heights
+
+MULTIPOINT((x y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3))
+
+see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+the coordinate values will depend on the CRS parameter, if this is not defined
+the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)
+
+.Point
+=================
+retrieve data for Greenwich, London
+
+`coords=POINT(0 51.48)`
+=================
+
+.Point for a specific height
+=================
+retrieve data for Mount Everest
+
+`coords=POINT(86.95 27.99 8848)`
+=================
+
+
+.Multiple locations
+=================
+retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
+
+`coords=MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
+=================
+
+.Multiple locations with specified heights
+=================
+retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
+
+`coords=MULTIPOINT((-77.02 38.94 72.3),(-3.50 50.72 36.35),(1.43 43.63 135.63),(117.23 39.13 10.04),(144.96 -37.80 33.83))`
+=================
+
+
+<<<
+    
+====== Parameter interpolation
+
+include::../REQ_rc-interpolation-definition.adoc[]
+
+include::../REQ_rc-interpolation-response.adoc[]
+
+
+.An interpolation
+=================
+Use the defined nearest neighbour algorithm to get the best data match for the requested locations 
+
+`interpolation=nearest-neighbour`
+=================
+
+<<<
+    
+.An interpolation
+=================
+Use the defined nearest neighbour algorithm to get the best data match for the requested locations 
+
+`interpolation=nearest-neighbour`
+=================
+
+====== Parameter within
+
+include::../REQ_rc-within-definition.adoc[]
+
+include::../REQ_rc-within-response.adoc[]
+
+====== Parameter withinUnits
+
+include::../REQ_rc-withinUnits-definition.adoc[]
+
+include::../REQ_rc-withinUnits-response.adoc[]
+
+

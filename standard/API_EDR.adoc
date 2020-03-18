@@ -1,16 +1,21 @@
-:Title: OGC API-Common
-:titletext: {Title}
+:Title: OGC API - Environmental Data Retrieval - Part 1: Core
+:titletext: OGC API - Environmental Data Retrieval - Part 1: Core
 :doctype: book
 :encoding: utf-8
 :lang: en
 :toc:
 :toc-placement!:
 :toclevels: 3
-:numbered:
+:sectnums:
+:sectnumlevels: 4
 :sectanchors:
-//:source-highlighter: pygments
+:figure-id: 0
+:table-id: 0
+:req-id: 0
+:rec-id: 0
+:per-id: 0
 
-= {Title}
+= {title}
 
 <<<
 [cols = ">",frame = "none",grid = "none"]
@@ -18,13 +23,13 @@
 |{set:cellbgcolor:#FFFFFF}
 |[big]*Open Geospatial Consortium*
 |Submission Date: <yyyy-mm-dd>
-|Approval Date:   <yyyy-mm-dd>
-|Publication Date:   2019-12-13
-|External identifier of this OGC(R) document: http://www.opengis.net/doc/IS/ogcapi-common/1.0
-|Internal reference number of this OGC(R) document:    19-072
-|Version: 0.0.6
+|Approval Date: <yyyy-mm-dd>
+|Publication Date: 2020-02-03
+|External identifier of this OGC(R) document: http://www.opengis.net/doc/is/ogcapi-edr-1/1.0
+|Internal reference number of this OGC(R) document: 20-000
+|Version: 0.0.1
 |Category: OGC(R) Implementation Specification
-|Editor:   Charles Heazel
+|Editor: TBD
 |===
 
 [cols = "^", frame = "none"]
@@ -35,7 +40,7 @@
 [cols = "^", frame = "none", grid = "none"]
 |===
 |*Copyright notice*
-|Copyright (C) 2019 Open Geospatial Consortium
+|Copyright (C) 2020 Open Geospatial Consortium
 |To obtain additional rights of use, visit http://www.opengeospatial.org/legal/
 |===
 
@@ -50,9 +55,9 @@ Recipients of this document are invited to submit, with their comments, notifica
 
 [width = "50%", grid = "none"]
 |===
-|Document type:   	OGC®ImplementationSpecification
-|Document stage:   	Draft
-|Document language: 	English
+|Document type: OGC(R) Implementation Specification
+|Document stage: Draft
+|Document language: English
 |===
 
 <<<
@@ -91,17 +96,15 @@ include::clause_6_overview.adoc[]
 
 include::clause_7_core.adoc[]
 
-include::clause_8_collections.adoc[]
+include::clause_8_media_types.adoc[]
 
-include::clause_9_encodings.adoc[]
+include::clause_10_HTML.adoc[]
 
-include::clause_10_oas.adoc[]
+include::clause_11_JSON.adoc[]
 
-include::clause_11_media_types.adoc[]
+include::clause_13_oas.adoc[]
 
 include::annex_ats.adoc[]
-
-include::annex_examples.adoc[]
 
 include::annex_history.adoc[]
 

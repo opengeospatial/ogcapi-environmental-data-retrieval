@@ -21,24 +21,26 @@ Therefore, sharing data on the Web should include publication in HTML. To be con
 
 This is discussed in detail in <<SDWBP,W3C Best Practice>>. This standard therefore <<rec_html,recommends>> supporting HTML as an encoding.
 
+The HTML conformance class is defined in API-Common. The API-EDR standard implements that HTML conformance class without modification.
+
 include::requirements/requirements_class_html.adoc[]
 
-include::requirements/html/REQ_definition.adoc[]
+include::requirements/html/REQ_api-common.adoc[]
 
-include::requirements/html/REQ_content.adoc[]
-
-include::recommendations/html/REC_schema-org.adoc[]
+include::requirements/html/REQ_html-conformance.adoc[]
 
 [[rc_geojson-section]]
 === Requirement Class "GeoJSON"
 
 GeoJSON is a commonly used format that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended if the resource can be represented in GeoJSON for the intended use.
 
-include::requirements/requirements_class_geojson.adoc[]
+The GeoJSON conformance class is defined in API-Common. The API-EDR standard extends that GeoJSON conformance class.
 
-include::requirements/geojson/REQ_definition.adoc[]
+include::requirements/requirements_class_json.adoc[]
 
-include::requirements/geojson/REQ_content.adoc[]
+include::requirements/json/REQ_api-common.adoc[]
+
+include::requirements/json/REQ_json-conformance.adoc[]
 
 NOTE: The following schema names are from API-Features and need to be updated.
 
