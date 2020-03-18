@@ -25,7 +25,7 @@ paths:
               schema:
                 type: string
       parameters:
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/outputformat'
   /conformance:
     get:
       tags:
@@ -44,7 +44,7 @@ paths:
               schema:
                 type: string
       parameters:
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/outputformat'
   /groups:
     get:
       tags:
@@ -71,8 +71,8 @@ paths:
               schema:
                 type: string
       parameters:
-        - $ref: '#/components/parameters/outputFormat'
-  '/groups/{groupId}':
+        - $ref: '#/components/parameters/outputformat'
+  '/groups/{groupid}':
     get:
       tags:
         - Capabilities
@@ -98,10 +98,10 @@ paths:
               schema:
                 type: string
     parameters:
-      - $ref: '#/components/parameters/groupId'
+      - $ref: '#/components/parameters/groupid'
       - $ref: '#/components/parameters/bbox'
       - $ref: '#/components/parameters/time'
-      - $ref: '#/components/parameters/outputFormat'
+      - $ref: '#/components/parameters/outputformat'
   /collections:
     get:
       tags:
@@ -130,8 +130,8 @@ paths:
     parameters:
       - $ref: '#/components/parameters/bbox'
       - $ref: '#/components/parameters/time'
-      - $ref: '#/components/parameters/outputFormat'
-  '/collections/{collectionId}':
+      - $ref: '#/components/parameters/outputformat'
+  '/collections/{collectionid}':
     get:
       tags:
         - Metadata
@@ -140,7 +140,7 @@ paths:
       operationId: getQueries
       responses:
         '200':
-          description: 'Metadata about the {collectionId} collection shared by this API.'
+          description: 'Metadata about the {collectionid} collection shared by this API.'
           content:
             application/json:
               schema:
@@ -158,19 +158,19 @@ paths:
               schema:
                 type: string
     parameters:
-      - $ref: '#/components/parameters/collectionId'
-      - $ref: '#/components/parameters/outputFormat'
-  '/collections/{collectionId}/point':
+      - $ref: '#/components/parameters/collectionid'
+      - $ref: '#/components/parameters/outputformat'
+  '/collections/{collectionid}/point':
     get:
       tags:
         - Data
-      summary: 'Query end point for point queries  of collection {collectionId}'
+      summary: 'Query end point for point queries  of collection {collectionid}'
       description: Query end point for point queries
       operationId: getDataForPoint
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/pointCoords'        
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/pointcoords'        
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
@@ -213,22 +213,22 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/radius':
+  '/collections/{collectionid}/radius':
     get:
       tags:
         - Data
-      summary: 'Query end point for with a radius of queries  of collection {collectionId}'
+      summary: 'Query end point for with a radius of queries  of collection {collectionid}'
       description: Query end point to return all values within the defined radius of a specified location
       operationId: getDataWithinDefinedRadius
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/radiusCoords'        
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/radiuscoords'        
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/within'
-        - $ref: '#/components/parameters/withinUnits'
+        - $ref: '#/components/parameters/withinunits'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -267,23 +267,23 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/polygon':
+  '/collections/{collectionid}/polygon':
     get:
       tags:
         - Data
-      summary: 'Query end point for area queries  of collection {collectionId} defined by a polygon'
+      summary: 'Query end point for area queries  of collection {collectionid} defined by a polygon'
       description: Return the data values for the data Polygon defined by the query parameters
       operationId: GetDataForArea
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/polygonCoords'
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/polygoncoords'
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/polygonInterpolationX'
-        - $ref: '#/components/parameters/polygonInterpolationY'
-        - $ref: '#/components/parameters/polygonZ'        
+        - $ref: '#/components/parameters/polygoninterpolationx'
+        - $ref: '#/components/parameters/polygoninterpolationy'
+        - $ref: '#/components/parameters/polygonz'        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -322,25 +322,25 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/cube':
+  '/collections/{collectionid}/cube':
     get:
       tags:
         - Data
-      summary: 'Query end point for Cube queries  of collection {collectionId} defined by a cube'
+      summary: 'Query end point for Cube queries  of collection {collectionid} defined by a cube'
       description: Return the data values for the data Cube defined by the query parameters
       operationId: GetDataForCube
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/cubeCoords'
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/cubecoords'
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/cubeInterpolationX'
-        - $ref: '#/components/parameters/cubeInterpolationY'
-        - $ref: '#/components/parameters/cubeMinZ'
-        - $ref: '#/components/parameters/cubeMaxZ'
-        - $ref: '#/components/parameters/cubeInterpolationZ'
+        - $ref: '#/components/parameters/cubeinterpolationx'
+        - $ref: '#/components/parameters/cubeinterpolationy'
+        - $ref: '#/components/parameters/cubeminz'
+        - $ref: '#/components/parameters/cubemaxz'
+        - $ref: '#/components/parameters/cubeinterpolationz'
 
       responses:
         '200':
@@ -380,22 +380,22 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/trajectory':
+  '/collections/{collectionid}/trajectory':
     get:
       tags:
         - Data
-      summary: 'Query end point for trajectory queries  of collection {collectionId} defined by a wkt linestring and a iso8601 time period'
+      summary: 'Query end point for trajectory queries  of collection {collectionid} defined by a wkt linestring and a iso8601 time period'
       description: Return the data values for the data Polygon defined by the query parameters
       operationId: GetDataForTrajectory
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/trajectoryCoords'        
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/trajectorycoords'        
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/interpolation'        
-        - $ref: '#/components/parameters/interpolationZ'        
+        - $ref: '#/components/parameters/interpolationz'        
 
       responses:
         '200':
@@ -435,23 +435,23 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/corridor':
+  '/collections/{collectionid}/corridor':
     get:
       tags:
         - Data
-      summary: 'Query end point for Corridor queries  of collection {collectionId} defined by a polygon'
+      summary: 'Query end point for Corridor queries  of collection {collectionid} defined by a polygon'
       description: Return the data values for the Corridor defined by the query parameters
       operationId: GetDataForCorridor
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/corridorCoords'        
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/corridorcoords'        
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/interpolation'        
-        - $ref: '#/components/parameters/corridorInterpolationWidth'
-        - $ref: '#/components/parameters/corridorInterpolationHeight'
+        - $ref: '#/components/parameters/corridorinterpolationwidth'
+        - $ref: '#/components/parameters/corridorinterpolationheight'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -490,7 +490,7 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/items':
+  '/collections/{collectionid}/items':
     get:
       tags:
         - Metadata
@@ -498,7 +498,7 @@ paths:
       description: List the items in the collection
       operationId: ListDataItems
       parameters:
-        - $ref: '#/components/parameters/collectionId'        
+        - $ref: '#/components/parameters/collectionid'        
         - $ref: '#/components/parameters/bbox'
         - $ref: '#/components/parameters/time'
       responses:
@@ -539,15 +539,15 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/items/{itemID}':
+  '/collections/{collectionid}/items/{itemID}':
     get:
       tags:
         - Data
-      summary: 'Query end point for item queries  of collection {collectionId} defined by an item id'
+      summary: 'Query end point for item queries  of collection {collectionid} defined by an item id'
       description: Return the item defined by itemID
       operationId: GetDataForItem
       parameters:
-        - $ref: '#/components/parameters/collectionId'        
+        - $ref: '#/components/parameters/collectionid'        
         - $ref: '#/components/parameters/bbox'
         - $ref: '#/components/parameters/time'
         - name: itemID
@@ -595,16 +595,16 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instances':
+  '/collections/{collectionid}/instances':
     get:
       tags:
         - Metadata
-      summary: 'List data instances of {collectionId}'
+      summary: 'List data instances of {collectionid}'
       description: This will provide list of the avalable instances of the collection Use content negotiation to request HTML or JSON.
       operationId: getCollectionInstances
       responses:
         '200':
-          description: 'Metadata about the instance of {collectionId} collection shared by this API.'
+          description: 'Metadata about the instance of {collectionid} collection shared by this API.'
           content:
             application/json:
               schema:
@@ -622,20 +622,20 @@ paths:
               schema:
                 type: string
     parameters:
-      - $ref: '#/components/parameters/collectionId'
-      - $ref: '#/components/parameters/outputFormat'
-  '/collections/{collectionId}/instances/{instanceId}/point':
+      - $ref: '#/components/parameters/collectionid'
+      - $ref: '#/components/parameters/outputformat'
+  '/collections/{collectionid}/instances/{instanceid}/point':
     get:
       tags:
         - Data
-      summary: 'Query end point for point queries of instance {instanceId} of collection {collectionId}'
+      summary: 'Query end point for point queries of instance {instanceid} of collection {collectionid}'
       description: Query end point for point queries
       operationId: getInstanceDataForPoint
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'        
-        - $ref: '#/components/parameters/pointCoords'
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'        
+        - $ref: '#/components/parameters/pointcoords'
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
@@ -678,23 +678,23 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instances/{instanceId}/radius':
+  '/collections/{collectionid}/instances/{instanceid}/radius':
     get:
       tags:
         - Data
-      summary: 'Query end point to return all data with a defined radius of a location for an instance {instanceId} of collection {collectionId}'
+      summary: 'Query end point to return all data with a defined radius of a location for an instance {instanceid} of collection {collectionid}'
       description: Query end point to return all data from within a defined radius of a location
       operationId: getInstanceDataWithinDefinedRadius
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/radiusCoords'           
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'
+        - $ref: '#/components/parameters/radiuscoords'           
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/within'
-        - $ref: '#/components/parameters/withinUnits'
+        - $ref: '#/components/parameters/withinunits'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -733,24 +733,24 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instances/{instanceId}/polygon':
+  '/collections/{collectionid}/instances/{instanceid}/polygon':
     get:
       tags:
         - Data
-      summary: 'Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon'
+      summary: 'Query end point for area queries of instance {instanceid} of collection {collectionid} defined by a polygon'
       description: Return the data values for the data Polygon defined by the query parameters
       operationId: GetInstanceDataForArea
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/polygonCoords'
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'
+        - $ref: '#/components/parameters/polygoncoords'
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/polygonInterpolationX'
-        - $ref: '#/components/parameters/polygonInterpolationY'
-        - $ref: '#/components/parameters/polygonZ'        
+        - $ref: '#/components/parameters/polygoninterpolationx'
+        - $ref: '#/components/parameters/polygoninterpolationy'
+        - $ref: '#/components/parameters/polygonz'        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -789,26 +789,26 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instances/{instanceId}/cube':
+  '/collections/{collectionid}/instances/{instanceid}/cube':
     get:
       tags:
         - Data
-      summary: 'Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube'
+      summary: 'Query end point for Cube queries of instance {instanceid} of collection {collectionid} defined by a cube'
       description: Return the data values for the data Cube defined by the query parameters
       operationId: GetInstanceDataForCube
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/cubeCoords'        
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'
+        - $ref: '#/components/parameters/cubecoords'        
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/cubeInterpolationX'
-        - $ref: '#/components/parameters/cubeInterpolationY'
-        - $ref: '#/components/parameters/cubeMinZ'
-        - $ref: '#/components/parameters/cubeMaxZ'
-        - $ref: '#/components/parameters/cubeInterpolationZ'
+        - $ref: '#/components/parameters/cubeinterpolationx'
+        - $ref: '#/components/parameters/cubeinterpolationy'
+        - $ref: '#/components/parameters/cubeminz'
+        - $ref: '#/components/parameters/cubemaxz'
+        - $ref: '#/components/parameters/cubeinterpolationz'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -847,23 +847,23 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/instances/{instanceId}/trajectory':
+  '/collections/{collectionid}/instances/{instanceid}/trajectory':
     get:
       tags:
         - Data
-      summary: 'Query end point for trajectory queries of instance {instanceId} of collection {collectionId} defined by a wkt linestring and a iso8601 time period'
+      summary: 'Query end point for trajectory queries of instance {instanceid} of collection {collectionid} defined by a wkt linestring and a iso8601 time period'
       description: Return the data values for the data Polygon defined by the query parameters
       operationId: GetInstanceDataForTrajectory
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'        
-        - $ref: '#/components/parameters/trajectoryCoords'    
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'        
+        - $ref: '#/components/parameters/trajectorycoords'    
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/interpolation'        
-        - $ref: '#/components/parameters/interpolationZ'        
+        - $ref: '#/components/parameters/interpolationz'        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -902,24 +902,24 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/instances/{instanceId}/corridor':
+  '/collections/{collectionid}/instances/{instanceid}/corridor':
     get:
       tags:
         - Data
-      summary: 'Query end point for Corridor queries of instance {instanceId} of collection {collectionId} defined by a polygon'
+      summary: 'Query end point for Corridor queries of instance {instanceid} of collection {collectionid} defined by a polygon'
       description: Return the data values for the Corridor defined by the query parameters
       operationId: GetInstanceDataForCorridor
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/corridorCoords'
-        - $ref: '#/components/parameters/outputFormat'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'
+        - $ref: '#/components/parameters/corridorcoords'
+        - $ref: '#/components/parameters/outputformat'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/interpolation'        
-        - $ref: '#/components/parameters/corridorInterpolationWidth'
-        - $ref: '#/components/parameters/corridorInterpolationHeight'
+        - $ref: '#/components/parameters/corridorinterpolationwidth'
+        - $ref: '#/components/parameters/corridorinterpolationheight'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -958,7 +958,7 @@ paths:
             text/html:
               schema:
                 type: string                
-  '/collections/{collectionId}/instances/{instanceId}/items':
+  '/collections/{collectionid}/instances/{instanceid}/items':
     get:
       tags:
         - Data
@@ -966,8 +966,8 @@ paths:
       description: List the items in the instance of the collection
       operationId: ListDataInstanceItems
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'        
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'        
         - $ref: '#/components/parameters/bbox'
         - $ref: '#/components/parameters/time'
       responses:
@@ -1008,16 +1008,16 @@ paths:
             text/html:
               schema:
                 type: string                                
-  '/collections/{collectionId}/instances/{instanceId}/items/{itemID}':
+  '/collections/{collectionid}/instances/{instanceid}/items/{itemID}':
     get:
       tags:
         - Data
-      summary: 'Query end point for item queries of instance {instanceId} of collection {collectionId} defined by an item id'
+      summary: 'Query end point for item queries of instance {instanceid} of collection {collectionid} defined by an item id'
       description: Return the item defined by itemID
       operationId: GetInstanceDataForItem
       parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/instanceId'
+        - $ref: '#/components/parameters/collectionid'
+        - $ref: '#/components/parameters/instanceid'
         - $ref: '#/components/parameters/bbox'
         - $ref: '#/components/parameters/time'
         - name: itemID
@@ -1377,13 +1377,13 @@ components:
               type: array
               items:
                 type: string
-            withinUnits:
+            withinunits:
               type: array
               items:
                 type: string
-                description: supported distance units if the query supports a within a defined radius query.  If withinUnits is not defined the API does not support the radius query. 
+                description: supported distance units if the query supports a within a defined radius query.  If withinunits is not defined the API does not support the radius query. 
                 example: km
-        outputFormat:
+        outputformat:
           description: output format options for the query
           type: array
           items:
@@ -2117,8 +2117,8 @@ components:
       explode: false
       schema:
         type: string
-    collectionId:
-      name: collectionId
+    collectionid:
+      name: collectionid
       in: path
       description: Identifier (id) of a specific collection
       required: true
@@ -2132,22 +2132,22 @@ components:
       example: native
       schema:
         type: string
-    groupId:
-      name: groupId
+    groupid:
+      name: groupid
       in: path
       description: Identifier (name) of a specific group
       required: true
       schema:
         type: string
-    instanceId:
-      name: instanceId
+    instanceid:
+      name: instanceid
       in: path
       description: Identifier (id) of a specific instance of a collection
       required: true
       schema:
         type: string
-    outputFormat:
-      name: outputFormat
+    outputformat:
+      name: outputformat
       in: query
       description: Format to return query results in
       required: false
@@ -2175,16 +2175,16 @@ components:
           capabilities query methods of this API
       schema:
         type: string    
-    interpolationZ:
-      name: interpolationZ
+    interpolationz:
+      name: interpolationz
       in: query
       description: |
         This is defined if the query doesn't require data at its native Z coordinate 
         resolution, the format is:
 
-        interpolationZ=R{interpolation resolution}/{interpolation method}/{height}
+        interpolationz=R{interpolation resolution}/{interpolation method}/{height}
         e.g.
-        interpolationZ=R5/linear/10
+        interpolationz=R5/linear/10
 
         The interpolation resolution is the number of intervals the user requires between
         the a Z value of the bounding box and the maximum Z value of the bounding box.
@@ -2201,15 +2201,15 @@ components:
       example: 10
       schema:
          type: number        
-    withinUnits:
-      name: withinUnits
+    withinunits:
+      name: withinunits
       in: query
       description: Distance units for the within parameter
       required: true
       example: "KM"
       schema:
          type: string         
-    pointCoords:
+    pointcoords:
       name: coords
       in: query
       description: |
@@ -2233,7 +2233,7 @@ components:
       required: true
       schema:
         type: string
-    radiusCoords:
+    radiuscoords:
       name: coords
       in: query
       description: |
@@ -2249,7 +2249,7 @@ components:
       required: true
       schema:
         type: string
-    polygonCoords:
+    polygoncoords:
       name: coords
       in: query
       description: |-
@@ -2274,8 +2274,8 @@ components:
       required: true
       schema:
         type: string    
-    polygonInterpolationX:
-      name: interpolationX
+    polygoninterpolationx:
+      name: interpolationx
       in: query
       description: |+
         This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
@@ -2290,8 +2290,8 @@ components:
 
       schema:
         type: string
-    polygonInterpolationY:
-      name: interpolationY
+    polygoninterpolationy:
+      name: interpolationy
       in: query
       description: |
         This is defined if the query doesn't require data at its native Y coordinate 
@@ -2308,7 +2308,7 @@ components:
         capabilities query methods of this API
       schema:
         type: string
-    polygonZ:
+    polygonz:
       name: z
       in: query
       description: |
@@ -2323,7 +2323,7 @@ components:
         data in the collection.
       schema:
         type: string      
-    cubeCoords:
+    cubecoords:
       name: coords
       in: query
       description: |-
@@ -2349,8 +2349,8 @@ components:
       required: true
       schema:
         type: string    
-    cubeInterpolationX:
-      name: interpolationX
+    cubeinterpolationx:
+      name: interpolationx
       in: query
       description: |+
         This is defined if the query doesn't require data at its native X coordinate resolution, the format is:
@@ -2366,8 +2366,8 @@ components:
 
       schema:
         type: string
-    cubeInterpolationY:
-      name: interpolationY
+    cubeinterpolationy:
+      name: interpolationy
       in: query
       description: |
         This is defined if the query doesn't require data at its native Y coordinate 
@@ -2384,8 +2384,8 @@ components:
         capabilities query methods of this API
       schema:
         type: string
-    cubeMinZ:
-      name: minZ
+    cubeminz:
+      name: minz
       in: query
       required: true
       description: |
@@ -2399,8 +2399,8 @@ components:
         The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
       schema:
         type: string
-    cubeMaxZ:
-      name: maxZ
+    cubemaxz:
+      name: maxz
       in: query
       required: true
       description: |
@@ -2414,16 +2414,16 @@ components:
         The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
       schema:
         type: string
-    cubeInterpolationZ:
-      name: interpolationZ
+    cubeinterpolationz:
+      name: interpolationz
       in: query
       description: |
         This is defined if the query doesn't require data at its native Z coordinate 
         resolution, the format is
   
-        interpolationZ=R{interpolation resolution}/{interpolation method} 
+        interpolationz=R{interpolation resolution}/{interpolation method} 
         
-        e.g. interpolationZ=R5/cubic spline
+        e.g. interpolationz=R5/cubic spline
   
         The interpolation resolution is the number of intervals the user requires between
         the a Z value of the bounding box and the maximum Z value of the bounding box.
@@ -2432,7 +2432,7 @@ components:
         capabilities query methods of this API
       schema:
         type: string        
-    trajectoryCoords:
+    trajectorycoords:
       name: coords
       in: query
       description: |-
@@ -2468,7 +2468,7 @@ components:
       required: true
       schema:
         type: string    
-    corridorCoords:
+    corridorcoords:
       name: coords
       in: query
       description: |-
@@ -2504,16 +2504,16 @@ components:
       required: true
       schema:
         type: string    
-    corridorInterpolationWidth:
-      name: interpolationWidth
+    corridorinterpolationwidth:
+      name: interpolationwidth
       in: query
       description: |
         This is defined if the query doesn't require data at its native coordinate 
         resolution, the format is
 
-        interpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} 
+        interpolationwidth=R{interpolation resolution}/{interpolation method}/{corridor width} 
         
-        e.g. interpolationWidth=R5/linear/10
+        e.g. interpolationwidth=R5/linear/10
 
         The `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. 
       
@@ -2523,15 +2523,15 @@ components:
         The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
       schema:
         type: string
-    corridorInterpolationHeight:
-      name: interpolationHeight
+    corridorinterpolationheight:
+      name: interpolationheight
       in: query
       description: |
         This is defined if the query requires interpolation in the vertical axis
 
-        interpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} 
+        interpolationz=R{interpolation resolution}/{interpolation method}/{corridor height} 
         
-        e.g. interpolationZ=R5/cubic_spline/10
+        e.g. interpolationz=R5/cubic_spline/10
 
         The `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. 
       
