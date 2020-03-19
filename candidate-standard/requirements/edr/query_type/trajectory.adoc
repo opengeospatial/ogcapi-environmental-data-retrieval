@@ -8,7 +8,7 @@ include::../REQ_rc-coords-response.adoc[]
 
 "Intersects" means that the area specified by the parameter `coords`, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
 
-The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoc time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  
+The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  
 
 If the collection instance has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned
 
