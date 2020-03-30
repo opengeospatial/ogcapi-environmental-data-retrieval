@@ -25,7 +25,7 @@ Gregorian calendar).
     { "href": "http://schemas.example.org/1.0/foobar.xsd",
       "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
   ],
-  "instances": [
+  "collections": [
     {
       "id": "raw",
       "title": "Raw",
@@ -47,63 +47,30 @@ Gregorian calendar).
             
       },     
       "links": [
-        { "href": "http://data.example.org/collections/metars/raw",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for Raw Metar data" },
-        { "href": "http://data.example.org/collections/metars/raw?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for Raw Metar data" },
+        { "href": "http://data.example.org/collections/metars",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for Metar data" },
+        { "href": "http://data.example.org/collections/metars?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for Metar data" },
         { "href": "https://data.example.org/collection/metar/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for Raw Metar data" },
+          "rel": "describedBy", "type": "metadata",
+          "title": "Licence for Metar data" },
         { "href": "https://data.example.org/collection/metar/link-for-more-details",
-          "rel": "source", "type": "application/json",
+          "rel": "describedBy", "type": "source",
           "title": "Further information about the Metar data" },
         { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
+          "rel": "describedBy", "type": "publisher",
           "title": "Further information about the data publisher" },          
-        { "href": "http://data.example.org/collections/metars/point",
-          "rel": "point", "type": "application/json",
-          "title": "Point query for the Metar collection" }                    
-      ]
-    },
-    {
-      "id": "initial_qc",
-      "title": "Intial QC",
-      "description": "First pass of Quality Control processed Metar observations",
-      "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-01-30T12:00:00Z/2020-01-13T11:00:00Z" ]
-      },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
+        { "href": "http://data.example.org/collections/metars/position",
+          "rel": "data", "type": "position",
+          "title": "Position query for the Metar collection" }                    
+        { "href": "http://data.example.org/collections/metars/locations",
+          "rel": "describedBy", "type": "locations",
+          "title": "List location identifiers for the Metar collection" }                    
 
-          "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/metar/licence-doc",
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
-            
-      },
-      "itemType":"PointSeries",
-      "supportedQueryTypes": {"point"},      
-      "links": [
-        { "href": "http://data.example.org/collections/metars/initial_qc",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for QC'd Metar data" },
-        { "href": "http://data.example.org/collections/metars/initial_qc?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for Qc'd Metar data" }
       ]
-    }    
+    }
   ]
 }
 ----

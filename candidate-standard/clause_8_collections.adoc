@@ -27,13 +27,14 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 [width="90%",cols="2,1,4",options="header"]
 |===
 ^|**Path Template** ^|**Query Type** ^|**Description**
-|/collections/{collectionId}/point | Point | Return data for the requested point location
-|/collections/{collectionId}/polygon | Polygon | Return data for the requested polygon area
+|/collections/{collectionId}/position | Position | Return data for the requested point location
+|/collections/{collectionId}/area | Area | Return data for the requested area
 |/collections/{collectionId}/cube | Cube | Return data for a spatial cube
 |/collections/{collectionId}/trajectory | Trajectory | Return data along a defined trajectory
 |/collections/{collectionId}/corridor | Corridor | Return data within a spatial corridor
 |/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` collection.
-|/collections/{collectionId}/instance | Instance | List the available instances of the collection
+|/collections/{collectionId}/locations | Locations |Location identifers associated with the `{collectionId}` collection.
+|/collections/{collectionId}/instances | Instances | List the available instances of the collection
 |===
 
 === Parameter Modules
@@ -135,13 +136,19 @@ The following describes the query parameters that are unique or specialised to t
 
 NOTE: The following include statements import files which in turn import files already imported above. That results in duplicate section identifiers.
 
-==== Point
+==== Position
 
 include::requirements/edr/query_type/point.adoc[]
 
 <<<
 
-==== Polygon
+==== Radius
+
+include::requirements/edr/query_type/radius.adoc[]
+
+<<<
+
+==== Area
 
 include::requirements/edr/query_type/polygon.adoc[]
 
@@ -157,7 +164,6 @@ include::requirements/edr/query_type/cube.adoc[]
 
 include::requirements/edr/query_type/trajectory.adoc[]
 
-
 <<<
 
 ==== Items 
@@ -166,7 +172,13 @@ include::requirements/edr/query_type/item.adoc[]
 
 <<<
 
-==== Instance 
+==== Locations 
+
+include::requirements/edr/query_type/locations.adoc[]
+
+<<<
+
+==== Instances 
 
 include::requirements/edr/query_type/instance.adoc[]
 

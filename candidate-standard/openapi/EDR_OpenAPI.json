@@ -3,7 +3,7 @@
   "info": {
     "title": "Environmental Data Retreival API's",
     "description": "Example of Candidate Environmental Data Retreival API OpenAPI docs",
-    "version": "0.0.1"
+    "version": "0.0.3"
   },
   "servers": [
     {
@@ -279,13 +279,13 @@
         }
       ]
     },
-    "/collections/{collectionId}/point": {
+    "/collections/{collectionId}/position": {
       "get": {
         "tags": [
           "Data"
         ],
-        "summary": "Query end point for point queries  of collection {collectionId}",
-        "description": "Query end point for point queries",
+        "summary": "Query end point for position queries  of collection {collectionId}",
+        "description": "Query end point for position queries",
         "operationId": "getDataForPoint",
         "parameters": [
           {
@@ -305,6 +305,104 @@
           },
           {
             "$ref": "#/components/parameters/interpolation"
+          },
+          {
+            "$ref": "#/components/parameters/interpolationZ"
+          },
+          {
+            "name": "coords",
+            "in": "query",
+            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/radius": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Query end point for radius queries  of collection {collectionId}",
+        "description": "Query end point for to return values within a defined radius of a point queries",
+        "operationId": "getDataForRadius",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
           },
           {
             "name": "within",
@@ -397,13 +495,13 @@
         }
       }
     },
-    "/collections/{collectionId}/polygon": {
+    "/collections/{collectionId}/area": {
       "get": {
         "tags": [
           "Data"
         ],
         "summary": "Query end point for area queries  of collection {collectionId} defined by a polygon",
-        "description": "Return the data values for the data Polygon defined by the query parameters",
+        "description": "Return the data values for the data area defined by the query parameters",
         "operationId": "GetDataForArea",
         "parameters": [
           {
@@ -582,14 +680,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "interpolationZ",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -686,7 +776,7 @@
           {
             "name": "coords",
             "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\nA 2D trajectory, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D trajectory, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D trajectory, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D trajectory, through a 3D volume but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)",
             "required": true,
             "schema": {
               "type": "string"
@@ -782,9 +872,12 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
+            "$ref": "#/components/parameters/interpolationZ"
+          },
+          {
             "name": "coords",
             "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe centre of the corridor is defined using a Well Known Text string following \n\nA 2D corridor, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D corridor centre, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D corridor centre, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D corridor, through a 3D corridor centre but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)",
             "required": true,
             "schema": {
               "type": "string"
@@ -794,14 +887,6 @@
             "name": "interpolationWidth",
             "in": "query",
             "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationHeight",
-            "in": "query",
-            "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
             "schema": {
               "type": "string"
             }
@@ -1087,13 +1172,13 @@
         }
       ]
     },
-    "/collections/{collectionId}/instance/{instanceId}/point": {
+    "/collections/{collectionId}/instance/{instanceId}/position": {
       "get": {
         "tags": [
           "Data"
         ],
-        "summary": "Query end point for point queries of instance {instanceId} of collection {collectionId}",
-        "description": "Query end point for point queries",
+        "summary": "Query end point for position queries of instance {instanceId} of collection {collectionId}",
+        "description": "Query end point for position queries",
         "operationId": "getInstanceDataForPoint",
         "parameters": [
           {
@@ -1116,6 +1201,107 @@
           },
           {
             "$ref": "#/components/parameters/interpolation"
+          },
+          {
+            "$ref": "#/components/parameters/interpolationZ"
+          },
+          {
+            "name": "coords",
+            "in": "query",
+            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/instance/{instanceId}/radius": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Query end point to return data within defined radius of a point for an instance {instanceId} of collection {collectionId}",
+        "description": "Query end point to return all data within a defined radius of the defined point location queries",
+        "operationId": "getInstanceDataForRadius",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
           },
           {
             "name": "within",
@@ -1208,13 +1394,13 @@
         }
       }
     },
-    "/collections/{collectionId}/instance/{instanceId}/polygon": {
+    "/collections/{collectionId}/instance/{instanceId}/area": {
       "get": {
         "tags": [
           "Data"
         ],
         "summary": "Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon",
-        "description": "Return the data values for the data Polygon defined by the query parameters",
+        "description": "Return the data values for the data area defined by the query parameters",
         "operationId": "GetInstanceDataForArea",
         "parameters": [
           {
@@ -1399,14 +1585,6 @@
             "schema": {
               "type": "string"
             }
-          },
-          {
-            "name": "interpolationZ",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
@@ -1506,7 +1684,7 @@
           {
             "name": "coords",
             "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\nA 2D trajectory, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D trajectory, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D trajectory, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D trajectory, through a 3D volume but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)",
             "required": true,
             "schema": {
               "type": "string"
@@ -1605,9 +1783,12 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
+            "$ref": "#/components/parameters/interpolationZ"
+          },
+          {
             "name": "coords",
             "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe centre of the corridor is defined using a Well Known Text string following \n\n \n\nA 2D corridor, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D corridor centre, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D corridor, through a 3D corridor centre with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D corridor, through a 3D corridor centre but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)",
             "required": true,
             "schema": {
               "type": "string"
@@ -1617,14 +1798,6 @@
             "name": "interpolationWidth",
             "in": "query",
             "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationHeight",
-            "in": "query",
-            "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
             "schema": {
               "type": "string"
             }
@@ -1808,6 +1981,344 @@
         "responses": {
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/instance/{instanceId}/locations/{locID}": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Query end point for queries of instance {instanceId} of collection {collectionId} defined by a location id",
+        "description": "Return data the for the location defined by locid",
+        "operationId": "GetInstanceDataForLocation",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "name": "locID",
+            "in": "path",
+            "required": true,
+            "description": "Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/locations/{locID}": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "Query end point for queries of collection {collectionId} defined by a location id",
+        "description": "Return data the for the location defined by locid",
+        "operationId": "GetCollectionDataForLocation",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "name": "locID",
+            "in": "path",
+            "required": true,
+            "description": "Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)",
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/instance/{instanceId}/locations": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "List available location identifers for the instance",
+        "description": "List the locations available for the instance of the collection",
+        "operationId": "ListDataInstanceLocations",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/locations": {
+      "get": {
+        "tags": [
+          "Data"
+        ],
+        "summary": "List available location identifers for the collection",
+        "description": "List the locations available for the collection",
+        "operationId": "ListCollectionDataLocations",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
             "content": {
               "application/json": {
                 "schema": {
@@ -3427,7 +3938,7 @@
       "interpolationZ": {
         "name": "interpolationZ",
         "in": "query",
-        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{height}\ne.g.\ninterpolationZ=R5/linear/10\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{height}\ne.g.\ninterpolationZ=R5/linear/10\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a min Z value of the specified in the query and the maximum Z value specified in the query,\nthe {height} value MUST equal the max Z value - minimum Z value.  If the coordinates in the\nquery only specifiy a single Z coordinate this MUST be treated as the centre point of the \nheight range to be interpolated where the minimum Z value = Z - {height}/2 and the \nmaximum Z value = Z + {height} / 2\n\nIf a the interpolation is for a specific height it would be  defined as:\n\ninterpolationZ=R1/cubic_spline/1\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
         "schema": {
           "type": "string"
         }

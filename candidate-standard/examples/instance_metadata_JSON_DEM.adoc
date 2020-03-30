@@ -25,48 +25,32 @@ Gregorian calendar).
     { "href": "http://schemas.example.org/1.0/foobar.xsd",
       "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
   ],
-  "instances": [
+  "collections": [
     {
       "id": "data",
       "title": "data",
       "description": "Global Digital Elevation Model height data",
       "extent": {
         "spatial": [ -180.0, -89.9, 180, 89.9 ]
-      },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dcam:domainIncludes": ["height"]
-            
-      },
-      "itemType": "Grid",     
+      },     
       "links": [
-        { "href": "http://data.example.org/collections/dem/data",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for the dem collection" },
         { "href": "https://data.example.org/collection/dem/link-for-more-details",
-          "rel": "source", "type": "application/json",
+          "rel": "describedBy", "type": "source",
           "title": "Further information about the DEM data" },
         { "href": "https://data.example.org/collection/dem/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
+          "rel": "describedBy", "type": "publisher",
           "title": "Further information about the data publisher" },          
-        { "href": "http://data.example.org/collections/dem/point",
-          "rel": "point", "type": "application/json",
+        { "href": "http://data.example.org/collections/dem/position",
+          "rel": "data", "type": "position",
           "title": "Point query for the DEM collection" },
-        { "href": "http://data.example.org/collections/dem/polygon",
-          "rel": "polygon", "type": "application/json",
-          "title": "Polygon query for the DEM collection" },          
-        { "href": "http://data.example.org/collections/dem/data?outputFormat=html",
-          "rel": "metadata", "type": "text/html",
+        { "href": "http://data.example.org/collections/dem/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the DEM collection" },          
+        { "href": "http://data.example.org/collections/dem?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
           "title": "Metadata for the dem collection" },
         { "href": "https://data.example.org/collection/dem/licence-doc",
-          "rel": "licence", "type": "text/html",
+          "rel": "describedBy", "type": "licence",
           "title": "Licence for the dem collection" }
       ]
     }

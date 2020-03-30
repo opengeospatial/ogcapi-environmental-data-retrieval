@@ -19,35 +19,28 @@ Gregorian calendar).
 {
   "links": [
     {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=application%2Fjson",
+      "href": "http://data.example.org/collections/dem/area?outputFormat=application%2Fjson",
       "rel": "self",
       "type": "application/json",
-      "title": "data document as json"
+      "title": "Area metadata document as json"
     },
     {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/dem/area?outputFormat=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
-      "title": "data document as yaml"
+      "title": "Area metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/dem/area?outputFormat=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
-      "title": "data document as xml"
+      "title": "Area metadata document as xml"
     },
     {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/dem/area?outputFormat=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
-      "title": "data document as html"
-    },
-    {
-      "href": "http://data.example.org/collections/dem/data/point",
-      "rel": "self",
-      "type": "point",
-      "title": "Point query",
-      "self": "Point"
+      "title": "Area metadata document as html"
     }
   ],
   "id": "dem_data",
@@ -94,20 +87,14 @@ Gregorian calendar).
       "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
     }
   ],
-  "polygonQueryOptions": {
-    "interpolationX": [
-      "nearest_neighbour"
-    ],
-    "interpolationY": [
-      "nearest_neighbour"
-    ]
-  },
-  "pointQueryOptions": {
-    "interpolation": [
-      "nearest_neighbour"
-    ],
-    "withinUits":["miles","km"]
-  },
+  "interpolationX": [
+    "Bilinear",
+    "Bicubic"
+  ],
+  "interpolationY": [
+    "Bilinear",
+    "Bicubic"
+  ],  
   "outputFormat": [
     "CoverageJSON"
   ],
