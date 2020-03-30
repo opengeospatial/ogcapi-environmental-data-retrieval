@@ -1,0 +1,262 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Collection Instance Information Schema",
+    "description": "This schema defines metadata resource returned from /collections/{collectionId}/{instanceId}.",
+    "type": "object",
+    "required": [
+        "id",
+        "title",
+        "description",
+        "parameters"
+    ],
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "dataDetails": {
+            "$href": "dataDefinition.json"
+        },        
+        "pointQuery" :{
+            "type" : "object",
+            "description" : "Enumerated value lists for those query parameters that only apply to point queries.",
+            "properties": {
+                "interpolation" : {
+                    "type" : "array",
+                    "description" : "List of the interpolation approaches supported by the point query for the collection",
+                    "items": {
+                        "type" : "string"
+                    }
+                },
+                "withinUnits" : {
+                    "type" : "array",
+                    "description" : "List of the distance units supported if the query supports a within a defined radius query",
+                    "items": {
+                        "type" : "string"
+                    }
+                }
+    
+            }
+        },
+        "polygonQuery" :{
+            "type" : "object",
+            "description" : "Enumerated value lists for those query parameters that only apply to point queries.",
+            "properties": {
+                "interpolationX" : {
+                    "type" : "array",
+                    "description" : "List of the X axis interpolation approaches supported by the polygon query for the collection",
+                    "items": {
+                        "type" : "string"
+                    }
+                },
+                "interpolationY" : {
+                    "type" : "array",
+                    "description" : "List of the Y axis interpolation approaches supported by the polygon query for the collection",
+                    "items": {
+                        "type" : "string"
+                    }
+                },
+                "BBOXonly" : {
+                    "type" : "boolean",
+                    "description" : "If set to true the collection will only support simple polygon queries defined by a rectangular area."
+                }
+    
+            }
+        },        
+        "parameters": {
+            "$ref": "#/definitions/mapParameter"
+        },
+        "definitions": {
+            "mapLang": {
+                "type": "object",
+                "additionalProperties": {
+                    "type": "string"
+                }
+            },
+            "mapParameter": {
+                "type": "object",
+                "title": "Parameter metadata Schema",
+                "description": "This schema defines properties required to describe a collection data parameter.",            
+                "additionalProperties": {
+                    "type": "object",
+                        "required": [
+                            "description",
+                            "unit",
+                            "type",
+                            "observedProperty",
+                            "extent"
+                        ],
+                        "properties": {
+                            "description": {
+                                "type": "object",
+                                "required": [
+                                    "en"
+                                ],
+                                "properties": {
+                                    "$ref": "#/definitions/mapLang"
+                                }
+                            }
+                        },
+                        "unit": {
+                            "type": "object",
+                            "required": [
+                                "label",
+                                "symbol"
+                            ],
+                            "properties": {
+                                "label": {
+                                    "$ref": "#/definitions/mapLang"
+                                },
+                                "symbol": {
+                                    "type": "object",
+                                    "required": [
+                                        "value",
+                                        "type"
+                                    ],
+                                    "properties": {
+                                        "value": {
+                                            "type": "string"
+                                        },
+                                        "type": {
+                                            "type": "string"
+                                        }
+                                    }
+                                }
+                            }
+                        },
+                        "measurementType": {
+                            "type": "object",
+                            "title": "Parameter measurement type",
+                            "description": "This schema describes the type of calculation that a parameter is dirived from and the length of time it represents.",                        
+                            "required": [
+                                "method",
+                                "period"
+                            ],
+                            "properties": {
+                                "method": {
+                                    "type": "string",
+                                    "examples": ["instantaneous", "sum", "maximum"]
+                                },
+                                "duration": {
+                                    "title": "Time duration",
+                                    "description" : "The time duration that the parameter value is calculated over expressed as an RFC3339 duration value, if the method is instantaneous this property is not needed.",
+                                    "type": "string"
+                                }
+                            },
+                            "observedProperty": {
+                                "type": "object",
+                                "required": [
+                                    "id",
+                                    "label"
+                                ],
+                                "properties": {
+                                    "id": {
+                                        "type": "string"
+                                    },
+                                    "label": {
+                                        "$ref": "#/definitions/mapLang"
+                                    }
+                                }
+                            },
+                            "extent": {
+                                "type": "object",
+                                "required": [
+                                    "horizontal"
+                                ],
+                                "properties": {
+                                    "horizontal": {
+                                        "type": "object",
+                                        "required": [
+                                            "name",
+                                            "coordinates",
+                                            "geographic"
+                                        ],
+                                        "properties": {
+                                            "name": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "coordinates": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                }
+                                            },
+                                            "geographic": {
+                                                "type": "string"
+                                            }
+                                        }
+                                    },
+                                    "vertical": {
+                                        "type": "object",
+                                        "required": [
+                                            "name",
+                                            "coordinates",
+                                            "range"
+                                        ],
+                                        "properties": {
+                                            "name": {
+                                                "type": "array",
+                                                "items": {
+                                                    "type": "string"
+                                                },
+                                                "coordinates": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "range": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        },
+                                        "temporal": {
+                                            "type": "object",
+                                            "required": [
+                                                "name",
+                                                "coordinates",
+                                                "range"
+                                            ],
+                                            "properties": {
+                                                "name": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "coordinates": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "range": {
+                                                    "type": "array",
+                                                    "items": {
+                                                        "type": "string"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                
+                }
+            }
+
+        }
+    }
+}

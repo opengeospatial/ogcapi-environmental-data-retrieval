@@ -1,0 +1,18 @@
+== References
+The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+
+* [[openapi]] Open API Initiative: **OpenAPI Specification 3.0.3**, https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md[https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md]
+* [[rfc2616]] Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: **IETF RFC 2616, HTTP/1.1**, https://tools.ietf.org/rfc/rfc2616.txt[https://tools.ietf.org/rfc/rfc2616.txt]
+* [[rfc2818]] Rescorla, E.: **IETF RFC 2818, HTTP Over TLS**, https://tools.ietf.org/rfc/rfc2818.txt[https://tools.ietf.org/rfc/rfc2818.txt]
+* [[rfc3339]] Klyne, G., Newman, C.: **IETF RFC 3339, Date and Time on the Internet: Timestamps**, https://tools.ietf.org/rfc/rfc3339.txt[https://tools.ietf.org/rfc/rfc3339.txt]
+* [[rfc3896]] Berners-Lee, T., Fielding, R., Masinter, L: **IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax**, https://tools.ietf.org/rfc/rfc3896.txt[https://tools.ietf.org/rfc/rfc3896.txt]
+* [[rfc7946]] Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: **IETF RFC 7946, The GeoJSON Format**, https://tools.ietf.org/rfc/rfc7946.txt[https://tools.ietf.org/rfc/rfc7946.txt]
+* [[rfc8288]] Nottingham, M.: **IETF RFC 8288, Web Linking**, https://tools.ietf.org/rfc/rfc8288.txt[https://tools.ietf.org/rfc/rfc8288.txt]
+* [[html5]] W3C: **HTML5, W3C Recommendation**, https://www.w3.org/TR/html5/[https://www.w3.org/TR/html5/]
+* [[schema_org]]**Schema.org**: https://schema.org/docs/schemas.html[https://schema.org/docs/schemas.html]
+* [[covjson]] Blower, J., Riechert, M., Roberts, B.: **Overview of the CoverageJSON format**, https://www.w3.org/TR/covjson-overview/[https://www.w3.org/TR/covjson-overview/]
+* [[rfc2413]] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: **IETF RFC 2413, Dublin Core Metadata for Resource Discovery**, https://tools.ietf.org/rfc/rfc2413.txt[https://tools.ietf.org/rfc/rfc2413.txt]
+* [[ogc06-103r4]] Herring, J.: **Simple Feature Access - Part 1: Common Architecture**, http://portal.opengeospatial.org/files/?artifact_id=25355[http://portal.opengeospatial.org/files/?artifact_id=25355]
+* [[ogc18-010r7]] Lott, R.: **Well-Known Text representation of Coordinate Reference Systems**, http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[http://docs.opengeospatial.org/is/18-010r7/18-010r7.html]
+
+

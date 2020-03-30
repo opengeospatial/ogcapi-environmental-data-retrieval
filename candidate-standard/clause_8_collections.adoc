@@ -1,0 +1,172 @@
+[[collection-information-queries]]
+=== Query Resources
+:sectnums:
+
+Query Resources are spatial queries which support the operation of the API or the access and use of the Spatial Resources. They are described in the <<query-resources>> section.
+
+Query Resources related to Spatial Resources can exposed using the path template:
+
+* /collections/{collectionId}/{queryType}
+
+The resources returned from each node in this template are described in <<query-resource-paths>>.
+
+[#information-resource-paths,reftext='{table-caption} {counter:table-num}']
+.Information Resource Paths
+[width="90%",cols="2,4",options="header"]
+|===
+^|**Path Template** ^|**Resource**
+|/collections |The root resource describing the spatial collections available from this API.
+|/collections/{collectionId} |Identifies a collection with the unique identifier `{collectionId}`
+|/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {resourceType} associated with the `{collectionId}` collection.
+|===
+
+The OGC API-Common standard does not define any Information Resource types. However <<query-resource-table>> provides a mapping of the intial query types proposed for the EDR API.
+
+[#query-resource-table,reftext='{table-caption} {counter:table-num}']
+.Query Types
+[width="90%",cols="2,1,4",options="header"]
+|===
+^|**Path Template** ^|**Query Type** ^|**Description**
+|/collections/{collectionId}/point | Point | Return data for the requested point location
+|/collections/{collectionId}/polygon | Polygon | Return data for the requested polygon area
+|/collections/{collectionId}/cube | Cube | Return data for a spatial cube
+|/collections/{collectionId}/trajectory | Trajectory | Return data along a defined trajectory
+|/collections/{collectionId}/corridor | Corridor | Return data within a spatial corridor
+|/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` collection.
+|/collections/{collectionId}/instance | Instance | List the available instances of the collection
+|===
+
+=== Parameter Modules
+
+Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR standard defines the following as standard parameters for use in EDR API standards.
+
+==== Parameter coords
+
+include::requirements/edr/REQ_rc-coords-definition.adoc[]
+
+include::requirements/edr/REQ_rc-coords-response.adoc[]
+
+==== Parameter datetime
+
+include::requirements/core/REQ_rec-datetime-parameter.adoc[]
+
+The datetime parameter is defined in API-Common. The following information is provided as a convinience to the user.
+
+"Intersects" means that the time (instant or period) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or period). For time periods this includes the start and end time.
+ 
+.A date-time
+=================
+February 12, 2018, 23:20:52 GMT:
+
+`time=2018-02-12T23%3A20%3A52Z`
+=================
+
+For resources with a temporal property that is a timestamp (like `lastUpdate` in the building features), a date-time value would match all resources where the temporal property is identical.
+
+For resources with a temporal property that is a date or a time interval, a date-time value would match all resources where the timestamp is on that day or within the time interval.
+
+.Intervals
+=================
+February 12, 2018, 00:00:00 GMT to March 18, 2018, 12:31:12 GMT:
+
+`datetime=2018-02-12T00%3A00%3A00Z%2F2018-03-18T12%3A31%3A12Z`
+
+February 12, 2018, 00:00:00 UTC or later:
+
+`datetime=2018-02-12T00%3A00%3A00Z%2F..`
+
+March 18, 2018, 12:31:12 UTC or earlier:
+
+`datetime=..%2F2018-03-18T12%3A31%3A12Z`
+=================
+
+A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml[datetime.yaml].
+
+==== Parameter parametername
+
+include::requirements/edr/REQ_rc-parameters-definition.adoc[]
+
+include::requirements/edr/REQ_rc-parameters-response.adoc[]
+
+.A single parameter
+=================
+Only return values for the Maximum_temperature
+
+`parametername=Maximum_temperature`
+=================
+
+.Return multiple parameters
+=================
+Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
+
+`parametername=Maximum_temperature,Minimum_temperature,Total_precipitation`
+=================
+
+If none of the requested parameters exist in the collection a 403 message SHOULD be returned.
+
+<<<
+
+==== Parameter crs
+
+include::requirements/edr/REQ_rc-outputCRS-definition.adoc[]
+
+include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
+
+The value of the crs query parameter will be one of the name values described in the collection metadata for supported crs transformations. 
+
+==== Parameter outputFormat
+
+include::requirements/edr/REQ_rc-outputFormat-definition.adoc[]
+
+include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
+
+.Return data as coverageJSON
+=================
+
+`outputFormat=coverageJSON`
+=================
+
+If not specified the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection a 403 message SHOULD be returned.
+
+[[query-resources]]
+=== QueryType specific Operations
+
+The following describes the query parameters that are unique or specialised to the individual query types:
+
+NOTE: The following include statements import files which in turn import files already imported above. That results in duplicate section identifiers.
+
+==== Point
+
+include::requirements/edr/query_type/point.adoc[]
+
+<<<
+
+==== Polygon
+
+include::requirements/edr/query_type/polygon.adoc[]
+
+<<<
+
+==== Cube
+
+include::requirements/edr/query_type/cube.adoc[]
+
+<<<
+
+==== Trajectory (corridor)
+
+include::requirements/edr/query_type/trajectory.adoc[]
+
+
+<<<
+
+==== Items 
+
+include::requirements/edr/query_type/item.adoc[]
+
+<<<
+
+==== Instance 
+
+include::requirements/edr/query_type/instance.adoc[]
+

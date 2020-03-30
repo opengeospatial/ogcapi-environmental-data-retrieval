@@ -1,0 +1,17 @@
+[[req_edr_z-definition]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* |*/req/edr/z-definition* 
+^|A |Each resource collection operation MAY support a parameter `z`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: z
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

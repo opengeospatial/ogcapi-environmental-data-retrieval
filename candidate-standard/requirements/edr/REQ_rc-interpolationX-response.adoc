@@ -1,0 +1,14 @@
+[[req_edr_interpolationX-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* |*/req/edr/interpolationX-response*
+^|A|If the `interpolationX` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed x intervals.
+^|B|The interpolationX information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :
+^|C|The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:
+^|D|If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.
+
+[source,java]
+----
+interpolationX = "R"interval "/" interpolation-method
+----
+|===

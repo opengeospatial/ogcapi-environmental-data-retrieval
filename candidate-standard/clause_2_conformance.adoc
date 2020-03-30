@@ -1,0 +1,34 @@
+== Conformance
+Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+
+The one Standardization Target for this standard is Web APIs.
+
+OGC API-Common provides a common foundation for OGC API standards. Therefore, this standard should be viewed as an extension to API-Common. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common.
+
+This standard identifies six (6) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one Requirements Class. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+
+The requirements classes for OGC API-EDR are:
+
+* <<rc_core-section,Core>>
+
+The _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of API-EDR.
+
+* <<rc_collections-section,Collections>>
+
+NOTE: Validate that this description is accurate.
+
+The _Collections Requirements Class_ defines the requirements specific to the query and retrieval of Environmental Data Resources.
+
+* Encodings
+** <<rc_html-section,HTML>>
+** <<rc_geojson-section,GeoJSON>>
+** <<rc_covjson-section,CovJSON>>
+
+Neither the nor _Core_ nor _Collections_ requirements class mandate a specific encoding or format for representing resources. The _HTML_, _GeoJSON_ and _CovJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
+
+None of these encodings are mandatory. An implementation of the _API-EDR_ standard may decide to implement another encoding instead of, or in addition those listed. However, a common format does simplifies interoperability so support for _CovJSON_ is highly recommended.
+
+* <<rc_oas30-section,OpenAPI 3.0>>
+
+The _OGC API-Common_ standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR API's will be defined using _OpenAPI 3.0_.
+

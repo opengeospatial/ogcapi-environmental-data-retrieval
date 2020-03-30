@@ -1,0 +1,28 @@
+{
+    "name": "Environmental-Data-Retrieval-API",
+    "version": "1.0.0",
+    "description": "Environmental-Data-Retrieval-API PDF generator",
+    "main": "index.js",
+    "scripts": {
+      "generate-pdf": "asciidoctor-pdf candidate-standard/EDR-candidate-specification.adoc"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/github/Environmental-Data-Retrieval-API.git"
+    },
+    "keywords": [
+      "Environmental",
+      "Retrieval"
+    ],
+    "author": "Mark Burgoyne",
+    "license": "MIT",
+    "bugs": {
+      "url": "https://github.com/github/Environmental-Data-Retrieval-API/issues"
+    },
+    "homepage": "https://github.com/github/Environmental-Data-Retrieval-API#readme",
+    "dependencies": {
+      "@asciidoctor/core": "^2.0.3",
+      "asciidoctor-pdf": "^1.0.0-alpha.3"
+    }
+  }
+  

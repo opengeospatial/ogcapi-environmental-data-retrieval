@@ -1,0 +1,58 @@
+[[rc_oas30-section]]
+== Requirements class "OpenAPI 3.0"
+
+=== Basic requirements
+
+include::requirements/requirements_class_oas30.adoc[]
+
+The OpenAPI 3.0 Requirements Class is applicable to API-EDR as well. So an implementation of API-EDR which supports OpenAPI 3.0 as an API Description format must also comply with the API-Common oas30 Conformance Class.
+
+include::requirements/oas30/REQ_oas-common.adoc[]
+
+Implementations must also advertise conformance with this Requirements Class.
+
+include::requirements/oas30/REQ_oas-conformance.adoc[]
+
+Two example OpenAPI documents are included in <<oas-examples,Annex B>>.
+
+=== Complete definition
+
+include::requirements/oas30/REQ_completeness.adoc[]
+
+Note that APIs that, for example, are access-controlled (see <<security,Security>>), support web cache validation, CORS or that use HTTP redirection will make use of additional HTTP status codes beyond regular codes such as `200` for successful GET requests and `400`, `404` or `500` for error situations. See <<http-status-codes>>.
+
+Clients have to be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.
+
+[[exceptions]]
+=== Exceptions
+
+include::requirements/oas30/REQ_exception-codes.adoc[]
+
+.An exception response object definition
+=================
+[source,YAML]
+----
+description: An error occurred.
+content:
+  application/json:
+    schema:
+      $ref: https://raw.githubusercontent.com/opengeospatial/OAPI/openapi/schemas/exception.yaml
+  text/html:
+    schema:
+      type: string
+----
+=================
+
+[[security]]
+=== Security
+
+include::requirements/oas30/REQ_security.adoc[]
+
+The OpenAPI specification currently supports the following link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#security-scheme-object[security schemes]:
+
+* HTTP authentication,
+* an API key (either as a header or as a query parameter),
+* OAuth2's common flows (implicit, password, application and access code) as defined in RFC6749, and
+* OpenID Connect Discovery.
+
+

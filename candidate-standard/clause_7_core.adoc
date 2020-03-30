@@ -1,0 +1,175 @@
+[[rc_core-section]]
+=== Overview
+
+include::requirements/requirements_class_core.adoc[]
+
+The `Core` Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources. The `Core` Requirements Class is presented in five sections:
+
+. <<api-platform-section,API Platform>>: a set of common capabilities
+. <<collection-access-section,Collection Access>>: operations for accessing collections of environmental data.
+. <<environmental-resources-section,Environmental Resources>>: operations for accessing environmental data resources
+. <<query-resources-section,Query Resources>>: operations for accessing environmental data resources through queries
+. <<parameters-section,Parameters>>: parameters for use in the API-EDR operations.
+. <<general-section,General>>: general principles for use with this standard.
+
+[[core-dependencies-section]]
+=== Dependencies
+
+The OGC API-EDR standard is an extension of the OGC API-Common standard. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
+
+include::requirements/core/REQ_api-common.adoc[]
+
+[[api-platform-section]]
+=== Platform
+
+API-Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.
+
+[[landing-page]]
+==== API landing page
+
+The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API-Common already requires some common links. Those links are sufficient for this standard.
+
+.Dependencies
+[width="90%"]
+|====
+|http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|====
+
+===== Operation
+
+The `Landing Page` operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class specifies only one way of performing this operation:
+
+. Issue a `GET` request on the `{root}/` path
+
+Support for `GET` on the `{root}/` path is required by API-Common.
+
+===== Response
+
+A successful response to the `Landing Page` operation is defined in API-Common. The schema for this resource is provided in <<landingPage-schema>>.
+
+[#landingPage-schema,reftext='Landing Page Response Schema']
+.Landing Page Response Schema
+[source,yaml]
+----
+include::openapi/schemas/common/landingPage.yaml[]
+----
+
+The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
+
+[#landingPage-example,reftext=`Landing Page Example`]
+.Landing Page Example
+[source,json]
+----
+include::examples/JSON/landingPage_example.json[]
+----
+
+===== Error situations
+
+The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
+
+[[api-definition]]
+==== API definition
+
+Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
+
+.Dependencies
+[width="90%"]
+|====
+|http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|====
+
+===== Operation
+
+This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class describes two ways of performing this operation:
+
+. Issue a `GET` request on the `{root}/api` path
+. Follow the `service-desc` or `service-doc` link on the landing page
+
+Only the link is required by API-Common.
+
+===== Response
+
+A successful response to the API Definition request is a resource which documents the design of the API. API-Common leaves the selection of format for the API Definition response to the API implementor. However, the options are limited to those which have been defined in the API-Common standard. At this time OpenAPI 3.0 is the only option provided.
+
+===== Error situations
+
+The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
+
+[[conformance-classes]]
+==== Declaration of conformance classes
+
+To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API / server, the API has to declare the conformance classes it claims to have implemented.
+
+.Dependencies
+[width="90%"]
+|====
+|http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|====
+
+===== Operation
+
+This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class describes two ways of performing this operation:
+
+. Issue a `GET` request on the `{root}/conformance` path
+. Follow the `conformance` link on the landing page
+
+Both techniques are required by API-Common.
+
+===== Response
+
+A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this API claims conformance. The schema for this resource is defined in API-Common and provided for reference in <<conformance-schema>>.
+
+include::requirements/core/REQ_core_conformance.adoc[]
+
+[#conformance-schema,reftext='Conformance Response Schema']
+.Conformance Response Schema
+[source,yaml]
+----
+include::openapi/schemas/common/confClasses.yaml[]
+----
+
+The following JSON fragment is an example of a response to an OGC API-EDR conformance operation.
+
+[#conformance-example,reftext=`Conformance Information Example`]
+.Conformance Information Example
+[source,json]
+----
+include::examples/JSON/conformance_example.json[]
+----
+
+[[environmental-resource-section]]
+=== Environmental Resources
+
+Environmental Resources can exposed using two path templates:
+
+* /collections/{collectionId}/{queryType}
+* /collections/{collectionId}/instance/{instanceId}/{queryType}
+
+Where 
+
+{collectionId} = a unique identifier for a Spatial Resource collection.
+
+{instanceId} = a text string identifying the _'Version'_ or _'Instance'_ of the choosen collection.
+
+{queryType} = a text string identifying the type of geo-spatial query pattern performed by the API.
+
+Information Resources associated with a specific collection should be accessed through the `/collections` path. Those which are not associated with a specific collection should use the `/{instanceId}/{queryType}` template.
+
+The EDR API `instanceId` parameter allows support for multiple iterations or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of _default_ or _latest_ could be used.
+
+The EDR API standard has identified an initial set of common `queryTypes` to implement, this list may change as the standard is used. The <<query-type-table>> provides a list of the proposed `queryTypes`.
+
+[#query-type-table,reftext='{table-caption} {counter:table-num}']
+.Information Resource Types
+[width="90%",cols="2,4",options="header"]
+|===
+^|**Query Type** ^|**API Standard**
+|Corridor | /corridor
+|Cube | /cube
+|Items | /items
+|Point | /point
+|Polygon | /polygon
+|Trajectory | /trajectory
+|Instance | /instance
+|===
+

@@ -1,0 +1,50 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "Collection Information Schema",
+    "description": "This schema defines metadata resource returned from /collections/{collectionId}.",
+    "type": "object",
+    "required": [
+        "id",
+        "links"
+        ],
+    "properties": {
+        "id": {
+            "type": "string"
+            },
+        "title": {
+            "type": "string"
+            },
+        "description": {
+            "type": "string"
+            },
+        "dataDetails": {
+            "$href": "dataDefinition.json"
+        },
+        "links": {
+            "type": "array",
+            "items": {"$href": "link.json"}
+            },
+        "extent": {"$href": "extent.json"},
+        "itemType": {
+            "type": "string"
+        },
+        "crs": {
+            "description": "the list of coordinate reference systems supported by the API; the first item is the default coordinate reference system",
+            "type": "array",
+            "items": {
+                "type": "object",
+                "properties": {
+                    "name": {"type":"string"},
+                    "wkt":{"type":"string"}
+                }
+            },
+            "default": [
+                {"name":"EPSG:4326","wkt":"GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"}
+                ],
+            "example": [
+                {"name":"EPSG:4326","wkt":"GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"},
+                {"name":"CUSTOM_EXAMPLE","wkt":"GEODCRS[\"WGS 84\",DATUM[\"World Geodetic System 1984\",ELLIPSOID[\"WGS 84\",6378137,298.257223563,LENGTHUNIT[\"metre\",1.0]]],CS[ellipsoidal,3],AXIS[\"(lat)\",north,ANGLEUNIT[\"degree\",0.0174532925199433]],AXIS[\"(lon)\",east,ANGLEUNIT[\"degree\",0.0174532925199433]],AXIS[\"ellipsoidal height (h)\",up,LENGTHUNIT[\"metre\",1.0]]]"}
+                ]
+            }
+        }
+    }
