@@ -1697,7 +1697,7 @@ paths:
   '/collections/{collectionId}/instance/{instanceId}/locations':
     get:
       tags:
-        - Data
+        - Metadata
       summary: List available location identifers for the instance
       description: List the locations available for the instance of the collection
       operationId: ListDataInstanceLocations
@@ -1747,7 +1747,7 @@ paths:
   '/collections/{collectionId}/locations':
     get:
       tags:
-        - Data
+        - Metadata
       summary: List available location identifers for the collection
       description: List the locations available for the collection
       operationId: ListCollectionDataLocations
