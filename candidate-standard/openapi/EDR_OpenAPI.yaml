@@ -2930,13 +2930,13 @@ components:
         This is defined if the query doesn't require data at its native Z coordinate 
         resolution, the format is:
 
-        `interpolationZ=R{interpolation resolution}/{interpolation method}`
+        `interpolationz=R{interpolation resolution}/{interpolation method}`
         
         e.g. interpolationZ=R5/linear
 
         If a the interpolation is for a specific height it would be  defined as:
 
-        interpolationZ=R1/cubic_spline
+        interpolationz=R1/cubic_spline
 
         The valid interpolation method values are available in the results of the 
         capabilities query methods of this API
@@ -2949,9 +2949,9 @@ components:
         This is defined if the query doesn't require data at its native coordinate 
         resolution for the requested width of the corridor, the format is
 
-        `interpolationWidth=R{interpolation resolution}/{interpolation method}`
+        `interpolationwidth=R{interpolation resolution}/{interpolation method}`
 
-        e.g. interpolationWidth=R5/linear
+        e.g. interpolationwidth=R5/linear
 
 
         The `interpolation resolution` is the number of intervals the user 

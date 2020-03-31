@@ -3963,7 +3963,7 @@
       "interpolationZ": {
         "name": "interpolationz",
         "in": "query",
-        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\n`interpolationZ=R{interpolation resolution}/{interpolation method}`\n\ne.g. interpolationZ=R5/linear\n\nIf a the interpolation is for a specific height it would be  defined as:\n\ninterpolationZ=R1/cubic_spline\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\n`interpolationz=R{interpolation resolution}/{interpolation method}`\n\ne.g. interpolationz=R5/linear\n\nIf a the interpolation is for a specific height it would be  defined as:\n\ninterpolationz=R1/cubic_spline\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
         "schema": {
           "type": "string"
         }
