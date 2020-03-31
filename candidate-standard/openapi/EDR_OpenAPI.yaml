@@ -2,7 +2,7 @@ openapi: 3.0.2
 info:
   title: Environmental Data Retreival API's
   description: Example of Candidate Environmental Data Retreival API OpenAPI docs
-  version: 0.0.3
+  version: 0.0.4
 servers:
   - url: 'http://www.example.org/edr'
     description: ''
@@ -169,12 +169,6 @@ paths:
       operationId: getDataForPoint
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - name: coords
           in: query
           description: |
@@ -198,6 +192,12 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'        
+        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -245,24 +245,6 @@ paths:
       operationId: getDataForRadius
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - name: within
-          in: query
-          description: Defines radius of area around defined coordinates to include in the data selection
-          required: false
-          example: 10
-          schema:
-            type: number
-        - name: withinUnits
-          in: query
-          description: Distance units for the within parameter
-          required: false
-          example: KM
-          schema:
-            type: string
         - name: coords
           in: query
           description: |
@@ -286,6 +268,25 @@ paths:
           required: true
           schema:
             type: string
+        - name: within
+          in: query
+          description: Defines radius of area around defined coordinates to include in the data selection
+          required: true
+          example: 10
+          schema:
+            type: number
+        - name: withinUnits
+          in: query
+          description: Distance units for the within parameter
+          required: true
+          example: KM
+          schema:
+            type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
+        
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -333,10 +334,7 @@ paths:
       operationId: GetDataForArea
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
+
         - name: coords
           in: query
           description: |-
@@ -361,6 +359,23 @@ paths:
           required: true
           schema:
             type: string
+        - name: z
+          in: query
+          description: |
+            Define the vertical level to return data from 
+            i.e. Z=level
+
+            for instance if the 850hPa pressure level is being queried
+
+            Z=850
+
+            When not specified data from the lowest (i.e. nearest the surface) level of
+            data in the collection.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/crs'
         - name: interpolationX
           in: query
           description: |+
@@ -393,20 +408,8 @@ paths:
             capabilities query methods of this API
           schema:
             type: string
-        - name: z
-          in: query
-          description: |
-            Define the vertical level to return data from 
-            i.e. Z=level
-
-            for instance if the 850hPa pressure level is being queried
-
-            Z=850
-
-            When not specified data from the lowest (i.e. nearest the surface) level of
-            data in the collection.
-          schema:
-            type: string
+        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/outputFormat'        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -454,10 +457,6 @@ paths:
       operationId: GetDataForCube
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
         - name: coords
           in: query
           description: |-
@@ -482,6 +481,36 @@ paths:
           required: true
           schema:
             type: string
+        - name: minZ
+          in: query
+          required: true
+          description: |
+            Define the location of the bottom of the cube 
+            i.e. minZ=level
+
+            for instance if bottom of cube is at the 950hPa pressure level
+
+            minZ=850
+
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - name: maxZ
+          in: query
+          required: true
+          description: |
+            Define the location of the top of the cube 
+            i.e. maxZ=level
+
+            for instance if top of cube is at the 650hPa pressure level
+
+            maxZ=650
+
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string            
+        - $ref: '#/components/parameters/time'        
+        - $ref: '#/components/parameters/parametername'
         - name: interpolationX
           in: query
           description: |+
@@ -515,34 +544,9 @@ paths:
             capabilities query methods of this API
           schema:
             type: string
-        - name: minZ
-          in: query
-          required: true
-          description: |
-            Define the location of the bottom of the cube 
-            i.e. minZ=level
-
-            for instance if bottom of cube is at the 950hPa pressure level
-
-            minZ=850
-
-            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
-          schema:
-            type: string
-        - name: maxZ
-          in: query
-          required: true
-          description: |
-            Define the location of the top of the cube 
-            i.e. maxZ=level
-
-            for instance if top of cube is at the 650hPa pressure level
-
-            maxZ=650
-
-            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
-          schema:
-            type: string
+        - $ref: '#/components/parameters/interpolationZ'            
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -590,12 +594,6 @@ paths:
       operationId: GetDataForTrajectory
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - name: coords
           in: query
           description: |-
@@ -618,6 +616,11 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -665,12 +668,6 @@ paths:
       operationId: GetDataForCorridor
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - name: coords
           in: query
           description: |-
@@ -693,13 +690,16 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'            
+        - $ref: '#/components/parameters/interpolation'            
         - name: interpolationWidth
           in: query
           description: |
             This is defined if the query doesn't require data at its native coordinate 
-            resolution, the format is
+            resolution for the requested width of the corridor, the format is
 
-            interpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} 
+            interpolationWidth=R{interpolation resolution}/{interpolation method}/{corridor width} 
 
             e.g. interpolationWidth=R5/linear/10
 
@@ -711,6 +711,9 @@ paths:
             The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
           schema:
             type: string
+        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/crs'            
+        - $ref: '#/components/parameters/outputFormat'            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -892,12 +895,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'        
         - name: coords
           in: query
           description: |
@@ -921,6 +918,12 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/crs'        
+        - $ref: '#/components/parameters/outputFormat'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -969,24 +972,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - name: within
-          in: query
-          description: Defines radius of area around defined coordinates to include in the data selection
-          required: false
-          example: 10
-          schema:
-            type: number
-        - name: withinUnits
-          in: query
-          description: Distance units for the within parameter
-          required: false
-          example: KM
-          schema:
-            type: string
         - name: coords
           in: query
           description: |
@@ -1010,6 +995,24 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - name: within
+          in: query
+          description: Defines radius of area around defined coordinates to include in the data selection
+          required: false
+          example: 10
+          schema:
+            type: number
+        - name: withinUnits
+          in: query
+          description: Distance units for the within parameter
+          required: false
+          example: KM
+          schema:
+            type: string
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1058,10 +1061,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
         - name: coords
           in: query
           description: |-
@@ -1086,6 +1085,22 @@ paths:
           required: true
           schema:
             type: string
+        - name: z
+          in: query
+          description: |
+            Define the vertical level to return data from 
+            i.e. Z=level
+
+            for instance if the 850hPa pressure level is being queried
+
+            Z=850
+
+            When not specified data from the lowest (i.e. nearest the surface) level of
+            data in the collection.
+          schema:
+            type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
         - name: interpolationX
           in: query
           description: |+
@@ -1118,20 +1133,9 @@ paths:
             capabilities query methods of this API
           schema:
             type: string
-        - name: z
-          in: query
-          description: |
-            Define the vertical level to return data from 
-            i.e. Z=level
-
-            for instance if the 850hPa pressure level is being queried
-
-            Z=850
-
-            When not specified data from the lowest (i.e. nearest the surface) level of
-            data in the collection.
-          schema:
-            type: string
+        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1180,10 +1184,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
         - name: coords
           in: query
           description: |-
@@ -1208,6 +1208,36 @@ paths:
           required: true
           schema:
             type: string
+        - name: minZ
+          in: query
+          required: true
+          description: |
+            Define the location of the bottom of the cube 
+            i.e. minZ=level
+
+            for instance if bottom of cube is at the 950hPa pressure level
+
+            minZ=850
+
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - name: maxZ
+          in: query
+          required: true
+          description: |
+            Define the location of the top of the cube 
+            i.e. maxZ=level
+
+            for instance if top of cube is at the 650hPa pressure level
+
+            maxZ=650
+
+            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+          schema:
+            type: string
+        - $ref: '#/components/parameters/time'        
+        - $ref: '#/components/parameters/parametername'
         - name: interpolationX
           in: query
           description: |+
@@ -1241,34 +1271,10 @@ paths:
             capabilities query methods of this API
           schema:
             type: string
-        - name: minZ
-          in: query
-          required: true
-          description: |
-            Define the location of the bottom of the cube 
-            i.e. minZ=level
+        - $ref: '#/components/parameters/interpolationZ'            
 
-            for instance if bottom of cube is at the 950hPa pressure level
-
-            minZ=850
-
-            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
-          schema:
-            type: string
-        - name: maxZ
-          in: query
-          required: true
-          description: |
-            Define the location of the top of the cube 
-            i.e. maxZ=level
-
-            for instance if top of cube is at the 650hPa pressure level
-
-            maxZ=650
-
-            The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
-          schema:
-            type: string
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1317,12 +1323,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - name: coords
           in: query
           description: |-
@@ -1345,6 +1345,11 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
+        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/crs'
+        - $ref: '#/components/parameters/outputFormat'        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1393,12 +1398,6 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/outputFormat'
-        - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/time'
-        - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - name: coords
           in: query
           description: |-
@@ -1423,13 +1422,15 @@ paths:
           required: true
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/parametername'
         - name: interpolationWidth
           in: query
           description: |
             This is defined if the query doesn't require data at its native coordinate 
-            resolution, the format is
+            resolution for the requested corridor width, the format is
 
-            interpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} 
+            interpolationWidth=R{interpolation resolution}/{interpolation method}/{corridor width} 
 
             e.g. interpolationWidth=R5/linear/10
 
@@ -1441,6 +1442,10 @@ paths:
             The `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.
           schema:
             type: string
+        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/crs'        
+        - $ref: '#/components/parameters/outputFormat'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1595,13 +1600,15 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
-        - $ref: '#/components/parameters/time'
         - name: locID
           in: path
           required: true
           description: 'Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)'
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'          
+        - $ref: '#/components/parameters/outputFormat'            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1649,13 +1656,15 @@ paths:
       operationId: GetCollectionDataForLocation
       parameters:
         - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/time'
         - name: locID
           in: path
           required: true
           description: 'Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)'
           schema:
             type: string
+        - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/crs'          
+        - $ref: '#/components/parameters/outputFormat'
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -2878,9 +2887,9 @@ components:
         type: string
     crs:
       name: crs
-      required: true
-      in: path
+      in: query
       description: identifier (id) of the coordinate system to return data in list of valid crs identifiers for the chosen collection are defined in the metadata responses.  If not supplied the coordinate reference system will default to WGS84.
+      required: false
       example: native
       schema:
         type: string
@@ -2934,16 +2943,21 @@ components:
         This is defined if the query doesn't require data at its native Z coordinate 
         resolution, the format is:
 
-        interpolationZ=R{interpolation resolution}/{interpolation method}/{height}
-        e.g.
-        interpolationZ=R5/linear/10
+        `interpolationZ=R{interpolation resolution}/{interpolation method}/{height}`
+        
+        e.g. interpolationZ=R5/linear/10
 
-        The interpolation resolution is the number of intervals the user requires between
-        the a min Z value of the specified in the query and the maximum Z value specified in the query,
-        the {height} value MUST equal the max Z value - minimum Z value.  If the coordinates in the
-        query only specifiy a single Z coordinate this MUST be treated as the centre point of the 
-        height range to be interpolated where the minimum Z value = Z - {height}/2 and the 
-        maximum Z value = Z + {height} / 2
+        The interpolation resolution is the number of intervals the user 
+        requires between the a min Z value of the specified in the query and 
+        the maximum Z value specified in the query, the {height} value `MUST` 
+        equal the `max Z value - minimum Z value`.  
+        
+        If the query type means that the coordinates consist of a single 
+        Z coordinate this `MUST` be treated as the centre point of the 
+        height range to be interpolated where 
+        
+        the `minimum Z value = Z - {height}/2` and 
+        the `maximum Z value = Z + {height} / 2`
         
         If a the interpolation is for a specific height it would be  defined as:
 
