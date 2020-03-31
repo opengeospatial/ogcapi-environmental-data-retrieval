@@ -2936,7 +2936,7 @@ components:
 
         If a the interpolation is for a specific height it would be  defined as:
 
-        interpolationZ=R1/cubic_spline/1
+        interpolationZ=R1/cubic_spline
 
         The valid interpolation method values are available in the results of the 
         capabilities query methods of this API
