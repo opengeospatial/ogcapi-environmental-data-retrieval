@@ -2436,9 +2436,6 @@
             "type": "string",
             "example": "NOAA Global Forecast surface values"
           },
-          "dataDetails": {
-            "$ref": "#/components/schemas/dataDetails"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -2461,21 +2458,6 @@
           },
           "extent": {
             "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.yaml"
-          },
-          "itemType": {
-            "type": "string",
-            "description": "Structure of the returned output from the query",
-            "enum": [
-              "Grid",
-              "Point",
-              "Profile",
-              "Trajectory",
-              "PointSeries"
-            ],
-            "example": "Grid"
-          },
-          "supportedQueryTypes": {
-            "$ref": "#/components/schemas/supportedQueryTypes"
           },
           "crs": {
             "description": "The coordinate reference systems in which geometries may be retrieved. Coordinate reference systems are identified by a URI. The first coordinate reference system is the coordinate reference system that is used by default. This is always \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\", i.e. WGS84 longitude/latitude.",
@@ -2563,9 +2545,6 @@
             "type": "string",
             "example": "NOAA Global Forecast surface values from the 2019-08-01T00:00:00Z model run"
           },
-          "dataDetails": {
-            "$ref": "#/components/schemas/dataDetails"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -2646,49 +2625,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/crsObject"
-            }
-          },
-          "polygonQuery": {
-            "type": "object",
-            "properties": {
-              "interpolationX": {
-                "description": "X coordinate interpolation options",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interpolationY": {
-                "description": "Y coordinate interpolation options",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "BBOXOnly": {
-                "type": "boolean",
-                "description": "If true this flag defines that the API will only support simple polygons defined by a rectangular area."
-              }
-            }
-          },
-          "pointQuery": {
-            "type": "object",
-            "properties": {
-              "interpolation": {
-                "description": "interpolation options",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "withinUnits": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "description": "supported distance units if the query supports a within a defined radius query.  If withinUnits is not defined the API does not support the radius query.",
-                  "example": "km"
-                }
-              }
             }
           },
           "outputFormat": {
