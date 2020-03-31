@@ -2,14 +2,14 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationZ-response*
-^|A|If the `interpolationz` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z intervals.
-^|B |The interpolationz information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :
+^|A|If the `interpolationz` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z samples.
+^|B |The interpolationz information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :
 
 [source,java]
 ----
 interpolationz = "R" intervals "/" intervalinterpolation-method
 ----
-^|C|The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:
+^|C|The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:
 ^|D|If not specified the query will use the default interpolation method for the chosen collection.
 ^|E|If the vertical coordinates only contain a single height value the R `intervals` MUST always be 1.
 ^|F|If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.
