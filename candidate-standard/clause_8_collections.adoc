@@ -115,7 +115,7 @@ include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
 
 The value of the crs query parameter will be one of the name values described in the collection metadata for supported crs transformations. 
 
-==== Parameter outputFormat
+==== Parameter outputformat
 
 include::requirements/edr/REQ_rc-outputFormat-definition.adoc[]
 
@@ -124,7 +124,7 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 .Return data as coverageJSON
 =================
 
-`outputFormat=coverageJSON`
+`outputformat=coverageJSON`
 =================
 
 If not specified the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection a 403 message SHOULD be returned.

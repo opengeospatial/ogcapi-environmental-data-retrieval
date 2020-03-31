@@ -869,6 +869,12 @@
             }
           },
           {
+            "$ref": "#/components/parameters/corridorWidth"
+          },
+          {
+            "$ref": "#/components/parameters/corridorHeight"
+          },
+          {
             "$ref": "#/components/parameters/time"
           },
           {
@@ -878,12 +884,7 @@
             "$ref": "#/components/parameters/interpolation"
           },
           {
-            "name": "interpolationWidth",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native coordinate \nresolution for the requested width of the corridor, the format is\n\ninterpolationWidth=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/interpolationWidth"
           },
           {
             "$ref": "#/components/parameters/interpolationZ"
@@ -1781,6 +1782,12 @@
             "schema": {
               "type": "string"
             }
+          },
+          {
+            "$ref": "#/components/parameters/corridorWidth"
+          },
+          {
+            "$ref": "#/components/parameters/corridorHeight"
           },
           {
             "$ref": "#/components/parameters/time"
@@ -3923,7 +3930,7 @@
         }
       },
       "outputFormat": {
-        "name": "outputFormat",
+        "name": "outputformat",
         "in": "query",
         "description": "Format to return query results in",
         "required": false,
@@ -3954,9 +3961,33 @@
         }
       },
       "interpolationZ": {
-        "name": "interpolationZ",
+        "name": "interpolationz",
         "in": "query",
-        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\n`interpolationZ=R{interpolation resolution}/{interpolation method}/{height}`\n\ne.g. interpolationZ=R5/linear/10\n\nThe interpolation resolution is the number of intervals the user \nrequires between the a min Z value of the specified in the query and \nthe maximum Z value specified in the query, the {height} value `MUST` \nequal the `max Z value - minimum Z value`.  \n\nIf the query type means that the coordinates consist of a single \nZ coordinate this `MUST` be treated as the centre point of the \nheight range to be interpolated where \n\nthe `minimum Z value = Z - {height}/2` and \nthe `maximum Z value = Z + {height} / 2`\n\nIf a the interpolation is for a specific height it would be  defined as:\n\ninterpolationZ=R1/cubic_spline/1\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\n`interpolationZ=R{interpolation resolution}/{interpolation method}`\n\ne.g. interpolationZ=R5/linear\n\nIf a the interpolation is for a specific height it would be  defined as:\n\ninterpolationZ=R1/cubic_spline/1\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "interpolationWidth": {
+        "name": "interpolationwidth",
+        "in": "query",
+        "description": "This is defined if the query doesn't require data at its native coordinate \nresolution for the requested width of the corridor, the format is\n\n`interpolationWidth=R{interpolation resolution}/{interpolation method}`\n\ne.g. interpolationWidth=R5/linear\n\n\nThe `interpolation resolution` is the number of intervals the user \nrequires in the specified corridor width\n\n\nThe `interpolation method` is the algorithm to use for interpolation. \nA list of the supported interpolation methods is provided in the \nAPI metadata responses.\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "corridorHeight": {
+        "name": "corridorz",
+        "in": "query",
+        "description": "height of the corridor and the units of the height value\n\nThe height value represents the whole height of the corridor where\nthe position supplied in the `coords` query parameter is the centre\npoint of the corridor\n\n`corridorz={height}/{units}`\n\ne.g.  corridorz=50/hPa\n\nThe height units supported by the collection will be provided in\nthe API metadata response.\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "corridorWidth": {
+        "name": "corridorwidth",
+        "in": "query",
+        "description": "width of the corridor and the units of the width value\n\nThe width value represents the whole width of the corridor where\nthe position supplied in the `coords` query parameter is the centre\npoint of the corridor\n\n`corridorwidth={width}/{units}`\n\ne.g.  corridorwidth=100/m\n\nThe height units supported by the collection will be provided in\nthe API metadata responses\n",
         "schema": {
           "type": "string"
         }

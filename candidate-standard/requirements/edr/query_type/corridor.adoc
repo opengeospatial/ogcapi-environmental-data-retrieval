@@ -46,9 +46,26 @@ From AMSTERDAM to LONDON (height in hPa)
 
 `coords=LINESTRINGZM(53.33 4.76 1000 1560507000,51.90 3.17 400 1560507600,51.8 2.24 400 1560508200,50.74 -3.48 0 1560508500,51.75 2.20 500 1560510240,51.69 1.41 800 1560510960,51.49 0.48 1000 1560511560)`
 
+
 <<<
 
-====== Parameter interpolationWidth
+====== Parameter corridorwidth
+
+include::../REQ_rc-corridorWidth-definition.adoc[]
+
+include::../REQ_rc-corridorWidth-response.adoc[]
+
+<<<
+
+====== Parameter corridorheight
+
+include::../REQ_rc-corridorHeight-definition.adoc[]
+
+include::../REQ_rc-corridorHeight-response.adoc[]
+
+<<<
+
+====== Parameter interpolationwidth
 
 include::../REQ_rc-interpolationWidth-definition.adoc[]
 
@@ -57,14 +74,14 @@ include::../REQ_rc-interpolationWidth-response.adoc[]
 If not specified the query will not interpolate the data along a corridor width and only return values for the defined `corridor` parameter values. 
 
 
-.An interpolationWidth
+.An interpolationwidth
 =================
 Return five values in a corridor 50km wide centred on the requested coordinates using linear interpolation
 
-`interpolationWidth=R5/linear/50`
+`interpolationwidth=R5/linear
 =================
 
-====== Parameter interpolationHeight
+====== Parameter interpolationz
 
 include::../REQ_rc-interpolationHeight-definition.adoc[]
 
@@ -73,11 +90,11 @@ include::../REQ_rc-interpllationHeight-response.adoc[]
 If not specified the query will not interpolate the data along the corridor height and only return values for the defined `corridor` parameter values. 
 
 
-.An interpolationHeight
+.An interpolationz
 =================
 return values at 50hPa intervals using a cubic_spline interpolation
 
-`interpolationHeight=R3/cubic_spline/150`
+`interpolationz=R3/cubic_spline`
 =================
 
 
@@ -102,11 +119,3 @@ Use the defined linear algorithm to return 10 values between each of the X,Y,T c
 <<<
 
 
-====== Parameter interpolationZ
-    
-include::../REQ_rc-interpolationZ-definition.adoc[]
-    
-include::../REQ_rc-interpolationZ-response.adoc[]
-    
-If not specified the query will not perform any interpolation of data along the height axis.  If the `interpolationZ` method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
-    

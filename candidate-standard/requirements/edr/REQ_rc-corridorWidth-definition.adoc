@@ -1,0 +1,17 @@
+[[req_edr_corridorWidth-definition]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* |*/req/edr/interpolationWidth-definition* 
+^|A |Each resource collection operation SHALL support a parameter `corridorwidth`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: corridorwidth
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

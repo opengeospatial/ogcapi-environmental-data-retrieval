@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationX-definition* 
-^|A |Each resource collection operation MAY support a parameter `interpolationX`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation MAY support a parameter `interpolationx`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: interpolationX
+name: interpolationx
 in: query
 required: false
 schema:

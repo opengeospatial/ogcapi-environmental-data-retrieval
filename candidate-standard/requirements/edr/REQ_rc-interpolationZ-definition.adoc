@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationZ-definition*
-^|A |Each resource collection operation MAY support a parameter `interpolationZ`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation MAY support a parameter `interpolationz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: interpolationZ
+name: interpolationz
 in: query
 required: false
 schema:

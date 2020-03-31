@@ -74,7 +74,7 @@ Use the defined nearest neighbour algorithm to get the best data match for the r
 
 <<<
     
-====== Parameter interpolationZ
+====== Parameter interpolationz
 
 If the collection supports interpolation of the data to a height not available in the underlying data and vertical interpolation is supported by the collection it will be defined as follows:
 
@@ -83,21 +83,15 @@ include::../REQ_rc-interpolationZ-definition.adoc[]
 include::../REQ_rc-interpolationZ-response.adoc[]
 
 
-.An interpolationZ
+.An interpolationz
 =================
-Interpolated to the requested vertical height  
+Interpolate to the requested vertical height  
 
-`interpolationZ=R1/cubic_spline/1`
-=================
+`interpolationz=R1/cubic_spline`
 
-. Interpolate 10 values for the the  location
-If the coordinates in the
-=================
-Return data values for 6 units below the specified height, at the specified height and 6 units above the specified height
+Interpolate 6 values between the min and max heights supplied in the query
 
-If a the interpolation is for a specific height it would be  defined as:
-
-interpolationZ=R3/cubic_spline/12
+`interpolationz=R6/cubic_spline`
 
 =================
 

@@ -2,12 +2,12 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationY-response*
-^|A|If the `interpolationY` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y intervals.
-^|B |The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number.
+^|A|If the `interpolationy` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y intervals.
+^|B |The interpolationy information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number.
 
 [source,java]
 ----
-interpolationY = "R"interval "/" interpolation-method
+interpolationy = "R"interval "/" interpolation-method
 ----
 ^|C|The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:
 ^|D|If not specified the query will use the default interpolation method for the chosen collection.
