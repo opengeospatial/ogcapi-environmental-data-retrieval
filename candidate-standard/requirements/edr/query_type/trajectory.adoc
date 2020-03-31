@@ -10,9 +10,22 @@ include::../REQ_rc-coords-response.adoc[]
 
 The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoc time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  
 
-If the collection instance has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned
+A 2D trajectory, on the surface of earth, at the same time: 
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)
 
-If the collection does not have a height dimension but time values are required in the WKT geometry the z value SHOULD always be 0.
+A 3D trajectory centre, on the surface of the earth but over a time range:
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)
+
+A 3D corrtrajectoryidor centre, through a 3D volume with height or depth, for the same time:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)
+
+A 4D trajectory, through a 3D trajectory centre but over a time range:
+coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)
+
+where Z is the height value.  
+`If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`
+
+and M is the time value defined as EPOC seconds since 1970
 
 
 
@@ -42,7 +55,7 @@ include::../REQ_rc-interpolation-response.adoc[]
 
 <<<
     
-====== Parameter interpolationZ
+====== Parameter interpolationz
     
 include::../REQ_rc-interpolationZ-definition.adoc[]
     

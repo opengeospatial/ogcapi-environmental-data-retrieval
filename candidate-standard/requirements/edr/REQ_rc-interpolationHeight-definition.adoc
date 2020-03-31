@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationHeight-definition*
-^|A |Each resource collection operation SHALL support a parameter `interpolationHeight`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation SHALL support a parameter `interpolationz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: interpolationHeight
+name: interpolationz
 in: query
 required: true
 schema:

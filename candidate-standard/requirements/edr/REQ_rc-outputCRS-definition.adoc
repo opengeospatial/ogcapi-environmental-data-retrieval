@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/outputCRS-definition*
-^|A |Each resource collection operation SHALL support a parameter `CRS` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation SHALL support a parameter `crs` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: CRS
+name: crs
 in: query
 required: false
 schema:

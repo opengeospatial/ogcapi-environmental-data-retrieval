@@ -2,14 +2,13 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationWidth-response*
-^|A|If the `interpolationWidth` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed intervals.
-^|B |The `interpolationWidth` information is an interpolation method an interval and the corridor width. 
+^|A|If the `interpolationwidth` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed samples.
+^|B |The `interpolationwidth` information is the interpolation method and the number of samples to return. 
 
 [source,java]
 ----
-interpolationWidth = "R"interval "/" interpolation-method "/" width of corridor
+interpolationWidth = "R"interval "/" interpolation-method
 ---- 
 ^|C |The coordinates of the `coords` parameter define the centre point of the corridor. 
-^|D |The  width parameter is the total width of the required corridor.
-^|E |If the interpolation method value e does not match one of the listed methods a 403 error message should be returned. 
+^|D |If the interpolation method value does not match one of the listed methods a 403 error message should be returned. 
 |===
