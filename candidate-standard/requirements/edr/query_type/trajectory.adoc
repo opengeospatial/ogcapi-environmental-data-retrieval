@@ -25,9 +25,8 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 where Z is the height value.  
 `If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`
 
-and M is the time value defined as EPOC seconds since 1970
-
-
+and M the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+https://en.wikipedia.org/wiki/Unix_time
 
 .A basic surface route 
 =================

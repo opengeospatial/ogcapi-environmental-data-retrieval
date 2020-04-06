@@ -690,9 +690,6 @@
             "$ref": "#/components/parameters/trajectoryCoords"
           },
           {
-            "$ref": "#/components/parameters/time"
-          },
-          {
             "$ref": "#/components/parameters/parametername"
           },
           {
@@ -786,9 +783,6 @@
           },
           {
             "$ref": "#/components/parameters/corridorHeight"
-          },
-          {
-            "$ref": "#/components/parameters/time"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -893,12 +887,70 @@
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen data collection",
             "content": {
-              "application/json": {
+              "application/geo+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoverageJSON"
+                  "$ref": "#/components/schemas/EDRfeatureCollectionGeoJSON"
+                },
+                "example": {
+                  "type": "FeatureCollection",
+                  "links": [
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.json",
+                      "rel": "self",
+                      "type": "application/geo+json",
+                      "title": "this document"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.html",
+                      "rel": "alternate",
+                      "type": "text/html",
+                      "title": "this document as HTML"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.json&offset=10&limit=2",
+                      "rel": "next",
+                      "type": "application/geo+json",
+                      "title": "next page"
+                    }
+                  ],
+                  "timeStamp": "2018-04-03T14:52:23Z",
+                  "numberMatched": 123,
+                  "numberReturned": 2,
+                  "features": [
+                    {
+                      "type": "Feature",
+                      "id": "123",
+                      "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                          "..."
+                        ]
+                      },
+                      "properties": {
+                        "function": "residential",
+                        "floors": "2",
+                        "lastUpdate": "2015-08-01T12:34:56Z"
+                      }
+                    },
+                    {
+                      "type": "Feature",
+                      "id": "132",
+                      "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                          "..."
+                        ]
+                      },
+                      "properties": {
+                        "function": "public use",
+                        "floors": "10",
+                        "lastUpdate": "2013-12-03T10:15:37Z"
+                      }
+                    }
+                  ]
                 }
               },
-              "application/x-netcdf": {},
+              "application/json": {},
               "text/xml": {}
             }
           },
@@ -982,12 +1034,56 @@
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen data collection",
             "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureGeoJSON"
+                },
+                "example": {
+                  "type": "Feature",
+                  "links": [
+                    {
+                      "href": "http://data.example.com/id/building/123",
+                      "rel": "canonical",
+                      "title": "canonical URI of the building"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items/123.json",
+                      "rel": "self",
+                      "type": "application/geo+json",
+                      "title": "this document"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items/123.html",
+                      "rel": "alternate",
+                      "type": "text/html",
+                      "title": "this document as HTML"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings",
+                      "rel": "collection",
+                      "type": "application/geo+json",
+                      "title": "the collection document"
+                    }
+                  ],
+                  "id": "123",
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                      "..."
+                    ]
+                  },
+                  "properties": {
+                    "function": "residential",
+                    "floors": "2",
+                    "lastUpdate": "2015-08-01T12:34:56Z"
+                  }
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CoverageJSON"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1105,7 +1201,7 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "$ref": "#/components/parameters/positionCoords"
+            "$ref": "#/components/parameters/pointCoords"
           },
           {
             "$ref": "#/components/parameters/time"
@@ -1515,9 +1611,6 @@
             "$ref": "#/components/parameters/trajectoryCoords"
           },
           {
-            "$ref": "#/components/parameters/time"
-          },
-          {
             "$ref": "#/components/parameters/parametername"
           },
           {
@@ -1614,9 +1707,6 @@
           },
           {
             "$ref": "#/components/parameters/corridorHeight"
-          },
-          {
-            "$ref": "#/components/parameters/time"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -1724,12 +1814,70 @@
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
             "content": {
-              "application/json": {
+              "application/geo+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoverageJSON"
+                  "$ref": "#/components/schemas/EDRfeatureCollectionGeoJSON"
+                },
+                "example": {
+                  "type": "FeatureCollection",
+                  "links": [
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.json",
+                      "rel": "self",
+                      "type": "application/geo+json",
+                      "title": "this document"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.html",
+                      "rel": "alternate",
+                      "type": "text/html",
+                      "title": "this document as HTML"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.json&offset=10&limit=2",
+                      "rel": "next",
+                      "type": "application/geo+json",
+                      "title": "next page"
+                    }
+                  ],
+                  "timeStamp": "2018-04-03T14:52:23Z",
+                  "numberMatched": 123,
+                  "numberReturned": 2,
+                  "features": [
+                    {
+                      "type": "Feature",
+                      "id": "123",
+                      "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                          "..."
+                        ]
+                      },
+                      "properties": {
+                        "function": "residential",
+                        "floors": "2",
+                        "lastUpdate": "2015-08-01T12:34:56Z"
+                      }
+                    },
+                    {
+                      "type": "Feature",
+                      "id": "132",
+                      "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                          "..."
+                        ]
+                      },
+                      "properties": {
+                        "function": "public use",
+                        "floors": "10",
+                        "lastUpdate": "2013-12-03T10:15:37Z"
+                      }
+                    }
+                  ]
                 }
               },
-              "application/x-netcdf": {},
+              "application/json": {},
               "text/xml": {}
             }
           },
@@ -1816,12 +1964,56 @@
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen data collection",
             "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureGeoJSON"
+                },
+                "example": {
+                  "type": "Feature",
+                  "links": [
+                    {
+                      "href": "http://data.example.com/id/building/123",
+                      "rel": "canonical",
+                      "title": "canonical URI of the building"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items/123.json",
+                      "rel": "self",
+                      "type": "application/geo+json",
+                      "title": "this document"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items/123.html",
+                      "rel": "alternate",
+                      "type": "text/html",
+                      "title": "this document as HTML"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings",
+                      "rel": "collection",
+                      "type": "application/geo+json",
+                      "title": "the collection document"
+                    }
+                  ],
+                  "id": "123",
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                      "..."
+                    ]
+                  },
+                  "properties": {
+                    "function": "residential",
+                    "floors": "2",
+                    "lastUpdate": "2015-08-01T12:34:56Z"
+                  }
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CoverageJSON"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1889,13 +2081,7 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "name": "locID",
-            "in": "path",
-            "required": true,
-            "description": "Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/locID"
           },
           {
             "$ref": "#/components/parameters/time"
@@ -1981,13 +2167,7 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "name": "locID",
-            "in": "path",
-            "required": true,
-            "description": "Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/locID"
           },
           {
             "$ref": "#/components/parameters/time"
@@ -3619,6 +3799,401 @@
             "example": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
           }
         }
+      },
+      "EDRfeatureCollectionGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "features"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "FeatureCollection"
+            ]
+          },
+          "features": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/featureGeoJSON"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
+            }
+          },
+          "timeStamp": {
+            "$ref": "#/components/schemas/timeStamp"
+          },
+          "numberMatched": {
+            "$ref": "#/components/schemas/numberMatched"
+          },
+          "numberReturned": {
+            "$ref": "#/components/schemas/numberReturned"
+          }
+        }
+      },
+      "featureGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "geometry",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Feature"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometryGeoJSON"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/EDRProperties"
+          },
+          "id": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
+            }
+          }
+        }
+      },
+      "geometryGeoJSON": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/pointGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/multipointGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/linestringGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/multilinestringGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/polygonGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/multipolygonGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/geometrycollectionGeoJSON"
+          }
+        ]
+      },
+      "geometrycollectionGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "geometries"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "GeometryCollection"
+            ]
+          },
+          "geometries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/geometryGeoJSON"
+            }
+          }
+        }
+      },
+      "landingPage": {
+        "type": "object",
+        "required": [
+          "links"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Buildings in Bonn"
+          },
+          "description": {
+            "type": "string",
+            "example": "Access to data about buildings in the city of Bonn via a Web API that conforms to the OGC API Features specification."
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
+            }
+          }
+        }
+      },
+      "linestringGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "LineString"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "multilinestringGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MultiLineString"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      },
+      "multipointGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MultiPoint"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "multipolygonGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MultiPolygon"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "minItems": 4,
+                "items": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "numberMatched": {
+        "description": "The number of features of the feature type that match the selection\nparameters like `bbox`.",
+        "type": "integer",
+        "minimum": 0,
+        "example": 127
+      },
+      "numberReturned": {
+        "description": "The number of features in the feature collection.\n\nA server may omit this information in a response, if the information\nabout the number of features is not known or difficult to compute.\n\nIf the value is provided, the value shall be identical to the number\nof items in the \"features\" array.",
+        "type": "integer",
+        "minimum": 0,
+        "example": 10
+      },
+      "pointGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Point"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          },
+          "properties": {
+            "$ref": "#/components/schemas/EDRProperties"
+          }
+        }
+      },
+      "polygonGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Polygon"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 4,
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      },
+      "timeStamp": {
+        "description": "This property indicates the time and date when the response was generated.",
+        "type": "string",
+        "format": "date-time",
+        "example": "2017-08-17T08:05:32Z"
+      },
+      "EDRProperties": {
+        "type": "object",
+        "title": "EDR GeoJSON Properties",
+        "description": "Properties to describe existing EDR features -- may be real-world or virtual sampling features.",
+        "default": {},
+        "example": [
+          {
+            "datetime": "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z",
+            "label": "Monitoring site name",
+            "parametername": [
+              "velocity",
+              "temperature"
+            ],
+            "uri": "https://feature_identifier"
+          }
+        ],
+        "required": [
+          "datetime",
+          "parametername",
+          "label",
+          "uri"
+        ],
+        "properties": {
+          "datetime": {
+            "type": "string",
+            "title": "Date/time Domain",
+            "description": "Either a date-time or a period string that adheres to RFC 3339. Indicates the time instant or period for whidh data are available from the EDR feature.",
+            "default": "",
+            "example": [
+              "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z"
+            ]
+          },
+          "parametername": {
+            "type": "array",
+            "title": "Available Parameters",
+            "description": "Unique IDs of available parameters, this is the value used for querying the data and corresponds to an ID in the parameter metadata of the collection.",
+            "default": [],
+            "items": {
+              "type": "string",
+              "title": "Parameter ID list",
+              "description": "Each entry should contain one parameter ID that can be used to query against the feature.",
+              "default": "",
+              "example": [
+                "velocity",
+                "temperature"
+              ]
+            }
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "A label such as a site name or other text to use on a link.",
+            "default": "",
+            "example": [
+              "Site A"
+            ]
+          },
+          "uri": {
+            "type": "string",
+            "title": "A URI identifying the feature.",
+            "description": "An identifier uri for the feature. May be a uri for a real-world sampling feature of a uri to retrieve the particular feature of the EDR service instance.",
+            "default": "",
+            "example": [
+              "https://feature_identifier"
+            ]
+          }
+        }
       }
     },
     "parameters": {
@@ -3850,7 +4425,7 @@
       "trajectoryCoords": {
         "name": "coords",
         "in": "query",
-        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\nA 2D trajectory, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D trajectory, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D trajectory, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D trajectory, through a 3D volume but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)",
+        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\nA 2D trajectory, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D trajectory, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D trajectory, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D trajectory, through a 3D volume but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)\n\nwhere `Z` is the height value.  \n`If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`\n\nand `M` the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See\nhttps://en.wikipedia.org/wiki/Unix_time",
         "required": true,
         "schema": {
           "type": "string"
@@ -3859,8 +4434,17 @@
       "corridorCoords": {
         "name": "coords",
         "in": "query",
-        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe centre of the corridor is defined using a Well Known Text string following \n\nA 2D corridor, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D corridor centre, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D corridor centre, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D corridor, through a 3D corridor centre but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)",
+        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe centre of the corridor is defined using a Well Known Text string following \n\nA 2D corridor, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D corridor centre, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D corridor centre, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D corridor, through a 3D corridor centre but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)\n\nwhere `Z` is the height value.  \n`If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`\n\nand `M` the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See\nhttps://en.wikipedia.org/wiki/Unix_time",
         "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "locID": {
+        "name": "locID",
+        "in": "path",
+        "required": true,
+        "description": "Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)",
         "schema": {
           "type": "string"
         }
