@@ -2,7 +2,7 @@ openapi: 3.0.2
 info:
   title: Environmental Data Retreival API's
   description: Example of Candidate Environmental Data Retreival API OpenAPI docs
-  version: 0.0.4
+  version: 0.0.5
 servers:
   - url: 'http://www.example.org/edr'
     description: ''
@@ -172,8 +172,6 @@ paths:
         - $ref: '#/components/parameters/pointCoords'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/parametername'        
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'
       responses:
@@ -282,9 +280,8 @@ paths:
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/crs'
-        - $ref: '#/components/parameters/interpolationX'
-        - $ref: '#/components/parameters/interpolationY'
-        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/resolutionX'
+        - $ref: '#/components/parameters/resolutionY'
         - $ref: '#/components/parameters/outputFormat'        
       responses:
         '200':
@@ -338,9 +335,9 @@ paths:
         - $ref: '#/components/parameters/maxZ'
         - $ref: '#/components/parameters/time'        
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolationX'            
-        - $ref: '#/components/parameters/interpolationY'            
-        - $ref: '#/components/parameters/interpolationZ'            
+        - $ref: '#/components/parameters/resolutionX'            
+        - $ref: '#/components/parameters/resolutionY'            
+        - $ref: '#/components/parameters/resolutionZ'            
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'            
       responses:
@@ -392,7 +389,7 @@ paths:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/trajectoryCoords'
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/resolution'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'            
       responses:
@@ -443,12 +440,12 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/corridorCoords'
+        - $ref: '#/components/parameters/parametername'            
         - $ref: '#/components/parameters/corridorWidth'
         - $ref: '#/components/parameters/corridorHeight'
-        - $ref: '#/components/parameters/parametername'            
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationWidth' 
-        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/resolution'
+        - $ref: '#/components/parameters/resolutionX'
+        - $ref: '#/components/parameters/resolutionZ'
         - $ref: '#/components/parameters/crs'            
         - $ref: '#/components/parameters/outputFormat'            
       responses:
@@ -703,8 +700,6 @@ paths:
         - $ref: '#/components/parameters/pointCoords'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
         - $ref: '#/components/parameters/crs'        
         - $ref: '#/components/parameters/outputFormat'
       responses:
@@ -814,9 +809,8 @@ paths:
         - $ref: '#/components/parameters/z'
         - $ref: '#/components/parameters/time'
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolationX'
-        - $ref: '#/components/parameters/interpolationY'
-        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/resolutionX'
+        - $ref: '#/components/parameters/resolutionY'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'
       responses:
@@ -872,9 +866,9 @@ paths:
         - $ref: '#/components/parameters/maxZ'
         - $ref: '#/components/parameters/time'        
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolationX'            
-        - $ref: '#/components/parameters/interpolationY'            
-        - $ref: '#/components/parameters/interpolationZ'            
+        - $ref: '#/components/parameters/resolutionX'            
+        - $ref: '#/components/parameters/resolutionY'            
+        - $ref: '#/components/parameters/resolutionZ'            
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'
       responses:
@@ -927,7 +921,7 @@ paths:
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/trajectoryCoords'
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolation'
+        - $ref: '#/components/parameters/resolution'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'        
       responses:
@@ -979,12 +973,12 @@ paths:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/corridorCoords'
-        - $ref: '#/components/parameters/corridorWidth'
-        - $ref: '#/components/parameters/corridorHeight'            
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/interpolationWidth'
-        - $ref: '#/components/parameters/interpolation'
-        - $ref: '#/components/parameters/interpolationZ'
+        - $ref: '#/components/parameters/corridorWidth'
+        - $ref: '#/components/parameters/corridorHeight'
+        - $ref: '#/components/parameters/resolution'
+        - $ref: '#/components/parameters/resolutionX'
+        - $ref: '#/components/parameters/resolutionZ'
         - $ref: '#/components/parameters/crs'        
         - $ref: '#/components/parameters/outputFormat'
       responses:
@@ -2312,93 +2306,6 @@ components:
         - lowerBound
         - upperBound
         - uomLabel
-    dataDetails:
-      type: object
-      properties:
-        '@context':
-          type: object
-          required:
-            - '@version'
-            - xsd
-            - dc
-            - dcam
-          properties:
-            '@version':
-              type: number
-              example:
-                - 1.1
-            xsd:
-              type: string
-              title: XSD schema location
-              default: 'http://www.w3.org/2001/XMLSchema#'
-              example: 'http://www.w3.org/2001/XMLSchema#'
-            dc:
-              type: string
-              title: Dublin Core Metadata terms
-              default: 'http://purl.org/dc/terms/'
-              example: 'http://purl.org/dc/terms/'
-            dcam:
-              type: string
-              title: Terms used in the description of Dublin Core Metatdata Items
-              default: 'http://purl.org/dc/dcam/'
-              example: 'http://purl.org/dc/dcam/'
-        'dc:accessRights':
-          type: object
-        'dc:source':
-          type: object
-          title: Detailed Information about the source dataset
-          required:
-            - 'dc:title'
-            - 'dc:identifier'
-          properties:
-            'dc:title':
-              type: string
-              example:
-                - datasource name
-            'dc:identifier':
-              type: string
-              example: 'https://www.link_to_datasource_details.org'
-        'dc:created':
-          type: string
-          title: Date that the source dataset was created
-          example: '2018-01-01T20:00:15Z'
-        'dc:publisher':
-          type: string
-          title: Contact details for the publisher of the collection
-          example: contact@publisher.org
-        'dcam:domainIncludes':
-          type: array
-          title: list of the names of the parameters available in the collection
-          items:
-            type: string
-            example: temperature
-    supportedQueryTypes:
-      type: array
-      title: list of the query types supported by the collection
-      items:
-        type: string
-        enum:
-          - wfs
-          - wms
-          - wcs
-          - cube
-          - point
-          - polygon
-          - trajectory
-          - corridor
-        example:
-          - wfs
-          - point
-          - polygon
-    crsObject:
-      type: object
-      properties:
-        name:
-          type: string
-          example: CRS84
-        wkt:
-          type: string
-          example: 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]'
     EDRfeatureCollectionGeoJSON:
       type: object
       required:
@@ -2675,7 +2582,15 @@ components:
             default: ''
             example:
               - https://feature_identifier
-          
+    crsObject:
+      type: object
+      properties:
+        name:
+          type: string
+          example: CRS84
+        wkt:
+          type: string
+          example: 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]'        
   parameters:
     bbox:
       name: bbox
@@ -2757,71 +2672,18 @@ components:
         type: array
         items:
           type: string
-    interpolation:
-      name: interpolation
+    resolution:
+      name: resolution
       in: query
       description: |
-        This defines the algorithm that identifies the best data match for the requested location
-          The valid interpolation method values are available in the results of the 
-          capabilities query methods of this API
-      schema:
-        type: string
-    interpolationZ:
-      name: interpolationz
-      in: query
-      description: |
-        This is defined if the query doesn't require data at its native Z coordinate 
-        resolution, the format is:
-
-        `interpolationz=R{interpolation resolution}/{interpolation method}`
+        Defined if the user requires data at a different resolution from the native resolution of the data along the requested path
         
-        e.g. interpolationZ=R5/linear
+        If this is a single value it denotes the number of intervals to retrieve data for along the path
+          
+          i.e. resolution=10 
+          
+          would retrieve 10 values along the path from the first coordinate value to the last coordinate value (i.e. a value at both the first and last coordinates and 8 values between).
 
-        If a the interpolation is for a specific height it would be  defined as:
-
-        interpolationz=R1/cubic_spline
-
-        The valid interpolation method values are available in the results of the 
-        capabilities query methods of this API
-      schema:
-        type: string
-    interpolationWidth:
-      name: interpolationwidth
-      in: query
-      description: |
-        This is defined if the query doesn't require data at its native coordinate 
-        resolution for the requested width of the corridor, the format is
-
-        `interpolationwidth=R{interpolation resolution}/{interpolation method}`
-
-        e.g. interpolationwidth=R5/linear
-
-
-        The `interpolation resolution` is the number of samples the user 
-        requires in the specified corridor width
-
-
-        The `interpolation method` is the algorithm to use for interpolation. 
-        A list of the supported interpolation methods is provided in the 
-        API metadata responses.
-      schema:
-        type: string
-    corridorHeight:
-      name: corridorz
-      in: query
-      description: |
-        height of the corridor and the units of the height value
-        
-        The height value represents the whole height of the corridor where
-        the position supplied in the `coords` query parameter is the centre
-        point of the corridor
-        
-        `corridorz={height}/{units}`
-
-        e.g.  corridorz=50/hPa
-        
-        The height units supported by the collection will be provided in
-        the API metadata response.
       schema:
         type: string
     corridorWidth:
@@ -2837,11 +2699,33 @@ components:
         `corridorwidth={width}/{units}`
 
         e.g.  corridorwidth=100/m
+
+        Would be a request for a corridor 100m wide with the coords parameter values being the centre point of the requested corridor, the request would be for data values 50m either side of the coordinates defined in the coords parameter. 
+        
+        The width units supported by the collection will be provided in
+        the API metadata responses 
+      schema:
+        type: string
+    corridorHeight:
+      name: corridorheight
+      in: query
+      description: |
+        height of the corridor and the units of the height value
+        
+        The height value represents the whole height of the corridor where
+        the position supplied in the `coords` query parameter is the centre
+        point of the corridor
+
+        `corridorheight={height}/{units}`
+
+        e.g.  corridorheight=100/m
+
+        Would be a request for a corridor 100m high with the coords parameter values being the centre point of the requested corridor, the request would be for data values 50m either side of the coordinates defined in the coords parameter. 
         
         The height units supported by the collection will be provided in
         the API metadata responses
       schema:
-        type: string
+        type: string        
     minZ:
       name: minz
       in: query
@@ -2876,45 +2760,49 @@ components:
         height above sea level in metres. 
       schema:
         type: string
-    interpolationX:
-      name: interpolationx
+    resolutionX:
+      name: resolutionx
       in: query
       description: |+
-        This is defined if the query doesn't require data at its native 
-        X coordinate resolution, the format is:
-
-        interpolationx=R{interpolation resolution
-        }/{interpolation method}
-
-        e.g. interpolationx=R15/linear
-
-        The interpolation resolution is the number of samples the user 
-        requires between the minimum X value of the bounding box and the 
-        maximum X value of the bounding box.
-
-        The valid interpolation method values are available in the results of 
-        the capabilities query methods of this API
+        Defined it the user requires data at a different resolution from the native resolution of the data along the x-axis
+        
+        If this is a single value it denotes the number of intervals to retrieve data for along the x-axis
+          
+          i.e. resolutionx=10 
+          
+          would retrieve 10 values along the y-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).
 
       schema:
         type: string
-    interpolationY:
-      name: interpolationy
+    resolutionY:
+      name: resolutiony
       in: query
       description: |
-        This is defined if the query doesn't require data at its native Y coordinate 
-        resolution, the format is:
+        Defined it the user requires data at a different resolution from the native resolution of the data along the y-axis
+        
+        If this is a single value it denotes the number of intervals to retrieve data for along the y-axis
+          
+          i.e. resolutiony=10 
+          
+          would retrieve 10 values along the y-axis from the minimum y coordinate to maximum y coordinate (i.e. a value at both the minimum y and maximum y coordinates and 8 values between).
 
-        interpolationy=R{interpolation resolution}/{interpolation method} 
-        e.g.
-        interpolationy=R5/linear
-
-        The interpolation resolution is the number of samples the user requires between
-        the minimum Y value of the bounding box and the maximum Y value of the bounding box.
-
-        The valid interpolation method values are available in the results of the 
-        capabilities query methods of this API
       schema:
         type: string
+    resolutionZ:
+      name: resolutionz
+      in: query
+      description: |+
+        Defined it the user requires data at a different resolution from the native resolution of the data along the z-axis
+        
+        If this is a single value it denotes the number of intervals to retrieve data for along the z-axis
+          
+          i.e. resolutionz=10 
+          
+          would retrieve 10 values along the z-axis from the minimum z coordinate to maximum z  coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).
+
+      schema:
+        type: string
+        
     pointCoords:
       name: coords
       in: query
@@ -3117,7 +3005,15 @@ components:
       required: true
       description: 'Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)'
       schema:
-        type: string    
+        type: string
+    crsName:
+      name: outputcrs
+      in: query
+      schema:
+        type: string
+        example: CRS84      
+
+        
 tags:
   - name: Capabilities
     description: Essential characteristics of the information available from the API.
