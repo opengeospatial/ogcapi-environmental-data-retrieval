@@ -326,6 +326,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -334,7 +345,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -346,7 +356,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -421,6 +430,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -429,7 +449,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -441,7 +460,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -519,6 +537,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -527,7 +556,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -539,7 +567,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -623,6 +650,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -631,7 +669,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -643,7 +680,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -712,6 +748,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -720,7 +767,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -732,7 +778,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -813,6 +858,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -821,7 +877,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -833,7 +888,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1226,6 +1280,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1234,7 +1299,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1246,7 +1310,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1324,6 +1387,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1332,7 +1406,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1344,7 +1417,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1425,6 +1497,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1433,7 +1516,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1445,7 +1527,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1532,6 +1613,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1540,7 +1632,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1552,7 +1643,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1624,6 +1714,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1632,7 +1733,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1644,7 +1744,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1728,6 +1827,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1736,7 +1846,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1748,7 +1857,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1877,7 +1985,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1889,7 +1996,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -2013,7 +2119,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -2025,7 +2130,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -2102,7 +2206,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -2114,7 +2217,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -4208,7 +4310,7 @@
       "resolutionX": {
         "name": "resolutionx",
         "in": "query",
-        "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the x-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the x-axis\n  \n  i.e. resolutionx=10 \n  \n  would retrieve 10 values along the y-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).\n\n",
+        "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the x-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the x-axis\n  \n  i.e. resolutionx=10 \n  \n  would retrieve 10 values along the x-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).\n\n",
         "schema": {
           "type": "string"
         }
@@ -4279,7 +4381,7 @@
       "z": {
         "name": "z",
         "in": "query",
-        "description": "Define the vertical level to return data from \ni.e. Z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nZ=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
+        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
         "schema": {
           "type": "string"
         }
@@ -4287,7 +4389,7 @@
       "cubeCoords": {
         "name": "coords",
         "in": "query",
-        "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be \nWGS84 longitude/latitude coordinates and heights will be assumed \nto be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate \nan error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
+        "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes x y coordinates are defined using **Rectangular Polygon** as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be \nWGS84 longitude/latitude coordinates and heights will be assumed \nto be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate \nan 400 error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
         "required": true,
         "schema": {
           "type": "string"

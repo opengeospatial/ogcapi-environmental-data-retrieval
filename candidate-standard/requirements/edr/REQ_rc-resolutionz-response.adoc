@@ -1,0 +1,14 @@
+[[req_edr_resolutionz-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* | */req/edr/resolutionz-response* 
+^|A | If the `resolutionz` parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum z coordinates  
+^|B | The total number of intervals includes the values for the minimum and maximum coordinates  
+^|C | A `resolutionz` value of 0 MUST return all available data at the native vertical resolution between the minimum and maximum coordinates  
+^|D | IF `resolutionz` is not specified data should be returned for just the locations specified in the requested coordinates (**ONLY IF** interpolation is supported by the API)  
+
+[source,java]
+----
+resolutionz = number of intervals
+----
+|===

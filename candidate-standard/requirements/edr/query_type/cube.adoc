@@ -33,88 +33,107 @@ include::../REQ_rc-coords-response.adoc[]
 
 =================
 
-
-
-====== Parameter interpolationx
-
-include::../REQ_rc-interpolationX-definition.adoc[]
-
 <<<
-
-include::../REQ_rc-interpolationX-response.adoc[]
-
-If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationx method does not match an entry in the defined list of valid interpolationx methods for the collection a 403 message SHOULD be returned.
-
-
-.An interpolationx
-=================
-Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value
-
-`interpolationx=R10/linear`
-=================
-
-====== Parameter interpolationy
-
-include::../REQ_rc-interpolationY-definition.adoc[]
-
-<<<
-    
-include::../REQ_rc-interpolationY-response.adoc[]
-
-If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationy method does not match an entry in the defined list of valid interpolationy methods for the collection a 403 message SHOULD be returned.
-
-
-.An interpolationy
-=================
-Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value 
-
-`interpolationy=R3/nearest-neighbour`
-=================
 
 ====== Parameter minz
 
-Define the height of the bottom of the cube 
-i.e. minz=level
+include::../REQ_rc-minz-definition.adoc[]
 
-The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+include::../REQ_rc-minz-response.adoc[]
 
 .A minz
 =================
-if bottom of cube is at the 950hPa pressure level
+denotes the minimum level to return data for 
 
-minz=950
+`minz=850`
+
+would retrieve data for the 850 level and for data above the 850 level, if a `maxz` is not specified a 400 error should be thrown
+
 =================
+
+<<<
 
 ====== Parameter maxz
 
-Define the height of the top of the cube 
-i.e. maxz=level
+include::../REQ_rc-maxz-definition.adoc[]
 
-The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
+include::../REQ_rc-maxz-response.adoc[]
 
 .A maxz
 =================
-if top of cube is at the 650hPa pressure level
+denotes the maximum level to return data for 
 
-minz=650
+`maxz=300`
+
+would retrieve data for the 300 level and for data below the 850 level, if a `minz` is not specified a 400 error should be thrown
+
 =================
-
-====== Parameter interpolationz
-
-include::../REQ_rc-interpolationZ-definition.adoc[]
 
 <<<
-    
-include::../REQ_rc-interpolationZ-response.adoc[]
 
-If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationz method does not match an entry in the defined list of valid interpolationz methods for the collection a 403 message SHOULD be returned.
+====== Parameter resolutionx
+
+include::../REQ_rc-resolutionx-definition.adoc[]
+
+include::../REQ_rc-resolutionx-response.adoc[]
+
+If not specified the query will not interpolate the data along the x-axis of the cube and only return values for the defined `coords` parameter values. 
 
 
-.An interpolationz
+.A resolutionx
 =================
-Use the defined cubic-spline algorithm to return 3 values between the minimum Z value and the maximum Z value 
+denotes the number of intervals to retrieve data for across the defined x-axis of the cube
 
-`interpolationz=R3/cubic-spline`
+`resolutionx=10`
+
+would retrieve 10 values along the width from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).
+
 =================
+
+<<<
+
+====== Parameter resolutiony
+
+include::../REQ_rc-resolutiony-definition.adoc[]
+
+include::../REQ_rc-resolutiony-response.adoc[]
+
+If not specified the query will not interpolate the data along the y-axis of the cube and only return values for the defined `coords` parameter values. 
+
+
+.A resolutiony
+=================
+denotes the number of intervals to retrieve data for across the defined y-axis of the cube
+
+`resolutiony=10`
+
+would retrieve 10 values along the width from the minimum y coordinate to maximum y coordinate (i.e. a value at both the minimum y and maximum y coordinates and 8 values between).
+
+=================
+
+<<<
+
+====== Parameter resolutionz
+
+include::../REQ_rc-resolutionz-definition.adoc[]
+
+include::../REQ_rc-resolutionz-response.adoc[]
+
+If not specified the query will not interpolate the data along the z-axis of the cube and only return values for the defined `coords` parameter values. 
+
+
+.A resolutionz
+=================
+denotes the number of intervals to retrieve data for the defined z-axis of the cube
+
+`resolutionz=10`
+
+would retrieve 10 values along the z-axis from the minimum z coordinate to maximum z coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).
+
+=================
+
+
+<<<
+
 
 

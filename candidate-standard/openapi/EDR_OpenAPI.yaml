@@ -187,13 +187,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -201,7 +207,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -241,13 +246,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -255,7 +266,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -296,13 +306,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -310,7 +326,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -353,13 +368,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -367,7 +388,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -405,13 +425,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -419,7 +445,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -440,7 +465,7 @@ paths:
       parameters:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/corridorCoords'
-        - $ref: '#/components/parameters/parametername'            
+        - $ref: '#/components/parameters/parametername'         
         - $ref: '#/components/parameters/corridorWidth'
         - $ref: '#/components/parameters/corridorHeight'
         - $ref: '#/components/parameters/resolution'
@@ -461,13 +486,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -475,7 +506,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -715,13 +745,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -729,7 +765,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -770,13 +805,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -784,7 +825,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -825,14 +865,21 @@ paths:
         '202':
           description: Data request still being processed
         '308':
-          description: Request will take a significant time to process
+          description: Request will take a significant time to 
+           process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -840,7 +887,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -884,13 +930,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -898,7 +950,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -937,13 +988,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -951,7 +1008,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -994,13 +1050,19 @@ paths:
           description: Data request still being processed
         '308':
           description: Request will take a significant time to process
+        '400':
+          description: Invalid request.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/xml: {}
         '404':
           description: Requested data not found.
           content:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -1008,7 +1070,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -1089,7 +1150,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -1097,7 +1157,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -1174,7 +1233,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -1182,7 +1240,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -1226,7 +1283,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         '413':
           description: Requested data volume to large to be handled by this service.
@@ -1234,7 +1290,6 @@ paths:
             application/json:
               schema:
                 $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
             text/xml: {}
         default:
           description: An error occured.
@@ -2770,7 +2825,7 @@ components:
           
           i.e. resolutionx=10 
           
-          would retrieve 10 values along the y-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).
+          would retrieve 10 values along the x-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).
 
       schema:
         type: string
@@ -2802,7 +2857,6 @@ components:
 
       schema:
         type: string
-        
     pointCoords:
       name: coords
       in: query
@@ -2900,11 +2954,11 @@ components:
       in: query
       description: |
         Define the vertical level to return data from 
-        i.e. Z=level
+        i.e. z=level
 
         for instance if the 850hPa pressure level is being queried
 
-        Z=850
+        z=850
 
         When not specified data from the lowest (i.e. nearest the surface) level of
         data in the collection.
@@ -2917,7 +2971,7 @@ components:
         Only data that has a geometry that intersects the area defined by the cube
         are selected. 
 
-        The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
+        The cubes x y coordinates are defined using **Rectangular Polygon** as Well Known Text
 
         coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
 
@@ -2932,7 +2986,7 @@ components:
         coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))
 
         `If the WKT does not define a Rectangle the service will generate 
-        an error message`
+        an 400 error message`
 
         see http://portal.opengeospatial.org/files/?artifact_id=25355 and 
         https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
