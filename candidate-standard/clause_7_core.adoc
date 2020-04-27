@@ -29,6 +29,7 @@ API-Common defines a set of common capabilities which are applicable to any OGC 
 
 The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API-Common already requires some common links. Those links are sufficient for this standard.
 
+[reftext='{table-caption} {counter:table-num}']
 .Dependencies
 [width="90%"]
 |====
@@ -72,6 +73,7 @@ The requirements for handling unsuccessful requests are provided in <<http-respo
 
 Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
 
+[reftext='{table-caption} {counter:table-num}']
 .Dependencies
 [width="90%"]
 |====
@@ -100,6 +102,7 @@ The requirements for handling unsuccessful requests are provided in <<http-respo
 
 To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API / server, the API has to declare the conformance classes it claims to have implemented.
 
+[reftext='{table-caption} {counter:table-num}']
 .Dependencies
 [width="90%"]
 |====
@@ -164,11 +167,12 @@ The EDR API standard has identified an initial set of common `queryTypes` to imp
 [width="90%",cols="2,4",options="header"]
 |===
 ^|**Query Type** ^|**API Standard**
+|Area | /area
 |Corridor | /corridor
 |Cube | /cube
 |Items | /items
-|Point | /point
-|Polygon | /polygon
+|Locations | /locations
+|Postion | /position
 |Trajectory | /trajectory
 |Instance | /instance
 |===

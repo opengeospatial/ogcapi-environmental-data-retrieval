@@ -10,7 +10,7 @@ Query Resources related to Spatial Resources can exposed using the path template
 
 The resources returned from each node in this template are described in <<query-resource-paths>>.
 
-[#information-resource-paths,reftext='{table-caption} {counter:table-num}']
+[#query-resource-paths,reftext='{table-caption} {counter:table-num}']
 .Information Resource Paths
 [width="90%",cols="2,4",options="header"]
 |===
