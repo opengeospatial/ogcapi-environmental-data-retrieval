@@ -9,7 +9,7 @@ It contains:
 - [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
 - [Standard document, as a work-in-progress draft](./standard_template/standard). 
 
-It will also contain the plan of work and links to other relevant documents such as minutes, actions and notes of meetings on the associated Wiki pages. 
+It will also contain the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki#meetings) of meetings on the associated Wiki pages. 
 
 ## Draft Spec
 
