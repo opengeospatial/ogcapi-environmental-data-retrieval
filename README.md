@@ -7,9 +7,9 @@ This is the GitHub repository of the [OGC Environmental Data Retrieval API Stand
 It contains:
   
 - [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
-- [Standard document, as a work-in-progress draft](./standard_template/standard).
+- [Standard document, as a work-in-progress draft](./standard_template/standard). 
 
-It will also contain the plan of work and links to other relevant documents such as minutes, actions and notes of meetings. 
+It will also contain the plan of work and links to other relevant documents such as minutes, actions and notes of meetings on the associated Wiki pages. 
 
 ## Draft Spec
 
