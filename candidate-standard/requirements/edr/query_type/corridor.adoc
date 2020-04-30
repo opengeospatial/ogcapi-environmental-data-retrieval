@@ -8,19 +8,26 @@ include::../REQ_rc-coords-response.adoc[]
 
 Only data that has a geometry that intersects the area defined by the linestring are selected. 
 
-The centre of the cooridor is defined using a Well Known Text string following 
+The centre of the corridor is defined using a Well Known Text string following 
 
-coords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)
+A 2D corridor, on the surface of earth, at the same time: 
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)
 
-which are values in the coordinate system defined by the crs query parameter 
-`if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates.`  
+A 3D corridor centre, on the surface of the earth but over a time range:
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)
 
-a corridor which involves changes in height would be defined as follows
+A 3D corridor centre, through a 3D volume with height or depth, for the same time:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)
 
-coords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)
+A 4D trajectory, through a 3D corridor centre but over a time range:
+coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)
 
-where z is the height value.  
+where Z is the height value.  
 `If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`
+
+and M the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+https://en.wikipedia.org/wiki/Unix_time
+
 
 For instance a linestring that roughly describes an route that follows a section
 of the M5 Motorway in WGS84 would look like 
@@ -38,11 +45,28 @@ coords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, 
 ==========================
 From AMSTERDAM to LONDON (height in hPa)
 
-`coords=LINESTRING(53.33 4.76 1000 1560507000,51.90 3.17 400 1560507600,51.8 2.24 400 1560508200,50.74 -3.48 0 1560508500,51.75 2.20 500 1560510240,51.69 1.41 800 1560510960,51.49 0.48 1000 1560511560)`
+`coords=LINESTRINGZM(53.33 4.76 1000 1560507000,51.90 3.17 400 1560507600,51.8 2.24 400 1560508200,50.74 -3.48 0 1560508500,51.75 2.20 500 1560510240,51.69 1.41 800 1560510960,51.49 0.48 1000 1560511560)`
+
 
 <<<
 
-====== Parameter interpolationWidth
+====== Parameter corridorwidth
+
+include::../REQ_rc-corridorWidth-definition.adoc[]
+
+include::../REQ_rc-corridorWidth-response.adoc[]
+
+<<<
+
+====== Parameter corridorheight
+
+include::../REQ_rc-corridorHeight-definition.adoc[]
+
+include::../REQ_rc-corridorHeight-response.adoc[]
+
+<<<
+
+====== Parameter interpolationwidth
 
 include::../REQ_rc-interpolationWidth-definition.adoc[]
 
@@ -51,14 +75,14 @@ include::../REQ_rc-interpolationWidth-response.adoc[]
 If not specified the query will not interpolate the data along a corridor width and only return values for the defined `corridor` parameter values. 
 
 
-.An interpolationWidth
+.An interpolationwidth
 =================
 Return five values in a corridor 50km wide centred on the requested coordinates using linear interpolation
 
-`interpolationWidth=R5/linear/50`
+`interpolationwidth=R5/linear
 =================
 
-====== Parameter interpolationHeight
+====== Parameter interpolationz
 
 include::../REQ_rc-interpolationHeight-definition.adoc[]
 
@@ -67,11 +91,11 @@ include::../REQ_rc-interpllationHeight-response.adoc[]
 If not specified the query will not interpolate the data along the corridor height and only return values for the defined `corridor` parameter values. 
 
 
-.An interpolationHeight
+.An interpolationz
 =================
 return values at 50hPa intervals using a cubic_spline interpolation
 
-`interpolationHeight=R3/cubic_spline/150`
+`interpolationz=R3/cubic_spline`
 =================
 
 
@@ -96,11 +120,3 @@ Use the defined linear algorithm to return 10 values between each of the X,Y,T c
 <<<
 
 
-====== Parameter interpolationZ
-    
-include::../REQ_rc-interpolationZ-definition.adoc[]
-    
-include::../REQ_rc-interpolationZ-response.adoc[]
-    
-If not specified the query will not perform any interpolation of data along the height axis.  If the `interpolationZ` method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
-    

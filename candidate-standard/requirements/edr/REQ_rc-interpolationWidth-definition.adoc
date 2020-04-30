@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationWidth-definition* 
-^|A |Each resource collection operation SHALL support a parameter `interpolationWidth`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation SHALL support a parameter `interpolationwidth`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: interpolationWidth
+name: interpolationwidth
 in: query
 required: true
 schema:

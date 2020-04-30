@@ -53,14 +53,14 @@ include::../REQ_rc-interpolationX-response.adoc[]
 If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.
 
 
-.An interpolationX
+.An interpolationx
 =================
 Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value
 
-`interpolationX=R10/linear`
+`interpolationx=R10/linear`
 =================
 
-==== Parameter interpolationY
+==== Parameter interpolationy
 
 include::../REQ_rc-interpolationY-definition.adoc[]
 
@@ -68,27 +68,27 @@ include::../REQ_rc-interpolationY-definition.adoc[]
     
 include::../REQ_rc-interpolationY-response.adoc[]
 
-If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
+If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationy methods for the collection a 403 message SHOULD be returned.
 
 
-.An interpolationY
+.An interpolationy
 =================
 Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value 
 
-`interpolationY=R3/nearest-neighbour`
+`interpolationy=R3/nearest-neighbour`
 =================
 
 ==== Parameter z
 
 Define the vertical level to return data from 
-i.e. Z=level
+i.e. z=level
 
 .A Z value
 ===========
 
 for instance if the 850hPa pressure level is being queried
 
-Z=850
+z=850
 ===========
 `When not specified the API MUST return data from the lowest (i.e. nearest the surface) level of data in the collection instance (if the instance has a height dimension).`
 

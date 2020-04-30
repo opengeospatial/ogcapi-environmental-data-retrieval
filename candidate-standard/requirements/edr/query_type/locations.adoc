@@ -1,0 +1,19 @@
+===== Parameters
+
+With the locations query a location is defined by a unique identifer, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash `gbsvn` or a WMO station id like `03772`, what3words like `bolt.lime.metro` or place name like `Devon`.  The metadata in returned by the API must supply a geospatial definition for the identifier.
+
+.locid
+=================
+return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id
+
+/collections/metar/locations/EGLL
+
+=================
+
+.subset by time and parameter
+=================
+The API can allow user to subset the required data by time and parameter and also supports requesting data format changes (if supported by the data provider)
+
+/collections/metar/locations/EGLL?time=2020-03-30T00:00Z/2020-03-T12:00Z&parametername=temperature
+=================
+

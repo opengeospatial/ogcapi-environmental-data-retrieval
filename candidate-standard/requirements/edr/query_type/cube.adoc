@@ -35,7 +35,7 @@ include::../REQ_rc-coords-response.adoc[]
 
 
 
-====== Parameter interpolationX
+====== Parameter interpolationx
 
 include::../REQ_rc-interpolationX-definition.adoc[]
 
@@ -43,17 +43,17 @@ include::../REQ_rc-interpolationX-definition.adoc[]
 
 include::../REQ_rc-interpolationX-response.adoc[]
 
-If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.
+If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationx method does not match an entry in the defined list of valid interpolationx methods for the collection a 403 message SHOULD be returned.
 
 
-.An interpolationX
+.An interpolationx
 =================
 Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value
 
-`interpolationX=R10/linear`
+`interpolationx=R10/linear`
 =================
 
-====== Parameter interpolationY
+====== Parameter interpolationy
 
 include::../REQ_rc-interpolationY-definition.adoc[]
 
@@ -61,45 +61,45 @@ include::../REQ_rc-interpolationY-definition.adoc[]
     
 include::../REQ_rc-interpolationY-response.adoc[]
 
-If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.
+If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationy method does not match an entry in the defined list of valid interpolationy methods for the collection a 403 message SHOULD be returned.
 
 
-.An interpolationY
+.An interpolationy
 =================
 Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value 
 
-`interpolationY=R3/nearest-neighbour`
+`interpolationy=R3/nearest-neighbour`
 =================
 
-====== Parameter minZ
+====== Parameter minz
 
 Define the height of the bottom of the cube 
-i.e. minZ=level
+i.e. minz=level
 
 The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
 
-.A minZ
+.A minz
 =================
 if bottom of cube is at the 950hPa pressure level
 
-minZ=950
+minz=950
 =================
 
-====== Parameter maxZ
+====== Parameter maxz
 
 Define the height of the top of the cube 
-i.e. maxZ=level
+i.e. maxz=level
 
 The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. 
 
-.A maxZ
+.A maxz
 =================
 if top of cube is at the 650hPa pressure level
 
-minZ=650
+minz=650
 =================
 
-====== Parameter interpolationZ
+====== Parameter interpolationz
 
 include::../REQ_rc-interpolationZ-definition.adoc[]
 
@@ -107,14 +107,14 @@ include::../REQ_rc-interpolationZ-definition.adoc[]
     
 include::../REQ_rc-interpolationZ-response.adoc[]
 
-If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationZ method does not match an entry in the defined list of valid interpolationZ methods for the collection a 403 message SHOULD be returned.
+If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationz method does not match an entry in the defined list of valid interpolationz methods for the collection a 403 message SHOULD be returned.
 
 
-.An interpolationZ
+.An interpolationz
 =================
 Use the defined cubic-spline algorithm to return 3 values between the minimum Z value and the maximum Z value 
 
-`interpolationZ=R3/cubic-spline`
+`interpolationz=R3/cubic-spline`
 =================
 
 

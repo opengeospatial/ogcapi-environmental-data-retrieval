@@ -19,42 +19,28 @@ Gregorian calendar).
 {
   "links": [
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=application%2Fjson",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=application%2Fjson",
       "rel": "self",
       "type": "application/json",
-      "title": "latest document as json"
+      "title": "latest position metadata document as json"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
-      "title": "latest document as yaml"
+      "title": "latest position metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
-      "title": "latest document as xml"
+      "title": "latest position metadata document as xml"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
-      "title": "latest document as html"
-    },
-    {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/point",
-      "rel": "self",
-      "type": "point",
-      "title": "Point query",
-      "self": "Point"
-    },
-    {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/polygon",
-      "rel": "self",
-      "type": "polygon",
-      "title": "Polygon query",
-      "self": "Polygon"
+      "title": "latest position metadata document as html"
     }
   ],
   "id": "gfs_time-height_above_ground-lat-lon-latest",
@@ -518,19 +504,13 @@ Gregorian calendar).
       "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
     }
   ],
-  "polygonQueryOptions": {
-    "interpolationX": [
-      "nearest_neighbour"
-    ],
-    "interpolationY": [
-      "nearest_neighbour"
-    ]
-  },
-  "pointQueryOptions": {
-    "interpolation": [
-      "nearest_neighbour"
-    ]
-  },
+  "interpolation": [
+    "nearest_neighbour",
+    "linear"
+  ],
+  "interpolationZ": [
+    "cubic_spline"
+  ],
   "outputFormat": [
     "CoverageJSON"
   ],

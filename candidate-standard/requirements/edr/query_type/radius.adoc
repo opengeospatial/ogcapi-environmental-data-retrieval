@@ -56,44 +56,16 @@ retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E,
 =================
 
 
-<<<
-    
-====== Parameter interpolation
+====== Parameter within
 
-include::../REQ_rc-interpolation-definition.adoc[]
+include::../REQ_rc-within-definition.adoc[]
 
-include::../REQ_rc-interpolation-response.adoc[]
+include::../REQ_rc-within-response.adoc[]
 
+====== Parameter withinunits
 
-.An interpolation
-=================
-Use the defined nearest neighbour algorithm to get the best data match for the requested locations 
+include::../REQ_rc-withinUnits-definition.adoc[]
 
-`interpolation=nearest-neighbour`
-=================
-
-<<<
-    
-====== Parameter interpolationz
-
-If the collection supports interpolation of the data to a height not available in the underlying data and vertical interpolation is supported by the collection it will be defined as follows:
-
-include::../REQ_rc-interpolationZ-definition.adoc[]
-
-include::../REQ_rc-interpolationZ-response.adoc[]
-
-
-.An interpolationz
-=================
-Interpolate to the requested vertical height  
-
-`interpolationz=R1/cubic_spline`
-
-Interpolate 6 values between the min and max heights supplied in the query
-
-`interpolationz=R6/cubic_spline`
-
-=================
-
+include::../REQ_rc-withinUnits-response.adoc[]
 
 

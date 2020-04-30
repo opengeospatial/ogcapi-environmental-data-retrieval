@@ -465,7 +465,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    19-086</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.3</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.4</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Implementation Specification</p></td>
@@ -617,22 +617,24 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_parameter_datetime">7.9.2. Parameter datetime</a></li>
 <li><a href="#_parameter_parametername">7.9.3. Parameter parametername</a></li>
 <li><a href="#_parameter_crs">7.9.4. Parameter crs</a></li>
-<li><a href="#_parameter_outputformat">7.9.5. Parameter outputFormat</a></li>
+<li><a href="#_parameter_outputformat">7.9.5. Parameter outputformat</a></li>
 </ul>
 </li>
 <li><a href="#query-resources">7.10. QueryType specific Operations</a>
 <ul class="sectlevel3">
-<li><a href="#_point">7.10.1. Point</a></li>
-<li><a href="#_polygon">7.10.2. Polygon</a></li>
-<li><a href="#_parameters_2">7.10.3. Parameters</a></li>
-<li><a href="#_parameter_coords_3">7.10.4. Parameter coords</a></li>
-<li><a href="#_parameter_interpolationx">7.10.5. Parameter interpolationX</a></li>
-<li><a href="#_parameter_interpolationy">7.10.6. Parameter interpolationY</a></li>
-<li><a href="#_parameter_z">7.10.7. Parameter z</a></li>
-<li><a href="#_cube">7.10.8. Cube</a></li>
-<li><a href="#_trajectory_corridor">7.10.9. Trajectory (corridor)</a></li>
-<li><a href="#_items">7.10.10. Items</a></li>
-<li><a href="#_instance">7.10.11. Instance</a></li>
+<li><a href="#_position">7.10.1. Position</a></li>
+<li><a href="#_radius">7.10.2. Radius</a></li>
+<li><a href="#_area">7.10.3. Area</a></li>
+<li><a href="#_parameters_3">7.10.4. Parameters</a></li>
+<li><a href="#_parameter_coords_4">7.10.5. Parameter coords</a></li>
+<li><a href="#_parameter_interpolationx">7.10.6. Parameter interpolationX</a></li>
+<li><a href="#_parameter_interpolationy">7.10.7. Parameter interpolationy</a></li>
+<li><a href="#_parameter_z">7.10.8. Parameter z</a></li>
+<li><a href="#_cube">7.10.9. Cube</a></li>
+<li><a href="#_trajectory_corridor">7.10.10. Trajectory (corridor)</a></li>
+<li><a href="#_items">7.10.11. Items</a></li>
+<li><a href="#_locations">7.10.12. Locations</a></li>
+<li><a href="#_instances">7.10.13. Instances</a></li>
 </ul>
 </li>
 <li><a href="#general-requirements">7.11. General Requirements</a>
@@ -706,9 +708,11 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#oas-examples">B.2. API Description Examples</a></li>
 <li><a href="#conformance-response-examples">B.3. Conformance Examples</a></li>
 <li><a href="#collections-metadata-examples">B.4. Collections Metadata Examples</a></li>
-<li><a href="#instance-metadata-examples">B.5. Collection Instance Metadata Examples</a></li>
-<li><a href="#query-metadata-examples">B.6. Collection Query Metadata Examples</a></li>
-<li><a href="#collection-information-examples">B.7. Collection Information Examples</a></li>
+<li><a href="#collection-metadata-examples">B.5. Collection Metadata Examples</a></li>
+<li><a href="#instance-metadata-examples">B.6. Instance Metadata Examples</a></li>
+<li><a href="#position-query-metadata-examples">B.7. Position Query Metadata Examples</a></li>
+<li><a href="#polygon-query-metadata-examples">B.8. Area Query Metadata Examples</a></li>
+<li><a href="#query-metadata-examples">B.9. Location Query Metadata Examples</a></li>
 </ul>
 </li>
 <li><a href="#_revision_history">Annex C: Revision History</a></li>
@@ -818,10 +822,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>Met Office</p>
+<p>UK Met Office</p>
 </li>
 <li>
-<p>others TBD</p>
+<p>US Geological Service</p>
+</li>
+<li>
+<p>Wuhan University</p>
+</li>
+<li>
+<p>US National Weather Service</p>
+</li>
+<li>
+<p>Meteorological Service of Canada</p>
+</li>
+<li>
+<p>Finnish Meteorological Institute</p>
+</li>
+<li>
+<p>ESRI</p>
+</li>
+<li>
+<p>NASA</p>
+</li>
+<li>
+<p>Météo-France</p>
 </li>
 </ul>
 </div>
@@ -970,28 +995,28 @@ Validate that this description is accurate.
 <p><a id="openapi"></a> Open API Initiative: <strong>OpenAPI Specification 3.0.3</strong>, <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md">https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md</a></p>
 </li>
 <li>
-<p><a id="rfc2616"></a> Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: <strong>IETF RFC 2616, HTTP/1.1</strong>, <a href="http://tools.ietf.org/rfc/rfc2616.txt">http://tools.ietf.org/rfc/rfc2616.txt</a></p>
+<p><a id="rfc2616"></a> Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: <strong>IETF RFC 2616, HTTP/1.1</strong>, <a href="https://tools.ietf.org/rfc/rfc2616.txt">https://tools.ietf.org/rfc/rfc2616.txt</a></p>
 </li>
 <li>
-<p><a id="rfc2818"></a> Rescorla, E.: <strong>IETF RFC 2818, HTTP Over TLS</strong>, <a href="http://tools.ietf.org/rfc/rfc2818.txt">http://tools.ietf.org/rfc/rfc2818.txt</a></p>
+<p><a id="rfc2818"></a> Rescorla, E.: <strong>IETF RFC 2818, HTTP Over TLS</strong>, <a href="https://tools.ietf.org/rfc/rfc2818.txt">https://tools.ietf.org/rfc/rfc2818.txt</a></p>
 </li>
 <li>
-<p><a id="rfc3339"></a> Klyne, G., Newman, C.: <strong>IETF RFC 3339, Date and Time on the Internet: Timestamps</strong>, <a href="http://tools.ietf.org/rfc/rfc3339.txt">http://tools.ietf.org/rfc/rfc3339.txt</a></p>
+<p><a id="rfc3339"></a> Klyne, G., Newman, C.: <strong>IETF RFC 3339, Date and Time on the Internet: Timestamps</strong>, <a href="https://tools.ietf.org/rfc/rfc3339.txt">https://tools.ietf.org/rfc/rfc3339.txt</a></p>
 </li>
 <li>
-<p><a id="rfc3896"></a> Berners-Lee, T., Fielding, R., Masinter, L: <strong>IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax</strong>, <a href="http://tools.ietf.org/rfc/rfc3896.txt">http://tools.ietf.org/rfc/rfc3896.txt</a></p>
+<p><a id="rfc3896"></a> Berners-Lee, T., Fielding, R., Masinter, L: <strong>IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax</strong>, <a href="https://tools.ietf.org/rfc/rfc3896.txt">https://tools.ietf.org/rfc/rfc3896.txt</a></p>
 </li>
 <li>
 <p><a id="rfc7946"></a> Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: <strong>IETF RFC 7946, The GeoJSON Format</strong>, <a href="https://tools.ietf.org/rfc/rfc7946.txt">https://tools.ietf.org/rfc/rfc7946.txt</a></p>
 </li>
 <li>
-<p><a id="rfc8288"></a> Nottingham, M.: <strong>IETF RFC 8288, Web Linking</strong>, <a href="http://tools.ietf.org/rfc/rfc8288.txt">http://tools.ietf.org/rfc/rfc8288.txt</a></p>
+<p><a id="rfc8288"></a> Nottingham, M.: <strong>IETF RFC 8288, Web Linking</strong>, <a href="https://tools.ietf.org/rfc/rfc8288.txt">https://tools.ietf.org/rfc/rfc8288.txt</a></p>
 </li>
 <li>
-<p><a id="html5"></a> W3C: <strong>HTML5, W3C Recommendation</strong>, <a href="http://www.w3.org/TR/html5/">http://www.w3.org/TR/html5/</a></p>
+<p><a id="html5"></a> W3C: <strong>HTML5, W3C Recommendation</strong>, <a href="https://www.w3.org/TR/html5/">https://www.w3.org/TR/html5/</a></p>
 </li>
 <li>
-<p><a id="schema_org"></a><strong>Schema.org</strong>: <a href="http://schema.org/docs/schemas.html">http://schema.org/docs/schemas.html</a></p>
+<p><a id="schema_org"></a><strong>Schema.org</strong>: <a href="https://schema.org/docs/schemas.html">https://schema.org/docs/schemas.html</a></p>
 </li>
 <li>
 <p><a id="covjson"></a> Blower, J., Riechert, M., Roberts, B.: <strong>Overview of the CoverageJSON format</strong>, <a href="https://www.w3.org/TR/covjson-overview/">https://www.w3.org/TR/covjson-overview/</a></p>
@@ -1000,10 +1025,10 @@ Validate that this description is accurate.
 <p><a id="rfc2413"></a> Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: <strong>IETF RFC 2413, Dublin Core Metadata for Resource Discovery</strong>, <a href="https://tools.ietf.org/rfc/rfc2413.txt">https://tools.ietf.org/rfc/rfc2413.txt</a></p>
 </li>
 <li>
-<p><a id="ogc06-103r4"></a> Herring, J.: <strong>Simple feature access - Part 1:Common architecture</strong>, <a href="http://portal.opengeospatial.org/files/?artifact_id=25355">http://portal.opengeospatial.org/files/?artifact_id=25355</a></p>
+<p><a id="ogc06-103r4"></a> Herring, J.: <strong>Simple Feature Access - Part 1: Common Architecture</strong>, <a href="http://portal.opengeospatial.org/files/?artifact_id=25355">http://portal.opengeospatial.org/files/?artifact_id=25355</a></p>
 </li>
 <li>
-<p><a id="ogc18-010r7"></a> Lott, R.: <strong>Well-known text representation of coordinate reference systems</strong>, <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
+<p><a id="ogc18-010r7"></a> Lott, R.: <strong>Well-Known Text representation of Coordinate Reference Systems</strong>, <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
 </li>
 </ul>
 </div>
@@ -1853,14 +1878,14 @@ properties:
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/point</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Point</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/position</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested point location</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/polygon</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Polygon</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested polygon area</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/area</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Area</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested area</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/cube</p></td>
@@ -1883,8 +1908,13 @@ properties:
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Items associated with the <code>{collectionId}</code> collection.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/instance</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/locations</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Locations</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Location identifers associated with the <code>{collectionId}</code> collection.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/instances</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instances</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">List the available instances of the collection</p></td>
 </tr>
 </tbody>
@@ -2169,11 +2199,11 @@ schema:
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation SHALL support a parameter <code>CRS</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation SHALL support a parameter <code>crs</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: CRS
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: crs
 in: query
 required: false
 schema:
@@ -2200,13 +2230,19 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>CRS</code> parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the <code>CRS</code> parameter is not specifed the data will be returned in its native projection.</p>
+<p>If the <code>crs</code> parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the <code>crs</code> parameter is not specifed the data will be returned in its native projection.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>CRS</code> parameter SHALL consist of an identifier selected from the enumerated list of valid values supplied in the collections metadata.</p>
+<p>The <code>crs</code> parameter SHALL consist of an identifier selected from the enumerated list of valid values supplied in the collections metadata.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>if an unsupported <code>crs</code> value is requested a <code>403</code> error message SHOULD be returned .</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2216,7 +2252,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameter_outputformat"><a class="anchor" href="#_parameter_outputformat"></a>7.9.5. Parameter outputFormat</h4>
+<h4 id="_parameter_outputformat"><a class="anchor" href="#_parameter_outputformat"></a>7.9.5. Parameter outputformat</h4>
 <table id="req_edr_outputFormat-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2232,11 +2268,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation SHALL support a parameter `outputFormat`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation SHALL support a parameter `outputformat`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: outputFormat
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: outputformat
 in: query
 required: false
 schema:
@@ -2263,13 +2299,19 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>outputFormat</code> parameter is provided, the returned information should be transformed to the defined data format.</p>
+<p>If the <code>outputformat</code> parameter is provided, the returned information should be transformed to the defined data format.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>outputFormat</code> parameter SHALL consist of an string value based on an enumerated list of available options provided in the collections metadata.</p>
+<p>The <code>outputformat</code> parameter SHALL consist of an string value based on an enumerated list of available options provided in the collections metadata.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If a unsupported <code>outputformat</code> value is requested a <code>403</code> error message should be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
@@ -2278,7 +2320,7 @@ explode: false</code></pre>
 <div class="title">Example 6. Return data as coverageJSON</div>
 <div class="content">
 <div class="paragraph">
-<p><code>outputFormat=coverageJSON</code></p>
+<p><code>outputformat=coverageJSON</code></p>
 </div>
 </div>
 </div>
@@ -2305,7 +2347,7 @@ The following include statements import files which in turn import files already
 </table>
 </div>
 <div class="sect3">
-<h4 id="_point"><a class="anchor" href="#_point"></a>7.10.1. Point</h4>
+<h4 id="_position"><a class="anchor" href="#_position"></a>7.10.1. Position</h4>
 <div class="sect4">
 <h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
 <div class="sect5">
@@ -2556,21 +2598,13 @@ explode: false</code></pre>
 </div>
 </div>
 <div style="page-break-after: always;"></div>
-<div class="exampleblock">
-<div class="title">Example 12. An interpolation</div>
-<div class="content">
-<div class="paragraph">
-<p>Use the defined nearest neighbour algorithm to get the best data match for the requested locations</p>
-</div>
-<div class="paragraph">
-<p><code>interpolation=nearest-neighbour</code></p>
-</div>
-</div>
-</div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a>Parameter within</h6>
-<table id="req_edr_within-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<h6 id="_parameter_interpolationz"><a class="anchor" href="#_parameter_interpolationz"></a>Parameter interpolationz</h6>
+<div class="paragraph">
+<p>If the collection supports interpolation of the data to a height not available in the underlying data and vertical interpolation is supported by the collection it will be defined as follows:</p>
+</div>
+<table id="req_edr_interpolationZ-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2579,23 +2613,17 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 16</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/edr/within-definition</strong></p>
+<p><strong>/req/edr/interpolationZ-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `within`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the instance metadata does not provide <code>withinUnits</code> values the API SHALL NOT support <code>within</code> queries:</p>
+<p>Each resource collection operation MAY support a parameter `interpolationz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: within
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationz
 in: query
 required: false
 schema:
@@ -2607,7 +2635,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_within-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="req_edr_interpolationZ-response" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2616,97 +2644,79 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 17</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/edr/within-response</strong></p>
+<p><strong>/req/edr/interpolationZ-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>within</code> parameter is provided, all selected information within the specified radius SHALL be part of the result set.</p>
+<p>If the <code>interpolationz</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If a <code>withinUnits</code> parameter is not provided, a 403 error WILL be returned.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect5">
-<h6 id="_parameter_withinunits"><a class="anchor" href="#_parameter_withinunits"></a>Parameter withinUnits</h6>
-<table id="req_edr_withinUnits-definition" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 18</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/edr/withinUnits-definition</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `withinUnits`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A withinUnits value MUST be one of the values defined in the instance metadata:</p>
+<p>The interpolationz information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: withinUnits
-in: query
-required: false
-schema:
-  type: string
-style: form
-explode: false</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationz = "R" intervals "/" intervalinterpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
-</tbody>
-</table>
-<table id="req_edr_withinUnits-response" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 19</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/edr/within-response</strong></p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The <code>withinUnits</code> parameter defines the distance units of the <code>within</code> query parameter value .</p>
+<p>If not specified the query will use the default interpolation method for the chosen collection.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the vertical coordinates only contain a single height value the R <code>intervals</code> MUST always be 1.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="exampleblock">
+<div class="title">Example 12. An interpolationz</div>
+<div class="content">
+<div class="paragraph">
+<p>Interpolate to the requested vertical height</p>
+</div>
+<div class="paragraph">
+<p><code>interpolationz=R1/cubic_spline</code></p>
+</div>
+<div class="paragraph">
+<p>Interpolate 6 values between the min and max heights supplied in the query</p>
+</div>
+<div class="paragraph">
+<p><code>interpolationz=R6/cubic_spline</code></p>
+</div>
+</div>
+</div>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_polygon"><a class="anchor" href="#_polygon"></a>7.10.2. Polygon</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>7.10.3. Parameters</h4>
-
-</div>
-<div class="sect3">
-<h4 id="_parameter_coords_3"><a class="anchor" href="#_parameter_coords_3"></a>7.10.4. Parameter coords</h4>
+<h4 id="_radius"><a class="anchor" href="#_radius"></a>7.10.2. Radius</h4>
+<div class="sect4">
+<h5 id="_parameters_2"><a class="anchor" href="#_parameters_2"></a>Parameters</h5>
+<div class="sect5">
+<h6 id="_parameter_coords_3"><a class="anchor" href="#_parameter_coords_3"></a>Parameter coords</h6>
 <table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2714,7 +2724,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 20</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 18</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -2751,7 +2761,303 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 21</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 19</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/coords-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Only those resources that have a spatial geometry that intersects the area defined by the <code>coords</code> parameter SHALL be part of the result set.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The coordinates SHALL consist of a Well Known Text (WKT) geometry string</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The coordinate reference system of the values SHALL be interpreted as WGS84 longitude/latitude</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>WKT: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]</pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>EPSG: http://www.opengis.net/def/crs/OGC/1.3/CRS84</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>unless a  different coordinate reference system is specified in a parameter <code>crs</code>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>location(s) to return data for, the coordinates are defined by a Well Known Text
+(wkt) string. to retrieve a single location :</p>
+</div>
+<div class="paragraph">
+<p>POINT(x y)</p>
+</div>
+<div class="paragraph">
+<p>A point at height <code>z</code>
+POINT(x y z)</p>
+</div>
+<div class="paragraph">
+<p>And for a list of locations</p>
+</div>
+<div class="paragraph">
+<p>MULTIPOINTx y),(x1 y1),(x2 y2),(x3 y3</p>
+</div>
+<div class="paragraph">
+<p>And for a list of locations at defined heights</p>
+</div>
+<div class="paragraph">
+<p>MULTIPOINTx y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3</p>
+</div>
+<div class="paragraph">
+<p>see <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a></p>
+</div>
+<div class="paragraph">
+<p>the coordinate values will depend on the CRS parameter, if this is not defined
+the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 13. Point</div>
+<div class="content">
+<div class="paragraph">
+<p>retrieve data for Greenwich, London</p>
+</div>
+<div class="paragraph">
+<p><code>coords=POINT(0 51.48)</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 14. Point for a specific height</div>
+<div class="content">
+<div class="paragraph">
+<p>retrieve data for Mount Everest</p>
+</div>
+<div class="paragraph">
+<p><code>coords=POINT(86.95 27.99 8848)</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 15. Multiple locations</div>
+<div class="content">
+<div class="paragraph">
+<p>retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W</p>
+</div>
+<div class="paragraph">
+<p><code>coords=MULTIPOINT38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 16. Multiple locations with specified heights</div>
+<div class="content">
+<div class="paragraph">
+<p>retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W</p>
+</div>
+<div class="paragraph">
+<p><code>coords=MULTIPOINT-77.02 38.94 72.3),(-3.50 50.72 36.35),(1.43 43.63 135.63),(117.23 39.13 10.04),(144.96 -37.80 33.83</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect5">
+<h6 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a>Parameter within</h6>
+<table id="req_edr_within-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 20</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/within-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation MAY support a parameter `within`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the instance metadata does not provide <code>withinUnits</code> values the API SHALL NOT support <code>within</code> queries:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: within
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="req_edr_within-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 21</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/within-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the <code>within</code> parameter is provided, all selected information within the specified radius SHALL be part of the result set.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If a <code>withinunits</code> parameter is not provided, a 403 error WILL be returned.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect5">
+<h6 id="_parameter_withinunits"><a class="anchor" href="#_parameter_withinunits"></a>Parameter withinunits</h6>
+<table id="req_edr_withinUnits-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 22</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/withinUnits-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation MAY support a parameter `withinunits`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>A withinunits value MUST be one of the values defined in the instance metadata:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: withinunits
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="req_edr_withinUnits-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 23</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/within-response</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>withinunits</code> parameter defines the distance units of the <code>within</code> query parameter value .</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_area"><a class="anchor" href="#_area"></a>7.10.3. Area</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_parameters_3"><a class="anchor" href="#_parameters_3"></a>7.10.4. Parameters</h4>
+
+</div>
+<div class="sect3">
+<h4 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a>7.10.5. Parameter coords</h4>
+<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 24</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/edr/coords-definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation SHALL support a parameter <code>coords</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: coords
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>coords</code> string value will be a Well Known Text of representation geometry as defined in <a href="http://www.opengeospatial.org/standards/sfa">Simple Feature Access - Part 1: Common Architecture</a>.  The representation type will depend on the queryType of the API</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 25</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -2833,7 +3139,7 @@ South West England in WGS84 would look like:</pre>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 13. A polygon covering the UK</div>
+<div class="title">Example 17. A polygon covering the UK</div>
 <div class="content">
 <div class="paragraph">
 <p>An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)</p>
@@ -2844,7 +3150,7 @@ South West England in WGS84 would look like:</pre>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 14. Multiple areas</div>
+<div class="title">Example 18. Multiple areas</div>
 <div class="content">
 <div class="paragraph">
 <p>Selecting data for two different regions</p>
@@ -2856,7 +3162,7 @@ South West England in WGS84 would look like:</pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameter_interpolationx"><a class="anchor" href="#_parameter_interpolationx"></a>7.10.5. Parameter interpolationX</h4>
+<h4 id="_parameter_interpolationx"><a class="anchor" href="#_parameter_interpolationx"></a>7.10.6. Parameter interpolationX</h4>
 <table id="req_edr_interpolationX-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2864,7 +3170,7 @@ South West England in WGS84 would look like:</pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 22</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 26</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-definition</strong></p>
 </div></div></td>
@@ -2872,11 +3178,11 @@ South West England in WGS84 would look like:</pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolationX`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter `interpolationx`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationX
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationx
 in: query
 required: false
 schema:
@@ -2896,7 +3202,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 23</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 27</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-response</strong></p>
 </div></div></td>
@@ -2904,13 +3210,13 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>interpolationX</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed x intervals.</p>
+<p>If the <code>interpolationx</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed x samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationX information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+<p>The interpolationx information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :</p>
 </div></div></td>
 </tr>
 <tr>
@@ -2922,11 +3228,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+<p>If the interpolation method value does not match one of the listed methods a 403 error message should be returned.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">interpolationX = "R"interval "/" interpolation-method</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationx = "R"interval "/" interpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -2936,19 +3242,19 @@ explode: false</code></pre>
 <p>If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 15. An interpolationX</div>
+<div class="title">Example 19. An interpolationx</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value</p>
 </div>
 <div class="paragraph">
-<p><code>interpolationX=R10/linear</code></p>
+<p><code>interpolationx=R10/linear</code></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameter_interpolationy"><a class="anchor" href="#_parameter_interpolationy"></a>7.10.6. Parameter interpolationY</h4>
+<h4 id="_parameter_interpolationy"><a class="anchor" href="#_parameter_interpolationy"></a>7.10.7. Parameter interpolationy</h4>
 <table id="req_edr_interpolationY-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2956,7 +3262,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 24</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 28</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-definition</strong></p>
 </div></div></td>
@@ -2964,11 +3270,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolationY`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter `interpolationy`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationY
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationy
 in: query
 required: false
 schema:
@@ -2988,7 +3294,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 25</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 29</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-response</strong></p>
 </div></div></td>
@@ -2996,24 +3302,24 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>interpolationY</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y intervals.</p>
+<p>If the <code>interpolationy</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number.</p>
+<p>The interpolationy information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">interpolationY = "R"interval "/" interpolation-method</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationy = "R"interval "/" interpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the metadata returned by the API:</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3025,40 +3331,40 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+<p>If the interpolation method value does not match one of the listed methods a 403 error message should be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.</p>
+<p>If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationy methods for the collection a 403 message SHOULD be returned.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 16. An interpolationY</div>
+<div class="title">Example 20. An interpolationy</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value</p>
 </div>
 <div class="paragraph">
-<p><code>interpolationY=R3/nearest-neighbour</code></p>
+<p><code>interpolationy=R3/nearest-neighbour</code></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_parameter_z"><a class="anchor" href="#_parameter_z"></a>7.10.7. Parameter z</h4>
+<h4 id="_parameter_z"><a class="anchor" href="#_parameter_z"></a>7.10.8. Parameter z</h4>
 <div class="paragraph">
 <p>Define the vertical level to return data from
-i.e. Z=level</p>
+i.e. z=level</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 17. A Z value</div>
+<div class="title">Example 21. A Z value</div>
 <div class="content">
 <div class="paragraph">
 <p>for instance if the 850hPa pressure level is being queried</p>
 </div>
 <div class="paragraph">
-<p>Z=850</p>
+<p>z=850</p>
 </div>
 </div>
 </div>
@@ -3068,11 +3374,11 @@ i.e. Z=level</p>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect3">
-<h4 id="_cube"><a class="anchor" href="#_cube"></a>7.10.8. Cube</h4>
+<h4 id="_cube"><a class="anchor" href="#_cube"></a>7.10.9. Cube</h4>
 <div class="sect4">
-<h5 id="_parameters_3"><a class="anchor" href="#_parameters_3"></a>Parameters</h5>
+<h5 id="_parameters_4"><a class="anchor" href="#_parameters_4"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a>Parameter coords</h6>
+<h6 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a>Parameter coords</h6>
 <table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3080,7 +3386,7 @@ i.e. Z=level</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 26</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 30</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -3117,7 +3423,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 27</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 31</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -3194,7 +3500,7 @@ South West England in WGS84 would look like</pre>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 18. A cube covering the South West of the UK</div>
+<div class="title">Example 22. A cube covering the South West of the UK</div>
 <div class="content">
 <div class="paragraph">
 <p><code>coords=POLYGON-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0</code></p>
@@ -3203,7 +3509,7 @@ South West England in WGS84 would look like</pre>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_interpolationx_2"><a class="anchor" href="#_parameter_interpolationx_2"></a>Parameter interpolationX</h6>
+<h6 id="_parameter_interpolationx_2"><a class="anchor" href="#_parameter_interpolationx_2"></a>Parameter interpolationx</h6>
 <table id="req_edr_interpolationX-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3211,7 +3517,7 @@ South West England in WGS84 would look like</pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 28</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 32</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-definition</strong></p>
 </div></div></td>
@@ -3219,11 +3525,11 @@ South West England in WGS84 would look like</pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolationX`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter `interpolationx`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationX
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationx
 in: query
 required: false
 schema:
@@ -3243,7 +3549,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 29</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 33</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationX-response</strong></p>
 </div></div></td>
@@ -3251,13 +3557,13 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>interpolationX</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed x intervals.</p>
+<p>If the <code>interpolationx</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed x samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationX information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+<p>The interpolationx information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3269,33 +3575,33 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+<p>If the interpolation method value does not match one of the listed methods a 403 error message should be returned.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">interpolationX = "R"interval "/" interpolation-method</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationx = "R"interval "/" interpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationX method does not match an entry in the defined list of valid interpolationX methods for the collection a 403 message SHOULD be returned.</p>
+<p>If not specified the query will not perform any interpolation of data along the X axis.  If the interpolationx method does not match an entry in the defined list of valid interpolationx methods for the collection a 403 message SHOULD be returned.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 19. An interpolationX</div>
+<div class="title">Example 23. An interpolationx</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined linear algorithm to return 10 values between the minimum X value and the maximum X value</p>
 </div>
 <div class="paragraph">
-<p><code>interpolationX=R10/linear</code></p>
+<p><code>interpolationx=R10/linear</code></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_interpolationy_2"><a class="anchor" href="#_parameter_interpolationy_2"></a>Parameter interpolationY</h6>
+<h6 id="_parameter_interpolationy_2"><a class="anchor" href="#_parameter_interpolationy_2"></a>Parameter interpolationy</h6>
 <table id="req_edr_interpolationY-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3303,7 +3609,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 30</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 34</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-definition</strong></p>
 </div></div></td>
@@ -3311,11 +3617,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolationY`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter `interpolationy`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationY
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationy
 in: query
 required: false
 schema:
@@ -3335,7 +3641,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 31</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 35</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationY-response</strong></p>
 </div></div></td>
@@ -3343,24 +3649,24 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>interpolationY</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y intervals.</p>
+<p>If the <code>interpolationy</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed y samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number.</p>
+<p>The interpolationy information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">interpolationY = "R"interval "/" interpolation-method</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationy = "R"interval "/" interpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the metadata returned by the API:</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3372,70 +3678,70 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
+<p>If the interpolation method value does not match one of the listed methods a 403 error message should be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationY method does not match an entry in the defined list of valid interpolationY methods for the collection a 403 message SHOULD be returned.</p>
+<p>If not specified the query will not perform any interpolation of data along the Y axis.  If the interpolationy method does not match an entry in the defined list of valid interpolationy methods for the collection a 403 message SHOULD be returned.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 20. An interpolationY</div>
+<div class="title">Example 24. An interpolationy</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined nearest-neighbour algorithm to return 3 values between the minimum Y value and the maximum Y value</p>
 </div>
 <div class="paragraph">
-<p><code>interpolationY=R3/nearest-neighbour</code></p>
+<p><code>interpolationy=R3/nearest-neighbour</code></p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_minz"><a class="anchor" href="#_parameter_minz"></a>Parameter minZ</h6>
+<h6 id="_parameter_minz"><a class="anchor" href="#_parameter_minz"></a>Parameter minz</h6>
 <div class="paragraph">
 <p>Define the height of the bottom of the cube
-i.e. minZ=level</p>
+i.e. minz=level</p>
 </div>
 <div class="paragraph">
 <p>The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 21. A minZ</div>
+<div class="title">Example 25. A minz</div>
 <div class="content">
 <div class="paragraph">
 <p>if bottom of cube is at the 950hPa pressure level</p>
 </div>
 <div class="paragraph">
-<p>minZ=950</p>
+<p>minz=950</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_maxz"><a class="anchor" href="#_parameter_maxz"></a>Parameter maxZ</h6>
+<h6 id="_parameter_maxz"><a class="anchor" href="#_parameter_maxz"></a>Parameter maxz</h6>
 <div class="paragraph">
 <p>Define the height of the top of the cube
-i.e. maxZ=level</p>
+i.e. maxz=level</p>
 </div>
 <div class="paragraph">
 <p>The units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 22. A maxZ</div>
+<div class="title">Example 26. A maxz</div>
 <div class="content">
 <div class="paragraph">
 <p>if top of cube is at the 650hPa pressure level</p>
 </div>
 <div class="paragraph">
-<p>minZ=650</p>
+<p>minz=650</p>
 </div>
 </div>
 </div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_interpolationz"><a class="anchor" href="#_parameter_interpolationz"></a>Parameter interpolationZ</h6>
+<h6 id="_parameter_interpolationz_2"><a class="anchor" href="#_parameter_interpolationz_2"></a>Parameter interpolationz</h6>
 <table id="req_edr_interpolationZ-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3443,7 +3749,7 @@ i.e. maxZ=level</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 32</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 36</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-definition</strong></p>
 </div></div></td>
@@ -3451,11 +3757,11 @@ i.e. maxZ=level</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolationZ`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter `interpolationz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationZ
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationz
 in: query
 required: false
 schema:
@@ -3475,7 +3781,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 33</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 37</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-response</strong></p>
 </div></div></td>
@@ -3483,24 +3789,24 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>interpolationZ</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z intervals.</p>
+<p>If the <code>interpolationz</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+<p>The interpolationz information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">interpolationZ = "R" intervals "/" intervalinterpolation-method</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationz = "R" intervals "/" intervalinterpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3512,22 +3818,28 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the vertical coordinates only contain a single height value the R <code>intervals</code> MUST always be 1.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationZ method does not match an entry in the defined list of valid interpolationZ methods for the collection a 403 message SHOULD be returned.</p>
+<p>If not specified the query will not perform any interpolation of data along the Z axis.  If the interpolationz method does not match an entry in the defined list of valid interpolationz methods for the collection a 403 message SHOULD be returned.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 23. An interpolationZ</div>
+<div class="title">Example 27. An interpolationz</div>
 <div class="content">
 <div class="paragraph">
 <p>Use the defined cubic-spline algorithm to return 3 values between the minimum Z value and the maximum Z value</p>
 </div>
 <div class="paragraph">
-<p><code>interpolationZ=R3/cubic-spline</code></p>
+<p><code>interpolationz=R3/cubic-spline</code></p>
 </div>
 </div>
 </div>
@@ -3536,11 +3848,11 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trajectory_corridor"><a class="anchor" href="#_trajectory_corridor"></a>7.10.9. Trajectory (corridor)</h4>
+<h4 id="_trajectory_corridor"><a class="anchor" href="#_trajectory_corridor"></a>7.10.10. Trajectory (corridor)</h4>
 <div class="sect4">
-<h5 id="_parameters_4"><a class="anchor" href="#_parameters_4"></a>Parameters</h5>
+<h5 id="_parameters_5"><a class="anchor" href="#_parameters_5"></a>Parameters</h5>
 <div class="sect5">
-<h6 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a>Parameter coords</h6>
+<h6 id="_parameter_coords_6"><a class="anchor" href="#_parameter_coords_6"></a>Parameter coords</h6>
 <table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3548,7 +3860,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 34</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-definition</strong></p>
 </div></div></td>
@@ -3585,7 +3897,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 35</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/coords-response</strong></p>
 </div></div></td>
@@ -3630,13 +3942,31 @@ explode: false</code></pre>
 <p>The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoc time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).</p>
 </div>
 <div class="paragraph">
-<p>If the collection instance has height (z) dimension and the Well Known Text query does does not include a height value a 403 error should be returned</p>
+<p>A 2D trajectory, on the surface of earth, at the same time:
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)</p>
 </div>
 <div class="paragraph">
-<p>If the collection does not have a height dimension but time values are required in the WKT geometry the z value SHOULD always be 0.</p>
+<p>A 3D trajectory centre, on the surface of the earth but over a time range:
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)</p>
+</div>
+<div class="paragraph">
+<p>A 3D corrtrajectoryidor centre, through a 3D volume with height or depth, for the same time:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)</p>
+</div>
+<div class="paragraph">
+<p>A 4D trajectory, through a 3D trajectory centre but over a time range:
+coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)</p>
+</div>
+<div class="paragraph">
+<p>where Z is the height value.
+<code>If the specified CRS does not define the height units the heights will units will default to metres above mean sea level</code></p>
+</div>
+<div class="paragraph">
+<p>and M the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+<a href="https://en.wikipedia.org/wiki/Unix_time" class="bare">https://en.wikipedia.org/wiki/Unix_time</a></p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 24. A basic surface route</div>
+<div class="title">Example 28. A basic surface route</div>
 <div class="content">
 <div class="paragraph">
 <p>From Bristol to Exeter</p>
@@ -3647,7 +3977,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 25. A basic surface route with defined time intervals</div>
+<div class="title">Example 29. A basic surface route with defined time intervals</div>
 <div class="content">
 <div class="paragraph">
 <p>From Bristol to Exeter</p>
@@ -3668,7 +3998,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 36</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-definition</strong></p>
 </div></div></td>
@@ -3699,7 +4029,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 37</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolation-response</strong></p>
 </div></div></td>
@@ -3738,7 +4068,7 @@ explode: false</code></pre>
 <div style="page-break-after: always;"></div>
 </div>
 <div class="sect5">
-<h6 id="_parameter_interpolationz_2"><a class="anchor" href="#_parameter_interpolationz_2"></a>Parameter interpolationZ</h6>
+<h6 id="_parameter_interpolationz_3"><a class="anchor" href="#_parameter_interpolationz_3"></a>Parameter interpolationz</h6>
 <table id="req_edr_interpolationZ-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3746,7 +4076,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 38</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 42</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-definition</strong></p>
 </div></div></td>
@@ -3754,11 +4084,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation MAY support a parameter `interpolationZ`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each resource collection operation MAY support a parameter `interpolationz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationZ
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: interpolationz
 in: query
 required: false
 schema:
@@ -3777,7 +4107,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 39</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/edr/interpolationZ-response</strong></p>
 </div></div></td>
@@ -3785,24 +4115,24 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>interpolationZ</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z intervals.</p>
+<p>If the <code>interpolationz</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z samples.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolationY information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the interval is a number :</p>
+<p>The interpolationz information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">interpolationZ = "R" intervals "/" intervalinterpolation-method</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">interpolationz = "R" intervals "/" intervalinterpolation-method</code></pre>
 </div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the istance metadata:</p>
+<p>The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:</p>
 </div></div></td>
 </tr>
 <tr>
@@ -3814,6 +4144,12 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the vertical coordinates only contain a single height value the R <code>intervals</code> MUST always be 1.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">F</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.</p>
 </div></div></td>
 </tr>
@@ -3824,9 +4160,9 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_items"><a class="anchor" href="#_items"></a>7.10.10. Items</h4>
+<h4 id="_items"><a class="anchor" href="#_items"></a>7.10.11. Items</h4>
 <div class="sect4">
-<h5 id="_parameters_5"><a class="anchor" href="#_parameters_5"></a>Parameters</h5>
+<h5 id="_parameters_6"><a class="anchor" href="#_parameters_6"></a>Parameters</h5>
 <div class="paragraph">
 <p>Due to the concept of <code>Collections</code> in EDR the item query is a powerful and flexible tool, but retains only simple options. It could be used to rerun a previously run query but with a replacement for one or more of the input parameters; this would be achieved by using the id field value from the successful output from a previous query as the input id query parameter of item query, then the API user could override one or more of the original query parameters by just entering the query parameters that they want to change (i.e. a trajectory query where the same route is used every day with the same interpolation options, crs and outputFormat and the user just needs to enter the new time range).</p>
 </div>
@@ -3834,7 +4170,7 @@ explode: false</code></pre>
 <p>Again this is dependant on the data publisher implementing support for the functionality.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 26. id</div>
+<div class="title">Example 30. id</div>
 <div class="content">
 <div class="paragraph">
 <p>return information for the requested id</p>
@@ -3867,12 +4203,44 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_instance"><a class="anchor" href="#_instance"></a>7.10.11. Instance</h4>
+<h4 id="_locations"><a class="anchor" href="#_locations"></a>7.10.12. Locations</h4>
+<div class="sect4">
+<h5 id="_parameters_7"><a class="anchor" href="#_parameters_7"></a>Parameters</h5>
+<div class="paragraph">
+<p>With the locations query a location is defined by a unique identifer, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata in returned by the API must supply a geospatial definition for the identifier.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 31. locid</div>
+<div class="content">
+<div class="paragraph">
+<p>return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id</p>
+</div>
+<div class="paragraph">
+<p>/collections/metar/locations/EGLL</p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 32. subset by time and parameter</div>
+<div class="content">
+<div class="paragraph">
+<p>The API can allow user to subset the required data by time and parameter and also supports requesting data format changes (if supported by the data provider)</p>
+</div>
+<div class="paragraph">
+<p>/collections/metar/locations/EGLL?time=2020-03-30T00:00Z/2020-03-T12:00Z&amp;parametername=temperature</p>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_instances"><a class="anchor" href="#_instances"></a>7.10.13. Instances</h4>
 <div class="paragraph">
 <p>It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
 </div>
 <div class="sect4">
-<h5 id="_parameters_6"><a class="anchor" href="#_parameters_6"></a>Parameters</h5>
+<h5 id="_parameters_8"><a class="anchor" href="#_parameters_8"></a>Parameters</h5>
 <div class="sect5">
 <h6 id="_parameter_instanceid"><a class="anchor" href="#_parameter_instanceid"></a>Parameter instanceId</h6>
 <div class="paragraph">
@@ -3970,7 +4338,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 40</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/core/http</strong></p>
 </div></div></td>
@@ -4213,7 +4581,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 41</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/collections/crs84</strong></p>
 </div></div></td>
@@ -4460,7 +4828,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 42</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/html/api-common</strong></p>
 </div></div></td>
@@ -4489,7 +4857,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 43</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 47</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/html/conformance</strong></p>
 </div></div></td>
@@ -4556,7 +4924,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 44</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 48</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/json/api-common</strong></p>
 </div></div></td>
@@ -4585,7 +4953,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 45</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 49</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/json/conformance</strong></p>
 </div></div></td>
@@ -4667,7 +5035,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 46</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 50</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>/req/oas30/oas-common</strong></p></td>
 </tr>
 <tr>
@@ -4690,7 +5058,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 47</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 51</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/conformance</strong></p>
 </div></div></td>
@@ -4719,7 +5087,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 48</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 52</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/completeness</strong></p>
 </div></div></td>
@@ -4754,7 +5122,7 @@ The following schema names are from API-Features and need to be updated.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 49</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 53</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/exceptions-codes</strong></p>
 </div></div></td>
@@ -4768,7 +5136,7 @@ The following schema names are from API-Features and need to be updated.
 </tbody>
 </table>
 <div class="exampleblock">
-<div class="title">Example 27. An exception response object definition</div>
+<div class="title">Example 33. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -4794,7 +5162,7 @@ content:
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 50</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 54</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/req/oas30/security</strong></p>
 </div></div></td>
@@ -6535,7 +6903,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>B.1. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 28. JSON Landing Page</div>
+<div class="title">Example 34. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -6574,7 +6942,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>B.3. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 29. Conformance Response</div>
+<div class="title">Example 35. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -6597,7 +6965,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>B.4. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 30. Collection metadata response document</div>
+<div class="title">Example 36. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6641,42 +7009,33 @@ Gregorian calendar).</p>
         "spatial": [ -180.0, -89.9, 180, 89.9 ],
         "temporal": [ "2020-01-30T12:00:00Z/2020-01-13T11:00:00Z" ]
       },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {
-
-          },
-          "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
-
-      },
+      "keywords": ["Temperature","Dewpoint temperature","Wind speed","Maximum wind gust speed","Wind direction","visibility","Pressure","Pressure reduced to mean sea level","Raw Observation", "id"]
       "links": [
         { "href": "http://data.example.org/collections/metars",
-          "rel": "metadata", "type": "application/json",
-          "title": "Instances of the Metar collection" },
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metar collection metadata" },
         { "href": "https://data.example.org/collection/metar/link-for-more-details",
-          "rel": "source", "type": "application/json",
+          "rel": "describedBy", "type": "source",
           "title": "Further information about the Metar data" },
         { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
+          "rel": "describedBy", "type": "publisher",
           "title": "Further information about the data publisher" },
-        { "href": "http://data.example.org/collections/metars/point",
-          "rel": "point", "type": "application/json",
+        { "href": "http://data.example.org/collections/metars/position",
+          "rel": "data", "type": "position",
           "title": "Point query for the Metar collection" },
-        { "href": "http://data.example.org/collections/metars/polygon",
-          "rel": "polygon", "type": "application/json",
+        { "href": "http://data.example.org/collections/metars/area",
+          "rel": "data", "type": "area",
           "title": "Polygon query for the Metar collection" },
         { "href": "http://data.example.org/collections/metars?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Instances of the Metar collection" }
-        { "href": "ttps://data.example.org/collection/metar/licence-doc",
-          "rel": "licence", "type": "text/html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the Metar collection" }
+        { "href": "https://data.example.org/collection/metar/licence-doc",
+          "rel": "describedBy", "type": "licence",
           "title": "Licence for the Metar collection" }
+        { "href": "https://data.example.org/collection/metar/rights-doc",
+          "rel": "describedBy", "type": "rights",
+          "title": "Usage terms for the Metar collection" }
+
       ]
     },
     {
@@ -6688,34 +7047,23 @@ Gregorian calendar).</p>
         "temporal": [ "2020-02-01T00:00:00Z/2020-02-12T00:00:00Z" ],
         "vertical": ["2.0","10.0","80.0"]
       },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
-
-      },
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"}
+      "keywords":["Maximum_temperature_height_above_ground_Mixed_intervals_Maximum","Minimum_temperature_height_above_ground_Mixed_intervals_Minimum"],
       "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon",
-          "rel": "instances", "type": "application/json",
-          "title": "Instances of the gfs_time-height_above_ground-lat-lon collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Instances of the gfs_time-height_above_ground-lat-lon collection" },
         { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
+          "rel": "describedBy", "type": "licence",
           "title": "Licence for the gfs_time-height_above_ground-lat-lon collection" }
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/link-for-more-details",
+          "rel": "describedBy", "type": "source",
+          "title": "Further information about the gfs data" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
+          "rel": "describedBy", "type": "publisher",
+          "title": "Further information about the data publisher" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances",
+          "rel": "data", "type": "application/json",
+          "title": "List of instances of the GFS collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/rights-doc",
+          "rel": "describedBy", "type": "rights",
+          "title": "Usage terms for the GFS collection" }
       ]
     },
     {
@@ -6725,34 +7073,34 @@ Gregorian calendar).</p>
       "extent": {
         "spatial": [ -180.0, -89.9, 180, 89.9 ]
       },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/dem/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["height"]
-
-      },
-      "supportedQueryTypes": {"point","polygon","trajectory"}
+      "keywords":["Height above Mean Sea Level"]
       "links": [
         { "href": "http://data.example.org/collections/dem",
-          "rel": "instances", "type": "application/json",
-          "title": "Instances of the dem collection" },
-        { "href": "http://data.example.org/collections/dem?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Instances of the dem collection" },
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata fore the dem collection" },
         { "href": "https://data.example.org/collection/dem/licence-doc",
-          "rel": "licence", "type": "text/html",
+          "rel": "describedBy", "type": "licence",
           "title": "Licence for the dem collection" }
+        { "href": "http://data.example.org/collections/dem/link-for-more-details",
+          "rel": "describedBy", "type": "source",
+          "title": "Further information about the dem data" },
+        { "href": "http://data.example.org/collections/dem/link-for-publisher-details",
+          "rel": "describedBy", "type": "publisher",
+          "title": "Further information about the data publisher" },
+        { "href": "http://data.example.org/collections/dem/position",
+          "rel": "data", "type": "position",
+          "title": "Position query on the DEM collection" },
+        { "href": "http://data.example.org/collections/dem/area",
+          "rel": "data", "type": "area",
+          "title": "Area query on the DEM collection" },
+        { "href": "http://data.example.org/collections/dem/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query on the DEM collection" },
+        { "href": "http://data.example.org/collections/dem/rights-doc",
+          "rel": "describedBy", "type": "rights",
+          "title": "Usage terms for the DEM collection" }
+
+
       ]
     }
 
@@ -6764,180 +7112,9 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>B.5. Collection Instance Metadata Examples</h3>
+<h3 id="collection-metadata-examples"><a class="anchor" href="#collection-metadata-examples"></a>B.5. Collection Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 31. Collection instance metadata response document</div>
-<div class="content">
-<div class="paragraph">
-<p>This collection metadata example response in JSON lists the available instances for the gfs_time-height_above_ground-lat-lon gfs collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
-</div>
-<div class="paragraph">
-<p>There is a link to the feature collections response itself (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "self").</p>
-</div>
-<div class="paragraph">
-<p>Representations of this resource in other formats are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "alternate".</p>
-</div>
-<div class="paragraph">
-<p>An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".</p>
-</div>
-<div class="paragraph">
-<p>A bulk download of all the features in the dataset is referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "enclosure"</p>
-</div>
-<div class="paragraph">
-<p>Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").</p>
-</div>
-<div class="paragraph">
-<p>Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
-Gregorian calendar).</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "links": [
-    { "href": "http://data.example.org/collections.json",
-      "rel": "self", "type": "application/json", "title": "this document" },
-    { "href": "http://data.example.org/collections.html",
-      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
-    { "href": "http://schemas.example.org/1.0/foobar.xsd",
-      "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
-  ],
-  "instances": [
-    {
-      "id": "latest",
-      "title": "Latest",
-      "description": "GFS parameters based on heights above ground level from the latest model run",
-      "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
-        "vertical": ["2.0","10.0","80.0"]
-      },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
-
-      },
-      "itemType": "Grid",
-      "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest?outputFormat=html",
-          "rel": "metadata", "type": "text/html",
-          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details",
-          "rel": "source", "type": "application/json",
-          "title": "Further information about the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
-          "title": "Further information about the data publisher" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/point",
-          "rel": "point", "type": "application/json",
-          "title": "Point query for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/polygon",
-          "rel": "polygon", "type": "application/json",
-          "title": "Polygon query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/trajectory",
-          "rel": "trajectory", "type": "application/json",
-          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }
-      ]
-    },
-    {
-      "id": "2020-02-01T12:00:00Z",
-      "title": "2020-02-01T12:00:00Z",
-      "description": "GFS parameters based on heights above ground level from the 2020-02-01T12:00:00Z run",
-      "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
-        "vertical": ["2.0","10.0","80.0"]
-      },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
-
-      },
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"}
-      "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T12:00:00Z",
-          "rel": "Metadata", "type": "application/json",
-          "title": "Metadata for the 2020-02-01T12:00:00Z run" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T12:00:00Z?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for the 2020-02-01T12:00:00Z run" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for the 2020-02-01T12:00:00Z run" }
-      ]
-    },
-    {
-      "id": "2020-02-01T00:00:00Z",
-      "title": "2020-02-01T00:00:00Z",
-      "description": "GFS parameters based on heights above ground level from the 2020-02-01T00:00:00Z run",
-      "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-02-01T00:00:00Z/2020-02-11T12:00:00Z" ],
-        "vertical": ["2.0","10.0","80.0"]
-      },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
-
-      },
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"}
-      "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T00:00:00Z",
-          "rel": "instances", "type": "application/json",
-          "title": "Metadata for the 2020-02-01T00:00:00Z run" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T00:00:00Z?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for the 2020-02-01T00:00:00Z run" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for the 2020-02-01T00:00:00Z run" }
-      ]
-    }
-
-  ]
-}</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="exampleblock">
-<div class="title">Example 32. Collection instance metadata response document</div>
+<div class="title">Example 37. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the Metar collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6972,7 +7149,7 @@ Gregorian calendar).</p>
     { "href": "http://schemas.example.org/1.0/foobar.xsd",
       "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
   ],
-  "instances": [
+  "collections": [
     {
       "id": "raw",
       "title": "Raw",
@@ -6994,61 +7171,28 @@ Gregorian calendar).</p>
 
       },
       "links": [
-        { "href": "http://data.example.org/collections/metars/raw",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for Raw Metar data" },
-        { "href": "http://data.example.org/collections/metars/raw?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for Raw Metar data" },
+        { "href": "http://data.example.org/collections/metars",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for Metar data" },
+        { "href": "http://data.example.org/collections/metars?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for Metar data" },
         { "href": "https://data.example.org/collection/metar/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for Raw Metar data" },
+          "rel": "describedBy", "type": "metadata",
+          "title": "Licence for Metar data" },
         { "href": "https://data.example.org/collection/metar/link-for-more-details",
-          "rel": "source", "type": "application/json",
+          "rel": "describedBy", "type": "source",
           "title": "Further information about the Metar data" },
         { "href": "https://data.example.org/collection/metar/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
+          "rel": "describedBy", "type": "publisher",
           "title": "Further information about the data publisher" },
-        { "href": "http://data.example.org/collections/metars/point",
-          "rel": "point", "type": "application/json",
-          "title": "Point query for the Metar collection" }
-      ]
-    },
-    {
-      "id": "initial_qc",
-      "title": "Intial QC",
-      "description": "First pass of Quality Control processed Metar observations",
-      "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-01-30T12:00:00Z/2020-01-13T11:00:00Z" ]
-      },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
+        { "href": "http://data.example.org/collections/metars/position",
+          "rel": "data", "type": "position",
+          "title": "Position query for the Metar collection" }
+        { "href": "http://data.example.org/collections/metars/locations",
+          "rel": "describedBy", "type": "locations",
+          "title": "List location identifiers for the Metar collection" }
 
-          "dc:accessRights": {},
-          "dc:license": "https://data.example.org/collection/metar/licence-doc",
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/metar/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["temperature","wind_speed","wind_direction","maximum_wind_gust_speed","speci_visibility","pressure","pressure_msl","raw_observation","id"]
-
-      },
-      "itemType":"PointSeries",
-      "supportedQueryTypes": {"point"},
-      "links": [
-        { "href": "http://data.example.org/collections/metars/initial_qc",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for QC'd Metar data" },
-        { "href": "http://data.example.org/collections/metars/initial_qc?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for Qc'd Metar data" }
       ]
     }
   ]
@@ -7058,7 +7202,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 33. Collection metadata response document</div>
+<div class="title">Example 38. Collection metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances of the DEM collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7093,7 +7237,7 @@ Gregorian calendar).</p>
     { "href": "http://schemas.example.org/1.0/foobar.xsd",
       "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
   ],
-  "instances": [
+  "collections": [
     {
       "id": "data",
       "title": "data",
@@ -7101,40 +7245,24 @@ Gregorian calendar).</p>
       "extent": {
         "spatial": [ -180.0, -89.9, 180, 89.9 ]
       },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dcam:domainIncludes": ["height"]
-
-      },
-      "itemType": "Grid",
       "links": [
-        { "href": "http://data.example.org/collections/dem/data",
-          "rel": "metadata", "type": "application/json",
-          "title": "Metadata for the dem collection" },
         { "href": "https://data.example.org/collection/dem/link-for-more-details",
-          "rel": "source", "type": "application/json",
+          "rel": "describedBy", "type": "source",
           "title": "Further information about the DEM data" },
         { "href": "https://data.example.org/collection/dem/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
+          "rel": "describedBy", "type": "publisher",
           "title": "Further information about the data publisher" },
-        { "href": "http://data.example.org/collections/dem/point",
-          "rel": "point", "type": "application/json",
+        { "href": "http://data.example.org/collections/dem/position",
+          "rel": "data", "type": "position",
           "title": "Point query for the DEM collection" },
-        { "href": "http://data.example.org/collections/dem/polygon",
-          "rel": "polygon", "type": "application/json",
-          "title": "Polygon query for the DEM collection" },
-        { "href": "http://data.example.org/collections/dem/data?outputFormat=html",
-          "rel": "metadata", "type": "text/html",
+        { "href": "http://data.example.org/collections/dem/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the DEM collection" },
+        { "href": "http://data.example.org/collections/dem?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
           "title": "Metadata for the dem collection" },
         { "href": "https://data.example.org/collection/dem/licence-doc",
-          "rel": "licence", "type": "text/html",
+          "rel": "describedBy", "type": "licence",
           "title": "Licence for the dem collection" }
       ]
     }
@@ -7147,9 +7275,166 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="query-metadata-examples"><a class="anchor" href="#query-metadata-examples"></a>B.6. Collection Query Metadata Examples</h3>
+<h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>B.6. Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 34. Collection instance metadata response document</div>
+<div class="title">Example 39. Collection instance metadata response document</div>
+<div class="content">
+<div class="paragraph">
+<p>This collection metadata example response in JSON lists the available instances for the gfs_time-height_above_ground-lat-lon gfs collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
+</div>
+<div class="paragraph">
+<p>There is a link to the feature collections response itself (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "self").</p>
+</div>
+<div class="paragraph">
+<p>Representations of this resource in other formats are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "alternate".</p>
+</div>
+<div class="paragraph">
+<p>An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".</p>
+</div>
+<div class="paragraph">
+<p>A bulk download of all the features in the dataset is referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "enclosure"</p>
+</div>
+<div class="paragraph">
+<p>Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").</p>
+</div>
+<div class="paragraph">
+<p>Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
+Gregorian calendar).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "links": [
+    { "href": "http://data.example.org/collections.json",
+      "rel": "self", "type": "application/json", "title": "this document" },
+    { "href": "http://data.example.org/collections.html",
+      "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
+    { "href": "http://schemas.example.org/1.0/foobar.xsd",
+      "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" },
+    { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details",
+      "rel": "describedBy", "type": "source",
+      "title": "Further information about the gfs_time-height_above_ground-lat-lon collection" },
+    { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
+      "rel": "describedBy", "type": "publisher",
+      "title": "Further information about the data publisher" },
+    { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
+      "rel": "describedBy", "type": "licence",
+      "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }
+  ],
+  "instances": [
+    {
+      "id": "latest",
+      "title": "Latest",
+      "description": "GFS parameters based on heights above ground level from the latest model run",
+      "extent": {
+        "spatial": [ -180.0, -89.9, 180, 89.9 ],
+        "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
+        "vertical": ["2.0","10.0","80.0"]
+      },
+
+      "links": [
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest/position",
+          "rel": "data", "type": "position",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }
+      ]
+    },
+    {
+      "id": "2020-02-01T12:00:00Z",
+      "title": "2020-02-01T12:00:00Z",
+      "description": "GFS parameters based on heights above ground level from the 2020-02-01T12:00:00Z run",
+      "extent": {
+        "spatial": [ -180.0, -89.9, 180, 89.9 ],
+        "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
+        "vertical": ["2.0","10.0","80.0"]
+      },
+      "links": [
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z/position",
+          "rel": "data", "type": "position",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" }
+
+      ]
+    },
+    {
+      "id": "2020-02-01T00:00:00Z",
+      "title": "2020-02-01T00:00:00Z",
+      "description": "GFS parameters based on heights above ground level from the 2020-02-01T00:00:00Z run",
+      "extent": {
+        "spatial": [ -180.0, -89.9, 180, 89.9 ],
+        "temporal": [ "2020-02-01T00:00:00Z/2020-02-11T12:00:00Z" ],
+        "vertical": ["2.0","10.0","80.0"]
+      },
+      "dataDetails": {
+          "@context": {
+              "@version": 1.1,
+              "xsd": "http://www.w3.org/2001/XMLSchema#",
+              "dc": "http://purl.org/dc/terms/",
+              "dcam":"http://purl.org/dc/dcam/"
+          },
+
+          "dc:accessRights": {},
+          "dc:source": {
+              "dc:title":"datasource name",
+              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
+          },
+          "dc:publisher" : "contact@example.org",
+          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
+
+      },
+      "supportedQueryTypes": {"point","polygon","cube","trajectory"}
+      "links": [
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances2020-02-01T00:00:00Z?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z/position",
+          "rel": "data", "type": "position",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon 2020-02-01T00:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the gfs_time-height_above_ground-lat-lon 2020-02-01T00:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon 2020-02-01T00:00:00Z run instance of the collection" }
+      ]
+    }
+
+  ]
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="position-query-metadata-examples"><a class="anchor" href="#position-query-metadata-examples"></a>B.7. Position Query Metadata Examples</h3>
+<div class="exampleblock">
+<div class="title">Example 40. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the  latest instance of the fs_time-height_above_ground-lat-lon collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7178,42 +7463,28 @@ Gregorian calendar).</p>
 <pre>{
   "links": [
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=application%2Fjson",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=application%2Fjson",
       "rel": "self",
       "type": "application/json",
-      "title": "latest document as json"
+      "title": "latest position metadata document as json"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
-      "title": "latest document as yaml"
+      "title": "latest position metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
-      "title": "latest document as xml"
+      "title": "latest position metadata document as xml"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
-      "title": "latest document as html"
-    },
-    {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/point",
-      "rel": "self",
-      "type": "point",
-      "title": "Point query",
-      "self": "Point"
-    },
-    {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/polygon",
-      "rel": "self",
-      "type": "polygon",
-      "title": "Polygon query",
-      "self": "Polygon"
+      "title": "latest position metadata document as html"
     }
   ],
   "id": "gfs_time-height_above_ground-lat-lon-latest",
@@ -7677,19 +7948,13 @@ Gregorian calendar).</p>
       "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
     }
   ],
-  "polygonQueryOptions": {
-    "interpolationX": [
-      "nearest_neighbour"
-    ],
-    "interpolationY": [
-      "nearest_neighbour"
-    ]
-  },
-  "pointQueryOptions": {
-    "interpolation": [
-      "nearest_neighbour"
-    ]
-  },
+  "interpolation": [
+    "nearest_neighbour",
+    "linear"
+  ],
+  "interpolationZ": [
+    "cubic_spline"
+  ],
   "outputFormat": [
     "CoverageJSON"
   ],
@@ -7730,8 +7995,148 @@ Gregorian calendar).</p>
 </div>
 </div>
 </div>
+</div>
+<div class="sect2">
+<h3 id="polygon-query-metadata-examples"><a class="anchor" href="#polygon-query-metadata-examples"></a>B.8. Area Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 35. Collection instance metadata response document</div>
+<div class="title">Example 41. Collection instance metadata response document</div>
+<div class="content">
+<div class="paragraph">
+<p>This metadata example response in JSON is for a the data instance of the "DEM" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
+</div>
+<div class="paragraph">
+<p>There is a link to the feature collections response itself (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "self").</p>
+</div>
+<div class="paragraph">
+<p>Representations of this resource in other formats are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "alternate".</p>
+</div>
+<div class="paragraph">
+<p>An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".</p>
+</div>
+<div class="paragraph">
+<p>A bulk download of all the features in the dataset is referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "enclosure"</p>
+</div>
+<div class="paragraph">
+<p>Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").</p>
+</div>
+<div class="paragraph">
+<p>Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
+Gregorian calendar).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>{
+  "links": [
+    {
+      "href": "http://data.example.org/collections/dem/area?outputFormat=application%2Fjson",
+      "rel": "self",
+      "type": "application/json",
+      "title": "Area metadata document as json"
+    },
+    {
+      "href": "http://data.example.org/collections/dem/area?outputFormat=application%2Fx-yaml",
+      "rel": "alternate",
+      "type": "application/x-yaml",
+      "title": "Area metadata document as yaml"
+    },
+    {
+      "href": "http://data.example.org/collections/dem/area?outputFormat=text%2Fxml",
+      "rel": "alternate",
+      "type": "text/xml",
+      "title": "Area metadata document as xml"
+    },
+    {
+      "href": "http://data.example.org/collections/dem/area?outputFormat=text%2Fhtml",
+      "rel": "alternate",
+      "type": "text/html",
+      "title": "Area metadata document as html"
+    }
+  ],
+  "id": "dem_data",
+  "title": "DEM height values",
+  "description": "DEM height values",
+  "parameters": {
+    "height": {
+      "description": {
+        "en": "Height"
+      },
+      "unit": {
+        "label": {
+          "en": "m"
+        },
+        "symbol": {
+          "value": "m,
+          "type": "http://data.example.org/metadata/uom/UCUM/m"
+        }
+      },
+      "observedProperty": {
+        "id": "",
+        "label": {
+          "en": ""
+        }
+      },
+      "extent": {
+        "horizontal": {
+          "name": [
+            "longitude",
+            "latutude"
+          ],
+          "coordinates": [
+            "x",
+            "y"
+          ],
+          "geographic": "BBOX[-180.0,-89.9,180.0,89.9]"
+        }
+      }
+    }
+  },
+  "outputCRS": [
+    {
+      "id": "EPSG:4326",
+      "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+    }
+  ],
+  "interpolationX": [
+    "Bilinear",
+    "Bicubic"
+  ],
+  "interpolationY": [
+    "Bilinear",
+    "Bicubic"
+  ],
+  "outputFormat": [
+    "CoverageJSON"
+  ],
+  "instanceAxes": {
+    "x": {
+      "label": "Longitude",
+      "lowerBound": -180,
+      "upperBound": 180,
+      "uomLabel": "degrees"
+    },
+    "y": {
+      "label": "Latitude",
+      "lowerBound": -89.9,
+      "upperBound": 89.9,
+      "uomLabel": "degrees"
+    },
+    "attributes": {
+      "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]",
+      "proj4": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
+    }
+  },
+  "name": "dem",
+  "instance": "data"
+}</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="query-metadata-examples"><a class="anchor" href="#query-metadata-examples"></a>B.9. Location Query Metadata Examples</h3>
+<div class="exampleblock">
+<div class="title">Example 42. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the Raw instance of the "Metar" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7766,34 +8171,33 @@ Gregorian calendar).</p>
       "title": "raw document as json"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/metar/location?outputFormat=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
-      "title": "raw document as yaml"
+      "title": "Metar location metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/metar/location?outputFormat=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
-      "title": "raw document as xml"
+      "title": "Metar location metadata document as  xml"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/metar/location?outputFormat=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
-      "title": "raw document as html"
+      "title": "Metar location metadata document as html"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw/point",
+      "href": "http://data.example.org/collections/metar/position",
       "rel": "self",
-      "type": "point",
-      "title": "Point query",
-      "self": "Point"
+      "type": "application/json",
+      "title": "Metar location metadata document as JSON"
     }
   ],
-  "id": "metar_raw",
-  "title": "Raw Metar observations",
-  "description": "Last 36 Hours of Global Raw Metar observations",
+  "id": "metar",
+  "title": "Metar observations",
+  "description": "Last 36 Hours of Global Metar observations",
   "parameters": {
     "air_temperature": {
       "description": {
@@ -8611,26 +9015,21 @@ Gregorian calendar).</p>
       }
     }
   },
+  "location_ids":[
+    {"locID":"KIAD", "name": "WASH DC DULLES", "WKT":"POINT(-77.45 38.93 93)"},
+    {"locID":"EGLL", "name": "LONDON HEATHROW", "WKT":"POINT(-0.45 50.48 24)"},
+    {"locID":"LFPO", "name": "PARIS ORLY", "WKT":"POINT(2.38 28.58 96)"},
+    {"locID":"FACT", "name": "CAPETOWN DF MALA", "WKT":"POINT(18.06 -33.97 42)"},
+    {"locID":"VIDD", "name": "DELHI SAFDARJUNG", "WKT":"POINT(77.22 28.58 216)"},
+    {"locID":"ZBAA", "name": "BEIJING", "WKT":"POINT(116.58 40.07 30)"},
+    {"locID":"YSSY", "name": "SYDNEY INTL AIRP", "WKT":"POINT(150.17 -33.93 3)"}
+  ]
   "outputCRS": [
     {
       "id": "EPSG:4326",
       "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
     }
   ],
-  "polygonQueryOptions": {
-    "interpolationX": [
-      "nearest_neighbour"
-    ],
-    "interpolationY": [
-      "nearest_neighbour"
-    ]
-  },
-  "pointQueryOptions": {
-    "interpolation": [
-      "nearest_neighbour"
-    ],
-    "withinUits":["miles","km"]
-  },
   "outputFormat": [
     "CoverageJSON"
   ],
@@ -8652,174 +9051,11 @@ Gregorian calendar).</p>
       "proj4": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
     }
   },
-  "name": "metar",
-  "instance": "raw"
+  "name": "metar"
 }</pre>
 </div>
 </div>
 </div>
-</div>
-<div class="exampleblock">
-<div class="title">Example 36. Collection instance metadata response document</div>
-<div class="content">
-<div class="paragraph">
-<p>This metadata example response in JSON is for a the data instance of the "DEM" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
-</div>
-<div class="paragraph">
-<p>There is a link to the feature collections response itself (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "self").</p>
-</div>
-<div class="paragraph">
-<p>Representations of this resource in other formats are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "alternate".</p>
-</div>
-<div class="paragraph">
-<p>An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".</p>
-</div>
-<div class="paragraph">
-<p>A bulk download of all the features in the dataset is referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "enclosure"</p>
-</div>
-<div class="paragraph">
-<p>Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").</p>
-</div>
-<div class="paragraph">
-<p>Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
-Gregorian calendar).</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre>{
-  "links": [
-    {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=application%2Fjson",
-      "rel": "self",
-      "type": "application/json",
-      "title": "data document as json"
-    },
-    {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=application%2Fx-yaml",
-      "rel": "alternate",
-      "type": "application/x-yaml",
-      "title": "data document as yaml"
-    },
-    {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=text%2Fxml",
-      "rel": "alternate",
-      "type": "text/xml",
-      "title": "data document as xml"
-    },
-    {
-      "href": "http://data.example.org/collections/dem/data?outputFormat=text%2Fhtml",
-      "rel": "alternate",
-      "type": "text/html",
-      "title": "data document as html"
-    },
-    {
-      "href": "http://data.example.org/collections/dem/data/point",
-      "rel": "self",
-      "type": "point",
-      "title": "Point query",
-      "self": "Point"
-    }
-  ],
-  "id": "dem_data",
-  "title": "DEM height values",
-  "description": "DEM height values",
-  "parameters": {
-    "height": {
-      "description": {
-        "en": "Height"
-      },
-      "unit": {
-        "label": {
-          "en": "m"
-        },
-        "symbol": {
-          "value": "m,
-          "type": "http://data.example.org/metadata/uom/UCUM/m"
-        }
-      },
-      "observedProperty": {
-        "id": "",
-        "label": {
-          "en": ""
-        }
-      },
-      "extent": {
-        "horizontal": {
-          "name": [
-            "longitude",
-            "latutude"
-          ],
-          "coordinates": [
-            "x",
-            "y"
-          ],
-          "geographic": "BBOX[-180.0,-89.9,180.0,89.9]"
-        }
-      }
-    }
-  },
-  "outputCRS": [
-    {
-      "id": "EPSG:4326",
-      "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-    }
-  ],
-  "polygonQueryOptions": {
-    "interpolationX": [
-      "nearest_neighbour"
-    ],
-    "interpolationY": [
-      "nearest_neighbour"
-    ]
-  },
-  "pointQueryOptions": {
-    "interpolation": [
-      "nearest_neighbour"
-    ],
-    "withinUits":["miles","km"]
-  },
-  "outputFormat": [
-    "CoverageJSON"
-  ],
-  "instanceAxes": {
-    "x": {
-      "label": "Longitude",
-      "lowerBound": -180,
-      "upperBound": 180,
-      "uomLabel": "degrees"
-    },
-    "y": {
-      "label": "Latitude",
-      "lowerBound": -89.9,
-      "upperBound": 89.9,
-      "uomLabel": "degrees"
-    },
-    "attributes": {
-      "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]",
-      "proj4": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
-    }
-  },
-  "name": "dem",
-  "instance": "data"
-}</pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="collection-information-examples"><a class="anchor" href="#collection-information-examples"></a>B.7. Collection Information Examples</h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-include::examples/tbd.adoc[]
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -8884,7 +9120,7 @@ include::examples/tbd.adoc[]
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-03-17 22:27:45 -0400
+Last updated 2020-04-29 22:22:53 -0400
 </div>
 </div>
 </body>

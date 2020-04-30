@@ -25,34 +25,33 @@ Gregorian calendar).
       "title": "raw document as json"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/metar/location?outputFormat=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
-      "title": "raw document as yaml"
+      "title": "Metar location metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/metar/location?outputFormat=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
-      "title": "raw document as xml"
+      "title": "Metar location metadata document as  xml"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/metar/location?outputFormat=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
-      "title": "raw document as html"
+      "title": "Metar location metadata document as html"
     },
     {
-      "href": "http://data.example.org/collections/metar/raw/point",
+      "href": "http://data.example.org/collections/metar/position",
       "rel": "self",
-      "type": "point",
-      "title": "Point query",
-      "self": "Point"
+      "type": "application/json",
+      "title": "Metar location metadata document as JSON"
     }
   ],
-  "id": "metar_raw",
-  "title": "Raw Metar observations",
-  "description": "Last 36 Hours of Global Raw Metar observations",
+  "id": "metar",
+  "title": "Metar observations",
+  "description": "Last 36 Hours of Global Metar observations",
   "parameters": {
     "air_temperature": {
       "description": {
@@ -870,26 +869,21 @@ Gregorian calendar).
       }
     }
   },
+  "location_ids":[
+    {"locID":"KIAD", "name": "WASH DC DULLES", "WKT":"POINT(-77.45 38.93 93)"},
+    {"locID":"EGLL", "name": "LONDON HEATHROW", "WKT":"POINT(-0.45 50.48 24)"},
+    {"locID":"LFPO", "name": "PARIS ORLY", "WKT":"POINT(2.38 28.58 96)"},
+    {"locID":"FACT", "name": "CAPETOWN DF MALA", "WKT":"POINT(18.06 -33.97 42)"},
+    {"locID":"VIDD", "name": "DELHI SAFDARJUNG", "WKT":"POINT(77.22 28.58 216)"},
+    {"locID":"ZBAA", "name": "BEIJING", "WKT":"POINT(116.58 40.07 30)"},
+    {"locID":"YSSY", "name": "SYDNEY INTL AIRP", "WKT":"POINT(150.17 -33.93 3)"}
+  ]
   "outputCRS": [
     {
       "id": "EPSG:4326",
       "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
     }
   ],
-  "polygonQueryOptions": {
-    "interpolationX": [
-      "nearest_neighbour"
-    ],
-    "interpolationY": [
-      "nearest_neighbour"
-    ]
-  },
-  "pointQueryOptions": {
-    "interpolation": [
-      "nearest_neighbour"
-    ],
-    "withinUits":["miles","km"]
-  },
   "outputFormat": [
     "CoverageJSON"
   ],
@@ -911,8 +905,7 @@ Gregorian calendar).
       "proj4": "+proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs"
     }
   },
-  "name": "metar",
-  "instance": "raw"
+  "name": "metar"
 }
 ----
 =================
