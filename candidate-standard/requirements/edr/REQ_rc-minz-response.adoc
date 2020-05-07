@@ -1,0 +1,12 @@
+[[req_edr_minz-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* | */req/edr/minz-response* 
+^|A |Only resources with a vertical geometry that including and above the vertical information in the `minz` parameter SHALL be part of the result set.
+
+[source,java]
+----
+minz  = level
+
+----
+|===

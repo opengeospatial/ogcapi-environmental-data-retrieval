@@ -1,0 +1,12 @@
+[[req_edr_maxz-response]]
+[width="90%",cols="2,6a"]
+|===
+|*Requirement {counter:req-id}* | */req/edr/maxz-response* 
+^|A |Only resources with a vertical geometry that including and below the vertical information in the `maxz` parameter SHALL be part of the result set.
+
+[source,java]
+----
+maxz  = level
+
+----
+|===

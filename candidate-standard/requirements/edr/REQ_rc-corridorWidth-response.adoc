@@ -3,7 +3,7 @@
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationWidth-response*
 ^|A |The `corridorwidth` information is the total width of the required corridor. 
-^|B |The supported `corridorwidth` height units will be supplied by the query metatdata information. 
+^|B |The supported `corridorwidth` width units will be supplied by the query metatdata information. 
 
 [source,java]
 ----

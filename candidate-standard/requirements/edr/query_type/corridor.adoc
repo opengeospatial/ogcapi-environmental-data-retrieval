@@ -66,57 +66,69 @@ include::../REQ_rc-corridorHeight-response.adoc[]
 
 <<<
 
-====== Parameter interpolationwidth
+====== Parameter resolution
 
-include::../REQ_rc-interpolationWidth-definition.adoc[]
+include::../REQ_rc-resolution-definition.adoc[]
 
-include::../REQ_rc-interpolationWidth-response.adoc[]
+include::../REQ_rc-resolution-response.adoc[]
 
-If not specified the query will not interpolate the data along a corridor width and only return values for the defined `corridor` parameter values. 
+If not specified the query will not interpolate the data along a corridor path and only return values for the defined `coords` parameter values. 
 
 
-.An interpolationwidth
+.A resolution
 =================
-Return five values in a corridor 50km wide centred on the requested coordinates using linear interpolation
+denotes the number of intervals to retrieve data for across the defined width of the corridor
 
-`interpolationwidth=R5/linear
+`resolution=10`
+
+would retrieve 10 values along the path from the minimum coordinate to maximum coordinate (i.e. a value at both the minimum and maximum coordinates and 8 values between).
+
 =================
 
-====== Parameter interpolationz
+<<<
 
-include::../REQ_rc-interpolationHeight-definition.adoc[]
+====== Parameter resolutionx
 
-include::../REQ_rc-interpllationHeight-response.adoc[]
+include::../REQ_rc-resolutionx-definition.adoc[]
 
-If not specified the query will not interpolate the data along the corridor height and only return values for the defined `corridor` parameter values. 
+include::../REQ_rc-resolutionx-response.adoc[]
+
+If not specified the query will not interpolate the data along a corridor width and only return values for the defined `coords` parameter values. 
 
 
-.An interpolationz
+.A resolutionx
 =================
-return values at 50hPa intervals using a cubic_spline interpolation
+denotes the number of intervals to retrieve data for across the defined width of the corridor
 
-`interpolationz=R3/cubic_spline`
+`resolutionx=10`
+
+would retrieve 10 values along the width from the minimum width coordinate to maximum width coordinate (i.e. a value at both the minimum width and maximum width coordinates and 8 values between).
+
+=================
+
+<<<
+
+====== Parameter resolutionz
+
+include::../REQ_rc-resolutionz-definition.adoc[]
+
+include::../REQ_rc-resolutionz-response.adoc[]
+
+If not specified the query will not interpolate the data along a corridor height and only return values for the defined `coords` parameter values. 
+
+
+.A resolutionz
+=================
+denotes the number of intervals to retrieve data for the defined height of the corridor
+
+`resolutionz=10`
+
+would retrieve 10 values along the z-axis from the minimum height coordinate to maximum height coordinate (i.e. a value at both the minimum height and maximum height coordinates and 8 values between).
+
 =================
 
 
 <<<
 
-====== Parameter interpolation
-    
-include::../REQ_rc-interpolation-definition.adoc[]
-    
-include::../REQ_rc-interpolation-response.adoc[]
-    
-If not specified the query will not perform any interpolation between the data points definied in the `coords` query parameter.  If the `interpolation` method does not match an entry in the defined list of valid `interpolation` methods for the collection a 403 message SHOULD be returned.
-    
-    
-.An interpolation
-=================
-Use the defined linear algorithm to return 10 values between each of the X,Y,T coordinates specified in the `coords` query parameter value (this interpolation MUST ignore any Z coordinates).
-    
-`interpolation=R10/linear`
-=================
-
-<<<
 
 
