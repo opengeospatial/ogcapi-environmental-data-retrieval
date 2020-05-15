@@ -733,6 +733,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>An Environmental Data Retrevial (EDR) API provides a family of lightweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. These patterns are described in the <a href="#rc_core-section">Requirement Class Core</a> section.</p>
 </div>
 <div class="paragraph">
+<p>EDR API query patterns can be thought of as discrete sampling geometries, conceptually in-line with the feature of interest in the <a href="https://www.ogc.org/standards/sos">Sensor Observation Service (SOS)</a>. A typical EDR data resource is a multidimensional dataset that could be provided via a coverage API such as the <a href="http://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a>. In contrast to SOS and WCS, EDR implements the technical baseline of the OGC API family of standards and aims to provide a single set of use-centric query patterns. EDR query patterns range from location-centric real or virtual observation use cases to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query-pattern building blocks do not attempt to satisfy the full scope of either SOS or WCS, but rather, provide useful building blocks to allow composition of APIs that satisfy a wide range of environmental data use cases.</p>
+</div>
+<div class="paragraph">
 <p>The API-Common standard defines resources and access paths that are supported by all OGC APIs. These are listed in <a href="#common-paths">Table 1</a>.</p>
 </div>
 <table id="common-paths" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -785,7 +788,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tbody>
 </table>
 <div class="paragraph">
-<p>The resources identified in  <a href="#common-paths">Table 1</a> primarily support Discovery operations. Discovery operations allow clients the interrogate the API to determine its capabilities and retrieve information (metadata) about this distribution of the resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.</p>
+<p>The resources identified in  <a href="#common-paths">Table 1</a> primarily support Discovery operations. Discovery operations allow clients to interrogate the API to determine its capabilities and retrieve information (metadata) about this distribution of the resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.</p>
 </div>
 <div class="paragraph">
 <p>This standard extends the common Query operations for OGC APIs. Query operations allow resources or values extracted from those resources to be retrieved from the underlying data store. The information to be returned is based upon selection criteria (query string) provided by the client. This standard only defines simple query parameters which should be applicable to all resource types. Other OGC API standards may define additional query capabilities specific to their resource type.</p>
@@ -1287,7 +1290,7 @@ During the development phase, these components use a base URL of "https://github
 </ol>
 </div>
 <div class="paragraph">
-<p>The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required.</p>
+<p>The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required. The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the <a href="https://www.ogc.org/standards/common">OGC Web Services family of (XML-based) standards</a>. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.</p>
 </div>
 </div>
 <div class="sect2">
@@ -8962,7 +8965,7 @@ Gregorian calendar).</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-13 22:25:27 -0400
+Last updated 2020-05-14 22:25:37 -0400
 </div>
 </div>
 </body>
