@@ -2,6 +2,13 @@
 :appendix-caption: Annex
 == Examples (Informative)
 
+[[openapi-examples]]
+=== OpenAPI definition
+
+link:openapi/EDR_OpenAPI.yaml[OpenAPI YAML]
+link:openapi/EDR_OpenAPI.json[OpenAPI JSON]
+
+
 [[landing-page-examples]]
 === Example Landing Pages
 

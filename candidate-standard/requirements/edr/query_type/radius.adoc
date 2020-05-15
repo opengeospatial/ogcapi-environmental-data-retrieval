@@ -33,26 +33,11 @@ retrieve data for Greenwich, London
 `coords=POINT(0 51.48)`
 =================
 
-.Point for a specific height
-=================
-retrieve data for Mount Everest
-
-`coords=POINT(86.95 27.99 8848)`
-=================
-
-
 .Multiple locations
 =================
 retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
 
 `coords=MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
-=================
-
-.Multiple locations with specified heights
-=================
-retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
-
-`coords=MULTIPOINT((-77.02 38.94 72.3),(-3.50 50.72 36.35),(1.43 43.63 135.63),(117.23 39.13 10.04),(144.96 -37.80 33.83))`
 =================
 
 
@@ -67,5 +52,30 @@ include::../REQ_rc-within-response.adoc[]
 include::../REQ_rc-withinUnits-definition.adoc[]
 
 include::../REQ_rc-withinUnits-response.adoc[]
+
+==== Parameter z
+
+Define the vertical level to return data from 
+i.e. z=level
+
+if data at all available levels is required z can be defined as ALL
+i.e. z=ALL
+
+.A z value
+===========
+
+for instance if the 80m level is being queried
+
+z=80
+===========
+
+.Return data at all available vertical levels
+===========
+
+z=ALL
+===========
+
+`When not specified the API MUST return data from all available levels`
+
 
 

@@ -49,6 +49,9 @@ Selecting data for two different regions
 Define the vertical level to return data from 
 i.e. z=level
 
+if data at all available levels is required z can be defined as ALL
+i.e. z=ALL
+
 .A z value
 ===========
 
@@ -56,6 +59,13 @@ for instance if the 850hPa pressure level is being queried
 
 z=850
 ===========
-`When not specified the API MUST return data from the lowest (i.e. nearest the surface) level of data in the collection instance (if the instance has a height dimension).`
+
+.Return data at all available vertical levels
+===========
+
+z=ALL
+===========
+
+`When not specified the API MUST return data from all available levels`
 
 

@@ -3,7 +3,7 @@
   "info": {
     "title": "Environmental Data Retreival API's",
     "description": "Example of Candidate Environmental Data Retreival API OpenAPI docs",
-    "version": "0.0.5"
+    "version": "0.0.6"
   },
   "servers": [
     {
@@ -298,6 +298,9 @@
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/z"
+          },
+          {
             "$ref": "#/components/parameters/parametername"
           },
           {
@@ -400,6 +403,9 @@
           },
           {
             "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -720,9 +726,6 @@
             "$ref": "#/components/parameters/parametername"
           },
           {
-            "$ref": "#/components/parameters/resolution"
-          },
-          {
             "$ref": "#/components/parameters/crs"
           },
           {
@@ -822,9 +825,6 @@
           },
           {
             "$ref": "#/components/parameters/corridorHeight"
-          },
-          {
-            "$ref": "#/components/parameters/resolution"
           },
           {
             "$ref": "#/components/parameters/resolutionX"
@@ -1180,6 +1180,86 @@
         }
       }
     },
+    "/collections/{collectionId}/locations": {
+      "get": {
+        "tags": [
+          "Metadata"
+        ],
+        "summary": "List available location identifers for the collection",
+        "description": "List the locations available for the collection",
+        "operationId": "ListCollectionDataLocations",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
     "/collections/{collectionId}/instance": {
       "get": {
         "tags": [
@@ -1250,6 +1330,9 @@
           },
           {
             "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -1351,6 +1434,9 @@
           },
           {
             "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/within"
@@ -1686,9 +1772,6 @@
             "$ref": "#/components/parameters/parametername"
           },
           {
-            "$ref": "#/components/parameters/resolution"
-          },
-          {
             "$ref": "#/components/parameters/crs"
           },
           {
@@ -1793,9 +1876,6 @@
             "$ref": "#/components/parameters/corridorHeight"
           },
           {
-            "$ref": "#/components/parameters/resolution"
-          },
-          {
             "$ref": "#/components/parameters/resolutionX"
           },
           {
@@ -1881,7 +1961,7 @@
     "/collections/{collectionId}/instance/{instanceId}/items": {
       "get": {
         "tags": [
-          "Data"
+          "Metadata"
         ],
         "summary": "List available items for the instance",
         "description": "List the items in the instance of the collection",
@@ -2338,86 +2418,6 @@
           },
           {
             "$ref": "#/components/parameters/instanceId"
-          },
-          {
-            "$ref": "#/components/parameters/bbox"
-          },
-          {
-            "$ref": "#/components/parameters/time"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CoverageJSON"
-                }
-              },
-              "application/x-netcdf": {},
-              "text/xml": {}
-            }
-          },
-          "202": {
-            "description": "Data request still being processed"
-          },
-          "308": {
-            "description": "Request will take a significant time to process"
-          },
-          "404": {
-            "description": "Requested data not found.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "application/x-netcdf": {},
-              "text/xml": {}
-            }
-          },
-          "413": {
-            "description": "Requested data volume to large to be handled by this service.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "application/x-netcdf": {},
-              "text/xml": {}
-            }
-          },
-          "default": {
-            "description": "An error occured.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/html": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/collections/{collectionId}/locations": {
-      "get": {
-        "tags": [
-          "Metadata"
-        ],
-        "summary": "List available location identifers for the collection",
-        "description": "List the locations available for the collection",
-        "operationId": "ListCollectionDataLocations",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/collectionId"
           },
           {
             "$ref": "#/components/parameters/bbox"
@@ -4381,7 +4381,7 @@
       "z": {
         "name": "z",
         "in": "query",
-        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
+        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\ni.e. z=850\n\nif all levels are required the level should be specified as ALL\n\ni.e. z=ALL\n\nif the z query parameter is not specified ALL available levels\nshould be returned.\n",
         "schema": {
           "type": "string"
         }
