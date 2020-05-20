@@ -66,27 +66,6 @@ include::../REQ_rc-corridorHeight-response.adoc[]
 
 <<<
 
-====== Parameter resolution
-
-include::../REQ_rc-resolution-definition.adoc[]
-
-include::../REQ_rc-resolution-response.adoc[]
-
-If not specified the query will not interpolate the data along a corridor path and only return values for the defined `coords` parameter values. 
-
-
-.A resolution
-=================
-denotes the number of intervals to retrieve data for across the defined width of the corridor
-
-`resolution=10`
-
-would retrieve 10 values along the path from the minimum coordinate to maximum coordinate (i.e. a value at both the minimum and maximum coordinates and 8 values between).
-
-=================
-
-<<<
-
 ====== Parameter resolutionx
 
 include::../REQ_rc-resolutionx-definition.adoc[]

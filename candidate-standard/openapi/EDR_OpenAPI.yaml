@@ -1,8 +1,8 @@
 openapi: 3.0.2
 info:
-  title: Environmental Data Retreival API's
-  description: Example of Candidate Environmental Data Retreival API OpenAPI docs
-  version: 0.0.5
+  title: Environmental Data Retrieval API's
+  description: Example of Candidate Environmental Data Retrieval API OpenAPI docs
+  version: 0.0.6
 servers:
   - url: 'http://www.example.org/edr'
     description: ''
@@ -171,6 +171,7 @@ paths:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/pointCoords'
         - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/z'
         - $ref: '#/components/parameters/parametername'        
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'
@@ -230,6 +231,7 @@ paths:
         - $ref: '#/components/parameters/within'
         - $ref: '#/components/parameters/withinUnits'
         - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/z'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'            
@@ -409,7 +411,6 @@ paths:
         - $ref: '#/components/parameters/collectionId'
         - $ref: '#/components/parameters/trajectoryCoords'
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/resolution'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'            
       responses:
@@ -468,7 +469,6 @@ paths:
         - $ref: '#/components/parameters/parametername'         
         - $ref: '#/components/parameters/corridorWidth'
         - $ref: '#/components/parameters/corridorHeight'
-        - $ref: '#/components/parameters/resolution'
         - $ref: '#/components/parameters/resolutionX'
         - $ref: '#/components/parameters/resolutionZ'
         - $ref: '#/components/parameters/crs'            
@@ -688,6 +688,55 @@ paths:
             text/html:
               schema:
                 type: string
+  '/collections/{collectionId}/locations':
+    get:
+      tags:
+        - Metadata
+      summary: List available location identifers for the collection
+      description: List the locations available for the collection
+      operationId: ListCollectionDataLocations
+      parameters:
+        - $ref: '#/components/parameters/collectionId'
+        - $ref: '#/components/parameters/bbox'
+        - $ref: '#/components/parameters/time'
+      responses:
+        '200':
+          description: Data ranges required to construct valid queries for the choosen instance of the data collection
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CoverageJSON'
+            application/x-netcdf: {}
+            text/xml: {}
+        '202':
+          description: Data request still being processed
+        '308':
+          description: Request will take a significant time to process
+        '404':
+          description: Requested data not found.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        '413':
+          description: Requested data volume to large to be handled by this service.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            application/x-netcdf: {}
+            text/xml: {}
+        default:
+          description: An error occured.
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/exception'
+            text/html:
+              schema:
+                type: string
   '/collections/{collectionId}/instance':
     get:
       tags:
@@ -729,6 +778,7 @@ paths:
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/pointCoords'
         - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/z'
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/crs'        
         - $ref: '#/components/parameters/outputFormat'
@@ -787,6 +837,7 @@ paths:
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/radiusCoords'
         - $ref: '#/components/parameters/time'
+        - $ref: '#/components/parameters/z'
         - $ref: '#/components/parameters/within'
         - $ref: '#/components/parameters/withinUnits'
         - $ref: '#/components/parameters/parametername'
@@ -972,7 +1023,6 @@ paths:
         - $ref: '#/components/parameters/instanceId'
         - $ref: '#/components/parameters/trajectoryCoords'
         - $ref: '#/components/parameters/parametername'
-        - $ref: '#/components/parameters/resolution'
         - $ref: '#/components/parameters/crs'
         - $ref: '#/components/parameters/outputFormat'        
       responses:
@@ -1032,7 +1082,6 @@ paths:
         - $ref: '#/components/parameters/parametername'
         - $ref: '#/components/parameters/corridorWidth'
         - $ref: '#/components/parameters/corridorHeight'
-        - $ref: '#/components/parameters/resolution'
         - $ref: '#/components/parameters/resolutionX'
         - $ref: '#/components/parameters/resolutionZ'
         - $ref: '#/components/parameters/crs'        
@@ -1083,7 +1132,7 @@ paths:
   '/collections/{collectionId}/instance/{instanceId}/items':
     get:
       tags:
-        - Data
+        - Metadata
       summary: List available items for the instance
       description: List the items in the instance of the collection
       operationId: ListDataInstanceItems
@@ -1401,55 +1450,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/locations':
-    get:
-      tags:
-        - Metadata
-      summary: List available location identifers for the collection
-      description: List the locations available for the collection
-      operationId: ListCollectionDataLocations
-      parameters:
-        - $ref: '#/components/parameters/collectionId'
-        - $ref: '#/components/parameters/bbox'
-        - $ref: '#/components/parameters/time'
-      responses:
-        '200':
-          description: Data ranges required to construct valid queries for the choosen instance of the data collection
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/CoverageJSON'
-            application/x-netcdf: {}
-            text/xml: {}
-        '202':
-          description: Data request still being processed
-        '308':
-          description: Request will take a significant time to process
-        '404':
-          description: Requested data not found.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
-            text/xml: {}
-        '413':
-          description: Requested data volume to large to be handled by this service.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/exception'
-            application/x-netcdf: {}
-            text/xml: {}
-        default:
-          description: An error occured.
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/exception'
-            text/html:
-              schema:
-                type: string
+
 components:
   schemas:
     exception:
@@ -2958,10 +2959,14 @@ components:
 
         for instance if the 850hPa pressure level is being queried
 
-        z=850
+        i.e. z=850
 
-        When not specified data from the lowest (i.e. nearest the surface) level of
-        data in the collection.
+        if all levels are required the level should be specified as ALL
+        
+        i.e. z=ALL
+        
+        if the z query parameter is not specified ALL available levels
+        should be returned.
       schema:
         type: string
     cubeCoords:
