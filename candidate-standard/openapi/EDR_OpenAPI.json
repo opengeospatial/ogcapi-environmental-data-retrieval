@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Environmental Data Retrieval API's",
-    "description": "Example of Candidate Environmental Data Retrieval API OpenAPI docs",
-    "version": "0.0.6"
+    "title": "Environmental Data Retreival API's",
+    "description": "Example of Candidate Environmental Data Retreival API OpenAPI docs",
+    "version": "0.0.7"
   },
   "servers": [
     {
@@ -232,7 +232,7 @@
     "/collections/{collectionId}": {
       "get": {
         "tags": [
-          "Metadata"
+          "Collection metadata"
         ],
         "summary": "List query types supported by the collection",
         "description": "This will provide information about the query types that are supported by the chosen collection Use content negotiation to request HTML or JSON.",
@@ -282,7 +282,7 @@
     "/collections/{collectionId}/position": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for position queries  of collection {collectionId}",
         "description": "Query end point for position queries",
@@ -295,10 +295,10 @@
             "$ref": "#/components/parameters/pointCoords"
           },
           {
-            "$ref": "#/components/parameters/time"
+            "$ref": "#/components/parameters/z"
           },
           {
-            "$ref": "#/components/parameters/z"
+            "$ref": "#/components/parameters/time"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -383,7 +383,7 @@
     "/collections/{collectionId}/radius": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for radius queries  of collection {collectionId}",
         "description": "Query end point for to return values within a defined radius of a point queries",
@@ -402,10 +402,10 @@
             "$ref": "#/components/parameters/withinUnits"
           },
           {
-            "$ref": "#/components/parameters/time"
+            "$ref": "#/components/parameters/z"
           },
           {
-            "$ref": "#/components/parameters/z"
+            "$ref": "#/components/parameters/time"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -490,7 +490,7 @@
     "/collections/{collectionId}/area": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for area queries  of collection {collectionId} defined by a polygon",
         "description": "Return the data values for the data area defined by the query parameters",
@@ -597,7 +597,7 @@
     "/collections/{collectionId}/cube": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for Cube queries  of collection {collectionId} defined by a cube",
         "description": "Return the data values for the data Cube defined by the query parameters",
@@ -710,7 +710,7 @@
     "/collections/{collectionId}/trajectory": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for trajectory queries  of collection {collectionId} defined by a wkt linestring and a iso8601 time period",
         "description": "Return the data values for the data Polygon defined by the query parameters",
@@ -805,7 +805,7 @@
     "/collections/{collectionId}/corridor": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for Corridor queries  of collection {collectionId} defined by a polygon",
         "description": "Return the data values for the Corridor defined by the query parameters",
@@ -912,10 +912,10 @@
     "/collections/{collectionId}/items": {
       "get": {
         "tags": [
-          "Metadata"
+          "Collection metadata"
         ],
         "summary": "List available items",
-        "description": "List the items in the collection",
+        "description": "List the items available in the collection accessible via a unique identifier",
         "operationId": "ListDataItems",
         "parameters": [
           {
@@ -1050,26 +1050,20 @@
     "/collections/{collectionId}/items/{itemID}": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
-        "summary": "Query end point for item queries  of collection {collectionId} defined by an item id",
-        "description": "Return the item defined by itemID",
+        "summary": "Return item {itemId} from collection {collectionId}",
+        "description": "Query end point to retrieve data from collection {collectionId} using a unique identifier",
         "operationId": "GetDataForItem",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/bbox"
-          },
-          {
-            "$ref": "#/components/parameters/time"
-          },
-          {
             "name": "itemID",
             "in": "path",
             "required": true,
-            "description": "Retreive an object generated by another EDR query, using its uniques identifier.",
+            "description": "Retrieve data from the collection using a unique identifier.",
             "schema": {
               "type": "string"
             }
@@ -1180,90 +1174,10 @@
         }
       }
     },
-    "/collections/{collectionId}/locations": {
-      "get": {
-        "tags": [
-          "Metadata"
-        ],
-        "summary": "List available location identifers for the collection",
-        "description": "List the locations available for the collection",
-        "operationId": "ListCollectionDataLocations",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/collectionId"
-          },
-          {
-            "$ref": "#/components/parameters/bbox"
-          },
-          {
-            "$ref": "#/components/parameters/time"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CoverageJSON"
-                }
-              },
-              "application/x-netcdf": {},
-              "text/xml": {}
-            }
-          },
-          "202": {
-            "description": "Data request still being processed"
-          },
-          "308": {
-            "description": "Request will take a significant time to process"
-          },
-          "404": {
-            "description": "Requested data not found.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "application/x-netcdf": {},
-              "text/xml": {}
-            }
-          },
-          "413": {
-            "description": "Requested data volume to large to be handled by this service.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "application/x-netcdf": {},
-              "text/xml": {}
-            }
-          },
-          "default": {
-            "description": "An error occured.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/html": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/collections/{collectionId}/instance": {
       "get": {
         "tags": [
-          "Metadata"
+          "Collection metadata"
         ],
         "summary": "List data instances of {collectionId}",
         "description": "This will provide list of the avalable instances of the collection Use content negotiation to request HTML or JSON.",
@@ -1313,7 +1227,7 @@
     "/collections/{collectionId}/instance/{instanceId}/position": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for position queries of instance {instanceId} of collection {collectionId}",
         "description": "Query end point for position queries",
@@ -1329,10 +1243,10 @@
             "$ref": "#/components/parameters/pointCoords"
           },
           {
-            "$ref": "#/components/parameters/time"
+            "$ref": "#/components/parameters/z"
           },
           {
-            "$ref": "#/components/parameters/z"
+            "$ref": "#/components/parameters/time"
           },
           {
             "$ref": "#/components/parameters/parametername"
@@ -1417,7 +1331,7 @@
     "/collections/{collectionId}/instance/{instanceId}/radius": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point to return data within defined radius of a point for an instance {instanceId} of collection {collectionId}",
         "description": "Query end point to return all data within a defined radius of the defined point location queries",
@@ -1433,10 +1347,10 @@
             "$ref": "#/components/parameters/radiusCoords"
           },
           {
-            "$ref": "#/components/parameters/time"
+            "$ref": "#/components/parameters/z"
           },
           {
-            "$ref": "#/components/parameters/z"
+            "$ref": "#/components/parameters/time"
           },
           {
             "$ref": "#/components/parameters/within"
@@ -1527,7 +1441,7 @@
     "/collections/{collectionId}/instance/{instanceId}/area": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon",
         "description": "Return the data values for the data area defined by the query parameters",
@@ -1637,7 +1551,7 @@
     "/collections/{collectionId}/instance/{instanceId}/cube": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube",
         "description": "Return the data values for the data Cube defined by the query parameters",
@@ -1753,7 +1667,7 @@
     "/collections/{collectionId}/instance/{instanceId}/trajectory": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for trajectory queries of instance {instanceId} of collection {collectionId} defined by a wkt linestring and a iso8601 time period",
         "description": "Return the data values for the data Polygon defined by the query parameters",
@@ -1851,7 +1765,7 @@
     "/collections/{collectionId}/instance/{instanceId}/corridor": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for Corridor queries of instance {instanceId} of collection {collectionId} defined by a polygon",
         "description": "Return the data values for the Corridor defined by the query parameters",
@@ -1958,283 +1872,10 @@
         }
       }
     },
-    "/collections/{collectionId}/instance/{instanceId}/items": {
-      "get": {
-        "tags": [
-          "Metadata"
-        ],
-        "summary": "List available items for the instance",
-        "description": "List the items in the instance of the collection",
-        "operationId": "ListDataInstanceItems",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/collectionId"
-          },
-          {
-            "$ref": "#/components/parameters/instanceId"
-          },
-          {
-            "$ref": "#/components/parameters/bbox"
-          },
-          {
-            "$ref": "#/components/parameters/time"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
-            "content": {
-              "application/geo+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/EDRfeatureCollectionGeoJSON"
-                },
-                "example": {
-                  "type": "FeatureCollection",
-                  "links": [
-                    {
-                      "href": "http://data.example.com/collections/buildings/items.json",
-                      "rel": "self",
-                      "type": "application/geo+json",
-                      "title": "this document"
-                    },
-                    {
-                      "href": "http://data.example.com/collections/buildings/items.html",
-                      "rel": "alternate",
-                      "type": "text/html",
-                      "title": "this document as HTML"
-                    },
-                    {
-                      "href": "http://data.example.com/collections/buildings/items.json&offset=10&limit=2",
-                      "rel": "next",
-                      "type": "application/geo+json",
-                      "title": "next page"
-                    }
-                  ],
-                  "timeStamp": "2018-04-03T14:52:23Z",
-                  "numberMatched": 123,
-                  "numberReturned": 2,
-                  "features": [
-                    {
-                      "type": "Feature",
-                      "id": "123",
-                      "geometry": {
-                        "type": "Polygon",
-                        "coordinates": [
-                          "..."
-                        ]
-                      },
-                      "properties": {
-                        "function": "residential",
-                        "floors": "2",
-                        "lastUpdate": "2015-08-01T12:34:56Z"
-                      }
-                    },
-                    {
-                      "type": "Feature",
-                      "id": "132",
-                      "geometry": {
-                        "type": "Polygon",
-                        "coordinates": [
-                          "..."
-                        ]
-                      },
-                      "properties": {
-                        "function": "public use",
-                        "floors": "10",
-                        "lastUpdate": "2013-12-03T10:15:37Z"
-                      }
-                    }
-                  ]
-                }
-              },
-              "application/json": {},
-              "text/xml": {}
-            }
-          },
-          "202": {
-            "description": "Data request still being processed"
-          },
-          "308": {
-            "description": "Request will take a significant time to process"
-          },
-          "404": {
-            "description": "Requested data not found.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/xml": {}
-            }
-          },
-          "413": {
-            "description": "Requested data volume to large to be handled by this service.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/xml": {}
-            }
-          },
-          "default": {
-            "description": "An error occured.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/html": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
-    "/collections/{collectionId}/instance/{instanceId}/items/{itemID}": {
-      "get": {
-        "tags": [
-          "Data"
-        ],
-        "summary": "Query end point for item queries of instance {instanceId} of collection {collectionId} defined by an item id",
-        "description": "Return the item defined by itemID",
-        "operationId": "GetInstanceDataForItem",
-        "parameters": [
-          {
-            "$ref": "#/components/parameters/collectionId"
-          },
-          {
-            "$ref": "#/components/parameters/instanceId"
-          },
-          {
-            "$ref": "#/components/parameters/bbox"
-          },
-          {
-            "$ref": "#/components/parameters/time"
-          },
-          {
-            "name": "itemID",
-            "in": "path",
-            "required": true,
-            "description": "Retreive an object generated by another EDR query, using its uniques identifier.",
-            "schema": {
-              "type": "string"
-            }
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Data ranges required to construct valid queries for the choosen data collection",
-            "content": {
-              "application/geo+json": {
-                "schema": {
-                  "$ref": "#/components/schemas/featureGeoJSON"
-                },
-                "example": {
-                  "type": "Feature",
-                  "links": [
-                    {
-                      "href": "http://data.example.com/id/building/123",
-                      "rel": "canonical",
-                      "title": "canonical URI of the building"
-                    },
-                    {
-                      "href": "http://data.example.com/collections/buildings/items/123.json",
-                      "rel": "self",
-                      "type": "application/geo+json",
-                      "title": "this document"
-                    },
-                    {
-                      "href": "http://data.example.com/collections/buildings/items/123.html",
-                      "rel": "alternate",
-                      "type": "text/html",
-                      "title": "this document as HTML"
-                    },
-                    {
-                      "href": "http://data.example.com/collections/buildings",
-                      "rel": "collection",
-                      "type": "application/geo+json",
-                      "title": "the collection document"
-                    }
-                  ],
-                  "id": "123",
-                  "geometry": {
-                    "type": "Polygon",
-                    "coordinates": [
-                      "..."
-                    ]
-                  },
-                  "properties": {
-                    "function": "residential",
-                    "floors": "2",
-                    "lastUpdate": "2015-08-01T12:34:56Z"
-                  }
-                }
-              },
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/CoverageJSON"
-                }
-              },
-              "text/xml": {}
-            }
-          },
-          "202": {
-            "description": "Data request still being processed"
-          },
-          "308": {
-            "description": "Request will take a significant time to process"
-          },
-          "404": {
-            "description": "Requested data not found.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/xml": {}
-            }
-          },
-          "413": {
-            "description": "Requested data volume to large to be handled by this service.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/xml": {}
-            }
-          },
-          "default": {
-            "description": "An error occured.",
-            "content": {
-              "application/json": {
-                "schema": {
-                  "$ref": "#/components/schemas/exception"
-                }
-              },
-              "text/html": {
-                "schema": {
-                  "type": "string"
-                }
-              }
-            }
-          }
-        }
-      }
-    },
     "/collections/{collectionId}/instance/{instanceId}/locations/{locID}": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for queries of instance {instanceId} of collection {collectionId} defined by a location id",
         "description": "Return data the for the location defined by locid",
@@ -2321,7 +1962,7 @@
     "/collections/{collectionId}/locations/{locID}": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for queries of collection {collectionId} defined by a location id",
         "description": "Return data the for the location defined by locid",
@@ -2407,7 +2048,7 @@
     "/collections/{collectionId}/instance/{instanceId}/locations": {
       "get": {
         "tags": [
-          "Metadata"
+          "Instance metadata"
         ],
         "summary": "List available location identifers for the instance",
         "description": "List the locations available for the instance of the collection",
@@ -2418,6 +2059,86 @@
           },
           {
             "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/bbox"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/locations": {
+      "get": {
+        "tags": [
+          "Collection metadata"
+        ],
+        "summary": "List available location identifers for the collection",
+        "description": "List the locations available for the collection",
+        "operationId": "ListCollectionDataLocations",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
           },
           {
             "$ref": "#/components/parameters/bbox"
@@ -4381,7 +4102,7 @@
       "z": {
         "name": "z",
         "in": "query",
-        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\ni.e. z=850\n\nif all levels are required the level should be specified as ALL\n\ni.e. z=ALL\n\nif the z query parameter is not specified ALL available levels\nshould be returned.\n",
+        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
         "schema": {
           "type": "string"
         }
@@ -4438,12 +4159,20 @@
       "description": "Essential characteristics of the information available from the API."
     },
     {
-      "name": "Metadata",
-      "description": "Essential characteristics of the collection including information about the data."
+      "name": "Collection metadata",
+      "description": "Description of the information available from the collections"
     },
     {
-      "name": "Data",
-      "description": "Data queries."
+      "name": "Instance metadata",
+      "description": "Description of the information available from instances of a collection"
+    },
+    {
+      "name": "Collection data queries",
+      "description": "Data queries available."
+    },
+    {
+      "name": "Instance data queries",
+      "description": "Data queries available on instances of the collection."
     }
   ]
 }
