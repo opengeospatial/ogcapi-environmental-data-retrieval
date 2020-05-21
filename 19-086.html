@@ -465,7 +465,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    19-086</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.5</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.0.7</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Implementation Specification</p></td>
@@ -3747,40 +3747,33 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 <div class="sect4">
 <h5 id="_parameters_6"><a class="anchor" href="#_parameters_6"></a>Parameters</h5>
 <div class="paragraph">
-<p>Due to the concept of <code>Collections</code> in EDR the item query is a powerful and flexible tool, but retains only simple options. It could be used to rerun a previously run query but with a replacement for one or more of the input parameters; this would be achieved by using the id field value from the successful output from a previous query as the input id query parameter of item query, then the API user could override one or more of the original query parameters by just entering the query parameters that they want to change (i.e. a trajectory query where the same route is used every day with the same interpolation options, crs and outputFormat and the user just needs to enter the new time range).</p>
-</div>
-<div class="paragraph">
-<p>Again this is dependant on the data publisher implementing support for the functionality.</p>
+<p>If an itemID is not specified the query will return a list of the available
+itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 27. id</div>
+<div class="title">Example 27. List available items</div>
 <div class="content">
 <div class="paragraph">
-<p>return information for the requested id</p>
+<p>/collections/{collectionId}/items</p>
 </div>
 <div class="paragraph">
-<p>id=gfs-query-2020-01-31</p>
+<p>/collections/tropical_storms/items</p>
 </div>
 </div>
-</div>
-<div class="paragraph">
-<p>As in the EDR concept a <code>Collection</code> is a black box it would be possible to overload the id query parameter to perform different actions, as it is the <code>Collection</code> black box that interprets how it handles the parameter; for instance in the Metar collection it could be combined with the parametername query parameter and the time parameter to return all Metars for ICAO id KIAD for the requested time period</p>
-</div>
-<div class="paragraph">
-<p>.</p>
 </div>
 <div class="exampleblock">
+<div class="title">Example 28. itemID</div>
 <div class="content">
 <div class="paragraph">
-<p>return information for the requested id</p>
+<p>/collections/{collectionId}/items/{itemID}</p>
 </div>
 <div class="paragraph">
-<p>/collections/metar/raw/item?id=KIAD&amp;parametername=icao_id&amp;time=2020-01-31T00:00:00Z/2020-02-01T04:00:00Z</p>
-</div>
-</div>
+<p>return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar collection</p>
 </div>
 <div class="paragraph">
-<p>This example does have a flaw in that the EDR API provides no mechanism for the user to discover the available icao id&#8217;s in the metadata (the id&#8217;s are available in the query results but not in any of the available metadata outputs).</p>
+<p>/collections/metar/items/KIAD_2020-05-19T00Z</p>
+</div>
+</div>
 </div>
 <div style="page-break-after: always;"></div>
 </div>
@@ -3793,7 +3786,7 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 <p>With the locations query a location is defined by a unique identifer, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata in returned by the API must supply a geospatial definition for the identifier.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 28. locid</div>
+<div class="title">Example 29. locid</div>
 <div class="content">
 <div class="paragraph">
 <p>return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id</p>
@@ -3804,7 +3797,7 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 29. subset by time and parameter</div>
+<div class="title">Example 30. subset by time and parameter</div>
 <div class="content">
 <div class="paragraph">
 <p>The API can allow user to subset the required data by time and parameter and also supports requesting data format changes (if supported by the data provider)</p>
@@ -4719,7 +4712,7 @@ The following schema names are from API-Features and need to be updated.
 </tbody>
 </table>
 <div class="exampleblock">
-<div class="title">Example 30. An exception response object definition</div>
+<div class="title">Example 31. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -6493,7 +6486,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>B.2. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 31. JSON Landing Page</div>
+<div class="title">Example 32. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -6532,7 +6525,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>B.4. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 32. Conformance Response</div>
+<div class="title">Example 33. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -6555,7 +6548,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>B.5. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 33. Collections metadata response document</div>
+<div class="title">Example 34. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6704,7 +6697,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="collection-metadata-examples"><a class="anchor" href="#collection-metadata-examples"></a>B.6. Collection Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 34. Collection instance metadata response document</div>
+<div class="title">Example 35. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the Metar collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6792,7 +6785,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 35. Collection metadata response document</div>
+<div class="title">Example 36. Collection metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances of the DEM collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6867,7 +6860,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>B.7. Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 36. Collection instance metadata response document</div>
+<div class="title">Example 37. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the gfs_time-height_above_ground-lat-lon gfs collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7024,7 +7017,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="position-query-metadata-examples"><a class="anchor" href="#position-query-metadata-examples"></a>B.8. Position Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 37. Collection instance metadata response document</div>
+<div class="title">Example 38. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the  latest instance of the fs_time-height_above_ground-lat-lon collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7589,7 +7582,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="polygon-query-metadata-examples"><a class="anchor" href="#polygon-query-metadata-examples"></a>B.9. Area Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 38. Collection instance metadata response document</div>
+<div class="title">Example 39. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the data instance of the "DEM" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7726,7 +7719,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="query-metadata-examples"><a class="anchor" href="#query-metadata-examples"></a>B.10. Location Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 39. Collection instance metadata response document</div>
+<div class="title">Example 40. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the Raw instance of the "Metar" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -8710,7 +8703,7 @@ Gregorian calendar).</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-05-20 22:24:18 -0400
+Last updated 2020-05-21 08:44:07 -0400
 </div>
 </div>
 </body>
