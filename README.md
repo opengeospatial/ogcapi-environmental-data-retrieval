@@ -16,6 +16,7 @@ It will also contain the plan of work and links to other relevant documents such
 The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/asciidoctor.json) file):
 
 * [OGC API - Environmental Data Retrieval Standard](http://docs.opengeospatial.org/DRAFTS/19-086.html)
+* [DRAFT OpenAPI Document](https://opengeospatial.github.io/Environmental-Data-Retrieval-API/docs/edr_api.html)
 
 ## EDR Vision
 
