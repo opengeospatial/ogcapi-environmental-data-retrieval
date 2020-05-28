@@ -19,7 +19,7 @@ The latest draft of the standard in this repository is built daily (based on the
 
 ## EDR Vision
 
-The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of or a model of real world phenomena. While the former is the emphasis, EDR APIs can provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier.
+The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of, or a model of, real world phenomena. While the former is the emphasis, EDR APIs can provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier.
 
 ### EDR Query Patterns
 The EDR charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
@@ -27,7 +27,7 @@ The EDR charter lists initial deliverables in [section 4.1](https://github.com/o
 Summarizing these sections. EDR Query Patterns will be:  
 - **1 - Core**: Point/position or identified location with n parameters at a time instant and/or a timeseries.
 - **2 - Sampling Geometries**: Vertical profile for a time instant and rectangular or polygonal tile/subset.
-- **3 - Trajectories and Corridors**: Samples along a 2D-4D trajectory of within a defined corridor.
+- **3 - Trajectories and Corridors**: Samples along a 2D-4D trajectory or within a defined corridor.
 - **4 - Ensembles**: Support for explicitly related ensembles of EDR resources.
 
 These patterns would be accessed through endpoints like:
