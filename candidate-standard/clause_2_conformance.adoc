@@ -13,14 +13,17 @@ The requirements classes for OGC API-EDR are:
 
 The _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of API-EDR.
 
+The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter ?)>>.
+
 * <<rc_collections-section,Collections>>
 
 The _Collections Requirements Class_ extends the API-Common _Core_ to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
-The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The _Collections Requirements Class_ specifies the requirements necessary to discover and understand a generic collection and its contents. 
+The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common-Collections Requirements Class specifies the requirements necessary to discover and understand a generic collection and its contents. 
 
-[Note: do we need this sentence?]
-The _Collections Requirements Class_ defines the requirements specific to the query and retrieval of Environmental Data Resources.
+The API-EDR _Collections Requirements Class_ extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.
+
+The Collections requirements class is specified in *Requirements Class Collections* <<rc_collections-section,(Chapter ?)>>.
 
 * Encodings
 ** <<rc_html-section,HTML>>
@@ -31,7 +34,17 @@ Neither the nor _Core_ nor _Collections_ requirements class mandate a specific e
 
 None of these encodings are mandatory. An implementation of the _API-EDR_ standard may decide to implement another encoding instead of, or in addition those listed. However, a common format does simplifies interoperability so support for _CovJSON_ is highly recommended.
 
+The Encoding Requirements Classes are specified in *Encoding Requirements Classes* <<rc_encoding-section,(Chapter ?)>>.
+
 * <<rc_oas30-section,OpenAPI 3.0>>
 
 The _OGC API-Common_ standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
 
+The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter ?)>>.
+
+* Queries
+** <<rc_position-section,Position>>
+** <<rc_area-section,Area>>
+** <<rc_trajectory-section,Trajectory>>
+
+The Queries Requirements Classes are specified in *Queries Requirements Classes* <<rc_queries-section,(Chapter ?)>>.
