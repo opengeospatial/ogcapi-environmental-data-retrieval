@@ -5,7 +5,7 @@ The one Standardization Target for this standard is Web APIs.
 
 OGC API-Common-Part 1: Core provides a common foundation for OGC API standards. Therefore, this standard should be viewed as an extension to API-Common-Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common-Core.
 
-This standard identifies six (6) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one Requirements Class. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one Requirements Class. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
 The requirements classes for OGC API-EDR are:
 
@@ -15,22 +15,22 @@ The _Core Requirements Class_ is the minimal useful service interface for an OGC
 
 The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter ?)>>.
 
-* <<rc_collections-section,Collections>>
+* <<rc_collection-section,Collection>>
 
-The _Collections Requirements Class_ extends the API-Common _Core_ to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
+The API-Common _Collections_ standard extends the API-Common _Core_ to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
-The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common-Collections Requirements Class specifies the requirements necessary to discover and understand a generic collection and its contents. 
+The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common-Collections specifies the requirements necessary to discover and understand a generic collection and its contents. 
 
-The API-EDR _Collections Requirements Class_ extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.
+The API-EDR _Collection Requirements Class_ extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.
 
-The Collections requirements class is specified in *Requirements Class Collections* <<rc_collections-section,(Chapter ?)>>.
+The Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter ?)>>.
 
 * Encodings
 ** <<rc_html-section,HTML>>
 ** <<rc_geojson-section,GeoJSON>>
 ** <<rc_covjson-section,CovJSON>>
 
-Neither the nor _Core_ nor _Collections_ requirements class mandate a specific encoding or format for representing resources. The _HTML_, _GeoJSON_ and _CovJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
+Neither the nor _Core_ nor _Collection_ requirements class mandate a specific encoding or format for representing resources. The _HTML_, _GeoJSON_ and _CovJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
 
 None of these encodings are mandatory. An implementation of the _API-EDR_ standard may decide to implement another encoding instead of, or in addition those listed. However, a common format does simplifies interoperability so support for _CovJSON_ is highly recommended.
 
