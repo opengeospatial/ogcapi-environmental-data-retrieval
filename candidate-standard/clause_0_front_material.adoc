@@ -2,11 +2,11 @@
 
 [big]*i.     Abstract*
 
-The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs, these standards are based on a common foundation upon which all OGC APIs will be built. This document extends that foundation to define the Environmental Data Retrevial (EDR) API.
+The OGC has extended their suite of standards to include Resource Oriented Architectures and Web APIs. These standards are based on a common foundation upon which all OGC APIs will be built. This document extends that foundation to define the Environmental Data Retrieval (EDR) API.
 
-An Environmental Data Retrevial (EDR) API provides a family of lightweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. These patterns are described in the <<rc_core-section,Requirement Class Core>> section. 
+An Environmental Data Retrieval (EDR) API provides a family of lightweight interfaces to access Environmental Data resources. Each resource addressed by an EDR API maps to a defined query pattern. These patterns are described in the <<rc_core-section,Requirement Class Core>> section. 
 
-EDR API query patterns can be thought of as discrete sampling geometries, conceptually in-line with the feature of interest in the https://www.ogc.org/standards/sos[Sensor Observation Service (SOS)]. A typical EDR data resource is a multidimensional dataset that could be provided via a coverage API such as the http://www.ogc.org/standards/wcs[Web Coverage Service (WCS)]. In contrast to SOS and WCS, EDR implements the technical baseline of the OGC API family of standards and aims to provide a single set of use-centric query patterns. EDR query patterns range from location-centric real or virtual observation use cases to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query-pattern building blocks do not attempt to satisfy the full scope of either SOS or WCS, but rather, provide useful building blocks to allow composition of APIs that satisfy a wide range of environmental data use cases.
+EDR API query patterns, such as Position, Time-series, Area, or Trajectory, can be thought of as discrete sampling geometries, conceptually in-line with the feature of interest in the https://www.ogc.org/standards/sos[Sensor Observation Service (SOS)]. A typical EDR data resource is a multidimensional dataset that could be provided via a coverage API such as the http://www.ogc.org/standards/wcs[Web Coverage Service (WCS)]. In contrast to SOS and WCS, EDR implements the technical baseline of the OGC API family of standards and aims to provide a single set of use-centric query patterns. EDR query patterns range from location-centric real or virtual observation use cases to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query-pattern building blocks do not attempt to satisfy the full scope of either SOS or WCS, but rather, provide useful building blocks to allow composition of APIs that satisfy a wide range of environmental data use cases.
 
 The API-Common standard defines resources and access paths that are supported by all OGC APIs. These are listed in <<common-paths>>.
 
@@ -24,7 +24,7 @@ The API-Common standard defines resources and access paths that are supported by
 
 The resources identified in  <<common-paths>> primarily support Discovery operations. Discovery operations allow clients to interrogate the API to determine its capabilities and retrieve information (metadata) about this distribution of the resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.
 
-This standard extends the common Query operations for OGC APIs. Query operations allow resources or values extracted from those resources to be retrieved from the underlying data store. The information to be returned is based upon selection criteria (query string) provided by the client. This standard only defines simple query parameters which should be applicable to all resource types. Other OGC API standards may define additional query capabilities specific to their resource type.
+This standard extends the common Query operations for OGC APIs. Query operations allow resources or values extracted from those resources to be retrieved from the underlying data store. The information to be returned is based upon selection criteria (query string) provided by the client. This standard only defines simple, coordinate-based, query parameters which should be applicable to geospatial resource types. Other OGC API standards may define additional query capabilities specific to their resource type.
 
 [big]*ii.    Keywords*
 
