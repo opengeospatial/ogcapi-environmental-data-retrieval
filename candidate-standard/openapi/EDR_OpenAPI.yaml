@@ -686,7 +686,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance':
+  '/collections/{collectionId}/instances':
     get:
       tags:
         - Collection metadata
@@ -715,7 +715,7 @@ paths:
     parameters:
       - $ref: '#/components/parameters/collectionId'
       - $ref: '#/components/parameters/outputFormat'
-  '/collections/{collectionId}/instance/{instanceId}/position':
+  '/collections/{collectionId}/instances/{instanceId}/position':
     get:
       tags:
         - Instance data queries
@@ -774,7 +774,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/radius':
+  '/collections/{collectionId}/instances/{instanceId}/radius':
     get:
       tags:
         - Instance data queries
@@ -835,7 +835,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/area':
+  '/collections/{collectionId}/instances/{instanceId}/area':
     get:
       tags:
         - Instance data queries
@@ -897,7 +897,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/cube':
+  '/collections/{collectionId}/instances/{instanceId}/cube':
     get:
       tags:
         - Instance data queries
@@ -960,7 +960,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/trajectory':
+  '/collections/{collectionId}/instances/{instanceId}/trajectory':
     get:
       tags:
         - Instance data queries
@@ -1017,7 +1017,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/corridor':
+  '/collections/{collectionId}/instances/{instanceId}/corridor':
     get:
       tags:
         - Instance data queries
@@ -1078,7 +1078,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/locations/{locID}':
+  '/collections/{collectionId}/instances/{instanceId}/locations/{locID}':
     get:
       tags:
         - Instance data queries
@@ -1179,7 +1179,7 @@ paths:
             text/html:
               schema:
                 type: string
-  '/collections/{collectionId}/instance/{instanceId}/locations':
+  '/collections/{collectionId}/instances/{instanceId}/locations':
     get:
       tags:
         - Instance metadata
