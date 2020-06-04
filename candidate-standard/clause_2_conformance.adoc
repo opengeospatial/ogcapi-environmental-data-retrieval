@@ -3,7 +3,7 @@ Conformance with this standard shall be checked using the tests specified in Ann
 
 The one Standardization Target for this standard is Web APIs.
 
-OGC API-Common provides a common foundation for OGC API standards. Therefore, this standard should be viewed as an extension to API-Common. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common.
+OGC API-Common-Part 1: Core provides a common foundation for OGC API standards. Therefore, this standard should be viewed as an extension to API-Common-Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common-Core.
 
 This standard identifies six (6) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one Requirements Class. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
@@ -15,8 +15,11 @@ The _Core Requirements Class_ is the minimal useful service interface for an OGC
 
 * <<rc_collections-section,Collections>>
 
-NOTE: Validate that this description is accurate.
+The _Collections Requirements Class_ extends the API-Common _Core_ to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
+The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The _Collections Requirements Class_ specifies the requirements necessary to discover and understand a generic collection and its contents. 
+
+[Note: do we need this sentence?]
 The _Collections Requirements Class_ defines the requirements specific to the query and retrieval of Environmental Data Resources.
 
 * Encodings
@@ -30,5 +33,5 @@ None of these encodings are mandatory. An implementation of the _API-EDR_ standa
 
 * <<rc_oas30-section,OpenAPI 3.0>>
 
-The _OGC API-Common_ standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR API's will be defined using _OpenAPI 3.0_.
+The _OGC API-Common_ standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
 
