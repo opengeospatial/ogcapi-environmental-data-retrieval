@@ -8,6 +8,8 @@ The OGC API family of standards enable access to resources using the HTTP protoc
 . To allow service users to retrieve, in effect, transient resources over a discrete sampling geometry, created by the service in response to a standardized query pattern.
 . To provide 'building blocks' allowing the construction of more complex services
 
+The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required. The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.
+
 [[resource-paths]]
 === Resource Paths
 

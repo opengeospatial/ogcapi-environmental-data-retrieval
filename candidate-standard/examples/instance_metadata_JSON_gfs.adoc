@@ -23,7 +23,16 @@ Gregorian calendar).
     { "href": "http://data.example.org/collections.html",
       "rel": "alternate", "type": "text/html", "title": "this document as HTML" },
     { "href": "http://schemas.example.org/1.0/foobar.xsd",
-      "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" }
+      "rel": "describedBy", "type": "application/xml", "title": "XML schema for Acme Corporation data" },
+    { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details",
+      "rel": "describedBy", "type": "source",
+      "title": "Further information about the gfs_time-height_above_ground-lat-lon collection" },
+    { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
+      "rel": "describedBy", "type": "publisher",
+      "title": "Further information about the data publisher" },
+    { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
+      "rel": "describedBy", "type": "licence",
+      "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }                   
   ],
   "instances": [
     {
@@ -35,44 +44,23 @@ Gregorian calendar).
         "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
         "vertical": ["2.0","10.0","80.0"]
       },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
-            
-      },
-      "itemType": "Grid",    
+  
       "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest",
-          "rel": "metadata", "type": "application/json",
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest",
+          "rel": "describedBy", "type": "application/json",
           "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/latest?outputFormat=html",
-          "rel": "metadata", "type": "text/html",
-          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details",
-          "rel": "source", "type": "application/json",
-          "title": "Further information about the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-publisher-details",
-          "rel": "publisher", "type": "application/json",
-          "title": "Further information about the data publisher" },          
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/point",
-          "rel": "point", "type": "application/json",
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },        
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest/position",
+          "rel": "data", "type": "position",
           "title": "Point query for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/polygon",
-          "rel": "polygon", "type": "application/json",
-          "title": "Polygon query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/trajectory",
-          "rel": "trajectory", "type": "application/json",
-          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },                       
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }          
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }                        
       ]
     },
     {
@@ -84,34 +72,23 @@ Gregorian calendar).
         "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
         "vertical": ["2.0","10.0","80.0"]
       },
-      "dataDetails": {
-          "@context": {
-              "@version": 1.1,
-              "xsd": "http://www.w3.org/2001/XMLSchema#",
-              "dc": "http://purl.org/dc/terms/",
-              "dcam":"http://purl.org/dc/dcam/"
-          },
-
-          "dc:accessRights": {},
-          "dc:source": {
-              "dc:title":"datasource name",
-              "dc:identifier" : "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/link-for-more-details"
-          },
-          "dc:publisher" : "contact@example.org",
-          "dcam:domainIncludes": ["appparent_temperature_height_above_ground","dewpoint_temperature_height_above_ground","relative_humidity_height_above_ground"]
-            
-      },
-      "supportedQueryTypes": {"point","polygon","cube","trajectory"}      
       "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T12:00:00Z",
-          "rel": "Metadata", "type": "application/json",
-          "title": "Metadata for the 2020-02-01T12:00:00Z run" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T12:00:00Z?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for the 2020-02-01T12:00:00Z run" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for the 2020-02-01T12:00:00Z run" }  
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },       
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z/position",
+          "rel": "data", "type": "position",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" }                        
+
       ]
     },
     {
@@ -142,15 +119,21 @@ Gregorian calendar).
       },
       "supportedQueryTypes": {"point","polygon","cube","trajectory"}      
       "links": [
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T00:00:00Z",
-          "rel": "instances", "type": "application/json",
-          "title": "Metadata for the 2020-02-01T00:00:00Z run" },
-        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/2020-02-01T00:00:00Z?outputFormat=html",
-          "rel": "instances", "type": "text/html",
-          "title": "Metadata for the 2020-02-01T00:00:00Z run" },
-        { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-          "rel": "licence", "type": "text/html",
-          "title": "Licence for the 2020-02-01T00:00:00Z run" }  
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z",
+          "rel": "describedBy", "type": "application/json",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances2020-02-01T00:00:00Z?outputFormat=html",
+          "rel": "describedBy", "type": "text/html",
+          "title": "Metadata for the the gfs_time-height_above_ground-lat-lon 2020-02-01T12:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z/position",
+          "rel": "data", "type": "position",
+          "title": "Point query for the the gfs_time-height_above_ground-lat-lon 2020-02-01T00:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z/area",
+          "rel": "data", "type": "area",
+          "title": "Area query for the gfs_time-height_above_ground-lat-lon 2020-02-01T00:00:00Z run instance of the collection" },
+        { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T00:00:00Z/trajectory",
+          "rel": "data", "type": "trajectory",
+          "title": "Trajectory query for the gfs_time-height_above_ground-lat-lon 2020-02-01T00:00:00Z run instance of the collection" }       
       ]
     }
 

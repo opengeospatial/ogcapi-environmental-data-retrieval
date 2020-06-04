@@ -2,6 +2,13 @@
 :appendix-caption: Annex
 == Examples (Informative)
 
+[[openapi-examples]]
+=== OpenAPI definition
+
+link:openapi/EDR_OpenAPI.yaml[OpenAPI YAML]
+link:openapi/EDR_OpenAPI.json[OpenAPI JSON]
+
+
 [[landing-page-examples]]
 === Example Landing Pages
 
@@ -22,28 +29,36 @@ include::examples/conformance_response_JSON_1.adoc[]
 
 include::examples/collections_metadata_JSON_1.adoc[]
 
-
-[[instance-metadata-examples]]
-=== Collection Instance Metadata Examples
-
-include::examples/instance_metadata_JSON_gfs.adoc[]
+[[collection-metadata-examples]]
+=== Collection Metadata Examples
 
 include::examples/instance_metadata_JSON_Metar.adoc[]
 
 include::examples/instance_metadata_JSON_DEM.adoc[]
 
+
+
+[[instance-metadata-examples]]
+=== Instance Metadata Examples
+
+include::examples/instance_metadata_JSON_gfs.adoc[]
+
+
+[[position-query-metadata-examples]]
+=== Position Query Metadata Examples
+
+include::examples/position_query_metadata_JSON_gfs.adoc[]
+
+
+[[polygon-query-metadata-examples]]
+=== Area Query Metadata Examples
+
+include::examples/polygon_query_metadata_JSON_dem.adoc[]
+
+
 [[query-metadata-examples]]
-=== Collection Query Metadata Examples
+=== Location Query Metadata Examples
 
-include::examples/query_metadata_JSON_gfs.adoc[]
+include::examples/location_query_metadata_JSON_metar.adoc[]
 
-include::examples/query_metadata_JSON_metar.adoc[]
-
-include::examples/query_metadata_JSON_dem.adoc[]
-
-
-[[collection-information-examples]]
-=== Collection Information Examples
-
-NOTE: include::examples/tbd.adoc[]
 

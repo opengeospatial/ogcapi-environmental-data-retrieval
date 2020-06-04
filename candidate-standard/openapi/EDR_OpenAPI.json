@@ -1,9 +1,9 @@
 {
   "openapi": "3.0.2",
   "info": {
-    "title": "Environmental Data Retreival API's",
-    "description": "Example of Candidate Environmental Data Retreival API OpenAPI docs",
-    "version": "0.0.1"
+    "title": "Environmental Data Retrieval API's",
+    "description": "Example of Candidate Environmental Data Retrieval API OpenAPI docs",
+    "version": "0.0.7"
   },
   "servers": [
     {
@@ -232,7 +232,7 @@
     "/collections/{collectionId}": {
       "get": {
         "tags": [
-          "Metadata"
+          "Collection metadata"
         ],
         "summary": "List query types supported by the collection",
         "description": "This will provide information about the query types that are supported by the chosen collection Use content negotiation to request HTML or JSON.",
@@ -279,61 +279,35 @@
         }
       ]
     },
-    "/collections/{collectionId}/point": {
+    "/collections/{collectionId}/position": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
-        "summary": "Query end point for point queries  of collection {collectionId}",
-        "description": "Query end point for point queries",
+        "summary": "Query end point for position queries  of collection {collectionId}",
+        "description": "Query end point for position queries",
         "operationId": "getDataForPoint",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/pointCoords"
           },
           {
-            "$ref": "#/components/parameters/parametername"
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "name": "within",
-            "in": "query",
-            "description": "Defines radius of area around defined coordinates to include in the data selection",
-            "required": false,
-            "example": 10,
-            "schema": {
-              "type": "number"
-            }
-          },
-          {
-            "name": "withinUnits",
-            "in": "query",
-            "description": "Distance units for the within parameter",
-            "required": false,
-            "example": "KM",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -355,6 +329,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -363,7 +348,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -375,7 +359,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -397,62 +380,41 @@
         }
       }
     },
-    "/collections/{collectionId}/polygon": {
+    "/collections/{collectionId}/radius": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
-        "summary": "Query end point for area queries  of collection {collectionId} defined by a polygon",
-        "description": "Return the data values for the data Polygon defined by the query parameters",
-        "operationId": "GetDataForArea",
+        "summary": "Query end point for radius queries  of collection {collectionId}",
+        "description": "Query end point for to return values within a defined radius of a point queries",
+        "operationId": "getDataForRadius",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/radiusCoords"
           },
           {
-            "$ref": "#/components/parameters/parametername"
+            "$ref": "#/components/parameters/within"
+          },
+          {
+            "$ref": "#/components/parameters/withinUnits"
+          },
+          {
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "z",
-            "in": "query",
-            "description": "Define the vertical level to return data from \ni.e. Z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nZ=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -474,6 +436,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -482,7 +455,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -494,7 +466,113 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/area": {
+      "get": {
+        "tags": [
+          "Collection data queries"
+        ],
+        "summary": "Query end point for area queries  of collection {collectionId} defined by a polygon",
+        "description": "Return the data values for the data area defined by the query parameters",
+        "operationId": "GetDataForArea",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/areaCoords"
+          },
+          {
+            "$ref": "#/components/parameters/z"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionX"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionY"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
               "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
               "text/xml": {}
             }
           },
@@ -519,7 +597,7 @@
     "/collections/{collectionId}/cube": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for Cube queries  of collection {collectionId} defined by a cube",
         "description": "Return the data values for the data Cube defined by the query parameters",
@@ -529,67 +607,34 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/cubeCoords"
           },
           {
-            "$ref": "#/components/parameters/parametername"
+            "$ref": "#/components/parameters/minZ"
+          },
+          {
+            "$ref": "#/components/parameters/maxZ"
           },
           {
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionX"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionY"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionZ"
+          },
+          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate an error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution\n}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "minZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the bottom of the cube \ni.e. minZ=level\n\nfor instance if bottom of cube is at the 950hPa pressure level\n\nminZ=850\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "maxZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the top of the cube \ni.e. maxZ=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmaxZ=650\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationZ",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -611,6 +656,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -619,7 +675,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -631,7 +686,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -656,7 +710,7 @@
     "/collections/{collectionId}/trajectory": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for trajectory queries  of collection {collectionId} defined by a wkt linestring and a iso8601 time period",
         "description": "Return the data values for the data Polygon defined by the query parameters",
@@ -666,31 +720,16 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/trajectoryCoords"
           },
           {
             "$ref": "#/components/parameters/parametername"
           },
           {
-            "$ref": "#/components/parameters/time"
-          },
-          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "$ref": "#/components/parameters/interpolationZ"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -712,6 +751,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -720,7 +770,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -732,7 +781,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -757,7 +805,7 @@
     "/collections/{collectionId}/corridor": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
         "summary": "Query end point for Corridor queries  of collection {collectionId} defined by a polygon",
         "description": "Return the data values for the Corridor defined by the query parameters",
@@ -767,44 +815,28 @@
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/corridorCoords"
           },
           {
             "$ref": "#/components/parameters/parametername"
           },
           {
-            "$ref": "#/components/parameters/time"
+            "$ref": "#/components/parameters/corridorWidth"
+          },
+          {
+            "$ref": "#/components/parameters/corridorHeight"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionX"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionZ"
           },
           {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationWidth",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationHeight",
-            "in": "query",
-            "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -826,6 +858,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -834,7 +877,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -846,7 +888,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -871,10 +912,10 @@
     "/collections/{collectionId}/items": {
       "get": {
         "tags": [
-          "Metadata"
+          "Collection metadata"
         ],
         "summary": "List available items",
-        "description": "List the items in the collection",
+        "description": "List the items available in the collection accessible via a unique identifier",
         "operationId": "ListDataItems",
         "parameters": [
           {
@@ -891,12 +932,70 @@
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen data collection",
             "content": {
-              "application/json": {
+              "application/geo+json": {
                 "schema": {
-                  "$ref": "#/components/schemas/CoverageJSON"
+                  "$ref": "#/components/schemas/EDRfeatureCollectionGeoJSON"
+                },
+                "example": {
+                  "type": "FeatureCollection",
+                  "links": [
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.json",
+                      "rel": "self",
+                      "type": "application/geo+json",
+                      "title": "this document"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.html",
+                      "rel": "alternate",
+                      "type": "text/html",
+                      "title": "this document as HTML"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items.json&offset=10&limit=2",
+                      "rel": "next",
+                      "type": "application/geo+json",
+                      "title": "next page"
+                    }
+                  ],
+                  "timeStamp": "2018-04-03T14:52:23Z",
+                  "numberMatched": 123,
+                  "numberReturned": 2,
+                  "features": [
+                    {
+                      "type": "Feature",
+                      "id": "123",
+                      "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                          "..."
+                        ]
+                      },
+                      "properties": {
+                        "function": "residential",
+                        "floors": "2",
+                        "lastUpdate": "2015-08-01T12:34:56Z"
+                      }
+                    },
+                    {
+                      "type": "Feature",
+                      "id": "132",
+                      "geometry": {
+                        "type": "Polygon",
+                        "coordinates": [
+                          "..."
+                        ]
+                      },
+                      "properties": {
+                        "function": "public use",
+                        "floors": "10",
+                        "lastUpdate": "2013-12-03T10:15:37Z"
+                      }
+                    }
+                  ]
                 }
               },
-              "application/x-netcdf": {},
+              "application/json": {},
               "text/xml": {}
             }
           },
@@ -951,26 +1050,20 @@
     "/collections/{collectionId}/items/{itemID}": {
       "get": {
         "tags": [
-          "Data"
+          "Collection data queries"
         ],
-        "summary": "Query end point for item queries  of collection {collectionId} defined by an item id",
-        "description": "Return the item defined by itemID",
+        "summary": "Return item {itemId} from collection {collectionId}",
+        "description": "Query end point to retrieve data from collection {collectionId} using a unique identifier",
         "operationId": "GetDataForItem",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
           },
           {
-            "$ref": "#/components/parameters/bbox"
-          },
-          {
-            "$ref": "#/components/parameters/time"
-          },
-          {
             "name": "itemID",
             "in": "path",
             "required": true,
-            "description": "Retreive an object generated by another EDR query, using its uniques identifier.",
+            "description": "Retrieve data from the collection using a unique identifier.",
             "schema": {
               "type": "string"
             }
@@ -980,12 +1073,56 @@
           "200": {
             "description": "Data ranges required to construct valid queries for the choosen data collection",
             "content": {
+              "application/geo+json": {
+                "schema": {
+                  "$ref": "#/components/schemas/featureGeoJSON"
+                },
+                "example": {
+                  "type": "Feature",
+                  "links": [
+                    {
+                      "href": "http://data.example.com/id/building/123",
+                      "rel": "canonical",
+                      "title": "canonical URI of the building"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items/123.json",
+                      "rel": "self",
+                      "type": "application/geo+json",
+                      "title": "this document"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings/items/123.html",
+                      "rel": "alternate",
+                      "type": "text/html",
+                      "title": "this document as HTML"
+                    },
+                    {
+                      "href": "http://data.example.com/collections/buildings",
+                      "rel": "collection",
+                      "type": "application/geo+json",
+                      "title": "the collection document"
+                    }
+                  ],
+                  "id": "123",
+                  "geometry": {
+                    "type": "Polygon",
+                    "coordinates": [
+                      "..."
+                    ]
+                  },
+                  "properties": {
+                    "function": "residential",
+                    "floors": "2",
+                    "lastUpdate": "2015-08-01T12:34:56Z"
+                  }
+                }
+              },
               "application/json": {
                 "schema": {
                   "$ref": "#/components/schemas/CoverageJSON"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1040,7 +1177,7 @@
     "/collections/{collectionId}/instance": {
       "get": {
         "tags": [
-          "Metadata"
+          "Collection metadata"
         ],
         "summary": "List data instances of {collectionId}",
         "description": "This will provide list of the avalable instances of the collection Use content negotiation to request HTML or JSON.",
@@ -1087,13 +1224,13 @@
         }
       ]
     },
-    "/collections/{collectionId}/instance/{instanceId}/point": {
+    "/collections/{collectionId}/instance/{instanceId}/position": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
-        "summary": "Query end point for point queries of instance {instanceId} of collection {collectionId}",
-        "description": "Query end point for point queries",
+        "summary": "Query end point for position queries of instance {instanceId} of collection {collectionId}",
+        "description": "Query end point for position queries",
         "operationId": "getInstanceDataForPoint",
         "parameters": [
           {
@@ -1103,48 +1240,22 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/pointCoords"
           },
           {
-            "$ref": "#/components/parameters/parametername"
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "name": "within",
-            "in": "query",
-            "description": "Defines radius of area around defined coordinates to include in the data selection",
-            "required": false,
-            "example": 10,
-            "schema": {
-              "type": "number"
-            }
-          },
-          {
-            "name": "withinUnits",
-            "in": "query",
-            "description": "Distance units for the within parameter",
-            "required": false,
-            "example": "KM",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -1166,6 +1277,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1174,7 +1296,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1186,7 +1307,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1208,14 +1328,14 @@
         }
       }
     },
-    "/collections/{collectionId}/instance/{instanceId}/polygon": {
+    "/collections/{collectionId}/instance/{instanceId}/radius": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
-        "summary": "Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon",
-        "description": "Return the data values for the data Polygon defined by the query parameters",
-        "operationId": "GetInstanceDataForArea",
+        "summary": "Query end point to return data within defined radius of a point for an instance {instanceId} of collection {collectionId}",
+        "description": "Query end point to return all data within a defined radius of the defined point location queries",
+        "operationId": "getInstanceDataForRadius",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
@@ -1224,49 +1344,28 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/radiusCoords"
           },
           {
-            "$ref": "#/components/parameters/parametername"
+            "$ref": "#/components/parameters/z"
           },
           {
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/within"
+          },
+          {
+            "$ref": "#/components/parameters/withinUnits"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "z",
-            "in": "query",
-            "description": "Define the vertical level to return data from \ni.e. Z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nZ=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -1288,6 +1387,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1296,7 +1406,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1308,7 +1417,116 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/instance/{instanceId}/area": {
+      "get": {
+        "tags": [
+          "Instance data queries"
+        ],
+        "summary": "Query end point for area queries of instance {instanceId} of collection {collectionId} defined by a polygon",
+        "description": "Return the data values for the data area defined by the query parameters",
+        "operationId": "GetInstanceDataForArea",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/areaCoords"
+          },
+          {
+            "$ref": "#/components/parameters/z"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionX"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionY"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
               "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
               "text/xml": {}
             }
           },
@@ -1333,7 +1551,7 @@
     "/collections/{collectionId}/instance/{instanceId}/cube": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube",
         "description": "Return the data values for the data Cube defined by the query parameters",
@@ -1346,67 +1564,34 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/cubeCoords"
           },
           {
-            "$ref": "#/components/parameters/parametername"
+            "$ref": "#/components/parameters/minZ"
+          },
+          {
+            "$ref": "#/components/parameters/maxZ"
           },
           {
             "$ref": "#/components/parameters/time"
           },
           {
+            "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionX"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionY"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionZ"
+          },
+          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate an error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationX",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native X coordinate resolution, the format is:\n\ninterpolationX=R{interpolation resolution\n}/{interpolation method}\n\ne.g. interpolationX=R15/linear\n\nThe interpolation resolution is the number of intervals the user requires between the minimum X value of the bounding box and the maximum X value of the bounding box.\n\nThe valid interpolation method values are available in the results of the capabilities query methods of this API\n\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationY",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Y coordinate \nresolution, the format is:\n\ninterpolationY=R{interpolation resolution}/{interpolation method} \ne.g.\ninterpolationY=R5/linear\n\nThe interpolation resolution is the number of intervals the user requires between\nthe minimum Y value of the bounding box and the maximum Y value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "minZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the bottom of the cube \ni.e. minZ=level\n\nfor instance if bottom of cube is at the 950hPa pressure level\n\nminZ=850\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "maxZ",
-            "in": "query",
-            "required": true,
-            "description": "Define the location of the top of the cube \ni.e. maxZ=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmaxZ=650\n\nThe units will default to those of the coordinate reference system.  If no CRS is defined the values will be assumed to be height above sea level in metres. \n",
-            "schema": {
-              "type": "string"
-            }
-          },
-          {
-            "name": "interpolationZ",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is\n\ninterpolationZ=R{interpolation resolution}/{interpolation method} \n\ne.g. interpolationZ=R5/cubic spline\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -1428,6 +1613,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1436,7 +1632,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1448,7 +1643,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1473,7 +1667,7 @@
     "/collections/{collectionId}/instance/{instanceId}/trajectory": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for trajectory queries of instance {instanceId} of collection {collectionId} defined by a wkt linestring and a iso8601 time period",
         "description": "Return the data values for the data Polygon defined by the query parameters",
@@ -1486,31 +1680,16 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/trajectoryCoords"
           },
           {
             "$ref": "#/components/parameters/parametername"
           },
           {
-            "$ref": "#/components/parameters/time"
-          },
-          {
             "$ref": "#/components/parameters/crs"
           },
           {
-            "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "$ref": "#/components/parameters/interpolationZ"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
-            }
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -1532,6 +1711,17 @@
           "308": {
             "description": "Request will take a significant time to process"
           },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
           "404": {
             "description": "Requested data not found.",
             "content": {
@@ -1540,7 +1730,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1552,7 +1741,6 @@
                   "$ref": "#/components/schemas/exception"
                 }
               },
-              "application/x-netcdf": {},
               "text/xml": {}
             }
           },
@@ -1577,7 +1765,7 @@
     "/collections/{collectionId}/instance/{instanceId}/corridor": {
       "get": {
         "tags": [
-          "Data"
+          "Instance data queries"
         ],
         "summary": "Query end point for Corridor queries of instance {instanceId} of collection {collectionId} defined by a polygon",
         "description": "Return the data values for the Corridor defined by the query parameters",
@@ -1590,10 +1778,117 @@
             "$ref": "#/components/parameters/instanceId"
           },
           {
-            "$ref": "#/components/parameters/outputFormat"
+            "$ref": "#/components/parameters/corridorCoords"
           },
           {
             "$ref": "#/components/parameters/parametername"
+          },
+          {
+            "$ref": "#/components/parameters/corridorWidth"
+          },
+          {
+            "$ref": "#/components/parameters/corridorHeight"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionX"
+          },
+          {
+            "$ref": "#/components/parameters/resolutionZ"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
+            }
+          },
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "400": {
+            "description": "Invalid request.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
+            }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/instance/{instanceId}/locations/{locID}": {
+      "get": {
+        "tags": [
+          "Instance data queries"
+        ],
+        "summary": "Query end point for queries of instance {instanceId} of collection {collectionId} defined by a location id",
+        "description": "Return data the for the location defined by locid",
+        "operationId": "GetInstanceDataForLocation",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/instanceId"
+          },
+          {
+            "$ref": "#/components/parameters/locID"
           },
           {
             "$ref": "#/components/parameters/time"
@@ -1602,32 +1897,91 @@
             "$ref": "#/components/parameters/crs"
           },
           {
-            "$ref": "#/components/parameters/interpolation"
-          },
-          {
-            "name": "coords",
-            "in": "query",
-            "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\ncoords=LINESTRING (x1 y1, x2 y2, x3 y3, .... xn yn)\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\na trajectory which involves changes in height would be defined as follows\n\ncoords=LINESTRING (x1 y1 z1, x2 y2 z2, x3 y3 z3, .... xn yn zn)\n\nwhere z is the height value.  If the specified CRS does not define the height units the heights will units will default to `METERS` above mean sea level           \n\nFor instance a polygon that roughly describes an area that follows a section\nof the M5 Motorway in WGS84 would look like \n\ncoords=LINESTRING(-3.45 50.78 ,-3.45 50.78,-3.46 50.78,-3.46 50.77,-3.46 50.76, -3.46 50.75)\n\nif changes in height were also required \n\ncoords=LINESTRING(-3.45 50.78 24.0,-3.45 50.78 24.0,-3.46 50.78 31.0,-3.46 50.77 21.9,-3.46 50.76 19.9, -3.46 50.75 24.9)\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
-            "required": true,
-            "schema": {
-              "type": "string"
+            "$ref": "#/components/parameters/outputFormat"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/CoverageJSON"
+                }
+              },
+              "application/x-netcdf": {},
+              "text/xml": {}
             }
           },
-          {
-            "name": "interpolationWidth",
-            "in": "query",
-            "description": "This is defined if the query doesn't require data at its native coordinate \nresolution, the format is\n\ninterpolationXY=R{interpolation resolution}/{interpolation method}/{corridor width} \n\ne.g. interpolationWidth=R5/linear/10\n\nThe `corridor width` is the total width of the corridor where the X,Y coordinates are the centre point of the corridor.  The corridor width will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be WGS84 lat lon values. \n\nThe `interpolation resolution` is the number of intervals the user requires in the specified cooridor with\n\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
+          "202": {
+            "description": "Data request still being processed"
+          },
+          "308": {
+            "description": "Request will take a significant time to process"
+          },
+          "404": {
+            "description": "Requested data not found.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
             }
           },
-          {
-            "name": "interpolationHeight",
-            "in": "query",
-            "description": "This is defined if the query requires interpolation in the vertical axis\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{corridor height} \n\ne.g. interpolationZ=R5/cubic_spline/10\n\nThe `corridor height` is the total width of the corridor where the Z coordinates are the centre point of the corridor.  The corridor height will be in the default units of the requested coordinate reference system, if no CRS is specified the coordinates will be assumed to be height above mean sea level and the units metres. \n\nThe `interpolation resolution` is the number of intervals the user requires within the specified corridor height.\n\nThe `interpolation method` is the algorithm to use for interpolation. A list of the supported interpolation methods is provided in the API metadata responses.\n",
-            "schema": {
-              "type": "string"
+          "413": {
+            "description": "Requested data volume to large to be handled by this service.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/xml": {}
             }
+          },
+          "default": {
+            "description": "An error occured.",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/exception"
+                }
+              },
+              "text/html": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/collections/{collectionId}/locations/{locID}": {
+      "get": {
+        "tags": [
+          "Collection data queries"
+        ],
+        "summary": "Query end point for queries of collection {collectionId} defined by a location id",
+        "description": "Return data the for the location defined by locid",
+        "operationId": "GetCollectionDataForLocation",
+        "parameters": [
+          {
+            "$ref": "#/components/parameters/collectionId"
+          },
+          {
+            "$ref": "#/components/parameters/locID"
+          },
+          {
+            "$ref": "#/components/parameters/time"
+          },
+          {
+            "$ref": "#/components/parameters/crs"
+          },
+          {
+            "$ref": "#/components/parameters/outputFormat"
           }
         ],
         "responses": {
@@ -1691,14 +2045,14 @@
         }
       }
     },
-    "/collections/{collectionId}/instance/{instanceId}/items": {
+    "/collections/{collectionId}/instance/{instanceId}/locations": {
       "get": {
         "tags": [
-          "Data"
+          "Instance metadata"
         ],
-        "summary": "List available items for the instance",
-        "description": "List the items in the instance of the collection",
-        "operationId": "ListDataInstanceItems",
+        "summary": "List available location identifers for the instance",
+        "description": "List the locations available for the instance of the collection",
+        "operationId": "ListDataInstanceLocations",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
@@ -1774,40 +2128,28 @@
         }
       }
     },
-    "/collections/{collectionId}/instance/{instanceId}/items/{itemID}": {
+    "/collections/{collectionId}/locations": {
       "get": {
         "tags": [
-          "Data"
+          "Collection metadata"
         ],
-        "summary": "Query end point for item queries of instance {instanceId} of collection {collectionId} defined by an item id",
-        "description": "Return the item defined by itemID",
-        "operationId": "GetInstanceDataForItem",
+        "summary": "List available location identifers for the collection",
+        "description": "List the locations available for the collection",
+        "operationId": "ListCollectionDataLocations",
         "parameters": [
           {
             "$ref": "#/components/parameters/collectionId"
-          },
-          {
-            "$ref": "#/components/parameters/instanceId"
           },
           {
             "$ref": "#/components/parameters/bbox"
           },
           {
             "$ref": "#/components/parameters/time"
-          },
-          {
-            "name": "itemID",
-            "in": "path",
-            "required": true,
-            "description": "Retreive an object generated by another EDR query, using its uniques identifier.",
-            "schema": {
-              "type": "string"
-            }
           }
         ],
         "responses": {
           "200": {
-            "description": "Data ranges required to construct valid queries for the choosen data collection",
+            "description": "Data ranges required to construct valid queries for the choosen instance of the data collection",
             "content": {
               "application/json": {
                 "schema": {
@@ -2079,9 +2421,6 @@
             "type": "string",
             "example": "NOAA Global Forecast surface values"
           },
-          "dataDetails": {
-            "$ref": "#/components/schemas/dataDetails"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -2104,21 +2443,6 @@
           },
           "extent": {
             "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.yaml"
-          },
-          "itemType": {
-            "type": "string",
-            "description": "Structure of the returned output from the query",
-            "enum": [
-              "Grid",
-              "Point",
-              "Profile",
-              "Trajectory",
-              "PointSeries"
-            ],
-            "example": "Grid"
-          },
-          "supportedQueryTypes": {
-            "$ref": "#/components/schemas/supportedQueryTypes"
           },
           "crs": {
             "description": "The coordinate reference systems in which geometries may be retrieved. Coordinate reference systems are identified by a URI. The first coordinate reference system is the coordinate reference system that is used by default. This is always \"http://www.opengis.net/def/crs/OGC/1.3/CRS84\", i.e. WGS84 longitude/latitude.",
@@ -2206,9 +2530,6 @@
             "type": "string",
             "example": "NOAA Global Forecast surface values from the 2019-08-01T00:00:00Z model run"
           },
-          "dataDetails": {
-            "$ref": "#/components/schemas/dataDetails"
-          },
           "links": {
             "type": "array",
             "items": {
@@ -2289,49 +2610,6 @@
             "type": "array",
             "items": {
               "$ref": "#/components/schemas/crsObject"
-            }
-          },
-          "polygonQuery": {
-            "type": "object",
-            "properties": {
-              "interpolationX": {
-                "description": "X coordinate interpolation options",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "interpolationY": {
-                "description": "Y coordinate interpolation options",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "BBOXOnly": {
-                "type": "boolean",
-                "description": "If true this flag defines that the API will only support simple polygons defined by a rectangular area."
-              }
-            }
-          },
-          "pointQuery": {
-            "type": "object",
-            "properties": {
-              "interpolation": {
-                "description": "interpolation options",
-                "type": "array",
-                "items": {
-                  "type": "string"
-                }
-              },
-              "withinUnits": {
-                "type": "array",
-                "items": {
-                  "type": "string",
-                  "description": "supported distance units if the query supports a within a defined radius query.  If withinUnits is not defined the API does not support the radius query.",
-                  "example": "km"
-                }
-              }
             }
           },
           "outputFormat": {
@@ -3211,107 +3489,399 @@
           "uomLabel"
         ]
       },
-      "dataDetails": {
+      "EDRfeatureCollectionGeoJSON": {
         "type": "object",
+        "required": [
+          "type",
+          "features"
+        ],
         "properties": {
-          "@context": {
-            "type": "object",
-            "required": [
-              "@version",
-              "xsd",
-              "dc",
-              "dcam"
-            ],
-            "properties": {
-              "@version": {
-                "type": "number",
-                "example": [
-                  1.1
-                ]
-              },
-              "xsd": {
-                "type": "string",
-                "title": "XSD schema location",
-                "default": "http://www.w3.org/2001/XMLSchema#",
-                "example": "http://www.w3.org/2001/XMLSchema#"
-              },
-              "dc": {
-                "type": "string",
-                "title": "Dublin Core Metadata terms",
-                "default": "http://purl.org/dc/terms/",
-                "example": "http://purl.org/dc/terms/"
-              },
-              "dcam": {
-                "type": "string",
-                "title": "Terms used in the description of Dublin Core Metatdata Items",
-                "default": "http://purl.org/dc/dcam/",
-                "example": "http://purl.org/dc/dcam/"
-              }
-            }
-          },
-          "dc:accessRights": {
-            "type": "object"
-          },
-          "dc:source": {
-            "type": "object",
-            "title": "Detailed Information about the source dataset",
-            "required": [
-              "dc:title",
-              "dc:identifier"
-            ],
-            "properties": {
-              "dc:title": {
-                "type": "string",
-                "example": [
-                  "datasource name"
-                ]
-              },
-              "dc:identifier": {
-                "type": "string",
-                "example": "https://www.link_to_datasource_details.org"
-              }
-            }
-          },
-          "dc:created": {
+          "type": {
             "type": "string",
-            "title": "Date that the source dataset was created",
-            "example": "2018-01-01T20:00:15Z"
+            "enum": [
+              "FeatureCollection"
+            ]
           },
-          "dc:publisher": {
-            "type": "string",
-            "title": "Contact details for the publisher of the collection",
-            "example": "contact@publisher.org"
-          },
-          "dcam:domainIncludes": {
+          "features": {
             "type": "array",
-            "title": "list of the names of the parameters available in the collection",
             "items": {
-              "type": "string",
-              "example": "temperature"
+              "$ref": "#/components/schemas/featureGeoJSON"
+            }
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
+            }
+          },
+          "timeStamp": {
+            "$ref": "#/components/schemas/timeStamp"
+          },
+          "numberMatched": {
+            "$ref": "#/components/schemas/numberMatched"
+          },
+          "numberReturned": {
+            "$ref": "#/components/schemas/numberReturned"
+          }
+        }
+      },
+      "featureGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "geometry",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Feature"
+            ]
+          },
+          "geometry": {
+            "$ref": "#/components/schemas/geometryGeoJSON"
+          },
+          "properties": {
+            "$ref": "#/components/schemas/EDRProperties"
+          },
+          "id": {
+            "oneOf": [
+              {
+                "type": "string"
+              },
+              {
+                "type": "integer"
+              }
+            ]
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
             }
           }
         }
       },
-      "supportedQueryTypes": {
-        "type": "array",
-        "title": "list of the query types supported by the collection",
-        "items": {
-          "type": "string",
-          "enum": [
-            "wfs",
-            "wms",
-            "wcs",
-            "cube",
-            "point",
-            "polygon",
-            "trajectory",
-            "corridor"
-          ],
-          "example": [
-            "wfs",
-            "point",
-            "polygon"
-          ]
+      "geometryGeoJSON": {
+        "oneOf": [
+          {
+            "$ref": "#/components/schemas/pointGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/multipointGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/linestringGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/multilinestringGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/polygonGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/multipolygonGeoJSON"
+          },
+          {
+            "$ref": "#/components/schemas/geometrycollectionGeoJSON"
+          }
+        ]
+      },
+      "geometrycollectionGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "geometries"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "GeometryCollection"
+            ]
+          },
+          "geometries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/geometryGeoJSON"
+            }
+          }
+        }
+      },
+      "landingPage": {
+        "type": "object",
+        "required": [
+          "links"
+        ],
+        "properties": {
+          "title": {
+            "type": "string",
+            "example": "Buildings in Bonn"
+          },
+          "description": {
+            "type": "string",
+            "example": "Access to data about buildings in the city of Bonn via a Web API that conforms to the OGC API Features specification."
+          },
+          "links": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/link"
+            }
+          }
+        }
+      },
+      "linestringGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "LineString"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "multilinestringGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MultiLineString"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      },
+      "multipointGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MultiPoint"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 2,
+              "items": {
+                "type": "number"
+              }
+            }
+          }
+        }
+      },
+      "multipolygonGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "MultiPolygon"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "minItems": 4,
+                "items": {
+                  "type": "array",
+                  "minItems": 2,
+                  "items": {
+                    "type": "number"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "numberMatched": {
+        "description": "The number of features of the feature type that match the selection\nparameters like `bbox`.",
+        "type": "integer",
+        "minimum": 0,
+        "example": 127
+      },
+      "numberReturned": {
+        "description": "The number of features in the feature collection.\n\nA server may omit this information in a response, if the information\nabout the number of features is not known or difficult to compute.\n\nIf the value is provided, the value shall be identical to the number\nof items in the \"features\" array.",
+        "type": "integer",
+        "minimum": 0,
+        "example": 10
+      },
+      "pointGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates",
+          "properties"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Point"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "minItems": 2,
+            "items": {
+              "type": "number"
+            }
+          },
+          "properties": {
+            "$ref": "#/components/schemas/EDRProperties"
+          }
+        }
+      },
+      "polygonGeoJSON": {
+        "type": "object",
+        "required": [
+          "type",
+          "coordinates"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": [
+              "Polygon"
+            ]
+          },
+          "coordinates": {
+            "type": "array",
+            "items": {
+              "type": "array",
+              "minItems": 4,
+              "items": {
+                "type": "array",
+                "minItems": 2,
+                "items": {
+                  "type": "number"
+                }
+              }
+            }
+          }
+        }
+      },
+      "timeStamp": {
+        "description": "This property indicates the time and date when the response was generated.",
+        "type": "string",
+        "format": "date-time",
+        "example": "2017-08-17T08:05:32Z"
+      },
+      "EDRProperties": {
+        "type": "object",
+        "title": "EDR GeoJSON Properties",
+        "description": "Properties to describe existing EDR features -- may be real-world or virtual sampling features.",
+        "default": {},
+        "example": [
+          {
+            "datetime": "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z",
+            "label": "Monitoring site name",
+            "parametername": [
+              "velocity",
+              "temperature"
+            ],
+            "uri": "https://feature_identifier"
+          }
+        ],
+        "required": [
+          "datetime",
+          "parametername",
+          "label",
+          "uri"
+        ],
+        "properties": {
+          "datetime": {
+            "type": "string",
+            "title": "Date/time Domain",
+            "description": "Either a date-time or a period string that adheres to RFC 3339. Indicates the time instant or period for whidh data are available from the EDR feature.",
+            "default": "",
+            "example": [
+              "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z"
+            ]
+          },
+          "parametername": {
+            "type": "array",
+            "title": "Available Parameters",
+            "description": "Unique IDs of available parameters, this is the value used for querying the data and corresponds to an ID in the parameter metadata of the collection.",
+            "default": [],
+            "items": {
+              "type": "string",
+              "title": "Parameter ID list",
+              "description": "Each entry should contain one parameter ID that can be used to query against the feature.",
+              "default": "",
+              "example": [
+                "velocity",
+                "temperature"
+              ]
+            }
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "description": "A label such as a site name or other text to use on a link.",
+            "default": "",
+            "example": [
+              "Site A"
+            ]
+          },
+          "uri": {
+            "type": "string",
+            "title": "A URI identifying the feature.",
+            "description": "An identifier uri for the feature. May be a uri for a real-world sampling feature of a uri to retrieve the particular feature of the EDR service instance.",
+            "default": "",
+            "example": [
+              "https://feature_identifier"
+            ]
+          }
         }
       },
       "crsObject": {
@@ -3367,9 +3937,9 @@
       },
       "crs": {
         "name": "crs",
-        "required": true,
-        "in": "path",
+        "in": "query",
         "description": "identifier (id) of the coordinate system to return data in list of valid crs identifiers for the chosen collection are defined in the metadata responses.  If not supplied the coordinate reference system will default to WGS84.",
+        "required": false,
         "example": "native",
         "schema": {
           "type": "string"
@@ -3394,7 +3964,7 @@
         }
       },
       "outputFormat": {
-        "name": "outputFormat",
+        "name": "outputformat",
         "in": "query",
         "description": "Format to return query results in",
         "required": false,
@@ -3416,20 +3986,169 @@
           }
         }
       },
-      "interpolation": {
-        "name": "interpolation",
+      "resolution": {
+        "name": "resolution",
         "in": "query",
-        "description": "This defines the algorithm that identifies the best data match for the requested location\n  The valid interpolation method values are available in the results of the \n  capabilities query methods of this API\n",
+        "description": "Defined if the user requires data at a different resolution from the native resolution of the data along the requested path\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the path\n  \n  i.e. resolution=10 \n  \n  would retrieve 10 values along the path from the first coordinate value to the last coordinate value (i.e. a value at both the first and last coordinates and 8 values between).\n",
         "schema": {
           "type": "string"
         }
       },
-      "interpolationZ": {
-        "name": "interpolationZ",
+      "corridorWidth": {
+        "name": "corridorwidth",
         "in": "query",
-        "description": "This is defined if the query doesn't require data at its native Z coordinate \nresolution, the format is:\n\ninterpolationZ=R{interpolation resolution}/{interpolation method}/{height}\ne.g.\ninterpolationZ=R5/linear/10\n\nThe interpolation resolution is the number of intervals the user requires between\nthe a Z value of the bounding box and the maximum Z value of the bounding box.\n\nThe valid interpolation method values are available in the results of the \ncapabilities query methods of this API\n",
+        "description": "width of the corridor and the units of the width value\n\nThe width value represents the whole width of the corridor where\nthe position supplied in the `coords` query parameter is the centre\npoint of the corridor\n\n`corridorwidth={width}/{units}`\n\ne.g.  corridorwidth=100/m\n\nWould be a request for a corridor 100m wide with the coords parameter values being the centre point of the requested corridor, the request would be for data values 50m either side of the coordinates defined in the coords parameter. \n\nThe width units supported by the collection will be provided in\nthe API metadata responses \n",
         "schema": {
           "type": "string"
+        }
+      },
+      "corridorHeight": {
+        "name": "corridorheight",
+        "in": "query",
+        "description": "height of the corridor and the units of the height value\n\nThe height value represents the whole height of the corridor where\nthe position supplied in the `coords` query parameter is the centre\npoint of the corridor\n\n`corridorheight={height}/{units}`\n\ne.g.  corridorheight=100/m\n\nWould be a request for a corridor 100m high with the coords parameter values being the centre point of the requested corridor, the request would be for data values 50m either side of the coordinates defined in the coords parameter. \n\nThe height units supported by the collection will be provided in\nthe API metadata responses\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "minZ": {
+        "name": "minz",
+        "in": "query",
+        "required": true,
+        "description": "Define the location of the bottom of the cube \ni.e. minz=level\n\nfor instance if bottom of cube is at the 950hPa pressure level\n\nminZ=850\n\nThe units will default to those of the coordinate reference system.  \nIf no CRS is defined the values will be assumed to be \nheight above sea level in metres. \n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "maxZ": {
+        "name": "maxz",
+        "in": "query",
+        "required": true,
+        "description": "Define the location of the top of the cube \ni.e. maxz=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmaxz=650\n\nThe units will default to those of the coordinate reference system.  \nIf no CRS is defined the values will be assumed to be \nheight above sea level in metres. \n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "resolutionX": {
+        "name": "resolutionx",
+        "in": "query",
+        "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the x-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the x-axis\n  \n  i.e. resolutionx=10 \n  \n  would retrieve 10 values along the x-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).\n\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "resolutionY": {
+        "name": "resolutiony",
+        "in": "query",
+        "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the y-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the y-axis\n  \n  i.e. resolutiony=10 \n  \n  would retrieve 10 values along the y-axis from the minimum y coordinate to maximum y coordinate (i.e. a value at both the minimum y and maximum y coordinates and 8 values between).\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "resolutionZ": {
+        "name": "resolutionz",
+        "in": "query",
+        "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the z-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the z-axis\n  \n  i.e. resolutionz=10 \n  \n  would retrieve 10 values along the z-axis from the minimum z coordinate to maximum z  coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).\n\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "pointCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "radiusCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "location(s) to return data for, the coordinates are defined by a Well Known Text\n(wkt) string. to retrieve a single location :\n\nPOINT(x y) i.e. POINT(0 51.48) for Greenwich, London\n\nAnd for a list of locations\n\nMULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))\n\ni.e.\nMULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))\n\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nthe coordinate values will depend on the CRS parameter, if this is not defined\nthe values will be assumed to WGS85 values (i.e x=longitude and y=latitude)\n",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "within": {
+        "name": "within",
+        "in": "query",
+        "description": "Defines radius of area around defined coordinates to include in the data selection",
+        "required": true,
+        "example": 10,
+        "schema": {
+          "type": "number"
+        }
+      },
+      "withinUnits": {
+        "name": "withinunits",
+        "in": "query",
+        "description": "Distance units for the within parameter",
+        "required": true,
+        "example": "KM",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "areaCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "z": {
+        "name": "z",
+        "in": "query",
+        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "cubeCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the cube\nare selected. \n\nThe cubes x y coordinates are defined using **Rectangular Polygon** as Well Known Text\n\ncoords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \nif crs is not defined the values will be assumed to be \nWGS84 longitude/latitude coordinates and heights will be assumed \nto be in metres above mean sea level  \n\nFor instance a cube that roughly describes an area that contains \nSouth West England in WGS84 would look like\n\ncoords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))\n\n`If the WKT does not define a Rectangle the service will generate \nan 400 error message`\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "trajectoryCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe trajectory is defined using a Well Known Text string following \n\nA 2D trajectory, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D trajectory, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D trajectory, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D trajectory, through a 3D volume but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)\n\nwhere `Z` is the height value.  \n`If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`\n\nand `M` the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See\nhttps://en.wikipedia.org/wiki/Unix_time",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "corridorCoords": {
+        "name": "coords",
+        "in": "query",
+        "description": "Only data that has a geometry that intersects the area defined by the linestring\nare selected. \n\nThe centre of the corridor is defined using a Well Known Text string following \n\nA 2D corridor, on the surface of earth, at the same time: \n coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)\n\nA 3D corridor centre, on the surface of the earth but over a time range:\ncoords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)\n\nA 3D corridor centre, through a 3D volume with height or depth, for the same time:\ncoords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)\n\nA 4D corridor, through a 3D corridor centre but over a time range:\ncoords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)\n\nwhere `Z` is the height value.  \n`If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`\n\nand `M` the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See\nhttps://en.wikipedia.org/wiki/Unix_time",
+        "required": true,
+        "schema": {
+          "type": "string"
+        }
+      },
+      "locID": {
+        "name": "locID",
+        "in": "path",
+        "required": true,
+        "description": "Retreive data for the location defined by locID (i.e. London_Heathrow, EGLL, 03772 etc)",
+        "schema": {
+          "type": "string"
+        }
+      },
+      "crsName": {
+        "name": "outputcrs",
+        "in": "query",
+        "schema": {
+          "type": "string",
+          "example": "CRS84"
         }
       }
     }
@@ -3440,12 +4159,20 @@
       "description": "Essential characteristics of the information available from the API."
     },
     {
-      "name": "Metadata",
-      "description": "Essential characteristics of the collection including information about the data."
+      "name": "Collection metadata",
+      "description": "Description of the information available from the collections"
     },
     {
-      "name": "Data",
-      "description": "Data queries."
+      "name": "Instance metadata",
+      "description": "Description of the information available from instances of a collection"
+    },
+    {
+      "name": "Collection data queries",
+      "description": "Data queries available."
+    },
+    {
+      "name": "Instance data queries",
+      "description": "Data queries available on instances of the collection."
     }
   ]
 }

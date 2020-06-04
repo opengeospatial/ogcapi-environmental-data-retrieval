@@ -2,11 +2,11 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/withinUnits-definition* 
-^|A |Each resource collection operation MAY support a parameter `withinUnits`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
-^|B | A withinUnits value MUST be one of the values defined in the instance metadata:
+^|A |Each resource collection operation MAY support a parameter `withinunits`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|B | A withinunits value MUST be one of the values defined in the instance metadata:
 [source,YAML]
 ----
-name: withinUnits
+name: withinunits
 in: query
 required: false
 schema:

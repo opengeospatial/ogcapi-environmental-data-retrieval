@@ -2,15 +2,13 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationHeight-response*
-^|A|If the `interpolationHeight` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed intervals.
-^|B |The `interpolationHeight` information is an interpolation method an interval and the corridor height. 
+^|A|If the `interpolationz` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed samples.
+^|B |The `interpolationz` information is the interpolation method and number of samples to return. 
 
 [source,java]
 ----
-interpolationHeight = "R"interval "/" interpolation-method "/" height of corridor
+interpolationz = "R"interval "/" interpolation-method
 ---- 
 ^|C |The coordinates of the `coords` parameter define the centre point of the corridor. 
-^|D |The  height of corridor parameter is the total height of the required corridor. 
-^|D |The  height of corridor parameter is the total height of the required corridor. 
-^|E |If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.
+^|D |If the interpolation method value does not match one of the listed methods a 403 error message should be returned.
 |===

@@ -10,6 +10,9 @@ location(s) to return data for, the coordinates are defined by a Well Known Text
 
 POINT(x y) 
 
+A point at height `z`
+POINT(x y z)
+
 And for a list of locations
 
 MULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))
@@ -30,13 +33,25 @@ retrieve data for Greenwich, London
 `coords=POINT(0 51.48)`
 =================
 
-
 .Multiple locations
 =================
 retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
 
 `coords=MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
 =================
+
+
+====== Parameter within
+
+include::../REQ_rc-within-definition.adoc[]
+
+include::../REQ_rc-within-response.adoc[]
+
+====== Parameter withinunits
+
+include::../REQ_rc-withinUnits-definition.adoc[]
+
+include::../REQ_rc-withinUnits-response.adoc[]
 
 ==== Parameter z
 
@@ -49,9 +64,9 @@ i.e. z=ALL
 .A z value
 ===========
 
-for instance if the 850hPa pressure level is being queried
+for instance if the 80m level is being queried
 
-z=850
+z=80
 ===========
 
 .Return data at all available vertical levels
@@ -61,9 +76,6 @@ z=ALL
 ===========
 
 `When not specified the API MUST return data from all available levels`
-
-    
-
 
 
 
