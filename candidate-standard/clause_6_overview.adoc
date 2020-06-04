@@ -28,14 +28,14 @@ NOTE: Add the rest of the API_EDR paths
 or +
 `service-doc` |API Description (optional)
 |<<conformance-classes,{root}/conformance>> |`conformance` |Conformance Classes
-|<<collections,{root}/collections>> |`data` |Metadata describing the spatial collections available from this API.
-|<<collectionInfo,{root}/collections/{coverageid}>> | |Metadata describing the collection which has the unique identifier `{collectionid}`
+|<<collections,{root}/collections>> |`data` |Metadata describing the collections of data available from this API.
+|<<collectionInfo,{root}/collections/{coverageid}>> | |Metadata describing the collection of data which has the unique identifier `{collectionid}`
 |===
 
 Where:
 
 * {root} = Base URI for the API server
-* {collectionid} = an identifier for a specific collection
+* {collectionid} = an identifier for a specific collection of data
 
 [[dependencies-overview]]
 === Dependencies
