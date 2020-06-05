@@ -14,10 +14,10 @@ Neiter of these encodings are mandatory and an implementation of the <<rc_core-s
 
 Geographic information that is only accessible in formats like GeoJSON or GML has two issues:
 
-* The data is not discoverable using the most common mechanism for discovering information, that is the search engines of the Web,
+* The data is not discoverable by Web search engines,
 * The data can not be viewed directly in a browser - additional tools are required to view the data.
 
-Therefore, sharing data on the Web should include publication in HTML. To be consistent with the Web, it should be done in a way that enables users and search engines to access all data.
+Therefore, sharing data on the Web should include publication in HTML. To be consistent with the Web, it should be done in a way that enables users and search engines to access all the data.
 
 This is discussed in detail in <<SDWBP,W3C Best Practice>>. This standard therefore <<rec_html,recommends>> supporting HTML as an encoding.
 
@@ -34,7 +34,7 @@ include::requirements/html/REQ_html-conformance.adoc[]
 
 GeoJSON is a commonly used format that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended if the resource can be represented in GeoJSON for the intended use.
 
-The GeoJSON conformance class is defined in API-Common. The API-EDR standard extends that GeoJSON conformance class.
+The JSON conformance class is defined in API-Common. The API-EDR standard extends that JSON conformance class to support GeoJSON.
 
 include::requirements/requirements_class_json.adoc[]
 
