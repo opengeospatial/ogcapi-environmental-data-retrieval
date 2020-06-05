@@ -18,7 +18,7 @@ set of conformance test modules that must be applied to receive a single certifi
  NOTE: When no ambiguity is possible, the word _test_ may be left out, so conformance test class maybe called a conformance class.
 
 [[dataset-definition]]
-=== dataset
+=== Dataset
 collection of data, published or curated by a single agent, and available for access or download in one or more formats (DCAT)
 
 [[distribution-definition]]
