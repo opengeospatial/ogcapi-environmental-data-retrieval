@@ -638,9 +638,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_parameter_z_3">7.10.8. Parameter z</a></li>
 <li><a href="#_cube">7.10.9. Cube</a></li>
 <li><a href="#_trajectory_corridor">7.10.10. Trajectory (corridor)</a></li>
-<li><a href="#_items">7.10.11. Items</a></li>
-<li><a href="#_locations">7.10.12. Locations</a></li>
-<li><a href="#_instances">7.10.13. Instances</a></li>
+<li><a href="#_parameter_z_4">7.10.11. Parameter z</a></li>
+<li><a href="#_items">7.10.12. Items</a></li>
+<li><a href="#_locations">7.10.13. Locations</a></li>
+<li><a href="#_instances">7.10.14. Instances</a></li>
 </ul>
 </li>
 <li><a href="#general-requirements">7.11. General Requirements</a>
@@ -1825,8 +1826,8 @@ properties:
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/trajectory</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instance</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/instance</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instances</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/instances</p></td>
 </tr>
 </tbody>
 </table>
@@ -3698,20 +3699,43 @@ explode: false</code></pre>
 <p>The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).</p>
 </div>
 <div class="paragraph">
-<p>A 2D trajectory, on the surface of earth, at the same time:
+<p>A 2D trajectory, on the surface of earth with no time or height dimensions:
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)</p>
 </div>
 <div class="paragraph">
-<p>A 3D trajectory centre, on the surface of the earth but over a time range:
+<p>A 2D trajectory, on the surface of earth with all for the same time and no height dimension, time value defined in ISO8601 format by the <code>time</code> query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;time=2018-02-12T23:00:00Z</p>
+</div>
+<div class="paragraph">
+<p>A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the <code>z</code> query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;z=850</p>
+</div>
+<div class="paragraph">
+<p>A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the <code>time</code> query parameter and height defined in the collection height units by the <code>z</code> query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;time=2018-02-12T23:00:00Z&amp;z=850</p>
+</div>
+<div class="paragraph">
+<p>A 3D trajectory, on the surface of the earth but over a time range with no height values:
 coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)</p>
 </div>
 <div class="paragraph">
-<p>A 3D corrtrajectoryidor centre, through a 3D volume with height or depth, for the same time:
+<p>A 3D trajectory, on the surface of the earth but over a time range with a fixed height value, height defined in the collection height units by the <code>z</code> query parameter :
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&amp;z=200</p>
+</div>
+<div class="paragraph">
+<p>A 3D trajectory, through a 3D volume with height or depth, but no defined time:
 coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)</p>
 </div>
 <div class="paragraph">
-<p>A 4D trajectory, through a 3D trajectory centre but over a time range:
+<p>A 3D trajectory, through a 3D volume with height or depth, but a fixed time time value defined in ISO8601 format by the <code>time</code> query parameter:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)&amp;time=2018-02-12T23:00:00Z</p>
+</div>
+<div class="paragraph">
+<p>A 4D trajectory, through a 3D volume but over a time range:
 coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)</p>
+</div>
+<div class="paragraph">
+<p>If the coords specifiy a 4D trajectory i.e. coords=LINESTRINGZM(&#8230;&#8203;) an error MUST be thrown by the server if the client application defines either the <code>z</code> or <code>time</code> query parameters</p>
 </div>
 <div class="paragraph">
 <p>where Z is the height value.
@@ -3744,12 +3768,30 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 </div>
 <div style="page-break-after: always;"></div>
-<div style="page-break-after: always;"></div>
 </div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_items"><a class="anchor" href="#_items"></a>7.10.11. Items</h4>
+<h4 id="_parameter_z_4"><a class="anchor" href="#_parameter_z_4"></a>7.10.11. Parameter z</h4>
+<div class="paragraph">
+<p>Used when the entire corridor occurs at the same vertical height the z query parameter is used to define the height</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 27. A z value</div>
+<div class="content">
+<div class="paragraph">
+<p>for instance if the entire route is at the 850hPa pressure level</p>
+</div>
+<div class="paragraph">
+<p>z=850</p>
+</div>
+</div>
+</div>
+<div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div>
+</div>
+<div class="sect3">
+<h4 id="_items"><a class="anchor" href="#_items"></a>7.10.12. Items</h4>
 <div class="sect4">
 <h5 id="_parameters_6"><a class="anchor" href="#_parameters_6"></a>Parameters</h5>
 <div class="paragraph">
@@ -3757,7 +3799,7 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 27. List available items</div>
+<div class="title">Example 28. List available items</div>
 <div class="content">
 <div class="paragraph">
 <p>/collections/{collectionId}/items</p>
@@ -3768,7 +3810,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 28. itemID</div>
+<div class="title">Example 29. itemID</div>
 <div class="content">
 <div class="paragraph">
 <p>/collections/{collectionId}/items/{itemID}</p>
@@ -3785,14 +3827,14 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_locations"><a class="anchor" href="#_locations"></a>7.10.12. Locations</h4>
+<h4 id="_locations"><a class="anchor" href="#_locations"></a>7.10.13. Locations</h4>
 <div class="sect4">
 <h5 id="_parameters_7"><a class="anchor" href="#_parameters_7"></a>Parameters</h5>
 <div class="paragraph">
 <p>With the locations query a location is defined by a unique identifer, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata in returned by the API must supply a geospatial definition for the identifier.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 29. locid</div>
+<div class="title">Example 30. locid</div>
 <div class="content">
 <div class="paragraph">
 <p>return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id</p>
@@ -3803,7 +3845,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 30. subset by time and parameter</div>
+<div class="title">Example 31. subset by time and parameter</div>
 <div class="content">
 <div class="paragraph">
 <p>The API can allow user to subset the required data by time and parameter and also supports requesting data format changes (if supported by the data provider)</p>
@@ -3817,7 +3859,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_instances"><a class="anchor" href="#_instances"></a>7.10.13. Instances</h4>
+<h4 id="_instances"><a class="anchor" href="#_instances"></a>7.10.14. Instances</h4>
 <div class="paragraph">
 <p>It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
 </div>
@@ -4718,7 +4760,7 @@ The following schema names are from API-Features and need to be updated.
 </tbody>
 </table>
 <div class="exampleblock">
-<div class="title">Example 31. An exception response object definition</div>
+<div class="title">Example 32. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -6492,7 +6534,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>B.2. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 32. JSON Landing Page</div>
+<div class="title">Example 33. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -6531,7 +6573,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>B.4. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 33. Conformance Response</div>
+<div class="title">Example 34. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -6554,7 +6596,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>B.5. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 34. Collections metadata response document</div>
+<div class="title">Example 35. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON is for a service with collections "Metar", "GFS height above ground parameters" and "DEM". It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6703,7 +6745,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="collection-metadata-examples"><a class="anchor" href="#collection-metadata-examples"></a>B.6. Collection Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 35. Collection instance metadata response document</div>
+<div class="title">Example 36. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the Metar collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6791,7 +6833,7 @@ Gregorian calendar).</p>
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 36. Collection metadata response document</div>
+<div class="title">Example 37. Collection metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances of the DEM collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -6866,7 +6908,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>B.7. Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 37. Collection instance metadata response document</div>
+<div class="title">Example 38. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This collection metadata example response in JSON lists the available instances for the gfs_time-height_above_ground-lat-lon gfs collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7023,7 +7065,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="position-query-metadata-examples"><a class="anchor" href="#position-query-metadata-examples"></a>B.8. Position Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 38. Collection instance metadata response document</div>
+<div class="title">Example 39. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the  latest instance of the fs_time-height_above_ground-lat-lon collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7588,7 +7630,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="polygon-query-metadata-examples"><a class="anchor" href="#polygon-query-metadata-examples"></a>B.9. Area Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 39. Collection instance metadata response document</div>
+<div class="title">Example 40. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the data instance of the "DEM" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -7725,7 +7767,7 @@ Gregorian calendar).</p>
 <div class="sect2">
 <h3 id="query-metadata-examples"><a class="anchor" href="#query-metadata-examples"></a>B.10. Location Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 40. Collection instance metadata response document</div>
+<div class="title">Example 41. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This metadata example response in JSON is for a the Raw instance of the "Metar" Collection. It includes links to the collection resource in all formats that are supported by the API (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "items").</p>
@@ -8709,7 +8751,7 @@ Gregorian calendar).</p>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-06-03 22:24:53 -0400
+Last updated 2020-06-04 22:25:03 -0400
 </div>
 </div>
 </body>
