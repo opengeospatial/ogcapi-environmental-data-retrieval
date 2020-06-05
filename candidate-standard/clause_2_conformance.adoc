@@ -30,7 +30,7 @@ The Collection requirements class is specified in *Requirements Class Collection
 ** <<rc_geojson-section,GeoJSON>>
 ** <<rc_covjson-section,CovJSON>>
 
-Neither the nor _Core_ nor _Collection_ requirements class mandate a specific encoding or format for representing resources. The _HTML_, _GeoJSON_ and _CovJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
+Neither the _Core_ nor _Collection_ requirements classes mandate specific encodings or formats for representing resources. The _HTML_, _GeoJSON_ and _CovJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
 
 None of these encodings are mandatory. An implementation of the _API-EDR_ standard may decide to implement another encoding instead of, or in addition those listed. However, a common format does simplifies interoperability so support for _CovJSON_ is highly recommended.
 
