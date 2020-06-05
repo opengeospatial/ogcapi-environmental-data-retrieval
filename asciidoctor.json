@@ -13,5 +13,20 @@
                 "r":[
                         "asciidoctor-diagram"
                 ]
-        }
+              }
+        "1":  { 
+               "OGC_doc_number": "XXX",
+                "urn":"http://www.opengis.net/doc/BP/ogcapi-edrBP/1.0",
+                "title":"OGC EDR API Best Practice",
+                "path":"best_practice/bp.adoc",
+                "options": ["--trace"],
+                "a":[
+                        "data-uri",
+                        "stylesdir=./resources/stylesheets",
+                        "dot=/usr/bin/dot"
+                ],
+                "r":[
+                        "asciidoctor-diagram"
+                ]
+               }
 }
