@@ -1,7 +1,7 @@
 [[mediatypes]]
 == Media Types
 
-JSON media types that would typically be used in on OGC API that supports JSON are
+JSON media types that would typically be used in an OGC API that supports JSON are:
 
 * `application/geo+json` for feature collections and features, and
 * `application/json` for all other resources.
