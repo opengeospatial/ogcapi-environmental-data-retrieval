@@ -5,17 +5,17 @@ The one Standardization Target for this standard is Web APIs.
 
 OGC API-Common-Part 1: Core provides a common foundation for OGC API standards. Therefore, this EDR API standard should be viewed as an extension to API-Common-Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common-Core.
 
-This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one Requirements Class. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
-The requirements classes for OGC API-EDR are:
+The conformance classes and their constituent requirements classes for OGC API-EDR are:
 
-* <<rc_core-section,Core>>
+* <<rc_core-section,Core>>, one Requirement Class
 
 The _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of API-EDR.
 
 The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter 8)>>.
 
-* <<rc_collection-section,Collection>>
+* <<rc_collection-section,Collection>>, one Requirement Class
 
 The API-Common _Collections_ standard extends the API-Common _Core_ to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
@@ -25,7 +25,7 @@ The API-EDR _Collection Requirements Class_ extends the common requirements to t
 
 The Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter 9)>>.
 
-* Encodings
+* <<rc_encodings-section,Encodings>>, three Requirements Classes
 ** <<rc_html-section,HTML>>
 ** <<rc_geojson-section,GeoJSON>>
 ** <<rc_covjson-section,CovJSON>>
@@ -36,19 +36,19 @@ None of these encodings are mandatory. An implementation of the _API-EDR_ standa
 
 The Encoding Requirements Classes are specified in *Encoding Requirements Classes* <<rc_encoding-section,(Chapter 10)>>.
 
-* <<rc_oas30-section,OpenAPI 3.0>>
+* <<rc_oas30-section,OpenAPI 3.0>>, one Requirements Class
 
 The _OGC API-Common_ standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
 
 The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter 11)>>.
 
-* Queries
+* <<rc_queries-section,Queries>>, three Requirements classes
 ** <<rc_position-section,Position>>
 ** <<rc_area-section,Area>>
 ** <<rc_trajectory-section,Trajectory>>
 
-The EDR API Conformance class does not mandate any specific query patterns for querying resources. The _Position_, _Area_ and _Trajectory_ requirements classes specify query patterns for which there are common use cases.
+The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The _Position_, _Area_ and _Trajectory_ requirements classes specify query patterns for which there are common use cases.
 
-An implementation of the _API-EDR_ standard may decide to implement another query pattern instead of, or in addition those listed. However, a minimal query pattern of retrieving data at a position (with elevation and time) does simplify interoperability so support for _Position_ is highly recommended.
+An implementation of the _API-EDR_ standard may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a position (with elevation and time) does simplify interoperability so support for _Position_ is highly recommended.
 
 The Queries Requirements Classes are specified in *Queries Requirements Classes* <<rc_queries-section,(Chapter 7)>>.
