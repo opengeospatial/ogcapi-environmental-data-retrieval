@@ -29,12 +29,12 @@ include::requirements/html/REQ_api-common.adoc[]
 
 include::requirements/html/REQ_html-conformance.adoc[]
 
-[[rc_geojson-section]]
-=== Requirement Class "GeoJSON"
+[[rc_json-section]]
+=== Requirement Class "JSON"
 
-GeoJSON is a commonly used format that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting GeoJSON is recommended if the resource can be represented in GeoJSON for the intended use.
+JSON is a commonly used format that is simple to understand and well supported by tools and software libraries. Since most Web developers are comfortable with using a JSON-based format, supporting JSON is recommended if the resource can be represented in JSON for the intended use.
 
-The JSON conformance class is defined in API-Common. The API-EDR standard extends that JSON conformance class to support GeoJSON.
+The JSON conformance class is defined in API-Common. The API-EDR standard implements that JSON conformance class without modification.
 
 include::requirements/requirements_class_json.adoc[]
 
