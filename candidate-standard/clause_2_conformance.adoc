@@ -3,7 +3,7 @@ Conformance with this standard shall be checked using the tests specified in Ann
 
 The one Standardization Target for this standard is Web APIs.
 
-OGC API-Common-Part 1: Core provides a common foundation for OGC API standards. Therefore, this standard should be viewed as an extension to API-Common-Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common-Core.
+OGC API-Common-Part 1: Core provides a common foundation for OGC API standards. Therefore, this EDR API standard should be viewed as an extension to API-Common-Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of API-Common-Core.
 
 This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one Requirements Class. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
@@ -13,7 +13,7 @@ The requirements classes for OGC API-EDR are:
 
 The _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of API-EDR.
 
-The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter ?)>>.
+The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter 8)>>.
 
 * <<rc_collection-section,Collection>>
 
@@ -23,7 +23,7 @@ The structure and organization of a collection of spatial resources is very much
 
 The API-EDR _Collection Requirements Class_ extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.
 
-The Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter ?)>>.
+The Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter 9)>>.
 
 * Encodings
 ** <<rc_html-section,HTML>>
@@ -34,17 +34,17 @@ Neither the nor _Core_ nor _Collection_ requirements class mandate a specific en
 
 None of these encodings are mandatory. An implementation of the _API-EDR_ standard may decide to implement another encoding instead of, or in addition those listed. However, a common format does simplifies interoperability so support for _CovJSON_ is highly recommended.
 
-The Encoding Requirements Classes are specified in *Encoding Requirements Classes* <<rc_encoding-section,(Chapter ?)>>.
+The Encoding Requirements Classes are specified in *Encoding Requirements Classes* <<rc_encoding-section,(Chapter 10)>>.
 
 * <<rc_oas30-section,OpenAPI 3.0>>
 
 The _OGC API-Common_ standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
 
-The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter ?)>>.
+The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter 11)>>.
 
 * Queries
 ** <<rc_position-section,Position>>
 ** <<rc_area-section,Area>>
 ** <<rc_trajectory-section,Trajectory>>
 
-The Queries Requirements Classes are specified in *Queries Requirements Classes* <<rc_queries-section,(Chapter ?)>>.
+The Queries Requirements Classes are specified in *Queries Requirements Classes* <<rc_queries-section,(Chapter 7)>>.
