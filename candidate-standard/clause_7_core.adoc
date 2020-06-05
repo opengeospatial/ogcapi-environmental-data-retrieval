@@ -172,7 +172,7 @@ The EDR API standard has identified an initial set of common `queryTypes` to imp
 |Cube | /cube
 |Items | /items
 |Locations | /locations
-|Postion | /position
+|Position | /position
 |Trajectory | /trajectory
 |Instance | /instance
 |===
