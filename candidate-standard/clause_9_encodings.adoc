@@ -5,14 +5,14 @@
 This clause specifies two pre-defined requirements classes for encodings to be used by an OGC API implementation. These encodings are commonly used encodings for spatial data on the web:
 
 * <<rc_html-section,HTML>>
-* <<rc_geojson-section,GeoJSON>>
+* <<rc_json-section,JSON>>
 
 Neiter of these encodings are mandatory and an implementation of the <<rc_core-section,Core>> requirements class may implement either, both, or none of them. <<overview,Clause 7 (Overview)>> includes a discussion about recommended encodings.
 
 [[rc_html-section]]
 === Requirement Class "HTML"
 
-Geographic information that is only accessible in formats like GeoJSON or GML has two issues:
+Geographic information that is only accessible in formats like JSON or GML has two issues:
 
 * The data is not discoverable by Web search engines,
 * The data can not be viewed directly in a browser - additional tools are required to view the data.
