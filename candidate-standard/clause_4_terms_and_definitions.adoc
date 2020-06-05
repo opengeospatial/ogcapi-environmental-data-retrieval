@@ -29,7 +29,7 @@ EXAMPLE: a downloadable file, an RSS feed or a web service that provides the dat
 
 [[ets-definition]]
 === Executable Test Suite (ETS)
-A set of code (e.g. Java and CTL) that provides runtime tests for the assertions defined by the ATS. Test data required to do the tests are part of the ETS https://portal.opengeospatial.org/files/?artifact_id=55234[(OGC 08-134)]
+A set of code (e.g. Java and CTL) that provides runtime tests for the assertions defined by the Automated Test Suite. Test data required to do the tests are part of the ETS https://portal.opengeospatial.org/files/?artifact_id=55234[(OGC 08-134)]
 
 [[recomendation-definition]]
 === Recommendation
