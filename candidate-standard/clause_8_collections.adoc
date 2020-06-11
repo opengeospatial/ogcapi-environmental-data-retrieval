@@ -2,9 +2,9 @@
 === Query Resources
 :sectnums:
 
-Query Resources are spatial queries which support the operation of the API or the access and use of the Spatial Resources. They are described in the <<query-resources>> section.
+Query Resources are spatial queries which support the operation of the API or the access and use of the Environmental Resources. They are described in the <<query-resources>> section.
 
-Query Resources related to Spatial Resources can exposed using the path template:
+Query Resources related to Environmental Resources (collection of spatiotemporal data) can be exposed using the path template:
 
 * /collections/{collectionId}/{queryType}
 
@@ -15,8 +15,8 @@ The resources returned from each node in this template are described in <<query-
 [width="90%",cols="2,4",options="header"]
 |===
 ^|**Path Template** ^|**Resource**
-|/collections |The root resource describing the spatial collections available from this API.
-|/collections/{collectionId} |Identifies a collection with the unique identifier `{collectionId}`
+|/collections |The root resource describing the collections of geospatial data available from this API.
+|/collections/{collectionId} |Identifies a collection of geospatial data with the unique identifier `{collectionId}`
 |/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {resourceType} associated with the `{collectionId}` collection.
 |===
 

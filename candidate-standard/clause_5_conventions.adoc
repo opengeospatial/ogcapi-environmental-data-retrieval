@@ -2,15 +2,51 @@
 
 === Identifiers
 
+The <<WEBARCH,Architecture of the World Wide Web>> establishes the URI as the single global identification system for the Web. Therefore, URIs or <<rfc6570,URI Templates>> are used in OGC Web API standards to identify key entities in those standards.
+
 The normative provisions in this standard are denoted by the URI
 
 http://www.opengis.net/spec/ogcapi-edr-1/1.0
 
-All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
+
+A key requirement of Web API standards is the unambiguous identification of the <<resource-definition,resources>> they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <<rfc6570,URI Templates>> to identify <<resource-category-definition,resource categories>>. These resource categories are instantiated in the implementation of the standard.
+
+The scope of each URI Template is specified in the standard. In some cases, API implementations are required to implement the template as a path in their API. In most cases they are optional.
+
+Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC Web API standards.
 
 === Link relations
 
-To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used.
+To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible. Additional link relation types are registered with the https://github.com/opengeospatial/NamingAuthority/blob/master/incubation/linkRelationTypes/linkrelations.csv[OGC Link Relation Registry].
+
+The following link-relations are in common use by OGC Web API Standards.
+
+* *alternate*: Refers to a substitute for this context. [IANA]
+
+* *collection*: The target IRI points to a resource which represents the collection resource for the context IRI. [IANA]
+
+* *conformance*: Refers to a resource that identifies the specifications that the link's context conforms to. [OGC]
+
+* *data*: refers to the root resource of a dataset in an API. [OGC]
+
+* *describedby*: Refers to a resource providing information about the link's context. [IANA]
+
+* *item*: The target IRI points to a resource that is a member of the collection represented by the context IRI. [IANA]
+
+* *items*: Refers to a resource that is comprised of members of the collection represented by the link's context. [OGC]
+
+* *license*: Refers to a license associated with this context. [IANA]
+
+* *self*: Conveys an identifier for the link's context. [IANA]
+
+* *service-desc*: Identifies service description for the context that is primarily intended for consumption by machines. [IANA]
+
+** API definitions are considered service descriptions.
+
+* *service-doc*: Identifies service documentation for the context that is primarily intended for human consumption. [IANA]
+
+Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a collection. Or a *related* link on a feature could reference a related feature.
 
 === Examples
 

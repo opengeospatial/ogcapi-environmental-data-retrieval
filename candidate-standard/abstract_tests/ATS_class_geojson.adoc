@@ -2,19 +2,19 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-common/1.0/conf/geojson
+2+|http://www.opengis.net/spec/ogcapi-common/1.0/conf/json
 |Target type |Web API
-|Requirements Class |<<rc_geojson,http://www.opengis.net/spec/ogcapi_common/1.0/req/geojson>>
+|Requirements Class |<<rc_geojson,http://www.opengis.net/spec/ogcapi_common/1.0/req/json>>
 |Dependency |<<ats_core,Conformance Class "OAPI Core">>
 |===
 
-==== GeoJSON Definition
+==== JSON Definition
 
-include::geojson/ATS_definition.adoc[]
+include::json/ATS_definition.adoc[]
 
 ==== GeoJSON Content
 
-include::geojson/ATS_content.adoc[]
+include::json/ATS_content.adoc[]
 
 
 
