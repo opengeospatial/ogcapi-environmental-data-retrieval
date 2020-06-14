@@ -148,7 +148,7 @@ An EDR resource is a collection of spatiotemporal data that can be sampled using
 EDR resources can be exposed using two path templates:
 
 * /collections/{collectionId}/{queryType}
-* /collections/{collectionId}/instance/{instanceId}/{queryType}
+* /collections/{collectionId}/instances/{instanceId}/{queryType}
 
 Where 
 

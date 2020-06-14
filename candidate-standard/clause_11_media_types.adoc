@@ -3,6 +3,7 @@
 
 JSON media types that would typically be used in an OGC API that supports JSON are:
 
+* `application/prs.coverage+json` for resources that include coverage content, and
 * `application/geo+json` for feature collections and features, and
 * `application/json` for all other resources.
 
@@ -18,3 +19,5 @@ The typical HTML media type for all "web pages" in an OGC API would be `text/htm
 The media types for an OpenAPI definition are `vnd.oai.openapi+json;version=3.0` (JSON) and `application/vnd.oai.openapi;version=3.0` (YAML).
 
 NOTE: The OpenAPI media type has not been registered yet with IANA and may change.
+
+NOTE: The CoverageJSON media type has not been registered yet with IANA and may change.
