@@ -41,7 +41,7 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 
 Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR standard defines the following as standard parameters for use in EDR API standards.
 
-==== Parameter coords
+==== Parameter coordinates
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
@@ -51,7 +51,7 @@ include::requirements/edr/REQ_rc-coords-response.adoc[]
 
 include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
-The datetime parameter is defined in API-Common. The following information is provided as a convinience to the user.
+The datetime parameter is defined in API-Common. The following information is provided as a convenience for the user.
 
 "Intersects" means that the time (instant or period) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or period). For time periods this includes the start and end time.
  

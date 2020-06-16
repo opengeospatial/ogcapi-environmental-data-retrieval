@@ -14,9 +14,17 @@ include::abstract_tests/ATS_class_core.adoc[]
 
 include::abstract_tests/ATS_class_collections.adoc[]
 
+=== Conformance Class JSON
+
+include::abstract_tests/ATS_class_json.adoc[]
+
 === Conformance Class GeoJSON
 
 include::abstract_tests/ATS_class_geojson.adoc[]
+
+=== Conformance Class CoverageJSON
+
+include::abstract_tests/ATS_class_covjson.adoc[]
 
 === Conformance Class HTML
 
@@ -25,3 +33,7 @@ include::abstract_tests/ATS_class_html.adoc[]
 === Conformance Class OpenAPI 3.0
 
 include::abstract_tests/ATS_class_oas30.adoc[]
+
+=== Conformance Class Queries
+
+include::abstract_tests/ATS_class_queries.adoc[]

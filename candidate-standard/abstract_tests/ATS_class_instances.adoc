@@ -1,0 +1,36 @@
+[[ats_instances]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-edr/1.0/conf/instances
+|Target type |Web API
+|Requirements Class |<<rc_instances,http://www.opengis.net/spec/ogcapi_edr/1.0/req/instances>>
+|Dependency |<<ats_core,Conformance Class "OGC API Common Core">>
+|Dependency |<<ats_collections,Conformance Class "OGC API Common Collections">>
+|===
+
+==== Collections and Instances
+
+===== Feature Collections {root}/collections
+
+include::collections/ATS_rc-md-op.adoc[]
+
+include::collections/ATS_rc-md-success.adoc[]
+
+===== Feature Collection {root}/collections/{collectionId}
+
+include::collections/ATS_src-md-op.adoc[]
+
+include::collections/ATS_src-md-success.adoc[]
+
+===== Instances {root}/collections/{collectionId}/instances
+
+include::instances/ATS_rc-md-op.adoc[]
+
+include::instances/ATS_rc-md-success.adoc[]
+
+===== Instance {root}/collections/{collectionId}/instances/instanceId
+
+include::instance/ATS_src-md-op.adoc[]
+
+include::instance/ATS_src-md-success.adoc[]

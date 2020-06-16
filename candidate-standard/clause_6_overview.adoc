@@ -15,8 +15,6 @@ The EDR API can be considered a 'Sampling API'. The query creates a discrete sam
 
 <<edr-paths>> summarizes the access paths and relation types defined in this standard.
 
-NOTE: Add the rest of the API_EDR paths
-
 [#edr-paths,reftext='{table-caption} {counter:table-num}']
 .Environmental Data API Paths
 [width="90%",cols="2,^1,4",options="header"]
@@ -28,14 +26,23 @@ NOTE: Add the rest of the API_EDR paths
 or +
 `service-doc` |API Description (optional)
 |<<conformance-classes,{root}/conformance>> |`conformance` |Conformance Classes
+3+^|**Collections**
 |<<collections,{root}/collections>> |`data` |Metadata describing the collections of data available from this API.
-|<<collectionInfo,{root}/collections/{coverageid}>> | |Metadata describing the collection of data which has the unique identifier `{collectionid}`
+|<<collectionInfo,{root}/collections/{collectionId}>> | |Metadata describing the collection of data which has the unique identifier `{collectionId}`
+3+^|**Features**
+|<<collectionInfo,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
+3+^|**Queries**
+|<<collectionInfo,{root}/collections/{collectionId}/queryType>>| |Retrieve data according to the query pattern
+|<<collectionInfo,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about instances of a collection
+|<<collectionInfo,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific instance of a collection which has the unique identifier '{instanceId}'
 |===
 
 Where:
 
 * {root} = Base URI for the API server
-* {collectionid} = an identifier for a specific collection of data
+* {collectionId} = an identifier for a specific collection of data
+* {instanceId} = an identifier for a specific version or instance of a collection of data
+* {queryType} = an identifier for a specific query pattern to retrieve data from a specific collection of data
 
 [[dependencies-overview]]
 === Dependencies
@@ -53,6 +60,6 @@ The OGC API-EDR standard is an extension of the OGC API-Common standard. Therefo
 |<<collection-access-section,Collections>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections
 |<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/oas30
 |<<requirements-class-geojson-clause,GeoJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
-|<<requirements-class-covjson-clause,CovJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
+|<<requirements-class-covjson-clause,CoverageJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
 |<<requirements-class-html-clause,HTML>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/html
 |====
