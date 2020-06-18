@@ -66,9 +66,6 @@ Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
 z=1000,900,850,700
 ===========
 
-`When not specified the API MUST return data from all available levels`
-
-
 .Return data for all levels between 2 defined levels
 ===========
 
@@ -76,10 +73,6 @@ Request data for all levels between 2m and 100m
 
 z=2/100
 ===========
-
-`When not specified the API MUST return data from all available levels`
-
-
 
 .Return data at all available vertical levels
 ===========
