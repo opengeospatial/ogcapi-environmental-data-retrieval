@@ -11,7 +11,7 @@ include::../REQ_rc-coords-response.adoc[]
 
     The polygon is defined using a Well Known Text string following 
 
-    coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))
+    `coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))`
 
     which are values in the coordinate system defined by the crs query parameter 
     (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
@@ -19,7 +19,7 @@ include::../REQ_rc-coords-response.adoc[]
     For instance a polygon that roughly describes an area that contains 
     South West England in WGS84 would look like: 
 
-    coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))
+    `coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
 
     see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
@@ -30,7 +30,7 @@ include::../REQ_rc-coords-response.adoc[]
 =================
 An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)
 
-`coords=POLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
+`coords=POLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
 
 =================
 
@@ -39,12 +39,16 @@ An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°
 =================
 Selecting data for two different regions
 
-`coords=MULTIPOLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
+`coords=MULTIPOLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8),(-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
 =================
 
 
 
 ==== Parameter z
+
+include::../REQ_rc-z-definition.adoc[]
+
+include::../REQ_rc-z-definition.adoc[]
 
 Define the vertical level to return data from 
 i.e. z=level
@@ -60,6 +64,22 @@ for instance if the 850hPa pressure level is being queried
 z=850
 ===========
 
+.Return data at all a defined list of levels vertical levels
+===========
+
+Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
+
+z=1000,900,850,700
+===========
+
+.Return data for all levels between 2 defined levels
+===========
+
+Request data for all levels between 2m and 100m
+
+z=2/100
+===========
+
 .Return data at all available vertical levels
 ===========
 
@@ -67,5 +87,3 @@ z=ALL
 ===========
 
 `When not specified the API MUST return data from all available levels`
-
-
