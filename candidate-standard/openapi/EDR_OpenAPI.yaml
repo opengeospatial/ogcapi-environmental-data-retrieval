@@ -2,7 +2,7 @@ openapi: 3.0.2
 info:
   title: Environmental Data Retrieval API's
   description: Example of Candidate Environmental Data Retrieval API OpenAPI docs
-  version: 0.0.7
+  version: 0.0.8
 servers:
   - url: 'http://www.example.org/edr'
     description: ''
@@ -2506,7 +2506,8 @@ components:
       in: query
       description: |-
         Either a date-time or a period string that adheres to RFC 3339. Examples:
-        * A date-time: "2018-02-12T23:20:50Z" * A period: "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z" or "2018-02-12T00:00:00Z/P1M6DT12H31M12S"
+        * A date-time: "2018-02-12T23:20:50Z" * A period: "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z" or "2018-02-12T00:00:00Z/P1M6DT12H31M12S" or a list of
+        date-times "2018-02-12T00:00:00Z,2018-06-12T03:00:00Z,2020-02-15T21:00:00Z"
         Only features that have a temporal property that intersects the value of `time` are selected.
         If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.
       required: false
@@ -2795,9 +2796,22 @@ components:
         for instance if the 850hPa pressure level is being queried
 
         z=850
+        
+        or a range to return data for all levels between and including 2 defined levels
+        i.e. z=minimum value/maximum value
+        
+        for instance if all values between and including 10m and 100m
+        
+        z=10/100
 
-        When not specified data from the lowest (i.e. nearest the surface) level of
-        data in the collection.
+        finally a list of height values can be specified
+        i.e. z=value1,value2,value3
+        
+        for instance if values at 2m, 10m and 80m are required
+        
+        z=2,10,80
+        
+        When not specified data from all available heights SHOULD be returned
       schema:
         type: string
     cubeCoords:

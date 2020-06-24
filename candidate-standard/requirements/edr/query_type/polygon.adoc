@@ -64,7 +64,7 @@ for instance if the 850hPa pressure level is being queried
 z=850
 ===========
 
-.Return data at all a defined list of levels vertical levels
+.Return data at all a levels defined by a list of vertical levels
 ===========
 
 Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
@@ -72,7 +72,7 @@ Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
 z=1000,900,850,700
 ===========
 
-.Return data for all levels between 2 defined levels
+.Return data for all levels between and including 2 defined levels
 ===========
 
 Request data for all levels between 2m and 100m

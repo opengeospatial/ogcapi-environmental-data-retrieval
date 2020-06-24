@@ -5,7 +5,7 @@
 ^|A |The `z` parameter is provided, only resources that have a vertical geometry that intersects the vertical information in the `z` parameter SHALL be part of the result set
 if the parameter is provided.
 ^|B |The `z` can be defined as a height range by specifiying a min-level and max-level seperated by a forward slash "/" 
-^|C |A list of `z` can be defined be specifiying a comma delimeted list of values level1, level2, level3 etc 
+^|C |A list of `z` can be defined be specifiying a comma delimited list of values level1, level2, level3 etc 
 
 
 [source,java]

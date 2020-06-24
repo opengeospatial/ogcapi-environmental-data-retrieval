@@ -3,7 +3,7 @@
   "info": {
     "title": "Environmental Data Retrieval API's",
     "description": "Example of Candidate Environmental Data Retrieval API OpenAPI docs",
-    "version": "0.0.7"
+    "version": "0.0.8"
   },
   "servers": [
     {
@@ -3942,7 +3942,7 @@
       "time": {
         "name": "time",
         "in": "query",
-        "description": "Either a date-time or a period string that adheres to RFC 3339. Examples:\n* A date-time: \"2018-02-12T23:20:50Z\" * A period: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\" or \"2018-02-12T00:00:00Z/P1M6DT12H31M12S\"\nOnly features that have a temporal property that intersects the value of `time` are selected.\nIf a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.",
+        "description": "Either a date-time or a period string that adheres to RFC 3339. Examples:\n* A date-time: \"2018-02-12T23:20:50Z\" * A period: \"2018-02-12T00:00:00Z/2018-03-18T12:31:12Z\" or \"2018-02-12T00:00:00Z/P1M6DT12H31M12S\" or a list of\ndate-times \"2018-02-12T00:00:00Z,2018-06-12T03:00:00Z,2020-02-15T21:00:00Z\"\nOnly features that have a temporal property that intersects the value of `time` are selected.\nIf a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.",
         "required": false,
         "style": "form",
         "explode": false,
@@ -4126,7 +4126,7 @@
       "z": {
         "name": "z",
         "in": "query",
-        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nWhen not specified data from the lowest (i.e. nearest the surface) level of\ndata in the collection.\n",
+        "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nor a range to return data for all levels between and including 2 defined levels\ni.e. z=minimum value/maximum value\n\nfor instance if all values between and including 10m and 100m\n\nz=10/100\n\nfinally a list of height values can be specified\ni.e. z=value1,value2,value3\n\nfor instance if values at 2m, 10m and 80m are required\n\nz=2,10,80\n\nWhen not specified data from all available heights SHOULD be returned\n",
         "schema": {
           "type": "string"
         }
