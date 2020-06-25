@@ -27,10 +27,11 @@ The EDR API can be considered a 'Sampling API'. EDR queries create discrete samp
 The EDR charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
 
 Summarizing these sections. EDR Query Patterns will be:  
-- **1 - Core**: Point/position or identified location with n parameters at a time instant and/or a timeseries.
-- **2 - Sampling Geometries**: Vertical profile for a time instant and rectangular or polygonal tile/subset.
-- **3 - Trajectories and Corridors**: Samples along a 2D-4D trajectory or within a defined corridor.
-- **4 - Ensembles**: Support for explicitly related ensembles of EDR resources.
+- **1 - Position**: Retrieve data for point/position or identified location with n parameters at a time instant, or a timeseries, or a vertical profile for a time instant.
+- **2 - Area**:  Retrieve data within a polygon or rectangular tile/subset at a time instant, or a timeseries, or a vertical profile for a time instant.
+- **3 - Trajectory and Corridor**: Retrieve data along a 2D-4D trajectory or within a defined corridor around a trajectory.
+
+- **4 - Ensembles**: Support for explicitly related ensembles of EDR resources.[Note: This will be in a later version]
 
 These patterns would be accessed through endpoints like:
 
