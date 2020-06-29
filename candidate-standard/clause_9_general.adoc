@@ -63,40 +63,40 @@ It will not always be possible to respond to queries synchronously, if the query
 
 include::recommendations/core/REC_asynchronous-queries.adoc[]
 
-* link:https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)[Asynchrony]
+* See link:https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)[Asynchrony]
 
 [[coordinate_reference_system]]
 ==== Coordinate Reference Systems
 
-As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geographic data and it is important to be clear about the coordinate reference system that coordinates are in.
+As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geospatial data and it is important to be clear about the coordinate reference system that the coordinates use.
 
 For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.
 
 include::requirements/core/REQ_crs84.adoc[]
 
-The implementations compliant with the Core are not required to support publishing geometries in coordinate reference systems other than http://www.opengis.net/def/crs/OGC/1.3/CRS84. 
+The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system http://www.opengis.net/def/crs/OGC/1.3/CRS84. 
 
 ==== Encodings
 
-While the OAPI Common standard does not specify any mandatory encoding, the following encodings are recommended. See <<overview,Clause 7 (Overview)>> for a discussion of this issue.
+While the OGC API Common standard does not specify any mandatory encoding, the following encodings are recommended. See <<overview,Clause 7 (Overview)>> for a discussion of this issue.
 
 [[rec_html]]
 HTML encoding recomendation:
 include::recommendations/core/REC_html.adoc[]
 
 [[rec_geojson]]
-GeoJSON encoding recomendation:
+GeoJSON encoding recommendation:
 include::recommendations/core/REC_geojson.adoc[]
 
 [[rec_covjson]]
-CoverageJSON encoding recomendation:
+CoverageJSON encoding recommendation:
 include::recommendations/core/REC_covjson.adoc[]
 
 Requirement <<req_core_http,`/req/core/http`>> implies that the encoding of a response is determined using content negotiation as specified by the HTTP RFC.
 
 The section <<mediatypes,Media Types>> includes guidance on media types for encodings that are specified in this document.
 
-Note that any API that supports multiple encodings will have to support a mechanism to mint encoding-specific URIs for resources in order to express links, for example, to alternate representations of the same resource. This document does not mandate any particular approach how this is supported by the API.
+Note that any API that supports multiple encodings will have to support a mechanism to create encoding-specific URIs for resources in order to express links, for example, to alternative representations of the same resource. This document does not mandate any particular approach to how this is supported by the API.
 
 As clients simply need to dereference the URI of the link, the implementation details and the mechanism how the encoding is included in the URI of the link are not important. Developers interested in the approach of a particular implementation, for example, to manipulate ("hack") in the browser address bar, can study the API definition.
 
