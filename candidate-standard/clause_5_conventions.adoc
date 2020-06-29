@@ -116,5 +116,5 @@ The path "/mypath" in the OpenAPI definition of the API would be the URL `https:
 
 Reusable components for OpenAPI definitions for a OGC API are referenced from this document.
 
-CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-erd-1/1.0".
+CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-edr-1/1.0".
 
