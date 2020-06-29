@@ -1,4 +1,4 @@
-:Title: OGC API - Environmental Data Retrieval Standard - Part 1 - Core
+:Title: OGC API - Environmental Data Retrieval Standard
 :titletext: {Title}
 :doctype: book
 :encoding: utf-8
@@ -23,7 +23,7 @@
 |Internal reference number of this OGC(R) document:    19-086
 |Version: 0.0.8
 |Category: OGC(R) Implementation Specification
-|Editor:  Mark Burgoyne 
+|Editors:  Mark Burgoyne, Chris Little 
 |===
 
 [cols = "^", frame = "none"]
