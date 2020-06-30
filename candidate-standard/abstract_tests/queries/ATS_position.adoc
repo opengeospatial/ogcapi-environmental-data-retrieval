@@ -8,7 +8,7 @@
 . Validate that a document was returned with a status code 404.
 
 ^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
-^|Test Purpose |Validate that an error is returned by a `Position` query when at least one of the required query parameters are not specified.
+^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter is not specified.
 ^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
 ^|Test Method |. coords query parameter is not specified
 . Validate that a document was returned with a status code 404.
@@ -42,7 +42,7 @@ Repeat these tests using the following parameter tests:
 * Response <<../../requirements/collections/edr/REQ_rc-time-response,/ats/collections/rc-time-response>>
 
 Execute requests with combinations of the "coords","time","parametername","z","crs" and "outputformat" query parameters
-and verify that only features are returned that match the selection criteria.
+and verify that only information that matches the selection criteria is returned.
 |===
 
 include::../collections/ATS_rc-coords-definition.adoc[]

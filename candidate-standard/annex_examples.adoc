@@ -6,6 +6,7 @@
 === OpenAPI definition
 
 link:openapi/EDR_OpenAPI.yaml[OpenAPI YAML]
+
 link:openapi/EDR_OpenAPI.json[OpenAPI JSON]
 
 
@@ -29,36 +30,15 @@ include::examples/conformance_response_JSON_1.adoc[]
 
 include::examples/collections_metadata_JSON_1.adoc[]
 
-[[collection-metadata-examples]]
-=== Collection Metadata Examples
-
-include::examples/instance_metadata_JSON_Metar.adoc[]
-
-include::examples/instance_metadata_JSON_DEM.adoc[]
-
-
-
 [[instance-metadata-examples]]
 === Instance Metadata Examples
 
-include::examples/instance_metadata_JSON_gfs.adoc[]
+include::examples/instance_metadata_JSON.adoc[]
 
 
-[[position-query-metadata-examples]]
-=== Position Query Metadata Examples
-
-include::examples/position_query_metadata_JSON_gfs.adoc[]
-
-
-[[polygon-query-metadata-examples]]
-=== Area Query Metadata Examples
-
-include::examples/polygon_query_metadata_JSON_dem.adoc[]
-
-
-[[query-metadata-examples]]
+[[location-metadata-examples]]
 === Location Query Metadata Examples
 
-include::examples/location_query_metadata_JSON_metar.adoc[]
+include::examples/location_query_metadata_JSON.adoc[]
 
 

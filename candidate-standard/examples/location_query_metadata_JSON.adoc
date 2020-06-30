@@ -1,0 +1,113 @@
+.Collection instance metadata response document
+=================
+
+A example of the Locations metadata from a collection that supports the `Location` query pattern.
+
+ (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+
+There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
+
+Representations of this resource in other formats are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "alternate".
+
+An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".
+
+A bulk download of all the features in the dataset is referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "enclosure"
+
+Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").
+
+Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
+Gregorian calendar).
+
+[source,json]
+----
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "id": 3002,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -0.854,
+          60.749
+        ]
+      },
+      "properties": {
+        "name": "BALTASOUND",
+        "datetime": "2020-03-30T19:00:00Z/2020-04-20T07:00:00Z",
+        "detail": "https://oscar.wmo.int/surface/rest/api/stations/station/1745/stationReport",
+        "WIGOS Station Identifier": "0-20000-0-03002"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3005,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.183,
+          60.139
+        ]
+      },
+      "properties": {
+        "name": "LERWICK (S. SCREEN)",
+        "datetime": "2020-03-30T19:00:00Z/2020-04-20T07:00:00Z",
+        "detail": "https://oscar.wmo.int/surface/rest/api/stations/station/1746/stationReport",
+        "WIGOS Station Identifier": "0-20000-0-03005"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3008,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -1.628,
+          59.527
+        ]
+      },
+      "properties": {
+        "name": "FAIR ISLE",
+        "datetime": "2020-03-30T19:00:00Z/2020-04-20T07:00:00Z",
+        "detail": "https://oscar.wmo.int/surface/rest/api/stations/station/1747/stationReport",
+        "WIGOS Station Identifier": "0-20000-0-03008"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3017,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -2.9,
+          58.954
+        ]
+      },
+      "properties": {
+        "name": "KIRKWALL",
+        "datetime": "2020-03-30T19:00:00Z/2020-04-20T07:00:00Z",
+        "detail": "https://oscar.wmo.int/surface/rest/api/stations/station/1750/stationReport",
+        "WIGOS Station Identifier": "0-20000-0-03017"
+      }
+    },
+    {
+      "type": "Feature",
+      "id": 3023,
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -7.397,
+          57.358
+        ]
+      },
+      "properties": {
+        "name": "SOUTH UIST RANGE",
+        "datetime": "2020-03-30T19:00:00Z/2020-04-20T07:00:00Z",
+        "detail": "https://oscar.wmo.int/surface/rest/api/stations/station/1751/stationReport",
+        "WIGOS Station Identifier": "0-20000-0-03023"
+      }
+    }
+  ]
+  ----
+=================
