@@ -1,5 +1,6 @@
-===== Parameters
-====== Parameter coords
+The Radius query returns data within the defined radius of the requested coordinate the filter constraints are defined by the following query parameters:
+
+====== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -26,34 +27,27 @@ see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wik
 the coordinate values will depend on the CRS parameter, if this is not defined
 the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)
 
-.Point
+.Single location
 =================
 retrieve data for Greenwich, London
 
 `coords=POINT(0 51.48)`
 =================
 
-.Multiple locations
-=================
-retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
 
-`coords=MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
-=================
-
-
-====== Parameter within
+====== *Parameter within*
 
 include::../REQ_rc-within-definition.adoc[]
 
 include::../REQ_rc-within-response.adoc[]
 
-====== Parameter withinunits
+====== *Parameter withinunits*
 
 include::../REQ_rc-withinUnits-definition.adoc[]
 
 include::../REQ_rc-withinUnits-response.adoc[]
 
-==== Parameter z
+====== *Parameter z*
 
 Define the vertical level to return data from 
 i.e. z=level
@@ -61,7 +55,7 @@ i.e. z=level
 if data at all available levels is required z can be defined as ALL
 i.e. z=ALL
 
-.A z value
+.A single vertical level
 ===========
 
 for instance if the 80m level is being queried
@@ -78,4 +72,10 @@ z=ALL
 `When not specified the API MUST return data from all available levels`
 
 
+===== <<time>>
 
+===== <<parametername>>
+
+===== <<crs>>
+
+===== <<outputformat>>

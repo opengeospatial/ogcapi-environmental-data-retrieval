@@ -2,11 +2,9 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/covjson/definition* 
-^|Test Purpose |Verify support for JSON, GeoJSON and CoverageJSON
+^|Test Purpose |Verify support for CoverageJSON
 ^|Requirement |<<req_covjson_definition,/req/covjson/definition>>
 ^|Test Method|. A resource is requested with response media type of `application/prs.coverage+json`
 . All `200`-responses SHALL support the following media types:
-   - `application/prs.coverage+json` for resources that include coverage content, and
-   - `application/geo+json` for resources that include feature content, and
-   - `application/json` for all other resources.
+   - `application/prs.coverage+json` for resources 
 |===

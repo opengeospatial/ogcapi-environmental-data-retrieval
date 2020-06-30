@@ -1,6 +1,6 @@
-===== Parameters
+The `Cube` query returns a data cube defined by the  `coords`, `minz` and `maxz` parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the `coords` parameter.  The results are further filtered by the constraints defined by the following query parameters:
 
-====== Parameter coords
+====== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -21,7 +21,7 @@ include::../REQ_rc-coords-response.adoc[]
 
    
 
-    `If the WKT does not define a Rectangle the service will generate an error message`
+    *If the WKT does not define a Rectangle the service will generate a 403 error message*
     
     see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
@@ -35,13 +35,13 @@ include::../REQ_rc-coords-response.adoc[]
 
 <<<
 
-====== Parameter minz
+====== *Parameter minz*
 
 include::../REQ_rc-minz-definition.adoc[]
 
 include::../REQ_rc-minz-response.adoc[]
 
-.A minz
+.Define the bottom of the cube
 =================
 denotes the minimum level to return data for 
 
@@ -53,13 +53,13 @@ would retrieve data for the 850 level and for data above the 850 level, if a `ma
 
 <<<
 
-====== Parameter maxz
+====== *Parameter maxz*
 
 include::../REQ_rc-maxz-definition.adoc[]
 
 include::../REQ_rc-maxz-response.adoc[]
 
-.A maxz
+.Define the top of the cube
 =================
 denotes the maximum level to return data for 
 
@@ -71,7 +71,7 @@ would retrieve data for the 300 level and for data below the 850 level, if a `mi
 
 <<<
 
-====== Parameter resolutionx
+====== *Parameter resolutionx*
 
 include::../REQ_rc-resolutionx-definition.adoc[]
 
@@ -80,7 +80,7 @@ include::../REQ_rc-resolutionx-response.adoc[]
 If not specified the query will not interpolate the data along the x-axis of the cube and only return values for the defined `coords` parameter values. 
 
 
-.A resolutionx
+.Define the resolution of data on the x-axis
 =================
 denotes the number of intervals to retrieve data for across the defined x-axis of the cube
 
@@ -92,7 +92,7 @@ would retrieve 10 values along the width from the minimum x coordinate to maximu
 
 <<<
 
-====== Parameter resolutiony
+====== *Parameter resolutiony*
 
 include::../REQ_rc-resolutiony-definition.adoc[]
 
@@ -101,7 +101,7 @@ include::../REQ_rc-resolutiony-response.adoc[]
 If not specified the query will not interpolate the data along the y-axis of the cube and only return values for the defined `coords` parameter values. 
 
 
-.A resolutiony
+.Define resolution of data on the y-axis
 =================
 denotes the number of intervals to retrieve data for across the defined y-axis of the cube
 
@@ -113,7 +113,7 @@ would retrieve 10 values along the width from the minimum y coordinate to maximu
 
 <<<
 
-====== Parameter resolutionz
+====== *Parameter resolutionz*
 
 include::../REQ_rc-resolutionz-definition.adoc[]
 
@@ -122,7 +122,7 @@ include::../REQ_rc-resolutionz-response.adoc[]
 If not specified the query will not interpolate the data along the z-axis of the cube and only return values for the defined `coords` parameter values. 
 
 
-.A resolutionz
+.Define resolution of data on the z-axis
 =================
 denotes the number of intervals to retrieve data for the defined z-axis of the cube
 
@@ -134,6 +134,15 @@ would retrieve 10 values along the z-axis from the minimum z coordinate to maxim
 
 
 <<<
+
+===== <<time>>
+
+===== <<parametername>>
+
+===== <<crs>>
+
+===== <<outputformat>>
+
 
 
 

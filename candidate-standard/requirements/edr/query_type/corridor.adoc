@@ -1,6 +1,7 @@
-===== Parameters
 
-====== Parameter coords
+The Corridor query returns data surrounding the path defined by the `coords` parameter the bounds of which are defined by the `corridorwidth` and `corridorheight` parameters.  The results are further filtered by the constraints defined by the following query parameters:
+
+====== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -66,21 +67,7 @@ From AMSTERDAM to LONDON (height in hPa)
 `coords=LINESTRINGZM(53.33 4.76 1000 1560507000,51.90 3.17 400 1560507600,51.8 2.24 400 1560508200,50.74 -3.48 0 1560508500,51.75 2.20 500 1560510240,51.69 1.41 800 1560510960,51.49 0.48 1000 1560511560)`
 
 
-<<<
-==== Parameter z
-
-Used when the entire corridor occurs at the same vertical height the z query parameter is used to define the height
-
-
-.A z value
-===========
-
-for instance if the entire route is at the 850hPa pressure level
-
-z=850
-===========
-<<<
-====== Parameter corridorwidth
+====== *Parameter corridorwidth*
 
 include::../REQ_rc-corridorWidth-definition.adoc[]
 
@@ -88,7 +75,7 @@ include::../REQ_rc-corridorWidth-response.adoc[]
 
 <<<
 
-====== Parameter corridorheight
+====== *Parameter corridorheight*
 
 include::../REQ_rc-corridorHeight-definition.adoc[]
 
@@ -96,7 +83,7 @@ include::../REQ_rc-corridorHeight-response.adoc[]
 
 <<<
 
-====== Parameter resolutionx
+====== *Parameter resolutionx*
 
 include::../REQ_rc-resolutionx-definition.adoc[]
 
@@ -105,7 +92,7 @@ include::../REQ_rc-resolutionx-response.adoc[]
 If not specified the query will not interpolate the data along a corridor width and only return values for the defined `coords` parameter values. 
 
 
-.A resolutionx
+.Define the resolution of data within the corridor width
 =================
 denotes the number of intervals to retrieve data for across the defined width of the corridor
 
@@ -117,7 +104,7 @@ would retrieve 10 values along the width from the minimum width coordinate to ma
 
 <<<
 
-====== Parameter resolutionz
+====== *Parameter resolutionz*
 
 include::../REQ_rc-resolutionz-definition.adoc[]
 
@@ -126,7 +113,7 @@ include::../REQ_rc-resolutionz-response.adoc[]
 If not specified the query will not interpolate the data along a corridor height and only return values for the defined `coords` parameter values. 
 
 
-.A resolutionz
+.Define the resolution of the data within the corridor height
 =================
 denotes the number of intervals to retrieve data for the defined height of the corridor
 
@@ -139,5 +126,11 @@ would retrieve 10 values along the z-axis from the minimum height coordinate to 
 
 <<<
 
+===== <<time>>
 
+===== <<parametername>>
+
+===== <<crs>>
+
+===== <<outputformat>>
 

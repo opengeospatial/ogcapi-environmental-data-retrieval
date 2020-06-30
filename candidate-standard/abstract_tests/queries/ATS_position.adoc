@@ -1,0 +1,70 @@
+[[ats_collections_rc-op]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|Test Purpose |Validate that an error is returned by a `Position` query if no query parameters are specified.
+^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
+^|Test Method |. No query parameters are specified
+. Validate that a document was returned with a status code 404.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|Test Purpose |Validate that an error is returned by a `Position` query when at least one of the required query parameters are not specified.
+^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
+^|Test Method |. coords query parameter is not specified
+. Validate that a document was returned with a status code 404.
+
+
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Position` query using  query parameters.
+^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
+^|Test Method |. Test with valid query parameters
+. Validate that a document was returned with a status code 200.
+
+Repeat these tests using the following parameter tests:
+
+*Coordinates*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-coords-definition,/ats/collections/rc-coords-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-coords-response,/ats/collections/rc-coords-response>>
+
+*VerticalLevel*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-z-definition,/ats/collections/rc-z-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-z-response,/ats/collections/rc-z-response>>
+
+*Parameters*
+* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/ats/collections/rc-parametername-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/ats/collections/rc-parametername-response>>
+
+*DateTime*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/ats/collections/rc-time-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-time-response,/ats/collections/rc-time-response>>
+
+Execute requests with combinations of the "coords","time","parametername","z","crs" and "outputformat" query parameters
+and verify that only features are returned that match the selection criteria.
+|===
+
+include::../collections/ATS_rc-coords-definition.adoc[]
+
+include::../collections/ATS_rc-coords-response.adoc[]
+
+include::../collections/ATS_rc-z-definition.adoc[]
+
+include::../collections/ATS_rc-z-response.adoc[]
+
+include::../collections/ATS_rc-time-definition.adoc[]
+
+include::../collections/ATS_rc-time-response.adoc[]
+
+include::../collections/ATS_rc-parametername-definition.adoc[]
+
+include::../collections/ATS_rc-parametername-response.adoc[]
+
+include::../collections/ATS_rc-crs-definition.adoc[]
+
+include::../collections/ATS_rc-crs-response.adoc[]
+
+include::../collections/ATS_rc-outputformat-definition.adoc[]
+
+include::../collections/ATS_rc-outputformat-response.adoc[]

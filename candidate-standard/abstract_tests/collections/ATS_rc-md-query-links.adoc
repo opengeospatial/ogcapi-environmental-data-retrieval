@@ -1,0 +1,10 @@
+[[ats_collections_rc-md-query-links]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-md-query-links* 
+^|Test Purpose |Validate that each Collection metadata entry in the Collections Metadata document includes all required links.
+^|Requirement |<<req_collections_rc-md-query-links,/req/collections/rc-md-query-links>>
+^|Test Method |. Verify that each Collection item in the Collections Metadata document includes a `link` property for each supported encoding. 
+. Verify that the `links` properties of the collection includes an item for each supported encoding with at least one link to either a query resource (relation: `data`) or instance resource (relation: `collection`).
+. Verify that all links include the `rel` and `type` link parameters.
+|===
