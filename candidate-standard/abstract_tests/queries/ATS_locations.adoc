@@ -1,0 +1,53 @@
+[[ats_locations]]
+[width="90%",cols="2,6a"]
+|===
+
+^|*Abstract Test {counter:ats-id}* |*/ats/locations*
+^|Test Purpose |Validate that a list of valid locations are returned by a `Locations` query if no query parameters are specified.
+^|Requirement |<<req_locations,/req/queries/locations>>
+^|Test Method |. No query parameters are specified
+. Validate that a GeoJSON document was returned with a status code 200 containing at least a list of features one for each location supported by the collection.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/locations*
+^|Test Purpose |Validate that an error is returned by a `Locations` query when the the locationId is invalid.
+^|Requirement |<<req_locations,/req/queries/locations>>
+^|Test Method |. Check that invalid `locationId` values return an error message
+. Validate that a document was returned with a status code 404.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/locations*
+^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Locations` query using  query parameters.
+^|Requirement |<<req_locations,/req/queries/locations>>
+^|Test Method |. Test with valid query parameters
+. Validate that a document was returned with a status code 200.
+
+Repeat these tests using the following parameter tests:
+
+*Parameters*
+* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/ats/collections/rc-parametername-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/ats/collections/rc-parametername-response>>
+
+*DateTime*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/ats/collections/rc-time-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-time-response,/ats/collections/rc-time-response>>
+
+Execute requests with combinations of the "time","parametername","crs" and "outputformat" query parameters
+and verify that only information that matches the selection criteria is returned.
+|===
+
+
+include::../collections/ATS_rc-time-definition.adoc[]
+
+include::../collections/ATS_rc-time-response.adoc[]
+
+include::../collections/ATS_rc-parametername-definition.adoc[]
+
+include::../collections/ATS_rc-parametername-response.adoc[]
+
+include::../collections/ATS_rc-crs-definition.adoc[]
+
+include::../collections/ATS_rc-crs-response.adoc[]
+
+include::../collections/ATS_rc-outputformat-definition.adoc[]
+
+include::../collections/ATS_rc-outputformat-response.adoc[]

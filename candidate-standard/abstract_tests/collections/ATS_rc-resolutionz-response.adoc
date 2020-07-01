@@ -1,0 +1,9 @@
+[[ats_collections_rc-resolutionz-response]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-resolutionz-response*
+^|Test Purpose |Validate that the `resolutionz` query parameters are processed correctly.
+^|Requirement |<<req_collections_rc-resolutionz-response,/req/collections/rc-resolutionz-response>>
+^|Test Method |. Verify that the data returned by the query contains the same number of values on the z axis as that requested in the `resolutionz` parameter
+. Validate that the `resolutionz` parameter complies with the syntax described in <<req_collections_rc-resolutionz-response,/req/collections/edr/REQ_rc-resolutionz-response>>.
+|===

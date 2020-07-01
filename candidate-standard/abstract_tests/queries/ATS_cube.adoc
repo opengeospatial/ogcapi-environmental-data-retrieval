@@ -1,0 +1,108 @@
+[[ats_cube]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/cube*
+^|Test Purpose |Validate that an error is returned by a `Cube` query if no query parameters are specified.
+^|Requirement |<<req_area,/req/queries/cube>>
+^|Test Method |. No query parameters are specified
+. Validate that a document was returned with a status code 404.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/cube*
+^|Test Purpose |Validate that an error is returned by a `Cube` query when the `coords` query parameter is not specified.
+^|Requirement |<<req_area,/req/queries/cube>>
+^|Test Method |. coords query parameter is not specified
+. Validate that a document was returned with a status code 404.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/cube*
+^|Test Purpose |Validate that an error is returned by a `Cube` query when the `minz` query parameter is not specified.
+^|Requirement |<<req_area,/req/queries/cube>>
+^|Test Method |. Check that the minz query parameter is specified (i.e. check there is a defined bottom of the cube)
+. Validate that a document was returned with a status code 404.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/cube*
+^|Test Purpose |Validate that an error is returned by a `Cube` query when the `maxz` query parameter is not specified.
+^|Requirement |<<req_area,/req/queries/cube>>
+^|Test Method |. Check that the maxz query parameter is specified (i.e. check that the top of the cube is defined)
+. Validate that a document was returned with a status code 404.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/cube*
+^|Test Purpose |Validate that an error is returned by a `Cube` query when the coords query parameter does not contain a valid POLYGON Well Known Text value.
+^|Requirement |<<req_area,/req/queries/cube>>
+^|Test Method |. Check coords query parameter is *Rectangular* area defined using a valid Well Known Text Polygon value, if the Well Known Text Polygon is not a rectangle throw an error  
+. Validate that a document was returned with a status code 403.
+
+^|*Abstract Test {counter:ats-id}* |*/ats/cube*
+^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Cube` query using  query parameters.
+^|Requirement |<<req_area,/req/queries/cube>>
+^|Test Method |. Test with valid query parameters
+. Validate that a document was returned with a status code 200.
+
+Repeat these tests using the following parameter tests:
+
+*Coordinates*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-coords-definition,/ats/collections/rc-coords-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-coords-response,/ats/collections/rc-coords-response>>
+
+*minz*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-minz-definition,/ats/collections/rc-minz-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-minz-response,/ats/collections/rc-minz-response>>
+
+*maxz*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-maxz-definition,/ats/collections/rc-maxz-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-maxz-response,/ats/collections/rc-maxz-response>>
+
+*Parameters*
+* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/ats/collections/rc-parametername-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/ats/collections/rc-parametername-response>>
+
+*DateTime*
+
+* Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/ats/collections/rc-time-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-time-response,/ats/collections/rc-time-response>>
+
+Execute requests with combinations of the "coords","time","parametername","minz","maxz","crs" and "outputformat" query parameters
+and verify that only information that matches the selection criteria is returned.
+|===
+
+include::../collections/ATS_rc-coords-definition.adoc[]
+
+include::../collections/ATS_rc-coords-response.adoc[]
+
+include::../collections/ATS_rc-minz-definition.adoc[]
+
+include::../collections/ATS_rc-minz-response.adoc[]
+
+include::../collections/ATS_rc-maxz-definition.adoc[]
+
+include::../collections/ATS_rc-maxz-response.adoc[]
+
+include::../collections/ATS_rc-resolutionx-definition.adoc[]
+
+include::../collections/ATS_rc-resolutionx-response.adoc[]
+
+include::../collections/ATS_rc-resolutiony-definition.adoc[]
+
+include::../collections/ATS_rc-resolutiony-response.adoc[]
+
+include::../collections/ATS_rc-resolutionz-definition.adoc[]
+
+include::../collections/ATS_rc-resolutionz-response.adoc[]
+
+include::../collections/ATS_rc-time-definition.adoc[]
+
+include::../collections/ATS_rc-time-response.adoc[]
+
+include::../collections/ATS_rc-parametername-definition.adoc[]
+
+include::../collections/ATS_rc-parametername-response.adoc[]
+
+include::../collections/ATS_rc-crs-definition.adoc[]
+
+include::../collections/ATS_rc-crs-response.adoc[]
+
+include::../collections/ATS_rc-outputformat-definition.adoc[]
+
+include::../collections/ATS_rc-outputformat-response.adoc[]

@@ -1,22 +1,27 @@
-[[ats_collections_rc-op]]
+[[ats_position]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|*Abstract Test {counter:ats-id}* |*/ats/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query if no query parameters are specified.
-^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
+^|Requirement |<<req_position,/req/queries/position>>
 ^|Test Method |. No query parameters are specified
 . Validate that a document was returned with a status code 404.
 
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|*Abstract Test {counter:ats-id}* |*/ats/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter is not specified.
-^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
+^|Requirement |<<rreq_position,/req/queries/position>>
 ^|Test Method |. coords query parameter is not specified
 . Validate that a document was returned with a status code 404.
 
+^|*Abstract Test {counter:ats-id}* |*/ats/position*
+^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter does not contain a valid POINT Well Known Text value.
+^|Requirement |<<rreq_position,/req/queries/position>>
+^|Test Method |. Check coords query parameter is a valid Well Known Text Point value 
+. Validate that a document was returned with a status code 403.
 
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|*Abstract Test {counter:ats-id}* |*/ats/position*
 ^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Position` query using  query parameters.
-^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
+^|Requirement |<<req_position,/req/queries/position>>
 ^|Test Method |. Test with valid query parameters
 . Validate that a document was returned with a status code 200.
 
