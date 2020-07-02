@@ -4,7 +4,7 @@
 ^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-md-items*
 ^|Test Purpose |Validate that each collection provided by the server is described in the Collections Metadata.
 ^|Requirement |<<req_collections_rc-md-items,/req/collections/rc-md-items>>
-^|Test Method |. Verify that there is an entry in the `collections` array of the Collections Metadata for each feature collection provided by the API.
+^|Test Method |. Verify that there is an entry in the `collections` array of the Collections Metadata for each collection provided by the API.
 . Verify that each collection entry includes an identifier.
 . Verify that each collection entry includes links in accordance with <<ats_collections_rc-md-query-links,/collections/rc-md-query-links>>.
 . Verify that if the collection entry includes an extent property, that that property complies with <<ats_collections_rc-md-extent,/collections/rc-md-extent>>
