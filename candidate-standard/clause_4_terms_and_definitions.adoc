@@ -13,13 +13,13 @@ body of resources that belong or are used together. An aggregate, set, or group 
 === Conformance Module; Conformance Test Module
 set of related tests, all within a single conformance test class (<<ogc08-131,OGC 08-131>>)
 
- NOTE: When no ambiguity is possible, the word `test` may be omitted. i.e. conformance test module is the same as conformance module. Conformance modules may be nested in a hierarchical way.
+ NOTE: When no ambiguity is possible, the word _test_ may be omitted, so conformance test module maybe called a conformance module. Conformance modules may be nested in a hierarchical way.
 
 [[ctc-definition]]
 === Conformance Class; Conformance Test Class
 set of conformance test modules that must be applied to receive a single certificate of conformance (<<ogc08-131,OGC 08-131>>)
 
- NOTE: When no ambiguity is possible, the word _test_ may be left out, so conformance test class maybe called a conformance class.
+ NOTE: When no ambiguity is possible, the word _test_ may be omitted, so conformance test class maybe called a conformance class.
 
 [[dataset-definition]]
 === Dataset

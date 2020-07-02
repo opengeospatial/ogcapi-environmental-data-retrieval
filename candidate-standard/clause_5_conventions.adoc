@@ -48,6 +48,8 @@ The following link-relations are in common use by OGC Web API Standards.
 
 Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a collection. Or a *related* link on a feature could reference a related feature.
 
+*Note*: The query patterns of the EDR API use the link relation *data*. It is envisaged that, in the future, this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.
+
 === Examples
 
 Most of the examples provided in this standard are encoded in JSON. JSON was chosen because it is widely understood by implementers and easy to include in a text document. This convention should NOT be interpreted as a requirement that JSON must be used. Implementors are free to use any format they desire as long as there is a Conformance Class for that format and the API advertises its support for that Conformance Class.
@@ -116,5 +118,5 @@ The path "/mypath" in the OpenAPI definition of the API would be the URL `https:
 
 Reusable components for OpenAPI definitions for a OGC API are referenced from this document.
 
-CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-erd-1/1.0".
+CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-edr-1/1.0".
 
