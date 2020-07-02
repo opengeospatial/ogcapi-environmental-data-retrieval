@@ -13,7 +13,7 @@
                 "r":[
                         "asciidoctor-diagram"
                 ]
-              }
+              },
         "1":  { 
                "OGC_doc_number": "XXX",
                 "urn":"http://www.opengis.net/doc/BP/ogcapi-edrBP/1.0",

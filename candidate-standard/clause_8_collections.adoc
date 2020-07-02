@@ -2,9 +2,9 @@
 === Query Resources
 :sectnums:
 
-Query Resources are spatial queries which support the operation of the API or the access and use of the Environmental Resources. They are described in the <<query-resources>> section.
+Query Resources are spatial queries which support the operation of the API or the access and use of the Environmental Data Resources. They are described in the <<query-resources>> section.
 
-Query Resources related to Environmental Resources (collection of spatiotemporal data) can be exposed using the path template:
+Query Resources related to Environmental Data Resources (collection of spatiotemporal data) can be exposed using the path template:
 
 * /collections/{collectionId}/{queryType}
 
@@ -20,7 +20,7 @@ The resources returned from each node in this template are described in <<query-
 |/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {resourceType} associated with the `{collectionId}` collection.
 |===
 
-The OGC API-Common standard does not define any Information Resource types. However <<query-resource-table>> provides a mapping of the intial query types proposed for the EDR API.
+The OGC API-Common standards do not define any Information Resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
@@ -39,7 +39,7 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 
 ==== Shared query parameters
 
-Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR standard defines the following as common parameters which all of the EDR API queries support.
+Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR API standard defines the following as standard parameters for use.
 
 [[coords]]
 ====== Parameter coords
@@ -55,18 +55,18 @@ include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
 The datetime parameter is defined in API-Common. The following information is provided as a convenience for the user.
 
-"Intersects" means that the time (instant or period) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or period). For time periods this includes the start and end time.
+"Intersects" means that the time (instant or duration) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or duration). Time durations include the start and end times.
  
-.A date-time
+.A datetime
 =================
 February 12, 2018, 23:20:52 GMT:
 
 `time=2018-02-12T23%3A20%3A52Z`
 =================
 
-For resources with a temporal property that is a timestamp (like `lastUpdate` in the building features), a date-time value would match all resources where the temporal property is identical.
+For resources with a temporal property that is a timestamp (like `lastUpdate`), a datetime value would match all resources where the temporal property is identical.
 
-For resources with a temporal property that is a date or a time interval, a date-time value would match all resources where the timestamp is on that day or within the time interval.
+For resources with a temporal property that is a date or a time interval, a datetime value would match all resources where the timestamp is on that day or within the time interval.
 
 .Intervals
 =================
@@ -133,7 +133,7 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 `outputformat=coverageJSON`
 =================
 
-If not specified the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection a 403 message SHOULD be returned.
+If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection, a 403 message SHOULD be returned.
 
 
 ==== Position query

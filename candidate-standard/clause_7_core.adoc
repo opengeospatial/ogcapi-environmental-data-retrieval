@@ -15,7 +15,7 @@ The `Core` Requirements Class defines the requirements for locating, understandi
 [[core-dependencies-section]]
 === Dependencies
 
-The OGC API-EDR standard is an extension of the OGC API-Common standard. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
+The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
 
 include::requirements/core/REQ_api-common.adoc[]
 
@@ -38,7 +38,7 @@ The landing page provides links to start exploration of the resources offered by
 
 ===== Operation
 
-The `Landing Page` operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class specifies only one way of performing this operation:
+The `Landing Page` operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental Data` resources. The `Core` conformance class specifies only one way of performing this operation:
 
 . Issue a `GET` request on the `{root}/` path
 
@@ -82,7 +82,7 @@ Every API is required to provide a definition document that describes the capabi
 
 ===== Operation
 
-This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class describes two ways of performing this operation:
+This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental Data` resources. The `Core` conformance class describes two ways of performing this operation:
 
 . Issue a `GET` request on the `{root}/api` path
 . Follow the `service-desc` or `service-doc` link on the landing page
@@ -111,7 +111,7 @@ To support "generic" clients that want to access multiple OGC API standards and 
 
 ===== Operation
 
-This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental` resources. The `Core` conformance class describes two ways of performing this operation:
+This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support `Environmental Data` resources. The `Core` conformance class describes two ways of performing this operation:
 
 . Issue a `GET` request on the `{root}/conformance` path
 . Follow the `conformance` link on the landing page
