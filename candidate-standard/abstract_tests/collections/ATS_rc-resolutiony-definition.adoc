@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-resolutiony-definition*
-^|Test Purpose |Validate that the resolutiony query parameters are constructed correctly.
+^|Test Purpose |Validate that the `resolutiony` query parameters are constructed correctly.
 ^|Requirement |<<req_collections_rc-resolutiony-definition,/req/collections/rc-resolutiony-definition>>
 ^|Test Method |Verify that the `resolutiony` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
