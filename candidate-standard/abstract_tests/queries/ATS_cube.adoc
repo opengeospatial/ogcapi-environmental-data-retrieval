@@ -5,31 +5,31 @@
 ^|Test Purpose |Validate that an error is returned by a `Cube` query if no query parameters are specified.
 ^|Requirement |<<req_area,/req/queries/cube>>
 ^|Test Method |. No query parameters are specified
-. Validate that a document was returned with a status code 404.
+. Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/ats/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query when the `coords` query parameter is not specified.
 ^|Requirement |<<req_area,/req/queries/cube>>
 ^|Test Method |. coords query parameter is not specified
-. Validate that a document was returned with a status code 404.
+. Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/ats/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query when the `minz` query parameter is not specified.
 ^|Requirement |<<req_area,/req/queries/cube>>
 ^|Test Method |. Check that the minz query parameter is specified (i.e. check there is a defined bottom of the cube)
-. Validate that a document was returned with a status code 404.
+. Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/ats/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query when the `maxz` query parameter is not specified.
 ^|Requirement |<<req_area,/req/queries/cube>>
 ^|Test Method |. Check that the maxz query parameter is specified (i.e. check that the top of the cube is defined)
-. Validate that a document was returned with a status code 404.
+. Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/ats/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query when the coords query parameter does not contain a valid POLYGON Well Known Text value.
 ^|Requirement |<<req_area,/req/queries/cube>>
 ^|Test Method |. Check coords query parameter is *Rectangular* area defined using a valid Well Known Text Polygon value, if the Well Known Text Polygon is not a rectangle throw an error  
-. Validate that a document was returned with a status code 403.
+. Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/ats/cube*
 ^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Cube` query using  query parameters.
