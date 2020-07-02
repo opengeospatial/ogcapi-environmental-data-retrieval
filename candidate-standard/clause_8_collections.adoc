@@ -37,7 +37,7 @@ The OGC API-Common standard does not define any Information Resource types. Howe
 |/collections/{collectionId}/instances | Instances | List the available instances of the collection
 |===
 
-==== Common query parameters
+==== Shared query parameters
 
 Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR standard defines the following as common parameters which all of the EDR API queries support.
 
