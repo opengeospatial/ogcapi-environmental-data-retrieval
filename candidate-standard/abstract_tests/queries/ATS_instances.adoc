@@ -1,4 +1,4 @@
-[[ats_collections]]
+[[ats_instances]]
 [cols="1,4",width="90%"]
 |===
 2+|*Conformance Class*
@@ -14,25 +14,18 @@
 
 include::collections/ATS_crs84.adoc[]
 
-==== Feature Collections {root}/collections
+==== Collections {root}/collections/{collectionId}/instances
 
 include::collections/ATS_rc-md-op.adoc[]
 
 include::collections/ATS_rc-md-success.adoc[]
 
-==== Feature Collection {root}/collections/{collectionId}
+==== Collection {root}/collections/{collectionId}{collectionId}/instances/{instanceId}
 
 include::collections/ATS_src-md-op.adoc[]
 
 include::collections/ATS_src-md-success.adoc[]
 
-==== Features {root}/collections/{collectionId}/items
-
-NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
-
-include::collections/ATS_rc-op.adoc[]
-
-include::collections/ATS_rc-response.adoc[]
 
 ==== Second Tier Tests
 These tests are invoked by other tests.
@@ -41,13 +34,6 @@ These tests are invoked by other tests.
 
 include::collections/ATS_rc-md-extent.adoc[]
 
-===== Queries
-
-include::collections/ATS_rc-md-items.adoc[]
-
-include::collections/ATS_rc-md-query-links.adoc[]
-
 ===== Links
 
 include::collections/ATS_rc-md-links.adoc[]
-

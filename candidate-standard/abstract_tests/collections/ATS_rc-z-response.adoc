@@ -1,0 +1,9 @@
+[[ats_collections_rc-z-response]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-z-response*
+^|Test Purpose |Validate that the vertical level query parameters are processed correctly.
+^|Requirement |<<req_collections_rc-z-response,/req/collections/rc-z-response>>
+^|Test Method |. Verify that only resources that have a vertical geometry that intersects the vertical information in the `z` parameter were included in the result set
+. Validate that the vertical level parameter complies with the syntax described in <<req_collections_rc-z-response,/req/collections/edr/REQ_rc-z-response>>.
+|===

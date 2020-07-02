@@ -1,0 +1,19 @@
+[[ats_collections_rc-z-definition]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-z-definition*
+^|Test Purpose |Validate that the vertical level query parameters are constructed correctly.
+^|Requirement |<<req_collections_rc-z-definition,/req/collections/rc-z-definition>>
+^|Test Method |Verify that the `z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

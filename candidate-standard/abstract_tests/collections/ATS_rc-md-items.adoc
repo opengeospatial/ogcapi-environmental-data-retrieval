@@ -4,10 +4,12 @@
 ^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-md-items*
 ^|Test Purpose |Validate that each collection provided by the server is described in the Collections Metadata.
 ^|Requirement |<<req_collections_rc-md-items,/req/collections/rc-md-items>>
-^|Test Method |. Verify that there is an entry in the `collections` array of the Collections Metadata for each feature collection provided by the API.
+^|Test Method |. Verify that there is an entry in the `collections` array of the Collections Metadata for each collection provided by the API.
 . Verify that each collection entry includes an identifier.
-. Verify that each collection entry includes links in accordance with <<ats_collections_rc-md-items-links,/collections/rc-md-items-links>>.
+. Verify that each collection entry includes links in accordance with <<ats_collections_rc-md-query-links,/collections/rc-md-query-links>>.
 . Verify that if the collection entry includes an extent property, that that property complies with <<ats_collections_rc-md-extent,/collections/rc-md-extent>>
+. Verify that if the collection entry includes an crs property, that that property complies with <<ats_collections_rc-md-crs,/collections/rc-md-crs>>
+. Verify that if the collection entry includes an parameters property, that that property complies with <<ats_collections_rc-md-parameters,/collections/rc-md-parameters>>
 . Validate each collection entry for all supported media types using the resources and tests identified in <<collection-entry-schema>>
 |===
 
@@ -19,5 +21,5 @@ The collection entries may be encoded in a number of different formats. The foll
 |===
 |Format |Schema Document |Test ID
 |HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json]|<<ats_html_content,/ats/html/content>>
-|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_geojson_content,/ats/geojson/content>>
+|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_json_content,/ats/json/content>>
 |===

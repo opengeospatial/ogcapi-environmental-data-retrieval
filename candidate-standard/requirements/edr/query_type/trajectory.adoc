@@ -1,6 +1,7 @@
-===== Parameters
 
-====== Parameter coords
+The Trajectory query returns data along the path defined by the `coords` parameter, *the logic to match the data for the requested path will depend on and be defined by the Collection*.  The results are further filtered by the constraints defined by the following query parameters:
+
+====== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -62,12 +63,12 @@ From Bristol to Exeter
 =================
 
 <<<
-==== Parameter z
+====== *Parameter z*
 
 Used when the entire corridor occurs at the same vertical height the z query parameter is used to define the height
 
 
-.A z value
+.A single vertical level
 ===========
 
 for instance if the entire route is at the 850hPa pressure level
@@ -76,5 +77,11 @@ z=850
 ===========
 <<<    
 
+===== <<time>>
 
+===== <<parametername>>
+
+===== <<crs>>
+
+===== <<outputformat>>
     

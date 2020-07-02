@@ -1,5 +1,6 @@
-===== Parameters
-====== Parameter coords
+The Position query returns data for the requested coordinate, logic for identifying the best match for the coordinate will depend on the Collection and the filter constraints are defined by the following query parameters:
+
+====== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -23,7 +24,7 @@ see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wik
 the coordinate values will depend on the CRS parameter, if this is not defined
 the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)
 
-.Point
+.Single location
 =================
 retrieve data for Greenwich, London
 
@@ -38,7 +39,7 @@ retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E,
 `coords=MULTIPOINT\((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
 =================
 
-==== Parameter z
+===== *Parameter z*
 
 include::../REQ_rc-z-definition.adoc[]
 
@@ -50,7 +51,7 @@ i.e. z=level
 if data at all available levels is required z can be defined as ALL
 i.e. z=ALL
 
-.A z value
+.A single vertical level
 ===========
 
 for instance if the 850hPa pressure level is being queried
@@ -81,6 +82,14 @@ z=ALL
 ===========
 
 `When not specified the API MUST return data from all available levels`
+
+===== <<time>>
+
+===== <<parametername>>
+
+===== <<crs>>
+
+===== <<outputformat>>
 
     
 
