@@ -5,7 +5,7 @@ The one Standardization Target for this standard is Web APIs.
 
 OGC API-Common Part 1: Core and Part 2: Collections provide a common foundation for OGC API standards. This EDR API standard is as an extension of API-Common Core and Collections. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of API-Common.
 
-This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
 The conformance classes and their constituent requirements classes for OGC API-EDR are:
 
