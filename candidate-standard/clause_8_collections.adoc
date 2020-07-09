@@ -133,7 +133,7 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 `outputformat=coverageJSON`
 =================
 
-If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection, a 403 message SHOULD be returned.
+If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection, a `400` message SHOULD be returned.
 
 
 ==== Position query
