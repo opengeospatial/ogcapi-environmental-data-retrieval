@@ -85,7 +85,7 @@ Some normative statements (requirements, recommendations and permissions) use a 
 In this case, the following changes to the pre-defined OpenAPI component are permitted:
 
 * If the server supports an XML encoding, `xml` properties may be added to the relevant OpenAPI schema components.
-* The range of values of a parameter or property may be extended (additional values) or constrained (if a subset of all possible values are applicable to the server). An example for a constrained range of values is to explicitly specify the supported values of a string parameter or property using an enum.
+* The range of values of a parameter or property may be extended (additional values) or constrained (if a subset of all possible values are applicable to the server). An example for a constrained range of values is to explicitly specify the supported values of a string parameter or property using an `enum`.
 * Additional properties may be added to the schema definition of a Response Object.
 * Informative text may be changed or added, like comments or description properties.
 
@@ -111,12 +111,12 @@ servers:
     description: Production server
 ----
 
-The path "/mypath" in the OpenAPI definition of the API would be the URL `https://data.example.org/mypath` for the production server.
+The path `/mypath` in the OpenAPI definition of the API would be the URL `https://data.example.org/mypath` for the production server.
 ===========================================
 
 ==== Reusable OpenAPI components
 
 Reusable components for OpenAPI definitions for a OGC API are referenced from this document.
 
-CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-edr-1/1.0".
+CAUTION: During the development phase, these components use a base URL of `https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master`, but eventually they are expected to be available under the base URL `http://schemas.opengis.net/ogcapi-edr-1/1.0`.
 
