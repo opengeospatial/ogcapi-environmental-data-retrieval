@@ -107,7 +107,7 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 =================
 
 If a requested parameter doesn't exist in the collection the data for those parameters that do exist should be returned.
-If none of the requested parameters exist in the collection a 403 message SHOULD be returned.
+If none of the requested parameters exist in the collection a `400` message SHOULD be returned.
 
 <<<
 
