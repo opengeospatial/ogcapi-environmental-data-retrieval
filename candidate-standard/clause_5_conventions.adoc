@@ -34,7 +34,7 @@ The following link-relations are in common use by OGC Web API Standards.
 
 * *item*: The target IRI points to a resource that is a member of the collection represented by the context IRI. [IANA]
 
-* *items*: Refers to a resource that is comprised of members of the collection represented by the link's context. [OGC]
+* *items*: Refers to a resource that comprises members of the collection represented by the link's context. [OGC]
 
 * *license*: Refers to a license associated with this context. [IANA]
 
