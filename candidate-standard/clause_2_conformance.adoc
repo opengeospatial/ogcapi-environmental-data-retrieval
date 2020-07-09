@@ -3,7 +3,7 @@ Conformance with this standard shall be checked using the tests specified in Ann
 
 The one Standardization Target for this standard is Web APIs.
 
-OGC API-Common Part 1:Core and Part 2:Collections provide a common foundation for OGC API standards. This EDR API standard is as an extension of API-Common Core and Collections. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of API-Common.
+OGC API-Common Part 1: Core and Part 2: Collections provide a common foundation for OGC API standards. This EDR API standard is as an extension of API-Common Core and Collections. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of API-Common.
 
 This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the /conformance path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
@@ -17,7 +17,7 @@ The Core requirements class is specified in *Requirements Class Core* <<rc_core-
 
 * <<rc_collection-section,Collection>>, one Requirement Class
 
-The API-Common Part 2:Collections standard extends the API-Common Part 1:Core to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
+The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
 The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2:Collections specifies the requirements necessary to discover and understand a generic collection and its contents. 
 
@@ -30,7 +30,7 @@ The Collection requirements class is specified in *Requirements Class Collection
 ** <<rc_geojson-section,GeoJSON>>
 ** <<rc_covjson-section,CoverageJSON>>
 
-Neither the _Core_ nor _Collection_ requirements classes mandate specific encodings or formats for representing resources. The _HTML_, _GeoJSON_ and _CoverageJSON_ requirements classes specify representations for these resources in commonly used encodings for spatial data on the web.
+Neither the _Core_ nor _Collection_ requirements classes mandate specific encodings or formats for representing resources. The _HTML_, _GeoJSON_ and _CoverageJSON_ requirements classes specify representations for these resources in frequently used encodings for spatial data on the web.
 
 None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format.
 
