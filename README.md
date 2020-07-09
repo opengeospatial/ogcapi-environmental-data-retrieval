@@ -19,6 +19,10 @@ The latest draft of the standard in this repository is built daily (based on the
 * [OGC API - Environmental Data Retrieval Standard](http://docs.opengeospatial.org/DRAFTS/19-086.html)
 * DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/Environmental-Data-Retrieval-API/docs/edr_api.html)
 
+### Best Practice
+
+* [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html)
+
 ## EDR API Vision
 
 The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of, or a model of, real world phenomena. While the former is the emphasis, EDR APIs can provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier. There is an assumption that the data store is non-sparse, in that most queries are expected to return useful values rather than 'data not found'.
