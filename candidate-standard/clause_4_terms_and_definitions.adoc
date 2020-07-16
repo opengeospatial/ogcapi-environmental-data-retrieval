@@ -6,16 +6,9 @@ This document uses the terms defined in Sub-clause 5 of https://github.com/openg
 For the purposes of this document, the following additional terms and definitions apply.
 
 Note: These are just placeholders
-[[position-definition]]
-=== Position
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
 
 [[area-definition]]
 === Area
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
-
-[[trajectory-definition]]
-=== Trajectory
 blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
 
 [[corridor-definition]]
@@ -26,15 +19,22 @@ blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
 === Cube
 blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
 
-[[radius-definition]]
-=== Radius
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
-
 [[instance-definition]]
 === Instance
 blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
 
---------------
+[[position-definition]]
+=== Position
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[radius-definition]]
+=== Radius
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[trajectory-definition]]
+=== Trajectory
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
 [[collection-definition]]
 === Collection
 body of resources that belong or are used together. An aggregate, set, or group of related resources. (<<ogc020-024,OGC 20-024>>)
