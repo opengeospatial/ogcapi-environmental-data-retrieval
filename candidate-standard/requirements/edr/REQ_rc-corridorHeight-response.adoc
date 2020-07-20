@@ -11,5 +11,5 @@ corridorz = height "/" units
 ---- 
 ^|C |The  height of corridor parameter is the total height of the required corridor.  
 ^|D |The coordinates of the `coords` parameter define the centre point of the corridor. 
-^|E |If an unsupported units value is requested a `403` error should be returned. 
+^|E |If an unsupported units value is requested a `400` error should be returned. 
 |===

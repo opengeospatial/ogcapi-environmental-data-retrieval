@@ -49,7 +49,7 @@ include::requirements/edr/REQ_rc-coords-definition.adoc[]
 include::requirements/edr/REQ_rc-coords-response.adoc[]
 
 [[time]]
-====== Parameter time
+====== Parameter datetime
 
 include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
@@ -61,7 +61,7 @@ The datetime parameter is defined in API-Common. The following information is pr
 =================
 February 12, 2018, 23:20:52 GMT:
 
-`time=2018-02-12T23%3A20%3A52Z`
+`datetime=2018-02-12T23%3A20%3A52Z`
 =================
 
 For resources with a temporal property that is a timestamp (like `lastUpdate`), a datetime value would match all resources where the temporal property is identical.
@@ -107,7 +107,7 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 =================
 
 If a requested parameter doesn't exist in the collection the data for those parameters that do exist should be returned.
-If none of the requested parameters exist in the collection a 403 message SHOULD be returned.
+If none of the requested parameters exist in the collection a 400 message SHOULD be returned.
 
 <<<
 
@@ -133,7 +133,7 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 `outputformat=coverageJSON`
 =================
 
-If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection, a 403 message SHOULD be returned.
+If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection, a 400 message SHOULD be returned.
 
 
 ==== Position query
