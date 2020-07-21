@@ -4,18 +4,13 @@ This is an example of the metadata returned by the instances query
 
 (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
-There is a link to the feature collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
+There is a link to the instance response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
 
 Representations of this resource in other formats are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "alternate".
 
-An additional link is to a GML application schema for the dataset - using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "describedBy".
+The data queries that are supported by each instance are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "data".
 
-A bulk download of all the features in the dataset is referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "enclosure"
-
-Finally there are also links to the license information for the building data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license").
-
-Reference system information is not provided as the service provides geometries only in the default system (spatial: WGS 84 longitude/latitude; temporal:
-Gregorian calendar).
+There are also links to the license information for the observation and forecast data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license") and also the terms and conditions of service (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "restrictions") .
 
 [source,json]
 ----
