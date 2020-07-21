@@ -5,6 +5,44 @@ This document uses the terms defined in Sub-clause 5 of https://github.com/openg
 
 For the purposes of this document, the following additional terms and definitions apply.
 
+Note: These are just placeholders
+
+[[area-definition]]
+=== Area
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[corridor-definition]]
+=== Corridor
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[cube-definition]]
+=== Cube
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[instance-definition]]
+=== Instance
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[items-definition]]
+=== Items
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[locations-definition]]
+=== Locations
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[position-definition]]
+=== Position
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[radius-definition]]
+=== Radius
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
+[[trajectory-definition]]
+=== Trajectory
+blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+
 [[collection-definition]]
 === Collection
 body of resources that belong or are used together. An aggregate, set, or group of related resources. (<<ogc020-024,OGC 20-024>>)
@@ -27,7 +65,7 @@ collection of data, published or curated by a single agent, and available for ac
 
 [[distribution-definition]]
 === Distribution
-represents an accessible form of a *dataset* (DCAT)
+represents an accessible form of a *dataset* (W3C_DCAT)
 
 EXAMPLE: a downloadable file, an RSS feed or a web service that provides the data.
 

@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* | */req/edr/maxz-response* 
-^|A |Only resources with a vertical geometry that including and below the vertical information in the `maxz` parameter SHALL be part of the result set.
+^|A |Only resources with a vertical geometry coordinate that is less than or includes the vertical information in the `maxz` parameter SHALL be part of the result set.
 
 [source,java]
 ----

@@ -4,5 +4,5 @@
 |*Requirement {counter:req-id}* | */req/edr/outputCRS-response*
 ^|A|If the `crs` parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the `crs` parameter is not specifed the data will be returned in its native projection.
 ^|B|The `crs` parameter SHALL consist of an identifier selected from the enumerated list of valid values supplied in the collections metadata.
-^|C| if an unsupported `crs` value is requested a `403` error message SHOULD be returned .
+^|C| if an unsupported `crs` value is requested a `400` error message SHOULD be returned .
 |===

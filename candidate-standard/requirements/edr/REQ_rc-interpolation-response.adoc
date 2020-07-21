@@ -9,6 +9,6 @@
 interpolation = interpolation-method 
 ----
 ^|C|If not specified the query will use the default interpolation method for the chosen collection.
-^|D|If the interpolation method value e does not match one of the listed methods a 403 error message should be returned.
+^|D|If the interpolation method value e does not match one of the listed methods a 400 error message should be returned.
 |===
 
