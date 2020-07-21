@@ -3,7 +3,7 @@
 |===
 |*Requirement {counter:req-id}* |*/req/edr/interpolationZ-response*
 ^|A| If the `interpolationz` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed z samples.
-^|B| The interpolationz information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :
+^|B| The `interpolationz` information is an interpolation method and an interval. The available interpolation methods should be part of the collection response and the samples value is a number :
 
 [source,java]
 ----

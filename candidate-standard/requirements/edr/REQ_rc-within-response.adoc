@@ -4,5 +4,4 @@
 |*Requirement {counter:req-id}* | */req/edr/within-response* 
 ^|A |If the `within` parameter is provided, all selected information within the specified radius SHALL be part of the result set.
 ^|B |If a `withinunits` parameter is not provided, a `400` error WILL be returned.
-
 |===

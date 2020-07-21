@@ -2,7 +2,7 @@ openapi: 3.0.2
 info:
   title: Environmental Data Retrieval API's
   description: Example of Candidate Environmental Data Retrieval API OpenAPI docs
-  version: 0.0.8
+  version: 0.0.9
 servers:
   - url: 'http://www.example.org/edr'
     description: ''
@@ -2442,7 +2442,7 @@ components:
         datetime:
             type: string
             title: Date/time Domain
-            description: Either a date-time or a period string that adheres to RFC 3339. Indicates the time instant or period for whidh data are available from the EDR feature.
+            description: Either a date-time or a period string that adheres to RFC 3339. Indicates the time instant or period for which data are available from the EDR feature.
             default: ''
             example:
               - 2018-02-12T00:00:00Z/2018-03-18T12:31:12Z
@@ -2502,13 +2502,13 @@ components:
         items:
           type: number
     time:
-      name: time
+      name: datetime
       in: query
       description: |-
         Either a date-time or a period string that adheres to RFC 3339. Examples:
         * A date-time: "2018-02-12T23:20:50Z" * A period: "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z" or "2018-02-12T00:00:00Z/P1M6DT12H31M12S" or a list of
         date-times "2018-02-12T00:00:00Z,2018-06-12T03:00:00Z,2020-02-15T21:00:00Z"
-        Only features that have a temporal property that intersects the value of `time` are selected.
+        Only features that have a temporal property that intersects the value of `datetime` are selected.
         If a feature has multiple temporal properties, it is the decision of the server whether only a single temporal property is used to determine the extent or all relevant temporal properties.
       required: false
       style: form
@@ -2545,7 +2545,7 @@ components:
       schema:
         type: string
     outputFormat:
-      name: outputformat
+      name: f
       in: query
       description: Format to return query results in
       required: false
@@ -2855,13 +2855,13 @@ components:
         A 2D trajectory, on the surface of earth with no time or height dimensions: 
          coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)
 
-        A 2D trajectory, on the surface of earth with all for the same time and no height dimension, time value defined in ISO8601 format by the `time` query parameter : 
+        A 2D trajectory, on the surface of earth with all for the same time and no height dimension, time value defined in ISO8601 format by the `datetime` query parameter : 
          coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&time=2018-02-12T23:00:00Z 
          
         A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the `z` query parameter : 
          coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&z=850 
 
-        A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the `time` query parameter and height defined in the collection height units by the `z` query parameter : 
+        A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the collection height units by the `z` query parameter : 
          coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&time=2018-02-12T23:00:00Z&z=850 
 
         A 3D trajectory, on the surface of the earth but over a time range with no height values:
@@ -2874,7 +2874,7 @@ components:
         A 3D trajectory, through a 3D volume with height or depth, but no defined time:
         coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)
 
-        A 3D trajectory, through a 3D volume with height or depth, but a fixed time time value defined in ISO8601 format by the `time` query parameter:
+        A 3D trajectory, through a 3D volume with height or depth, but a fixed time time value defined in ISO8601 format by the `datetime` query parameter:
         coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)&time=2018-02-12T23:00:00Z
 
         A 4D trajectory, through a 3D volume but over a time range:
