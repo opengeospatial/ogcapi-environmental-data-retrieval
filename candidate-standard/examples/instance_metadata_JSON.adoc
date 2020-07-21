@@ -44,7 +44,7 @@ There are also links to the license information for the observation and forecast
         {
             "href": "https://http://www.example.org/terms-and-conditions---datapoint#datalicence",
             "hreflang": "en",
-            "rel": "licence",
+            "rel": "license",
             "type": "text/html",
             "title": ""
         },
