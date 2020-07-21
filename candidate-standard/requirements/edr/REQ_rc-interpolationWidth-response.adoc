@@ -10,5 +10,5 @@
 interpolationWidth = "R"interval "/" interpolation-method
 ---- 
 ^|C |The coordinates of the `coords` parameter define the centre point of the corridor. 
-^|D |If the interpolation method value does not match one of the listed methods a 403 error message should be returned. 
+^|D |If the interpolation method value does not match one of the listed methods a '400' error message should be returned. 
 |===

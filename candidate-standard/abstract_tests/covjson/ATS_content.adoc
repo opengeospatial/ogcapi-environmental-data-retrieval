@@ -1,0 +1,10 @@
+[[ats_covjson_content]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/covjson/content*
+^|Test Purpose |Verify the content of a CoverageJSON document given an input document and schema.
+^|Requirement |<<req_covjson_content,/req/covjson/content>>
+^|Test Method |. Validate that the document is a CoverageJSON document.
+. Validate the document against the schema using an JSON Schema validator.
+. Validate the document against the schema using an CoverageJSON Schema validator.
+|===

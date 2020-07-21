@@ -1,4 +1,8 @@
-# Best Practice template
+# Best Practice 
+
+This is a work in progress document to capture Best Practice for the implementation of the Environmental Data Retrieval API.
+
+Some of the best practices may be applicable to specific domains, such as meteorology or hydrology.
 
 ## Content
 

@@ -2,15 +2,55 @@
 
 === Identifiers
 
+The <<WEBARCH,Architecture of the World Wide Web>> establishes the URI as the single global identification system for the Web. Therefore, URIs or <<rfc6570,URI Templates>> are used in OGC Web API standards to identify key entities in those standards.
+
 The normative provisions in this standard are denoted by the URI
 
 http://www.opengis.net/spec/ogcapi-edr-1/1.0
 
-All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
+All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
+
+A key requirement of Web API standards is the unambiguous identification of the <<resource-definition,resources>> they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <<rfc6570,URI Templates>> to identify <<resource-category-definition,resource categories>>. These resource categories are instantiated in the implementation of the standard.
+
+The scope of each URI Template is specified in the standard. In some cases, API implementations are required to implement the template as a path in their API. In most cases they are optional.
+
+Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC Web API standards.
 
 === Link relations
 
-To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used.
+To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible. Additional link relation types are registered with the https://github.com/opengeospatial/NamingAuthority/blob/master/incubation/linkRelationTypes/linkrelations.csv[OGC Link Relation Registry].
+
+The following link-relations are in common use by OGC Web API Standards.
+
+* *alternate*: Refers to a substitute for this context. [IANA]
+
+* *collection*: The target IRI points to a resource which represents the collection resource for the context IRI. [IANA]
+
+* *conformance*: Refers to a resource that identifies the specifications that the link's context conforms to. [OGC]
+
+* *data*: refers to the root resource of a dataset in an API. [OGC]
+
+* *describedby*: Refers to a resource providing information about the link's context. [IANA]
+
+* *item*: The target IRI points to a resource that is a member of the collection represented by the context IRI. [IANA]
+
+* *items*: Refers to a resource that comprises members of the collection represented by the link's context. [OGC]
+
+* *license*: Refers to a license associated with this context. [IANA]
+
+* *self*: Conveys an identifier for the link's context. [IANA]
+
+* *service-desc*: Identifies service description for the context that is primarily intended for consumption by machines. [IANA]
+
+** API definitions are considered service descriptions.
+
+* *service-doc*: Identifies service documentation for the context that is primarily intended for human consumption. [IANA]
+
+Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a collection. Or a *related* link on a feature could reference a related feature.
+
+A *license* link could be used for constraints on the data retrieved. Multiple *license* links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.  
+
+`*Note*: The query patterns of the EDR API use the link relation *data*. It is envisaged that, in the future, this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.`
 
 === Examples
 
@@ -34,7 +74,7 @@ This standard specifies requirements and recommendations for APIs that share spa
 
 ==== Role of OpenAPI
 
-This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the /conformance path.  
+This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the `/conformance` path.  
 
 This approach is used to avoid lock-in to a specific approach to defining an API. This standard includes a <<rc_oas30-section,conformance class>> for API definitions that follow the <<openapi,OpenAPI specification 3.0>>. Conformance classes for additional API definition languages will be added as the API landscape continues to evolve.
 
@@ -47,7 +87,7 @@ Some normative statements (requirements, recommendations and permissions) use a 
 In this case, the following changes to the pre-defined OpenAPI component are permitted:
 
 * If the server supports an XML encoding, `xml` properties may be added to the relevant OpenAPI schema components.
-* The range of values of a parameter or property may be extended (additional values) or constrained (if a subset of all possible values are applicable to the server). An example for a constrained range of values is to explicitly specify the supported values of a string parameter or property using an enum.
+* The range of values of a parameter or property may be extended (additional values) or constrained (if a subset of all possible values are applicable to the server). An example for a constrained range of values is to explicitly specify the supported values of a string parameter or property using an `enum`.
 * Additional properties may be added to the schema definition of a Response Object.
 * Informative text may be changed or added, like comments or description properties.
 
@@ -73,12 +113,12 @@ servers:
     description: Production server
 ----
 
-The path "/mypath" in the OpenAPI definition of the API would be the URL `https://data.example.org/mypath` for the production server.
+The path +`/mypath`+ in the OpenAPI definition of the API would be the URL +`https://data.example.org/mypath`+ for the production server.
 ===========================================
 
 ==== Reusable OpenAPI components
 
 Reusable components for OpenAPI definitions for a OGC API are referenced from this document.
 
-CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-erd-1/1.0".
+CAUTION: During the development phase, these components use a base URL of `https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master`, but eventually they are expected to be available under the base URL `http://schemas.opengis.net/ogcapi-edr-1/1.0`.
 

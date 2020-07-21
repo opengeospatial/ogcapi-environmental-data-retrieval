@@ -4,6 +4,8 @@ This specification identifies resources, captures compliance classes, and specif
 
 This specification addresses two fundamental operations: discovery and query.
 
-Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about this distribution of a resource. This includes the API definition of the server as well as metadata about the Environmental Data resources provided by the server.
+Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about a distribution of a resource. This includes the API definition of the server as well as metadata about the Environmental Data resources provided by the server.
 
-Query operations allow Environmental Data resources to be retrieved from the underlying data store based upon simple selection criteria, defined by this standard and selected by the client.
+An Environmental Data resource is a **collection** of spatio-temporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.
+
+Query operations allow other environmental data resources to be retrieved from the underlying Environmental Data resource, or data store, based upon simple selection criteria, defined by this standard and selected by the client.

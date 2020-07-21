@@ -6,4 +6,5 @@
 ^|Requirement |<<req_geojson_content,/req/geojson/content>>
 ^|Test Method |. Validate that the document is a GeoJSON document.
 . Validate the document against the schema using an JSON Schema validator.
+. Validate the document against the schema using an GeoJSON Schema validator.
 |===

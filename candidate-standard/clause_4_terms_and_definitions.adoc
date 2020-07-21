@@ -1,3 +1,4 @@
+[[terms_and_definitions]]
 == Terms and Definitions
 
 This document uses the terms defined in Sub-clause 5 of https://github.com/opengeospatial/oapi_common/blob/master/19-072.pdf[OGC API-Common Part 1 (OGC 19-072)], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
@@ -21,6 +22,10 @@ identifiable geographic place
 [SOURCE: ISO 19112]
 
 NOTE: A location is represented by one of a set of data types that describe a position, along with metadata about that data, including coordinates (from a coordinate reference system), a measure (from a linear referencing system), or an address (from an address system).
+
+=== instance
+
+version, release, or run of a given data collection
 
 === position
 

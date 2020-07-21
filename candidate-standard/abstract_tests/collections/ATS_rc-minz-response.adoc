@@ -1,0 +1,10 @@
+[[ats_collections_rc-minz-response]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-minz-response*
+^|Test Purpose |Validate that the minimum vertical level query parameters are processed correctly.
+^|Requirement |<<req_collections_rc-minz-response,/req/collections/rc-minz-response>>
+^|Test Method |. Verify that only resources that have a vertical geometry that is equal to or above the `minz` parameter value were included in the result set
+^|Test Method |. Verify that the `minz` value is in the range of valid vertical levels described by the collection metadata
+. Validate that the vertical level parameter complies with the syntax described in <<req_collections_rc-minz-response,/req/collections/edr/REQ_rc-minz-response>>.
+|===

@@ -50,7 +50,7 @@ Gregorian calendar).
           "rel": "describedBy", "type": "text/html",
           "title": "Metadata for the dem collection" },
         { "href": "https://data.example.org/collection/dem/licence-doc",
-          "rel": "describedBy", "type": "licence",
+          "rel": "describedBy", "type": "license",
           "title": "Licence for the dem collection" }
       ]
     }

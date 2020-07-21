@@ -1,4 +1,4 @@
-[[ats_cllections]]
+[[ats_collections]]
 [cols="1,4",width="90%"]
 |===
 2+|*Conformance Class*
@@ -41,11 +41,11 @@ These tests are invoked by other tests.
 
 include::collections/ATS_rc-md-extent.adoc[]
 
-===== Items
+===== Queries
 
 include::collections/ATS_rc-md-items.adoc[]
 
-include::collections/ATS_rc-md-items-links.adoc[]
+include::collections/ATS_rc-md-query-links.adoc[]
 
 ===== Links
 

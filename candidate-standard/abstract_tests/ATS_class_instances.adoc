@@ -1,0 +1,46 @@
+[[ats_instances]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-common/1.0/conf/collections
+|Target type |Web API
+|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi_common/1.0/req/collections>>
+|Dependency |<<ats_core,Conformance Class "OAPI Core">>
+|===
+
+==== General Tests
+
+===== CRS 84
+
+include::collections/ATS_crs84.adoc[]
+
+==== Instance {root}/collections/{collectionId}/instances/{instanceId}
+
+include::collections/ATS_src-md-op.adoc[]
+
+include::collections/ATS_src-md-success.adoc[]
+
+==== Instance {root}/collections/{collectionId}/instances/{instanceId}/{queryType}
+
+
+include::collections/ATS_rc-op.adoc[]
+
+include::collections/ATS_rc-response.adoc[]
+
+==== Second Tier Tests
+These tests are invoked by other tests.
+
+===== Extent
+
+include::collections/ATS_rc-md-extent.adoc[]
+
+===== Queries
+
+include::collections/ATS_rc-md-items.adoc[]
+
+include::collections/ATS_rc-md-query-links.adoc[]
+
+===== Links
+
+include::collections/ATS_rc-md-links.adoc[]
+

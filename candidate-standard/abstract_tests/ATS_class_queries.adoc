@@ -1,0 +1,73 @@
+[[ats_queries]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-edr/1.0/conf/queries
+|Target type |Web API
+|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi_edr/1.0/req/queries>>
+|Dependency |<<ats_core,Conformance Class "OGC API Common Core">>
+|Dependency |<<ats_collections,Conformance Class "OGC API Common Collections">>
+|===
+
+==== Query Pattern Tests
+
+===== Position
+
+include::queries/ATS_position.adoc[]
+
+===== Area
+
+include::queries/ATS_area.adoc[]
+
+===== Trajectory
+
+include::queries/ATS_trajectory.adoc[]
+
+==== Collections and Instances
+
+===== Feature Collections {root}/collections
+
+include::collections/ATS_rc-md-op.adoc[]
+
+include::collections/ATS_rc-md-success.adoc[]
+
+===== Feature Collection {root}/collections/{collectionId}
+
+include::collections/ATS_src-md-op.adoc[]
+
+include::collections/ATS_src-md-success.adoc[]
+
+===== Features {root}/collections/{collectionId}/items
+
+NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
+
+include::collections/ATS_rc-op.adoc[]
+
+include::collections/ATS_rc-response.adoc[]
+
+===== Instances {root}/collections/{collectionId}/instances
+
+include::instances/ATS_rc-op.adoc[]
+
+include::instances/ATS_rc-response.adoc[]
+
+===== Instance {root}/collections/{collectionId}/instances/instanceId
+
+include::instance/ATS_src-op.adoc[]
+
+include::instance/ATS_src-response.adoc[]
+
+==== Second Tier Tests
+These tests are invoked by other tests.
+
+===== Items
+
+include::collections/ATS_rc-md-items.adoc[]
+
+include::collections/ATS_rc-md-items-links.adoc[]
+
+===== Locations
+
+include::queries/ATS_locations.adoc[]
+
+

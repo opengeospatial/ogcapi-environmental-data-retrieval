@@ -1,6 +1,7 @@
-===== Parameters
 
-====== Parameter coords
+The Trajectory query returns data along the path defined by the `coords` parameter, *the logic to match the data for the requested path will depend on and be defined by the Collection*.  The results are further filtered by the constraints defined by the following query parameters:
+
+====== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -10,17 +11,35 @@ include::../REQ_rc-coords-response.adoc[]
 
 The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  
 
-A 2D trajectory, on the surface of earth, at the same time: 
+A 2D trajectory, on the surface of earth with no time or height dimensions: 
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)
 
-A 3D trajectory centre, on the surface of the earth but over a time range:
+A 2D trajectory, on the surface of earth with all for the same time and no height dimension, time value defined in ISO8601 format by the `time` query parameter : 
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&time=2018-02-12T23:00:00Z 
+    
+A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the `z` query parameter : 
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&z=850 
+
+A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the `time` query parameter and height defined in the collection height units by the `z` query parameter : 
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&time=2018-02-12T23:00:00Z&z=850 
+
+A 3D trajectory, on the surface of the earth but over a time range with no height values:
 coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)
 
-A 3D corrtrajectoryidor centre, through a 3D volume with height or depth, for the same time:
+A 3D trajectory, on the surface of the earth but over a time range with a fixed height value, height defined in the collection height units by the `z` query parameter : 
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&z=200
+
+
+A 3D trajectory, through a 3D volume with height or depth, but no defined time:
 coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)
 
-A 4D trajectory, through a 3D trajectory centre but over a time range:
+A 3D trajectory, through a 3D volume with height or depth, but a fixed time time value defined in ISO8601 format by the `time` query parameter:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)&time=2018-02-12T23:00:00Z
+
+A 4D trajectory, through a 3D volume but over a time range:
 coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)
+
+If the coords specifiy a 4D trajectory i.e. coords=LINESTRINGZM(...) an error MUST be thrown by the server if the client application defines either the `z` or `time` query parameters
 
 where Z is the height value.  
 `If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`
@@ -44,6 +63,25 @@ From Bristol to Exeter
 =================
 
 <<<
+====== *Parameter z*
+
+Used when the entire corridor occurs at the same vertical height the z query parameter is used to define the height
 
 
+.A single vertical level
+===========
+
+for instance if the entire route is at the 850hPa pressure level
+
+z=850
+===========
+<<<    
+
+===== <<time>>
+
+===== <<parametername>>
+
+===== <<crs>>
+
+===== <<outputformat>>
     
