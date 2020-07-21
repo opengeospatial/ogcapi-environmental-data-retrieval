@@ -154,7 +154,7 @@ Where
 
 `{collectionId}` = a unique identifier for a collection of geospatial data.
 
-`{instanceId}` = a text string identifying the _'Version'_ or _'Instance'_ of the chosen collection.
+`{instanceId}` = a text string identifying the version or _`Instance`_ of the chosen collection.
 
 `{queryType}` = a text string identifying the query pattern performed by the API.
 
@@ -164,7 +164,7 @@ The EDR API `instanceId` parameter allows support for multiple iterations or ver
 
 The EDR API standard has identified an initial set of common `queryTypes` to implement, this list may change as the standard is used. The <<query-type-table>> provides a list of the proposed `queryTypes`.
 
-[#query-type-table,reftext='{table-caption} {counter:table-num}']
+[#query-type-table,reftext=`{table-caption} {counter:table-num}`]
 .Information Resource Types
 [width="90%",cols="2,4",options="header"]
 |===
