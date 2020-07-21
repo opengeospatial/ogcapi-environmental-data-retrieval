@@ -2,43 +2,36 @@
 
 This document uses the terms defined in Sub-clause 5 of https://github.com/opengeospatial/oapi_common/blob/master/19-072.pdf[OGC API-Common Part 1 (OGC 19-072)], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
+<<glossary>> includes terms from other standards and specifications that, while not normative, are critical to accurately understanding this specification.
+
 For the purposes of this document, the following additional terms and definitions apply.
 
-=== Conformance Module; Conformance Test Module
-set of related tests, all within a single conformance test class (<<ogc08-131,OGC 08-131>>)
+=== area
 
- NOTE: When no ambiguity is possible, the word `test` may be omitted. i.e. conformance test module is the same as conformance module. Conformance modules may be nested in a hierarchical way.
+region specified with an geographic envelope that may have vertical dimension
 
-=== Conformance Class; Conformance Test Class
-set of conformance test modules that must be applied to receive a single certificate of conformance (<<ogc08-131,OGC 08-131>>)
+=== corridor
 
- NOTE: When no ambiguity is possible, the word _test_ may be left out, so conformance test class maybe called a conformance class.
+path of a moving point described by a one-parameter window around a set of points
 
-=== dataset
-collection of data, published or curated by a single agent, and available for access or download in one or more formats (DCAT)
+=== location
 
-=== Distribution
-represents an accessible form of a *dataset* (DCAT)
+identifiable geographic place
 
-EXAMPLE: a downloadable file, an RSS feed or a web service that provides the data.
+[SOURCE: ISO 19112]
 
-=== Executable Test Suite (ETS)
-A set of code (e.g. Java and CTL) that provides runtime tests for the assertions defined by the ATS. Test data required to do the tests are part of the ETS https://portal.opengeospatial.org/files/?artifact_id=55234[(OGC 08-134)]
+NOTE: A location is represented by one of a set of data types that describe a position, along with metadata about that data, including coordinates (from a coordinate reference system), a measure (from a linear referencing system), or an address (from an address system).
 
-=== Recommendation
-expression in the content of a document conveying that among several possibilities one is recommended as particularly suitable, without mentioning or excluding others, or that a certain course of action is preferred but not necessarily required, or that (in the negative form) a certain possibility or course of action is deprecated but not prohibited (<<ogc08-131,OGC 08-131>>) 
+=== position
 
-=== Requirement
-expression in the content of a document conveying criteria to be fulfilled if compliance with the document is to be claimed and from which no deviation is permitted (<<ogc08-131,OGC 08-131>>)
+a place specified with a geographic point
 
-=== Requirements Class
-aggregate of all requirement modules that must all be satisfied to satisfy a conformance test class (<<ogc08-131,OGC 08-131>>)
+=== radius
 
-=== Requirements Module
-aggregate of requirements and recommendations of a specification against a single standardization target type (<<ogc08-131,OGC 08-131>>)
+region specified with a geographic point and radial distance
 
-=== Standardization Target
-entity to which some requirements of a standard apply (<<ogc08-131,OGC 08-131>>)
+=== trajectory
 
- NOTE: The standardization target is the entity which may receive a certificate of conformance for a requirements class.
+path of a moving point described by a one parameter set of points
 
+[SOURCE: ISO 19141]
