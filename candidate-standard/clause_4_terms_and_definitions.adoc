@@ -3,102 +3,40 @@
 
 This document uses the terms defined in Sub-clause 5 of https://github.com/opengeospatial/oapi_common/blob/master/19-072.pdf[OGC API-Common Part 1 (OGC 19-072)], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
+<<glossary>> includes terms from other standards and specifications that, while not normative, are critical to accurately understanding this specification.
+
 For the purposes of this document, the following additional terms and definitions apply.
 
-Note: These are just placeholders
+=== area
 
-[[area-definition]]
-=== Area
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+region specified with an geographic envelope that may have vertical dimension
 
-[[corridor-definition]]
-=== Corridor
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+=== corridor
 
-[[cube-definition]]
-=== Cube
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+path of a moving point described by a one-parameter window around a set of points
 
-[[instance-definition]]
-=== Instance
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+=== location
 
-[[items-definition]]
-=== Items
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+identifiable geographic place
 
-[[locations-definition]]
-=== Locations
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+[SOURCE: ISO 19112]
 
-[[position-definition]]
-=== Position
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+NOTE: A location is represented by one of a set of data types that describe a position, along with metadata about that data, including coordinates (from a coordinate reference system), a measure (from a linear referencing system), or an address (from an address system).
 
-[[radius-definition]]
-=== Radius
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+=== instance
 
-[[trajectory-definition]]
-=== Trajectory
-blah blah. (<<ogc020-nnn,ISOnnnn,IETF_RFCnnnn>>)
+version, release, or run of a given data collection
 
-[[collection-definition]]
-=== Collection
-body of resources that belong or are used together. An aggregate, set, or group of related resources. (<<ogc020-024,OGC 20-024>>)
+=== position
 
-[[ctm-definition]]
-=== Conformance Module; Conformance Test Module
-set of related tests, all within a single conformance test class (<<ogc08-131,OGC 08-131>>)
+a place specified with a geographic point
 
- NOTE: When no ambiguity is possible, the word _test_ may be omitted, so conformance test module maybe called a conformance module. Conformance modules may be nested in a hierarchical way.
+=== radius
 
-[[ctc-definition]]
-=== Conformance Class; Conformance Test Class
-set of conformance test modules that must be applied to receive a single certificate of conformance (<<ogc08-131,OGC 08-131>>)
+region specified with a geographic point and radial distance
 
- NOTE: When no ambiguity is possible, the word _test_ may be omitted, so conformance test class maybe called a conformance class.
+=== trajectory
 
-[[dataset-definition]]
-=== Dataset
-collection of data, published or curated by a single agent, and available for access or download in one or more formats (DCAT)
+path of a moving point described by a one parameter set of points
 
-[[distribution-definition]]
-=== Distribution
-represents an accessible form of a *dataset* (W3C_DCAT)
-
-EXAMPLE: a downloadable file, an RSS feed or a web service that provides the data.
-
-[[ets-definition]]
-=== Executable Test Suite (ETS)
-set of code (e.g. Java and CTL) that provides runtime tests for the assertions defined by the Automated Test Suite. Test data required to do the tests are part of the ETS https://portal.opengeospatial.org/files/?artifact_id=55234[(OGC 08-134)]
-
-[[recomendation-definition]]
-=== Recommendation
-expression in the content of a document conveying that among several possibilities one is recommended as particularly suitable, without mentioning or excluding others, or that a certain course of action is preferred but not necessarily required, or that (in the negative form) a certain possibility or course of action is deprecated but not prohibited (<<ogc08-131,OGC 08-131>>) 
-
-[[requirement-definition]]
-=== Requirement
-expression in the content of a document conveying criteria to be fulfilled if compliance with the document is to be claimed and from which no deviation is permitted (<<ogc08-131,OGC 08-131>>)
-
-[[requirements-class-definition]]
-=== Requirements Class
-aggregate of all requirement modules that must all be satisfied to satisfy a conformance test class (<<ogc08-131,OGC 08-131>>)
-
-[[requirements-module-definition]]
-=== Requirements Module
-aggregate of requirements and recommendations of a specification against a single standardization target type (<<ogc08-131,OGC 08-131>>)
-
-[[spatial-resource-definition]]
-=== Spatial Resource
-<<resource-definition,resources>> usually considered as Geospatial Data. (<<apicore,OGC 19-072>>)
-
-[[standardization-target-definition]]
-=== Standardization Target
-entity to which some requirements of a standard apply (<<ogc08-131,OGC 08-131>>)
-
- NOTE: The standardization target is the entity which may receive a certificate of conformance for a requirements class.
- 
-[[webapi-definition]]
-=== Web API
-API using an architectural style that is founded on the technologies of the Web. (<<DWBP,W3C Data on the Web Best Practices>>)
+[SOURCE: ISO 19141]
