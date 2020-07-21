@@ -34,7 +34,7 @@ The following link-relations are in common use by OGC Web API Standards.
 
 * *item*: The target IRI points to a resource that is a member of the collection represented by the context IRI. [IANA]
 
-* *items*: Refers to a resource that is comprised of members of the collection represented by the link's context. [OGC]
+* *items*: Refers to a resource that comprises members of the collection represented by the link's context. [OGC]
 
 * *license*: Refers to a license associated with this context. [IANA]
 
@@ -48,7 +48,9 @@ The following link-relations are in common use by OGC Web API Standards.
 
 Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a collection. Or a *related* link on a feature could reference a related feature.
 
-*Note*: The query patterns of the EDR API use the link relation *data*. It is envisaged that, in the future, this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.
+A *license* link could be used for constraints on the data retrieved. Multiple *license* links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.  
+
+`*Note*: The query patterns of the EDR API use the link relation *data*. It is envisaged that, in the future, this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.`
 
 === Examples
 
@@ -72,7 +74,7 @@ This standard specifies requirements and recommendations for APIs that share spa
 
 ==== Role of OpenAPI
 
-This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the /conformance path.  
+This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the `/conformance` path.  
 
 This approach is used to avoid lock-in to a specific approach to defining an API. This standard includes a <<rc_oas30-section,conformance class>> for API definitions that follow the <<openapi,OpenAPI specification 3.0>>. Conformance classes for additional API definition languages will be added as the API landscape continues to evolve.
 
@@ -85,7 +87,7 @@ Some normative statements (requirements, recommendations and permissions) use a 
 In this case, the following changes to the pre-defined OpenAPI component are permitted:
 
 * If the server supports an XML encoding, `xml` properties may be added to the relevant OpenAPI schema components.
-* The range of values of a parameter or property may be extended (additional values) or constrained (if a subset of all possible values are applicable to the server). An example for a constrained range of values is to explicitly specify the supported values of a string parameter or property using an enum.
+* The range of values of a parameter or property may be extended (additional values) or constrained (if a subset of all possible values are applicable to the server). An example for a constrained range of values is to explicitly specify the supported values of a string parameter or property using an `enum`.
 * Additional properties may be added to the schema definition of a Response Object.
 * Informative text may be changed or added, like comments or description properties.
 
@@ -111,12 +113,12 @@ servers:
     description: Production server
 ----
 
-The path "/mypath" in the OpenAPI definition of the API would be the URL `https://data.example.org/mypath` for the production server.
+The path +`/mypath`+ in the OpenAPI definition of the API would be the URL +`https://data.example.org/mypath`+ for the production server.
 ===========================================
 
 ==== Reusable OpenAPI components
 
 Reusable components for OpenAPI definitions for a OGC API are referenced from this document.
 
-CAUTION: During the development phase, these components use a base URL of "https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master", but eventually they are expected to be available under the base URL "http://schemas.opengis.net/ogcapi-edr-1/1.0".
+CAUTION: During the development phase, these components use a base URL of `https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master`, but eventually they are expected to be available under the base URL `http://schemas.opengis.net/ogcapi-edr-1/1.0`.
 

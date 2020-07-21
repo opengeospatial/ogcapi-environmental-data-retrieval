@@ -21,7 +21,7 @@ include::../REQ_rc-coords-response.adoc[]
 
    
 
-    *If the WKT does not define a Rectangle the service will generate a 403 error message*
+    *If the WKT does not define a Rectangle the service will generate a `400` error message*
     
     see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
@@ -47,7 +47,7 @@ denotes the minimum level to return data for
 
 `minz=850`
 
-would retrieve data for the 850 level and for data above the 850 level, if a `maxz` is not specified a 400 error should be thrown
+would retrieve data for the 850 level and for data above the 850 level, if a `maxz` is not specified a `400` error should be thrown
 
 =================
 
@@ -65,7 +65,7 @@ denotes the maximum level to return data for
 
 `maxz=300`
 
-would retrieve data for the 300 level and for data below the 850 level, if a `minz` is not specified a 400 error should be thrown
+would retrieve data for the 300 level and for data below the 850 level, if a `minz` is not specified a `400` error should be thrown
 
 =================
 

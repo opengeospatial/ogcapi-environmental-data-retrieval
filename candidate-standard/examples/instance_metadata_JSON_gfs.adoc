@@ -31,7 +31,7 @@ Gregorian calendar).
       "rel": "describedBy", "type": "publisher",
       "title": "Further information about the data publisher" },
     { "href": "https://data.example.org/collection/gfs_time-height_above_ground-lat-lon/licence-doc",
-      "rel": "describedBy", "type": "licence",
+      "rel": "describedBy", "type": "license",
       "title": "Licence for the the gfs_time-height_above_ground-lat-lon latest run instance of the collection" }                   
   ],
   "instances": [

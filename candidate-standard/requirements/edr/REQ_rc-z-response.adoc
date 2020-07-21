@@ -2,10 +2,9 @@
 [width="90%",cols="2,6a"]
 |===
 |*Requirement {counter:req-id}* | */req/edr/z-response* 
-^|A |The `z` parameter is provided, only resources that have a vertical geometry that intersects the vertical information in the `z` parameter SHALL be part of the result set
-if the parameter is provided.
-^|B |The `z` can be defined as a height range by specifiying a min-level and max-level seperated by a forward slash "/" 
-^|C |A list of `z` can be defined be specifiying a comma delimited list of values level1, level2, level3 etc 
+^|A |If the `z` parameter is provided, only resources that have a vertical geometry that intersects the vertical information in the `z` parameter SHALL be part of the result set.
+^|B |The `z` can be defined as a height range by specifying a min-level and max-level seperated by a forward slash "/" 
+^|C |A list of `z` can be defined be specifying a comma delimited list of values level1, level2, level3 etc 
 
 
 [source,java]

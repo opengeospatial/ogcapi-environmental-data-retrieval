@@ -59,7 +59,7 @@ Two common mechanisms to support cross-origin requests are:
 [[Asynchronous_queries]]
 ==== Asynchronous queries
 
-It will not always be possible to respond to queries synchronously, if the query requires handling asynchronously the system should respond with a HTTP code  of 308 and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of 202 and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
+It will not always be possible to respond to queries synchronously, if the query requires handling asynchronously the system should respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
 
 include::recommendations/core/REC_asynchronous-queries.adoc[]
 
@@ -74,7 +74,7 @@ For the reasons discussed in the Best Practices, EDR APIs MUST always support WG
 
 include::requirements/core/REQ_crs84.adoc[]
 
-The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system http://www.opengis.net/def/crs/OGC/1.3/CRS84. 
+The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`. 
 
 ==== Encodings
 
@@ -104,8 +104,8 @@ As clients simply need to dereference the URI of the link, the implementation de
 =========================================================
 Two common approaches are:
 
-* an additional path for each encoding of each resource (this can be expressed, for example, using format specific suffixes like ".html");
-* an additional query parameter (for example, "accept" or "f") that overrides the Accept header of the HTTP request.
+* an additional path for each encoding of each resource (this can be expressed, for example, using format specific suffixes like `.html`);
+* an additional query parameter (for example, `accept` or `f`) that overrides the Accept header of the HTTP request.
 =========================================================
 
 ==== Link Headers

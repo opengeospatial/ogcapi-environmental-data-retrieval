@@ -12,5 +12,5 @@ interpolationz = "R" intervals "/" intervalinterpolation-method
 ^|C|The interpolation information is an interpolation method. The available interpolation methods should be part of the instance metadata:
 ^|D|If not specified the query will use the default interpolation method for the chosen collection.
 ^|E|If the vertical coordinates only contain a single height value the R `intervals` MUST always be 1.
-^|F|If the interpolation method value e does not match one of the listed methods a 400 error message should be returned.
+^|F|If the interpolation method value e does not match one of the listed methods a '400' error message should be returned.
 |===

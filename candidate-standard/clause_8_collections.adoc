@@ -53,7 +53,7 @@ include::requirements/edr/REQ_rc-coords-response.adoc[]
 
 include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
-The datetime parameter is defined in API-Common. The following information is provided as a convenience for the user.
+The `datetime` parameter is defined in API-Common. The following information is provided here as a convenience.
 
 "Intersects" means that the time (instant or duration) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or duration). Time durations include the start and end times.
  
@@ -64,9 +64,9 @@ February 12, 2018, 23:20:52 GMT:
 `datetime=2018-02-12T23%3A20%3A52Z`
 =================
 
-For resources with a temporal property that is a timestamp (like `lastUpdate`), a datetime value would match all resources where the temporal property is identical.
+For resources with a temporal property that is a timestamp (like `lastUpdate`), a `datetime` value would match all resources where the temporal property is identical.
 
-For resources with a temporal property that is a date or a time interval, a datetime value would match all resources where the timestamp is on that day or within the time interval.
+For resources with a temporal property that is a date or a time interval, a `datetime` value would match all resources where the timestamp is on that day or within the time interval.
 
 .Intervals
 =================
@@ -107,9 +107,8 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 =================
 
 If a requested parameter doesn't exist in the collection the data for those parameters that do exist should be returned.
-If none of the requested parameters exist in the collection a 400 message SHOULD be returned.
-
-<<<
+If none of the requested parameters exist in the collection a `400` message SHOULD be returned.
+=======
 
 [[crs]]
 ====== Parameter crs
@@ -118,7 +117,7 @@ include::requirements/edr/REQ_rc-outputCRS-definition.adoc[]
 
 include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
 
-The value of the crs query parameter will be one of the name values described in the collection metadata for supported crs transformations. 
+The value of the `crs` query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
 ====== Parameter outputformat
@@ -133,8 +132,8 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 `outputformat=coverageJSON`
 =================
 
-If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid outputFormats for the collection, a 400 message SHOULD be returned.
-
+If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the collection, a `400` message SHOULD be returned.
+=======
 
 ==== Position query
 

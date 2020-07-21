@@ -12,10 +12,6 @@
 
 include::json/ATS_definition.adoc[]
 
-==== GeoJSON Content
-
-include::geojson/ATS_content.adoc[]
-
 ==== CoverageJSON Content
 
 include::covjson/ATS_content.adoc[]

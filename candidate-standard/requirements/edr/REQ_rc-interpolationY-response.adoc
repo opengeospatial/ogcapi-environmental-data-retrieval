@@ -11,6 +11,6 @@ interpolationy = "R"interval "/" interpolation-method
 ----
 ^|C|The interpolation information is an interpolation method. The available interpolation methods should be part of the metadata returned by the API:
 ^|D|If not specified the query will use the default interpolation method for the chosen collection.
-^|E|If the interpolation method value does not match one of the listed methods a 400 error message should be returned.
+^|E|If the interpolation method value does not match one of the listed methods a '400' error message should be returned.
 |===
 
