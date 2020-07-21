@@ -48,6 +48,8 @@ The following link-relations are in common use by OGC Web API Standards.
 
 Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a collection. Or a *related* link on a feature could reference a related feature.
 
+A *license* link could be used for constraints on the data retrieved. Multiple *license* links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.  
+
 `*Note*: The query patterns of the EDR API use the link relation *data*. It is envisaged that, in the future, this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.`
 
 === Examples
