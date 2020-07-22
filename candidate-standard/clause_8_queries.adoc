@@ -61,7 +61,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 
 ==== Shared query parameters
 
-Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR API standard defines the following as standard parameters for use.
+Query parameters are used in URLs to define the resources which are returned on a GET request. The following are defined as standard shared parameters for use.
 
 [[coords]]
 ===== Parameter coords
