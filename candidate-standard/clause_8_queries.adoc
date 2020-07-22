@@ -1,7 +1,6 @@
 
 [[environmental-resource-section]]
 == Query, Environmental and Information Resources
-:sectnums:
 
 Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common `queryTypes` to implement, described in the <<query-resources>> section. This list may change as the standard is used and experience gained. 
 
@@ -20,7 +19,7 @@ Where
 
 `{queryType}` = a text string identifying the query pattern performed by the API.
 
-The API-EDR `instanceId` parameter allows support for multiple iterations or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
+The `instanceId` parameter allows support for multiple instances or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
 
 [[collection-information-queries]]
 Information resources associated with a specific collection should be accessed through the `/collections` path. Information resources not associated with a specific collection should be accessed via the `/{instanceId}/{queryType}` path template.
@@ -65,14 +64,14 @@ The OGC API-Common standards do not define any information resource types. Howev
 Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR API standard defines the following as standard parameters for use.
 
 [[coords]]
-====== Parameter coords
+===== Parameter coords
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
 
 [[time]]
-====== Parameter datetime
+===== Parameter datetime
 
 include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
@@ -109,7 +108,7 @@ March 18, 2018, 12:31:12 UTC or earlier:
 A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml[datetime.yaml].
 
 [[parametername]]
-====== Parameter parametername
+===== Parameter parametername
 
 include::requirements/edr/REQ_rc-parameters-definition.adoc[]
 
@@ -134,7 +133,7 @@ If none of the requested parameters exist in the collection a `400` message SHOU
 =======
 
 [[crs]]
-====== Parameter crs
+===== Parameter crs
 
 include::requirements/edr/REQ_rc-outputCRS-definition.adoc[]
 
@@ -143,7 +142,7 @@ include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
 The value of the `crs` query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
-====== Parameter outputformat
+===== Parameter outputformat
 
 include::requirements/edr/REQ_rc-outputFormat-definition.adoc[]
 
