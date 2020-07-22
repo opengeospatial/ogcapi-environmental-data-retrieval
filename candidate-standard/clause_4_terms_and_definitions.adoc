@@ -19,7 +19,7 @@ path of a moving point described by a one-parameter window around a set of point
 
 identifiable geographic place
 
-[SOURCE: ISO 19112]
+SOURCE: ISO 19112
 
 NOTE: A location is represented by one of a set of data types that describe a position, along with metadata about that data, including coordinates (from a coordinate reference system), a measure (from a linear referencing system), or an address (from an address system).
 
@@ -39,4 +39,4 @@ region specified with a geographic point and radial distance
 
 path of a moving point described by a one parameter set of points
 
-[SOURCE: ISO 19141]
+SOURCE: ISO 19141

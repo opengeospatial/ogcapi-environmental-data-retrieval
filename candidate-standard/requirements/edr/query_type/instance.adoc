@@ -1,6 +1,6 @@
 It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.
 
-====== *Parameter instanceId*
+===== *Parameter instanceId*
 
 A unique identifier for the instance of the collection
 
@@ -22,7 +22,7 @@ A unique identifier for the instance of the collection
 
 
 
-====== *Parameter queryType*
+===== *Parameter queryType*
 
 The queryType options are exactly the same as those available to collections that don't have multiple instances and support the same query parameters and functionality.  See the <query-resource-table>> for the  mappings of the intial query types proposed for the EDR API.
 

@@ -1,4 +1,4 @@
-[[ats_json_definition]]
+// [[ats_json_definition]] won't work because this gets imported multiple times
 [width="90%",cols="2,6a"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/json/definition* 
