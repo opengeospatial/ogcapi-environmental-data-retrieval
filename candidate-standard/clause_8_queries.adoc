@@ -3,7 +3,7 @@
 === Query and Environmental Resources
 :sectnums:
 
-Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. They are described in the <<query-resources>> section.
+Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common `queryTypes` to implement. This list may change as the standard is used. The `queryTypes` are described in the <<query-resources>> section.
 
 An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns. 
 
@@ -21,31 +21,12 @@ Where
 `{queryType}` = a text string identifying the query pattern performed by the API.
 
 [[collection-information-queries]]
-Information resources associated with a specific collection should be accessed through the `/collections` path. Those which are not associated with a specific collection should use the `/{instanceId}/{queryType}` template.
+The resources returned from each node in these templates are described in <<query-resource-paths>>.
 
 The API-EDR `instanceId` parameter allows support for multiple iterations or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
 
-The EDR API standard has identified an initial set of common `queryTypes` to implement, this list may change as the standard is used. The <<query-type-table>> provides a list of the proposed `queryTypes`.
-
-[#query-type-table,reftext=`{table-caption} {counter:table-num}`]
-.Information Resource Types
-[width="90%",cols="2,4",options="header"]
-|===
-^|**Query Type** ^|**API Standard**
-|Area | /area
-|Corridor | /corridor
-|Cube | /cube
-|Items | /items
-|Locations | /locations
-|Position | /position
-|Trajectory | /trajectory
-|Instances | /instances
-|===
-
 [[query-resources]]
 === Query Resources
-
-The resources returned from each node in this template are described in <<query-resource-paths>>.
 
 [#query-resource-paths,reftext='{table-caption} {counter:table-num}']
 .Information Resource Paths
@@ -57,7 +38,9 @@ The resources returned from each node in this template are described in <<query-
 |/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {resourceType} associated with the `{collectionId}` collection.
 |===
 
-The OGC API-Common standards do not define any Information Resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
+Information resources associated with a specific collection should be accessed through the `/collections` path. Those which are not associated with a specific collection should use the `/{instanceId}/{queryType}` template.
+
+The OGC API-Common standards do not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
