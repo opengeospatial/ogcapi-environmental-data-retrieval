@@ -127,7 +127,7 @@ include::requirements/oas30/REQ_oas-conformance.adoc[]
 
 Two example OpenAPI documents are included in <<oas-examples,Annex B>>.
 
-=== Complete definition
+==== Complete definition
 
 include::requirements/oas30/REQ_completeness.adoc[]
 
