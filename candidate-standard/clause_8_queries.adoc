@@ -133,7 +133,6 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 
 If a requested parameter doesn't exist in the collection the data for those parameters that do exist should be returned.
 If none of the requested parameters exist in the collection a `400` message SHOULD be returned.
-=======
 
 [[crs]]
 ===== Parameter crs
@@ -158,7 +157,7 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 =================
 
 If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the collection, a `400` message SHOULD be returned.
-=======
+
 
 [[rc_postion-section]]
 ==== Position query
