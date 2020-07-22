@@ -27,6 +27,7 @@ Information resources associated with a specific collection should be accessed t
 The resources returned from each node in these templates are described in <<query-resource-paths>>.
 
 [[information-resources]]
+[[collections-access-section]]
 === Information Resources
 
 [#query-resource-paths,reftext='{table-caption} {counter:table-num}']
