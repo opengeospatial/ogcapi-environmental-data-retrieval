@@ -36,7 +36,7 @@ or +
 3+^|**Features**
 |<<collectionInfo,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
 3+^|**Queries**
-|<<collectionInfo,{root}/collections/{collectionId}/queryType>>| |Retrieve data according to the query pattern
+|<<collectionInfo,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
 |<<collectionInfo,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about instances of a collection
 |<<collectionInfo,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific instance of a collection which has the unique identifier `{instanceId}`
 |===
