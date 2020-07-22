@@ -10,12 +10,3 @@
 |===
 
 The Collections content may be retrieved in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.
-
-[#collections-metadata-schema,reftext='{table-caption} {counter:table-num}']
-.Schema and Tests for Collections content
-[width="90%",cols="3",options="header"]
-|===
-|Format |Schema Document |Test ID
-|HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collections.json[collections.json]|<<ats_html_content,/ats/html/content>>
-|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collections.json[collections.json] |<<ats_geojson_content,/ats/geojson/content>>
-|===

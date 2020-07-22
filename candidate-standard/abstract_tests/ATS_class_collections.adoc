@@ -20,6 +20,9 @@ include::collections/ATS_rc-md-op.adoc[]
 
 include::collections/ATS_rc-md-success.adoc[]
 
+[[collections-metadata-schema]]
+include::collections/ATS_rc-md-success-table.adoc[]
+
 ==== Feature Collection {root}/collections/{collectionId}
 
 include::collections/ATS_src-md-op.adoc[]
@@ -45,6 +48,9 @@ include::collections/ATS_rc-md-extent.adoc[]
 ===== Queries
 
 include::collections/ATS_rc-md-items.adoc[]
+
+[[collection-entry-schema]]
+include::collections/ATS_rc-md-items-table.adoc[]
 
 include::collections/ATS_rc-md-query-links.adoc[]
 

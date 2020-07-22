@@ -32,6 +32,8 @@ include::collections/ATS_rc-md-op.adoc[]
 [[ats_collections_rc-md-success]]
 include::collections/ATS_rc-md-success.adoc[]
 
+include::collections/ATS_rc-md-success-table.adoc[]
+
 ===== Feature Collection {root}/collections/{collectionId}
 
 include::collections/ATS_src-md-op.adoc[]
@@ -52,6 +54,8 @@ include::instances/ATS_rc-md-op.adoc[]
 
 include::instances/ATS_rc-md-success.adoc[]
 
+include::collections/ATS_rc-md-success-table.adoc[]
+
 ===== Instance {root}/collections/{collectionId}/instances/instanceId
 
 include::instances/ATS_src-md-op.adoc[]
@@ -64,6 +68,8 @@ These tests are invoked by other tests.
 ===== Items
 
 include::collections/ATS_rc-md-items.adoc[]
+
+
 
 include::collections/ATS_rc-md-items-links.adoc[]
 

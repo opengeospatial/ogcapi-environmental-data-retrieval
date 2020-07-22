@@ -14,12 +14,3 @@
 |===
 
 The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.
-
-[#collection-entry-schema,reftext='{table-caption} {counter:table-num}']
-.Schema and Tests for Collection Entries
-[width="90%",cols="3",options="header"]
-|===
-|Format |Schema Document |Test ID
-|HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json]|<<ats_html_content,/ats/html/content>>
-|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_json_content,/ats/json/content>>
-|===

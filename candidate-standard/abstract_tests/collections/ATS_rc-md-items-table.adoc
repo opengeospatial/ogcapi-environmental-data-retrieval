@@ -1,0 +1,8 @@
+[reftext='{table-caption} {counter:table-num}']
+.Schema and Tests for Collection Entries
+[width="90%",cols="3",options="header"]
+|===
+|Format |Schema Document |Test ID
+|HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json]|<<ats_html_content,/ats/html/content>>
+|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_json_content,/ats/json/content>>
+|===
