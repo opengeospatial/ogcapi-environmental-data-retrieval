@@ -42,7 +42,7 @@ The resources returned from each node in these templates are described in <<quer
 
 The OGC API-Common standards do not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
 
-[[query-resources]]
+[[query-resources-section]]
 === Query Resources
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
@@ -60,6 +60,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 |/collections/{collectionId}/instances | Instances | List the available instances of the collection
 |===
 
+[[parameters-section]]
 ==== Shared query parameters
 
 Query parameters are used in URLs to define the resources which are returned on a GET request. The following are defined as standard shared parameters for use.
