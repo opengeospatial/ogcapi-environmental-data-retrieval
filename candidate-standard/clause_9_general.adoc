@@ -59,11 +59,9 @@ Two common mechanisms to support cross-origin requests are:
 [[Asynchronous_queries]]
 ==== Asynchronous queries
 
-It will not always be possible to respond to queries synchronously, if the query requires handling asynchronously the system should respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
+It will not always be possible to respond to queries synchronously. This standard does not specify how to handle any asynchrony. Different services may propose different best practices.
 
-include::recommendations/core/REC_asynchronous-queries.adoc[]
-
-* See link:https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)[Asynchrony]
+For example, if the query requires handling asynchronously, one option, but there are others, is that the system could respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
 
 [[coordinate_reference_system]]
 ==== Coordinate Reference Systems
