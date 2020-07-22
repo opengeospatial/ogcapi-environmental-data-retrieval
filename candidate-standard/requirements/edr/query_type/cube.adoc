@@ -1,30 +1,23 @@
 The `Cube` query returns a data cube defined by the  `coords`, `minz` and `maxz` parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the `coords` parameter.  The results are further filtered by the constraints defined by the following query parameters:
 
-====== *Parameter coords*
+===== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
 include::../REQ_rc-coords-response.adoc[]
 
-    Only data that has a geometry that intersects the area defined by the cube
-    are selected. 
+Only data that has a geometry that intersects the area defined by the cube
+are selected. 
 
-    The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
-    
-    coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
+The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
 
-    which are values in the coordinate system defined by the crs query parameter 
-    if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
+coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
 
-    For instance a cube that roughly describes an area that contains 
-    South West England in WGS84 would look like
+which are values in the coordinate system defined by the crs query parameter 
+if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
 
-   
-
-    *If the WKT does not define a Rectangle the service will generate a `400` error message*
-    
-    see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
-
+For instance a cube that roughly describes an area that contains 
+South West England in WGS84 would look like
 
 .A cube covering the South West of the UK
 =================
@@ -33,9 +26,11 @@ include::../REQ_rc-coords-response.adoc[]
 
 =================
 
-<<<
+*If the WKT does not define a Rectangle the service will generate a `400` error message*
 
-====== *Parameter minz*
+see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+===== *Parameter minz*
 
 include::../REQ_rc-minz-definition.adoc[]
 
@@ -51,9 +46,7 @@ would retrieve data for the 850 level and for data above the 850 level, if a `ma
 
 =================
 
-<<<
-
-====== *Parameter maxz*
+===== *Parameter maxz*
 
 include::../REQ_rc-maxz-definition.adoc[]
 
@@ -69,9 +62,7 @@ would retrieve data for the 300 level and for data below the 850 level, if a `mi
 
 =================
 
-<<<
-
-====== *Parameter resolutionx*
+===== *Parameter resolutionx*
 
 include::../REQ_rc-resolutionx-definition.adoc[]
 
@@ -90,9 +81,7 @@ would retrieve 10 values along the width from the minimum x coordinate to maximu
 
 =================
 
-<<<
-
-====== *Parameter resolutiony*
+===== *Parameter resolutiony*
 
 include::../REQ_rc-resolutiony-definition.adoc[]
 
@@ -111,9 +100,7 @@ would retrieve 10 values along the width from the minimum y coordinate to maximu
 
 =================
 
-<<<
-
-====== *Parameter resolutionz*
+===== *Parameter resolutionz*
 
 include::../REQ_rc-resolutionz-definition.adoc[]
 
@@ -131,9 +118,6 @@ denotes the number of intervals to retrieve data for the defined z-axis of the c
 would retrieve 10 values along the z-axis from the minimum z coordinate to maximum z coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).
 
 =================
-
-
-<<<
 
 ===== <<time>>
 

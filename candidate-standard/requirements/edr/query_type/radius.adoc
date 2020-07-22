@@ -1,6 +1,6 @@
 The Radius query returns data within the defined radius of the requested coordinate the filter constraints are defined by the following query parameters:
 
-====== *Parameter coords*
+===== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
@@ -35,7 +35,7 @@ retrieve data for Greenwich, London
 =================
 
 
-====== *Parameter within*
+===== *Parameter within*
 
 include::../REQ_rc-within-definition.adoc[]
 
@@ -47,7 +47,7 @@ include::../REQ_rc-withinUnits-definition.adoc[]
 
 include::../REQ_rc-withinUnits-response.adoc[]
 
-====== *Parameter z*
+===== *Parameter z*
 
 Define the vertical level to return data from 
 i.e. z=level

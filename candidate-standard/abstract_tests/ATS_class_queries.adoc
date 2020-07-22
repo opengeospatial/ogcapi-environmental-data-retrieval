@@ -46,7 +46,7 @@ include::collections/ATS_rc-op.adoc[]
 include::collections/ATS_rc-response.adoc[]
 
 ===== Instances {root}/collections/{collectionId}/instances
-
+// should these point to instances/ATS_rc-md... files?
 include::instances/ATS_rc-op.adoc[]
 
 include::instances/ATS_rc-response.adoc[]
