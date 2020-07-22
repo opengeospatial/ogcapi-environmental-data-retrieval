@@ -1,3 +1,44 @@
+
+[[environmental-resource-section]]
+=== Environmental Resources
+
+An EDR resource is a collection of spatiotemporal data that can be sampled using EDR query patterns. In the context of OGC-API Common, EDR query patterns are intended to distribute an OGC API-Common "collection" of spatiotemporal data.
+
+EDR resources can be exposed using two path templates:
+
+* `/collections/{collectionId}/{queryType}`
+* `/collections/{collectionId}/instances/{instanceId}/{queryType}`
+
+Where 
+
+`{collectionId}` = a unique identifier for a collection of geospatial data.
+
+`{instanceId}` = a text string identifying the version or _`Instance`_ of the chosen collection.
+
+`{queryType}` = a text string identifying the query pattern performed by the API.
+
+Information Resources associated with a specific collection should be accessed through the `/collections` path. Those which are not associated with a specific collection should use the `/{instanceId}/{queryType}` template.
+
+The EDR API `instanceId` parameter allows support for multiple iterations or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
+
+The EDR API standard has identified an initial set of common `queryTypes` to implement, this list may change as the standard is used. The <<query-type-table>> provides a list of the proposed `queryTypes`.
+
+[#query-type-table,reftext=`{table-caption} {counter:table-num}`]
+.Information Resource Types
+[width="90%",cols="2,4",options="header"]
+|===
+^|**Query Type** ^|**API Standard**
+|Area | /area
+|Corridor | /corridor
+|Cube | /cube
+|Items | /items
+|Locations | /locations
+|Position | /position
+|Trajectory | /trajectory
+|Instances | /instances
+|===
+
+
 [[collection-information-queries]]
 === Query Resources
 :sectnums:
