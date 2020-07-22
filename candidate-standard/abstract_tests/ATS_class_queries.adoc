@@ -29,6 +29,7 @@ include::queries/ATS_trajectory.adoc[]
 
 include::collections/ATS_rc-md-op.adoc[]
 
+[[ats_collections_rc-md-success]]
 include::collections/ATS_rc-md-success.adoc[]
 
 ===== Feature Collection {root}/collections/{collectionId}
@@ -46,7 +47,7 @@ include::collections/ATS_rc-op.adoc[]
 include::collections/ATS_rc-response.adoc[]
 
 ===== Instances {root}/collections/{collectionId}/instances
-// should these point to instances/ATS_rc-md... files?
+[[ats_instances_rc-md-op]]
 include::instances/ATS_rc-md-op.adoc[]
 
 include::instances/ATS_rc-md-success.adoc[]

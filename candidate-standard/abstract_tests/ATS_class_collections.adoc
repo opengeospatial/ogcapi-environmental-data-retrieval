@@ -24,6 +24,7 @@ include::collections/ATS_rc-md-success.adoc[]
 
 include::collections/ATS_src-md-op.adoc[]
 
+[[ats_collections_src-md-success]]
 include::collections/ATS_src-md-success.adoc[]
 
 ==== Features {root}/collections/{collectionId}/items
