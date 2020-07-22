@@ -56,7 +56,7 @@ Two common mechanisms to support cross-origin requests are:
 * link:https://en.wikipedia.org/wiki/Cross-origin_resource_sharing[Cross-origin resource sharing (CORS)]
 * link:https://en.wikipedia.org/wiki/JSONP[JSONP (JSON with padding)]
 
-[[Asynchronous_queries]]
+[[asynchronous_queries]]
 === Asynchronous queries
 
 It will not always be possible to respond to queries synchronously. This standard does not specify how to handle any asynchrony. Different services may propose different best practices.
