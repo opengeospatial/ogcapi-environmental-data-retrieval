@@ -4,6 +4,7 @@
 
 Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common `queryTypes` to implement, described in the <<query-resources>> section. This list may change as the standard is used and experience gained. 
 
+[[rc_collection-section]]
 An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns. 
 
 Query resources related to Environmental Data resources (collections of spatiotemporal data) can be exposed using the path templates:
@@ -159,6 +160,7 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the collection, a `400` message SHOULD be returned.
 =======
 
+[[rc_postion-section]]
 ==== Position query
 
 include::requirements/edr/query_type/point.adoc[]
@@ -171,6 +173,7 @@ include::requirements/edr/query_type/radius.adoc[]
 
 <<<
 
+[[rc_area-section]]
 ==== Area query
 
 include::requirements/edr/query_type/polygon.adoc[]
@@ -183,6 +186,7 @@ include::requirements/edr/query_type/cube.adoc[]
 
 <<<
 
+[[rc_trajectory-section]]
 ==== Trajectory query
 
 include::requirements/edr/query_type/trajectory.adoc[]
