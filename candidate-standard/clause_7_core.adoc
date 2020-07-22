@@ -12,7 +12,7 @@ The `Core` Requirements Class defines the requirements for locating, understandi
 
 include::requirements/requirements_class_core.adoc[]
 
- The `Core` Requirements Class is presented in five sections:
+The `Core` Requirements Class is presented in five sections:
 
 . <<api-platform-section,API Platform>>: a set of common capabilities
 . <<collection-access-section,Collection Access>>: operations for accessing collections of environmental data.

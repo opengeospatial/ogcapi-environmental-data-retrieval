@@ -1,4 +1,4 @@
-[[ats_collections_rc-op]]
+// [[ats_collections_rc-op]]
 [width="90%",cols="2,6a"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
@@ -23,8 +23,10 @@ Execute requests with combinations of the "bbox" and "datetime" query parameters
 and verify that only features are returned that match both selection criteria.
 |===
 
+[[ats_collections_rc-bbox-definition]]
 include::ATS_rc-bbox-definition.adoc[]
 
+[[ats_collections_rc-bbox-response]]
 include::ATS_rc-bbox-response.adoc[]
 
 include::ATS_rc-time-definition.adoc[]
