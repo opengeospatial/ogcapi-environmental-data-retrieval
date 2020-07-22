@@ -78,15 +78,15 @@ The implementations compliant with the OGC API Common Part 1: Core are only requ
 
 While the OGC API Common standard does not specify any mandatory encoding, the following encodings are recommended. See <<overview,Clause 7 (Overview)>> for a discussion of this issue.
 
-[[rec_html]]
+[[rec_html-section]]
 HTML encoding recomendation:
 include::recommendations/core/REC_html.adoc[]
 
-[[rec_geojson]]
+[[rec_geojson-section]]
 GeoJSON encoding recommendation:
 include::recommendations/core/REC_geojson.adoc[]
 
-[[rec_covjson]]
+[[rec_covjson-section]]
 CoverageJSON encoding recommendation:
 include::recommendations/core/REC_covjson.adoc[]
 
