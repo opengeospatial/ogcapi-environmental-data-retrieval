@@ -30,14 +30,6 @@ include::collections/ATS_src-md-op.adoc[]
 [[ats_collections_src-md-success]]
 include::collections/ATS_src-md-success.adoc[]
 
-==== Features {root}/collections/{collectionId}/items
-
-NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
-
-include::collections/ATS_rc-op.adoc[]
-
-include::collections/ATS_rc-response.adoc[]
-
 ==== Second Tier Tests
 These tests are invoked by other tests.
 
