@@ -8,9 +8,9 @@
 |Dependency |<<ats_core,Conformance Class "OAPI Core">>
 |===
 
-==== JSON Definition
+==== CoverageJSON Definition
 
-include::json/ATS_definition.adoc[]
+include::covjson/ATS_definition.adoc[]
 
 ==== CoverageJSON Content
 

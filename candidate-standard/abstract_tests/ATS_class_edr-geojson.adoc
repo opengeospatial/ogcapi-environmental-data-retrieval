@@ -1,0 +1,17 @@
+[[ats_edr-geojson]]
+[cols="1,4",width="90%"]
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core/edr-geojson
+|Target type |Web API
+|Requirements Class |<<rc_ed-geojson,http://www.opengis.net/spec/ogcapi_common/1.0/req/edr-geojson>>
+|Dependency |<<ats_core,Conformance Class "OAPI Core">>
+|===
+
+==== EDR GeoJSON Definition
+
+include::edr-geojson/ATS_definition.adoc[]
+
+==== EDR GeoJSON Content
+
+include::edr-geojson/ATS_content.adoc[]
