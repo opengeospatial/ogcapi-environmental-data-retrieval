@@ -1,14 +1,35 @@
+
+[[environmental-resource-section]]
+== Query, Environmental and Information Resources
+
+Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common `queryTypes` to implement, described in the <<query-resources>> section. This list may change as the standard is used and experience gained. 
+
+[[rc_collection-section]]
+An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns. 
+
+Query resources related to Environmental Data resources (collections of spatiotemporal data) can be exposed using the path templates:
+
+* `/collections/{collectionId}/{queryType}`
+* `/collections/{collectionId}/instances/{instanceId}/{queryType}`
+
+Where 
+
+`{collectionId}` = a unique identifier for a collection of geospatial data.
+
+`{instanceId}` = a text string identifying the version or instance of the chosen collection.
+
+`{queryType}` = a text string identifying the query pattern performed by the API.
+
+The `instanceId` parameter allows support for multiple instances or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
+
 [[collection-information-queries]]
-=== Query Resources
-:sectnums:
+Information resources associated with a specific collection should be accessed through the `/collections` path. Information resources not associated with a specific collection should be accessed via the `/{instanceId}/{queryType}` path template.
 
-Query Resources are spatial queries which support the operation of the API or the access and use of the Environmental Data Resources. They are described in the <<query-resources>> section.
+The resources returned from each node in these templates are described in <<query-resource-paths>>.
 
-Query Resources related to Environmental Data Resources (collection of spatiotemporal data) can be exposed using the path template:
-
-* /collections/{collectionId}/{queryType}
-
-The resources returned from each node in this template are described in <<query-resource-paths>>.
+[[information-resources]]
+[[collections-access-section]]
+=== Information Resources
 
 [#query-resource-paths,reftext='{table-caption} {counter:table-num}']
 .Information Resource Paths
@@ -17,10 +38,13 @@ The resources returned from each node in this template are described in <<query-
 ^|**Path Template** ^|**Resource**
 |/collections |The root resource describing the collections of geospatial data available from this API.
 |/collections/{collectionId} |Identifies a collection of geospatial data with the unique identifier `{collectionId}`
-|/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {resourceType} associated with the `{collectionId}` collection.
+|/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {queryType} associated with the `{collectionId}` collection.
 |===
 
-The OGC API-Common standards do not define any Information Resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
+The OGC API-Common standards do not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
+
+[[query-resources-section]]
+=== Query Resources
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
@@ -37,19 +61,20 @@ The OGC API-Common standards do not define any Information Resource types. Howev
 |/collections/{collectionId}/instances | Instances | List the available instances of the collection
 |===
 
+[[parameters-section]]
 ==== Shared query parameters
 
-Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR API standard defines the following as standard parameters for use.
+Query parameters are used in URLs to define the resources which are returned on a GET request. The following are defined as standard shared parameters for use.
 
 [[coords]]
-====== Parameter coords
+===== Parameter coords
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
 
 [[time]]
-====== Parameter datetime
+===== Parameter datetime
 
 include::requirements/core/REQ_rec-datetime-parameter.adoc[]
 
@@ -86,7 +111,7 @@ March 18, 2018, 12:31:12 UTC or earlier:
 A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml[datetime.yaml].
 
 [[parametername]]
-====== Parameter parametername
+===== Parameter parametername
 
 include::requirements/edr/REQ_rc-parameters-definition.adoc[]
 
@@ -108,10 +133,9 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 
 If a requested parameter doesn't exist in the collection the data for those parameters that do exist should be returned.
 If none of the requested parameters exist in the collection a `400` message SHOULD be returned.
-=======
 
 [[crs]]
-====== Parameter crs
+===== Parameter crs
 
 include::requirements/edr/REQ_rc-outputCRS-definition.adoc[]
 
@@ -120,7 +144,7 @@ include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
 The value of the `crs` query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
-====== Parameter outputformat
+===== Parameter outputformat
 
 include::requirements/edr/REQ_rc-outputFormat-definition.adoc[]
 
@@ -133,8 +157,9 @@ include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
 =================
 
 If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the collection, a `400` message SHOULD be returned.
-=======
 
+
+[[rc_postion-section]]
 ==== Position query
 
 include::requirements/edr/query_type/point.adoc[]
@@ -147,6 +172,7 @@ include::requirements/edr/query_type/radius.adoc[]
 
 <<<
 
+[[rc_area-section]]
 ==== Area query
 
 include::requirements/edr/query_type/polygon.adoc[]
@@ -159,6 +185,7 @@ include::requirements/edr/query_type/cube.adoc[]
 
 <<<
 
+[[rc_trajectory-section]]
 ==== Trajectory query
 
 include::requirements/edr/query_type/trajectory.adoc[]

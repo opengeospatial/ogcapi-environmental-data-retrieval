@@ -3,12 +3,16 @@
 
 === General
 
-The OGC API family of standards enable access to resources using the HTTP protocol and its' associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of features which are applicable to all OGC APIs. Other OGC standards extend API-Common with features specific to a resource type. This OGC API-EDR standard defines an API with two goals:
+The OGC API standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type. 
 
-. To allow service users to retrieve, in effect, transient resources over a discrete sampling geometry, created by the service in response to a standardized query pattern.
-. To provide 'building blocks' allowing the construction of more complex services
+This OGC API-EDR standard defines an API with two goals:
 
-The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required. The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.
+. To allow service users to retrieve a subset of data created by the service in response to a standardized, coordinate orientated, query pattern;
+. To provide 'building blocks' allowing the construction of more complex services.
+
+The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required. 
+
+The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.
 
 [[resource-paths]]
 === Resource Paths
@@ -32,34 +36,15 @@ or +
 3+^|**Features**
 |<<collectionInfo,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
 3+^|**Queries**
-|<<collectionInfo,{root}/collections/{collectionId}/queryType>>| |Retrieve data according to the query pattern
+|<<collectionInfo,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
 |<<collectionInfo,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about instances of a collection
 |<<collectionInfo,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific instance of a collection which has the unique identifier `{instanceId}`
 |===
 
 Where:
 
-* {root} = Base URI for the API server
-* {collectionId} = an identifier for a specific collection of data
-* {instanceId} = an identifier for a specific version or instance of a collection of data
-* {queryType} = an identifier for a specific query pattern to retrieve data from a specific collection of data
+* `{root}` = Base URI for the API server
+* `{collectionId}` = an identifier for a specific collection of data
+* `{instanceId}` = an identifier for a specific version or instance of a collection of data
+* `{queryType}` = an identifier for a specific query pattern to retrieve data from a specific collection of data
 
-[[dependencies-overview]]
-=== Dependencies
-
-The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common. <<mapping-to-common>> Identifies the API-Common Requirements Classes which are applicable to each section of this Standard. Instructions on when and how to apply these Requirements Classes are provided in each section.
-
-[#mapping-to-common,reftext='{table-caption} {counter:table-num}']
-.Mapping API-EDR Sections to API-Common Requirements Classes
-[width="90%",cols="2,6"]
-|====
-^|*API-EDR Section* ^|*API-Common Requirements Class*
-|<<landing-page,API Landing Page>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
-|<<api-definition,API Definition>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
-|<<conformance-classes,Declaration of Conformance Classes>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
-|<<collection-access-section,Collections>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections
-|<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/oas30
-|<<requirements-class-geojson-clause,GeoJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
-|<<requirements-class-covjson-clause,CoverageJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
-|<<requirements-class-html-clause,HTML>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/html
-|====

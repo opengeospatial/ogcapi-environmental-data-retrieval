@@ -20,6 +20,8 @@ include::collections/ATS_rc-md-op.adoc[]
 
 include::collections/ATS_rc-md-success.adoc[]
 
+include::collections/ATS_rc-md-success-table.adoc[]
+
 ==== Collection {root}/collections/{collectionId}{collectionId}/instances/{instanceId}
 
 include::collections/ATS_src-md-op.adoc[]

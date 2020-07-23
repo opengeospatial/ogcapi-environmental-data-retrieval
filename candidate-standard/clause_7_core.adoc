@@ -1,9 +1,18 @@
+[[dependencies-overview]]
+== Dependencies on API-Common Core and Collections
+
+The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
+
+include::requirements/core/REQ_api-common.adoc[]
+
 [[rc_core-section]]
 === Overview
 
+The `Core` Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources.
+
 include::requirements/requirements_class_core.adoc[]
 
-The `Core` Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources. The `Core` Requirements Class is presented in five sections:
+The `Core` Requirements Class is presented in five sections:
 
 . <<api-platform-section,API Platform>>: a set of common capabilities
 . <<collection-access-section,Collection Access>>: operations for accessing collections of environmental data.
@@ -12,12 +21,22 @@ The `Core` Requirements Class defines the requirements for locating, understandi
 . <<parameters-section,Parameters>>: parameters for use in the API-EDR operations.
 . <<general-section,General>>: general principles for use with this standard.
 
-[[core-dependencies-section]]
-=== Dependencies
+<<mapping-to-common>> Identifies the API-Common Requirements Classes which are applicable to each section of this Standard. Instructions on when and how to apply these Requirements Classes are provided in each section.
 
-The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
-
-include::requirements/core/REQ_api-common.adoc[]
+[#mapping-to-common,reftext='{table-caption} {counter:table-num}']
+.Mapping API-EDR Sections to API-Common Requirements Classes
+[width="90%",cols="2,6"]
+|====
+^|*API-EDR Section* ^|*API-Common Requirements Class*
+|<<landing-page,API Landing Page>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|<<api-definition,API Definition>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|<<conformance-classes,Declaration of Conformance Classes>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core
+|<<collection-access-section,Collections>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections
+|<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/oas30
+|<<requirements-class-geojson-clause,GeoJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
+|<<requirements-class-covjson-clause,CoverageJSON>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json
+|<<requirements-class-html-clause,HTML>>| http://www.opengis.net/spec/ogcapi_common-1/1.0/req/html
+|====
 
 [[api-platform-section]]
 === Platform
@@ -139,43 +158,3 @@ The following JSON fragment is an example of a response to an OGC API-EDR confor
 ----
 include::examples/JSON/conformance_example.json[]
 ----
-
-[[environmental-resource-section]]
-=== Environmental Resources
-
-An EDR resource is a collection of spatiotemporal data that can be sampled using EDR query patterns. In the context of OGC-API Common, EDR query patterns are intended to distribute an OGC API-Common "collection" of spatiotemporal data.
-
-EDR resources can be exposed using two path templates:
-
-* `/collections/{collectionId}/{queryType}`
-* `/collections/{collectionId}/instances/{instanceId}/{queryType}`
-
-Where 
-
-`{collectionId}` = a unique identifier for a collection of geospatial data.
-
-`{instanceId}` = a text string identifying the version or _`Instance`_ of the chosen collection.
-
-`{queryType}` = a text string identifying the query pattern performed by the API.
-
-Information Resources associated with a specific collection should be accessed through the `/collections` path. Those which are not associated with a specific collection should use the `/{instanceId}/{queryType}` template.
-
-The EDR API `instanceId` parameter allows support for multiple iterations or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
-
-The EDR API standard has identified an initial set of common `queryTypes` to implement, this list may change as the standard is used. The <<query-type-table>> provides a list of the proposed `queryTypes`.
-
-[#query-type-table,reftext=`{table-caption} {counter:table-num}`]
-.Information Resource Types
-[width="90%",cols="2,4",options="header"]
-|===
-^|**Query Type** ^|**API Standard**
-|Area | /area
-|Corridor | /corridor
-|Cube | /cube
-|Items | /items
-|Locations | /locations
-|Position | /position
-|Trajectory | /trajectory
-|Instances | /instances
-|===
-

@@ -29,7 +29,10 @@ include::queries/ATS_trajectory.adoc[]
 
 include::collections/ATS_rc-md-op.adoc[]
 
+[[ats_collections_rc-md-success]]
 include::collections/ATS_rc-md-success.adoc[]
+
+include::collections/ATS_rc-md-success-table.adoc[]
 
 ===== Feature Collection {root}/collections/{collectionId}
 
@@ -46,16 +49,18 @@ include::collections/ATS_rc-op.adoc[]
 include::collections/ATS_rc-response.adoc[]
 
 ===== Instances {root}/collections/{collectionId}/instances
+[[ats_instances_rc-md-op]]
+include::instances/ATS_rc-md-op.adoc[]
 
-include::instances/ATS_rc-op.adoc[]
+include::instances/ATS_rc-md-success.adoc[]
 
-include::instances/ATS_rc-response.adoc[]
+include::collections/ATS_rc-md-success-table.adoc[]
 
 ===== Instance {root}/collections/{collectionId}/instances/instanceId
 
-include::instance/ATS_src-op.adoc[]
+include::instances/ATS_src-md-op.adoc[]
 
-include::instance/ATS_src-response.adoc[]
+include::instances/ATS_src-md-success.adoc[]
 
 ==== Second Tier Tests
 These tests are invoked by other tests.
@@ -63,6 +68,8 @@ These tests are invoked by other tests.
 ===== Items
 
 include::collections/ATS_rc-md-items.adoc[]
+
+
 
 include::collections/ATS_rc-md-items-links.adoc[]
 

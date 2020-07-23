@@ -1,6 +1,6 @@
 The Position query returns data for the requested coordinate, logic for identifying the best match for the coordinate will depend on the Collection and the filter constraints are defined by the following query parameters:
 
-====== *Parameter coords*
+===== *Parameter coords*
 
 include::../REQ_rc-coords-definition.adoc[]
 
