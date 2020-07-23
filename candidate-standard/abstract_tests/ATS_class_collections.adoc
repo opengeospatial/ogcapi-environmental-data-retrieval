@@ -14,7 +14,7 @@
 
 include::collections/ATS_crs84.adoc[]
 
-==== Feature Collections {root}/collections
+==== Environmental Data Collections {root}/collections
 
 include::collections/ATS_rc-md-op.adoc[]
 
@@ -23,21 +23,21 @@ include::collections/ATS_rc-md-success.adoc[]
 [[collections-metadata-schema]]
 include::collections/ATS_rc-md-success-table.adoc[]
 
-==== Feature Collection {root}/collections/{collectionId}
+==== Environmental Data Collection {root}/collections/{collectionId}
 
 include::collections/ATS_src-md-op.adoc[]
 
 [[ats_collections_src-md-success]]
 include::collections/ATS_src-md-success.adoc[]
 
-==== Second Tier Tests
+==== Second Tier Collections Tests
 These tests are invoked by other tests.
 
-===== Extent
+===== Collection Extent
 
 include::collections/ATS_rc-md-extent.adoc[]
 
-===== Queries
+===== Collection Queries
 
 include::collections/ATS_rc-md-collection-info.adoc[]
 
@@ -46,7 +46,7 @@ include::collections/ATS_rc-md-collection-info-table.adoc[]
 
 include::collections/ATS_rc-md-query-links.adoc[]
 
-===== Links
+===== Collection Links
 
 include::collections/ATS_rc-md-links.adoc[]
 
