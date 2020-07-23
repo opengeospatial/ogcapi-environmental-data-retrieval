@@ -1,30 +1,44 @@
 ===== Parameters
 
-If an itemID is not specified the query will return a list of the available
-itemID's with a description of their content in a GeoJSON format.
+The EDR Items query is an <<ogc17-069r3,OGC API - Features>> endpoint that 
+may be used to catalog pre-existing EDR sampling features. 
+The pre-existence of an EDR sampling feature may be because of the existence of
+a monitoring location, because a particular query has been cached for later use, or
+for an array of application-specific use cases (e.g. a catalog of spatio-temporal domains of anomalies in a dataset). A https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/openapi/EDR_OpenAPI.yaml#L2424[GeoJSON-compatible 
+JSON-Schema] has been specified to document an EDR query endpoint and valid 
+query parameters including time range, parameters, and spatial characteristics.  
 
+If an itemID is not specified, the query will return a list of the available
+itemID's with a description of their content in a GeoJSON format. This behavior 
+is specified in greater detail in <<ogc17-069r3,OGC API - Features.>>
 
 .List available items
 =================
 
-/collections/{collectionId}/items
+`/collections/{collectionId}/items`
 
-/collections/tropical_storms/items
+e.g.  
+return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an area query end point, a time range, a list of available parameters, and a representative geojson geometry.
+
+`/collections/tropical_storms/items`
+
+e.g. return query parameters to retrieve monitoring data from a collection of stream gages using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include a location query end point, a time range, a list of available parameters and a representative geojson geometry.
+ 
+`/collections/stream_gages/items`
 
 =================
-
-
 
 .itemID
 =================
 
-/collections/{collectionId}/items/{itemID}
+`/collections/{collectionId}/items/{itemID}`
 
-return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar collection
+e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar collection. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station. 
 
-/collections/metar/items/KIAD_2020-05-19T00Z
+`/collections/metar/items/KIAD_2020-05-19T00Z`
+
+e.g. return information for the requested item with an id of warning_12345 from the forecast collection. Returned data would include an area query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.
+
+`/collections/forecast/items/warning_12345`
 
 =================
-
-
-
