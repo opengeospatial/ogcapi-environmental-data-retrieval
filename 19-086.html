@@ -568,7 +568,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_introduction">1. Introduction</a></li>
 <li><a href="#_scope">2. Scope</a></li>
 <li><a href="#_conformance">3. Conformance</a></li>
-<li><a href="#_references">4. References</a></li>
+<li><a href="#references">4. References</a></li>
 <li><a href="#terms_and_definitions">5. Terms and Definitions</a>
 <ul class="sectlevel2">
 <li><a href="#_area">5.1. area</a></li>
@@ -580,75 +580,81 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_trajectory">5.7. trajectory</a></li>
 </ul>
 </li>
-<li><a href="#conventions">Conventions</a>
+<li><a href="#conventions">6. Conventions</a>
 <ul class="sectlevel2">
-<li><a href="#_identifiers">Identifiers</a></li>
-<li><a href="#_link_relations">Link relations</a></li>
-<li><a href="#_examples">Examples</a></li>
-<li><a href="#_schema">Schema</a></li>
-<li><a href="#_use_of_https">Use of HTTPS</a></li>
-<li><a href="#_api_definition">API definition</a>
+<li><a href="#_identifiers">6.1. Identifiers</a></li>
+<li><a href="#_link_relations">6.2. Link relations</a></li>
+<li><a href="#_media_types">6.3. Media Types</a></li>
+<li><a href="#_examples">6.4. Examples</a></li>
+<li><a href="#_schema">6.5. Schema</a></li>
+<li><a href="#_use_of_https">6.6. Use of HTTPS</a></li>
+<li><a href="#requirements-class-openapi_3_0-clause">6.7. API definition</a>
 <ul class="sectlevel3">
-<li><a href="#_general_remarks">General remarks</a></li>
-<li><a href="#_role_of_openapi">Role of OpenAPI</a></li>
-<li><a href="#_references_to_openapi_components_in_normative_statements">References to OpenAPI components in normative statements</a></li>
-<li><a href="#_paths_in_openapi_definitions">Paths in OpenAPI definitions</a></li>
-<li><a href="#_reusable_openapi_components">Reusable OpenAPI components</a></li>
+<li><a href="#_general_remarks">6.7.1. General remarks</a></li>
+<li><a href="#_role_of_openapi">6.7.2. Role of OpenAPI</a></li>
+<li><a href="#_references_to_openapi_components_in_normative_statements">6.7.3. References to OpenAPI components in normative statements</a></li>
+<li><a href="#_paths_in_openapi_definitions">6.7.4. Paths in OpenAPI definitions</a></li>
+<li><a href="#_reusable_openapi_components">6.7.5. Reusable OpenAPI components</a></li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a href="#overview">6. Overview</a>
+<li><a href="#overview">7. Overview</a>
 <ul class="sectlevel2">
-<li><a href="#_general">6.1. General</a></li>
-<li><a href="#resource-paths">6.2. Resource Paths</a></li>
-<li><a href="#dependencies-overview">6.3. Dependencies</a></li>
-<li><a href="#rc_core-section">6.4. Overview</a></li>
-<li><a href="#core-dependencies-section">6.5. Dependencies</a></li>
-<li><a href="#api-platform-section">6.6. Platform</a>
-<ul class="sectlevel3">
-<li><a href="#landing-page">6.6.1. API landing page</a></li>
-<li><a href="#api-definition">6.6.2. API definition</a></li>
-<li><a href="#conformance-classes">6.6.3. Declaration of conformance classes</a></li>
+<li><a href="#_general">7.1. General</a></li>
+<li><a href="#resource-paths">7.2. Resource Paths</a></li>
 </ul>
 </li>
-<li><a href="#environmental-resource-section">6.7. Environmental Resources</a></li>
-<li><a href="#collection-information-queries">6.8. Query Resources</a>
-<ul class="sectlevel3">
-<li><a href="#_shared_query_parameters">6.8.1. Shared query parameters</a></li>
-<li><a href="#_position_query">6.8.2. Position query</a></li>
-<li><a href="#_radius_query">6.8.3. Radius query</a></li>
-<li><a href="#_area_query">6.8.4. Area query</a></li>
-<li><a href="#_cube_query">6.8.5. Cube query</a></li>
-<li><a href="#_trajectory_query">6.8.6. Trajectory query</a></li>
-<li><a href="#_items_query">6.8.7. Items query</a></li>
-<li><a href="#_locations_query">6.8.8. Locations query</a></li>
-<li><a href="#_instances_query">6.8.9. Instances query</a></li>
-</ul>
-</li>
-<li><a href="#general-requirements">6.9. General Requirements</a>
-<ul class="sectlevel3">
-<li><a href="#_http_1_1">6.9.1. HTTP 1.1</a></li>
-<li><a href="#http-status-codes">6.9.2. HTTP Status Codes</a></li>
-<li><a href="#web-caching">6.9.3. Web Caching</a></li>
-<li><a href="#cross-origin">6.9.4. Support for Cross-Origin Requests</a></li>
-<li><a href="#Asynchronous_queries">6.9.5. Asynchronous queries</a></li>
-<li><a href="#coordinate_reference_system">6.9.6. Coordinate Reference Systems</a></li>
-<li><a href="#_encodings">6.9.7. Encodings</a></li>
-<li><a href="#_link_headers">6.9.8. Link Headers</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li><a href="#rc_oas30-section">7. Requirements class "OpenAPI 3.0"</a>
+<li><a href="#dependencies-overview">8. Dependencies on API-Common Core and Collections</a>
 <ul class="sectlevel2">
-<li><a href="#_basic_requirements">7.1. Basic requirements</a></li>
-<li><a href="#_complete_definition">7.2. Complete definition</a></li>
-<li><a href="#exceptions">7.3. Exceptions</a></li>
-<li><a href="#security">7.4. Security</a></li>
+<li><a href="#rc_core-section">8.1. Overview</a></li>
+<li><a href="#api-platform-section">8.2. Platform</a>
+<ul class="sectlevel3">
+<li><a href="#landing-page">8.2.1. API landing page</a></li>
+<li><a href="#api-definition">8.2.2. API definition</a></li>
+<li><a href="#conformance-classes">8.2.3. Declaration of conformance classes</a></li>
 </ul>
 </li>
-<li><a href="#mediatypes">8. Media Types</a></li>
+</ul>
+</li>
+<li><a href="#environmental-resource-section">9. Query, Environmental and Information Resources</a>
+<ul class="sectlevel2">
+<li><a href="#collections-access-section">9.1. Information Resources</a></li>
+<li><a href="#query-resources-section">9.2. Query Resources</a>
+<ul class="sectlevel3">
+<li><a href="#parameters-section">9.2.1. Shared query parameters</a></li>
+<li><a href="#rc_postion-section">9.2.2. Position query</a></li>
+<li><a href="#_radius_query">9.2.3. Radius query</a></li>
+<li><a href="#rc_area-section">9.2.4. Area query</a></li>
+<li><a href="#_cube_query">9.2.5. Cube query</a></li>
+<li><a href="#rc_trajectory-section">9.2.6. Trajectory query</a></li>
+<li><a href="#_items_query">9.2.7. Items query</a></li>
+<li><a href="#_locations_query">9.2.8. Locations query</a></li>
+<li><a href="#_instances_query">9.2.9. Instances query</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#general-section">10. General Requirements</a>
+<ul class="sectlevel2">
+<li><a href="#_http_1_1">10.1. HTTP 1.1</a></li>
+<li><a href="#http-status-codes">10.2. HTTP Status Codes</a></li>
+<li><a href="#web-caching">10.3. Web Caching</a></li>
+<li><a href="#cross-origin">10.4. Support for Cross-Origin Requests</a></li>
+<li><a href="#asynchronous_queries">10.5. Asynchronous queries</a></li>
+<li><a href="#coordinate_reference_system">10.6. Coordinate Reference Systems</a></li>
+<li><a href="#_encodings">10.7. Encodings</a></li>
+<li><a href="#_link_headers">10.8. Link Headers</a></li>
+<li><a href="#rc_oas30-section">10.9. OpenAPI 3.0</a>
+<ul class="sectlevel3">
+<li><a href="#_basic_requirements">10.9.1. Basic requirements</a></li>
+<li><a href="#_complete_definition">10.9.2. Complete definition</a></li>
+<li><a href="#exceptions">10.9.3. Exceptions</a></li>
+</ul>
+</li>
+<li><a href="#security">10.10. Security</a></li>
+</ul>
+</li>
 <li><a href="#_abstract_test_suite_normative">Annex A: Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction_2">A.1. Introduction</a></li>
@@ -715,6 +721,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#glossary">Annex C: Glossary</a></li>
 <li><a href="#_revision_history">Annex D: Revision History</a></li>
+<li><a href="#Bibliography">Annex E: Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -1032,7 +1039,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect1">
-<h2 id="_references"><a class="anchor" href="#_references"></a>4. References</h2>
+<h2 id="references"><a class="anchor" href="#references"></a>4. References</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.</p>
@@ -1111,6 +1118,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>identifiable geographic place</p>
 </div>
+<div class="paragraph">
+<p>SOURCE: ISO 19112</p>
+</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1147,14 +1157,17 @@ A location is represented by one of a set of data types that describe a position
 <div class="paragraph">
 <p>path of a moving point described by a one parameter set of points</p>
 </div>
+<div class="paragraph">
+<p>SOURCE: ISO 19141</p>
+</div>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="conventions"><a class="anchor" href="#conventions"></a>Conventions</h2>
+<h2 id="conventions"><a class="anchor" href="#conventions"></a>6. Conventions</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_identifiers"><a class="anchor" href="#_identifiers"></a>Identifiers</h3>
+<h3 id="_identifiers"><a class="anchor" href="#_identifiers"></a>6.1. Identifiers</h3>
 <div class="paragraph">
 <p>The <a href="#WEBARCH">Architecture of the World Wide Web</a> establishes the URI as the single global identification system for the Web. Therefore, URIs or <a href="#rfc6570">URI Templates</a> are used in OGC Web API standards to identify key entities in those standards.</p>
 </div>
@@ -1178,7 +1191,7 @@ A location is represented by one of a set of data types that describe a position
 </div>
 </div>
 <div class="sect2">
-<h3 id="_link_relations"><a class="anchor" href="#_link_relations"></a>Link relations</h3>
+<h3 id="_link_relations"><a class="anchor" href="#_link_relations"></a>6.2. Link relations</h3>
 <div class="paragraph">
 <p>To express relationships between resources, <a href="#rfc8288">RFC 8288 (Web Linking)</a> and <a href="#link-relations">registered link relation types</a> are used wherever possible. Additional link relation types are registered with the <a href="https://github.com/opengeospatial/NamingAuthority/blob/master/incubation/linkRelationTypes/linkrelations.csv">OGC Link Relation Registry</a>.</p>
 </div>
@@ -1240,36 +1253,104 @@ A location is represented by one of a set of data types that describe a position
 </div>
 </div>
 <div class="sect2">
-<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<h3 id="_media_types"><a class="anchor" href="#_media_types"></a>6.3. Media Types</h3>
+<div class="paragraph">
+<p>JSON media types that would typically be used in an OGC API that supports JSON are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>application/prs.coverage+json</code> for resources that include coverage content, and</p>
+</li>
+<li>
+<p><code>application/geo+json</code> for feature collections and features, and</p>
+</li>
+<li>
+<p><code>application/json</code> for all other resources.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>XML media types that would typically occur in an OGC API that supports XML are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>application/gml+xml;version=3.2</code> for any GML 3.2 feature collections and features,</p>
+</li>
+<li>
+<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0</code> for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 0 profile,</p>
+</li>
+<li>
+<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2</code> for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 2 profile, and</p>
+</li>
+<li>
+<p><code>application/xml</code> for all other resources.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The typical HTML media type for all "web pages" in an OGC API would be <code>text/html</code>.</p>
+</div>
+<div class="paragraph">
+<p>The media types for an OpenAPI definition are <code>vnd.oai.openapi+json;version=3.0</code> (JSON) and <code>application/vnd.oai.openapi;version=3.0</code> (YAML).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The OpenAPI media type has not been registered yet with IANA and may change.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The CoverageJSON media type has not been registered yet with IANA and may change.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>6.4. Examples</h3>
 <div class="paragraph">
 <p>Most of the examples provided in this standard are encoded in JSON. JSON was chosen because it is widely understood by implementers and easy to include in a text document. This convention should NOT be interpreted as a requirement that JSON must be used. Implementors are free to use any format they desire as long as there is a Conformance Class for that format and the API advertises its support for that Conformance Class.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_schema"><a class="anchor" href="#_schema"></a>Schema</h3>
+<h3 id="_schema"><a class="anchor" href="#_schema"></a>6.5. Schema</h3>
 <div class="paragraph">
 <p>JSON Schema is used throughout this standard to define the structure of resources. These schema are typically represented using YAML encoding. This convention is for the ease of the user. It does not prohibit the use of another schema language or encoding. Nor does it indicate that JSON schema is required. Implementations should use a schema language and encoding appropriate for the format of the resource.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_use_of_https"><a class="anchor" href="#_use_of_https"></a>Use of HTTPS</h3>
+<h3 id="_use_of_https"><a class="anchor" href="#_use_of_https"></a>6.6. Use of HTTPS</h3>
 <div class="paragraph">
 <p>For simplicity, this document in general only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <a href="#rfc2818">HTTPS</a>, not <a href="#rfc2616">HTTP</a>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_api_definition"><a class="anchor" href="#_api_definition"></a>API definition</h3>
+<h3 id="requirements-class-openapi_3_0-clause"><a class="anchor" href="#requirements-class-openapi_3_0-clause"></a>6.7. API definition</h3>
 <div class="sect3">
-<h4 id="_general_remarks"><a class="anchor" href="#_general_remarks"></a>General remarks</h4>
+<h4 id="_general_remarks"><a class="anchor" href="#_general_remarks"></a>6.7.1. General remarks</h4>
 <div class="paragraph">
-<p>Good documentation is essential for every API so that developers can more easily learn how to use the API. In the best case, documentation would be available both in HTML for human consumption and in a machine readable format that can be processed by software for run-time binding.</p>
+<p>Good documentation is essential for every API so that developers can more easily learn how to use the API. In the best case, documentation would be available both in HTML for human consumption and in a machine readable format that can be best processed by software for run-time binding.</p>
 </div>
 <div class="paragraph">
 <p>This standard specifies requirements and recommendations for APIs that share spatial resources and want to follow a standard way of doing so. In general, APIs will go beyond the requirements and recommendations stated in this standard. They will support additional operations, parameters, etc. that are specific to the API or the software tool used to implement the API.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_role_of_openapi"><a class="anchor" href="#_role_of_openapi"></a>Role of OpenAPI</h4>
+<h4 id="_role_of_openapi"><a class="anchor" href="#_role_of_openapi"></a>6.7.2. Role of OpenAPI</h4>
 <div class="paragraph">
 <p>This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the <code>/conformance</code> path.</p>
 </div>
@@ -1281,7 +1362,7 @@ A location is represented by one of a set of data types that describe a position
 </div>
 </div>
 <div class="sect3">
-<h4 id="_references_to_openapi_components_in_normative_statements"><a class="anchor" href="#_references_to_openapi_components_in_normative_statements"></a>References to OpenAPI components in normative statements</h4>
+<h4 id="_references_to_openapi_components_in_normative_statements"><a class="anchor" href="#_references_to_openapi_components_in_normative_statements"></a>6.7.3. References to OpenAPI components in normative statements</h4>
 <div class="paragraph">
 <p>Some normative statements (requirements, recommendations and permissions) use a phrase that a component in the API definition of the server must be "based upon" a schema or parameter component in the OGC schema repository.</p>
 </div>
@@ -1309,7 +1390,7 @@ A location is represented by one of a set of data types that describe a position
 </div>
 </div>
 <div class="sect3">
-<h4 id="_paths_in_openapi_definitions"><a class="anchor" href="#_paths_in_openapi_definitions"></a>Paths in OpenAPI definitions</h4>
+<h4 id="_paths_in_openapi_definitions"><a class="anchor" href="#_paths_in_openapi_definitions"></a>6.7.4. Paths in OpenAPI definitions</h4>
 <div class="paragraph">
 <p>All paths in an OpenAPI definition are relative to the base URL of a server. Unlike Web Services, an API is decoupled from the server(s). Some ramifications of this are:</p>
 </div>
@@ -1345,7 +1426,7 @@ A location is represented by one of a set of data types that describe a position
 </div>
 </div>
 <div class="sect3">
-<h4 id="_reusable_openapi_components"><a class="anchor" href="#_reusable_openapi_components"></a>Reusable OpenAPI components</h4>
+<h4 id="_reusable_openapi_components"><a class="anchor" href="#_reusable_openapi_components"></a>6.7.5. Reusable OpenAPI components</h4>
 <div class="paragraph">
 <p>Reusable components for OpenAPI definitions for a OGC API are referenced from this document.</p>
 </div>
@@ -1366,29 +1447,35 @@ During the development phase, these components use a base URL of <code><a href="
 </div>
 </div>
 <div class="sect1">
-<h2 id="overview"><a class="anchor" href="#overview"></a>6. Overview</h2>
+<h2 id="overview"><a class="anchor" href="#overview"></a>7. Overview</h2>
 <div class="sectionbody">
 <div class="sect2">
-<h3 id="_general"><a class="anchor" href="#_general"></a>6.1. General</h3>
+<h3 id="_general"><a class="anchor" href="#_general"></a>7.1. General</h3>
 <div class="paragraph">
-<p>The OGC API family of standards enable access to resources using the HTTP protocol and its' associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of features which are applicable to all OGC APIs. Other OGC standards extend API-Common with features specific to a resource type. This OGC API-EDR standard defines an API with two goals:</p>
+<p>The OGC API standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type.</p>
+</div>
+<div class="paragraph">
+<p>This OGC API-EDR standard defines an API with two goals:</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>To allow service users to retrieve, in effect, transient resources over a discrete sampling geometry, created by the service in response to a standardized query pattern.</p>
+<p>To allow service users to retrieve a subset of data created by the service in response to a standardized, coordinate orientated, query pattern;</p>
 </li>
 <li>
-<p>To provide 'building blocks' allowing the construction of more complex services</p>
+<p>To provide 'building blocks' allowing the construction of more complex services.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required. The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the <a href="https://www.ogc.org/standards/common">OGC Web Services family of (XML-based) standards</a>. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.</p>
+<p>The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required.</p>
+</div>
+<div class="paragraph">
+<p>The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the <a href="https://www.ogc.org/standards/common">OGC Web Services family of (XML-based) standards</a>. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="resource-paths"><a class="anchor" href="#resource-paths"></a>6.2. Resource Paths</h3>
+<h3 id="resource-paths"><a class="anchor" href="#resource-paths"></a>7.2. Resource Paths</h3>
 <div class="paragraph">
 <p><a href="#edr-paths">Table 2</a> summarizes the access paths and relation types defined in this standard.</p>
 </div>
@@ -1452,7 +1539,7 @@ or<br>
 <td class="tableblock halign-center valign-top" colspan="3" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Queries</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/queryType</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/{queryType}</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve data according to the query pattern</p></td>
 </tr>
@@ -1474,24 +1561,115 @@ or<br>
 <div class="ulist">
 <ul>
 <li>
-<p>{root} = Base URI for the API server</p>
+<p><code>{root}</code> = Base URI for the API server</p>
 </li>
 <li>
-<p>{collectionId} = an identifier for a specific collection of data</p>
+<p><code>{collectionId}</code> = an identifier for a specific collection of data</p>
 </li>
 <li>
-<p>{instanceId} = an identifier for a specific version or instance of a collection of data</p>
+<p><code>{instanceId}</code> = an identifier for a specific version or instance of a collection of data</p>
 </li>
 <li>
-<p>{queryType} = an identifier for a specific query pattern to retrieve data from a specific collection of data</p>
+<p><code>{queryType}</code> = an identifier for a specific query pattern to retrieve data from a specific collection of data</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect2">
-<h3 id="dependencies-overview"><a class="anchor" href="#dependencies-overview"></a>6.3. Dependencies</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="dependencies-overview"><a class="anchor" href="#dependencies-overview"></a>8. Dependencies on API-Common Core and Collections</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common. <a href="#mapping-to-common">Table 3</a> Identifies the API-Common Requirements Classes which are applicable to each section of this Standard. Instructions on when and how to apply these Requirements Classes are provided in each section.</p>
+<p>The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.</p>
+</div>
+<table id="req_core_api-common" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/req/core/api-common</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">The API implementation SHALL demonstrate conformance with the following Requirements Classes of the OGC API-Common version 1.0 Standard.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect2">
+<h3 id="rc_core-section"><a class="anchor" href="#rc_core-section"></a>8.1. Overview</h3>
+<div class="paragraph">
+<p>The <code>Core</code> Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources.</p>
+</div>
+<table id="rc_core" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Web API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>The <code>Core</code> Requirements Class is presented in five sections:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p><a href="#api-platform-section">API Platform</a>: a set of common capabilities</p>
+</li>
+<li>
+<p><a href="#collection-access-section">Collection Access</a>: operations for accessing collections of environmental data.</p>
+</li>
+<li>
+<p><a href="#environmental-resources-section">Environmental Resources</a>: operations for accessing environmental data resources</p>
+</li>
+<li>
+<p><a href="#query-resources-section">Query Resources</a>: operations for accessing environmental data resources through queries</p>
+</li>
+<li>
+<p><a href="#parameters-section">Parameters</a>: parameters for use in the API-EDR operations.</p>
+</li>
+<li>
+<p><a href="#general-section">General</a>: general principles for use with this standard.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p><a href="#mapping-to-common">Table 3</a> Identifies the API-Common Requirements Classes which are applicable to each section of this Standard. Instructions on when and how to apply these Requirements Classes are provided in each section.</p>
 </div>
 <table id="mapping-to-common" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 3. Mapping API-EDR Sections to API-Common Requirements Classes</caption>
@@ -1540,101 +1718,12 @@ or<br>
 </table>
 </div>
 <div class="sect2">
-<h3 id="rc_core-section"><a class="anchor" href="#rc_core-section"></a>6.4. Overview</h3>
-<table id="rc_core" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 20%;">
-<col style="width: 80%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirements Class</strong></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Web API</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p></td>
-</tr>
-</tbody>
-</table>
-<div class="paragraph">
-<p>The <code>Core</code> Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources. The <code>Core</code> Requirements Class is presented in five sections:</p>
-</div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p><a href="#api-platform-section">API Platform</a>: a set of common capabilities</p>
-</li>
-<li>
-<p><a href="#collection-access-section">Collection Access</a>: operations for accessing collections of environmental data.</p>
-</li>
-<li>
-<p><a href="#environmental-resources-section">Environmental Resources</a>: operations for accessing environmental data resources</p>
-</li>
-<li>
-<p><a href="#query-resources-section">Query Resources</a>: operations for accessing environmental data resources through queries</p>
-</li>
-<li>
-<p><a href="#parameters-section">Parameters</a>: parameters for use in the API-EDR operations.</p>
-</li>
-<li>
-<p><a href="#general-section">General</a>: general principles for use with this standard.</p>
-</li>
-</ol>
-</div>
-</div>
-<div class="sect2">
-<h3 id="core-dependencies-section"><a class="anchor" href="#core-dependencies-section"></a>6.5. Dependencies</h3>
-<div class="paragraph">
-<p>The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.</p>
-</div>
-<table id="req_core_api-common" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Requirement 1</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/req/core/api-common</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock">The API implementation SHALL demonstrate conformance with the following Requirements Classes of the OGC API-Common version 1.0 Standard.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="api-platform-section"><a class="anchor" href="#api-platform-section"></a>6.6. Platform</h3>
+<h3 id="api-platform-section"><a class="anchor" href="#api-platform-section"></a>8.2. Platform</h3>
 <div class="paragraph">
 <p>API-Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.</p>
 </div>
 <div class="sect3">
-<h4 id="landing-page"><a class="anchor" href="#landing-page"></a>6.6.1. API landing page</h4>
+<h4 id="landing-page"><a class="anchor" href="#landing-page"></a>8.2.1. API landing page</h4>
 <div class="paragraph">
 <p>The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API-Common already requires some common links. Those links are sufficient for this standard.</p>
 </div>
@@ -1707,7 +1796,7 @@ properties:
 </div>
 </div>
 <div class="sect3">
-<h4 id="api-definition"><a class="anchor" href="#api-definition"></a>6.6.2. API definition</h4>
+<h4 id="api-definition"><a class="anchor" href="#api-definition"></a>8.2.2. API definition</h4>
 <div class="paragraph">
 <p>Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.</p>
 </div>
@@ -1755,7 +1844,7 @@ properties:
 </div>
 </div>
 <div class="sect3">
-<h4 id="conformance-classes"><a class="anchor" href="#conformance-classes"></a>6.6.3. Declaration of conformance classes</h4>
+<h4 id="conformance-classes"><a class="anchor" href="#conformance-classes"></a>8.2.3. Declaration of conformance classes</h4>
 <div class="paragraph">
 <p>To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API server, the API has to declare the conformance classes it claims to have implemented.</p>
 </div>
@@ -1855,13 +1944,19 @@ properties:
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="environmental-resource-section"><a class="anchor" href="#environmental-resource-section"></a>6.7. Environmental Resources</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="environmental-resource-section"><a class="anchor" href="#environmental-resource-section"></a>9. Query, Environmental and Information Resources</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>An EDR resource is a collection of spatiotemporal data that can be sampled using EDR query patterns. In the context of OGC-API Common, EDR query patterns are intended to distribute an OGC API-Common "collection" of spatiotemporal data.</p>
+<p>Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common <code>queryTypes</code> to implement, described in the <a href="#query-resources">[query-resources]</a> section. This list may change as the standard is used and experience gained.</p>
+</div>
+<div id="rc_collection-section" class="paragraph">
+<p>An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns.</p>
 </div>
 <div class="paragraph">
-<p>EDR resources can be exposed using two path templates:</p>
+<p>Query resources related to Environmental Data resources (collections of spatiotemporal data) can be exposed using the path templates:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1880,88 +1975,24 @@ properties:
 <p><code>{collectionId}</code> = a unique identifier for a collection of geospatial data.</p>
 </div>
 <div class="paragraph">
-<p><code>{instanceId}</code> = a text string identifying the version or <em>`Instance`</em> of the chosen collection.</p>
+<p><code>{instanceId}</code> = a text string identifying the version or instance of the chosen collection.</p>
 </div>
 <div class="paragraph">
 <p><code>{queryType}</code> = a text string identifying the query pattern performed by the API.</p>
 </div>
 <div class="paragraph">
-<p>Information Resources associated with a specific collection should be accessed through the <code>/collections</code> path. Those which are not associated with a specific collection should use the <code>/{instanceId}/{queryType}</code> template.</p>
+<p>The <code>instanceId</code> parameter allows support for multiple instances or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of <code><em>default</em></code> or <code><em>latest</em></code> could be used.</p>
+</div>
+<div id="collection-information-queries" class="paragraph">
+<p>Information resources associated with a specific collection should be accessed through the <code>/collections</code> path. Information resources not associated with a specific collection should be accessed via the <code>/{instanceId}/{queryType}</code> path template.</p>
 </div>
 <div class="paragraph">
-<p>The EDR API <code>instanceId</code> parameter allows support for multiple iterations or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of <code><em>default</em></code> or <code><em>latest</em></code> could be used.</p>
-</div>
-<div class="paragraph">
-<p>The EDR API standard has identified an initial set of common <code>queryTypes</code> to implement, this list may change as the standard is used. The <a href="#query-type-table"><code>Table 7</code></a> provides a list of the proposed <code>queryTypes</code>.</p>
-</div>
-<table id="query-type-table" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 7. Information Resource Types</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 66.6667%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><strong>Query Type</strong></th>
-<th class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><strong>API Standard</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Area</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/area</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Corridor</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/corridor</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cube</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/cube</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Items</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/items</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Locations</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/locations</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/position</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Trajectory</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/trajectory</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instances</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/instances</p></td>
-</tr>
-</tbody>
-</table>
+<p>The resources returned from each node in these templates are described in <a href="#query-resource-paths">Table 7</a>.</p>
 </div>
 <div class="sect2">
-<h3 id="collection-information-queries"><a class="anchor" href="#collection-information-queries"></a>6.8. Query Resources</h3>
-<div class="paragraph">
-<p>Query Resources are spatial queries which support the operation of the API or the access and use of the Environmental Data Resources. They are described in the <a href="#query-resources">[query-resources]</a> section.</p>
-</div>
-<div class="paragraph">
-<p>Query Resources related to Environmental Data Resources (collection of spatiotemporal data) can be exposed using the path template:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>/collections/{collectionId}/{queryType}</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The resources returned from each node in this template are described in <a href="#query-resource-paths">Table 8</a>.</p>
-</div>
+<h3 id="collections-access-section"><a class="anchor" href="#collections-access-section"></a>9.1. Information Resources</h3>
 <table id="query-resource-paths" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 8. Information Resource Paths</caption>
+<caption class="title">Table 7. Information Resource Paths</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 66.6667%;">
@@ -1983,15 +2014,18 @@ properties:
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{queryType}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies an Information Resource of type {resourceType} associated with the <code>{collectionId}</code> collection.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies an Information Resource of type {queryType} associated with the <code>{collectionId}</code> collection.</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>The OGC API-Common standards do not define any Information Resource types. However <a href="#query-resource-table">Table 9</a> provides a mapping of the initial query types proposed for the EDR API.</p>
+<p>The OGC API-Common standards do not define any information resource types. However <a href="#query-resource-table">Table 8</a> provides a mapping of the initial query types proposed for the EDR API.</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="query-resources-section"><a class="anchor" href="#query-resources-section"></a>9.2. Query Resources</h3>
 <table id="query-resource-table" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 9. Query Types</caption>
+<caption class="title">Table 8. Query Types</caption>
 <colgroup>
 <col style="width: 28.5714%;">
 <col style="width: 14.2857%;">
@@ -2048,13 +2082,13 @@ properties:
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="_shared_query_parameters"><a class="anchor" href="#_shared_query_parameters"></a>6.8.1. Shared query parameters</h4>
+<h4 id="parameters-section"><a class="anchor" href="#parameters-section"></a>9.2.1. Shared query parameters</h4>
 <div class="paragraph">
-<p>Query parameters are used in URLs to define the resources which are returned on a GET request. The EDR API standard defines the following as standard parameters for use.</p>
+<p>Query parameters are used in URLs to define the resources which are returned on a GET request. The following are defined as standard shared parameters for use.</p>
 </div>
-<div class="sect5">
-<h6 id="coords"><a class="anchor" href="#coords"></a>Parameter coords</h6>
-<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<div class="sect4">
+<h5 id="coords"><a class="anchor" href="#coords"></a>Parameter coords</h5>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2091,7 +2125,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2137,8 +2171,8 @@ explode: false</code></pre>
 </tbody>
 </table>
 </div>
-<div class="sect5">
-<h6 id="time"><a class="anchor" href="#time"></a>Parameter datetime</h6>
+<div class="sect4">
+<h5 id="time"><a class="anchor" href="#time"></a>Parameter datetime</h5>
 <table id="req_core_rec-datetime-parameter" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2221,8 +2255,8 @@ explode: false</code></pre>
 <p>A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at <a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml">datetime.yaml</a>.</p>
 </div>
 </div>
-<div class="sect5">
-<h6 id="parametername"><a class="anchor" href="#parametername"></a>Parameter parametername</h6>
+<div class="sect4">
+<h5 id="parametername"><a class="anchor" href="#parametername"></a>Parameter parametername</h5>
 <table id="req_edr_parameters-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2308,11 +2342,9 @@ schema:
 <p>If a requested parameter doesn&#8217;t exist in the collection the data for those parameters that do exist should be returned.
 If none of the requested parameters exist in the collection a <code>400</code> message SHOULD be returned.</p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div id="crs" class="paragraph">
-<p>====== Parameter crs</p>
 </div>
+<div class="sect4">
+<h5 id="crs"><a class="anchor" href="#crs"></a>Parameter crs</h5>
 <table id="req_edr_outputCRS-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2379,9 +2411,9 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>The value of the <code>crs</code> query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations.</p>
 </div>
-<div id="outputformat" class="paragraph">
-<p>====== Parameter outputformat</p>
 </div>
+<div class="sect4">
+<h5 id="outputformat"><a class="anchor" href="#outputformat"></a>Parameter outputformat</h5>
 <table id="req_edr_outputFormat-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2458,16 +2490,14 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect3">
-<h4 id="_position_query"><a class="anchor" href="#_position_query"></a>6.8.2. Position query</h4>
+<h4 id="rc_postion-section"><a class="anchor" href="#rc_postion-section"></a>9.2.2. Position query</h4>
 <div class="paragraph">
 <p>The Position query returns data for the requested coordinate, logic for identifying the best match for the coordinate will depend on the Collection and the filter constraints are defined by the following query parameters:</p>
 </div>
-<div class="sect5">
-<h6 id="_parameter_coords"><a class="anchor" href="#_parameter_coords"></a><strong>Parameter coords</strong></h6>
-<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<div class="sect4">
+<h5 id="_parameter_coords"><a class="anchor" href="#_parameter_coords"></a><strong>Parameter coords</strong></h5>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2504,7 +2534,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2600,7 +2630,7 @@ the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_z"><a class="anchor" href="#_parameter_z"></a><strong>Parameter z</strong></h5>
-<table id="req_edr_z-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2631,7 +2661,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_z-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2724,22 +2754,22 @@ i.e. z=ALL</p>
 
 </div>
 <div class="sect4">
-<h5 id="_crs"><a class="anchor" href="#_crs"></a><a href="#crs">[crs]</a></h5>
+<h5 id="_parameter_crs"><a class="anchor" href="#_parameter_crs"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_outputformat"><a class="anchor" href="#_outputformat"></a><a href="#outputformat">[outputformat]</a></h5>
+<h5 id="_parameter_outputformat"><a class="anchor" href="#_parameter_outputformat"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_radius_query"><a class="anchor" href="#_radius_query"></a>6.8.3. Radius query</h4>
+<h4 id="_radius_query"><a class="anchor" href="#_radius_query"></a>9.2.3. Radius query</h4>
 <div class="paragraph">
 <p>The Radius query returns data within the defined radius of the requested coordinate the filter constraints are defined by the following query parameters:</p>
 </div>
-<div class="sect5">
-<h6 id="_parameter_coords_2"><a class="anchor" href="#_parameter_coords_2"></a><strong>Parameter coords</strong></h6>
-<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<div class="sect4">
+<h5 id="_parameter_coords_2"><a class="anchor" href="#_parameter_coords_2"></a><strong>Parameter coords</strong></h5>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2776,7 +2806,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -2863,8 +2893,8 @@ the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a><strong>Parameter within</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a><strong>Parameter within</strong></h5>
 <table id="req_edr_within-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -2928,7 +2958,6 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-</div>
 <div class="sect5">
 <h6 id="_parameter_withinunits"><a class="anchor" href="#_parameter_withinunits"></a><strong>Parameter withinunits</strong></h6>
 <table id="req_edr_withinUnits-definition" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -2989,8 +3018,9 @@ explode: false</code></pre>
 </tbody>
 </table>
 </div>
-<div class="sect5">
-<h6 id="_parameter_z_2"><a class="anchor" href="#_parameter_z_2"></a><strong>Parameter z</strong></h6>
+</div>
+<div class="sect4">
+<h5 id="_parameter_z_2"><a class="anchor" href="#_parameter_z_2"></a><strong>Parameter z</strong></h5>
 <div class="paragraph">
 <p>Define the vertical level to return data from
 i.e. z=level</p>
@@ -3031,22 +3061,22 @@ i.e. z=ALL</p>
 
 </div>
 <div class="sect4">
-<h5 id="_crs_2"><a class="anchor" href="#_crs_2"></a><a href="#crs">[crs]</a></h5>
+<h5 id="_parameter_crs_2"><a class="anchor" href="#_parameter_crs_2"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_outputformat_2"><a class="anchor" href="#_outputformat_2"></a><a href="#outputformat">[outputformat]</a></h5>
+<h5 id="_parameter_outputformat_2"><a class="anchor" href="#_parameter_outputformat_2"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_area_query"><a class="anchor" href="#_area_query"></a>6.8.4. Area query</h4>
+<h4 id="rc_area-section"><a class="anchor" href="#rc_area-section"></a>9.2.4. Area query</h4>
 <div class="paragraph">
 <p>The Area query returns data within the polygon defined by the <code>coords</code> parameter, the results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_coords_3"><a class="anchor" href="#_parameter_coords_3"></a><strong>Parameter coords</strong></h5>
-<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3083,7 +3113,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3128,48 +3158,32 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="literalblock">
-<div class="content">
-<pre>Only data that has a geometry that intersects the area defined by the polygon
-are selected.</pre>
+<div class="paragraph">
+<p>Only data that has a geometry that intersects the area defined by the polygon
+are selected.</p>
 </div>
+<div class="paragraph">
+<p>The polygon is defined using a Well Known Text string following</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>The polygon is defined using a Well Known Text string following</pre>
+<div class="paragraph">
+<p><code>coords=POLYGONx y,x1 y1,x2 y2,&#8230;&#8203;,xn yn x y</code></p>
 </div>
+<div class="paragraph">
+<p>which are values in the coordinate system defined by the crs query parameter
+(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>`coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))`</pre>
+<div class="paragraph">
+<p>For instance a polygon that roughly describes an area that contains
+South West England in WGS84 would look like:</p>
 </div>
+<div class="paragraph">
+<p><code>coords=POLYGON-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3</code></p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>which are values in the coordinate system defined by the crs query parameter
-(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).</pre>
+<div class="paragraph">
+<p>see <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a></p>
 </div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>For instance a polygon that roughly describes an area that contains
-South West England in WGS84 would look like:</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>`coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>`The coords parameter will only support 2D POLYGON`</pre>
-</div>
+<div class="paragraph">
+<p><code>The coords parameter will only support 2D POLYGON</code></p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 16. A polygon covering the UK</div>
@@ -3196,7 +3210,7 @@ South West England in WGS84 would look like:</pre>
 </div>
 <div class="sect4">
 <h5 id="_parameter_z_3"><a class="anchor" href="#_parameter_z_3"></a><strong>Parameter z</strong></h5>
-<table id="req_edr_z-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3227,7 +3241,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_z-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3320,22 +3334,22 @@ i.e. z=ALL</p>
 
 </div>
 <div class="sect4">
-<h5 id="_crs_3"><a class="anchor" href="#_crs_3"></a><a href="#crs">[crs]</a></h5>
+<h5 id="_parameter_crs_3"><a class="anchor" href="#_parameter_crs_3"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_outputformat_3"><a class="anchor" href="#_outputformat_3"></a><a href="#outputformat">[outputformat]</a></h5>
+<h5 id="_parameter_outputformat_3"><a class="anchor" href="#_parameter_outputformat_3"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cube_query"><a class="anchor" href="#_cube_query"></a>6.8.5. Cube query</h4>
+<h4 id="_cube_query"><a class="anchor" href="#_cube_query"></a>9.2.5. Cube query</h4>
 <div class="paragraph">
 <p>The <code>Cube</code> query returns a data cube defined by the  <code>coords</code>, <code>minz</code> and <code>maxz</code> parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the <code>coords</code> parameter.  The results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
-<div class="sect5">
-<h6 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a><strong>Parameter coords</strong></h6>
-<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<div class="sect4">
+<h5 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a><strong>Parameter coords</strong></h5>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3372,7 +3386,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3417,43 +3431,23 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="literalblock">
-<div class="content">
-<pre>Only data that has a geometry that intersects the area defined by the cube
-are selected.</pre>
+<div class="paragraph">
+<p>Only data that has a geometry that intersects the area defined by the cube
+are selected.</p>
 </div>
+<div class="paragraph">
+<p>The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text</pre>
+<div class="paragraph">
+<p>coords=POLYGONx y,x1 y1,x2 y2, x3 y3, x y</p>
 </div>
+<div class="paragraph">
+<p>which are values in the coordinate system defined by the crs query parameter
+if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>which are values in the coordinate system defined by the crs query parameter
-if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>For instance a cube that roughly describes an area that contains
-South West England in WGS84 would look like</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>*If the WKT does not define a Rectangle the service will generate a `400` error message*</pre>
-</div>
-</div>
-<div class="literalblock">
-<div class="content">
-<pre>see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</pre>
-</div>
+<div class="paragraph">
+<p>For instance a cube that roughly describes an area that contains
+South West England in WGS84 would look like</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 22. A cube covering the South West of the UK</div>
@@ -3463,10 +3457,15 @@ South West England in WGS84 would look like</pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
+<div class="paragraph">
+<p><strong>If the WKT does not define a Rectangle the service will generate a <code>400</code> error message</strong></p>
 </div>
-<div class="sect5">
-<h6 id="_parameter_minz"><a class="anchor" href="#_parameter_minz"></a><strong>Parameter minz</strong></h6>
+<div class="paragraph">
+<p>see <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a></p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameter_minz"><a class="anchor" href="#_parameter_minz"></a><strong>Parameter minz</strong></h5>
 <table id="req_edr_minz-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3537,10 +3536,9 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_maxz"><a class="anchor" href="#_parameter_maxz"></a><strong>Parameter maxz</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_maxz"><a class="anchor" href="#_parameter_maxz"></a><strong>Parameter maxz</strong></h5>
 <table id="req_edr_maxz-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3611,10 +3609,9 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_resolutionx"><a class="anchor" href="#_parameter_resolutionx"></a><strong>Parameter resolutionx</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_resolutionx"><a class="anchor" href="#_parameter_resolutionx"></a><strong>Parameter resolutionx</strong></h5>
 <table id="req_edr_resolutionx-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3706,10 +3703,9 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_resolutiony"><a class="anchor" href="#_parameter_resolutiony"></a><strong>Parameter resolutiony</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_resolutiony"><a class="anchor" href="#_parameter_resolutiony"></a><strong>Parameter resolutiony</strong></h5>
 <table id="req_edr_resolutiony-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3801,10 +3797,9 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_resolutionz"><a class="anchor" href="#_parameter_resolutionz"></a><strong>Parameter resolutionz</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_resolutionz"><a class="anchor" href="#_parameter_resolutionz"></a><strong>Parameter resolutionz</strong></h5>
 <table id="req_edr_resolutionz-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3896,7 +3891,6 @@ explode: false</code></pre>
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect4">
 <h5 id="_parameter_datetime_4"><a class="anchor" href="#_parameter_datetime_4"></a><a href="#time">Parameter datetime</a></h5>
@@ -3907,22 +3901,22 @@ explode: false</code></pre>
 
 </div>
 <div class="sect4">
-<h5 id="_crs_4"><a class="anchor" href="#_crs_4"></a><a href="#crs">[crs]</a></h5>
+<h5 id="_parameter_crs_4"><a class="anchor" href="#_parameter_crs_4"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_outputformat_4"><a class="anchor" href="#_outputformat_4"></a><a href="#outputformat">[outputformat]</a></h5>
+<h5 id="_parameter_outputformat_4"><a class="anchor" href="#_parameter_outputformat_4"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_trajectory_query"><a class="anchor" href="#_trajectory_query"></a>6.8.6. Trajectory query</h4>
+<h4 id="rc_trajectory-section"><a class="anchor" href="#rc_trajectory-section"></a>9.2.6. Trajectory query</h4>
 <div class="paragraph">
 <p>The Trajectory query returns data along the path defined by the <code>coords</code> parameter, <strong>the logic to match the data for the requested path will depend on and be defined by the Collection</strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
-<div class="sect5">
-<h6 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a><strong>Parameter coords</strong></h6>
-<table id="req_edr_coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<div class="sect4">
+<h5 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a><strong>Parameter coords</strong></h5>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -3959,7 +3953,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="req_edr_coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -4079,10 +4073,9 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_z_4"><a class="anchor" href="#_parameter_z_4"></a><strong>Parameter z</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_z_4"><a class="anchor" href="#_parameter_z_4"></a><strong>Parameter z</strong></h5>
 <div class="paragraph">
 <p>Used when the entire corridor occurs at the same vertical height the z query parameter is used to define the height</p>
 </div>
@@ -4097,7 +4090,6 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 </div>
 </div>
-<div style="page-break-after: always;"></div>
 </div>
 <div class="sect4">
 <h5 id="_parameter_datetime_5"><a class="anchor" href="#_parameter_datetime_5"></a><a href="#time">Parameter datetime</a></h5>
@@ -4108,16 +4100,16 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 
 </div>
 <div class="sect4">
-<h5 id="_crs_5"><a class="anchor" href="#_crs_5"></a><a href="#crs">[crs]</a></h5>
+<h5 id="_parameter_crs_5"><a class="anchor" href="#_parameter_crs_5"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_outputformat_5"><a class="anchor" href="#_outputformat_5"></a><a href="#outputformat">[outputformat]</a></h5>
+<h5 id="_parameter_outputformat_5"><a class="anchor" href="#_parameter_outputformat_5"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_items_query"><a class="anchor" href="#_items_query"></a>6.8.7. Items query</h4>
+<h4 id="_items_query"><a class="anchor" href="#_items_query"></a>9.2.7. Items query</h4>
 <div class="sect4">
 <h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
 <div class="paragraph">
@@ -4153,7 +4145,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_locations_query"><a class="anchor" href="#_locations_query"></a>6.8.8. Locations query</h4>
+<h4 id="_locations_query"><a class="anchor" href="#_locations_query"></a>9.2.8. Locations query</h4>
 <div class="paragraph">
 <p>With the locations query a location is defined by a unique identifer, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata in returned by the API must supply a geospatial definition for the identifier.</p>
 </div>
@@ -4183,21 +4175,21 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 
 </div>
 <div class="sect4">
-<h5 id="_crs_6"><a class="anchor" href="#_crs_6"></a><a href="#crs">[crs]</a></h5>
+<h5 id="_parameter_crs_6"><a class="anchor" href="#_parameter_crs_6"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_outputformat_6"><a class="anchor" href="#_outputformat_6"></a><a href="#outputformat">[outputformat]</a></h5>
+<h5 id="_parameter_outputformat_6"><a class="anchor" href="#_parameter_outputformat_6"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_instances_query"><a class="anchor" href="#_instances_query"></a>6.8.9. Instances query</h4>
+<h4 id="_instances_query"><a class="anchor" href="#_instances_query"></a>9.2.9. Instances query</h4>
 <div class="paragraph">
 <p>It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
 </div>
-<div class="sect5">
-<h6 id="_parameter_instanceid"><a class="anchor" href="#_parameter_instanceid"></a><strong>Parameter instanceId</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_instanceid"><a class="anchor" href="#_parameter_instanceid"></a><strong>Parameter instanceId</strong></h5>
 <div class="paragraph">
 <p>A unique identifier for the instance of the collection</p>
 </div>
@@ -4233,8 +4225,8 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 </div>
-<div class="sect5">
-<h6 id="_parameter_querytype"><a class="anchor" href="#_parameter_querytype"></a><strong>Parameter queryType</strong></h6>
+<div class="sect4">
+<h5 id="_parameter_querytype"><a class="anchor" href="#_parameter_querytype"></a><strong>Parameter queryType</strong></h5>
 <div class="paragraph">
 <p>The queryType options are exactly the same as those available to collections that don&#8217;t have multiple instances and support the same query parameters and functionality.  See the &lt;query-resource-table&gt;&gt; for the  mappings of the intial query types proposed for the EDR API.</p>
 </div>
@@ -4275,13 +4267,16 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="general-requirements"><a class="anchor" href="#general-requirements"></a>6.9. General Requirements</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="general-section"><a class="anchor" href="#general-section"></a>10. General Requirements</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The following general requirements and recomendations apply to all OGC APIs.</p>
 </div>
-<div class="sect3">
-<h4 id="_http_1_1"><a class="anchor" href="#_http_1_1"></a>6.9.1. HTTP 1.1</h4>
+<div class="sect2">
+<h3 id="_http_1_1"><a class="anchor" href="#_http_1_1"></a>10.1. HTTP 1.1</h3>
 <div class="paragraph">
 <p>The standards used for Web APIs are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.</p>
 </div>
@@ -4312,13 +4307,13 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="http-status-codes"><a class="anchor" href="#http-status-codes"></a>6.9.2. HTTP Status Codes</h4>
+<div class="sect2">
+<h3 id="http-status-codes"><a class="anchor" href="#http-status-codes"></a>10.2. HTTP Status Codes</h3>
 <div class="paragraph">
-<p><a href="#status-codes">Table 10</a> lists the main HTTP status codes that clients should be prepared to receive. This includes support for specific security schemes or URI redirection. In addition, other error situations may occur in the transport layer outside of the server.</p>
+<p><a href="#status-codes">Table 9</a> lists the main HTTP status codes that clients should be prepared to receive. This includes support for specific security schemes or URI redirection. In addition, other error situations may occur in the transport layer outside of the server.</p>
 </div>
 <table id="status-codes" class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 10. Typical HTTP status codes</caption>
+<caption class="title">Table 9. Typical HTTP status codes</caption>
 <colgroup>
 <col style="width: 15%;">
 <col style="width: 85%;">
@@ -4398,14 +4393,14 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Servers MAY support other capabilities of the HTTP protocol and, therefore, MAY return other status codes than those listed in <a href="#status-codes">Table 10</a>, too.</p>
+<p>Servers MAY support other capabilities of the HTTP protocol and, therefore, MAY return other status codes than those listed in <a href="#status-codes">Table 9</a>, too.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="web-caching"><a class="anchor" href="#web-caching"></a>6.9.3. Web Caching</h4>
+<div class="sect2">
+<h3 id="web-caching"><a class="anchor" href="#web-caching"></a>10.3. Web Caching</h3>
 <div class="paragraph">
 <p>Entity tags are a mechanism for web cache validation and for supporting conditional requests to reduce network traffic. Entity tags are specified by <a href="#rfc2616">HTTP/1.1 (RFC 2616)</a>.</p>
 </div>
@@ -4430,8 +4425,8 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tbody>
 </table>
 </div>
-<div class="sect3">
-<h4 id="cross-origin"><a class="anchor" href="#cross-origin"></a>6.9.4. Support for Cross-Origin Requests</h4>
+<div class="sect2">
+<h3 id="cross-origin"><a class="anchor" href="#cross-origin"></a>10.4. Support for Cross-Origin Requests</h3>
 <div class="paragraph">
 <p>Access to data from a HTML page is by default prohibited for security reasons, if the data is located on another host than the webpage ("same-origin policy"). A typical example is a web-application accessing feature data from multiple distributed datasets.</p>
 </div>
@@ -4469,59 +4464,17 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </ul>
 </div>
 </div>
-<div class="sect3">
-<h4 id="Asynchronous_queries"><a class="anchor" href="#Asynchronous_queries"></a>6.9.5. Asynchronous queries</h4>
+<div class="sect2">
+<h3 id="asynchronous_queries"><a class="anchor" href="#asynchronous_queries"></a>10.5. Asynchronous queries</h3>
 <div class="paragraph">
-<p>It will not always be possible to respond to queries synchronously, if the query requires handling asynchronously the system should respond with a HTTP code  of <code>308</code> and include a <code>Location</code> response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of <code>202</code> and include a <code>Retry-after</code> response header field with a suggested interval in seconds to retry the data retrieval.</p>
+<p>It will not always be possible to respond to queries synchronously. This standard does not specify how to handle any asynchrony. Different services may propose different best practices.</p>
 </div>
-<table id="rec_core_asynchronous-query" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/rec/core/asynchronous-query</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If a requests will require significant time to execute, asynchronous queries SHOULD be supported.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>User SHOULD be redirected to a URI location where the result will be available once completed using a HTTP statuts code of 308 with a header field of <em>Location</em> containing the URI.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The result URI SHOULD return a HTTP statuts code of 202 with a header field of <em>Retry_after</em> with a recommendation in seconds of how long to wait before retrying the request.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Once the data is available the result URI SHOULD return a HTTP statuts code of 200 with the data.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<div class="ulist">
-<ul>
-<li>
-<p>See <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">Asynchrony</a></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>For example, if the query requires handling asynchronously, one option, but there are others, is that the system could respond with a HTTP code  of <code>308</code> and include a <code>Location</code> response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of <code>202</code> and include a <code>Retry-after</code> response header field with a suggested interval in seconds to retry the data retrieval.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="coordinate_reference_system"><a class="anchor" href="#coordinate_reference_system"></a>6.9.6. Coordinate Reference Systems</h4>
+<div class="sect2">
+<h3 id="coordinate_reference_system"><a class="anchor" href="#coordinate_reference_system"></a>10.6. Coordinate Reference Systems</h3>
 <div class="paragraph">
 <p>As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <a href="#SDWBP">Best Practices document</a>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geospatial data and it is important to be clear about the coordinate reference system that the coordinates use.</p>
 </div>
@@ -4552,12 +4505,12 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 <p>The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system <code><a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a></code>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_encodings"><a class="anchor" href="#_encodings"></a>6.9.7. Encodings</h4>
+<div class="sect2">
+<h3 id="_encodings"><a class="anchor" href="#_encodings"></a>10.7. Encodings</h3>
 <div class="paragraph">
 <p>While the OGC API Common standard does not specify any mandatory encoding, the following encodings are recommended. See <a href="#overview">Clause 7 (Overview)</a> for a discussion of this issue.</p>
 </div>
-<div id="rec_html" class="paragraph">
+<div id="rec_html-section" class="paragraph">
 <p>HTML encoding recomendation:</p>
 </div>
 <table id="rec_core_html" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -4567,7 +4520,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/html</strong></p>
 </div></div></td>
@@ -4580,7 +4533,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tr>
 </tbody>
 </table>
-<div id="rec_geojson" class="paragraph">
+<div id="rec_geojson-section" class="paragraph">
 <p>GeoJSON encoding recommendation:</p>
 </div>
 <table id="rec_core_geojson" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -4590,7 +4543,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/geojson</strong></p>
 </div></div></td>
@@ -4603,7 +4556,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tr>
 </tbody>
 </table>
-<div id="rec_covjson" class="paragraph">
+<div id="rec_covjson-section" class="paragraph">
 <p>CoverageJSON encoding recommendation:</p>
 </div>
 <table id="rec_core_covjson" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -4613,7 +4566,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/covjson</strong></p>
 </div></div></td>
@@ -4663,8 +4616,8 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </table>
 </div>
 </div>
-<div class="sect3">
-<h4 id="_link_headers"><a class="anchor" href="#_link_headers"></a>6.9.8. Link Headers</h4>
+<div class="sect2">
+<h3 id="_link_headers"><a class="anchor" href="#_link_headers"></a>10.8. Link Headers</h3>
 <table id="rec_core_link-header" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4672,7 +4625,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 7</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/link-header</strong></p>
 </div></div></td>
@@ -4692,14 +4645,10 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tbody>
 </table>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="rc_oas30-section"><a class="anchor" href="#rc_oas30-section"></a>7. Requirements class "OpenAPI 3.0"</h2>
-<div class="sectionbody">
 <div class="sect2">
-<h3 id="_basic_requirements"><a class="anchor" href="#_basic_requirements"></a>7.1. Basic requirements</h3>
+<h3 id="rc_oas30-section"><a class="anchor" href="#rc_oas30-section"></a>10.9. OpenAPI 3.0</h3>
+<div class="sect3">
+<h4 id="_basic_requirements"><a class="anchor" href="#_basic_requirements"></a>10.9.1. Basic requirements</h4>
 <table id="rc_oas30" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -4783,8 +4732,8 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 <p>Two example OpenAPI documents are included in <a href="#oas-examples">Annex B</a>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="_complete_definition"><a class="anchor" href="#_complete_definition"></a>7.2. Complete definition</h3>
+<div class="sect3">
+<h4 id="_complete_definition"><a class="anchor" href="#_complete_definition"></a>10.9.2. Complete definition</h4>
 <table id="req_oas30_completeness" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4818,8 +4767,8 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 <p>Clients have to be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="exceptions"><a class="anchor" href="#exceptions"></a>7.3. Exceptions</h3>
+<div class="sect3">
+<h4 id="exceptions"><a class="anchor" href="#exceptions"></a>10.9.3. Exceptions</h4>
 <table id="req_oas30_exceptions-codes" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4858,8 +4807,9 @@ content:
 </div>
 </div>
 </div>
+</div>
 <div class="sect2">
-<h3 id="security"><a class="anchor" href="#security"></a>7.4. Security</h3>
+<h3 id="security"><a class="anchor" href="#security"></a>10.10. Security</h3>
 <table id="req_oas30_security" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4899,76 +4849,6 @@ content:
 </li>
 </ul>
 </div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="mediatypes"><a class="anchor" href="#mediatypes"></a>8. Media Types</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>JSON media types that would typically be used in an OGC API that supports JSON are:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>application/prs.coverage+json</code> for resources that include coverage content, and</p>
-</li>
-<li>
-<p><code>application/geo+json</code> for feature collections and features, and</p>
-</li>
-<li>
-<p><code>application/json</code> for all other resources.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>XML media types that would typically occur in on OGC API that supports XML are</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>application/gml+xml;version=3.2</code> for any GML 3.2 feature collections and features,</p>
-</li>
-<li>
-<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0</code> for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 0 profile,</p>
-</li>
-<li>
-<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2</code> for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 2 profile, and</p>
-</li>
-<li>
-<p><code>application/xml</code> for all other resources.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>The typical HTML media type for all "web pages" in an OGC API would be <code>text/html</code>.</p>
-</div>
-<div class="paragraph">
-<p>The media types for an OpenAPI definition are <code>vnd.oai.openapi+json;version=3.0</code> (JSON) and <code>application/vnd.oai.openapi;version=3.0</code> (YAML).</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The OpenAPI media type has not been registered yet with IANA and may change.
-</td>
-</tr>
-</table>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-The CoverageJSON media type has not been registered yet with IANA and may change.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
@@ -5121,7 +5001,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate the landing page for all supported media types using the resources and tests identified in <a href="#landing-page-schema">Table 11</a></p>
+<p>Validate the landing page for all supported media types using the resources and tests identified in <a href="#landing-page-schema">Table 10</a></p>
 </div>
 <div class="paragraph">
 <p>For formats that require manual inspection, perform the following:</p>
@@ -5146,7 +5026,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <p>The landing page may be retrieved in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the landing page against that schema. All supported formats should be exercised.</p>
 </div>
 <table id="landing-page-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 11. Schema and Tests for Landing Pages</caption>
+<caption class="title">Table 10. Schema and Tests for Landing Pages</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5425,7 +5305,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 </div>
 <div class="sect3">
 <h4 id="_feature_collections_rootcollections"><a class="anchor" href="#_feature_collections_rootcollections"></a>A.3.2. Feature Collections {root}/collections</h4>
-<table id="ats_collections_rc-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5467,7 +5347,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-md-success" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5502,7 +5382,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <p>In case the response includes a "crs" property, validate that the first value is either "http://www.opengis.net/def/crs/OGC/1.3/CRS84" or "http://www.opengis.net/def/crs/OGC/0/CRS84h"</p>
 </li>
 <li>
-<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 12</a></p>
+<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 11</a></p>
 </li>
 </ol>
 </div></div></td>
@@ -5513,7 +5393,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <p>The Collections content may be retrieved in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
 <table id="collections-metadata-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 12. Schema and Tests for Collections content</caption>
+<caption class="title">Table 11. Schema and Tests for Collections content</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -5542,7 +5422,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 </div>
 <div class="sect3">
 <h4 id="_feature_collection_rootcollectionscollectionid"><a class="anchor" href="#_feature_collection_rootcollectionscollectionid"></a>A.3.3. Feature Collection {root}/collections/{collectionId}</h4>
-<table id="ats_collections_src-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5623,7 +5503,7 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 </tr>
 </table>
 </div>
-<table id="ats_collections_rc-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5803,7 +5683,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5846,7 +5726,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5888,7 +5768,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5973,7 +5853,7 @@ explode: false</code></pre>
 </div>
 <div class="sect4">
 <h5 id="_queries"><a class="anchor" href="#_queries"></a>Queries</h5>
-<table id="ats_collections_rc-md-items" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -6020,7 +5900,7 @@ explode: false</code></pre>
 <p>Verify that if the collection entry includes an parameters property, that that property complies with <a href="#ats_collections_rc-md-parameters">/collections/rc-md-parameters</a></p>
 </li>
 <li>
-<p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 13</a></p>
+<p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 12</a></p>
 </li>
 </ol>
 </div></div></td>
@@ -6031,7 +5911,7 @@ explode: false</code></pre>
 <p>The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
 <table id="collection-entry-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 13. Schema and Tests for Collection Entries</caption>
+<caption class="title">Table 12. Schema and Tests for Collection Entries</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -6180,7 +6060,7 @@ explode: false</code></pre>
 </table>
 <div class="sect3">
 <h4 id="_json_definition"><a class="anchor" href="#_json_definition"></a>A.4.1. JSON Definition</h4>
-<table id="ats_json_definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -6251,7 +6131,7 @@ explode: false</code></pre>
 </table>
 <div class="sect3">
 <h4 id="_json_definition_2"><a class="anchor" href="#_json_definition_2"></a>A.5.1. JSON Definition</h4>
-<table id="ats_json_definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -6367,7 +6247,7 @@ explode: false</code></pre>
 </table>
 <div class="sect3">
 <h4 id="_json_definition_3"><a class="anchor" href="#_json_definition_3"></a>A.6.1. JSON Definition</h4>
-<table id="ats_json_definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7020,7 +6900,7 @@ and verify that only information that matches the selection criteria is returned
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7073,7 +6953,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7122,7 +7002,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-z-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7165,7 +7045,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-z-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7204,7 +7084,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7247,7 +7127,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7289,7 +7169,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7332,7 +7212,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7371,7 +7251,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7414,7 +7294,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7463,7 +7343,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7506,7 +7386,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7741,7 +7621,7 @@ and verify that only information that matches the selection criteria is returned
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7794,7 +7674,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7843,7 +7723,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-z-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7886,7 +7766,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-z-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7925,7 +7805,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -7968,7 +7848,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8010,7 +7890,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8053,7 +7933,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8092,7 +7972,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8135,7 +8015,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8184,7 +8064,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8227,7 +8107,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8635,7 +8515,7 @@ and verify that only information that matches the selection criteria is returned
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-coords-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8688,7 +8568,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-coords-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8737,7 +8617,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8780,7 +8660,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8819,7 +8699,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8862,7 +8742,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8911,7 +8791,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -8954,7 +8834,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9009,7 +8889,7 @@ explode: false</code></pre>
 <h4 id="_collections_and_instances"><a class="anchor" href="#_collections_and_instances"></a>A.9.2. Collections and Instances</h4>
 <div class="sect4">
 <h5 id="_feature_collections_rootcollections_2"><a class="anchor" href="#_feature_collections_rootcollections_2"></a>Feature Collections {root}/collections</h5>
-<table id="ats_collections_rc-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9086,7 +8966,7 @@ explode: false</code></pre>
 <p>In case the response includes a "crs" property, validate that the first value is either "http://www.opengis.net/def/crs/OGC/1.3/CRS84" or "http://www.opengis.net/def/crs/OGC/0/CRS84h"</p>
 </li>
 <li>
-<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 12</a></p>
+<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 11</a></p>
 </li>
 </ol>
 </div></div></td>
@@ -9096,8 +8976,8 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>The Collections content may be retrieved in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
-<table id="collections-metadata-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 14. Schema and Tests for Collections content</caption>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 13. Schema and Tests for Collections content</caption>
 <colgroup>
 <col style="width: 33.3333%;">
 <col style="width: 33.3333%;">
@@ -9126,7 +9006,7 @@ explode: false</code></pre>
 </div>
 <div class="sect4">
 <h5 id="_feature_collection_rootcollectionscollectionid_2"><a class="anchor" href="#_feature_collection_rootcollectionscollectionid_2"></a>Feature Collection {root}/collections/{collectionId}</h5>
-<table id="ats_collections_src-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9160,7 +9040,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_src-md-success" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9207,7 +9087,7 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 </tr>
 </table>
 </div>
-<table id="ats_collections_rc-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9387,7 +9267,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9430,7 +9310,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9472,7 +9352,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9507,21 +9387,189 @@ explode: false</code></pre>
 </div>
 <div class="sect4">
 <h5 id="_instances_rootcollectionscollectionidinstances"><a class="anchor" href="#_instances_rootcollectionscollectionidinstances"></a>Instances {root}/collections/{collectionId}/instances</h5>
+<table id="ats_instances_rc-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 96</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/ats/instances/rc-md-op</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Validate that information about the instances of a Collection can be retrieved from the expected location.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="#req_instances_rc-md-op">/req/instances/rc-md-op</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Issue an HTTP GET request to the URL {root}/collections/{collectionId}/instances</p>
+</li>
+<li>
+<p>Validate that a document was returned with a status code 200</p>
+</li>
+<li>
+<p>Validate the contents of the returned document using test <a href="#ats_collections_rc-md-success">/ats/collections/rc-md-success</a>.</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_instances_rc-md-success" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 97</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/ats/instances_rc-md-success</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Validate that the instances of the Collection content complies with the required structure and contents.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="#req_instances_rc-md-success">/req/instances/rc-md-success</a>, <a href="#req_collections_crs84">/req/collections/crs84</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Validate that all response documents comply with <a href="#ats_collections_rc-md-links">/ats/collections/rc-md-links</a></p>
+</li>
+<li>
+<p>In case the response includes a "crs" property, validate that the first value is either "http://www.opengis.net/def/crs/OGC/1.3/CRS84" or "http://www.opengis.net/def/crs/OGC/0/CRS84h"</p>
+</li>
+<li>
+<p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 11</a></p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
-<p>Unresolved directive in abstract_tests/ATS_class_queries.adoc - include::instances/ATS_rc-op.adoc[]</p>
+<p>The Instances content, unlike the Collections content, may only be retrieved in the same formats as specified for the single parent collection.</p>
 </div>
-<div class="paragraph">
-<p>Unresolved directive in abstract_tests/ATS_class_queries.adoc - include::instances/ATS_rc-response.adoc[]</p>
-</div>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<caption class="title">Table 14. Schema and Tests for Collections content</caption>
+<colgroup>
+<col style="width: 33.3333%;">
+<col style="width: 33.3333%;">
+<col style="width: 33.3334%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Format</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Schema Document</th>
+<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Test ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HTML</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collections.json">collections.json</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_html_content">/ats/html/content</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collections.json">collections.json</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_geojson_content">/ats/geojson/content</a></p></td>
+</tr>
+</tbody>
+</table>
 </div>
 <div class="sect4">
 <h5 id="_instance_rootcollectionscollectionidinstancesinstanceid"><a class="anchor" href="#_instance_rootcollectionscollectionidinstancesinstanceid"></a>Instance {root}/collections/{collectionId}/instances/instanceId</h5>
-<div class="paragraph">
-<p>Unresolved directive in abstract_tests/ATS_class_queries.adoc - include::instance/ATS_src-op.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>Unresolved directive in abstract_tests/ATS_class_queries.adoc - include::instance/ATS_src-response.adoc[]</p>
-</div>
+<table id="ats_instances_src-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 98</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/ats/instances/src-md-op</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Validate that the Instances of the Collection content can be retrieved from the expected location.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="#req_instances_src-md-op">/req/collections/src-md-op</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>For every Instance of a Collection described in the Collections content, issue an HTTP GET request to the URL <code>/collections/{collectionId}/instances/{instanceId}</code> where <code>{collectionId}</code> is the <code>id</code> property for the collection and <code>{instanceId}</code> is the <code>id</code> property for the instance.
+. Validate that an Instance of a Collection was returned with a status code 200
+. Validate the contents of the returned document using test <a href="#ats_collections_src-md-success">/ats/collections/src-md-success</a>.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<table id="ats_instances_src-md-success" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 99</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/ats/instances/src-md-success</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Validate that the Instance of a Collection content complies with the required structure and contents.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="#req_collections_src-md-success">/req/collections/src-md-success</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Verify that the content of the response is consistent with the content for this Resource Collection in the <code>/collections</code> response. That is, the values for <code>id</code>, <code>title</code>, <code>description</code> and <code>extent</code> are identical.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
 </div>
 </div>
 <div class="sect3">
@@ -9531,14 +9579,14 @@ explode: false</code></pre>
 </div>
 <div class="sect4">
 <h5 id="_items"><a class="anchor" href="#_items"></a>Items</h5>
-<table id="ats_collections_rc-md-items" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 96</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 100</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-md-items</strong></p>
 </div></div></td>
@@ -9578,7 +9626,7 @@ explode: false</code></pre>
 <p>Verify that if the collection entry includes an parameters property, that that property complies with <a href="#ats_collections_rc-md-parameters">/collections/rc-md-parameters</a></p>
 </li>
 <li>
-<p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 13</a></p>
+<p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 12</a></p>
 </li>
 </ol>
 </div></div></td>
@@ -9588,33 +9636,6 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
-<table id="collection-entry-schema" class="tableblock frame-all grid-all" style="width: 90%;">
-<caption class="title">Table 15. Schema and Tests for Collection Entries</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Format</th>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Schema Document</th>
-<th class="tableblock halign-left valign-top" style="background-color: #FFFFFF;">Test ID</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HTML</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json">collectionInfo.json</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_html_content">/ats/html/content</a></p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">JSON</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json">collectionInfo.json</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_json_content">/ats/json/content</a></p></td>
-</tr>
-</tbody>
-</table>
 <table id="ats_collections_rc-md-items-links" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9622,7 +9643,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 97</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 101</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-md-items-links</strong></p>
 </div></div></td>
@@ -9667,7 +9688,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 98</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 102</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/locations</strong></p>
 </div></div></td>
@@ -9698,7 +9719,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 99</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 103</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/locations</strong></p>
 </div></div></td>
@@ -9729,7 +9750,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 100</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 104</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/locations</strong></p>
 </div></div></td>
@@ -9786,14 +9807,14 @@ and verify that only information that matches the selection criteria is returned
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 101</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 105</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-definition</strong></p>
 </div></div></td>
@@ -9829,14 +9850,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-time-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 102</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 106</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-response</strong></p>
 </div></div></td>
@@ -9871,14 +9892,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 103</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 107</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-definition</strong></p>
 </div></div></td>
@@ -9914,14 +9935,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-parametername-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 104</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 108</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-response</strong></p>
 </div></div></td>
@@ -9953,14 +9974,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 105</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 109</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-definition</strong></p>
 </div></div></td>
@@ -9996,14 +10017,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-crs-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 106</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 110</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-response</strong></p>
 </div></div></td>
@@ -10045,14 +10066,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 107</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 111</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-definition</strong></p>
 </div></div></td>
@@ -10088,14 +10109,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-outputformat-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 108</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 112</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-response</strong></p>
 </div></div></td>
@@ -12485,8 +12506,7 @@ include::examples/tbd.adoc[]
         "WIGOS Station Identifier": "0-20000-0-03023"
       }
     }
-  ]
-  ----</code></pre>
+  ]</code></pre>
 </div>
 </div>
 </div>
@@ -12691,23 +12711,62 @@ The standardization target is the entity which may receive a certificate of conf
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">June 2020 branch</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Chris Little</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">increase alignment with Common</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Increase alignment with Common</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">===</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2020-07-15</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">July 2020 branch</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Chris Little</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editorial consistency</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2020-07-22</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Restructure branch</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Chris Little</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Restructure 7,8,9,10</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">2020-07-22</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Issues 106, 107</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dave Blodgett</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">all</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Fix broken links</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
+<div class="sect1">
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex E: Bibliography</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p><a id="ogc08-131"></a> Open Geospatial Consortium: The Specification Model&#8201;&#8212;&#8201;A Standard for Modular specifications, <a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131</a></p>
+</li>
+<li>
+<p><a id="SDWBP"></a> W3C/OGC: Spatial Data on the Web Best Practices, W3C Working Group Note 28 September 2017, <a href="https://www.w3.org/TR/sdw-bp/" class="bare">https://www.w3.org/TR/sdw-bp/</a></p>
+</li>
+<li>
+<p><a id="DWBP"></a> W3C: Data on the Web Best Practices, W3C Recommendation 31 January 2017, <a href="https://www.w3.org/TR/dwbp/" class="bare">https://www.w3.org/TR/dwbp/</a></p>
+</li>
+<li>
+<p><a id="DCAT"></a> W3C: Data Catalog Vocabulary, W3C Recommendation 16 January 2014, <a href="https://www.w3.org/TR/vocab-dcat/" class="bare">https://www.w3.org/TR/vocab-dcat/</a></p>
+</li>
+<li>
+<p><a id="link-relations"></a> IANA: Link Relation Types, <a href="https://www.iana.org/assignments/link-relations/link-relations.xml" class="bare">https://www.iana.org/assignments/link-relations/link-relations.xml</a></p>
+</li>
+</ul>
+</div>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-07-22 22:20:31 -0400
+Last updated 2020-07-23 22:20:40 -0400
 </div>
 </div>
 </body>
