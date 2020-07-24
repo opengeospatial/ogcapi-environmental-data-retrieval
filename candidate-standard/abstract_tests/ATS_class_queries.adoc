@@ -67,11 +67,9 @@ These tests are invoked by other tests.
 
 ===== Items
 
-include::collections/ATS_rc-md-items.adoc[]
+include::collections/ATS_rc-md-collection-info.adoc[]
 
-
-
-include::collections/ATS_rc-md-items-links.adoc[]
+include::collections/ATS_rc-md-collection-info-links.adoc[]
 
 ===== Locations
 
