@@ -192,6 +192,7 @@ include::requirements/edr/query_type/trajectory.adoc[]
 
 <<<
 
+[[rc_items-section]]
 ==== Items query
 
 include::requirements/edr/query_type/item.adoc[]

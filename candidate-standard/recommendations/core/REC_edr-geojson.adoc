@@ -1,0 +1,6 @@
+[[rec_core_edr-geojson]]
+[width="90%",cols="2,6a"]
+|===
+^|*Recommendation {counter:rec-id}* |*/rec/core/edr-geojson*
+^|A |If a collection using other EDR queries uses the <<rc_items-section,`items`>> query, implementations SHOULD consider support for the EDR GeoJSON Schema as an encoding.
+|===

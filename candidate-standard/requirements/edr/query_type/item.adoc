@@ -1,5 +1,3 @@
-===== Parameters
-
 The EDR Items query is an <<ogc17-069r3,OGC API - Features>> endpoint that 
 may be used to catalog pre-existing EDR sampling features. 
 The pre-existence of an EDR sampling feature may be because of the existence of
@@ -8,9 +6,14 @@ for an array of application-specific use cases (e.g. a catalog of spatio-tempora
 JSON-Schema] has been specified to document an EDR query endpoint and valid 
 query parameters including time range, parameters, and spatial characteristics.  
 
+include::../../../recommendations/core/REC_edr-geojson.adoc[]
+
+===== Parameter itemID
+
 If an itemID is not specified, the query will return a list of the available
-itemID's with a description of their content in a GeoJSON format. This behavior 
-is specified in greater detail in <<ogc17-069r3,OGC API - Features.>>
+itemID's. This behavior is specified in in <<ogc17-069r3,OGC API - Features.>> 
+all other parameters for use with the Items query are defined by 
+OGC API - Features.
 
 .List available items
 =================
