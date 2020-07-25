@@ -584,7 +584,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <ul class="sectlevel2">
 <li><a href="#_identifiers">6.1. Identifiers</a></li>
 <li><a href="#_link_relations">6.2. Link relations</a></li>
-<li><a href="#_media_types">6.3. Media Types</a></li>
+<li><a href="#media-types-section">6.3. Media Types</a></li>
 <li><a href="#_examples">6.4. Examples</a></li>
 <li><a href="#_schema">6.5. Schema</a></li>
 <li><a href="#_use_of_https">6.6. Use of HTTPS</a></li>
@@ -628,7 +628,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#rc_area-section">9.2.4. Area query</a></li>
 <li><a href="#_cube_query">9.2.5. Cube query</a></li>
 <li><a href="#rc_trajectory-section">9.2.6. Trajectory query</a></li>
-<li><a href="#_items_query">9.2.7. Items query</a></li>
+<li><a href="#rc_items-section">9.2.7. Items query</a></li>
 <li><a href="#_locations_query">9.2.8. Locations query</a></li>
 <li><a href="#_instances_query">9.2.9. Instances query</a></li>
 </ul>
@@ -669,10 +669,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_conformance_class_collections">A.3. Conformance Class Collections</a>
 <ul class="sectlevel3">
 <li><a href="#_general_tests_2">A.3.1. General Tests</a></li>
-<li><a href="#_feature_collections_rootcollections">A.3.2. Feature Collections {root}/collections</a></li>
-<li><a href="#_feature_collection_rootcollectionscollectionid">A.3.3. Feature Collection {root}/collections/{collectionId}</a></li>
-<li><a href="#_features_rootcollectionscollectioniditems">A.3.4. Features {root}/collections/{collectionId}/items</a></li>
-<li><a href="#_second_tier_tests">A.3.5. Second Tier Tests</a></li>
+<li><a href="#_environmental_data_collections_rootcollections">A.3.2. Environmental Data Collections {root}/collections</a></li>
+<li><a href="#_environmental_data_collection_rootcollectionscollectionid">A.3.3. Environmental Data Collection {root}/collections/{collectionId}</a></li>
+<li><a href="#_second_tier_collections_tests">A.3.4. Second Tier Collections Tests</a></li>
 </ul>
 </li>
 <li><a href="#_conformance_class_json">A.4. Conformance Class JSON</a>
@@ -686,24 +685,30 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#_geojson_content">A.5.2. GeoJSON Content</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_coveragejson">A.6. Conformance Class CoverageJSON</a>
+<li><a href="#_conformance_class_edr_geojson">A.6. Conformance Class EDR GeoJSON</a>
 <ul class="sectlevel3">
-<li><a href="#_json_definition_3">A.6.1. JSON Definition</a></li>
-<li><a href="#_coveragejson_content">A.6.2. CoverageJSON Content</a></li>
+<li><a href="#_edr_geojson_definition">A.6.1. EDR GeoJSON Definition</a></li>
+<li><a href="#_edr_geojson_content">A.6.2. EDR GeoJSON Content</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_html">A.7. Conformance Class HTML</a>
+<li><a href="#_conformance_class_coveragejson">A.7. Conformance Class CoverageJSON</a>
 <ul class="sectlevel3">
-<li><a href="#_html_definition">A.7.1. HTML Definition</a></li>
-<li><a href="#_html_content">A.7.2. HTML Content</a></li>
+<li><a href="#_coveragejson_definition">A.7.1. CoverageJSON Definition</a></li>
+<li><a href="#_coveragejson_content">A.7.2. CoverageJSON Content</a></li>
 </ul>
 </li>
-<li><a href="#_conformance_class_openapi_3_0">A.8. Conformance Class OpenAPI 3.0</a></li>
-<li><a href="#_conformance_class_queries">A.9. Conformance Class Queries</a>
+<li><a href="#_conformance_class_html">A.8. Conformance Class HTML</a>
 <ul class="sectlevel3">
-<li><a href="#_query_pattern_tests">A.9.1. Query Pattern Tests</a></li>
-<li><a href="#_collections_and_instances">A.9.2. Collections and Instances</a></li>
-<li><a href="#_second_tier_tests_2">A.9.3. Second Tier Tests</a></li>
+<li><a href="#_html_definition">A.8.1. HTML Definition</a></li>
+<li><a href="#_html_content">A.8.2. HTML Content</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_openapi_3_0">A.9. Conformance Class OpenAPI 3.0</a></li>
+<li><a href="#_conformance_class_queries">A.10. Conformance Class Queries</a>
+<ul class="sectlevel3">
+<li><a href="#_query_pattern_tests">A.10.1. Query Pattern Tests</a></li>
+<li><a href="#_collections_and_instances">A.10.2. Collections and Instances</a></li>
+<li><a href="#_second_tier_tests">A.10.3. Second Tier Tests</a></li>
 </ul>
 </li>
 </ul>
@@ -1085,6 +1090,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li>
 <p><a id="ogc18-010r7"></a> Lott, R.: <strong>Well-Known Text representation of Coordinate Reference Systems</strong>, <a href="http://docs.opengeospatial.org/is/18-010r7/18-010r7.html">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</a></p>
 </li>
+<li>
+<p><a id="ogc17-069r3"></a> Portele, C., Vretanos, P, Heazel, C.: <strong>OGC API - Features - Part 1: Core</strong>, <a href="http://www.opengis.net/doc/IS/ogcapi-features-1/1.0">http://www.opengis.net/doc/IS/ogcapi-features-1/1.0</a></p>
+</li>
 </ul>
 </div>
 </div>
@@ -1248,12 +1256,21 @@ A location is represented by one of a set of data types that describe a position
 <div class="paragraph">
 <p>A <strong>license</strong> link could be used for constraints on the data retrieved. Multiple <strong>license</strong> links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.</p>
 </div>
-<div class="paragraph">
-<p><code><strong>Note</strong>: The query patterns of the EDR API use the link relation <strong>data</strong>. It is envisaged that, in the future, this link relation may be replaced by <strong>position</strong>, <strong>area</strong>, and <strong>trajectory</strong> which would all be specializations of the currently used <strong>data</strong>.</code></p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+The query patterns of the EDR API use the link relation <strong>data</strong>. It is envisaged that, in the future, this link relation may be replaced by <strong>position</strong>, <strong>area</strong>, and <strong>trajectory</strong> which would all be specializations of the currently used <strong>data</strong>.
+</td>
+</tr>
+</table>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_media_types"><a class="anchor" href="#_media_types"></a>6.3. Media Types</h3>
+<h3 id="media-types-section"><a class="anchor" href="#media-types-section"></a>6.3. Media Types</h3>
 <div class="paragraph">
 <p>JSON media types that would typically be used in an OGC API that supports JSON are:</p>
 </div>
@@ -1652,7 +1669,7 @@ or<br>
 <p><a href="#api-platform-section">API Platform</a>: a set of common capabilities</p>
 </li>
 <li>
-<p><a href="#collection-access-section">Collection Access</a>: operations for accessing collections of environmental data.</p>
+<p><a href="#rc_collection-section">Collection Access</a>: operations for accessing collections of environmental data.</p>
 </li>
 <li>
 <p><a href="#environmental-resources-section">Environmental Resources</a>: operations for accessing environmental data resources</p>
@@ -1695,7 +1712,7 @@ or<br>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collection-access-section">Collections</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_collection-section">Collections</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p></td>
 </tr>
 <tr>
@@ -1703,15 +1720,15 @@ or<br>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/oas30" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/oas30</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#requirements-class-geojson-clause">GeoJSON</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#media-types-section">GeoJSON</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#requirements-class-covjson-clause">CoverageJSON</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#media-types-section">CoverageJSON</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/json</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#requirements-class-html-clause">HTML</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#media-types-section">HTML</a></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/html" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/html</a></p></td>
 </tr>
 </tbody>
@@ -1950,7 +1967,7 @@ properties:
 <h2 id="environmental-resource-section"><a class="anchor" href="#environmental-resource-section"></a>9. Query, Environmental and Information Resources</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common <code>queryTypes</code> to implement, described in the <a href="#query-resources">[query-resources]</a> section. This list may change as the standard is used and experience gained.</p>
+<p>Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common <code>queryTypes</code> to implement, described in the <a href="#query-resources-section">Query Resources</a> section. This list may change as the standard is used and experience gained.</p>
 </div>
 <div id="rc_collection-section" class="paragraph">
 <p>An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns.</p>
@@ -4109,21 +4126,62 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 </div>
 <div class="sect3">
-<h4 id="_items_query"><a class="anchor" href="#_items_query"></a>9.2.7. Items query</h4>
-<div class="sect4">
-<h5 id="_parameters"><a class="anchor" href="#_parameters"></a>Parameters</h5>
+<h4 id="rc_items-section"><a class="anchor" href="#rc_items-section"></a>9.2.7. Items query</h4>
 <div class="paragraph">
-<p>If an itemID is not specified the query will return a list of the available
-itemID&#8217;s with a description of their content in a GeoJSON format.</p>
+<p>The EDR Items query is an <a href="#ogc17-069r3">OGC API - Features</a> endpoint that
+may be used to catalog pre-existing EDR sampling features.
+The pre-existence of an EDR sampling feature may be because of the existence of
+a monitoring location, because a particular query has been cached for later use, or
+for an array of application-specific use cases (e.g. a catalog of spatio-temporal domains of anomalies in a dataset). A <a href="https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/openapi/EDR_OpenAPI.yaml#L2424">GeoJSON-compatible
+JSON-Schema</a> has been specified to document an EDR query endpoint and valid
+query parameters including time range, parameters, and spatial characteristics.</p>
+</div>
+<table id="rec_core_edr-geojson" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/rec/core/edr-geojson</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If a collection using other EDR queries uses the <a href="#rc_items-section"><code>items</code></a> query, implementations SHOULD consider support for the EDR GeoJSON Schema as an encoding.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="sect4">
+<h5 id="_parameter_itemid"><a class="anchor" href="#_parameter_itemid"></a>Parameter itemID</h5>
+<div class="paragraph">
+<p>If an itemID is not specified, the query will return a list of the available
+itemID&#8217;s. This behavior is specified in in <a href="#ogc17-069r3">OGC API - Features.</a>
+all other parameters for use with the Items query are defined by
+OGC API - Features.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 31. List available items</div>
 <div class="content">
 <div class="paragraph">
-<p>/collections/{collectionId}/items</p>
+<p><code>/collections/{collectionId}/items</code></p>
 </div>
 <div class="paragraph">
-<p>/collections/tropical_storms/items</p>
+<p>e.g.
+return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an area query end point, a time range, a list of available parameters, and a representative geojson geometry.</p>
+</div>
+<div class="paragraph">
+<p><code>/collections/tropical_storms/items</code></p>
+</div>
+<div class="paragraph">
+<p>e.g. return query parameters to retrieve monitoring data from a collection of stream gages using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include a location query end point, a time range, a list of available parameters and a representative geojson geometry.</p>
+</div>
+<div class="paragraph">
+<p><code>/collections/stream_gages/items</code></p>
 </div>
 </div>
 </div>
@@ -4131,13 +4189,19 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 <div class="title">Example 32. itemID</div>
 <div class="content">
 <div class="paragraph">
-<p>/collections/{collectionId}/items/{itemID}</p>
+<p><code>/collections/{collectionId}/items/{itemID}</code></p>
 </div>
 <div class="paragraph">
-<p>return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar collection</p>
+<p>e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar collection. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station.</p>
 </div>
 <div class="paragraph">
-<p>/collections/metar/items/KIAD_2020-05-19T00Z</p>
+<p><code>/collections/metar/items/KIAD_2020-05-19T00Z</code></p>
+</div>
+<div class="paragraph">
+<p>e.g. return information for the requested item with an id of warning_12345 from the forecast collection. Returned data would include an area query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.</p>
+</div>
+<div class="paragraph">
+<p><code>/collections/forecast/items/warning_12345</code></p>
 </div>
 </div>
 </div>
@@ -4146,23 +4210,26 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </div>
 <div class="sect3">
 <h4 id="_locations_query"><a class="anchor" href="#_locations_query"></a>9.2.8. Locations query</h4>
+<div class="sect4">
+<h5 id="_parameter_locationid"><a class="anchor" href="#_parameter_locationid"></a>Parameter locationID</h5>
 <div class="paragraph">
-<p>With the locations query a location is defined by a unique identifer, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata in returned by the API must supply a geospatial definition for the identifier.</p>
+<p>With the locations query a location is defined by a unique identifier, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata returned by the API must supply a geospatial definition for the identifier.</p>
 </div>
-<div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>All data available for a location id</p>
-</li>
-</ol>
+<div class="paragraph">
+<p>Valid locationIDs must be discovered via another mechanism such as the <a href="#rc_items-section"><code>items</code></a> query.</p>
 </div>
 <div class="exampleblock">
+<div class="title">Example 33. locationID</div>
 <div class="content">
+<div class="paragraph">
+<p>/collections/{collectionID}/locations/{locationID}</p>
+</div>
 <div class="paragraph">
 <p>return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id</p>
 </div>
 <div class="paragraph">
 <p>/collections/metar/locations/EGLL</p>
+</div>
 </div>
 </div>
 </div>
@@ -4234,7 +4301,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 <p>/collections/{collectionId}/instance/{instanceId}/{queryType}</p>
 </div>
 <div class="paragraph">
-<p>see the <a href="#query-resources">[query-resources]</a> section for details of the query parameters supported by the queryTypes.</p>
+<p>see the <a href="#query-resources-section">Query Resources</a> section for details of the query parameters supported by the queryTypes.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -4411,7 +4478,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 1</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/etag</strong></p>
 </div></div></td>
@@ -4437,7 +4504,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 2</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/cross-origin</strong></p>
 </div></div></td>
@@ -4520,7 +4587,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 3</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/html</strong></p>
 </div></div></td>
@@ -4543,7 +4610,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 4</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/geojson</strong></p>
 </div></div></td>
@@ -4566,7 +4633,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 5</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 6</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/covjson</strong></p>
 </div></div></td>
@@ -4625,7 +4692,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 6</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Recommendation 7</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/rec/core/link-header</strong></p>
 </div></div></td>
@@ -4667,7 +4734,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">Conformance Class "Core"</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc-core-section">Conformance Class "Core"</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
@@ -4790,7 +4857,7 @@ itemID&#8217;s with a description of their content in a GeoJSON format.</p>
 </tbody>
 </table>
 <div class="exampleblock">
-<div class="title">Example 33. An exception response object definition</div>
+<div class="title">Example 34. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -4881,7 +4948,7 @@ content:
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirements Class</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">http://www.opengis.net/spec/ogcapi_common/1.0/req/core</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc-core-section">http://www.opengis.net/spec/ogcapi_common/1.0/req/core</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -5304,7 +5371,7 @@ content:
 </div>
 </div>
 <div class="sect3">
-<h4 id="_feature_collections_rootcollections"><a class="anchor" href="#_feature_collections_rootcollections"></a>A.3.2. Feature Collections {root}/collections</h4>
+<h4 id="_environmental_data_collections_rootcollections"><a class="anchor" href="#_environmental_data_collections_rootcollections"></a>A.3.2. Environmental Data Collections {root}/collections</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5421,7 +5488,7 @@ content:
 </table>
 </div>
 <div class="sect3">
-<h4 id="_feature_collection_rootcollectionscollectionid"><a class="anchor" href="#_feature_collection_rootcollectionscollectionid"></a>A.3.3. Feature Collection {root}/collections/{collectionId}</h4>
+<h4 id="_environmental_data_collection_rootcollectionscollectionid"><a class="anchor" href="#_environmental_data_collection_rootcollectionscollectionid"></a>A.3.3. Environmental Data Collection {root}/collections/{collectionId}</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5490,324 +5557,12 @@ content:
 </table>
 </div>
 <div class="sect3">
-<h4 id="_features_rootcollectionscollectioniditems"><a class="anchor" href="#_features_rootcollectionscollectioniditems"></a>A.3.4. Features {root}/collections/{collectionId}/items</h4>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Note</div>
-</td>
-<td class="content">
-This test is too Feature centric. Will need to be greatly reduced in scope.
-</td>
-</tr>
-</table>
-</div>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-op</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that resources can be identified and extracted from a Collection using query parameters.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-op">/req/collections/rc-op</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>For every resource collection identified in Collections, issue an HTTP GET request to the URL <code>/collections/{collectionId}/items</code> where <code>{collectionId}</code> is the <code>id</code> property for a Collection described in the Collections content.</p>
-</li>
-<li>
-<p>Validate that a document was returned with a status code 200.</p>
-</li>
-</ol>
-</div>
-<div class="paragraph">
-<p>Repeat these tests using the following parameter tests:</p>
-</div>
-<div class="paragraph">
-<p><strong>Bounding Box:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Parameter <a href="#ats_collections_rc-bbox-definition">/ats/collections/rc-bbox-definition</a></p>
-</li>
-<li>
-<p>Response <a href="#ats_collections_rc-bbox-response">/ats/collections/rc-bbox-response</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><strong>DateTime:</strong></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Parameter <a href="#ats_collections_rc-time-definition">/ats/collections/rc-time-definition</a></p>
-</li>
-<li>
-<p>Response <a href="#ats_collections_rc-time-response">/ats/collections/rc-time-response</a></p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Execute requests with combinations of the "bbox" and "datetime" query parameters
-and verify that only features are returned that match both selection criteria.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<table id="ats_collections_rc-bbox-definition" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-bbox-definition</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the bounding box query parameters are constructed correctly.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-bbox-definition">/req/collections/rc-bbox-definition</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify that the <code>bbox</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: bbox
-in: query
-required: false
-schema:
-  type: array
-  minItems: 4
-  maxItems: 6
-  items:
-    type: number
-style: form
-explode: false</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Use a bounding box with four numbers in all requests:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Lower left corner, WGS 84 longitude</p>
-</li>
-<li>
-<p>Lower left corner, WGS 84 latitude</p>
-</li>
-<li>
-<p>Upper right corner, WGS 84 longitude</p>
-</li>
-<li>
-<p>Upper right corner, WGS 84 latitude</p>
-</li>
-</ul>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<table id="ats_collections_rc-bbox-response" class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-bbox-response</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the bounding box query parameters are processed corrrectly.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-bbox-response">/req/collections/rc-bbox-response</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Verify that only resources that have a spatial geometry that intersects the bounding box are returned as part of the result set.</p>
-</li>
-<li>
-<p>Verify that the <code>bbox</code> parameter matched all resources in the collection that were not associated with a spatial geometry (this is only applicable for datasets that include resources without a spatial geometry).</p>
-</li>
-<li>
-<p>Verify that the coordinate reference system of the geometries is WGS 84 longitude/latitude (<code><a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a></code> or <code><a href="http://www.opengis.net/def/crs/OGC/0/CRS84h" class="bare">http://www.opengis.net/def/crs/OGC/0/CRS84h</a></code>) since no parameter <code>bbox-crs</code> was specified in the request.</p>
-</li>
-</ol>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-time-definition</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the dateTime query parameters are constructed correctly.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-definition">/req/collections/rc-time-definition</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify that the <code>time</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: time
-in: query
-required: false
-schema:
-  type: string
-style: form
-explode: false</code></pre>
-</div>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 17</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-time-response</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the dataTime query parameters are processed correctly.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
-<ol class="arabic">
-<li>
-<p>Verify that only resources that have a temporal geometry that intersects the temporal information in the <code>datetime</code> parameter were included in the result set</p>
-</li>
-<li>
-<p>Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set</p>
-</li>
-<li>
-<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a>.</p>
-</li>
-</ol>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
-<colgroup>
-<col style="width: 25%;">
-<col style="width: 75%;">
-</colgroup>
-<tbody>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 18</strong></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-response</strong></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the Resource Collection complies with the require structure and contents.</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-response">/req/collections/rc-response</a></p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The test method is specific to the resource type returned.</p>
-</div></div></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect3">
-<h4 id="_second_tier_tests"><a class="anchor" href="#_second_tier_tests"></a>A.3.5. Second Tier Tests</h4>
+<h4 id="_second_tier_collections_tests"><a class="anchor" href="#_second_tier_collections_tests"></a>A.3.4. Second Tier Collections Tests</h4>
 <div class="paragraph">
 <p>These tests are invoked by other tests.</p>
 </div>
 <div class="sect4">
-<h5 id="_extent"><a class="anchor" href="#_extent"></a>Extent</h5>
+<h5 id="_collection_extent"><a class="anchor" href="#_collection_extent"></a>Collection Extent</h5>
 <table id="ats_collections_rc-md-extent" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5815,7 +5570,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 19</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/coollections/rc-md-extent</strong></p>
 </div></div></td>
@@ -5852,7 +5607,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_queries"><a class="anchor" href="#_queries"></a>Queries</h5>
+<h5 id="_collection_queries"><a class="anchor" href="#_collection_queries"></a>Collection Queries</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5860,9 +5615,9 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 20</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-md-items</strong></p>
+<p><strong>/ats/collections/rc-md-collection-info</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5874,7 +5629,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-items">/req/collections/rc-md-items</a></p>
+<p><a href="#req_collections_rc-md-collection-info">/req/collections/rc-md-collection-info</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5944,7 +5699,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 21</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-md-query-links</strong></p>
 </div></div></td>
@@ -5981,7 +5736,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_links"><a class="anchor" href="#_links"></a>Links</h5>
+<h5 id="_collection_links"><a class="anchor" href="#_collection_links"></a>Collection Links</h5>
 <table id="ats_collections_rc-md-links" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5989,7 +5744,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 22</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-md-links</strong></p>
 </div></div></td>
@@ -6067,7 +5822,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 23</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 17</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/json/definition</strong></p>
 </div></div></td>
@@ -6138,7 +5893,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 24</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 18</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/json/definition</strong></p>
 </div></div></td>
@@ -6180,7 +5935,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 25</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 19</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/geojson/content</strong></p>
 </div></div></td>
@@ -6218,7 +5973,130 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_coveragejson"><a class="anchor" href="#_conformance_class_coveragejson"></a>A.6. Conformance Class CoverageJSON</h3>
+<h3 id="_conformance_class_edr_geojson"><a class="anchor" href="#_conformance_class_edr_geojson"></a>A.6. Conformance Class EDR GeoJSON</h3>
+<table id="ats_edr-geojson" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Conformance Class</strong></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core/edr-geojson" class="bare">http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core/edr-geojson</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Web API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirements Class</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_ed-geojson">http://www.opengis.net/spec/ogcapi_common/1.0/req/edr-geojson</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#ats_core">Conformance Class "OAPI Core"</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="sect3">
+<h4 id="_edr_geojson_definition"><a class="anchor" href="#_edr_geojson_definition"></a>A.6.1. EDR GeoJSON Definition</h4>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 20</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/ats/edr-geojson/definition</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Verify support for the EDR GeoJSON Schema</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="#req_edr-geojson_definition">/req/edr-geojson/definition</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>A resource is requested with response media type of <code>application/json</code> and adheres to the EDR Feature Collection GeoJSON Schema.</p>
+</li>
+<li>
+<p>All <code>200</code>-responses SHALL support the following media types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>application/json</code> for resources</p>
+</li>
+</ul>
+</div>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_edr_geojson_content"><a class="anchor" href="#_edr_geojson_content"></a>A.6.2. EDR GeoJSON Content</h4>
+<table id="ats_edr-geojson_content" class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 21</strong></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><strong>/ats/edr-geojson/content</strong></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Verify the content of a EDR GeoJSON document given an input document and schema.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p><a href="#req_edr-geojson_content">/req/edr-geojson/content</a></p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Validate that the document is an EDR GeoJSON document.</p>
+</li>
+<li>
+<p>Validate the document against the schema using an JSON Schema validator.</p>
+</li>
+<li>
+<p>Validate the document against the schema using an EDR GeoJSON Schema validator.</p>
+</li>
+</ol>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_coveragejson"><a class="anchor" href="#_conformance_class_coveragejson"></a>A.7. Conformance Class CoverageJSON</h3>
 <table id="ats_covjson" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6246,29 +6124,29 @@ explode: false</code></pre>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="_json_definition_3"><a class="anchor" href="#_json_definition_3"></a>A.6.1. JSON Definition</h4>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
+<h4 id="_coveragejson_definition"><a class="anchor" href="#_coveragejson_definition"></a>A.7.1. CoverageJSON Definition</h4>
+<table id="ats_covjson_definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 26</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 22</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/json/definition</strong></p>
+<p><strong>/ats/covjson/definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify support for JSON</p>
+<p>Verify support for CoverageJSON</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_json_definition">/req/json/definition</a></p>
+<p><a href="#req_covjson_definition">/req/covjson/definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6276,10 +6154,17 @@ explode: false</code></pre>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>A resource is requested with response media type of <code>application/json</code></p>
+<p>A resource is requested with response media type of <code>application/prs.coverage+json</code></p>
 </li>
 <li>
-<p>All <code>200</code>-responses SHALL support the media type:- <code>application/json</code></p>
+<p>All <code>200</code>-responses SHALL support the following media types:</p>
+<div class="ulist">
+<ul>
+<li>
+<p><code>application/prs.coverage+json</code> for resources</p>
+</li>
+</ul>
+</div>
 </li>
 </ol>
 </div></div></td>
@@ -6288,7 +6173,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_coveragejson_content"><a class="anchor" href="#_coveragejson_content"></a>A.6.2. CoverageJSON Content</h4>
+<h4 id="_coveragejson_content"><a class="anchor" href="#_coveragejson_content"></a>A.7.2. CoverageJSON Content</h4>
 <table id="ats_covjson_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6296,7 +6181,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 27</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 23</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/covjson/content</strong></p>
 </div></div></td>
@@ -6334,7 +6219,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_html"><a class="anchor" href="#_conformance_class_html"></a>A.7. Conformance Class HTML</h3>
+<h3 id="_conformance_class_html"><a class="anchor" href="#_conformance_class_html"></a>A.8. Conformance Class HTML</h3>
 <table id="ats_html" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6353,7 +6238,7 @@ explode: false</code></pre>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirements Class</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_html">http://www.opengis.net/spec/ogcapi_common/1.0/req/html</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_html-section">http://www.opengis.net/spec/ogcapi_common/1.0/req/html</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
@@ -6362,7 +6247,7 @@ explode: false</code></pre>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="_html_definition"><a class="anchor" href="#_html_definition"></a>A.7.1. HTML Definition</h4>
+<h4 id="_html_definition"><a class="anchor" href="#_html_definition"></a>A.8.1. HTML Definition</h4>
 <table id="ats_html_definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6370,7 +6255,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 28</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 24</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/html/definition</strong></p>
 </div></div></td>
@@ -6397,7 +6282,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="_html_content"><a class="anchor" href="#_html_content"></a>A.7.2. HTML Content</h4>
+<h4 id="_html_content"><a class="anchor" href="#_html_content"></a>A.8.2. HTML Content</h4>
 <table id="ats_html_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6405,7 +6290,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 29</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 25</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/html/content</strong></p>
 </div></div></td>
@@ -6440,7 +6325,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_openapi_3_0"><a class="anchor" href="#_conformance_class_openapi_3_0"></a>A.8. Conformance Class OpenAPI 3.0</h3>
+<h3 id="_conformance_class_openapi_3_0"><a class="anchor" href="#_conformance_class_openapi_3_0"></a>A.9. Conformance Class OpenAPI 3.0</h3>
 <table id="ats_oas3" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6474,7 +6359,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 30</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 26</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/oas30/completeness</strong></p>
 </div></div></td>
@@ -6506,7 +6391,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 31</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 27</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/oas30/exceptions-codes</strong></p>
 </div></div></td>
@@ -6538,7 +6423,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 32</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 28</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/oas30/oas-definition-1</strong></p>
 </div></div></td>
@@ -6577,7 +6462,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 33</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 29</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/oas30/oas-definition-2</strong></p>
 </div></div></td>
@@ -6609,7 +6494,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 34</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 30</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/oas30/oas-impl</strong></p>
 </div></div></td>
@@ -6648,7 +6533,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 35</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 31</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/oas30/security</strong></p>
 </div></div></td>
@@ -6682,7 +6567,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect2">
-<h3 id="_conformance_class_queries"><a class="anchor" href="#_conformance_class_queries"></a>A.9. Conformance Class Queries</h3>
+<h3 id="_conformance_class_queries"><a class="anchor" href="#_conformance_class_queries"></a>A.10. Conformance Class Queries</h3>
 <table id="ats_queries" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6714,7 +6599,7 @@ explode: false</code></pre>
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="_query_pattern_tests"><a class="anchor" href="#_query_pattern_tests"></a>A.9.1. Query Pattern Tests</h4>
+<h4 id="_query_pattern_tests"><a class="anchor" href="#_query_pattern_tests"></a>A.10.1. Query Pattern Tests</h4>
 <div class="sect4">
 <h5 id="_position_2"><a class="anchor" href="#_position_2"></a>Position</h5>
 <table id="ats_position" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -6724,7 +6609,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 36</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 32</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/position</strong></p>
 </div></div></td>
@@ -6755,7 +6640,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 37</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 33</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/position</strong></p>
 </div></div></td>
@@ -6786,7 +6671,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 38</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 34</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/position</strong></p>
 </div></div></td>
@@ -6817,7 +6702,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 39</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 35</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/position</strong></p>
 </div></div></td>
@@ -6907,7 +6792,7 @@ and verify that only information that matches the selection criteria is returned
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 40</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 36</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-coords-definition</strong></p>
 </div></div></td>
@@ -6960,7 +6845,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 41</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 37</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-coords-response</strong></p>
 </div></div></td>
@@ -7009,7 +6894,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 42</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-z-definition</strong></p>
 </div></div></td>
@@ -7052,7 +6937,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 43</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-z-response</strong></p>
 </div></div></td>
@@ -7091,7 +6976,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 44</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-definition</strong></p>
 </div></div></td>
@@ -7134,7 +7019,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 45</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-response</strong></p>
 </div></div></td>
@@ -7176,7 +7061,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 46</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 42</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-definition</strong></p>
 </div></div></td>
@@ -7219,7 +7104,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 47</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-response</strong></p>
 </div></div></td>
@@ -7258,7 +7143,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 48</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-definition</strong></p>
 </div></div></td>
@@ -7301,7 +7186,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 49</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-response</strong></p>
 </div></div></td>
@@ -7350,7 +7235,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 50</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-definition</strong></p>
 </div></div></td>
@@ -7393,7 +7278,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 51</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 47</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-response</strong></p>
 </div></div></td>
@@ -7445,7 +7330,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 52</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 48</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/area</strong></p>
 </div></div></td>
@@ -7476,7 +7361,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 53</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 49</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/area</strong></p>
 </div></div></td>
@@ -7507,7 +7392,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 54</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 50</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/area</strong></p>
 </div></div></td>
@@ -7538,7 +7423,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 55</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 51</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/area</strong></p>
 </div></div></td>
@@ -7628,7 +7513,7 @@ and verify that only information that matches the selection criteria is returned
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 56</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 52</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-coords-definition</strong></p>
 </div></div></td>
@@ -7681,7 +7566,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 57</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 53</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-coords-response</strong></p>
 </div></div></td>
@@ -7730,7 +7615,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 58</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 54</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-z-definition</strong></p>
 </div></div></td>
@@ -7773,7 +7658,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 59</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 55</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-z-response</strong></p>
 </div></div></td>
@@ -7812,7 +7697,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 60</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 56</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-definition</strong></p>
 </div></div></td>
@@ -7855,7 +7740,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 61</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 57</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-response</strong></p>
 </div></div></td>
@@ -7897,7 +7782,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 62</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 58</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-definition</strong></p>
 </div></div></td>
@@ -7940,7 +7825,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 63</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 59</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-response</strong></p>
 </div></div></td>
@@ -7979,7 +7864,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 64</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 60</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-definition</strong></p>
 </div></div></td>
@@ -8022,7 +7907,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 65</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 61</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-response</strong></p>
 </div></div></td>
@@ -8071,7 +7956,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 66</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 62</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-definition</strong></p>
 </div></div></td>
@@ -8114,7 +7999,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 67</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 63</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-response</strong></p>
 </div></div></td>
@@ -8166,7 +8051,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 68</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 64</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8197,7 +8082,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 69</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 65</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8228,7 +8113,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 70</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 66</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8259,7 +8144,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 71</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 67</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8290,7 +8175,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 72</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 68</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8321,7 +8206,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 73</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 69</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8352,7 +8237,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 74</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 70</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8383,7 +8268,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 75</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 71</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8414,7 +8299,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 76</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 72</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8445,7 +8330,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 77</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 73</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/trajectory</strong></p>
 </div></div></td>
@@ -8522,7 +8407,7 @@ and verify that only information that matches the selection criteria is returned
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 78</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 74</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-coords-definition</strong></p>
 </div></div></td>
@@ -8575,7 +8460,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 79</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 75</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-coords-response</strong></p>
 </div></div></td>
@@ -8624,7 +8509,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 80</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 76</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-definition</strong></p>
 </div></div></td>
@@ -8667,7 +8552,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 81</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 77</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-response</strong></p>
 </div></div></td>
@@ -8706,7 +8591,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 82</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 78</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-definition</strong></p>
 </div></div></td>
@@ -8749,7 +8634,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 83</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 79</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-response</strong></p>
 </div></div></td>
@@ -8798,7 +8683,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 84</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 80</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-definition</strong></p>
 </div></div></td>
@@ -8841,7 +8726,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 85</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 81</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-response</strong></p>
 </div></div></td>
@@ -8886,9 +8771,9 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_collections_and_instances"><a class="anchor" href="#_collections_and_instances"></a>A.9.2. Collections and Instances</h4>
+<h4 id="_collections_and_instances"><a class="anchor" href="#_collections_and_instances"></a>A.10.2. Collections and Instances</h4>
 <div class="sect4">
-<h5 id="_feature_collections_rootcollections_2"><a class="anchor" href="#_feature_collections_rootcollections_2"></a>Feature Collections {root}/collections</h5>
+<h5 id="_feature_collections_rootcollections"><a class="anchor" href="#_feature_collections_rootcollections"></a>Feature Collections {root}/collections</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -8896,7 +8781,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 86</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 82</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-md-op</strong></p>
 </div></div></td>
@@ -8938,7 +8823,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 87</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 83</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections_rc-md-success</strong></p>
 </div></div></td>
@@ -9005,7 +8890,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_feature_collection_rootcollectionscollectionid_2"><a class="anchor" href="#_feature_collection_rootcollectionscollectionid_2"></a>Feature Collection {root}/collections/{collectionId}</h5>
+<h5 id="_feature_collection_rootcollectionscollectionid"><a class="anchor" href="#_feature_collection_rootcollectionscollectionid"></a>Feature Collection {root}/collections/{collectionId}</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9013,7 +8898,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 88</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 84</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/src-md-op</strong></p>
 </div></div></td>
@@ -9047,7 +8932,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 89</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 85</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/src-md-success</strong></p>
 </div></div></td>
@@ -9074,7 +8959,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_features_rootcollectionscollectioniditems_2"><a class="anchor" href="#_features_rootcollectionscollectioniditems_2"></a>Features {root}/collections/{collectionId}/items</h5>
+<h5 id="_features_rootcollectionscollectioniditems"><a class="anchor" href="#_features_rootcollectionscollectioniditems"></a>Features {root}/collections/{collectionId}/items</h5>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -9094,7 +8979,7 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 90</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 86</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-op</strong></p>
 </div></div></td>
@@ -9166,7 +9051,7 @@ and verify that only features are returned that match both selection criteria.</
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 91</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 87</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-bbox-definition</strong></p>
 </div></div></td>
@@ -9232,7 +9117,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 92</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 88</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-bbox-response</strong></p>
 </div></div></td>
@@ -9274,7 +9159,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 93</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 89</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-definition</strong></p>
 </div></div></td>
@@ -9317,7 +9202,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 94</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 90</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-response</strong></p>
 </div></div></td>
@@ -9359,7 +9244,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 95</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 91</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-response</strong></p>
 </div></div></td>
@@ -9394,7 +9279,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 96</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 92</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/instances/rc-md-op</strong></p>
 </div></div></td>
@@ -9436,7 +9321,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 97</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 93</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/instances_rc-md-success</strong></p>
 </div></div></td>
@@ -9511,7 +9396,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 98</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 94</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/instances/src-md-op</strong></p>
 </div></div></td>
@@ -9545,7 +9430,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 99</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 95</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/instances/src-md-success</strong></p>
 </div></div></td>
@@ -9573,7 +9458,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_second_tier_tests_2"><a class="anchor" href="#_second_tier_tests_2"></a>A.9.3. Second Tier Tests</h4>
+<h4 id="_second_tier_tests"><a class="anchor" href="#_second_tier_tests"></a>A.10.3. Second Tier Tests</h4>
 <div class="paragraph">
 <p>These tests are invoked by other tests.</p>
 </div>
@@ -9586,9 +9471,9 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 100</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 96</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-md-items</strong></p>
+<p><strong>/ats/collections/rc-md-collection-info</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9600,7 +9485,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-items">/req/collections/rc-md-items</a></p>
+<p><a href="#req_collections_rc-md-collection-info">/req/collections/rc-md-collection-info</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9636,16 +9521,16 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
-<table id="ats_collections_rc-md-items-links" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_collections_rc-md-collection-info-links" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 101</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 97</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/ats/collections/rc-md-items-links</strong></p>
+<p><strong>/ats/collections/rc-md-collection-info-links</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9657,7 +9542,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-items-links">/req/collections/rc-md-items-links</a></p>
+<p><a href="#req_collections_rc-md-collection-info-links">/req/collections/rc-md-collection-info-links</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9688,7 +9573,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 102</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 98</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/locations</strong></p>
 </div></div></td>
@@ -9719,7 +9604,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 103</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 99</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/locations</strong></p>
 </div></div></td>
@@ -9750,7 +9635,7 @@ explode: false</code></pre>
 </div></div></td>
 </tr>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 104</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 100</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/locations</strong></p>
 </div></div></td>
@@ -9814,7 +9699,7 @@ and verify that only information that matches the selection criteria is returned
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 105</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 101</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-definition</strong></p>
 </div></div></td>
@@ -9857,7 +9742,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 106</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 102</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-time-response</strong></p>
 </div></div></td>
@@ -9899,7 +9784,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 107</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 103</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-definition</strong></p>
 </div></div></td>
@@ -9942,7 +9827,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 108</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 104</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-parametername-response</strong></p>
 </div></div></td>
@@ -9981,7 +9866,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 109</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 105</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-definition</strong></p>
 </div></div></td>
@@ -10024,7 +9909,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 110</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 106</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-crs-response</strong></p>
 </div></div></td>
@@ -10073,7 +9958,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 111</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 107</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-definition</strong></p>
 </div></div></td>
@@ -10116,7 +10001,7 @@ explode: false</code></pre>
 </colgroup>
 <tbody>
 <tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 112</strong></p></td>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 108</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p><strong>/ats/collections/rc-outputformat-response</strong></p>
 </div></div></td>
@@ -10178,7 +10063,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>B.2. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 34. JSON Landing Page</div>
+<div class="title">Example 35. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -10217,7 +10102,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>B.4. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 35. Conformance Response</div>
+<div class="title">Example 36. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -10240,7 +10125,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>B.5. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 36. Collections metadata response document</div>
+<div class="title">Example 37. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>The example below shows a service with two collections, one for observations and another for forecast data.  The forecast data is regenerated every hour so the collection provides access to multiple instances of the collection via an instances endpoint.</p>
@@ -10982,7 +10867,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>B.6. Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 37. Collection instance metadata response document</div>
+<div class="title">Example 38. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This is an example of the metadata returned by the instances query</p>
@@ -12397,7 +12282,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="location-metadata-examples"><a class="anchor" href="#location-metadata-examples"></a>B.7. Location Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 38. Collection instance metadata response document</div>
+<div class="title">Example 39. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>A example of the Locations metadata from a collection that supports the <code>Location</code> query pattern.</p>
@@ -12766,7 +12651,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-07-23 22:20:40 -0400
+Last updated 2020-07-24 22:20:55 -0400
 </div>
 </div>
 </body>
