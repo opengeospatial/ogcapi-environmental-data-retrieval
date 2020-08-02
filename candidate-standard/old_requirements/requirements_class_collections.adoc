@@ -1,9 +1,0 @@
-[[rc_collections]]
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class*
-2+|http://www.opengis.net/spec/ogcapi_common/1.0/req/collections
-|Target type |Web API
-|Dependency |<<rc_core,Requirements Class "OAPI Core">>
-|Dependency |<<rfc3339,RFC 3339 (Date and Time on the Internet: Timestamps)>>
-|===

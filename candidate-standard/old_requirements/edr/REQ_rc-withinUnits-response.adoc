@@ -1,7 +1,0 @@
-[[req_edr_withinUnits-response]]
-[width="90%",cols="2,6a"]
-|===
-|*Requirement {counter:req-id}* | */req/edr/within-response* 
-^|A |The `withinUnits` parameter defines the distance units of the `within` query parameter value .
-
-|===
