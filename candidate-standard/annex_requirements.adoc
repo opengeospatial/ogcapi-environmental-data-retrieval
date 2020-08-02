@@ -11,9 +11,9 @@ For clarity, the complete <<requirements-class-definition,requirements test clas
 
 :sectnums!:
 
-include::requirements/core/REQ_api-common.adoc[]
-
 include::requirements/requirements_class_core.adoc[]
+
+include::requirements/core/REQ_api-common.adoc[]
 
 include::requirements/core/REQ_core_conformance.adoc[]
 

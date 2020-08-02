@@ -3843,7 +3843,7 @@
       "EDRProperties": {
         "type": "object",
         "title": "EDR GeoJSON Properties",
-        "description": "Properties to describe existing EDR features -- may be real-world or virtual sampling features.",
+        "description": "Properties to describe existing EDR features -- may be real-world or virtual sampling features. The geometry of these features can be used to describe an available location, a cached query geometry, or an area of interest within the collection domain",
         "default": {},
         "example": [
           {
@@ -3853,7 +3853,7 @@
               "velocity",
               "temperature"
             ],
-            "uri": "https://feature_identifier"
+            "edrQueryEndpoint": "https://feature_identifier"
           }
         ],
         "required": [

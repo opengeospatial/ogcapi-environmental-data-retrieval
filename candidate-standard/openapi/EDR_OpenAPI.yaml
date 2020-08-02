@@ -2432,12 +2432,12 @@ components:
         parametername:
           - velocity
           - temperature
-        uri: https://feature_identifier
+        edrqueryendpoint: https://example.org/api/collections/collection/locations/location_123
       required:
         - datetime
         - parametername
         - label
-        - uri
+        - edrqueryendpoint
       properties:
         datetime:
             type: string
@@ -2466,13 +2466,13 @@ components:
             default: ''
             example:
               - Site A
-        uri:
+        edrqueryendpoint:
             type: string
-            title: A URI identifying the feature. 
-            description: An identifier uri for the feature. May be a uri for a real-world sampling feature of a uri to retrieve the particular feature of the EDR service instance.
+            title: EDR Query Endpoint
+            description: A URI identifying the query end point. May identify a specific location.
             default: ''
             example:
-              - https://feature_identifier
+              - https://example.org/api/collections/collection/locations/location_123
     crsObject:
       type: object
       properties:
