@@ -1,7 +1,7 @@
 [[req_edr_maxz-definition]]
+==== *Requirement {counter:req-id}: /req/edr/maxz-definition* Parameter maxz definition
 [width="90%",cols="2,6a"]
 |===
-|*Requirement {counter:req-id}* |*/req/edr/maxz-definition* 
 ^|A |Each resource collection operation MUST support a parameter `maxz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

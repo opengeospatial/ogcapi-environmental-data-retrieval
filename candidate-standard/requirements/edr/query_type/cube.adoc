@@ -2,9 +2,9 @@ The `Cube` query returns a data cube defined by the  `coords`, `minz` and `maxz`
 
 ===== *Parameter coords*
 
-include::../REQ_rc-coords-definition.adoc[]
+<<req_edr_coords-definition>>
 
-include::../REQ_rc-coords-response.adoc[]
+<<req_edr_coords-response>>
 
 Only data that has a geometry that intersects the area defined by the cube
 are selected. 
@@ -32,9 +32,9 @@ see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wik
 
 ===== *Parameter minz*
 
-include::../REQ_rc-minz-definition.adoc[]
+<<req_edr_minz-definition>>
 
-include::../REQ_rc-minz-response.adoc[]
+<<req_edr_minz-response>>
 
 .Define the bottom of the cube
 =================
@@ -48,9 +48,9 @@ would retrieve data for the 850 level and for data above the 850 level, if a `ma
 
 ===== *Parameter maxz*
 
-include::../REQ_rc-maxz-definition.adoc[]
+<<req_edr_maxz-definition>>
 
-include::../REQ_rc-maxz-response.adoc[]
+<<req_edr_maxz-response>>
 
 .Define the top of the cube
 =================
@@ -64,9 +64,9 @@ would retrieve data for the 300 level and for data below the 850 level, if a `mi
 
 ===== *Parameter resolutionx*
 
-include::../REQ_rc-resolutionx-definition.adoc[]
+<<req_edr_resolutionx-definition>>
 
-include::../REQ_rc-resolutionx-response.adoc[]
+<<req_edr_resolutionx-response>>
 
 If not specified the query will not interpolate the data along the x-axis of the cube and only return values for the defined `coords` parameter values. 
 
@@ -83,9 +83,9 @@ would retrieve 10 values along the width from the minimum x coordinate to maximu
 
 ===== *Parameter resolutiony*
 
-include::../REQ_rc-resolutiony-definition.adoc[]
+<<req_edr_resolutiony-definition>>
 
-include::../REQ_rc-resolutiony-response.adoc[]
+<<req_edr_resolutiony-response>>
 
 If not specified the query will not interpolate the data along the y-axis of the cube and only return values for the defined `coords` parameter values. 
 
@@ -102,9 +102,9 @@ would retrieve 10 values along the width from the minimum y coordinate to maximu
 
 ===== *Parameter resolutionz*
 
-include::../REQ_rc-resolutionz-definition.adoc[]
+<<req_edr_resolutionz-definition>>
 
-include::../REQ_rc-resolutionz-response.adoc[]
+<<req_edr_resolutionz-response>>
 
 If not specified the query will not interpolate the data along the z-axis of the cube and only return values for the defined `coords` parameter values. 
 

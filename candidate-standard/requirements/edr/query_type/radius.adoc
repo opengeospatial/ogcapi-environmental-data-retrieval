@@ -2,9 +2,9 @@ The Radius query returns data within the defined radius of the requested coordin
 
 ===== *Parameter coords*
 
-include::../REQ_rc-coords-definition.adoc[]
+<<req_edr_coords-definition>>
 
-include::../REQ_rc-coords-response.adoc[]
+<<req_edr_coords-response>>
 
 location(s) to return data for, the coordinates are defined by a Well Known Text
 (wkt) string. to retrieve a single location :
@@ -34,18 +34,17 @@ retrieve data for Greenwich, London
 `coords=POINT(0 51.48)`
 =================
 
-
 ===== *Parameter within*
 
-include::../REQ_rc-within-definition.adoc[]
+<<req_edr_within-definition>>
 
-include::../REQ_rc-within-response.adoc[]
+<<req_edr_within-response>>
 
 ====== *Parameter withinunits*
 
-include::../REQ_rc-withinUnits-definition.adoc[]
+<<req_edr_withinUnits-definition>>
 
-include::../REQ_rc-withinUnits-response.adoc[]
+<<req_edr_withinUnits-response>>
 
 ===== *Parameter z*
 

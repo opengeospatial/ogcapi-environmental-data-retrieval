@@ -1,7 +1,7 @@
-// [[req_edr_z-definition]]
+[[req_edr_z-definition]]
+==== *Requirement {counter:req-id}: /req/edr/z-definition* Parameter z definition
 [width="90%",cols="2,6a"]
 |===
-|*Requirement {counter:req-id}* |*/req/edr/z-definition* 
 ^|A |Each resource collection operation MAY support a parameter `z`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

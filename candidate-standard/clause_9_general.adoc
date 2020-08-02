@@ -7,7 +7,7 @@ The following general requirements and recomendations apply to all OGC APIs.
 
 The standards used for Web APIs are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.
 
-include::requirements/core/REQ_http.adoc[]
+<<req_core_http>>
 
 [[http-status-codes]]
 === HTTP Status Codes
@@ -70,7 +70,7 @@ As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <<SDWBP,Best Pr
 
 For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.
 
-include::requirements/core/REQ_crs84.adoc[]
+<<req_collections_crs84>>
 
 The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`. 
 
@@ -115,21 +115,21 @@ include::recommendations/core/REC_link-header.adoc[]
 
 ==== Basic requirements
 
-include::requirements/requirements_class_oas30.adoc[]
+<<rc_oas30>>
 
 The OpenAPI 3.0 Requirements Class used in OGC API Common is applicable to the EDR API as well. So an implementation of EDR API which supports OpenAPI 3.0 as an API Description format must also comply with the OGC API-Common oas30 Conformance Class.
 
-include::requirements/oas30/REQ_oas-common.adoc[]
+<<req_oas30_oas-common>>
 
 Implementations must also advertise conformance with this Requirements Class.
 
-include::requirements/oas30/REQ_oas-conformance.adoc[]
+<<req_oas30_conformance>>
 
 Two example OpenAPI documents are included in <<oas-examples,Annex B>>.
 
 ==== Complete definition
 
-include::requirements/oas30/REQ_completeness.adoc[]
+<<req_oas30_completeness>>
 
 Note, for example, that APIs which are access-controlled (see <<security,Security>>), support web cache validation, CORS or that use HTTP redirection will make use of additional HTTP status codes beyond regular codes such as `200` for successful GET requests and `400`, `404` or `500` for error situations. See <<http-status-codes>>.
 
@@ -138,7 +138,7 @@ Clients have to be prepared to receive responses not documented in the OpenAPI d
 [[exceptions]]
 ==== Exceptions
 
-include::requirements/oas30/REQ_exception-codes.adoc[]
+<<req_oas30_exceptions-codes>>
 
 .An exception response object definition
 =================
@@ -158,7 +158,7 @@ content:
 [[security]]
 === Security
 
-include::requirements/oas30/REQ_security.adoc[]
+<<req_oas30_security>>
 
 The OpenAPI specification currently supports the following link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#security-scheme-object[security schemes]:
 

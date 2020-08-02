@@ -1,7 +1,7 @@
 [[rc_oas30]]
+==== *Requirements Class:* OpenAPI 3.0
 [cols="1,4",width="90%"]
 |===
-2+|*Requirements Class*
 2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/oas30
 |Target type |Web API
 |Dependency |<<rc-core-section,Conformance Class "Core">>

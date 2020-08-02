@@ -1,12 +1,12 @@
-// [[req_edr_coords-response]]
+[[req_edr_coords-response]]
+==== *Requirement {counter:req-id}: /req/edr/coords-response* Parameter coords response
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/edr/coords-response*
 ^|A|Only those resources that have a spatial geometry that intersects the area defined by the `coords` parameter SHALL be part of the result set.
 ^|B|The coordinates SHALL consist of a Well Known Text (WKT) geometry string 
 ^|C|The coordinate reference system of the values SHALL be interpreted as WGS84 longitude/latitude 
     
-    WKT: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]] 
+    WKT: GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84", 6378137, 298.257223563, AUTHORITY["EPSG", "7030"]], AUTHORITY["EPSG", "6326"]], PRIMEM["Greenwich", 0 , AUTHORITY["EPSG", "8901"]], UNIT["degree", 0.01745329251994328, AUTHORITY["EPSG", "9122"]], AUTHORITY["EPSG", "4326"]] 
     
     EPSG: http://www.opengis.net/def/crs/OGC/1.3/CRS84 
 

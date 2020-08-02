@@ -1,7 +1,7 @@
 [[req_edr_minz-response]]
+==== *Requirement {counter:req-id}: /req/edr/minz-response* Parameter minz response
 [width="90%",cols="2,6a"]
 |===
-|*Requirement {counter:req-id}* | */req/edr/minz-response* 
 ^|A |Only resources with a vertical geometry coordinate that is greater than or includes the vertical information in the `minz` parameter SHALL be part of the result set.
 
 [source,java]

@@ -2,9 +2,9 @@ The Area query returns data within the polygon defined by the `coords` parameter
 
 ===== *Parameter coords*
 
-include::../REQ_rc-coords-definition.adoc[]
+<<req_edr_coords-definition>>
 
-include::../REQ_rc-coords-response.adoc[]
+<<req_edr_coords-response>>
 
 Only data that has a geometry that intersects the area defined by the polygon
 are selected. 
@@ -46,9 +46,9 @@ Selecting data for two different regions
 
 ===== *Parameter z*
 
-include::../REQ_rc-z-definition.adoc[]
+<<req_edr_z-definition>>
 
-include::../REQ_rc-z-definition.adoc[]
+<<req_edr_z-response>>
 
 Define the vertical level to return data from 
 i.e. z=level
