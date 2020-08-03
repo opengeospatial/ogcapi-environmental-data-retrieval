@@ -1,23 +1,31 @@
-{
-    "$schema": "http://json-schema.org/draft-07/schema#",
-    "title": "Link Schema",
-    "description": "Schema for external references",
+{"link": {
     "type": "object",
     "required": [
-        "href"
-        ],
-    "properties": {    
-        "href": {
-            "type": "string"
-            },
-        "rel": {
-            "type": "string"
-            },
-        "hreflang": {
-            "type": "string"
-            },
-        "title": {
-            "type": "string"    
-            }
-        }
+      "href",
+      "rel"
+    ],
+    "properties": {
+      "href": {
+        "type": "string"
+      },
+      "rel": {
+        "type": "string",
+        "example": "prev"
+      },
+      "type": {
+        "type": "string",
+        "example": "application/geo+json"
+      },
+      "hreflang": {
+        "type": "string",
+        "example": "en"
+      },
+      "title": {
+        "type": "string",
+        "example": "Monitoring site name"
+      },
+      "length": {
+        "type": "integer"      
+      }
     }
+}}

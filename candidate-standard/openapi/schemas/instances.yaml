@@ -1,7 +1,7 @@
 type: object
 required:
   - links
-  - collections
+  - instances
 properties:
   links:
     type: array
@@ -10,4 +10,4 @@ properties:
   collections:
     type: array
     items:
-      $ref: collectionInfo_edr.yaml
+      $ref: collection.yaml

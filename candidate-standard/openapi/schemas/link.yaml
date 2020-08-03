@@ -1,10 +1,11 @@
 type: object
 required:
   - href
+  - rel
 properties:
   href:
     type: string
-    example: http://data.example.com/buildings/123
+    example: http://data.example.com/collections/monitoringsites/locations/1234
   rel:
     type: string
     example: alternate
@@ -16,4 +17,6 @@ properties:
     example: en
   title:
     type: string
-    example: Trierer Strasse 70, 53115 Bonn
+    example: Monitoring site name
+  length:
+    type: integer

@@ -2258,7 +2258,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -2315,29 +2315,6 @@
           }
         }
       },
-      "link": {
-        "required": [
-          "href"
-        ],
-        "type": "object",
-        "properties": {
-          "href": {
-            "type": "string"
-          },
-          "rel": {
-            "type": "string",
-            "example": "prev"
-          },
-          "type": {
-            "type": "string",
-            "example": "application/geo+json"
-          },
-          "hreflang": {
-            "type": "string",
-            "example": "en"
-          }
-        }
-      },
       "groups": {
         "required": [
           "links",
@@ -2348,7 +2325,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -2376,7 +2353,7 @@
             "items": {
               "type": "array",
               "items": {
-                "$ref": "#/components/schemas/link"
+                "$ref": "edrschemas/components/link.json"
               }
             }
           }
@@ -2392,7 +2369,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -2448,7 +2425,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -2490,7 +2467,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -2557,7 +2534,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -2589,7 +2566,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             },
             "example": [
               {
@@ -3000,7 +2977,7 @@
         "type": "object",
         "properties": {
           "value": {
-            "$ref": "#/components/schemas/link"
+            "$ref": "edrschemas/components/link.json"
           }
         },
         "example": {
@@ -3535,7 +3512,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             }
           },
           "timeStamp": {
@@ -3582,7 +3559,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             }
           }
         }
@@ -3650,7 +3627,7 @@
           "links": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/link"
+              "$ref": "edrschemas/components/link.json"
             }
           }
         }
