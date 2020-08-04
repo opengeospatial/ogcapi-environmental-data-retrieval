@@ -10,4 +10,11 @@ properties:
   geometries:
     type: array
     items:
-      $ref: geometryGeoJSON.yaml
+      oneOf:
+      - $ref: "#/components/schemas/pointGeoJSON"
+      - $ref: "#/components/schemas/multipointGeoJSON"
+      - $ref: "#/components/schemas/linestringGeoJSON"
+      - $ref: "#/components/schemas/multilinestringGeoJSON"
+      - $ref: "#/components/schemas/polygonGeoJSON"
+      - $ref: "#/components/schemas/multipolygonGeoJSON"
+      - $ref: "#/components/schemas/geometrycollectionGeoJSON"
