@@ -11,10 +11,10 @@ properties:
     type: array
     items:
       oneOf:
-      - $ref: "#/components/schemas/pointGeoJSON"
-      - $ref: "#/components/schemas/multipointGeoJSON"
-      - $ref: "#/components/schemas/linestringGeoJSON"
-      - $ref: "#/components/schemas/multilinestringGeoJSON"
-      - $ref: "#/components/schemas/polygonGeoJSON"
-      - $ref: "#/components/schemas/multipolygonGeoJSON"
-      - $ref: "#/components/schemas/geometrycollectionGeoJSON"
+      - $ref: schemas/pointGeoJSON.yaml
+      - $ref: schemas/multipointGeoJSON.yaml
+      - $ref: schemas/linestringGeoJSON.yaml
+      - $ref: schemas/multilinestringGeoJSON.yaml
+      - $ref: schemas/polygonGeoJSON.yaml
+      - $ref: schemas/multipolygonGeoJSON.yaml
+      - $ref: schemas/geometrycollectionGeoJSON.yaml
