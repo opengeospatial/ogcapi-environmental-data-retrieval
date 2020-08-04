@@ -1,0 +1,9 @@
+{
+  "name": "coords",
+  "in": "query",
+  "description": "Only data that has a geometry that intersects the area defined by the polygon\nare selected. \n\nThe polygon is defined using a Well Known Text string following \n\ncoords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))\n\nwhich are values in the coordinate system defined by the crs query parameter \n(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  \n\nFor instance a polygon that roughly describes an area that contains \nSouth West England in WGS84 would look like: \n\ncoords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))\n\nsee http://portal.opengeospatial.org/files/?artifact_id=25355 and \nhttps://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry\n\nThe coords parameter will only support 2D POLYGON definitions",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "type": "object",
+  "title": "name of property",
+  "description": "Description of the property",
+  "required": [
+    "id",
+    "label"
+  ],
+  "properties": {
+    "id": {
+      "description": "URI linking to an external registry which contains the definitive definition of\nthe observed property",
+      "type": "string"
+    },
+    "label": {
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "en"
+        ],
+        "properties": {
+          "en": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "example": {
+    "id": "http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/",
+    "label": {
+      "en": "Sea Ice Concentration"
+    }
+  }
+}

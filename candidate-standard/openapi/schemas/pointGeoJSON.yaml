@@ -2,7 +2,6 @@ type: object
 required:
   - type
   - coordinates
-  - properties
 properties:
   type:
     type: string
@@ -13,5 +12,3 @@ properties:
     minItems: 2
     items:
       type: number
-  properties: 
-    $ref: edrProperties.yaml

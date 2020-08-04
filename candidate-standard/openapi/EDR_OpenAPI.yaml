@@ -585,7 +585,7 @@ paths:
             text/html:
               schema:
                 type: string
-  /collections/{collectionId}/items/{itemID}:
+  /collections/{collectionId}/items/{itemId}:
     get:
       tags:
         - Collection data queries
@@ -1092,7 +1092,7 @@ paths:
             text/html:
               schema:
                 type: string
-  /collections/{collectionId}/locations/{locID}:
+  /collections/{collectionId}/locations/{locId}:
     get:
       tags:
         - Collection data queries
@@ -1195,7 +1195,7 @@ paths:
             text/html:
               schema:
                 type: string
-  /collections/{collectionId}/instances/{instanceId}/locations/{locID:
+  /collections/{collectionId}/instances/{instanceId}/locations/{locId}:
     get:
       tags:
         - Instance data queries
