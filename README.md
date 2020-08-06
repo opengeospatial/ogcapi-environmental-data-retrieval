@@ -4,7 +4,9 @@
 
 This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.opengeospatial.org/projects/groups/edr-apiswg).
 
-It contains:
+The **OGC API - Environmental Data Retrieval** candidate standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
+
+The repository contains:
   
 - [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
 - [Standard document, as a work-in-progress draft](./standard_template/standard). 
