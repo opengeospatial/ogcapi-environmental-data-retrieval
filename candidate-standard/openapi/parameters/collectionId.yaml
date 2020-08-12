@@ -1,0 +1,6 @@
+name: collectionId
+in: path
+description: Identifier (id) of a specific collection
+required: true
+schema:
+  type: string

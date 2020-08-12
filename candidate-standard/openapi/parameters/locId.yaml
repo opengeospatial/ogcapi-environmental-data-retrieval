@@ -1,0 +1,6 @@
+name: locId
+in: path
+required: true
+description: Retreive data for the location defined by locId (i.e. London_Heathrow, EGLL, 03772 etc)
+schema:
+    type: string
