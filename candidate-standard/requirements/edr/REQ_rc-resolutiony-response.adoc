@@ -1,7 +1,7 @@
 [[req_edr_resolutiony-response]]
+==== *Requirement {counter:req-id}: /req/edr/resolutiony-response* Parameter resolutiony response
 [width="90%",cols="2,6a"]
 |===
-|*Requirement {counter:req-id}* | */req/edr/resolutiony-response* 
 ^|A | If the `resolutiony` parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum y coordinates  
 ^|B | The total number of intervals includes the values for the minimum and maximum coordinates 
 ^|C | A `resolutiony` value of 0 MUST return all available data at the native y resolution between the minimum and maximum coordinates   

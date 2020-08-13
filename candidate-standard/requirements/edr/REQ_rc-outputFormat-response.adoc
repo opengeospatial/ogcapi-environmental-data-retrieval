@@ -1,7 +1,7 @@
 [[req_edr_outputFormat-response]]
 [width="90%",cols="2,6a"]
+==== *Requirement {counter:req-id}: /req/edr/outputFormat-response* Parameter outputFormat response
 |===
-|*Requirement {counter:req-id}* | */req/edr/outputFormat-response*
 ^|A|If the `outputformat` parameter is provided, the returned information should be transformed to the defined data format.
 ^|B|The `outputformat` parameter SHALL consist of an string value based on an enumerated list of available options provided in the collections metadata.
 ^|C|If an unsupported `outputformat` value is requested a `400' error message should be returned.

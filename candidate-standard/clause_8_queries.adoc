@@ -69,14 +69,14 @@ Query parameters are used in URLs to define the resources which are returned on 
 [[coords]]
 ===== Parameter coords
 
-include::requirements/edr/REQ_rc-coords-definition.adoc[]
+<<req_edr_coords-definition>>
 
-include::requirements/edr/REQ_rc-coords-response.adoc[]
+<<req_edr_coords-response>>
 
 [[time]]
 ===== Parameter datetime
 
-include::requirements/core/REQ_rec-datetime-parameter.adoc[]
+<<req_core_rec-datetime-parameter>>
 
 The `datetime` parameter is defined in API-Common. The following information is provided here as a convenience.
 
@@ -113,9 +113,9 @@ A template for the definition of the parameter in YAML according to OpenAPI 3.0 
 [[parametername]]
 ===== Parameter parametername
 
-include::requirements/edr/REQ_rc-parameters-definition.adoc[]
+<<req_edr_parameters-definition>>
 
-include::requirements/edr/REQ_rc-parameters-response.adoc[]
+<<req_edr_parameters-response>>
 
 .A single parameter
 =================
@@ -137,18 +137,18 @@ If none of the requested parameters exist in the collection a `400` message SHOU
 [[crs]]
 ===== Parameter crs
 
-include::requirements/edr/REQ_rc-outputCRS-definition.adoc[]
+<<req_edr_outputCRS-definition>>
 
-include::requirements/edr/REQ_rc-outputCRS-response.adoc[]
+<<req_edr_outputCRS-response>>
 
 The value of the `crs` query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
 ===== Parameter outputformat
 
-include::requirements/edr/REQ_rc-outputFormat-definition.adoc[]
+<<req_edr_outputFormat-definition>>
 
-include::requirements/edr/REQ_rc-outputFormat-response.adoc[]
+<<req_edr_outputFormat-response>>
 
 .Return data as coverageJSON
 =================
@@ -166,6 +166,7 @@ include::requirements/edr/query_type/point.adoc[]
 
 <<<
 
+[[rc_radius-section]]
 ==== Radius query
 
 include::requirements/edr/query_type/radius.adoc[]
@@ -175,7 +176,7 @@ include::requirements/edr/query_type/radius.adoc[]
 [[rc_area-section]]
 ==== Area query
 
-include::requirements/edr/query_type/polygon.adoc[]
+include::requirements/edr/query_type/area.adoc[]
 
 <<<
 

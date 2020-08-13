@@ -1,7 +1,7 @@
 [[rc_core]]
+==== *Requirements Class:* OGC API-Environmental Data Retrieval Core
 [cols="1,4",width="90%"]
 |===
-2+|*Requirements Class*
 2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core
 |Target type |Web API
 |Dependency |http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core

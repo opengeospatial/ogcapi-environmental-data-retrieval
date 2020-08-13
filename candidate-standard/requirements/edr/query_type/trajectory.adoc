@@ -2,9 +2,9 @@ The Trajectory query returns data along the path defined by the `coords` paramet
 
 ===== *Parameter coords*
 
-include::../REQ_rc-coords-definition.adoc[]
+<<req_edr_coords-definition>>
 
-include::../REQ_rc-coords-response.adoc[]
+<<req_edr_coords-response>>
 
 "Intersects" means that the area specified by the parameter `coords`, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
 

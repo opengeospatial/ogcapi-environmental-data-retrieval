@@ -1,7 +1,7 @@
 [[req_edr_maxz-response]]
+==== *Requirement {counter:req-id}: /req/edr/maxz-response* Parameter maxz response
 [width="90%",cols="2,6a"]
 |===
-|*Requirement {counter:req-id}* | */req/edr/maxz-response* 
 ^|A |Only resources with a vertical geometry coordinate that is less than or includes the vertical information in the `maxz` parameter SHALL be part of the result set.
 
 [source,java]

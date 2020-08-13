@@ -3,14 +3,14 @@
 
 The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR must first satisfy the appropriate Requirements Classes from API-Common.
 
-include::requirements/core/REQ_api-common.adoc[]
+<<req_core_api-common>>
 
 [[rc_core-section]]
 === Overview
 
 The `Core` Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources.
 
-include::requirements/requirements_class_core.adoc[]
+<<rc_core>>
 
 The `Core` Requirements Class is presented in five sections:
 
@@ -71,7 +71,7 @@ A successful response to the `Landing Page` operation is defined in API-Common. 
 .Landing Page Response Schema
 [source,yaml]
 ----
-include::openapi/schemas/common/landingPage.yaml[]
+include::openapi/schemas/landingPage.yaml[]
 ----
 
 The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
@@ -141,13 +141,13 @@ Both techniques are required by API-Common.
 
 A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this API claims conformance. The schema for this resource is defined in API-Common and provided for reference in <<conformance-schema>>.
 
-include::requirements/core/REQ_core_conformance.adoc[]
+<<req_core_conformance>>
 
 [#conformance-schema,reftext='Conformance Response Schema']
 .Conformance Response Schema
 [source,yaml]
 ----
-include::openapi/schemas/common/confClasses.yaml[]
+include::openapi/schemas/confClasses.yaml[]
 ----
 
 The following JSON fragment is an example of a response to an OGC API-EDR conformance operation.

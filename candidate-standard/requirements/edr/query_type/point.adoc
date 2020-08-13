@@ -2,9 +2,9 @@ The Position query returns data for the requested coordinate, logic for identify
 
 ===== *Parameter coords*
 
-include::../REQ_rc-coords-definition.adoc[]
+<<req_edr_coords-definition>>
 
-include::../REQ_rc-coords-response.adoc[]
+<<req_edr_coords-response>>
 
 location(s) to return data for, the coordinates are defined by a Well Known Text
 (wkt) string. to retrieve a single location :
@@ -41,9 +41,9 @@ retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E,
 
 ===== *Parameter z*
 
-include::../REQ_rc-z-definition.adoc[]
+<<req_edr_z-definition>>
 
-include::../REQ_rc-z-definition.adoc[]
+<<req_edr_z-response>>
 
 Define the vertical level to return data from 
 i.e. z=level
@@ -90,9 +90,3 @@ z=ALL
 ===== <<crs>>
 
 ===== <<outputformat>>
-
-    
-
-
-
-

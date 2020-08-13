@@ -1,8 +1,0 @@
-[[rec_collections_rc-md-descriptions]]
-[width="90%",cols="2,6a"]
-|===
-^|*Recomendation {counter:rec-id}* |*/rec/collections/rc-md-descriptions* 
-^|A |If external schemas or descriptions exist that provide additional information about the structure or semantics for the resource, a `200`-response SHOULD include links to each of those resources in the `links` property of the response (relation: `describedBy`).
-^|B |The `type` link parameter SHOULD be provided for each link. This applies to resources that describe to the whole dataset.
-
-|===
