@@ -1,0 +1,52 @@
+type: object
+required:
+  - links
+properties:
+  title:
+    type: string
+    example: Meteorological data server
+  description:
+    type: string
+    example: Access to Meteorological data via a Web API that conforms to the OGC API Environmental Data Retrieval specification.
+  links:
+    type: array
+    items:
+      $ref: link.yaml
+  keywords:
+    type: array
+    items: string
+  provider:
+    type: object
+    properties:
+      name:
+        description: Name of organization providing the service
+        type: string
+      url:
+        description: Link to service providers website
+        type: string
+  contact:
+    type: object
+    properties:
+      email:
+        description: Email address of service provider
+        type: string
+      phone:
+        description: Phone number of service provider
+        type: string
+      fax:
+        description: Fax number of service provider
+        type: string
+      hours:
+        type: string
+      instructions:
+        type: string
+      address:
+        type: string
+      postalCode:
+        type: string
+      city:
+        type: string
+      stateorprovince:
+        type: string
+      country:
+        type: string

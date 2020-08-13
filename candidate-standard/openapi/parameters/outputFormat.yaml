@@ -1,0 +1,6 @@
+name: f
+in: query
+description: format to return the data response in
+required: false
+schema:
+  type: string
