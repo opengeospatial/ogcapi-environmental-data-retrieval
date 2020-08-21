@@ -67,6 +67,14 @@ include::requirements/edr/REQ_rc-resolutionz-definition.adoc[]
 
 include::requirements/edr/REQ_rc-resolutionz-response.adoc[]
 
+include::requirements/edr/REQ_rc-corridorHeight-definition.adoc[]
+
+include::requirements/edr/REQ_rc-corridorHeight-response.adoc[]
+
+include::requirements/edr/REQ_rc-corridorWidth-definition.adoc[]
+
+include::requirements/edr/REQ_rc-corridorWidth-response.adoc[]
+
 include::requirements/core/REQ_http.adoc[]
 
 include::requirements/core/REQ_crs84.adoc[]

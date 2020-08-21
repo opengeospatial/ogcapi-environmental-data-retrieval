@@ -1,11 +1,11 @@
 == Conformance
-Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+Conformance with this standard shall be checked using the tests specified in Annex B (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
 
 The one Standardization Target for this standard is Web APIs.
 
-OGC API-Common Part 1: Core and Part 2: Collections provide a common foundation for OGC API standards. This EDR API standard is as an extension of API-Common Core and Collections. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of API-Common.
+OGC API - Common - Core  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This EDR API standard is as an extension of OGC API - Common - Core. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common - Core.
 
-This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+This standard identifies fourteen (14) Conformance Classes. The Conformance Classes implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
 The conformance classes and their constituent requirements classes for OGC API-EDR are:
 
@@ -15,7 +15,7 @@ The _Core Requirements Class_ is the minimal useful service interface for an OGC
 
 The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter 8)>>.
 
-* <<rc_collection-section,Collection>>, one Requirement Class
+* <<rc_collection-section,Collections>>, one Requirement Class
 
 The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
@@ -25,7 +25,7 @@ The EDR API _Collection Requirements Class_ extends the common requirements to t
 
 The Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter 9)>>.
 
-* <<rc_encodings-section,Encodings>>, three Requirements Classes
+* <<rc_encoding-section,Encodings>>, three Requirements Classes
 ** <<rc_html-section,HTML>>
 ** <<rc_geojson-section,GeoJSON>>
 ** <<rc_covjson-section,CoverageJSON>>
@@ -40,15 +40,21 @@ The Encoding Requirements Classes are specified in *Encoding Requirements Classe
 
 The OGC API-Common Part 1:Core standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
 
-The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter 11)>>.
+The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter 10)>>.
 
-* <<rc_queries-section,Queries>>, three Requirements classes
+* <<query-resources-section,Queries>>, eight Requirements classes
 ** <<rc_position-section,Position>>
+** <<rc_radius-section,Radius>>
 ** <<rc_area-section,Area>>
+** <<rc_cube-section,Cube>>
 ** <<rc_trajectory-section,Trajectory>>
+** <<rc_corridor-section,Corridor>>
+** <<rc_items-section,Items>>
+** <<rc_locations-section,Locations>>
+** <<rc_instances-section,Instances>>
 
 The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The _Position_, _Area_ and _Trajectory_ requirements classes specify query patterns for which there are ubiquitous use cases.
 
 An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a position (with elevation and time) does simplify interoperability so support for _Position_ is highly recommended.
 
-The Queries Requirements Classes are specified in *Queries Requirements Classes* <<rc_queries-section,(Chapter 7)>>.
+The Queries Requirements Classes are specified in *Queries Requirements Classes* <<query-resources-section,(Chapter 9)>>.
