@@ -7,6 +7,8 @@ Query resources are spatial queries which support the operation of the API or th
 [[rc_collection-section]]
 An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns. 
 
+include::requirements/requirements_class_collections.adoc[]
+
 Query resources related to Environmental Data resources (collections of spatiotemporal data) can be exposed using the path templates:
 
 * `/collections/{collectionId}/{queryType}`
@@ -159,7 +161,7 @@ The value of the `crs` query parameter will be one of the name values described 
 If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the collection, a `400` message SHOULD be returned.
 
 
-[[rc_postion-section]]
+[[rc_position-section]]
 ==== Position query
 
 include::requirements/edr/query_type/point.adoc[]
@@ -179,7 +181,7 @@ include::requirements/edr/query_type/radius.adoc[]
 include::requirements/edr/query_type/area.adoc[]
 
 <<<
-
+[[rc_cube-section]]
 ==== Cube query
 
 include::requirements/edr/query_type/cube.adoc[]
@@ -193,19 +195,26 @@ include::requirements/edr/query_type/trajectory.adoc[]
 
 <<<
 
+[[rc_corridor-section]]
+==== Corridor query
+
+include::requirements/edr/query_type/corridor.adoc[]
+
+<<<
+
 [[rc_items-section]]
 ==== Items query
 
 include::requirements/edr/query_type/item.adoc[]
 
 <<<
-
+[[rc_locations-section]]
 ==== Locations query
 
 include::requirements/edr/query_type/locations.adoc[]
 
 <<<
-
+[[rc_instances-section]]
 ==== Instances query
 
 include::requirements/edr/query_type/instance.adoc[]

@@ -1,0 +1,15 @@
+[[req_edr_corridorWidth-response]]
+==== *Requirement {counter:req-id}: /req/edr/corridorWidth-response* Parameter corridorWidth response
+[width="90%",cols="2,6a"]
+|===
+^|A |The `corridorwidth` information is the total width of the required corridor. 
+^|B |The supported `corridorwidth` width units will be supplied by the query metatdata information. 
+
+[source,java]
+----
+corridorwidth = width "/" units
+---- 
+^|C |If the width value is the total width of the corridor. 
+^|D |The coordinates of the `coords` parameter define the centre point of the corridor. 
+^|E |If an unsupported units value is requested a `400` error should be returned. 
+|===
