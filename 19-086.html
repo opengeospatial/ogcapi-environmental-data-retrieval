@@ -619,18 +619,20 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#environmental-resource-section">9. Query, Environmental and Information Resources</a>
 <ul class="sectlevel2">
-<li><a href="#collections-access-section">9.1. Information Resources</a></li>
-<li><a href="#query-resources-section">9.2. Query Resources</a>
+<li><a href="#_requirements_class_collections">9.1. <strong>Requirements Class:</strong> Collections</a></li>
+<li><a href="#collections-access-section">9.2. Information Resources</a></li>
+<li><a href="#query-resources-section">9.3. Query Resources</a>
 <ul class="sectlevel3">
-<li><a href="#parameters-section">9.2.1. Shared query parameters</a></li>
-<li><a href="#rc_postion-section">9.2.2. Position query</a></li>
-<li><a href="#rc_radius-section">9.2.3. Radius query</a></li>
-<li><a href="#rc_area-section">9.2.4. Area query</a></li>
-<li><a href="#_cube_query">9.2.5. Cube query</a></li>
-<li><a href="#rc_trajectory-section">9.2.6. Trajectory query</a></li>
-<li><a href="#rc_items-section">9.2.7. Items query</a></li>
-<li><a href="#_locations_query">9.2.8. Locations query</a></li>
-<li><a href="#_instances_query">9.2.9. Instances query</a></li>
+<li><a href="#parameters-section">9.3.1. Shared query parameters</a></li>
+<li><a href="#rc_position-section">9.3.2. Position query</a></li>
+<li><a href="#rc_radius-section">9.3.3. Radius query</a></li>
+<li><a href="#rc_area-section">9.3.4. Area query</a></li>
+<li><a href="#rc_cube-section">9.3.5. Cube query</a></li>
+<li><a href="#rc_trajectory-section">9.3.6. Trajectory query</a></li>
+<li><a href="#rc_corridor-section">9.3.7. Corridor query</a></li>
+<li><a href="#rc_items-section">9.3.8. Items query</a></li>
+<li><a href="#rc_locations-section">9.3.9. Locations query</a></li>
+<li><a href="#rc_instances-section">9.3.10. Instances query</a></li>
 </ul>
 </li>
 </ul>
@@ -643,7 +645,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#cross-origin">10.4. Support for Cross-Origin Requests</a></li>
 <li><a href="#asynchronous_queries">10.5. Asynchronous queries</a></li>
 <li><a href="#coordinate_reference_system">10.6. Coordinate Reference Systems</a></li>
-<li><a href="#_encodings">10.7. Encodings</a></li>
+<li><a href="#rc_encoding-section">10.7. Encodings</a></li>
 <li><a href="#_link_headers">10.8. Link Headers</a></li>
 <li><a href="#rc_oas30-section">10.9. OpenAPI 3.0</a>
 <ul class="sectlevel3">
@@ -688,18 +690,22 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#req_edr_resolutiony-response"><strong>Requirement 25: /req/edr/resolutiony-response</strong> Parameter resolutiony response</a></li>
 <li><a href="#req_edr_resolutionz-definition"><strong>Requirement 26: /req/edr/resolutionz-definition</strong> Parameter resolutionz definition</a></li>
 <li><a href="#req_edr_resolutionz-response"><strong>Requirement 27: /req/edr/resolutionz-response</strong> Parameter resolutionz response</a></li>
-<li><a href="#req_core_http"><strong>Requirement 28: /req/core/http</strong> HTTP</a></li>
-<li><a href="#req_collections_crs84"><strong>Requirement 29: /req/collections/crs84</strong> CRS84</a></li>
+<li><a href="#req_edr_corridorHeight-definition"><strong>Requirement 28: /req/edr/corridorHeight-definition</strong> Parameter corridorHeight definition</a></li>
+<li><a href="#req_edr_corridorHeight-response"><strong>Requirement 29: /req/edr/corridorHeight-response</strong> Parameter corridorHeight response</a></li>
+<li><a href="#req_edr_corridorWidth-definition"><strong>Requirement 30: /req/edr/corridorWidth-definition</strong> Parameter corridorWidth definition</a></li>
+<li><a href="#req_edr_corridorWidth-response"><strong>Requirement 31: /req/edr/corridorWidth-response</strong> Parameter corridorWidth response</a></li>
+<li><a href="#req_core_http"><strong>Requirement 32: /req/core/http</strong> HTTP</a></li>
+<li><a href="#req_collections_crs84"><strong>Requirement 33: /req/collections/crs84</strong> CRS84</a></li>
 </ul>
 </li>
 <li><a href="#_requirements_test_class_openapi_3_0">A.3. Requirements Test Class OpenAPI 3.0</a>
 <ul class="sectlevel3">
 <li><a href="#rc_oas30"><strong>Requirements Class:</strong> OpenAPI 3.0</a></li>
-<li><a href="#req_oas30_oas-common"><strong>Requirement 30: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</a></li>
-<li><a href="#req_oas30_conformance"><strong>Requirement 31</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</a></li>
-<li><a href="#req_oas30_completeness"><strong>Requirement 32: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</a></li>
-<li><a href="#req_oas30_exceptions-codes"><strong>Requirement 33: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></li>
-<li><a href="#req_oas30_security"><strong>Requirement 34: /req/oas30/security</strong> OpenAPI 3.0 Security</a></li>
+<li><a href="#req_oas30_oas-common"><strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</a></li>
+<li><a href="#req_oas30_conformance"><strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</a></li>
+<li><a href="#req_oas30_completeness"><strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</a></li>
+<li><a href="#req_oas30_exceptions-codes"><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></li>
+<li><a href="#req_oas30_security"><strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</a></li>
 </ul>
 </li>
 </ul>
@@ -973,16 +979,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_conformance"><a class="anchor" href="#_conformance"></a>3. Conformance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Conformance with this standard shall be checked using the tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
+<p>Conformance with this standard shall be checked using the tests specified in Annex B (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
 </div>
 <div class="paragraph">
 <p>The one Standardization Target for this standard is Web APIs.</p>
 </div>
 <div class="paragraph">
-<p>OGC API-Common Part 1: Core and Part 2: Collections provide a common foundation for OGC API standards. This EDR API standard is as an extension of API-Common Core and Collections. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of API-Common.</p>
+<p>OGC API - Common - Core  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This EDR API standard is as an extension of OGC API - Common - Core. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common - Core.</p>
 </div>
 <div class="paragraph">
-<p>This standard identifies seven (7) Conformance Classes. The Conformance Classes implemented by an API are advertised through the <code>/conformance</code> path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.</p>
+<p>This standard identifies fourteen (14) Conformance Classes. The Conformance Classes implemented by an API are advertised through the <code>/conformance</code> path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.</p>
 </div>
 <div class="paragraph">
 <p>The conformance classes and their constituent requirements classes for OGC API-EDR are:</p>
@@ -1003,7 +1009,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#rc_collection-section">Collection</a>, one Requirement Class</p>
+<p><a href="#rc_collection-section">Collections</a>, one Requirement Class</p>
 </li>
 </ul>
 </div>
@@ -1022,7 +1028,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#rc_encodings-section">Encodings</a>, three Requirements Classes</p>
+<p><a href="#rc_encoding-section">Encodings</a>, three Requirements Classes</p>
 <div class="ulist">
 <ul>
 <li>
@@ -1059,22 +1065,40 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The OGC API-Common Part 1:Core standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using <em>OpenAPI 3.0</em>.</p>
 </div>
 <div class="paragraph">
-<p>The OpenAPI 3.0 Requirements Class is specified in <strong>OpenAPI 3.0 Requirements Class</strong> <a href="#rc_oas30-section">(Chapter 11)</a>.</p>
+<p>The OpenAPI 3.0 Requirements Class is specified in <strong>OpenAPI 3.0 Requirements Class</strong> <a href="#rc_oas30-section">(Chapter 10)</a>.</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#rc_queries-section">Queries</a>, three Requirements classes</p>
+<p><a href="#query-resources-section">Queries</a>, eight Requirements classes</p>
 <div class="ulist">
 <ul>
 <li>
 <p><a href="#rc_position-section">Position</a></p>
 </li>
 <li>
+<p><a href="#rc_radius-section">Radius</a></p>
+</li>
+<li>
 <p><a href="#rc_area-section">Area</a></p>
 </li>
 <li>
+<p><a href="#rc_cube-section">Cube</a></p>
+</li>
+<li>
 <p><a href="#rc_trajectory-section">Trajectory</a></p>
+</li>
+<li>
+<p><a href="#rc_corridor-section">Corridor</a></p>
+</li>
+<li>
+<p><a href="#rc_items-section">Items</a></p>
+</li>
+<li>
+<p><a href="#rc_locations-section">Locations</a></p>
+</li>
+<li>
+<p><a href="#rc_instances-section">Instances</a></p>
 </li>
 </ul>
 </div>
@@ -1088,7 +1112,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a position (with elevation and time) does simplify interoperability so support for <em>Position</em> is highly recommended.</p>
 </div>
 <div class="paragraph">
-<p>The Queries Requirements Classes are specified in <strong>Queries Requirements Classes</strong> <a href="#rc_queries-section">(Chapter 7)</a>.</p>
+<p>The Queries Requirements Classes are specified in <strong>Queries Requirements Classes</strong> <a href="#query-resources-section">(Chapter 9)</a>.</p>
 </div>
 </div>
 </div>
@@ -1977,6 +2001,47 @@ properties:
 <div id="rc_collection-section" class="paragraph">
 <p>An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns.</p>
 </div>
+<div class="sect2">
+<h3 id="_requirements_class_collections"><a class="anchor" href="#_requirements_class_collections"></a>9.1. <strong>Requirements Class:</strong> Collections</h3>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top" colspan="2" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-2/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-2/1.0/req/collections</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Target type</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Web API</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_core">Requirements Class "OAPI Core"</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#iso19107">ISO 19107</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#iso19108">ISO 19108</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#iso19111">ISO 19111</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#iso19108">ISO 19108</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dependency</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#iso8601_1">ISO 8601</a></p></td>
+</tr>
+</tbody>
+</table>
 <div class="paragraph">
 <p>Query resources related to Environmental Data resources (collections of spatiotemporal data) can be exposed using the path templates:</p>
 </div>
@@ -2011,8 +2076,9 @@ properties:
 <div class="paragraph">
 <p>The resources returned from each node in these templates are described in <a href="#query-resource-paths">Table 7</a>.</p>
 </div>
+</div>
 <div class="sect2">
-<h3 id="collections-access-section"><a class="anchor" href="#collections-access-section"></a>9.1. Information Resources</h3>
+<h3 id="collections-access-section"><a class="anchor" href="#collections-access-section"></a>9.2. Information Resources</h3>
 <table id="query-resource-paths" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 7. Information Resource Paths</caption>
 <colgroup>
@@ -2045,7 +2111,7 @@ properties:
 </div>
 </div>
 <div class="sect2">
-<h3 id="query-resources-section"><a class="anchor" href="#query-resources-section"></a>9.2. Query Resources</h3>
+<h3 id="query-resources-section"><a class="anchor" href="#query-resources-section"></a>9.3. Query Resources</h3>
 <table id="query-resource-table" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 8. Query Types</caption>
 <colgroup>
@@ -2104,7 +2170,7 @@ properties:
 </tbody>
 </table>
 <div class="sect3">
-<h4 id="parameters-section"><a class="anchor" href="#parameters-section"></a>9.2.1. Shared query parameters</h4>
+<h4 id="parameters-section"><a class="anchor" href="#parameters-section"></a>9.3.1. Shared query parameters</h4>
 <div class="paragraph">
 <p>Query parameters are used in URLs to define the resources which are returned on a GET request. The following are defined as standard shared parameters for use.</p>
 </div>
@@ -2241,7 +2307,7 @@ If none of the requested parameters exist in the collection a <code>400</code> m
 </div>
 </div>
 <div class="sect3">
-<h4 id="rc_postion-section"><a class="anchor" href="#rc_postion-section"></a>9.2.2. Position query</h4>
+<h4 id="rc_position-section"><a class="anchor" href="#rc_position-section"></a>9.3.2. Position query</h4>
 <div class="paragraph">
 <p>The Position query returns data for the requested coordinate, logic for identifying the best match for the coordinate will depend on the Collection and the filter constraints are defined by the following query parameters:</p>
 </div>
@@ -2381,7 +2447,7 @@ i.e. z=ALL</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rc_radius-section"><a class="anchor" href="#rc_radius-section"></a>9.2.3. Radius query</h4>
+<h4 id="rc_radius-section"><a class="anchor" href="#rc_radius-section"></a>9.3.3. Radius query</h4>
 <div class="paragraph">
 <p>The Radius query returns data within the defined radius of the requested coordinate the filter constraints are defined by the following query parameters:</p>
 </div>
@@ -2504,7 +2570,7 @@ i.e. z=ALL</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rc_area-section"><a class="anchor" href="#rc_area-section"></a>9.2.4. Area query</h4>
+<h4 id="rc_area-section"><a class="anchor" href="#rc_area-section"></a>9.3.4. Area query</h4>
 <div class="paragraph">
 <p>The Area query returns data within the polygon defined by the <code>coords</code> parameter, the results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
@@ -2645,7 +2711,7 @@ i.e. z=ALL</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cube_query"><a class="anchor" href="#_cube_query"></a>9.2.5. Cube query</h4>
+<h4 id="rc_cube-section"><a class="anchor" href="#rc_cube-section"></a>9.3.5. Cube query</h4>
 <div class="paragraph">
 <p>The <code>Cube</code> query returns a data cube defined by the  <code>coords</code>, <code>minz</code> and <code>maxz</code> parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the <code>coords</code> parameter.  The results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
@@ -2832,7 +2898,7 @@ South West England in WGS84 would look like</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="rc_trajectory-section"><a class="anchor" href="#rc_trajectory-section"></a>9.2.6. Trajectory query</h4>
+<h4 id="rc_trajectory-section"><a class="anchor" href="#rc_trajectory-section"></a>9.3.6. Trajectory query</h4>
 <div class="paragraph">
 <p>The Trajectory query returns data along the path defined by the <code>coords</code> parameter, <strong>the logic to match the data for the requested path will depend on and be defined by the Collection</strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
@@ -2955,7 +3021,146 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 </div>
 <div class="sect3">
-<h4 id="rc_items-section"><a class="anchor" href="#rc_items-section"></a>9.2.7. Items query</h4>
+<h4 id="rc_corridor-section"><a class="anchor" href="#rc_corridor-section"></a>9.3.7. Corridor query</h4>
+<div class="paragraph">
+<p>The Corridor query returns data along the path defined by the <code>coords</code> parameter, <strong>the logic to match the data for the requested path will depend on and be defined by the Collection</strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
+</div>
+<div class="sect4">
+<h5 id="_parameter_coords_6"><a class="anchor" href="#_parameter_coords_6"></a><strong>Parameter coords</strong></h5>
+<div class="paragraph">
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
+</div>
+<div class="paragraph">
+<p>"Intersects" means that the area specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
+</div>
+<div class="paragraph">
+<p>The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).</p>
+</div>
+<div class="paragraph">
+<p>A 2D trajectory, on the surface of earth with no time or height dimensions:
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)</p>
+</div>
+<div class="paragraph">
+<p>A 2D trajectory, on the surface of earth with all for the same time and no height dimension, time value defined in ISO8601 format by the <code>time</code> query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;time=2018-02-12T23:00:00Z</p>
+</div>
+<div class="paragraph">
+<p>A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the <code>z</code> query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;z=850</p>
+</div>
+<div class="paragraph">
+<p>A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the <code>time</code> query parameter and height defined in the collection height units by the <code>z</code> query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;time=2018-02-12T23:00:00Z&amp;z=850</p>
+</div>
+<div class="paragraph">
+<p>A 3D trajectory, on the surface of the earth but over a time range with no height values:
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)</p>
+</div>
+<div class="paragraph">
+<p>A 3D trajectory, on the surface of the earth but over a time range with a fixed height value, height defined in the collection height units by the <code>z</code> query parameter :
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&amp;z=200</p>
+</div>
+<div class="paragraph">
+<p>A 3D trajectory, through a 3D volume with height or depth, but no defined time:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)</p>
+</div>
+<div class="paragraph">
+<p>A 3D trajectory, through a 3D volume with height or depth, but a fixed time time value defined in ISO8601 format by the <code>time</code> query parameter:
+coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.48 0.4, 50.9 -3.36 0.5)&amp;time=2018-02-12T23:00:00Z</p>
+</div>
+<div class="paragraph">
+<p>A 4D trajectory, through a 3D volume but over a time range:
+coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)</p>
+</div>
+<div class="paragraph">
+<p>If the coords specifiy a 4D trajectory i.e. coords=LINESTRINGZM(&#8230;&#8203;) an error MUST be thrown by the server if the client application defines either the <code>z</code> or <code>time</code> query parameters</p>
+</div>
+<div class="paragraph">
+<p>where Z is the height value.
+<code>If the specified CRS does not define the height units the heights will units will default to metres above mean sea level</code></p>
+</div>
+<div class="paragraph">
+<p>and M the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+<a href="https://en.wikipedia.org/wiki/Unix_time" class="bare">https://en.wikipedia.org/wiki/Unix_time</a></p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 31. A basic surface route</div>
+<div class="content">
+<div class="paragraph">
+<p>From Bristol to Exeter</p>
+</div>
+<div class="paragraph">
+<p><code>coords=LINESTRING(51.14 -2.98,51.36 -2.87,51.03 -3.15,50.74 -3.48,50.9 -3.36)</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 32. A basic surface route with defined time intervals</div>
+<div class="content">
+<div class="paragraph">
+<p>From Bristol to Exeter</p>
+</div>
+<div class="paragraph">
+<p><code>coords=LINESTRING(51.14 -2.98 0 1560507000,51.36 -2.87 0 1560507600,51.03 -3.15 0 1560508200,50.74 -3.48 0 1560508500,50.9 -3.36 0 1560510240)</code></p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameter_z_5"><a class="anchor" href="#_parameter_z_5"></a><strong>Parameter z</strong></h5>
+<div class="paragraph">
+<p>Used when the entire corridor occurs at the same vertical height the z query parameter is used to define the height</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 33. A single vertical level</div>
+<div class="content">
+<div class="paragraph">
+<p>for instance if the entire route is at the 850hPa pressure level</p>
+</div>
+<div class="paragraph">
+<p>z=850</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameter_datetime_6"><a class="anchor" href="#_parameter_datetime_6"></a><a href="#time">Parameter datetime</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_resolutionx"><a class="anchor" href="#_resolutionx"></a><a href="#req_edr_resolutionx-definition">resolutionx</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_resolutionz"><a class="anchor" href="#_resolutionz"></a><a href="#req_edr_resolutionz-definition">resolutionz</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_corridorheight"><a class="anchor" href="#_corridorheight"></a><a href="#req_edr_corridorHeight-definition">corridorHeight</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_cooridorwidth"><a class="anchor" href="#_cooridorwidth"></a><a href="#req_edr_cooridorWidth-definition">cooridorWidth</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameter_parametername_6"><a class="anchor" href="#_parameter_parametername_6"></a><a href="#parametername">Parameter parametername</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameter_crs_6"><a class="anchor" href="#_parameter_crs_6"></a><a href="#crs">Parameter crs</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameter_outputformat_6"><a class="anchor" href="#_parameter_outputformat_6"></a><a href="#outputformat">Parameter outputformat</a></h5>
+<div style="page-break-after: always;"></div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="rc_items-section"><a class="anchor" href="#rc_items-section"></a>9.3.8. Items query</h4>
 <div class="paragraph">
 <p>The EDR Items query is an <a href="#ogc17-069r3">OGC API - Features</a> endpoint that
 may be used to catalog pre-existing EDR sampling features.
@@ -2994,7 +3199,7 @@ all other parameters for use with the Items query are defined by
 OGC API - Features.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 31. List available items</div>
+<div class="title">Example 34. List available items</div>
 <div class="content">
 <div class="paragraph">
 <p><code>/collections/{collectionId}/items</code></p>
@@ -3015,7 +3220,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 32. itemID</div>
+<div class="title">Example 35. itemID</div>
 <div class="content">
 <div class="paragraph">
 <p><code>/collections/{collectionId}/items/{itemID}</code></p>
@@ -3038,7 +3243,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </div>
 </div>
 <div class="sect3">
-<h4 id="_locations_query"><a class="anchor" href="#_locations_query"></a>9.2.8. Locations query</h4>
+<h4 id="rc_locations-section"><a class="anchor" href="#rc_locations-section"></a>9.3.9. Locations query</h4>
 <div class="sect4">
 <h5 id="_parameter_locationid"><a class="anchor" href="#_parameter_locationid"></a>Parameter locationID</h5>
 <div class="paragraph">
@@ -3048,7 +3253,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>Valid locationIDs must be discovered via another mechanism such as the <a href="#rc_items-section"><code>items</code></a> query.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 33. locationID</div>
+<div class="title">Example 36. locationID</div>
 <div class="content">
 <div class="paragraph">
 <p>/collections/{collectionID}/locations/{locationID}</p>
@@ -3063,24 +3268,24 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </div>
 </div>
 <div class="sect4">
-<h5 id="_parameter_datetime_6"><a class="anchor" href="#_parameter_datetime_6"></a><a href="#time">Parameter datetime</a></h5>
+<h5 id="_parameter_datetime_7"><a class="anchor" href="#_parameter_datetime_7"></a><a href="#time">Parameter datetime</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_parameter_parametername_6"><a class="anchor" href="#_parameter_parametername_6"></a><a href="#parametername">Parameter parametername</a></h5>
+<h5 id="_parameter_parametername_7"><a class="anchor" href="#_parameter_parametername_7"></a><a href="#parametername">Parameter parametername</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_parameter_crs_6"><a class="anchor" href="#_parameter_crs_6"></a><a href="#crs">Parameter crs</a></h5>
+<h5 id="_parameter_crs_7"><a class="anchor" href="#_parameter_crs_7"></a><a href="#crs">Parameter crs</a></h5>
 
 </div>
 <div class="sect4">
-<h5 id="_parameter_outputformat_6"><a class="anchor" href="#_parameter_outputformat_6"></a><a href="#outputformat">Parameter outputformat</a></h5>
+<h5 id="_parameter_outputformat_7"><a class="anchor" href="#_parameter_outputformat_7"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_instances_query"><a class="anchor" href="#_instances_query"></a>9.2.9. Instances query</h4>
+<h4 id="rc_instances-section"><a class="anchor" href="#rc_instances-section"></a>9.3.10. Instances query</h4>
 <div class="paragraph">
 <p>It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
 </div>
@@ -3177,7 +3382,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>The standards used for Web APIs are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_core_http"><strong>Requirement 28: /req/core/http</strong> HTTP</a></p>
+<p><a href="#req_core_http"><strong>Requirement 32: /req/core/http</strong> HTTP</a></p>
 </div>
 </div>
 <div class="sect2">
@@ -3355,18 +3560,18 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_collections_crs84"><strong>Requirement 29: /req/collections/crs84</strong> CRS84</a></p>
+<p><a href="#req_collections_crs84"><strong>Requirement 33: /req/collections/crs84</strong> CRS84</a></p>
 </div>
 <div class="paragraph">
 <p>The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system <code><a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a></code>.</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_encodings"><a class="anchor" href="#_encodings"></a>10.7. Encodings</h3>
+<h3 id="rc_encoding-section"><a class="anchor" href="#rc_encoding-section"></a>10.7. Encodings</h3>
 <div class="paragraph">
 <p>While the OGC API Common standard does not specify any mandatory encoding, the following encodings are recommended. See <a href="#overview">Clause 7 (Overview)</a> for a discussion of this issue.</p>
 </div>
-<div id="rec_html-section" class="paragraph">
+<div id="rc_html-section" class="paragraph">
 <p>HTML encoding recomendation:</p>
 </div>
 <table id="rec_core_html" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -3389,7 +3594,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </tr>
 </tbody>
 </table>
-<div id="rec_geojson-section" class="paragraph">
+<div id="rc_geojson-section" class="paragraph">
 <p>GeoJSON encoding recommendation:</p>
 </div>
 <table id="rec_core_geojson" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -3412,7 +3617,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </tr>
 </tbody>
 </table>
-<div id="rec_covjson-section" class="paragraph">
+<div id="rc_covjson-section" class="paragraph">
 <p>CoverageJSON encoding recommendation:</p>
 </div>
 <table id="rec_core_covjson" class="tableblock frame-all grid-all" style="width: 90%;">
@@ -3512,13 +3717,13 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>The OpenAPI 3.0 Requirements Class used in OGC API Common is applicable to the EDR API as well. So an implementation of EDR API which supports OpenAPI 3.0 as an API Description format must also comply with the OGC API-Common oas30 Conformance Class.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_oas30_oas-common"><strong>Requirement 30: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</a></p>
+<p><a href="#req_oas30_oas-common"><strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</a></p>
 </div>
 <div class="paragraph">
 <p>Implementations must also advertise conformance with this Requirements Class.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_oas30_conformance"><strong>Requirement 31</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</a></p>
+<p><a href="#req_oas30_conformance"><strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</a></p>
 </div>
 <div class="paragraph">
 <p>Two example OpenAPI documents are included in <a href="#oas-examples">Annex B</a>.</p>
@@ -3527,7 +3732,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="sect3">
 <h4 id="_complete_definition"><a class="anchor" href="#_complete_definition"></a>10.9.2. Complete definition</h4>
 <div class="paragraph">
-<p><a href="#req_oas30_completeness"><strong>Requirement 32: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</a></p>
+<p><a href="#req_oas30_completeness"><strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</a></p>
 </div>
 <div class="paragraph">
 <p>Note, for example, that APIs which are access-controlled (see <a href="#security">Security</a>), support web cache validation, CORS or that use HTTP redirection will make use of additional HTTP status codes beyond regular codes such as <code>200</code> for successful GET requests and <code>400</code>, <code>404</code> or <code>500</code> for error situations. See <a href="#http-status-codes">HTTP Status Codes</a>.</p>
@@ -3539,10 +3744,10 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="sect3">
 <h4 id="exceptions"><a class="anchor" href="#exceptions"></a>10.9.3. Exceptions</h4>
 <div class="paragraph">
-<p><a href="#req_oas30_exceptions-codes"><strong>Requirement 33: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></p>
+<p><a href="#req_oas30_exceptions-codes"><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 34. An exception response object definition</div>
+<div class="title">Example 37. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -3563,7 +3768,7 @@ content:
 <div class="sect2">
 <h3 id="security"><a class="anchor" href="#security"></a>10.10. Security</h3>
 <div class="paragraph">
-<p><a href="#req_oas30_security"><strong>Requirement 34: /req/oas30/security</strong> OpenAPI 3.0 Security</a></p>
+<p><a href="#req_oas30_security"><strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</a></p>
 </div>
 <div class="paragraph">
 <p>The OpenAPI specification currently supports the following <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#security-scheme-object">security schemes</a>:</p>
@@ -4423,7 +4628,155 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_core_http"><a class="anchor" href="#req_core_http"></a><strong>Requirement 28: /req/core/http</strong> HTTP</h4>
+<h4 id="req_edr_corridorHeight-definition"><a class="anchor" href="#req_edr_corridorHeight-definition"></a><strong>Requirement 28: /req/edr/corridorHeight-definition</strong> Parameter corridorHeight definition</h4>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation SHALL support a parameter `corridorz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: corridorz
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="req_edr_corridorHeight-response"><a class="anchor" href="#req_edr_corridorHeight-response"></a><strong>Requirement 29: /req/edr/corridorHeight-response</strong> Parameter corridorHeight response</h4>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the <code>corridorz</code> parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed intervals.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>corridorz</code> information is a the corridor height and the corridor units.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">corridorz = height "/" units</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The  height of corridor parameter is the total height of the required corridor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The coordinates of the <code>coords</code> parameter define the centre point of the corridor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If an unsupported units value is requested a <code>400</code> error should be returned.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="req_edr_corridorWidth-definition"><a class="anchor" href="#req_edr_corridorWidth-definition"></a><strong>Requirement 30: /req/edr/corridorWidth-definition</strong> Parameter corridorWidth definition</h4>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>Each resource collection operation SHALL support a parameter `corridorwidth`with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: corridorwidth
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="req_edr_corridorWidth-response"><a class="anchor" href="#req_edr_corridorWidth-response"></a><strong>Requirement 31: /req/edr/corridorWidth-response</strong> Parameter corridorWidth response</h4>
+<table class="tableblock frame-all grid-all" style="width: 90%;">
+<colgroup>
+<col style="width: 25%;">
+<col style="width: 75%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The <code>corridorwidth</code> information is the total width of the required corridor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The supported <code>corridorwidth</code> width units will be supplied by the query metatdata information.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">corridorwidth = width "/" units</code></pre>
+</div>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If the width value is the total width of the corridor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>The coordinates of the <code>coords</code> parameter define the centre point of the corridor.</p>
+</div></div></td>
+</tr>
+<tr>
+<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">E</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
+<p>If an unsupported units value is requested a <code>400</code> error should be returned.</p>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sect3">
+<h4 id="req_core_http"><a class="anchor" href="#req_core_http"></a><strong>Requirement 32: /req/core/http</strong> HTTP</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4446,7 +4799,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_collections_crs84"><a class="anchor" href="#req_collections_crs84"></a><strong>Requirement 29: /req/collections/crs84</strong> CRS84</h4>
+<h4 id="req_collections_crs84"><a class="anchor" href="#req_collections_crs84"></a><strong>Requirement 33: /req/collections/crs84</strong> CRS84</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4496,7 +4849,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_oas30_oas-common"><a class="anchor" href="#req_oas30_oas-common"></a><strong>Requirement 30: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</h4>
+<h4 id="req_oas30_oas-common"><a class="anchor" href="#req_oas30_oas-common"></a><strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4515,7 +4868,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_oas30_conformance"><a class="anchor" href="#req_oas30_conformance"></a><strong>Requirement 31</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</h4>
+<h4 id="req_oas30_conformance"><a class="anchor" href="#req_oas30_conformance"></a><strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4535,7 +4888,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_oas30_completeness"><a class="anchor" href="#req_oas30_completeness"></a><strong>Requirement 32: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</h4>
+<h4 id="req_oas30_completeness"><a class="anchor" href="#req_oas30_completeness"></a><strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4558,7 +4911,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_oas30_exceptions-codes"><a class="anchor" href="#req_oas30_exceptions-codes"></a><strong>Requirement 33: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</h4>
+<h4 id="req_oas30_exceptions-codes"><a class="anchor" href="#req_oas30_exceptions-codes"></a><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4575,7 +4928,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_oas30_security"><a class="anchor" href="#req_oas30_security"></a><strong>Requirement 34: /req/oas30/security</strong> OpenAPI 3.0 Security</h4>
+<h4 id="req_oas30_security"><a class="anchor" href="#req_oas30_security"></a><strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9738,7 +10091,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>C.2. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 35. JSON Landing Page</div>
+<div class="title">Example 38. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -9777,7 +10130,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>C.4. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 36. Conformance Response</div>
+<div class="title">Example 39. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -9800,7 +10153,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>C.5. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 37. Collections metadata response document</div>
+<div class="title">Example 40. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>The example below shows a service with two collections, one for observations and another for forecast data.  The forecast data is regenerated every hour so the collection provides access to multiple instances of the collection via an instances endpoint.</p>
@@ -10542,7 +10895,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>C.6. Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 38. Collection instance metadata response document</div>
+<div class="title">Example 41. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This is an example of the metadata returned by the instances query</p>
@@ -11957,7 +12310,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="location-metadata-examples"><a class="anchor" href="#location-metadata-examples"></a>C.7. Location Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 39. Collection instance metadata response document</div>
+<div class="title">Example 42. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>A example of the Locations metadata from a collection that supports the <code>Location</code> query pattern.</p>
@@ -12326,7 +12679,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-08-24 22:21:08 -0400
+Last updated 2020-08-25 15:27:03 -0400
 </div>
 </div>
 </body>
