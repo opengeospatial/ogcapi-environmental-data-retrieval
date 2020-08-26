@@ -18,4 +18,4 @@
 
 9. Some issues will be tagged as enhancements for future Milestones.
 
-10. Issues that affect multiple draft OGC API specifications should be checked against the [issues](https://github.com/orgs/opengeospatial/projects/4) at [OGC API - Common SWG](https://github.com/opengeospatial/oapi_common) to confirm whether the topic has already been registered, and then let your [SWG representatives](https://github.com/opengeospatial/oapi_common/wiki/Cross-SWG-Coordination-Representatives) know so that the issue can be flagged for discussion by the OGC API - Common SWG. If a new isue, please tag it with `Cross SWG`
+10. Issues that affect multiple draft OGC API specifications should be checked against the [issues](https://github.com/orgs/opengeospatial/projects/4) at [OGC API - Common SWG](https://github.com/opengeospatial/oapi_common) to confirm whether the topic has already been registered, and then let your [SWG representatives](https://github.com/opengeospatial/oapi_common/wiki/Cross-SWG-Coordination-Representatives) know so that the issue can be flagged for discussion by the OGC API - Common SWG. If a new isue, please tag it with `Cross-SWG Discussion`
