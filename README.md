@@ -1,8 +1,8 @@
 # Candidate specification for the Environmental Data Retrieval API
 
-[![Join the chat at https://gitter.im/opengeospatial/Environmental-Data-Retrieval-API](https://badges.gitter.im/opengeospatial/Environmental-Data-Retrieval-API.svg)](https://gitter.im/opengeospatial/Environmental-Data-Retrieval-API?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
 This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.opengeospatial.org/projects/groups/edr-apiswg).
+
+**EDR Public Comment Period is open and closes Septermber 28th.** [Go here for more information.](https://www.ogc.org/standards/requests/215)
 
 The **OGC API - Environmental Data Retrieval** candidate standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
 
