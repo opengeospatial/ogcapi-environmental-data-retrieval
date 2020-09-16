@@ -1,7 +1,7 @@
-// [[ats_collections_rc-op]]
+[[ats_core_rc-op]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-op*
+^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-op*
 ^|Test Purpose |Validate that resources can be identified and extracted from a Collection using query parameters.
 ^|Requirement |<<req_collections_rc-op,/req/collections/rc-op>>
 ^|Test Method |. For every resource collection identified in Collections, issue an HTTP GET request to the URL `/collections/{collectionId}/items` where `{collectionId}` is the `id` property for a Collection described in the Collections content.
@@ -11,24 +11,26 @@ Repeat these tests using the following parameter tests:
 
 *Bounding Box:*
 
-* Parameter <<ats_collections_rc-bbox-definition,/ats/collections/rc-bbox-definition>>
-* Response <<ats_collections_rc-bbox-response,/ats/collections/rc-bbox-response>>
+* Parameter <<ats_core_rc-bbox-definition,/conf/core/rc-bbox-definition>>
+* Response <<ats_core_rc-bbox-response,/conf/core/rc-bbox-response>>
 
 *DateTime:*
 
-* Parameter <<ats_collections_rc-time-definition,/ats/collections/rc-time-definition>>
-* Response <<ats_collections_rc-time-response,/ats/collections/rc-time-response>>
+* Parameter <<ats_time-definition,/conf/core/rc-time-definition>>
+* Response <<ats_time-response,/conf/core/rc-time-response>>
 
 Execute requests with combinations of the "bbox" and "datetime" query parameters
 and verify that only features are returned that match both selection criteria.
 |===
 
-[[ats_collections_rc-bbox-definition]]
+[[ats_core_rc-bbox-definition]]
 include::ATS_rc-bbox-definition.adoc[]
 
-[[ats_collections_rc-bbox-response]]
+[[ats_core_rc-bbox-response]]
 include::ATS_rc-bbox-response.adoc[]
 
+[[ats_time-definition]]
 include::ATS_rc-time-definition.adoc[]
 
+[[ats_time-response]]
 include::ATS_rc-time-response.adoc[]

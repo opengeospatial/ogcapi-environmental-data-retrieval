@@ -1,7 +1,7 @@
 // [[ats_edr-geojson_definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/edr-geojson/definition* 
+^|*Abstract Test {counter:ats-id}* |*/conf/edr-geojson/definition* 
 ^|Test Purpose |Verify support for the EDR GeoJSON Schema
 ^|Requirement |<<req_edr-geojson_definition,/req/edr-geojson/definition>>
 ^|Test Method|. A resource is requested with response media type of `application/json` and adheres to the EDR Feature Collection GeoJSON Schema.

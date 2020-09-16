@@ -1,7 +1,7 @@
 [[ats_edr-geojson_content]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/edr-geojson/content*
+^|*Abstract Test {counter:ats-id}* |*/conf/edr-geojson/content*
 ^|Test Purpose |Verify the content of a EDR GeoJSON document given an input document and schema.
 ^|Requirement |<<req_edr-geojson_content,/req/edr-geojson/content>>
 ^|Test Method |. Validate that the document is an EDR GeoJSON document.

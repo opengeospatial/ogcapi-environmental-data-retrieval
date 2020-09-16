@@ -1,9 +1,9 @@
 // [[ats_collections_rc-parametername-response]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-parametername-response*
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-parametername-response*
 ^|Test Purpose |Validate that the parametername query parameters are processed correctly.
-^|Requirement |<<req_collections_rc-parametername-response,/req/collections/rc-parametername-response>>
+^|Requirement |<<req_collections_rc-parametername-response,/req/edr/rc-parametername-response>>
 ^|Test Method |. Verify that only resources for the requested parameters were included in the result set
-. Validate that the parametername parameter complies with the syntax described in <<req_collections_rc-time-response,/req/collections/edr/rc-parameters-response>>.
+. Validate that the parametername parameter complies with the syntax described in <<req_core_rc-time-response,/req/edr/rc-parameters-response>>.
 |===

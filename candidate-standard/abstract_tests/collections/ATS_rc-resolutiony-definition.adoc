@@ -1,9 +1,9 @@
 [[ats_collections_rc-resolutiony-definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-resolutiony-definition*
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-resolutiony-definition*
 ^|Test Purpose |Validate that the `resolutiony` query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-resolutiony-definition,/req/collections/rc-resolutiony-definition>>
+^|Requirement |<<req_collections_rc-resolutiony-definition,/req/edr/rc-resolutiony-definition>>
 ^|Test Method |Verify that the `resolutiony` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

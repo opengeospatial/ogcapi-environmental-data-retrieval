@@ -1,9 +1,9 @@
 [[ats_collections_rc-resolutionz-definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-resolutionz-definition*
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-resolutionz-definition*
 ^|Test Purpose |Validate that the resolutionz query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-resolutionz-definition,/req/collections/rc-resolutionz-definition>>
+^|Requirement |<<req_collections_rc-resolutionz-definition,/req/edr/rc-resolutionz-definition>>
 ^|Test Method |Verify that the `resolutionz` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

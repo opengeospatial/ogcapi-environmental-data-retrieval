@@ -70,7 +70,7 @@ As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <<SDWBP,Best Pr
 
 For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.
 
-<<req_collections_crs84>>
+<<req_core_crs84>>
 
 The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`. 
 

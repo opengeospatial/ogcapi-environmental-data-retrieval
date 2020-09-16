@@ -44,7 +44,7 @@ include::collections/ATS_src-md-success.adoc[]
 
 NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
 
-include::collections/ATS_rc-op.adoc[]
+include::core/ATS_rc-op.adoc[]
 
 include::collections/ATS_rc-response.adoc[]
 
@@ -67,7 +67,7 @@ These tests are invoked by other tests.
 
 ===== Items
 
-include::collections/ATS_rc-md-collection-info.adoc[]
+include::collections/ATS_rc-collection-info.adoc[]
 
 include::collections/ATS_rc-md-collection-info-links.adoc[]
 
