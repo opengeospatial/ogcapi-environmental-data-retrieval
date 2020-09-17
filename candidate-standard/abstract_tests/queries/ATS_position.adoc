@@ -1,25 +1,25 @@
 [[ats_position]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/position*
+^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query if no query parameters are specified.
 ^|Requirement |<<req_position,/req/queries/position>>
 ^|Test Method |. No query parameters are specified
 . Validate that a document was returned with a status code 400.
 
-^|*Abstract Test {counter:ats-id}* |*/ats/position*
+^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter is not specified.
 ^|Requirement |<<rreq_position,/req/queries/position>>
 ^|Test Method |. coords query parameter is not specified
 . Validate that a document was returned with a status code 400.
 
-^|*Abstract Test {counter:ats-id}* |*/ats/position*
+^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter does not contain a valid POINT Well Known Text value.
 ^|Requirement |<<rreq_position,/req/queries/position>>
 ^|Test Method |. Check coords query parameter is a valid Well Known Text Point value 
 . Validate that a document was returned with a status code 400.
 
-^|*Abstract Test {counter:ats-id}* |*/ats/position*
+^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Position` query using  query parameters.
 ^|Requirement |<<req_position,/req/queries/position>>
 ^|Test Method |. Test with valid query parameters
@@ -29,22 +29,22 @@ Repeat these tests using the following parameter tests:
 
 *Coordinates*
 
-* Parameter <<../../requirements/collections/edr/REQ_rc-coords-definition,/ats/collections/rc-coords-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-coords-response,/ats/collections/rc-coords-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-coords-definition,/conf/collections/rc-coords-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-coords-response,/conf/collections/rc-coords-response>>
 
 *VerticalLevel*
 
-* Parameter <<../../requirements/collections/edr/REQ_rc-z-definition,/ats/collections/rc-z-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-z-response,/ats/collections/rc-z-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-z-definition,/conf/collections/rc-z-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-z-response,/conf/collections/rc-z-response>>
 
 *Parameters*
-* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/ats/collections/rc-parametername-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/ats/collections/rc-parametername-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/conf/collections/rc-parametername-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/conf/collections/rc-parametername-response>>
 
 *DateTime*
 
-* Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/ats/collections/rc-time-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-time-response,/ats/collections/rc-time-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/conf/collections/rc-time-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-time-response,/conf/collections/rc-time-response>>
 
 Execute requests with combinations of the "coords","time","parametername","z","crs" and "outputformat" query parameters
 and verify that only information that matches the selection criteria is returned.
@@ -58,9 +58,9 @@ include::../collections/ATS_rc-z-definition.adoc[]
 
 include::../collections/ATS_rc-z-response.adoc[]
 
-include::../collections/ATS_rc-time-definition.adoc[]
+include::../core/ATS_rc-time-definition.adoc[]
 
-include::../collections/ATS_rc-time-response.adoc[]
+include::../core/ATS_rc-time-response.adoc[]
 
 include::../collections/ATS_rc-parametername-definition.adoc[]
 

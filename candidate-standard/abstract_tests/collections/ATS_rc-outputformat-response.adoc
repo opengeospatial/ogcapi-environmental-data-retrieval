@@ -1,7 +1,7 @@
 // [[ats_collections_rc-outputformat-response]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-outputformat-response*
+^|*Abstract Test {counter:ats-id}* |*/conf/collections/rc-outputformat-response*
 ^|Test Purpose |Validate that the outputformat query parameters are processed correctly.
 ^|Requirement |<<req_collections_rc-outputformat-response,/req/collections/rc-outputformat-response>>
 ^|Test Method |. Verify that the response is returned in the requested data format

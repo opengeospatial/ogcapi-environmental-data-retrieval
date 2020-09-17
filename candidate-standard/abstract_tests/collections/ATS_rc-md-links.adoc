@@ -1,9 +1,9 @@
-[[ats_collections_rc-md-links]]
+[[ats_core_rc-collection-info-links]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-md-links* 
+^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-collection-info-links* 
 ^|Test Purpose |Validate that the required links are included in the Collections Metadata document.
-^|Requirement |<<req_collections_rc-md-links,/req/collections/rc-md-links>>
+^|Requirement |<<req_collections_rc-collection-info-links,/req/core/rc-collection-info-links>>
 ^|Test Method |Verify that the response document includes:
 
 . a link to this response document (relation: `self`),

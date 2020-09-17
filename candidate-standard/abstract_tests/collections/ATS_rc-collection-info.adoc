@@ -1,0 +1,16 @@
+// [[ats_edr_rc-collection-info]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-collection-info*
+^|Test Purpose |Validate that each collection provided by the server is described in the Collections Metadata.
+^|Requirement |<<req_edr_rc-collection-info,/req/edr/rc-collection-info>>
+^|Test Method |. Verify that all collections listed in the `collections` array of the Collections Metadata exist.
+. Verify that each collection entry includes an identifier.
+. Verify that each collection entry includes links in accordance with <<ats_core_rc-collection-info-links,/core/rc-collection-info-links>>.
+. Verify that if the collection entry includes an extent property, the property complies with <<ats_core_rc-extent,/core/rc-extent>>
+. Verify that if the collection entry includes an crs property, the property complies with <<ats_edr_CRS,/edr/rc-crs>>
+. Verify that if the collection entry includes an parameters property, the property complies with <<ats_edr_rc-parameters,/edr/rc-parameters>>
+. Validate each collection entry for all supported media types using the resources and tests identified in <<collection-entry-schema>>
+|===
+
+The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.

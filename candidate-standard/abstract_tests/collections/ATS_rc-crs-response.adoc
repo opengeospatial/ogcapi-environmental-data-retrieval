@@ -1,9 +1,9 @@
-// [[ats_collections_rc-crs-response]]
+// [[ats_edr_rc-crs-response]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/ats/collections/rc-crs-response*
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-outputCRS-response*
 ^|Test Purpose |Validate that the crs query parameters are processed correctly.
-^|Requirement |<<req_collections_rc-crs-response,/req/collections/rc-crs-response>>
+^|Requirement |<<req_edr_rc-outputCRS-response,/req/edr/rc-outputCRS-response>>
 ^|Test Method |. Verify that the geometry of the resources returned are valid for the requested coordinate reference system
 ^|Test Method |. Verify that all crs values defined in the collections metadata are supported by the collection
 . Validate that the crs parameter complies with the syntax described in <<req_collections_rc-crs-response,/req/collections/edr/rc-crs-response>>.

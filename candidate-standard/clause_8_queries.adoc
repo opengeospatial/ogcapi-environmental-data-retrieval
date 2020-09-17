@@ -78,7 +78,7 @@ Query parameters are used in URLs to define the resources which are returned on 
 [[time]]
 ===== Parameter datetime
 
-<<req_core_rec-datetime-parameter>>
+<<req_core_rc-datetime-parameter>>
 
 The `datetime` parameter is defined in API-Common. The following information is provided here as a convenience.
 

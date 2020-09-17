@@ -21,7 +21,7 @@ include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
 
-include::requirements/core/REQ_rec-datetime-parameter.adoc[]
+include::requirements/core/REQ_rc-datetime-parameter.adoc[]
 
 include::requirements/edr/REQ_rc-parameters-definition.adoc[]
 

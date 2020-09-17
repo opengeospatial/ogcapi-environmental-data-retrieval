@@ -71,11 +71,6 @@ include::requirements/core/REQ_rc-bbox-definition.adoc[]
 
 include::requirements/core/REQ_rc-bbox-response.adoc[]
 
-==== Features
-
-include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-bbox-definition.adoc[]
-
-include::c:/Workspace/GitHub/WFS_FES/core/standard/requirements/core/REQ_fc-bbox-response.adoc[]
 
 === Extent (1)
 

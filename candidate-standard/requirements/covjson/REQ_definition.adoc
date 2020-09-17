@@ -1,0 +1,9 @@
+[[req_covjson_definition]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/covjson/definition* 
+^|A |`200`-responses of the server SHALL support the following media types:
+
+* `application/prs.coverage+json` for resources that include data content, and
+* `application/json` for all other resources.
+|===
