@@ -35,9 +35,9 @@ The EDR API Standard Working Group charter lists initial deliverables in [sectio
 Summarizing these sections. EDR Query Patterns will be:  
 - **1 - Position**: Retrieve data for point/position or identified location with n parameters at a time instant, or a timeseries, or a vertical profile for a time instant.
 - **2 - Area**:  Retrieve data within a polygon or rectangular tile/subset at a time instant, or a timeseries, or a vertical profile for a time instant.
-- **3 - Trajectory and Corridor**: Retrieve data along a 2D, 3D or4D trajectory or within a defined corridor around a trajectory.
+- **3 - Trajectory and Corridor**: Retrieve data along a 2D, 3D or 4D trajectory or within a defined corridor around a trajectory.
 
-- **4 - Ensembles**: Support for explicitly related ensembles of EDR resources.[Note: This will be in a later version]
+- **4 - Ensembles**: Support for explicitly related ensembles of EDR resources. [Note: This will be in a later version]
 
 These patterns would be accessed through endpoints like:
 
