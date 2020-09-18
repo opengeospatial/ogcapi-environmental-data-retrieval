@@ -667,7 +667,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#req_core_conformance"><strong>Requirement 2: /req/core/conformance</strong> Core conformance classes</a></li>
 <li><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></li>
 <li><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></li>
-<li><a href="#req_core_rec-datetime-parameter"><strong>Requirement 5: /req/core/rec-datetime-parameter</strong> Datetime parameter</a></li>
+<li><a href="#req_core_rc-datetime-parameter"><strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</a></li>
 <li><a href="#req_edr_parameters-definition"><strong>Requirement 6: /req/edr/parameters-definition</strong> Parameter parametername definition</a></li>
 <li><a href="#req_edr_parameters-response"><strong>Requirement 7: /req/edr/parameters-response</strong> Parameter parametername response</a></li>
 <li><a href="#req_edr_outputCRS-definition"><strong>Requirement 8: /req/edr/outputCRS-definition</strong> Parameter crs definition</a></li>
@@ -695,7 +695,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#req_edr_corridorWidth-definition"><strong>Requirement 30: /req/edr/corridorWidth-definition</strong> Parameter corridorWidth definition</a></li>
 <li><a href="#req_edr_corridorWidth-response"><strong>Requirement 31: /req/edr/corridorWidth-response</strong> Parameter corridorWidth response</a></li>
 <li><a href="#req_core_http"><strong>Requirement 32: /req/core/http</strong> HTTP</a></li>
-<li><a href="#req_collections_crs84"><strong>Requirement 33: /req/collections/crs84</strong> CRS84</a></li>
+<li><a href="#req_core_crs84"><strong>Requirement 33: /req/core/crs84</strong> CRS84</a></li>
 </ul>
 </li>
 <li><a href="#_requirements_test_class_openapi_3_0">A.3. Requirements Test Class OpenAPI 3.0</a>
@@ -2186,7 +2186,7 @@ properties:
 <div class="sect4">
 <h5 id="time"><a class="anchor" href="#time"></a>Parameter datetime</h5>
 <div class="paragraph">
-<p><a href="#req_core_rec-datetime-parameter"><strong>Requirement 5: /req/core/rec-datetime-parameter</strong> Datetime parameter</a></p>
+<p><a href="#req_core_rc-datetime-parameter"><strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</a></p>
 </div>
 <div class="paragraph">
 <p>The <code>datetime</code> parameter is defined in API-Common. The following information is provided here as a convenience.</p>
@@ -3560,7 +3560,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_collections_crs84"><strong>Requirement 33: /req/collections/crs84</strong> CRS84</a></p>
+<p><a href="#req_core_crs84"><strong>Requirement 33: /req/core/crs84</strong> CRS84</a></p>
 </div>
 <div class="paragraph">
 <p>The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system <code><a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a></code>.</p>
@@ -3964,7 +3964,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_core_rec-datetime-parameter"><a class="anchor" href="#req_core_rec-datetime-parameter"></a><strong>Requirement 5: /req/core/rec-datetime-parameter</strong> Datetime parameter</h4>
+<h4 id="req_core_rc-datetime-parameter"><a class="anchor" href="#req_core_rc-datetime-parameter"></a><strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4799,7 +4799,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect3">
-<h4 id="req_collections_crs84"><a class="anchor" href="#req_collections_crs84"></a><strong>Requirement 33: /req/collections/crs84</strong> CRS84</h4>
+<h4 id="req_core_crs84"><a class="anchor" href="#req_core_crs84"></a><strong>Requirement 33: /req/core/crs84</strong> CRS84</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5357,7 +5357,7 @@ explode: false</code></pre>
 <h4 id="_general_tests_2"><a class="anchor" href="#_general_tests_2"></a>B.3.1. General Tests</h4>
 <div class="sect4">
 <h5 id="_crs_84"><a class="anchor" href="#_crs_84"></a>CRS 84</h5>
-<table id="ats_collections_crs84" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_core_crs84" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5366,7 +5366,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 8</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/crs84</strong></p>
+<p><strong>/conf/core/crs84</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5378,7 +5378,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_crs84">/req/collections/crs84</a></p>
+<p><a href="#req_core_crs84">/req/core/crs84</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5451,7 +5451,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 10</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections_rc-md-success</strong></p>
+<p><strong>/conf/rc-md-success</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5463,7 +5463,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-success">/req/collections/rc-md-success</a>, <a href="#req_collections_crs84">/req/collections/crs84</a></p>
+<p><a href="#req_collections_rc-md-success">/req/collections/rc-md-success</a>, <a href="#req_edr_rc-crs">/req/edr/rc-crs</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5471,10 +5471,10 @@ explode: false</code></pre>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Validate that all response documents comply with <a href="#ats_collections_rc-md-links">/conf/collections/rc-md-links</a></p>
+<p>Validate that all response documents comply with <a href="#ats_collection-info-links">/conf/collections/rc-collection-info-links</a></p>
 </li>
 <li>
-<p>In case the response includes a "crs" property, validate that the first value is either "http://www.opengis.net/def/crs/OGC/1.3/CRS84" or "http://www.opengis.net/def/crs/OGC/0/CRS84h"</p>
+<p>In case the response includes a "crs" property, validate that it includes a valid Well Know Text definition</p>
 </li>
 <li>
 <p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 11</a></p>
@@ -5591,7 +5591,7 @@ explode: false</code></pre>
 </div>
 <div class="sect4">
 <h5 id="_collection_extent"><a class="anchor" href="#_collection_extent"></a>Collection Extent</h5>
-<table id="ats_collections_rc-md-extent" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_core_rc-md-extent" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5600,7 +5600,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 13</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/coollections/rc-md-extent</strong></p>
+<p><strong>/conf/core/rc-extent</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5612,7 +5612,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-extent">/req/collections/rc-md-extent</a></p>
+<p><a href="#req_core_rc-extent">/req/core/rc-extent</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5627,6 +5627,12 @@ explode: false</code></pre>
 </li>
 <li>
 <p>A temporal extent of <code>null</code> indicates an open time interval.</p>
+</li>
+<li>
+<p>Verify that if the <code>extent</code> provides vertical intervals that include all vertical geometries in this collection.</p>
+</li>
+<li>
+<p>A vertical extent of <code>null</code> indicates an open vertical interval.</p>
 </li>
 </ol>
 </div></div></td>
@@ -5645,7 +5651,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 14</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-md-collection-info</strong></p>
+<p><strong>/conf/edr/rc-collection-info</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5657,7 +5663,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-collection-info">/req/collections/rc-md-collection-info</a></p>
+<p><a href="#req_edr_rc-collection-info">/req/edr/rc-collection-info</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5665,22 +5671,22 @@ explode: false</code></pre>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Verify that there is an entry in the <code>collections</code> array of the Collections Metadata for each collection provided by the API.</p>
+<p>Verify that all collections listed in the <code>collections</code> array of the Collections Metadata exist.</p>
 </li>
 <li>
 <p>Verify that each collection entry includes an identifier.</p>
 </li>
 <li>
-<p>Verify that each collection entry includes links in accordance with <a href="#ats_collections_rc-md-query-links">/collections/rc-md-query-links</a>.</p>
+<p>Verify that each collection entry includes links in accordance with <a href="#ats_core_rc-collection-info-links">/core/rc-collection-info-links</a>.</p>
 </li>
 <li>
-<p>Verify that if the collection entry includes an extent property, that that property complies with <a href="#ats_collections_rc-md-extent">/collections/rc-md-extent</a></p>
+<p>Verify that if the collection entry includes an extent property, the property complies with <a href="#ats_core_rc-extent">/core/rc-extent</a></p>
 </li>
 <li>
-<p>Verify that if the collection entry includes an crs property, that that property complies with <a href="#ats_collections_rc-md-crs">/collections/rc-md-crs</a></p>
+<p>Verify that if the collection entry includes an crs property, the property complies with <a href="#ats_edr_CRS">/edr/rc-crs</a></p>
 </li>
 <li>
-<p>Verify that if the collection entry includes an parameters property, that that property complies with <a href="#ats_collections_rc-md-parameters">/collections/rc-md-parameters</a></p>
+<p>Verify that if the collection entry includes an parameters property, the property complies with <a href="#ats_edr_rc-parameters">/edr/rc-parameters</a></p>
 </li>
 <li>
 <p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 12</a></p>
@@ -5729,7 +5735,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 15</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-md-query-links</strong></p>
+<p><strong>/conf/edr/rc-md-query-links</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5741,7 +5747,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-query-links">/req/collections/rc-md-query-links</a></p>
+<p><a href="#req_edr_rc-md-query-links">/req/edr/rc-md-query-links</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5765,7 +5771,7 @@ explode: false</code></pre>
 </div>
 <div class="sect4">
 <h5 id="_collection_links"><a class="anchor" href="#_collection_links"></a>Collection Links</h5>
-<table id="ats_collections_rc-md-links" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_core_rc-collection-info-links" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -5774,7 +5780,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 16</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-md-links</strong></p>
+<p><strong>/conf/core/rc-collection-info-links</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -5786,7 +5792,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-links">/req/collections/rc-md-links</a></p>
+<p><a href="#req_collections_rc-collection-info-links">/req/core/rc-collection-info-links</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6822,7 +6828,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 36</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-coords-definition</strong></p>
+<p><strong>/conf/edr/rc-coords-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6834,7 +6840,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-coords-definition">/req/collections/rc-coords-definition</a></p>
+<p><a href="#req_edr_rc-coords-definition">/req/edr/rc-coords-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6875,7 +6881,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 37</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-coords-response</strong></p>
+<p><strong>/conf/edr/rc-coords-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6887,7 +6893,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-coords-response">/req/collections/rc-coords-response</a></p>
+<p><a href="#req_edr_rc-coords-response">/req/edr/rc-coords-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6924,7 +6930,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 38</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-z-definition</strong></p>
+<p><strong>/conf/edr/rc-z-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6936,7 +6942,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-z-definition">/req/collections/rc-z-definition</a></p>
+<p><a href="#req_collections_rc-z-definition">/req/edr/rc-z-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6967,7 +6973,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 39</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-z-response</strong></p>
+<p><strong>/conf/edr/rc-z-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6979,7 +6985,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-z-response">/req/collections/rc-z-response</a></p>
+<p><a href="#req_collections_rc-z-response">/req/edr/rc-z-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -6990,7 +6996,7 @@ explode: false</code></pre>
 <p>Verify that only resources that have a vertical geometry that intersects the vertical information in the <code>z</code> parameter were included in the result set</p>
 </li>
 <li>
-<p>Validate that the vertical level parameter complies with the syntax described in <a href="#req_collections_rc-z-response">/req/collections/edr/REQ_rc-z-response</a>.</p>
+<p>Validate that the vertical level parameter complies with the syntax described in <a href="#req_collections_rc-z-response">/req/edr/REQ_rc-z-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7006,7 +7012,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 40</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-definition</strong></p>
+<p><strong>/conf/core/rc-time-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7018,7 +7024,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-definition">/req/collections/rc-time-definition</a></p>
+<p><a href="#req_collections_rc-time-definition">/req/core/rc-time-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7049,7 +7055,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 41</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-response</strong></p>
+<p><strong>/conf/core/rc-time-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7061,7 +7067,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a></p>
+<p><a href="#req_core_rc-time-response">/req/core/rc-time-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7075,7 +7081,7 @@ explode: false</code></pre>
 <p>Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set</p>
 </li>
 <li>
-<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a>.</p>
+<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/core/rc-time-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7103,7 +7109,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-definition">/req/collections/rc-parametername-definition</a></p>
+<p><a href="#req_collections_rc-parametername-definition">/req/edr/rc-parametername-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7134,7 +7140,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 43</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-parametername-response</strong></p>
+<p><strong>/conf/edr/rc-parametername-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7146,7 +7152,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-response">/req/collections/rc-parametername-response</a></p>
+<p><a href="#req_collections_rc-parametername-response">/req/edr/rc-parametername-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7157,7 +7163,7 @@ explode: false</code></pre>
 <p>Verify that only resources for the requested parameters were included in the result set</p>
 </li>
 <li>
-<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/edr/rc-parameters-response</a>.</p>
+<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/edr/rc-parameters-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7173,7 +7179,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 44</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-definition</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7185,7 +7191,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-definition">/req/collections/rc-crs-definition</a></p>
+<p><a href="#req_edr_rc-crs-definition">/req/edr/rc-outputCRS-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7216,7 +7222,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 45</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-response</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7228,7 +7234,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-response">/req/collections/rc-crs-response</a></p>
+<p><a href="#req_edr_rc-outputCRS-response">/req/edr/rc-outputCRS-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7265,7 +7271,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 46</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-outputformat-definition</strong></p>
+<p><strong>/conf/edr/rc-outputformat-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7277,7 +7283,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-outputformat-definition">/req/collections/rc-outputformat-definition</a></p>
+<p><a href="#req_collections_rc-outputformat-definition">/req/edr/rc-outputformat-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7543,7 +7549,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 52</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-coords-definition</strong></p>
+<p><strong>/conf/edr/rc-coords-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7555,7 +7561,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-coords-definition">/req/collections/rc-coords-definition</a></p>
+<p><a href="#req_edr_rc-coords-definition">/req/edr/rc-coords-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7596,7 +7602,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 53</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-coords-response</strong></p>
+<p><strong>/conf/edr/rc-coords-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7608,7 +7614,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-coords-response">/req/collections/rc-coords-response</a></p>
+<p><a href="#req_edr_rc-coords-response">/req/edr/rc-coords-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7645,7 +7651,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 54</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-z-definition</strong></p>
+<p><strong>/conf/edr/rc-z-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7657,7 +7663,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-z-definition">/req/collections/rc-z-definition</a></p>
+<p><a href="#req_collections_rc-z-definition">/req/edr/rc-z-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7688,7 +7694,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 55</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-z-response</strong></p>
+<p><strong>/conf/edr/rc-z-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7700,7 +7706,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-z-response">/req/collections/rc-z-response</a></p>
+<p><a href="#req_collections_rc-z-response">/req/edr/rc-z-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7711,7 +7717,7 @@ explode: false</code></pre>
 <p>Verify that only resources that have a vertical geometry that intersects the vertical information in the <code>z</code> parameter were included in the result set</p>
 </li>
 <li>
-<p>Validate that the vertical level parameter complies with the syntax described in <a href="#req_collections_rc-z-response">/req/collections/edr/REQ_rc-z-response</a>.</p>
+<p>Validate that the vertical level parameter complies with the syntax described in <a href="#req_collections_rc-z-response">/req/edr/REQ_rc-z-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7727,7 +7733,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 56</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-definition</strong></p>
+<p><strong>/conf/core/rc-time-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7739,7 +7745,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-definition">/req/collections/rc-time-definition</a></p>
+<p><a href="#req_collections_rc-time-definition">/req/core/rc-time-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7770,7 +7776,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 57</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-response</strong></p>
+<p><strong>/conf/core/rc-time-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7782,7 +7788,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a></p>
+<p><a href="#req_core_rc-time-response">/req/core/rc-time-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7796,7 +7802,7 @@ explode: false</code></pre>
 <p>Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set</p>
 </li>
 <li>
-<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a>.</p>
+<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/core/rc-time-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7824,7 +7830,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-definition">/req/collections/rc-parametername-definition</a></p>
+<p><a href="#req_collections_rc-parametername-definition">/req/edr/rc-parametername-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7855,7 +7861,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 59</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-parametername-response</strong></p>
+<p><strong>/conf/edr/rc-parametername-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7867,7 +7873,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-response">/req/collections/rc-parametername-response</a></p>
+<p><a href="#req_collections_rc-parametername-response">/req/edr/rc-parametername-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7878,7 +7884,7 @@ explode: false</code></pre>
 <p>Verify that only resources for the requested parameters were included in the result set</p>
 </li>
 <li>
-<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/edr/rc-parameters-response</a>.</p>
+<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/edr/rc-parameters-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7894,7 +7900,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 60</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-definition</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7906,7 +7912,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-definition">/req/collections/rc-crs-definition</a></p>
+<p><a href="#req_edr_rc-crs-definition">/req/edr/rc-outputCRS-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7937,7 +7943,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 61</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-response</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7949,7 +7955,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-response">/req/collections/rc-crs-response</a></p>
+<p><a href="#req_edr_rc-outputCRS-response">/req/edr/rc-outputCRS-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7986,7 +7992,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 62</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-outputformat-definition</strong></p>
+<p><strong>/conf/edr/rc-outputformat-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -7998,7 +8004,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-outputformat-definition">/req/collections/rc-outputformat-definition</a></p>
+<p><a href="#req_collections_rc-outputformat-definition">/req/edr/rc-outputformat-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8437,7 +8443,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 74</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-coords-definition</strong></p>
+<p><strong>/conf/edr/rc-coords-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8449,7 +8455,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-coords-definition">/req/collections/rc-coords-definition</a></p>
+<p><a href="#req_edr_rc-coords-definition">/req/edr/rc-coords-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8490,7 +8496,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 75</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-coords-response</strong></p>
+<p><strong>/conf/edr/rc-coords-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8502,7 +8508,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-coords-response">/req/collections/rc-coords-response</a></p>
+<p><a href="#req_edr_rc-coords-response">/req/edr/rc-coords-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8551,7 +8557,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-definition">/req/collections/rc-parametername-definition</a></p>
+<p><a href="#req_collections_rc-parametername-definition">/req/edr/rc-parametername-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8582,7 +8588,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 77</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-parametername-response</strong></p>
+<p><strong>/conf/edr/rc-parametername-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8594,7 +8600,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-response">/req/collections/rc-parametername-response</a></p>
+<p><a href="#req_collections_rc-parametername-response">/req/edr/rc-parametername-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8605,7 +8611,7 @@ explode: false</code></pre>
 <p>Verify that only resources for the requested parameters were included in the result set</p>
 </li>
 <li>
-<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/edr/rc-parameters-response</a>.</p>
+<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/edr/rc-parameters-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -8621,7 +8627,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 78</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-definition</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8633,7 +8639,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-definition">/req/collections/rc-crs-definition</a></p>
+<p><a href="#req_edr_rc-crs-definition">/req/edr/rc-outputCRS-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8664,7 +8670,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 79</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-response</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8676,7 +8682,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-response">/req/collections/rc-crs-response</a></p>
+<p><a href="#req_edr_rc-outputCRS-response">/req/edr/rc-outputCRS-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8713,7 +8719,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 80</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-outputformat-definition</strong></p>
+<p><strong>/conf/edr/rc-outputformat-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8725,7 +8731,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-outputformat-definition">/req/collections/rc-outputformat-definition</a></p>
+<p><a href="#req_collections_rc-outputformat-definition">/req/edr/rc-outputformat-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8853,7 +8859,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 83</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections_rc-md-success</strong></p>
+<p><strong>/conf/rc-md-success</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8865,7 +8871,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-success">/req/collections/rc-md-success</a>, <a href="#req_collections_crs84">/req/collections/crs84</a></p>
+<p><a href="#req_collections_rc-md-success">/req/collections/rc-md-success</a>, <a href="#req_edr_rc-crs">/req/edr/rc-crs</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -8873,10 +8879,10 @@ explode: false</code></pre>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Validate that all response documents comply with <a href="#ats_collections_rc-md-links">/conf/collections/rc-md-links</a></p>
+<p>Validate that all response documents comply with <a href="#ats_collection-info-links">/conf/collections/rc-collection-info-links</a></p>
 </li>
 <li>
-<p>In case the response includes a "crs" property, validate that the first value is either "http://www.opengis.net/def/crs/OGC/1.3/CRS84" or "http://www.opengis.net/def/crs/OGC/0/CRS84h"</p>
+<p>In case the response includes a "crs" property, validate that it includes a valid Well Know Text definition</p>
 </li>
 <li>
 <p>Validate the collections content for all supported media types using the resources and tests identified in <a href="#collections-metadata-schema">Table 11</a></p>
@@ -9000,7 +9006,7 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 </tr>
 </table>
 </div>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_core_rc-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9009,7 +9015,7 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 86</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-op</strong></p>
+<p><strong>/conf/core/rc-op</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9045,10 +9051,10 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 <div class="ulist">
 <ul>
 <li>
-<p>Parameter <a href="#ats_collections_rc-bbox-definition">/conf/collections/rc-bbox-definition</a></p>
+<p>Parameter <a href="#ats_core_rc-bbox-definition">/conf/core/rc-bbox-definition</a></p>
 </li>
 <li>
-<p>Response <a href="#ats_collections_rc-bbox-response">/conf/collections/rc-bbox-response</a></p>
+<p>Response <a href="#ats_core_rc-bbox-response">/conf/core/rc-bbox-response</a></p>
 </li>
 </ul>
 </div>
@@ -9058,10 +9064,10 @@ This test is too Feature centric. Will need to be greatly reduced in scope.
 <div class="ulist">
 <ul>
 <li>
-<p>Parameter <a href="#ats_collections_rc-time-definition">/conf/collections/rc-time-definition</a></p>
+<p>Parameter <a href="#ats_time-definition">/conf/core/rc-time-definition</a></p>
 </li>
 <li>
-<p>Response <a href="#ats_collections_rc-time-response">/conf/collections/rc-time-response</a></p>
+<p>Response <a href="#ats_time-response">/conf/core/rc-time-response</a></p>
 </li>
 </ul>
 </div>
@@ -9072,7 +9078,7 @@ and verify that only features are returned that match both selection criteria.</
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-bbox-definition" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_core_bbox-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9081,7 +9087,7 @@ and verify that only features are returned that match both selection criteria.</
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 87</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-bbox-definition</strong></p>
+<p><strong>/conf/core/bbox-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9093,7 +9099,7 @@ and verify that only features are returned that match both selection criteria.</
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-bbox-definition">/req/collections/rc-bbox-definition</a></p>
+<p><a href="#req_core_bbox-definition">/req/core/bbox-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9138,7 +9144,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table id="ats_collections_rc-bbox-response" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_core_rc-bbox-response" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9147,7 +9153,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 88</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-bbox-response</strong></p>
+<p><strong>/conf/core/rc-bbox-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9159,7 +9165,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-bbox-response">/req/collections/rc-bbox-response</a></p>
+<p><a href="#req_core_rc-bbox-response">/req/core/rc-bbox-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9180,7 +9186,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_time-definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9189,7 +9195,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 89</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-definition</strong></p>
+<p><strong>/conf/core/rc-time-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9201,7 +9207,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-definition">/req/collections/rc-time-definition</a></p>
+<p><a href="#req_collections_rc-time-definition">/req/core/rc-time-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9223,7 +9229,7 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<table class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_time-response" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9232,7 +9238,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 90</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-response</strong></p>
+<p><strong>/conf/core/rc-time-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9244,7 +9250,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a></p>
+<p><a href="#req_core_rc-time-response">/req/core/rc-time-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9258,7 +9264,7 @@ explode: false</code></pre>
 <p>Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set</p>
 </li>
 <li>
-<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a>.</p>
+<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/core/rc-time-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -9363,7 +9369,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_instances_rc-md-success">/req/instances/rc-md-success</a>, <a href="#req_collections_crs84">/req/collections/crs84</a></p>
+<p><a href="#req_instances_rc-md-success">/req/instances/rc-md-success</a>, <a href="#req_core_crs84">/req/core/crs84</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9501,7 +9507,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 96</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-md-collection-info</strong></p>
+<p><strong>/conf/edr/rc-collection-info</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9513,7 +9519,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-collection-info">/req/collections/rc-md-collection-info</a></p>
+<p><a href="#req_edr_rc-collection-info">/req/edr/rc-collection-info</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9521,22 +9527,22 @@ explode: false</code></pre>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Verify that there is an entry in the <code>collections</code> array of the Collections Metadata for each collection provided by the API.</p>
+<p>Verify that all collections listed in the <code>collections</code> array of the Collections Metadata exist.</p>
 </li>
 <li>
 <p>Verify that each collection entry includes an identifier.</p>
 </li>
 <li>
-<p>Verify that each collection entry includes links in accordance with <a href="#ats_collections_rc-md-query-links">/collections/rc-md-query-links</a>.</p>
+<p>Verify that each collection entry includes links in accordance with <a href="#ats_core_rc-collection-info-links">/core/rc-collection-info-links</a>.</p>
 </li>
 <li>
-<p>Verify that if the collection entry includes an extent property, that that property complies with <a href="#ats_collections_rc-md-extent">/collections/rc-md-extent</a></p>
+<p>Verify that if the collection entry includes an extent property, the property complies with <a href="#ats_core_rc-extent">/core/rc-extent</a></p>
 </li>
 <li>
-<p>Verify that if the collection entry includes an crs property, that that property complies with <a href="#ats_collections_rc-md-crs">/collections/rc-md-crs</a></p>
+<p>Verify that if the collection entry includes an crs property, the property complies with <a href="#ats_edr_CRS">/edr/rc-crs</a></p>
 </li>
 <li>
-<p>Verify that if the collection entry includes an parameters property, that that property complies with <a href="#ats_collections_rc-md-parameters">/collections/rc-md-parameters</a></p>
+<p>Verify that if the collection entry includes an parameters property, the property complies with <a href="#ats_edr_rc-parameters">/edr/rc-parameters</a></p>
 </li>
 <li>
 <p>Validate each collection entry for all supported media types using the resources and tests identified in <a href="#collection-entry-schema">Table 12</a></p>
@@ -9549,7 +9555,7 @@ explode: false</code></pre>
 <div class="paragraph">
 <p>The collection entries may be encoded in a number of different formats. The following table identifies the applicable schema document for each format and the test to be used to validate the against that schema. All supported formats should be exercised.</p>
 </div>
-<table id="ats_collections_rc-md-collection-info-links" class="tableblock frame-all grid-all" style="width: 90%;">
+<table id="ats_collections_rc-collection-info-links" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
 <col style="width: 75%;">
@@ -9558,19 +9564,19 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 97</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-md-collection-info-links</strong></p>
+<p><strong>/conf/core/rc-collection-info-links</strong></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that each Feature Collection metadata entry in the Collections Metadata document includes all required links.</p>
+<p>Validate that each Collection metadata entry in the Collections Metadata document includes all required links.</p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-md-collection-info-links">/req/collections/rc-md-collection-info-links</a></p>
+<p><a href="#req_collections_rc-collection-info-links">/req/core/rc-collection-info-links</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9729,7 +9735,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 101</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-definition</strong></p>
+<p><strong>/conf/core/rc-time-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9741,7 +9747,7 @@ and verify that only information that matches the selection criteria is returned
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-definition">/req/collections/rc-time-definition</a></p>
+<p><a href="#req_collections_rc-time-definition">/req/core/rc-time-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9772,7 +9778,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 102</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-time-response</strong></p>
+<p><strong>/conf/core/rc-time-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9784,7 +9790,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a></p>
+<p><a href="#req_core_rc-time-response">/req/core/rc-time-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9798,7 +9804,7 @@ explode: false</code></pre>
 <p>Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set</p>
 </li>
 <li>
-<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/rc-time-response</a>.</p>
+<p>Validate that the dateime parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/core/rc-time-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -9826,7 +9832,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-definition">/req/collections/rc-parametername-definition</a></p>
+<p><a href="#req_collections_rc-parametername-definition">/req/edr/rc-parametername-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9857,7 +9863,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 104</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-parametername-response</strong></p>
+<p><strong>/conf/edr/rc-parametername-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9869,7 +9875,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-parametername-response">/req/collections/rc-parametername-response</a></p>
+<p><a href="#req_collections_rc-parametername-response">/req/edr/rc-parametername-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9880,7 +9886,7 @@ explode: false</code></pre>
 <p>Verify that only resources for the requested parameters were included in the result set</p>
 </li>
 <li>
-<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_collections_rc-time-response">/req/collections/edr/rc-parameters-response</a>.</p>
+<p>Validate that the parametername parameter complies with the syntax described in <a href="#req_core_rc-time-response">/req/edr/rc-parameters-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -9896,7 +9902,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 105</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-definition</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9908,7 +9914,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-definition">/req/collections/rc-crs-definition</a></p>
+<p><a href="#req_edr_rc-crs-definition">/req/edr/rc-outputCRS-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9939,7 +9945,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 106</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-crs-response</strong></p>
+<p><strong>/conf/edr/rc-outputCRS-response</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9951,7 +9957,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-crs-response">/req/collections/rc-crs-response</a></p>
+<p><a href="#req_edr_rc-outputCRS-response">/req/edr/rc-outputCRS-response</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -9988,7 +9994,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Abstract Test 107</strong></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><strong>/conf/collections/rc-outputformat-definition</strong></p>
+<p><strong>/conf/edr/rc-outputformat-definition</strong></p>
 </div></div></td>
 </tr>
 <tr>
@@ -10000,7 +10006,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Requirement</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="#req_collections_rc-outputformat-definition">/req/collections/rc-outputformat-definition</a></p>
+<p><a href="#req_collections_rc-outputformat-definition">/req/edr/rc-outputformat-definition</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -12679,7 +12685,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-09-16 22:21:46 -0400
+Last updated 2020-09-17 22:21:45 -0400
 </div>
 </div>
 </body>
