@@ -251,7 +251,7 @@
             "description": "Parameter data values",
             "type": "array",
             "items": {
-              "oneOf": "number string"
+              "oneOf": ["number", "string"]
             }
           }
         },
