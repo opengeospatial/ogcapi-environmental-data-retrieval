@@ -6,7 +6,7 @@ The **OGC API - Environmental Data Retrieval** candidate standard is part of the
 
 **The public comment period on the EDR API closed September 28th.** [Go here for more information.](https://www.ogc.org/standards/requests/215)
 
-**A public Hackathon/Sprint** was held virtually in March 2020 and another will be held 9-10 November 2020 to help finalised the specification. There will be a **public Webinar** outlining the Sprint's objectives on Wednesday 4 November 2020.
+**A public Hackathon/Sprint** was held [virtually in March 2020](https://github.com/opengeospatial/EDR-API-Sprint) and another will be held 9-10 November 2020 to help finalised the specification. There will be a **public Webinar** outlining the Sprint's objectives on Wednesday 4 November 2020.
 
 The repository contains:
   
