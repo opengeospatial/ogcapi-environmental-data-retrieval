@@ -6,7 +6,7 @@ The `Cube` query returns a data cube defined by the  `coords`, `minz` and `maxz`
 
 <<req_edr_coords-response>>
 
-Only data that has a geometry that intersects the area defined by the cube
+Only data that has a geometry that intersects the <<area-definition,area>> defined by the cube
 are selected. 
 
 The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
@@ -16,7 +16,7 @@ coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
 which are values in the coordinate system defined by the crs query parameter 
 if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
 
-For instance a cube that roughly describes an area that contains 
+For instance a cube that roughly describes an <<area-definition,area>> that contains 
 South West England in WGS84 would look like
 
 .A cube covering the South West of the UK
