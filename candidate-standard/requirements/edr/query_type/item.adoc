@@ -21,7 +21,7 @@ OGC API - Features.
 `/collections/{collectionId}/items`
 
 e.g.  
-return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an area query end point, a time range, a list of available parameters, and a representative geojson geometry.
+return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an <<area-definition,area>> query end point, a time range, a list of available parameters, and a representative geojson geometry.
 
 `/collections/tropical_storms/items`
 
@@ -40,7 +40,7 @@ e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z
 
 `/collections/metar/items/KIAD_2020-05-19T00Z`
 
-e.g. return information for the requested item with an id of warning_12345 from the forecast <<collection-definition,collection>>. Returned data would include an area query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.
+e.g. return information for the requested item with an id of warning_12345 from the forecast <<collection-definition,collection>>. Returned data would include an <<area-definition,area>> query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.
 
 `/collections/forecast/items/warning_12345`
 
