@@ -6,17 +6,17 @@ The `Cube` query returns a data cube defined by the  `coords`, `minz` and `maxz`
 
 <<req_edr_coords-response>>
 
-Only data that has a geometry that intersects the <<area-definition,area>> defined by the cube
+Only data that has a geometry that intersects the <<area-definition,area>> defined by the <<cube-definition,cube>>
 are selected. 
 
-The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text
+The cube's X Y coordinates are defined using Rectangular Polygon as Well Known Text
 
 coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
 
 which are values in the coordinate system defined by the crs query parameter 
 if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
 
-For instance a cube that roughly describes an <<area-definition,area>> that contains 
+For instance a <<cube-definition,cube>> that roughly describes an <<area-definition,area>> that contains 
 South West England in WGS84 would look like
 
 .A cube covering the South West of the UK
@@ -68,12 +68,12 @@ would retrieve data for the 300 level and for data below the 850 level, if a `mi
 
 <<req_edr_resolutionx-response>>
 
-If not specified the query will not interpolate the data along the x-axis of the cube and only return values for the defined `coords` parameter values. 
+If not specified the query will not interpolate the data along the x-axis of the <<cube-definition,cube>> and only return values for the defined `coords` parameter values. 
 
 
 .Define the resolution of data on the x-axis
 =================
-denotes the number of intervals to retrieve data for across the defined x-axis of the cube
+denotes the number of intervals to retrieve data for across the defined x-axis of the <<cube-definition,cube>>
 
 `resolutionx=10`
 
@@ -87,12 +87,12 @@ would retrieve 10 values along the width from the minimum x coordinate to maximu
 
 <<req_edr_resolutiony-response>>
 
-If not specified the query will not interpolate the data along the y-axis of the cube and only return values for the defined `coords` parameter values. 
+If not specified the query will not interpolate the data along the y-axis of the <<cube-definition,cube>> and only return values for the defined `coords` parameter values. 
 
 
 .Define resolution of data on the y-axis
 =================
-denotes the number of intervals to retrieve data for across the defined y-axis of the cube
+denotes the number of intervals to retrieve data for across the defined y-axis of the <<cube-definition,cube>>
 
 `resolutiony=10`
 
@@ -106,12 +106,12 @@ would retrieve 10 values along the width from the minimum y coordinate to maximu
 
 <<req_edr_resolutionz-response>>
 
-If not specified the query will not interpolate the data along the z-axis of the cube and only return values for the defined `coords` parameter values. 
+If not specified the query will not interpolate the data along the z-axis of the <<cube-definition,cube>> and only return values for the defined `coords` parameter values. 
 
 
 .Define resolution of data on the z-axis
 =================
-denotes the number of intervals to retrieve data for the defined z-axis of the cube
+denotes the number of intervals to retrieve data for the defined z-axis of the <<cube-definition,cube>>
 
 `resolutionz=10`
 
