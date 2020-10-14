@@ -8,7 +8,7 @@ Valid locationIDs must be discovered via another mechanism such as the <<rc_item
 =================
 /collections/{collectionID}/locations/{locationID}
 
-return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id
+return all available data for the metar <<collection-definition,collection>> for the requested location identifier, where the location is defined by the Heathrow METAR id
 
 /collections/metar/locations/EGLL
 
