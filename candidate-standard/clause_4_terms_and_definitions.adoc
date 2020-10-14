@@ -6,15 +6,17 @@ This document uses the terms defined in Sub-clause 5 of https://github.com/openg
 <<glossary>> includes terms from other standards and specifications that, while not normative, are critical to accurately understanding this specification.
 
 For the purposes of this document, the following additional terms and definitions apply.
-
+[[area-definition]]
 === area
 
 region specified with an geographic envelope that may have vertical dimension
 
+[[corridor-definition]]
 === corridor
 
 path of a moving point described by a one-parameter window around a set of points
 
+[[location-definition]]
 === location
 
 identifiable geographic place
@@ -27,14 +29,17 @@ NOTE: A location is represented by one of a set of data types that describe a po
 
 version, release, or run of a given data collection
 
+[[position-definition]]
 === position
 
 a place specified with a geographic point
 
+[[radius-definition]]
 === radius
 
 region specified with a geographic point and radial distance
 
+[[trajectory-definition]]
 === trajectory
 
 path of a moving point described by a one parameter set of points
