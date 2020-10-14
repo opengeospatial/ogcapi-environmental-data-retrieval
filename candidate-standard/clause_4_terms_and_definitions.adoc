@@ -17,6 +17,11 @@ region specified with an geographic envelope that may have vertical dimension
 
 path of a moving point described by a one-parameter window around a set of points
 
+[[cube-definition]]
+=== cube
+
+rectangular area with a vertical or temporal extent
+
 [[location-definition]]
 === location
 
