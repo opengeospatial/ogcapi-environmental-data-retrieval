@@ -25,7 +25,7 @@ The following link-relations are in common use by OGC Web API Standards.
 
 * *alternate*: Refers to a substitute for this context. [IANA]
 
-* *collection*: The target IRI points to a resource which represents the collection resource for the context IRI. [IANA]
+* *collection*: The target IRI points to a resource which represents the <<collection-definition,collection>> resource for the context IRI. [IANA]
 
 * *conformance*: Refers to a resource that identifies the specifications that the link's context conforms to. [OGC]
 
@@ -33,9 +33,9 @@ The following link-relations are in common use by OGC Web API Standards.
 
 * *describedby*: Refers to a resource providing information about the link's context. [IANA]
 
-* *item*: The target IRI points to a resource that is a member of the collection represented by the context IRI. [IANA]
+* *item*: The target IRI points to a resource that is a member of the <<collection-definition,collection>> represented by the context IRI. [IANA]
 
-* *items*: Refers to a resource that comprises members of the collection represented by the link's context. [OGC]
+* *items*: Refers to a resource that comprises members of the <<collection-definition,collection>> represented by the link's context. [OGC]
 
 * *license*: Refers to a license associated with this context. [IANA]
 
@@ -47,7 +47,7 @@ The following link-relations are in common use by OGC Web API Standards.
 
 * *service-doc*: Identifies service documentation for the context that is primarily intended for human consumption. [IANA]
 
-Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a collection. Or a *related* link on a feature could reference a related feature.
+Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an *enclosure* link could reference a bulk download of a <<collection-definition,collection>>. Or a *related* link on a feature could reference a related feature.
 
 A *license* link could be used for constraints on the data retrieved. Multiple *license* links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.  
 
@@ -59,14 +59,14 @@ NOTE: The query patterns of the EDR API use the link relation *data*. It is envi
 JSON media types that would typically be used in an OGC API that supports JSON are:
 
 * `application/prs.coverage+json` for resources that include coverage content, and
-* `application/geo+json` for feature collections and features, and
+* `application/geo+json` for feature <<collection-definition,collections>> and features, and
 * `application/json` for all other resources.
 
 XML media types that would typically occur in an OGC API that supports XML are:
 
-* `application/gml+xml;version=3.2` for any GML 3.2 feature collections and features,
-* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 0 profile,
-* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 2 profile, and
+* `application/gml+xml;version=3.2` for any GML 3.2 feature <<collection-definition,collections>> and features,
+* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 0 profile,
+* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile, and
 * `application/xml` for all other resources.
 
 The typical HTML media type for all "web pages" in an OGC API would be `text/html`.
