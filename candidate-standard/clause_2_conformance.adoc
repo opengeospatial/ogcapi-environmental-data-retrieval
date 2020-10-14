@@ -55,6 +55,6 @@ The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Cla
 
 The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The _Position_, _Area_ and _Trajectory_ requirements classes specify query patterns for which there are ubiquitous use cases.
 
-An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <<position-definition,position>> (with elevation and time) does simplify interoperability so support for _<<position-definition,Position>>_ is highly recommended.
+An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <<position-definition,position>> (with elevation and time) does simplify interoperability so support for _<<rc_position-section,Position>>_ is highly recommended.
 
 The Queries Requirements Classes are specified in *Queries Requirements Classes* <<query-resources-section,(Chapter 9)>>.
