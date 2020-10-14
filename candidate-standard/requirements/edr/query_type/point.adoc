@@ -1,4 +1,4 @@
-The Position query returns data for the requested coordinate, logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and the filter constraints are defined by the following query parameters:
+The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and the filter constraints are defined by the following query parameters:
 
 ===== *Parameter coords*
 
