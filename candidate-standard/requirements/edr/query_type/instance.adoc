@@ -1,19 +1,19 @@
-It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.
+It is not unusual in the scientific world for there to be multiple versions or instances of the same <<collection-definition,collection>>, where the same information is reprocessed or regenerated.  Although they could be described as new <<collection-definition,collections>> the instance query type allows this data to be described as different views of the same <<collection-definition,collection>>.
 
 ===== *Parameter instanceId*
 
-A unique identifier for the instance of the collection
+A unique identifier for the instance of the <<collection-definition,collection>>
 
 /collections/{collectionId}/instance/{instanceId}
 
-. Return the Raw data instance metadata (instanceId = raw) for the Metar ((collectionId = metar) collection
+. Return the Raw data instance metadata (instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>>
 =================
 
 /collections/metar/instance/raw
 
 =================
 
-. Return the Level 1 Quality controlled data instance (instanceId = qc_lvl_1) metadata for the Metar (collectionId = metar) collection
+. Return the Level 1 Quality controlled data instance (instanceId = qc_lvl_1) metadata for the Metar (collectionId = metar) <<collection-definition,collection>>
 =================
 
 /collections/metar/instance/qc_lvl_1
@@ -24,14 +24,14 @@ A unique identifier for the instance of the collection
 
 ===== *Parameter queryType*
 
-The queryType options are exactly the same as those available to collections that don't have multiple instances and support the same query parameters and functionality.  See the <query-resource-table>> for the  mappings of the intial query types proposed for the EDR API.
+The queryType options are exactly the same as those available to <<collection-definition,collections>> that don't have multiple instances and support the same query parameters and functionality.  See the <query-resource-table>> for the  mappings of the intial query types proposed for the EDR API.
 
 /collections/{collectionId}/instance/{instanceId}/{queryType}
 
 see the <<query-resources-section>> section for details of the query parameters supported by the queryTypes.
 
 
-. A point query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) collection 
+. A point query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>> 
 =================
 
 /collections/metar/instance/raw/point
@@ -40,7 +40,7 @@ see the <<query-resources-section>> section for details of the query parameters 
 =================
 
 
-. A trajectory query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) collection 
+. A trajectory query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>> 
 =================
 
 /collections/metar/instance/raw/trajectory
