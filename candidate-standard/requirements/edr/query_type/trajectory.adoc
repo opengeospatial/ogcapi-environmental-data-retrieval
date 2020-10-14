@@ -1,4 +1,4 @@
-The Trajectory query returns data along the path defined by the `coords` parameter, *the logic to match the data for the requested path will depend on and be defined by the Collection*.  The results are further filtered by the constraints defined by the following query parameters:
+The Trajectory query returns data along the path defined by the `coords` parameter. *The logic to match the data for the requested path will depend on and be defined by the <<collection-definition,collection>>*.  The results are further filtered by the constraints defined by the following query parameters:
 
 ===== *Parameter coords*
 
