@@ -6,7 +6,7 @@ The Area query returns data within the polygon defined by the `coords` parameter
 
 <<req_edr_coords-response>>
 
-Only data that has a geometry that intersects the area defined by the polygon
+Only data that has a geometry that intersects the <<area-definition,area>> defined by the polygon
 are selected. 
 
 The polygon is defined using a Well Known Text string following 
@@ -16,7 +16,7 @@ The polygon is defined using a Well Known Text string following
 which are values in the coordinate system defined by the crs query parameter 
 (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
 
-For instance a polygon that roughly describes an area that contains 
+For instance a polygon that roughly describes an <<area-definition,area>> that contains 
 South West England in WGS84 would look like: 
 
 `coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))`
@@ -28,7 +28,7 @@ see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wik
 
 .A polygon covering the UK 
 =================
-An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)
+An <<area-definition,area>> covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)
 
 `coords=POLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
 
@@ -59,7 +59,7 @@ i.e. z=ALL
 .A single vertical level
 ===========
 
-for instance if the 850hPa pressure level is being queried
+For example if the 850hPa pressure level is being queried
 
 z=850
 ===========
