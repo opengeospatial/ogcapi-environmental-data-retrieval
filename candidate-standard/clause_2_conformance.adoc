@@ -19,7 +19,7 @@ The Core requirements class is specified in *Requirements Class Core* <<rc_core-
 
 The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
-The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2:Collections specifies the requirements necessary to discover and understand a generic collection and its contents. 
+The structure and organization of a <<collection-definition,collection>> of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2:Collections specifies the requirements necessary to discover and understand a generic <<collection-definition,collection>> and its contents. 
 
 The EDR API _Collection Requirements Class_ extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.
 
