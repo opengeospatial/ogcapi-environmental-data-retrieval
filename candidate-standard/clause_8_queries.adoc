@@ -25,7 +25,7 @@ Where
 The `instanceId` parameter allows support for multiple instances or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of `_default_` or `_latest_` could be used.
 
 [[collection-information-queries]]
-Information resources associated with a specific <<collection-definition,collection>> should be accessed through the `/collections` path. Information resources not associated with a specific collection should be accessed via the `/{instanceId}/{queryType}` path template.
+Information resources associated with a specific <<collection-definition,collection>> should be accessed through the `/collections` path. Information resources not associated with a specific <<collection-definition,collection>> should be accessed via the `/{instanceId}/{queryType}` path template.
 
 The resources returned from each node in these templates are described in <<query-resource-paths>>.
 
@@ -54,13 +54,13 @@ The OGC API-Common standards do not define any information resource types. Howev
 |===
 ^|**Path Template** ^|**Query Type** ^|**Description**
 |/collections/{collectionId}/position | Position | Return data for the requested point location
-|/collections/{collectionId}/area | Area | Return data for the requested area
-|/collections/{collectionId}/cube | Cube | Return data for a spatial cube
-|/collections/{collectionId}/trajectory | Trajectory | Return data along a defined trajectory
-|/collections/{collectionId}/corridor | Corridor | Return data within a spatial corridor
-|/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` collection.
-|/collections/{collectionId}/locations | Locations |Location identifers associated with the `{collectionId}` collection.
-|/collections/{collectionId}/instances | Instances | List the available instances of the collection
+|/collections/{collectionId}/area | Area | Return data for the requested <<area-definition,area>>
+|/collections/{collectionId}/cube | Cube | Return data for a spatial <<cube-definition,cube>>
+|/collections/{collectionId}/trajectory | Trajectory | Return data along a defined <<trajectory-definition,trajectory>>
+|/collections/{collectionId}/corridor | Corridor | Return data within a spatial <<corridor-definition,corridor>>
+|/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` <<collection-definition,collection>>.
+|/collections/{collectionId}/locations | Locations |Location identifers associated with the `{collectionId}` <<collection-definition,collection>>.
+|/collections/{collectionId}/instances | Instances | List the available instances of the <<collection-definition,collection>>
 |===
 
 [[parameters-section]]
@@ -133,8 +133,8 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 `parametername=Maximum_temperature,Minimum_temperature,Total_precipitation`
 =================
 
-If a requested parameter doesn't exist in the collection the data for those parameters that do exist should be returned.
-If none of the requested parameters exist in the collection a `400` message SHOULD be returned.
+If a requested parameter doesn't exist in the <<collection-definition,collection>> the data for those parameters that do exist should be returned.
+If none of the requested parameters exist in the <<collection-definition,collection>> a `400` message SHOULD be returned.
 
 [[crs]]
 ===== Parameter crs
@@ -143,7 +143,7 @@ If none of the requested parameters exist in the collection a `400` message SHOU
 
 <<req_edr_outputCRS-response>>
 
-The value of the `crs` query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations. 
+The value of the `crs` query parameter will be one of the name values described in the <<collection-definition,collection>> metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
 ===== Parameter outputformat
