@@ -37,14 +37,14 @@ or +
 |<<collectionInfo,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
 3+^|**Queries**
 |<<collectionInfo,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
-|<<collectionInfo,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about instances of a <<collection-definition,collection>>
-|<<collectionInfo,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific instance of a <<collection-definition,collection>> which has the unique identifier `{instanceId}`
+|<<collectionInfo,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about <<instance-definition,instances>> of a <<collection-definition,collection>>
+|<<collectionInfo,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific <<insance-definition,instance>> of a <<collection-definition,collection>> which has the unique identifier `{instanceId}`
 |===
 
 Where:
 
 * `{root}` = Base URI for the API server
 * `{collectionId}` = an identifier for a specific <<collection-definition,collection>> of data
-* `{instanceId}` = an identifier for a specific version or instance of a <<collection-definition,collection>> of data
+* `{instanceId}` = an identifier for a specific version or <<instance-definition,instance>> of a <<collection-definition,collection>> of data
 * `{queryType}` = an identifier for a specific query pattern to retrieve data from a specific <<collection-definition,collection>> of data
 
