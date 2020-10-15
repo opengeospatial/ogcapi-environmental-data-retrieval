@@ -1,4 +1,4 @@
-The Radius query returns data within the defined radius of the requested coordinate the filter constraints are defined by the following query parameters:
+The Radius query returns data within the defined radius of the requested coordinate. The filter constraints are defined by the following query parameters:
 
 ===== *Parameter coords*
 
@@ -7,7 +7,7 @@ The Radius query returns data within the defined radius of the requested coordin
 <<req_edr_coords-response>>
 
 location(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string. to retrieve a single location :
+(wkt) string. To retrieve data for a single location :
 
 POINT(x y) 
 
@@ -24,8 +24,8 @@ MULTIPOINT((x y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3))
 
 see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
-the coordinate values will depend on the CRS parameter, if this is not defined
-the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)
+The coordinate values will depend on the CRS parameter. If this is not defined
+the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude)
 
 .Single location
 =================
@@ -57,7 +57,7 @@ i.e. z=ALL
 .A single vertical level
 ===========
 
-for instance if the 80m level is being queried
+For example if the 80m level is being queried
 
 z=80
 ===========
