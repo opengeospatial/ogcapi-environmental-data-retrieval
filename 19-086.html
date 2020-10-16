@@ -477,7 +477,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Implementation Specification</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editors:  Mark Burgoyne, Chuck Heazel, Chris Little </p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Editors:  Mark Burgoyne, Dave Blodgett, Chuck Heazel, Chris Little </p></td>
 </tr>
 </tbody>
 </table>
@@ -571,13 +571,14 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#references">4. References</a></li>
 <li><a href="#terms_and_definitions">5. Terms and Definitions</a>
 <ul class="sectlevel2">
-<li><a href="#_area">5.1. area</a></li>
-<li><a href="#_corridor">5.2. corridor</a></li>
-<li><a href="#_location">5.3. location</a></li>
-<li><a href="#_instance">5.4. instance</a></li>
-<li><a href="#_position">5.5. position</a></li>
-<li><a href="#_radius">5.6. radius</a></li>
-<li><a href="#_trajectory">5.7. trajectory</a></li>
+<li><a href="#area-definition">5.1. area</a></li>
+<li><a href="#corridor-definition">5.2. corridor</a></li>
+<li><a href="#cube-definition">5.3. cube</a></li>
+<li><a href="#location-definition">5.4. location</a></li>
+<li><a href="#instance-definition">5.5. instance</a></li>
+<li><a href="#position-definition">5.6. position</a></li>
+<li><a href="#radius-definition">5.7. radius</a></li>
+<li><a href="#trajectory-definition">5.8. trajectory</a></li>
 </ul>
 </li>
 <li><a href="#conventions">6. Conventions</a>
@@ -797,7 +798,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The Environmental Data Retrieval (EDR) Application Programming Interface (API) provides a family of lightweight query interfaces to access Environmental Data resources by requesting data at a <strong>Position</strong>, within an <strong>Area</strong> or along a <strong>Trajectory</strong>. An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the EDR query patterns. These patterns are described in the <a href="#rc_core-section">Requirement Class Core</a> section.</p>
 </div>
 <div class="paragraph">
-<p>EDR API query patterns, such as Position, Area, Cube, Trajectory or Corridor, can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the <a href="https://www.ogc.org/standards/sos">Sensor Observation Service (SOS)</a>. A typical EDR data resource is a multidimensional dataset that possibly could be accessed via the <a href="http://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a>. In contrast to SOS and WCS, EDR implements the technical baseline of the OGC API family of standards and aims to provide a simple-to-use, single set of user-centric query patterns. EDR use cases range from location-centric real or virtual observation retrievals, including time-series, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but provide useful building blocks to allow the composition of APIs that satisfy a wide range of geospatial data use cases.</p>
+<p>EDR API query patterns, such as <a href="#position-defintion">Position</a>, <a href="#area-definition">Area</a>, <a href="#cube-definition">Cube</a>, <a href="#trajectory-definition">Trajectory</a> or <a href="#corrodor-definition">Corridor</a>, can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the <a href="https://www.ogc.org/standards/sos">Sensor Observation Service (SOS)</a>. A typical EDR data resource is a multidimensional dataset that possibly could be accessed via the <a href="http://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a>. In contrast to SOS and WCS, EDR implements the technical baseline of the OGC API family of standards and aims to provide a simple-to-use, single set of user-centric query patterns. EDR use cases range from location-centric real or virtual observation retrievals, including time-series, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but provide useful building blocks to allow the composition of APIs that satisfy a wide range of geospatial data use cases.</p>
 </div>
 <div class="paragraph">
 <p>The OGC has extended their suite of standards to include Resource Oriented Architectures and Web Application Programming Interfaces (APIs). These standards are based on a shared foundation, the OGC API-Common standard, which defines the resources and access paths that are supported by all OGC APIs. These are listed in <a href="#common-paths">Table 1</a>. This document extends that foundation to define the Environmental Data Retrieval API.</p>
@@ -944,7 +945,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">HeazelTech LLC</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dave Blodgett <em>(contributor)</em></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dave Blodgett <em>(editor)</em></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">USGS</p></td>
 </tr>
 <tr>
@@ -968,7 +969,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about a distribution of a resource. This includes the API definition of the server as well as metadata about the Environmental Data resources provided by the server.</p>
 </div>
 <div class="paragraph">
-<p>An Environmental Data resource is a <strong>collection</strong> of spatio-temporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.</p>
+<p>An Environmental Data resource is a <strong><a href="#collection-definition">collection</a></strong> of spatio-temporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.</p>
 </div>
 <div class="paragraph">
 <p>Query operations allow other environmental data resources to be retrieved from the underlying Environmental Data resource, or data store, based upon simple selection criteria, defined by this standard and selected by the client.</p>
@@ -1017,7 +1018,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <a href="#collection-definition">collections</a> of <a href="#spatial-resource-definition">spatial resources</a>.</p>
 </div>
 <div class="paragraph">
-<p>The structure and organization of a collection of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2:Collections specifies the requirements necessary to discover and understand a generic collection and its contents.</p>
+<p>The structure and organization of a <a href="#collection-definition">collection</a> of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2:Collections specifies the requirements necessary to discover and understand a generic <a href="#collection-definition">collection</a> and its contents.</p>
 </div>
 <div class="paragraph">
 <p>The EDR API <em>Collection Requirements Class</em> extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.</p>
@@ -1109,7 +1110,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The <em>Position</em>, <em>Area</em> and <em>Trajectory</em> requirements classes specify query patterns for which there are ubiquitous use cases.</p>
 </div>
 <div class="paragraph">
-<p>An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a position (with elevation and time) does simplify interoperability so support for <em>Position</em> is highly recommended.</p>
+<p>An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <a href="#position-definition">position</a> (with elevation and time) does simplify interoperability so support for <a href="#rc_position-section">Position</a> is highly recommended.</p>
 </div>
 <div class="paragraph">
 <p>The Queries Requirements Classes are specified in <strong>Queries Requirements Classes</strong> <a href="#query-resources-section">(Chapter 9)</a>.</p>
@@ -1177,25 +1178,31 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>This document uses the terms defined in Sub-clause 5 of <a href="https://github.com/opengeospatial/oapi_common/blob/master/19-072.pdf">OGC API-Common Part 1 (OGC 19-072)</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.</p>
 </div>
 <div class="paragraph">
-<p><a href="#glossary">Glossary</a> includes terms from other standards and specifications that, while not normative, are critical to accurately understanding this specification.</p>
+<p>The <a href="#glossary">Glossary</a> includes terms from other standards and specifications that, while not normative, are critical to accurately understanding this specification.</p>
 </div>
 <div class="paragraph">
 <p>For the purposes of this document, the following additional terms and definitions apply.</p>
 </div>
 <div class="sect2">
-<h3 id="_area"><a class="anchor" href="#_area"></a>5.1. area</h3>
+<h3 id="area-definition"><a class="anchor" href="#area-definition"></a>5.1. area</h3>
 <div class="paragraph">
 <p>region specified with an geographic envelope that may have vertical dimension</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_corridor"><a class="anchor" href="#_corridor"></a>5.2. corridor</h3>
+<h3 id="corridor-definition"><a class="anchor" href="#corridor-definition"></a>5.2. corridor</h3>
 <div class="paragraph">
 <p>path of a moving point described by a one-parameter window around a set of points</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_location"><a class="anchor" href="#_location"></a>5.3. location</h3>
+<h3 id="cube-definition"><a class="anchor" href="#cube-definition"></a>5.3. cube</h3>
+<div class="paragraph">
+<p>rectangular area, with a vertical extent, containing a regular array of data points</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="location-definition"><a class="anchor" href="#location-definition"></a>5.4. location</h3>
 <div class="paragraph">
 <p>identifiable geographic place</p>
 </div>
@@ -1216,25 +1223,25 @@ A location is represented by one of a set of data types that describe a position
 </div>
 </div>
 <div class="sect2">
-<h3 id="_instance"><a class="anchor" href="#_instance"></a>5.4. instance</h3>
+<h3 id="instance-definition"><a class="anchor" href="#instance-definition"></a>5.5. instance</h3>
 <div class="paragraph">
 <p>version, release, or run of a given data collection</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_position"><a class="anchor" href="#_position"></a>5.5. position</h3>
+<h3 id="position-definition"><a class="anchor" href="#position-definition"></a>5.6. position</h3>
 <div class="paragraph">
 <p>a place specified with a geographic point</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_radius"><a class="anchor" href="#_radius"></a>5.6. radius</h3>
+<h3 id="radius-definition"><a class="anchor" href="#radius-definition"></a>5.7. radius</h3>
 <div class="paragraph">
 <p>region specified with a geographic point and radial distance</p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="_trajectory"><a class="anchor" href="#_trajectory"></a>5.7. trajectory</h3>
+<h3 id="trajectory-definition"><a class="anchor" href="#trajectory-definition"></a>5.8. trajectory</h3>
 <div class="paragraph">
 <p>path of a moving point described by a one parameter set of points</p>
 </div>
@@ -1285,7 +1292,7 @@ A location is represented by one of a set of data types that describe a position
 <p><strong>alternate</strong>: Refers to a substitute for this context. [IANA]</p>
 </li>
 <li>
-<p><strong>collection</strong>: The target IRI points to a resource which represents the collection resource for the context IRI. [IANA]</p>
+<p><strong>collection</strong>: The target IRI points to a resource which represents the <a href="#collection-definition">collection</a> resource for the context IRI. [IANA]</p>
 </li>
 <li>
 <p><strong>conformance</strong>: Refers to a resource that identifies the specifications that the link&#8217;s context conforms to. [OGC]</p>
@@ -1297,10 +1304,10 @@ A location is represented by one of a set of data types that describe a position
 <p><strong>describedby</strong>: Refers to a resource providing information about the link&#8217;s context. [IANA]</p>
 </li>
 <li>
-<p><strong>item</strong>: The target IRI points to a resource that is a member of the collection represented by the context IRI. [IANA]</p>
+<p><strong>item</strong>: The target IRI points to a resource that is a member of the <a href="#collection-definition">collection</a> represented by the context IRI. [IANA]</p>
 </li>
 <li>
-<p><strong>items</strong>: Refers to a resource that comprises members of the collection represented by the link&#8217;s context. [OGC]</p>
+<p><strong>items</strong>: Refers to a resource that comprises members of the <a href="#collection-definition">collection</a> represented by the link&#8217;s context. [OGC]</p>
 </li>
 <li>
 <p><strong>license</strong>: Refers to a license associated with this context. [IANA]</p>
@@ -1324,7 +1331,7 @@ A location is represented by one of a set of data types that describe a position
 </ul>
 </div>
 <div class="paragraph">
-<p>Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an <strong>enclosure</strong> link could reference a bulk download of a collection. Or a <strong>related</strong> link on a feature could reference a related feature.</p>
+<p>Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an <strong>enclosure</strong> link could reference a bulk download of a <a href="#collection-definition">collection</a>. Or a <strong>related</strong> link on a feature could reference a related feature.</p>
 </div>
 <div class="paragraph">
 <p>A <strong>license</strong> link could be used for constraints on the data retrieved. Multiple <strong>license</strong> links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.</p>
@@ -1353,7 +1360,7 @@ The query patterns of the EDR API use the link relation <strong>data</strong>. I
 <p><code>application/prs.coverage+json</code> for resources that include coverage content, and</p>
 </li>
 <li>
-<p><code>application/geo+json</code> for feature collections and features, and</p>
+<p><code>application/geo+json</code> for feature <a href="#collection-definition">collections</a> and features, and</p>
 </li>
 <li>
 <p><code>application/json</code> for all other resources.</p>
@@ -1366,13 +1373,13 @@ The query patterns of the EDR API use the link relation <strong>data</strong>. I
 <div class="ulist">
 <ul>
 <li>
-<p><code>application/gml+xml;version=3.2</code> for any GML 3.2 feature collections and features,</p>
+<p><code>application/gml+xml;version=3.2</code> for any GML 3.2 feature <a href="#collection-definition">collections</a> and features,</p>
 </li>
 <li>
-<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0</code> for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 0 profile,</p>
+<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0</code> for GML 3.2 feature <a href="#collection-definition">collections</a> and features conforming to the GML Simple Feature Level 0 profile,</p>
 </li>
 <li>
-<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2</code> for GML 3.2 feature collections and features conforming to the GML Simple Feature Level 2 profile, and</p>
+<p><code>application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2</code> for GML 3.2 feature <a href="#collection-definition">collections</a> and features conforming to the GML Simple Feature Level 2 profile, and</p>
 </li>
 <li>
 <p><code>application/xml</code> for all other resources.</p>
@@ -1610,12 +1617,12 @@ or<br>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collections">{root}/collections</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><code>data</code></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the collections of data available from this API.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the <a href="#collection-definition">collections</a> of data available from this API.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the collection of data which has the unique identifier <code>{collectionId}</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the <a href="#collection-definition">collection</a> of data which has the unique identifier <code>{collectionId}</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" colspan="3" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Features</strong></p></td>
@@ -1636,12 +1643,12 @@ or<br>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/instances</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata about instances of a collection</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata about <a href="#instance-definition">instances</a> of a <a href="#collection-definition">collection</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/instances/{instanceId}</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata from a specific instance of a collection which has the unique identifier <code>{instanceId}</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata from a specific <a href="#insance-definition">instance</a> of a <a href="#collection-definition">collection</a> which has the unique identifier <code>{instanceId}</code></p></td>
 </tr>
 </tbody>
 </table>
@@ -1654,13 +1661,13 @@ or<br>
 <p><code>{root}</code> = Base URI for the API server</p>
 </li>
 <li>
-<p><code>{collectionId}</code> = an identifier for a specific collection of data</p>
+<p><code>{collectionId}</code> = an identifier for a specific <a href="#collection-definition">collection</a> of data</p>
 </li>
 <li>
-<p><code>{instanceId}</code> = an identifier for a specific version or instance of a collection of data</p>
+<p><code>{instanceId}</code> = an identifier for a specific version or <a href="#instance-definition">instance</a> of a <a href="#collection-definition">collection</a> of data</p>
 </li>
 <li>
-<p><code>{queryType}</code> = an identifier for a specific query pattern to retrieve data from a specific collection of data</p>
+<p><code>{queryType}</code> = an identifier for a specific query pattern to retrieve data from a specific <a href="#collection-definition">collection</a> of data</p>
 </li>
 </ul>
 </div>
@@ -1693,7 +1700,7 @@ or<br>
 <p><a href="#api-platform-section">API Platform</a>: a set of common capabilities</p>
 </li>
 <li>
-<p><a href="#rc_collection-section">Collection Access</a>: operations for accessing collections of environmental data.</p>
+<p><a href="#rc_collection-section">Collection Access</a>: operations for accessing <a href="#collection-definition">collections</a> of environmental data.</p>
 </li>
 <li>
 <p><a href="#environmental-resources-section">Environmental Resources</a>: operations for accessing environmental data resources</p>
@@ -1999,7 +2006,7 @@ properties:
 <p>Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common <code>queryTypes</code> to implement, described in the <a href="#query-resources-section">Query Resources</a> section. This list may change as the standard is used and experience gained.</p>
 </div>
 <div id="rc_collection-section" class="paragraph">
-<p>An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the API-EDR query patterns.</p>
+<p>An Environmental Data resource is a <a href="#collection-definition">collection</a> of spatiotemporal data that can be sampled using the API-EDR query patterns.</p>
 </div>
 <div class="sect2">
 <h3 id="_requirements_class_collections"><a class="anchor" href="#_requirements_class_collections"></a>9.1. <strong>Requirements Class:</strong> Collections</h3>
@@ -2043,7 +2050,7 @@ properties:
 </tbody>
 </table>
 <div class="paragraph">
-<p>Query resources related to Environmental Data resources (collections of spatiotemporal data) can be exposed using the path templates:</p>
+<p>Query resources related to Environmental Data resources (<a href="#collection-definition">collections</a> of spatiotemporal data) can be exposed using the path templates:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -2059,19 +2066,19 @@ properties:
 <p>Where</p>
 </div>
 <div class="paragraph">
-<p><code>{collectionId}</code> = a unique identifier for a collection of geospatial data.</p>
+<p><code>{collectionId}</code> = a unique identifier for a <a href="#collection-definition">collection</a> of geospatial data.</p>
 </div>
 <div class="paragraph">
-<p><code>{instanceId}</code> = a text string identifying the version or instance of the chosen collection.</p>
+<p><code>{instanceId}</code> = a text string identifying the version or <a href="#instance-definition">instance</a> of the chosen <a href="#collection-definition">collection</a>.</p>
 </div>
 <div class="paragraph">
 <p><code>{queryType}</code> = a text string identifying the query pattern performed by the API.</p>
 </div>
 <div class="paragraph">
-<p>The <code>instanceId</code> parameter allows support for multiple instances or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one instance of the datasource exists a value of <code><em>default</em></code> or <code><em>latest</em></code> could be used.</p>
+<p>The <code>instanceId</code> parameter allows support for multiple <a href="#instance-definition">instances</a> or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one <a href="#instance-definition">instance</a> of the datasource exists a value of <code><em>default</em></code> or <code><em>latest</em></code> could be used.</p>
 </div>
 <div id="collection-information-queries" class="paragraph">
-<p>Information resources associated with a specific collection should be accessed through the <code>/collections</code> path. Information resources not associated with a specific collection should be accessed via the <code>/{instanceId}/{queryType}</code> path template.</p>
+<p>Information resources associated with a specific <a href="#collection-definition">collection</a> should be accessed through the <code>/collections</code> path. Information resources not associated with a specific <a href="#collection-definition">collection</a> should be accessed via the <code>/{instanceId}/{queryType}</code> path template.</p>
 </div>
 <div class="paragraph">
 <p>The resources returned from each node in these templates are described in <a href="#query-resource-paths">Table 7</a>.</p>
@@ -2094,15 +2101,15 @@ properties:
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The root resource describing the collections of geospatial data available from this API.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The root resource describing the <a href="#collection-definition">collections</a> of geospatial data available from this API.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies a collection of geospatial data with the unique identifier <code>{collectionId}</code></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies a <a href="#collection-definition">collection</a> of geospatial data with the unique identifier <code>{collectionId}</code></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/{queryType}</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies an Information Resource of type {queryType} associated with the <code>{collectionId}</code> collection.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Identifies an Information Resource of type {queryType} associated with the <code>{collectionId}</code> <a href="#collection-definition">collection</a>.</p></td>
 </tr>
 </tbody>
 </table>
@@ -2130,42 +2137,42 @@ properties:
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/position</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested point location</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested <a href="#position-definition">point location</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/area</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Area</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested area</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested <a href="#area-definition">area</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/cube</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Cube</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for a spatial cube</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for a spatial <a href="#cube-definition">cube</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/trajectory</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Trajectory</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data along a defined trajectory</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data along a defined <a href="#trajectory-definition">trajectory</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/corridor</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Corridor</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data within a spatial corridor</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data within a spatial <a href="#corridor-definition">corridor</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/items</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Item</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Items associated with the <code>{collectionId}</code> collection.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Items associated with the <code>{collectionId}</code> <a href="#collection-definition">collection</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/locations</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Locations</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Location identifers associated with the <code>{collectionId}</code> collection.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Location identifers associated with the <code>{collectionId}</code> <a href="#collection-definition">collection</a>.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/instances</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Instances</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">List the available instances of the collection</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">List the available instances of the <a href="#collection-definition">collection</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -2269,8 +2276,8 @@ properties:
 </div>
 </div>
 <div class="paragraph">
-<p>If a requested parameter doesn&#8217;t exist in the collection the data for those parameters that do exist should be returned.
-If none of the requested parameters exist in the collection a <code>400</code> message SHOULD be returned.</p>
+<p>If a requested parameter doesn&#8217;t exist in the <a href="#collection-definition">collection</a> the data for those parameters that do exist should be returned.
+If none of the requested parameters exist in the <a href="#collection-definition">collection</a> a <code>400</code> message SHOULD be returned.</p>
 </div>
 </div>
 <div class="sect4">
@@ -2282,7 +2289,7 @@ If none of the requested parameters exist in the collection a <code>400</code> m
 <p><a href="#req_edr_outputCRS-response"><strong>Requirement 9: /req/edr/outputCRS-response</strong> Parameter crs response</a></p>
 </div>
 <div class="paragraph">
-<p>The value of the <code>crs</code> query parameter will be one of the name values described in the collection metadata for supported coordinate reference system transformations.</p>
+<p>The value of the <code>crs</code> query parameter will be one of the name values described in the <a href="#collection-definition">collection</a> metadata for supported coordinate reference system transformations.</p>
 </div>
 </div>
 <div class="sect4">
@@ -2302,14 +2309,14 @@ If none of the requested parameters exist in the collection a <code>400</code> m
 </div>
 </div>
 <div class="paragraph">
-<p>If not specified, the query will return data in the native format of the collection.  If the requested format system does not match an entry in the defined list of valid <code>outputFormats</code> for the collection, a <code>400</code> message SHOULD be returned.</p>
+<p>If not specified, the query will return data in the native format of the <a href="#collection-definition">collection</a>.  If the requested format system does not match an entry in the defined list of valid <code>outputFormats</code> for the <a href="#collection-definition">collection</a>, a <code>400</code> message SHOULD be returned.</p>
 </div>
 </div>
 </div>
 <div class="sect3">
 <h4 id="rc_position-section"><a class="anchor" href="#rc_position-section"></a>9.3.2. Position query</h4>
 <div class="paragraph">
-<p>The Position query returns data for the requested coordinate, logic for identifying the best match for the coordinate will depend on the Collection and the filter constraints are defined by the following query parameters:</p>
+<p>The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <a href="#collection-definition">collection</a> and the filter constraints are defined by the following query parameters:</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_coords"><a class="anchor" href="#_parameter_coords"></a><strong>Parameter coords</strong></h5>
@@ -2449,7 +2456,7 @@ i.e. z=ALL</p>
 <div class="sect3">
 <h4 id="rc_radius-section"><a class="anchor" href="#rc_radius-section"></a>9.3.3. Radius query</h4>
 <div class="paragraph">
-<p>The Radius query returns data within the defined radius of the requested coordinate the filter constraints are defined by the following query parameters:</p>
+<p>The Radius query returns data within the defined radius of the requested coordinate. The filter constraints are defined by the following query parameters:</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_coords_2"><a class="anchor" href="#_parameter_coords_2"></a><strong>Parameter coords</strong></h5>
@@ -2461,7 +2468,7 @@ i.e. z=ALL</p>
 </div>
 <div class="paragraph">
 <p>location(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string. to retrieve a single location :</p>
+(wkt) string. To retrieve data for a single location :</p>
 </div>
 <div class="paragraph">
 <p>POINT(x y)</p>
@@ -2486,8 +2493,8 @@ POINT(x y z)</p>
 <p>see <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a></p>
 </div>
 <div class="paragraph">
-<p>the coordinate values will depend on the CRS parameter, if this is not defined
-the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
+<p>The coordinate values will depend on the CRS parameter. If this is not defined
+the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude)</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 13. Single location</div>
@@ -2533,7 +2540,7 @@ i.e. z=ALL</p>
 <div class="title">Example 14. A single vertical level</div>
 <div class="content">
 <div class="paragraph">
-<p>for instance if the 80m level is being queried</p>
+<p>For example if the 80m level is being queried</p>
 </div>
 <div class="paragraph">
 <p>z=80</p>
@@ -2583,7 +2590,7 @@ i.e. z=ALL</p>
 <p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
-<p>Only data that has a geometry that intersects the area defined by the polygon
+<p>Only data that has a geometry that intersects the <a href="#area-definition">area</a> defined by the polygon
 are selected.</p>
 </div>
 <div class="paragraph">
@@ -2597,7 +2604,7 @@ are selected.</p>
 (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).</p>
 </div>
 <div class="paragraph">
-<p>For instance a polygon that roughly describes an area that contains
+<p>For instance a polygon that roughly describes an <a href="#area-definition">area</a> that contains
 South West England in WGS84 would look like:</p>
 </div>
 <div class="paragraph">
@@ -2613,7 +2620,7 @@ South West England in WGS84 would look like:</p>
 <div class="title">Example 16. A polygon covering the UK</div>
 <div class="content">
 <div class="paragraph">
-<p>An area covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)</p>
+<p>An <a href="#area-definition">area</a> covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)</p>
 </div>
 <div class="paragraph">
 <p><code>coords=POLYGON((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))</code></p>
@@ -2652,7 +2659,7 @@ i.e. z=ALL</p>
 <div class="title">Example 18. A single vertical level</div>
 <div class="content">
 <div class="paragraph">
-<p>for instance if the 850hPa pressure level is being queried</p>
+<p>For example if the 850hPa pressure level is being queried</p>
 </div>
 <div class="paragraph">
 <p>z=850</p>
@@ -2724,11 +2731,11 @@ i.e. z=ALL</p>
 <p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
-<p>Only data that has a geometry that intersects the area defined by the cube
+<p>Only data that has a geometry that intersects the <a href="#area-definition">area</a> defined by the <a href="#cube-definition">cube</a>
 are selected.</p>
 </div>
 <div class="paragraph">
-<p>The cubes X Y coordinates are defined using Rectangular Polygon as Well Known Text</p>
+<p>The cube&#8217;s X Y coordinates are defined using Rectangular Polygon as Well Known Text</p>
 </div>
 <div class="paragraph">
 <p>coords=POLYGONx y,x1 y1,x2 y2, x3 y3, x y</p>
@@ -2738,7 +2745,7 @@ are selected.</p>
 if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level</p>
 </div>
 <div class="paragraph">
-<p>For instance a cube that roughly describes an area that contains
+<p>For instance a <a href="#cube-definition">cube</a> that roughly describes an <a href="#area-definition">area</a> that contains
 South West England in WGS84 would look like</p>
 </div>
 <div class="exampleblock">
@@ -2811,13 +2818,13 @@ South West England in WGS84 would look like</p>
 <p><a href="#req_edr_resolutionx-response"><strong>Requirement 23: /req/edr/resolutionx-response</strong> Parameter resolutionx response</a></p>
 </div>
 <div class="paragraph">
-<p>If not specified the query will not interpolate the data along the x-axis of the cube and only return values for the defined <code>coords</code> parameter values.</p>
+<p>If not specified the query will not interpolate the data along the x-axis of the <a href="#cube-definition">cube</a> and only return values for the defined <code>coords</code> parameter values.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 25. Define the resolution of data on the x-axis</div>
 <div class="content">
 <div class="paragraph">
-<p>denotes the number of intervals to retrieve data for across the defined x-axis of the cube</p>
+<p>denotes the number of intervals to retrieve data for across the defined x-axis of the <a href="#cube-definition">cube</a></p>
 </div>
 <div class="paragraph">
 <p><code>resolutionx=10</code></p>
@@ -2837,13 +2844,13 @@ South West England in WGS84 would look like</p>
 <p><a href="#req_edr_resolutiony-response"><strong>Requirement 25: /req/edr/resolutiony-response</strong> Parameter resolutiony response</a></p>
 </div>
 <div class="paragraph">
-<p>If not specified the query will not interpolate the data along the y-axis of the cube and only return values for the defined <code>coords</code> parameter values.</p>
+<p>If not specified the query will not interpolate the data along the y-axis of the <a href="#cube-definition">cube</a> and only return values for the defined <code>coords</code> parameter values.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 26. Define resolution of data on the y-axis</div>
 <div class="content">
 <div class="paragraph">
-<p>denotes the number of intervals to retrieve data for across the defined y-axis of the cube</p>
+<p>denotes the number of intervals to retrieve data for across the defined y-axis of the <a href="#cube-definition">cube</a></p>
 </div>
 <div class="paragraph">
 <p><code>resolutiony=10</code></p>
@@ -2863,13 +2870,13 @@ South West England in WGS84 would look like</p>
 <p><a href="#req_edr_resolutionz-response"><strong>Requirement 27: /req/edr/resolutionz-response</strong> Parameter resolutionz response</a></p>
 </div>
 <div class="paragraph">
-<p>If not specified the query will not interpolate the data along the z-axis of the cube and only return values for the defined <code>coords</code> parameter values.</p>
+<p>If not specified the query will not interpolate the data along the z-axis of the <a href="#cube-definition">cube</a> and only return values for the defined <code>coords</code> parameter values.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 27. Define resolution of data on the z-axis</div>
 <div class="content">
 <div class="paragraph">
-<p>denotes the number of intervals to retrieve data for the defined z-axis of the cube</p>
+<p>denotes the number of intervals to retrieve data for the defined z-axis of the <a href="#cube-definition">cube</a></p>
 </div>
 <div class="paragraph">
 <p><code>resolutionz=10</code></p>
@@ -2900,7 +2907,7 @@ South West England in WGS84 would look like</p>
 <div class="sect3">
 <h4 id="rc_trajectory-section"><a class="anchor" href="#rc_trajectory-section"></a>9.3.6. Trajectory query</h4>
 <div class="paragraph">
-<p>The Trajectory query returns data along the path defined by the <code>coords</code> parameter, <strong>the logic to match the data for the requested path will depend on and be defined by the Collection</strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
+<p>The Trajectory query returns data along the path defined by the <code>coords</code> parameter. <strong>The logic to match the data for the requested path will depend on and be defined by the <a href="#collection-definition">collection</a></strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a><strong>Parameter coords</strong></h5>
@@ -2911,7 +2918,7 @@ South West England in WGS84 would look like</p>
 <p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
-<p>"Intersects" means that the area specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
+<p>"Intersects" means that the <a href="#area-definition">area</a> specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
 </div>
 <div class="paragraph">
 <p>The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).</p>
@@ -2925,11 +2932,11 @@ South West England in WGS84 would look like</p>
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;time=2018-02-12T23:00:00Z</p>
 </div>
 <div class="paragraph">
-<p>A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the <code>z</code> query parameter :
+<p>A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the <a href="#collection-definition">collection</a> height units by the <code>z</code> query parameter :
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;z=850</p>
 </div>
 <div class="paragraph">
-<p>A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the <code>time</code> query parameter and height defined in the collection height units by the <code>z</code> query parameter :
+<p>A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the <code>time</code> query parameter and height defined in the <a href="#collection-definition">collection</a> height units by the <code>z</code> query parameter :
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&amp;time=2018-02-12T23:00:00Z&amp;z=850</p>
 </div>
 <div class="paragraph">
@@ -2937,7 +2944,7 @@ South West England in WGS84 would look like</p>
 coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)</p>
 </div>
 <div class="paragraph">
-<p>A 3D trajectory, on the surface of the earth but over a time range with a fixed height value, height defined in the collection height units by the <code>z</code> query parameter :
+<p>A 3D trajectory, on the surface of the earth but over a time range with a fixed height value, height defined in the <a href="#collection-definition">collection</a> height units by the <code>z</code> query parameter :
 coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&amp;z=200</p>
 </div>
 <div class="paragraph">
@@ -3023,7 +3030,7 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 <div class="sect3">
 <h4 id="rc_corridor-section"><a class="anchor" href="#rc_corridor-section"></a>9.3.7. Corridor query</h4>
 <div class="paragraph">
-<p>The Corridor query returns data along the path defined by the <code>coords</code> parameter, <strong>the logic to match the data for the requested path will depend on and be defined by the Collection</strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
+<p>The Corridor query returns data along the path defined by the <code>coords</code> parameter. <strong>The logic to match the data for the requested path will depend on and be defined by the <a href="#collection-definition">collection</a></strong>.  The results are further filtered by the constraints defined by the following query parameters:</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_coords_6"><a class="anchor" href="#_parameter_coords_6"></a><strong>Parameter coords</strong></h5>
@@ -3034,7 +3041,7 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 <p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
-<p>"Intersects" means that the area specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
+<p>"Intersects" means that the <a href="#area-definition">area</a> specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
 </div>
 <div class="paragraph">
 <p>The trajectory query supports the Linestring Well Know Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and an time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).</p>
@@ -3206,13 +3213,13 @@ OGC API - Features.</p>
 </div>
 <div class="paragraph">
 <p>e.g.
-return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an area query end point, a time range, a list of available parameters, and a representative geojson geometry.</p>
+return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an <a href="#area-definition">area</a> query end point, a time range, a list of available parameters, and a representative geojson geometry.</p>
 </div>
 <div class="paragraph">
 <p><code>/collections/tropical_storms/items</code></p>
 </div>
 <div class="paragraph">
-<p>e.g. return query parameters to retrieve monitoring data from a collection of stream gages using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include a location query end point, a time range, a list of available parameters and a representative geojson geometry.</p>
+<p>e.g. return query parameters to retrieve monitoring data from a <a href="#collection-definition">collection</a> end point, a time range, a list of available parameters and a representative geojson geometry.</p>
 </div>
 <div class="paragraph">
 <p><code>/collections/stream_gages/items</code></p>
@@ -3226,13 +3233,13 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p><code>/collections/{collectionId}/items/{itemID}</code></p>
 </div>
 <div class="paragraph">
-<p>e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar collection. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station.</p>
+<p>e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar <a href="#collection-definition">collection</a>. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station.</p>
 </div>
 <div class="paragraph">
 <p><code>/collections/metar/items/KIAD_2020-05-19T00Z</code></p>
 </div>
 <div class="paragraph">
-<p>e.g. return information for the requested item with an id of warning_12345 from the forecast collection. Returned data would include an area query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.</p>
+<p>e.g. return information for the requested item with an id of warning_12345 from the forecast <a href="#collection-definition">collection</a>. Returned data would include an <a href="#area-definition">area</a> query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.</p>
 </div>
 <div class="paragraph">
 <p><code>/collections/forecast/items/warning_12345</code></p>
@@ -3259,7 +3266,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>/collections/{collectionID}/locations/{locationID}</p>
 </div>
 <div class="paragraph">
-<p>return all available data for the metar collection for the requested location identifier, where the location is defined by the Heathrow METAR id</p>
+<p>return all available data for the metar <a href="#collection-definition">collection</a> for the requested location identifier, where the location is defined by the Heathrow METAR id</p>
 </div>
 <div class="paragraph">
 <p>/collections/metar/locations/EGLL</p>
@@ -3287,12 +3294,12 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="sect3">
 <h4 id="rc_instances-section"><a class="anchor" href="#rc_instances-section"></a>9.3.10. Instances query</h4>
 <div class="paragraph">
-<p>It is not unusual in the scientific world for there to be multiple versions or instances of the same collection, these is where the same information is reprocessed or regenerated.  Although they could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
+<p>It is not unusual in the scientific world for there to be multiple versions or instances of the same <a href="#collection-definition">collection</a>, where the same information is reprocessed or regenerated.  Although they could be described as new <a href="#collection-definition">collections</a> the instance query type allows this data to be described as different views of the same <a href="#collection-definition">collection</a>.</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_instanceid"><a class="anchor" href="#_parameter_instanceid"></a><strong>Parameter instanceId</strong></h5>
 <div class="paragraph">
-<p>A unique identifier for the instance of the collection</p>
+<p>A unique identifier for the instance of the <a href="#collection-definition">collection</a></p>
 </div>
 <div class="paragraph">
 <p>/collections/{collectionId}/instance/{instanceId}</p>
@@ -3300,7 +3307,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Return the Raw data instance metadata (instanceId = raw) for the Metar ((collectionId = metar) collection</p>
+<p>Return the Raw data instance metadata (instanceId = raw) for the Metar ((collectionId = metar) <a href="#collection-definition">collection</a></p>
 </li>
 </ol>
 </div>
@@ -3314,7 +3321,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>Return the Level 1 Quality controlled data instance (instanceId = qc_lvl_1) metadata for the Metar (collectionId = metar) collection</p>
+<p>Return the Level 1 Quality controlled data instance (instanceId = qc_lvl_1) metadata for the Metar (collectionId = metar) <a href="#collection-definition">collection</a></p>
 </li>
 </ol>
 </div>
@@ -3329,7 +3336,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="sect4">
 <h5 id="_parameter_querytype"><a class="anchor" href="#_parameter_querytype"></a><strong>Parameter queryType</strong></h5>
 <div class="paragraph">
-<p>The queryType options are exactly the same as those available to collections that don&#8217;t have multiple instances and support the same query parameters and functionality.  See the &lt;query-resource-table&gt;&gt; for the  mappings of the intial query types proposed for the EDR API.</p>
+<p>The queryType options are exactly the same as those available to <a href="#collection-definition">collections</a> that don&#8217;t have multiple instances and support the same query parameters and functionality.  See the &lt;query-resource-table&gt;&gt; for the  mappings of the intial query types proposed for the EDR API.</p>
 </div>
 <div class="paragraph">
 <p>/collections/{collectionId}/instance/{instanceId}/{queryType}</p>
@@ -3340,7 +3347,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>A point query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) collection</p>
+<p>A point query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <a href="#collection-definition">collection</a></p>
 </li>
 </ol>
 </div>
@@ -3354,7 +3361,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>A trajectory query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) collection</p>
+<p>A trajectory query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <a href="#collection-definition">collection</a></p>
 </li>
 </ol>
 </div>
@@ -6635,7 +6642,7 @@ explode: false</code></pre>
 <div class="sect3">
 <h4 id="_query_pattern_tests"><a class="anchor" href="#_query_pattern_tests"></a>B.10.1. Query Pattern Tests</h4>
 <div class="sect4">
-<h5 id="_position_2"><a class="anchor" href="#_position_2"></a>Position</h5>
+<h5 id="_position"><a class="anchor" href="#_position"></a>Position</h5>
 <table id="ats_position" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -7356,7 +7363,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_area_2"><a class="anchor" href="#_area_2"></a>Area</h5>
+<h5 id="_area"><a class="anchor" href="#_area"></a>Area</h5>
 <table id="ats_area" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -8077,7 +8084,7 @@ explode: false</code></pre>
 </table>
 </div>
 <div class="sect4">
-<h5 id="_trajectory_2"><a class="anchor" href="#_trajectory_2"></a>Trajectory</h5>
+<h5 id="_trajectory"><a class="anchor" href="#_trajectory"></a>Trajectory</h5>
 <table id="ats_trajectory" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -10162,16 +10169,16 @@ include::examples/tbd.adoc[]
 <div class="title">Example 40. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
-<p>The example below shows a service with two collections, one for observations and another for forecast data.  The forecast data is regenerated every hour so the collection provides access to multiple instances of the collection via an instances endpoint.</p>
+<p>The example below shows a service with two <a href="#collection-definition">collections</a>, one for observations and another for forecast data.  The forecast data is regenerated every hour so the <a href="#collection-definition">collection</a> provides access to multiple instances of the <a href="#collection-definition">collection</a> via an instances endpoint.</p>
 </div>
 <div class="paragraph">
-<p>There are links to the responses of the collections (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "self").</p>
+<p>There are links to the responses of the <a href="#collection-definition">collections</a> (<a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a>: "self").</p>
 </div>
 <div class="paragraph">
 <p>Representations of these resource in other formats are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "alternate".</p>
 </div>
 <div class="paragraph">
-<p>The data queries that are supported by each collection are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "data".</p>
+<p>The data queries that are supported by each <a href="#collection-definition">collection</a> are referenced using <a href="https://www.iana.org/assignments/link-relations/link-relations.xhtml">link relation type</a> "data".</p>
 </div>
 <div class="paragraph">
 <p>There are also links to the license information for the observation and forecast data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license") and also the terms and conditions of service (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "restrictions") .</p>
@@ -12685,7 +12692,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-10-14 22:22:14 -0400
+Last updated 2020-10-15 22:21:59 -0400
 </div>
 </div>
 </body>
