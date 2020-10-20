@@ -23,7 +23,7 @@
     "links": {
       "type": "array",
       "items": {
-        "$ref": "link.yaml"
+        "$ref": "link.json"
       },
       "example": [
         {
@@ -41,7 +41,7 @@
       ]
     },
     "extent": {
-      "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.yaml"
+      "$ref": "https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/extent.json"
     }
   }
 }

@@ -16,25 +16,25 @@
       "items": {
         "oneOf": [
           {
-            "$ref": "pointGeoJSON.yaml"
+            "$ref": "pointGeoJSON.json"
           },
           {
-            "$ref": "multipointGeoJSON.yaml"
+            "$ref": "multipointGeoJSON.json"
           },
           {
-            "$ref": "linestringGeoJSON.yaml"
+            "$ref": "linestringGeoJSON.json"
           },
           {
-            "$ref": "multilinestringGeoJSON.yaml"
+            "$ref": "multilinestringGeoJSON.json"
           },
           {
-            "$ref": "polygonGeoJSON.yaml"
+            "$ref": "polygonGeoJSON.json"
           },
           {
-            "$ref": "multipolygonGeoJSON.yaml"
+            "$ref": "multipolygonGeoJSON.json"
           },
           {
-            "$ref": "geometrycollectionGeoJSON.yaml"
+            "$ref": "geometrycollectionGeoJSON.json"
           }
         ]
       }

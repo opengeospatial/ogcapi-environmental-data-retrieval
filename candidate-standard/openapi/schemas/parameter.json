@@ -30,13 +30,13 @@
       }
     },
     "unit": {
-      "$ref": "units.yaml"
+      "$ref": "units.json"
     },
     "observedProperty": {
-      "$ref": "observedProperty.yaml"
+      "$ref": "observedProperty.json"
     },
     "extent": {
-      "$ref": "parameterExtent.yaml"
+      "$ref": "parameterExtent.json"
     },
     "id": {
       "description": "Unique ID of the parameter, this is the value used for querying the data",

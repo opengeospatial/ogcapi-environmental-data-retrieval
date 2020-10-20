@@ -8,7 +8,7 @@
     "links": {
       "type": "array",
       "items": {
-        "$ref": "link.yaml"
+        "$ref": "link.json"
       }
     },
     "id": {
@@ -34,13 +34,13 @@
       }
     },
     "extent": {
-      "$ref": "extent.yaml"
+      "$ref": "extent.json"
     },
     "crs": {
       "description": "list of the coordinate reference systems the collection results can be produced in",
       "type": "array",
       "items": {
-        "$ref": "crsObject.yaml"
+        "$ref": "crsObject.json"
       }
     },
     "distanceunits": {
@@ -57,7 +57,7 @@
       "description": "list of the data parameters available in the collection",
       "type": "array",
       "items": {
-        "$ref": "parameter.yaml"
+        "$ref": "parameter.json"
       }
     }
   }
