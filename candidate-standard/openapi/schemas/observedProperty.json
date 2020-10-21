@@ -12,7 +12,6 @@
       "type": "string"
     },
     "label": {
-      "additionalProperties": {
         "type": "object",
         "required": [
           "en"
@@ -22,7 +21,6 @@
             "type": "string"
           }
         }
-      }
     }
   },
   "example": {
