@@ -227,7 +227,7 @@
           "dataType": {
             "description": "Format of the data values in the array",
             "enum": [
-              "int",
+              "integer",
               "long",
               "float",
               "double",
