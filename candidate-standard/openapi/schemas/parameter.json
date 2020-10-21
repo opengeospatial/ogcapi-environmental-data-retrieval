@@ -16,15 +16,13 @@
       ]
     },
     "description": {
-      "additionalProperties": {
-        "type": "object",
-        "required": [
-          "en"
-        ],
-        "properties": {
-          "en": {
-            "type": "string"
-          }
+      "type": "object",
+      "required": [
+        "en"
+      ],
+      "properties": {
+        "en": {
+          "type": "string"
         }
       }
     },
