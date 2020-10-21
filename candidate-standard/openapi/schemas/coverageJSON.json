@@ -12,7 +12,8 @@
     "type": {
       "description": "Coverage domain type",
       "enum": [
-        "Coverage"
+        "Coverage",
+        "CoverageCollection"
       ]
     },
     "domain": {
