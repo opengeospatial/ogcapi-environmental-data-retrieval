@@ -6,7 +6,7 @@ required:
   - label
 properties:
   label:
-    type: string
+    type: object
     properties:
       en:
         type: string
