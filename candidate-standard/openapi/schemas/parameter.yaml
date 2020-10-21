@@ -6,7 +6,6 @@ required:
   - unit
   - description
   - observedProperty
-  - id
 properties:
   type:
     description: type
