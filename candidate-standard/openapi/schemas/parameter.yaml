@@ -1,10 +1,9 @@
-type: object 
+type: object
 title: Parameter name
 description: Definition of data parameter
 required:
   - type
   - unit
-  - description
   - observedProperty
 properties:
   type:
@@ -22,10 +21,18 @@ properties:
     $ref: units.yaml
   observedProperty:
     $ref: observedProperty.yaml
+  categoryEncoding:
+    type: object
+    additionalProperties:
+      OneOf:
+        - type: integer
+        - type: array
+          items:
+            type: integer
   extent:
     $ref: parameterExtent.yaml
   id:
-    description: 'Unique ID of the parameter, this is the value used for querying the data'
+    description: Unique ID of the parameter, this is the value used for querying the data
     type: string
   measurementType:
     type: object
@@ -40,7 +47,9 @@ properties:
       duration:
         type: string
         title: Measurement time duartion
-        description: The time duration that the value was calculated for as an RFC3339 duration value.  If the method value is instantaneous this value is not required.
+        description: The time duration that the value was calculated for as an RFC3339
+          duration value.  If the method value is instantaneous this value is
+          not required.
         example: PT10M
 example:
   type: Parameter
@@ -51,9 +60,9 @@ example:
     label:
       en: Ratio
     symbol:
-      value: '1'
-      type: 'http://www.opengis.net/def/uom/UCUM/'
+      value: "1"
+      type: http://www.opengis.net/def/uom/UCUM/
   observedProperty:
-    id: 'http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/'
+    id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
     label:
       en: Sea Ice Concentration

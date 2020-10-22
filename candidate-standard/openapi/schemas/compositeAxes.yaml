@@ -1,0 +1,22 @@
+description: Composite Axis where the Axes values are described as Tuples rather
+  than individual arrays
+type: object
+required:
+  - dataType
+  - coordinates
+  - values
+properties:
+  dataType:
+    type: string
+  coordinates:
+    type: array
+    items:
+      type: string
+  values:
+    type: array
+    items:
+      type: array
+      items:
+        anyOf:
+          - number
+          - string
