@@ -1,6 +1,7 @@
 type: object
 title: CoverageJSON
-description: A geospatial coverage interchange format based on JavaScript Object Notation (JSON)
+description: A geospatial coverage interchange format based on JavaScript Object
+  Notation (JSON)
 required:
   - type
   - domain
@@ -154,7 +155,7 @@ properties:
   parameters:
     type: object
     additionalProperties:
-      $ref: parameter.yaml
+      $ref: parameter.json
   ranges:
     type: object
     additionalProperties:
@@ -171,6 +172,7 @@ properties:
               description: Definition of the data structure
               enum:
                 - NdArray
+                - TiledNdArray
             dataType:
               description: Format of the data values in the array
               enum:
@@ -226,17 +228,19 @@ properties:
               items:
                 type: number
             tileSets:
-              type: object
-              required:
-                - tileShape
-                - urlTemplate
-              properties:
-                tileShape:
-                  type: array
-                  items:
-                    type: number
-                urlTemplate:
-                  type: string
+              type: array
+              items:
+                type: object
+                required:
+                  - tileShape
+                  - urlTemplate
+                properties:
+                  tileShape:
+                    type: array
+                    items:
+                      type: number
+                  urlTemplate:
+                    type: string
       example:
         type: NdArray
         dataType: float

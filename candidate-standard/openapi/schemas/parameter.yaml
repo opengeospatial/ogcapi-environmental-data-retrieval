@@ -3,7 +3,6 @@ title: Parameter name
 description: Definition of data parameter
 required:
   - type
-  - unit
   - observedProperty
 properties:
   type:

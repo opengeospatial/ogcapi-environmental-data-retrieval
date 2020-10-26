@@ -239,7 +239,8 @@
                 "type": {
                   "description": "Definition of the data structure",
                   "enum": [
-                    "NdArray"
+                    "NdArray",
+                    "TiledNdArray"
                   ]
                 },
                 "dataType": {
@@ -318,20 +319,23 @@
                   }
                 },
                 "tileSets": {
-                  "type": "object",
-                  "required": [
-                    "tileShape",
-                    "urlTemplate"
-                  ],
-                  "properties": {
-                    "tileShape": {
-                      "type": "array",
-                      "items": {
-                        "type": "number"
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "required": [
+                      "tileShape",
+                      "urlTemplate"
+                    ],
+                    "properties": {
+                      "tileShape": {
+                        "type": "array",
+                        "items": {
+                          "type": "number"
+                        }
+                      },
+                      "urlTemplate": {
+                        "type": "string"
                       }
-                    },
-                    "urlTemplate": {
-                      "type": "string"
                     }
                   }
                 }
