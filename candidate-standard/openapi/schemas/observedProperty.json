@@ -50,7 +50,15 @@
                 }
             },
             "description" : {
-              "type" : "string"
+              "type": "object",
+              "required": [
+                "en"
+              ],
+              "properties": {
+                "en": {
+                  "type": "string"
+                }
+              }
             }          
           }
   
