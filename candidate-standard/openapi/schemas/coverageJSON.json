@@ -239,8 +239,7 @@
                 "type": {
                   "description": "Definition of the data structure",
                   "enum": [
-                    "NdArray",
-                    "TiledNdArray"
+                    "NdArray"
                   ]
                 },
                 "dataType": {
@@ -291,7 +290,8 @@
                 "type": {
                   "description": "Definition of the data structure",
                   "enum": [
-                    "NdArray"
+                    "NdArray",
+                    "TiledNdArray"
                   ]
                 },
                 "dataType": {

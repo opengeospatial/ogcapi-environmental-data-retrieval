@@ -172,7 +172,6 @@ properties:
               description: Definition of the data structure
               enum:
                 - NdArray
-                - TiledNdArray
             dataType:
               description: Format of the data values in the array
               enum:
@@ -209,6 +208,7 @@ properties:
               description: Definition of the data structure
               enum:
                 - NdArray
+                - TiledNdArray                
             dataType:
               description: Format of the data values in the array
               enum:
