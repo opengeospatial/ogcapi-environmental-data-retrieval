@@ -1,51 +1,69 @@
 {
-  "type": "object",
-  "title": "unit name",
-  "description": "definition of data units",
-  "required": [
-    "symbol",
-    "label"
-  ],
-  "properties": {
-    "label": {
-      "type": "string",
-      "properties": {
-        "en": {
-          "type": "string"
-        }
+    "type": "object",
+    "title": "unit name",
+    "description": "definition of data units",
+    "anyOf": [
+      {
+        "required": [
+          "label"
+        ]
+      },
+      {
+        "required": [
+          "symbol"
+        ]
       }
-    },
-    "symbol": {
-      "type": "object",
-      "title": "Root Type for symbol",
-      "description": "Information about the symbol used to describe the units",
-      "required": [
-        "value",
-        "type"
-      ],
-      "properties": {
-        "value": {
-          "description": "representation of the units symbol",
-          "type": "string"
-        },
-        "type": {
-          "description": "uri to detailed desxcription of the units",
-          "type": "string"
+    ],
+    "properties": {
+      "label": {
+        "type": "object",
+        "properties": {
+          "en": {
+            "type": "string"
+          }
         }
       },
-      "example": {
-        "value": "hPa",
+      "symbol": {
+        "title": "Decribe unit symbol",
+        "anyOf": [
+          {
+            "type": "object",
+            "description": "Information about the symbol used to describe the units",
+            "required": [
+              "value",
+              "type"
+            ],
+            "properties": {
+              "value": {
+                "description": "representation of the units symbol",
+                "type": "string"
+              },
+              "type": {
+                "description": "uri to detailed desxcription of the units",
+                "type": "string"
+              }
+            }
+          },
+          {
+            "type": "string"
+          }
+        ],
+        "example": {
+          "value": "hPa",
+          "type": "http://www.opengis.net/def/uom/UCUM/"
+        }
+      },
+      "id": {
+        "type": "string"
+      }
+    },
+    "example": {
+      "label": {
+        "en": "Kelvin"
+      },
+      "symbol": {
+        "value": "K",
         "type": "http://www.opengis.net/def/uom/UCUM/"
       }
     }
-  },
-  "example": {
-    "label": {
-      "en": "Kelvin"
-    },
-    "symbol": {
-      "value": "K",
-      "type": "http://www.opengis.net/def/uom/UCUM/"
-    }
   }
-}

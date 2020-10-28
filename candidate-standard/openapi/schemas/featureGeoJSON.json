@@ -15,30 +15,30 @@
     "geometry": {
       "oneOf": [
         {
-          "$ref": "pointGeoJSON.yaml"
+          "$ref": "pointGeoJSON.json"
         },
         {
-          "$ref": "multipointGeoJSON.yaml"
+          "$ref": "multipointGeoJSON.json"
         },
         {
-          "$ref": "linestringGeoJSON.yaml"
+          "$ref": "linestringGeoJSON.json"
         },
         {
-          "$ref": "multilinestringGeoJSON.yaml"
+          "$ref": "multilinestringGeoJSON.json"
         },
         {
-          "$ref": "polygonGeoJSON.yaml"
+          "$ref": "polygonGeoJSON.json"
         },
         {
-          "$ref": "multipolygonGeoJSON.yaml"
+          "$ref": "multipolygonGeoJSON.json"
         },
         {
-          "$ref": "geometrycollectionGeoJSON.yaml"
+          "$ref": "geometrycollectionGeoJSON.json"
         }
       ]
     },
     "properties": {
-      "$ref": "edrProperties.yaml"
+      "$ref": "edrProperties.json"
     },
     "id": {
       "oneOf": [
@@ -53,7 +53,7 @@
     "links": {
       "type": "array",
       "items": {
-        "$ref": "link.yaml"
+        "$ref": "link.json"
       }
     }
   }

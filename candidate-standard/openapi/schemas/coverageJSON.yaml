@@ -1,6 +1,7 @@
 type: object
 title: CoverageJSON
-description: A geospatial coverage interchange format based on JavaScript Object Notation (JSON)
+description: A geospatial coverage interchange format based on JavaScript Object
+  Notation (JSON)
 required:
   - type
   - domain
@@ -11,6 +12,8 @@ properties:
     description: Coverage domain type
     enum:
       - Coverage
+      - CoverageCollection
+      - Domain
   domain:
     title: Domain description
     description: Definition of the Coverage geo-temporal domain
@@ -34,14 +37,20 @@ properties:
           - PolygonSeries
           - MultiPolygon
           - MultiPoint
+          - VerticalProfile
       axes:
         title: Domain dimensions
         description: Geotemporal dimension axes of the CoverageJSON domain
-        required:
-          - x
-          - y
+        anyOf:
+          - required:
+              - composite
+          - required:
+              - x
+              - y
         type: object
         properties:
+          composite:
+            $ref: compositeAxes.json
           x:
             title: X axis values
             description: x coordinates definition
@@ -85,7 +94,9 @@ properties:
                 description: Array of string values
                 type: array
                 items:
-                  type: string
+                  anyOf:
+                    - number
+                    - string
             example:
               - -10
               - -5
@@ -103,9 +114,9 @@ properties:
                 items:
                   type: string
             example:
-              - '1990-12-31T23:59:60Z'
-              - '2020-02-01T04:00:00Z'
-              - '2012-08-01T00:00:00Z'
+              - 1990-12-31T23:59:60Z
+              - 2020-02-01T04:00:00Z
+              - 2012-08-01T00:00:00Z
         example:
           x:
             values:
@@ -121,7 +132,7 @@ properties:
               - 5
           t:
             values:
-              - '2010-01-01T00:12:20Z'
+              - 2010-01-01T00:12:20Z
     example:
       type: Domain
       domainType: Grid
@@ -140,52 +151,96 @@ properties:
             - 5
         t:
           values:
-            - '2010-01-01T00:12:20Z'
+            - 2010-01-01T00:12:20Z
   parameters:
     type: object
     additionalProperties:
-      $ref: parameter.yaml
+      $ref: parameter.json
   ranges:
     type: object
     additionalProperties:
       title: Parameter data values
-      description: Parameter data values described by N dimensional data arrays 
-      required:
-        - type
-        - dataType
-        - values
-        - axisNames
+      description: Parameter data values described by N dimensional data arrays
       type: object
-      properties:
-        type:
-          description: Definition of the data structure
-          enum:
-            - NdArray
-        dataType:
-          description: Format of the data values in the array
-          enum:
-            - int
-            - long
-            - float
-            - double
-            - string
-        axisNames:
-          description: Labels for the data axes
-          type: array
-          items:
-            type: string
-        shape:
-          description: Structure of the N dimensional array data
-          type: array
-          items:
-            type: number
-        values:
-          description: Parameter data values
-          type: array
-          items: 
-            oneOf:
-              number
-              string
+      oneOf:
+        - required:
+            - type
+            - dataType
+            - values
+          properties:
+            type:
+              description: Definition of the data structure
+              enum:
+                - NdArray
+            dataType:
+              description: Format of the data values in the array
+              enum:
+                - integer
+                - long
+                - float
+                - double
+                - string
+            axisNames:
+              description: Labels for the data axes
+              type: array
+              items:
+                type: string
+            shape:
+              description: Structure of the N dimensional array data
+              type: array
+              items:
+                type: number
+            values:
+              description: Parameter data values
+              type: array
+              items:
+                anyOf:
+                  - number
+                  - string
+        - required:
+            - type
+            - dataType
+            - shape
+            - axisNames
+            - tileSets
+          properties:
+            type:
+              description: Definition of the data structure
+              enum:
+                - NdArray
+                - TiledNdArray                
+            dataType:
+              description: Format of the data values in the array
+              enum:
+                - integer
+                - long
+                - float
+                - double
+                - string
+            axisNames:
+              description: Labels for the data axes
+              type: array
+              items:
+                type: string
+            shape:
+              description: Structure of the N dimensional array data
+              type: array
+              items:
+                type: number
+            tileSets:
+              type: array
+              items:
+                type: object
+                required:
+                  - tileShape
+                  - urlTemplate
+                properties:
+                  tileShape:
+                    type: array
+                    items:
+                      type: number
+                  urlTemplate:
+                    type: string
       example:
         type: NdArray
         dataType: float
