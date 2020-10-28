@@ -37,7 +37,7 @@ coords=LINESTRINGZ(51.14 -2.98 0.1, 51.36 -2.87 0.2, 51.03 -3.15 0.3, 50.74 -3.4
 A 4D corridor, through a 3D volume but over a time range:
 coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03 -3.15 0.3 1560508200, 50.74 -3.48 0.4 1560508500, 50.9 -3.36 0.5 1560510240)
 
-If the coords specifiy a 4D trajectory i.e. coords=LINESTRINGZM(...) an error MUST be thrown by the server if the client application defines either the `z` or `time` query parameters
+If the coords specify a 4D corridor i.e. coords=LINESTRINGZM(...) an error MUST be thrown by the server if the client application defines either the `z` or `time` query parameters
 
 where Z is the height value.  
 `If the specified CRS does not define the height units the heights will units will default to metres above mean sea level`
