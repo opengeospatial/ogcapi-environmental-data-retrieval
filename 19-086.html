@@ -633,10 +633,156 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <li><a href="#rc_corridor-section">9.3.7. Corridor query</a></li>
 <li><a href="#rc_items-section">9.3.8. Items query</a></li>
 <li><a href="#rc_locations-section">9.3.9. Locations query</a></li>
+<li><a href="#rc_instances-section">9.3.10. Instances query</a></li>
 </ul>
 </li>
 </ul>
 </li>
+<li><a href="#general-section">10. General Requirements</a>
+<ul class="sectlevel2">
+<li><a href="#_http_1_1">10.1. HTTP 1.1</a></li>
+<li><a href="#http-status-codes">10.2. HTTP Status Codes</a></li>
+<li><a href="#web-caching">10.3. Web Caching</a></li>
+<li><a href="#cross-origin">10.4. Support for Cross-Origin Requests</a></li>
+<li><a href="#asynchronous_queries">10.5. Asynchronous queries</a></li>
+<li><a href="#coordinate_reference_system">10.6. Coordinate Reference Systems</a></li>
+<li><a href="#rc_encoding-section">10.7. Encodings</a></li>
+<li><a href="#_link_headers">10.8. Link Headers</a></li>
+<li><a href="#rc_oas30-section">10.9. OpenAPI 3.0</a>
+<ul class="sectlevel3">
+<li><a href="#_basic_requirements">10.9.1. Basic requirements</a></li>
+<li><a href="#_complete_definition">10.9.2. Complete definition</a></li>
+<li><a href="#exceptions">10.9.3. Exceptions</a></li>
+</ul>
+</li>
+<li><a href="#security">10.10. Security</a></li>
+</ul>
+</li>
+<li><a href="#requirements">Annex A: Requirements Detail</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_2">A.1. Introduction</a></li>
+<li><a href="#_requirements_test_class_core">A.2. Requirements Test Class Core</a>
+<ul class="sectlevel3">
+<li><a href="#rc_core"><strong>Requirements Class:</strong> OGC API-Environmental Data Retrieval Core</a></li>
+<li><a href="#req_core_api-common"><strong>Requirement 1: /req/core/api-common</strong> OGC API-Common</a></li>
+<li><a href="#req_core_conformance"><strong>Requirement 2: /req/core/conformance</strong> Core conformance classes</a></li>
+<li><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></li>
+<li><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></li>
+<li><a href="#req_core_rc-datetime-parameter"><strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</a></li>
+<li><a href="#req_edr_parameters-definition"><strong>Requirement 6: /req/edr/parameters-definition</strong> Parameter parametername definition</a></li>
+<li><a href="#req_edr_parameters-response"><strong>Requirement 7: /req/edr/parameters-response</strong> Parameter parametername response</a></li>
+<li><a href="#req_edr_outputCRS-definition"><strong>Requirement 8: /req/edr/outputCRS-definition</strong> Parameter crs definition</a></li>
+<li><a href="#req_edr_outputCRS-response"><strong>Requirement 9: /req/edr/outputCRS-response</strong> Parameter crs response</a></li>
+<li><a href="#req_edr_outputFormat-definition"><strong>Requirement 10: /req/edr/outputFormat-definition</strong> Parameter outputFormat definition</a></li>
+<li><a href="#req_edr_outputFormat-response"><strong>Requirement 11: /req/edr/outputFormat-response</strong> Parameter outputFormat response</a></li>
+<li><a href="#req_edr_z-definition"><strong>Requirement 12: /req/edr/z-definition</strong> Parameter z definition</a></li>
+<li><a href="#req_edr_z-response"><strong>Requirement 13: /req/edr/z-response</strong> Parameter z response</a></li>
+<li><a href="#req_edr_within-definition"><strong>Requirement 14: /req/edr/within-definition</strong> Parameter within definition</a></li>
+<li><a href="#req_edr_within-response"><strong>Requirement 15: /req/edr/within-response</strong> Parameter within response</a></li>
+<li><a href="#req_edr_withinUnits-definition"><strong>Requirement 16: /req/edr/withinUnits-definition</strong> Parameter withinUnits definition</a></li>
+<li><a href="#req_edr_withinUnits-response"><strong>Requirement 17: /req/edr/within-response</strong> Parameter withinUnits response</a></li>
+<li><a href="#req_edr_minz-definition"><strong>Requirement 18: /req/edr/minz-definition</strong> Parameter minx definition</a></li>
+<li><a href="#req_edr_minz-response"><strong>Requirement 19: /req/edr/minz-response</strong> Parameter minz response</a></li>
+<li><a href="#req_edr_maxz-definition"><strong>Requirement 20: /req/edr/maxz-definition</strong> Parameter maxz definition</a></li>
+<li><a href="#req_edr_maxz-response"><strong>Requirement 21: /req/edr/maxz-response</strong> Parameter maxz response</a></li>
+<li><a href="#req_edr_resolutionx-definition"><strong>Requirement 22: /req/edr/resolutionx-definition</strong> Parameter resolutionx definition</a></li>
+<li><a href="#req_edr_resolutionx-response"><strong>Requirement 23: /req/edr/resolutionx-response</strong> Parameter resolutionx response</a></li>
+<li><a href="#req_edr_resolutiony-definition"><strong>Requirement 24: /req/edr/resolutiony-definition</strong> Parameter resolutiony definition</a></li>
+<li><a href="#req_edr_resolutiony-response"><strong>Requirement 25: /req/edr/resolutiony-response</strong> Parameter resolutiony response</a></li>
+<li><a href="#req_edr_resolutionz-definition"><strong>Requirement 26: /req/edr/resolutionz-definition</strong> Parameter resolutionz definition</a></li>
+<li><a href="#req_edr_resolutionz-response"><strong>Requirement 27: /req/edr/resolutionz-response</strong> Parameter resolutionz response</a></li>
+<li><a href="#req_edr_corridorHeight-definition"><strong>Requirement 28: /req/edr/corridorHeight-definition</strong> Parameter corridorHeight definition</a></li>
+<li><a href="#req_edr_corridorHeight-response"><strong>Requirement 29: /req/edr/corridorHeight-response</strong> Parameter corridorHeight response</a></li>
+<li><a href="#req_edr_corridorWidth-definition"><strong>Requirement 30: /req/edr/corridorWidth-definition</strong> Parameter corridorWidth definition</a></li>
+<li><a href="#req_edr_corridorWidth-response"><strong>Requirement 31: /req/edr/corridorWidth-response</strong> Parameter corridorWidth response</a></li>
+<li><a href="#req_core_http"><strong>Requirement 32: /req/core/http</strong> HTTP</a></li>
+<li><a href="#req_core_crs84"><strong>Requirement 33: /req/core/crs84</strong> CRS84</a></li>
+</ul>
+</li>
+<li><a href="#_requirements_test_class_openapi_3_0">A.3. Requirements Test Class OpenAPI 3.0</a>
+<ul class="sectlevel3">
+<li><a href="#rc_oas30"><strong>Requirements Class:</strong> OpenAPI 3.0</a></li>
+<li><a href="#req_oas30_oas-common"><strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</a></li>
+<li><a href="#req_oas30_conformance"><strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</a></li>
+<li><a href="#req_oas30_completeness"><strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</a></li>
+<li><a href="#req_oas30_exceptions-codes"><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></li>
+<li><a href="#req_oas30_security"><strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_abstract_test_suite_normative">Annex B: Abstract Test Suite (Normative)</a>
+<ul class="sectlevel2">
+<li><a href="#_introduction_3">B.1. Introduction</a></li>
+<li><a href="#_conformance_class_core">B.2. Conformance Class Core</a>
+<ul class="sectlevel3">
+<li><a href="#_general_tests">B.2.1. General Tests</a></li>
+<li><a href="#_landing_page_root">B.2.2. Landing Page {root}/</a></li>
+<li><a href="#_api_definition_path_rootapi_link">B.2.3. API Definition Path {root}/api (link)</a></li>
+<li><a href="#_conformance_path_rootconformance">B.2.4. Conformance Path {root}/conformance</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_collections">B.3. Conformance Class Collections</a>
+<ul class="sectlevel3">
+<li><a href="#_general_tests_2">B.3.1. General Tests</a></li>
+<li><a href="#_environmental_data_collections_rootcollections">B.3.2. Environmental Data Collections {root}/collections</a></li>
+<li><a href="#_environmental_data_collection_rootcollectionscollectionid">B.3.3. Environmental Data Collection {root}/collections/{collectionId}</a></li>
+<li><a href="#_second_tier_collections_tests">B.3.4. Second Tier Collections Tests</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_json">B.4. Conformance Class JSON</a>
+<ul class="sectlevel3">
+<li><a href="#_json_definition">B.4.1. JSON Definition</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_geojson">B.5. Conformance Class GeoJSON</a>
+<ul class="sectlevel3">
+<li><a href="#_json_definition_2">B.5.1. JSON Definition</a></li>
+<li><a href="#_geojson_content">B.5.2. GeoJSON Content</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_edr_geojson">B.6. Conformance Class EDR GeoJSON</a>
+<ul class="sectlevel3">
+<li><a href="#_edr_geojson_definition">B.6.1. EDR GeoJSON Definition</a></li>
+<li><a href="#_edr_geojson_content">B.6.2. EDR GeoJSON Content</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_coveragejson">B.7. Conformance Class CoverageJSON</a>
+<ul class="sectlevel3">
+<li><a href="#_coveragejson_definition">B.7.1. CoverageJSON Definition</a></li>
+<li><a href="#_coveragejson_content">B.7.2. CoverageJSON Content</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_html">B.8. Conformance Class HTML</a>
+<ul class="sectlevel3">
+<li><a href="#_html_definition">B.8.1. HTML Definition</a></li>
+<li><a href="#_html_content">B.8.2. HTML Content</a></li>
+</ul>
+</li>
+<li><a href="#_conformance_class_openapi_3_0">B.9. Conformance Class OpenAPI 3.0</a></li>
+<li><a href="#_conformance_class_queries">B.10. Conformance Class Queries</a>
+<ul class="sectlevel3">
+<li><a href="#_query_pattern_tests">B.10.1. Query Pattern Tests</a></li>
+<li><a href="#_collections_and_instances">B.10.2. Collections and Instances</a></li>
+<li><a href="#_second_tier_tests">B.10.3. Second Tier Tests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a href="#_examples_informative">Annex C: Examples (Informative)</a>
+<ul class="sectlevel2">
+<li><a href="#openapi-examples">C.1. OpenAPI definition</a></li>
+<li><a href="#landing-page-examples">C.2. Example Landing Pages</a></li>
+<li><a href="#oas-examples">C.3. API Description Examples</a></li>
+<li><a href="#conformance-response-examples">C.4. Conformance Examples</a></li>
+<li><a href="#collections-metadata-examples">C.5. Collections Metadata Examples</a></li>
+<li><a href="#instance-metadata-examples">C.6. Instance Metadata Examples</a></li>
+<li><a href="#location-metadata-examples">C.7. Location Query Metadata Examples</a></li>
+</ul>
+</li>
+<li><a href="#glossary">Annex D: Glossary</a></li>
+<li><a href="#_revision_history">Annex E: Revision History</a></li>
+<li><a href="#Bibliography">Annex F: Bibliography</a></li>
 </ul>
 </div>
 <div style="page-break-after: always;"></div>
@@ -1535,7 +1681,7 @@ or<br>
 <p>The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR shall first satisfy the appropriate Requirements Classes from API-Common.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_core_api-common">[req_core_api-common]</a></p>
+<p><a href="#req_core_api-common"><strong>Requirement 1: /req/core/api-common</strong> OGC API-Common</a></p>
 </div>
 <div class="sect2">
 <h3 id="rc_core-section"><a class="anchor" href="#rc_core-section"></a>8.1. Overview</h3>
@@ -1543,7 +1689,7 @@ or<br>
 <p>The <code>Core</code> Requirements Class defines the requirements for locating, understanding, and accessing environmental data resources.</p>
 </div>
 <div class="paragraph">
-<p><a href="#rc_core">[rc_core]</a></p>
+<p><a href="#rc_core"><strong>Requirements Class:</strong> OGC API-Environmental Data Retrieval Core</a></p>
 </div>
 <div class="paragraph">
 <p>The <code>Core</code> Requirements Class is presented in five sections:</p>
@@ -1724,14 +1870,41 @@ properties:
 <div id="landingPage-example" class="listingblock">
 <div class="title">Landing Page Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in clause_7_core.adoc - include::examples/JSON/landingPage_example.json[]</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "title": "string",
+  "description": "string",
+  "links": [
+    {
+      "href": "http://data.example.org/",
+      "rel": "self",
+      "type": "application/json",
+      "title": "this document"
+    },
+    {
+      "href": "http://data.example.org/api",
+      "rel": "service-desc",
+      "type": "application/openapi+json;version=3.0",
+      "title": "the API definition"
+    },
+    {
+      "href": "http://data.example.org/conformance",
+      "rel": "conformance",
+      "type": "application/json",
+      "title": "OGC conformance classes implemented by this API"
+    },
+    {
+      "href": "http://data.example.org/collections",
+      "title": "Metadata about the resource collections"
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
 <div class="sect4">
 <h5 id="_error_situations"><a class="anchor" href="#_error_situations"></a>Error situations</h5>
 <div class="paragraph">
-<p>The requirements for handling unsuccessful requests are provided in <a href="#http-response">[http-response]</a>. General guidance on HTTP status codes and how they should be handled is provided in <a href="#http-status-codes">[http-status-codes]</a>.</p>
+<p>The requirements for handling unsuccessful requests are provided in <a href="#http-response">[http-response]</a>. General guidance on HTTP status codes and how they should be handled is provided in <a href="#http-status-codes">HTTP Status Codes</a>.</p>
 </div>
 </div>
 </div>
@@ -1779,7 +1952,7 @@ properties:
 <div class="sect4">
 <h5 id="_error_situations_2"><a class="anchor" href="#_error_situations_2"></a>Error situations</h5>
 <div class="paragraph">
-<p>The requirements for handling unsuccessful requests are provided in <a href="#http-response">[http-response]</a>. General guidance on HTTP status codes and how they should be handled is provided in <a href="#http-status-codes">[http-status-codes]</a>.</p>
+<p>The requirements for handling unsuccessful requests are provided in <a href="#http-response">[http-response]</a>. General guidance on HTTP status codes and how they should be handled is provided in <a href="#http-status-codes">HTTP Status Codes</a>.</p>
 </div>
 </div>
 </div>
@@ -1824,7 +1997,7 @@ properties:
 <p>A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this API claims conformance. The schema for this resource is defined in API-Common and provided for reference in <a href="#conformance-schema">Conformance Response Schema</a>.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_core_conformance">[req_core_conformance]</a></p>
+<p><a href="#req_core_conformance"><strong>Requirement 2: /req/core/conformance</strong> Core conformance classes</a></p>
 </div>
 <div id="conformance-schema" class="listingblock">
 <div class="title">Conformance Response Schema</div>
@@ -1845,7 +2018,16 @@ properties:
 <div id="conformance-example" class="listingblock">
 <div class="title">Conformance Information Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in clause_7_core.adoc - include::examples/JSON/conformance_example.json[]</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "conformsTo": [
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/collections",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas3",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/geojson",
+    "http://www.opengis.net/spec/ogcapi-coverages-1/1.0/conf/core"
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -2038,16 +2220,16 @@ properties:
 <div class="sect4">
 <h5 id="coords"><a class="anchor" href="#coords"></a>Parameter coords</h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 </div>
 <div class="sect4">
 <h5 id="time"><a class="anchor" href="#time"></a>Parameter datetime</h5>
 <div class="paragraph">
-<p><a href="#req_core_rc-datetime-parameter">[req_core_rc-datetime-parameter]</a></p>
+<p><a href="#req_core_rc-datetime-parameter"><strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</a></p>
 </div>
 <div class="paragraph">
 <p>The <code>datetime</code> parameter is defined in API-Common. The following information is provided here as a convenience.</p>
@@ -2102,10 +2284,10 @@ properties:
 <div class="sect4">
 <h5 id="parametername"><a class="anchor" href="#parametername"></a>Parameter parametername</h5>
 <div class="paragraph">
-<p><a href="#req_edr_parameters-definition">[req_edr_parameters-definition]</a></p>
+<p><a href="#req_edr_parameters-definition"><strong>Requirement 6: /req/edr/parameters-definition</strong> Parameter parametername definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_parameters-response">[req_edr_parameters-response]</a></p>
+<p><a href="#req_edr_parameters-response"><strong>Requirement 7: /req/edr/parameters-response</strong> Parameter parametername response</a></p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 4. A single parameter</div>
@@ -2137,10 +2319,10 @@ If none of the requested parameters exist in the <a href="#collection-definition
 <div class="sect4">
 <h5 id="crs"><a class="anchor" href="#crs"></a>Parameter crs</h5>
 <div class="paragraph">
-<p><a href="#req_edr_outputCRS-definition">[req_edr_outputCRS-definition]</a></p>
+<p><a href="#req_edr_outputCRS-definition"><strong>Requirement 8: /req/edr/outputCRS-definition</strong> Parameter crs definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_outputCRS-response">[req_edr_outputCRS-response]</a></p>
+<p><a href="#req_edr_outputCRS-response"><strong>Requirement 9: /req/edr/outputCRS-response</strong> Parameter crs response</a></p>
 </div>
 <div class="paragraph">
 <p>The value of the <code>crs</code> query parameter will be one of the name values described in the <a href="#collection-definition">collection</a> metadata for supported coordinate reference system transformations.</p>
@@ -2149,10 +2331,10 @@ If none of the requested parameters exist in the <a href="#collection-definition
 <div class="sect4">
 <h5 id="outputformat"><a class="anchor" href="#outputformat"></a>Parameter outputformat</h5>
 <div class="paragraph">
-<p><a href="#req_edr_outputFormat-definition">[req_edr_outputFormat-definition]</a></p>
+<p><a href="#req_edr_outputFormat-definition"><strong>Requirement 10: /req/edr/outputFormat-definition</strong> Parameter outputFormat definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_outputFormat-response">[req_edr_outputFormat-response]</a></p>
+<p><a href="#req_edr_outputFormat-response"><strong>Requirement 11: /req/edr/outputFormat-response</strong> Parameter outputFormat response</a></p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 6. Return data as coverageJSON</div>
@@ -2175,10 +2357,10 @@ If none of the requested parameters exist in the <a href="#collection-definition
 <div class="sect4">
 <h5 id="_parameter_coords"><a class="anchor" href="#_parameter_coords"></a><strong>Parameter coords</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
 <p>location(s) to return data for, the coordinates are defined by a Well Known Text
@@ -2232,10 +2414,10 @@ the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 <div class="sect4">
 <h5 id="_parameter_z"><a class="anchor" href="#_parameter_z"></a><strong>Parameter z</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_z-definition">[req_edr_z-definition]</a></p>
+<p><a href="#req_edr_z-definition"><strong>Requirement 12: /req/edr/z-definition</strong> Parameter z definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_z-response">[req_edr_z-response]</a></p>
+<p><a href="#req_edr_z-response"><strong>Requirement 13: /req/edr/z-response</strong> Parameter z response</a></p>
 </div>
 <div class="paragraph">
 <p>Define the vertical level to return data from
@@ -2315,10 +2497,10 @@ i.e. z=ALL</p>
 <div class="sect4">
 <h5 id="_parameter_coords_2"><a class="anchor" href="#_parameter_coords_2"></a><strong>Parameter coords</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
 <p>location(s) to return data for, the coordinates are defined by a Well Known Text
@@ -2365,18 +2547,18 @@ the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude)</
 <div class="sect4">
 <h5 id="_parameter_within"><a class="anchor" href="#_parameter_within"></a><strong>Parameter within</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_within-definition">[req_edr_within-definition]</a></p>
+<p><a href="#req_edr_within-definition"><strong>Requirement 14: /req/edr/within-definition</strong> Parameter within definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_within-response">[req_edr_within-response]</a></p>
+<p><a href="#req_edr_within-response"><strong>Requirement 15: /req/edr/within-response</strong> Parameter within response</a></p>
 </div>
 <div class="sect5">
 <h6 id="_parameter_withinunits"><a class="anchor" href="#_parameter_withinunits"></a><strong>Parameter withinunits</strong></h6>
 <div class="paragraph">
-<p><a href="#req_edr_withinUnits-definition">[req_edr_withinUnits-definition]</a></p>
+<p><a href="#req_edr_withinUnits-definition"><strong>Requirement 16: /req/edr/withinUnits-definition</strong> Parameter withinUnits definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_withinUnits-response">[req_edr_withinUnits-response]</a></p>
+<p><a href="#req_edr_withinUnits-response"><strong>Requirement 17: /req/edr/within-response</strong> Parameter withinUnits response</a></p>
 </div>
 </div>
 </div>
@@ -2438,10 +2620,10 @@ i.e. z=ALL</p>
 <div class="sect4">
 <h5 id="_parameter_coords_3"><a class="anchor" href="#_parameter_coords_3"></a><strong>Parameter coords</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
 <p>Only data that has a geometry that intersects the <a href="#area-definition">area</a> defined by the polygon
@@ -2496,10 +2678,10 @@ South West England in WGS84 would look like:</p>
 <div class="sect4">
 <h5 id="_parameter_z_3"><a class="anchor" href="#_parameter_z_3"></a><strong>Parameter z</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_z-definition">[req_edr_z-definition]</a></p>
+<p><a href="#req_edr_z-definition"><strong>Requirement 12: /req/edr/z-definition</strong> Parameter z definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_z-response">[req_edr_z-response]</a></p>
+<p><a href="#req_edr_z-response"><strong>Requirement 13: /req/edr/z-response</strong> Parameter z response</a></p>
 </div>
 <div class="paragraph">
 <p>Define the vertical level to return data from
@@ -2579,10 +2761,10 @@ i.e. z=ALL</p>
 <div class="sect4">
 <h5 id="_parameter_coords_4"><a class="anchor" href="#_parameter_coords_4"></a><strong>Parameter coords</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
 <p>Only data that has a geometry that intersects the <a href="#area-definition">area</a> defined by the <a href="#cube-definition">cube</a>
@@ -2620,10 +2802,10 @@ South West England in WGS84 would look like</p>
 <div class="sect4">
 <h5 id="_parameter_minz"><a class="anchor" href="#_parameter_minz"></a><strong>Parameter minz</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_minz-definition">[req_edr_minz-definition]</a></p>
+<p><a href="#req_edr_minz-definition"><strong>Requirement 18: /req/edr/minz-definition</strong> Parameter minx definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_minz-response">[req_edr_minz-response]</a></p>
+<p><a href="#req_edr_minz-response"><strong>Requirement 19: /req/edr/minz-response</strong> Parameter minz response</a></p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 23. Define the bottom of the cube</div>
@@ -2643,10 +2825,10 @@ South West England in WGS84 would look like</p>
 <div class="sect4">
 <h5 id="_parameter_maxz"><a class="anchor" href="#_parameter_maxz"></a><strong>Parameter maxz</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_maxz-definition">[req_edr_maxz-definition]</a></p>
+<p><a href="#req_edr_maxz-definition"><strong>Requirement 20: /req/edr/maxz-definition</strong> Parameter maxz definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_maxz-response">[req_edr_maxz-response]</a></p>
+<p><a href="#req_edr_maxz-response"><strong>Requirement 21: /req/edr/maxz-response</strong> Parameter maxz response</a></p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 24. Define the top of the cube</div>
@@ -2666,10 +2848,10 @@ South West England in WGS84 would look like</p>
 <div class="sect4">
 <h5 id="_parameter_resolutionx"><a class="anchor" href="#_parameter_resolutionx"></a><strong>Parameter resolutionx</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_resolutionx-definition">[req_edr_resolutionx-definition]</a></p>
+<p><a href="#req_edr_resolutionx-definition"><strong>Requirement 22: /req/edr/resolutionx-definition</strong> Parameter resolutionx definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_resolutionx-response">[req_edr_resolutionx-response]</a></p>
+<p><a href="#req_edr_resolutionx-response"><strong>Requirement 23: /req/edr/resolutionx-response</strong> Parameter resolutionx response</a></p>
 </div>
 <div class="paragraph">
 <p>If not specified the query will not interpolate the data along the x-axis of the <a href="#cube-definition">cube</a> and only return values for the defined <code>coords</code> parameter values.</p>
@@ -2692,10 +2874,10 @@ South West England in WGS84 would look like</p>
 <div class="sect4">
 <h5 id="_parameter_resolutiony"><a class="anchor" href="#_parameter_resolutiony"></a><strong>Parameter resolutiony</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_resolutiony-definition">[req_edr_resolutiony-definition]</a></p>
+<p><a href="#req_edr_resolutiony-definition"><strong>Requirement 24: /req/edr/resolutiony-definition</strong> Parameter resolutiony definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_resolutiony-response">[req_edr_resolutiony-response]</a></p>
+<p><a href="#req_edr_resolutiony-response"><strong>Requirement 25: /req/edr/resolutiony-response</strong> Parameter resolutiony response</a></p>
 </div>
 <div class="paragraph">
 <p>If not specified the query will not interpolate the data along the y-axis of the <a href="#cube-definition">cube</a> and only return values for the defined <code>coords</code> parameter values.</p>
@@ -2718,10 +2900,10 @@ South West England in WGS84 would look like</p>
 <div class="sect4">
 <h5 id="_parameter_resolutionz"><a class="anchor" href="#_parameter_resolutionz"></a><strong>Parameter resolutionz</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_resolutionz-definition">[req_edr_resolutionz-definition]</a></p>
+<p><a href="#req_edr_resolutionz-definition"><strong>Requirement 26: /req/edr/resolutionz-definition</strong> Parameter resolutionz definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_resolutionz-response">[req_edr_resolutionz-response]</a></p>
+<p><a href="#req_edr_resolutionz-response"><strong>Requirement 27: /req/edr/resolutionz-response</strong> Parameter resolutionz response</a></p>
 </div>
 <div class="paragraph">
 <p>If not specified the query will not interpolate the data along the z-axis of the <a href="#cube-definition">cube</a> and only return values for the defined <code>coords</code> parameter values.</p>
@@ -2766,10 +2948,10 @@ South West England in WGS84 would look like</p>
 <div class="sect4">
 <h5 id="_parameter_coords_5"><a class="anchor" href="#_parameter_coords_5"></a><strong>Parameter coords</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
 <p>"Intersects" means that the <a href="#area-definition">area</a> specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
@@ -2889,10 +3071,10 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 <div class="sect4">
 <h5 id="_parameter_coords_6"><a class="anchor" href="#_parameter_coords_6"></a><strong>Parameter coords</strong></h5>
 <div class="paragraph">
-<p><a href="#req_edr_coords-definition">[req_edr_coords-definition]</a></p>
+<p><a href="#req_edr_coords-definition"><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_edr_coords-response">[req_edr_coords-response]</a></p>
+<p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
 <p>"Intersects" means that the <a href="#area-definition">area</a> specified by the parameter <code>coords</code>, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.</p>
@@ -3127,6 +3309,9 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </div>
 </div>
 </div>
+<div class="exampleblock">
+<div class="title">Example 37. locationID</div>
+<div class="content">
 <div class="paragraph">
 <p>/collections/{collectionID}/locations/{locationID}</p>
 </div>
@@ -3136,30 +3321,33 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="paragraph">
 <p>/collections/metar/locations/EGLL</p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div class="paragraph">
-<p>===== <a href="#time">Parameter datetime</a></p>
 </div>
-<div class="paragraph">
-<p>===== <a href="#parametername">Parameter parametername</a></p>
 </div>
-<div class="paragraph">
-<p>===== <a href="#crs">Parameter crs</a></p>
 </div>
-<div class="paragraph">
-<p>===== <a href="#outputformat">Parameter outputformat</a></p>
+<div class="sect4">
+<h5 id="_parameter_datetime_7"><a class="anchor" href="#_parameter_datetime_7"></a><a href="#time">Parameter datetime</a></h5>
+
 </div>
+<div class="sect4">
+<h5 id="_parameter_parametername_7"><a class="anchor" href="#_parameter_parametername_7"></a><a href="#parametername">Parameter parametername</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameter_crs_7"><a class="anchor" href="#_parameter_crs_7"></a><a href="#crs">Parameter crs</a></h5>
+
+</div>
+<div class="sect4">
+<h5 id="_parameter_outputformat_7"><a class="anchor" href="#_parameter_outputformat_7"></a><a href="#outputformat">Parameter outputformat</a></h5>
 <div style="page-break-after: always;"></div>
-<div id="rc_instances-section" class="paragraph">
-<p>==== Instances query</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="rc_instances-section"><a class="anchor" href="#rc_instances-section"></a>9.3.10. Instances query</h4>
 <div class="paragraph">
 <p>It is not unusual in the scientific world for there to be multiple versions or instances of the same <a href="#collection-definition">collection</a>, where the same information is reprocessed or regenerated.  Although they could be described as new <a href="#collection-definition">collections</a> the instance query type allows this data to be described as different views of the same <a href="#collection-definition">collection</a>.</p>
 </div>
-<div class="paragraph">
-<p>===== <strong>Parameter instanceId</strong></p>
-</div>
+<div class="sect4">
+<h5 id="_parameter_instanceid"><a class="anchor" href="#_parameter_instanceid"></a><strong>Parameter instanceId</strong></h5>
 <div class="paragraph">
 <p>A unique identifier for the instance of the <a href="#collection-definition">collection</a></p>
 </div>
@@ -3173,13 +3361,13 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </li>
 </ol>
 </div>
-</div>
-</div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>/collections/metar/instance/raw</p>
 </div>
-<div class="exampleblock">
-<div class="content">
+</div>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -3187,16 +3375,16 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </li>
 </ol>
 </div>
-</div>
-</div>
-<div class="paragraph">
-<p>/collections/metar/instance/qc_lvl_1</p>
-</div>
 <div class="exampleblock">
 <div class="content">
 <div class="paragraph">
-<p>===== <strong>Parameter queryType</strong></p>
+<p>/collections/metar/instance/qc_lvl_1</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_parameter_querytype"><a class="anchor" href="#_parameter_querytype"></a><strong>Parameter queryType</strong></h5>
 <div class="paragraph">
 <p>The queryType options are exactly the same as those available to <a href="#collection-definition">collections</a> that don&#8217;t have multiple instances and support the same query parameters and functionality.  See the &lt;query-resource-table&gt;&gt; for the  mappings of the intial query types proposed for the EDR API.</p>
 </div>
@@ -3213,13 +3401,13 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </li>
 </ol>
 </div>
-</div>
-</div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>/collections/metar/instance/raw/point</p>
 </div>
-<div class="exampleblock">
-<div class="content">
+</div>
+</div>
 <div class="olist arabic">
 <ol class="arabic">
 <li>
@@ -3227,31 +3415,35 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </li>
 </ol>
 </div>
-</div>
-</div>
+<div class="exampleblock">
+<div class="content">
 <div class="paragraph">
 <p>/collections/metar/instance/raw/trajectory</p>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div id="general-section" class="paragraph">
-<p>== General Requirements</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="general-section"><a class="anchor" href="#general-section"></a>10. General Requirements</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The following general requirements and recomendations apply to all OGC APIs.</p>
 </div>
-<div class="paragraph">
-<p>=== HTTP 1.1</p>
-</div>
+<div class="sect2">
+<h3 id="_http_1_1"><a class="anchor" href="#_http_1_1"></a>10.1. HTTP 1.1</h3>
 <div class="paragraph">
 <p>The standards used for Web APIs are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_core_http">[req_core_http]</a></p>
+<p><a href="#req_core_http"><strong>Requirement 32: /req/core/http</strong> HTTP</a></p>
 </div>
-<div id="http-status-codes" class="paragraph">
-<p>=== HTTP Status Codes</p>
 </div>
+<div class="sect2">
+<h3 id="http-status-codes"><a class="anchor" href="#http-status-codes"></a>10.2. HTTP Status Codes</h3>
 <div class="paragraph">
 <p><a href="#status-codes">Table 9</a> lists the main HTTP status codes that clients should be prepared to receive. This includes support for specific security schemes or URI redirection. In addition, other error situations may occur in the transport layer outside of the server.</p>
 </div>
@@ -3341,9 +3533,9 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </tr>
 </tbody>
 </table>
-<div id="web-caching" class="paragraph">
-<p>=== Web Caching</p>
 </div>
+<div class="sect2">
+<h3 id="web-caching"><a class="anchor" href="#web-caching"></a>10.3. Web Caching</h3>
 <div class="paragraph">
 <p>Entity tags are a mechanism for web cache validation and for supporting conditional requests to reduce network traffic. Entity tags are specified by <a href="#rfc2616">HTTP/1.1 (RFC 2616)</a>.</p>
 </div>
@@ -3367,9 +3559,9 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </tr>
 </tbody>
 </table>
-<div id="cross-origin" class="paragraph">
-<p>=== Support for Cross-Origin Requests</p>
 </div>
+<div class="sect2">
+<h3 id="cross-origin"><a class="anchor" href="#cross-origin"></a>10.4. Support for Cross-Origin Requests</h3>
 <div class="paragraph">
 <p>Access to data from a HTML page is by default prohibited for security reasons, if the data is located on another host than the webpage ("same-origin policy"). A typical example is a web-application accessing feature data from multiple distributed datasets.</p>
 </div>
@@ -3406,18 +3598,18 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </li>
 </ul>
 </div>
-<div id="asynchronous_queries" class="paragraph">
-<p>=== Asynchronous queries</p>
 </div>
+<div class="sect2">
+<h3 id="asynchronous_queries"><a class="anchor" href="#asynchronous_queries"></a>10.5. Asynchronous queries</h3>
 <div class="paragraph">
 <p>It will not always be possible to respond to queries synchronously. This standard does not specify how to handle any asynchrony. Different services may propose different best practices.</p>
 </div>
 <div class="paragraph">
 <p>For example, if the query requires handling asynchronously, one option, but there are others, is that the system could respond with a HTTP code  of <code>308</code> and include a <code>Location</code> response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of <code>202</code> and include a <code>Retry-after</code> response header field with a suggested interval in seconds to retry the data retrieval.</p>
 </div>
-<div id="coordinate_reference_system" class="paragraph">
-<p>=== Coordinate Reference Systems</p>
 </div>
+<div class="sect2">
+<h3 id="coordinate_reference_system"><a class="anchor" href="#coordinate_reference_system"></a>10.6. Coordinate Reference Systems</h3>
 <div class="paragraph">
 <p>As discussed in Chapter 9 of the W3C/OGC Spatial Data on the Web <a href="#SDWBP">Best Practices document</a>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geospatial data and it is important to be clear about the coordinate reference system that the coordinates use.</p>
 </div>
@@ -3425,14 +3617,14 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_core_crs84">[req_core_crs84]</a></p>
+<p><a href="#req_core_crs84"><strong>Requirement 33: /req/core/crs84</strong> CRS84</a></p>
 </div>
 <div class="paragraph">
 <p>The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system <code><a href="http://www.opengis.net/def/crs/OGC/1.3/CRS84" class="bare">http://www.opengis.net/def/crs/OGC/1.3/CRS84</a></code>.</p>
 </div>
-<div id="rc_encoding-section" class="paragraph">
-<p>=== Encodings</p>
 </div>
+<div class="sect2">
+<h3 id="rc_encoding-section"><a class="anchor" href="#rc_encoding-section"></a>10.7. Encodings</h3>
 <div class="paragraph">
 <p>While the OGC API Common standard does not specify any mandatory encoding, the following encodings are recommended. See <a href="#overview">Clause 7 (Overview)</a> for a discussion of this issue.</p>
 </div>
@@ -3541,9 +3733,9 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>=== Link Headers</p>
 </div>
+<div class="sect2">
+<h3 id="_link_headers"><a class="anchor" href="#_link_headers"></a>10.8. Link Headers</h3>
 <table id="rec_core_link-header" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3570,50 +3762,50 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </tr>
 </tbody>
 </table>
-<div id="rc_oas30-section" class="paragraph">
-<p>=== OpenAPI 3.0</p>
 </div>
+<div class="sect2">
+<h3 id="rc_oas30-section"><a class="anchor" href="#rc_oas30-section"></a>10.9. OpenAPI 3.0</h3>
+<div class="sect3">
+<h4 id="_basic_requirements"><a class="anchor" href="#_basic_requirements"></a>10.9.1. Basic requirements</h4>
 <div class="paragraph">
-<p>==== Basic requirements</p>
-</div>
-<div class="paragraph">
-<p><a href="#rc_oas30">[rc_oas30]</a></p>
+<p><a href="#rc_oas30"><strong>Requirements Class:</strong> OpenAPI 3.0</a></p>
 </div>
 <div class="paragraph">
 <p>The OpenAPI 3.0 Requirements Class used in OGC API Common is applicable to the EDR API as well. So an implementation of EDR API which supports OpenAPI 3.0 as an API Description format must also comply with the OGC API-Common oas30 Conformance Class.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_oas30_oas-common">[req_oas30_oas-common]</a></p>
+<p><a href="#req_oas30_oas-common"><strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</a></p>
 </div>
 <div class="paragraph">
 <p>Implementations must also advertise conformance with this Requirements Class.</p>
 </div>
 <div class="paragraph">
-<p><a href="#req_oas30_conformance">[req_oas30_conformance]</a></p>
+<p><a href="#req_oas30_conformance"><strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</a></p>
 </div>
 <div class="paragraph">
 <p>Two example OpenAPI documents are included in <a href="#oas-examples">Annex B</a>.</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_complete_definition"><a class="anchor" href="#_complete_definition"></a>10.9.2. Complete definition</h4>
 <div class="paragraph">
-<p>==== Complete definition</p>
+<p><a href="#req_oas30_completeness"><strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</a></p>
 </div>
 <div class="paragraph">
-<p><a href="#req_oas30_completeness">[req_oas30_completeness]</a></p>
-</div>
-<div class="paragraph">
-<p>Note, for example, that APIs which are access-controlled (see <a href="#security">Security</a>), support web cache validation, CORS or that use HTTP redirection will make use of additional HTTP status codes beyond regular codes such as <code>200</code> for successful GET requests and <code>400</code>, <code>404</code> or <code>500</code> for error situations. See <a href="#http-status-codes">[http-status-codes]</a>.</p>
+<p>Note, for example, that APIs which are access-controlled (see <a href="#security">Security</a>), support web cache validation, CORS or that use HTTP redirection will make use of additional HTTP status codes beyond regular codes such as <code>200</code> for successful GET requests and <code>400</code>, <code>404</code> or <code>500</code> for error situations. See <a href="#http-status-codes">HTTP Status Codes</a>.</p>
 </div>
 <div class="paragraph">
 <p>Clients have to be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.</p>
 </div>
-<div id="exceptions" class="paragraph">
-<p>==== Exceptions</p>
 </div>
+<div class="sect3">
+<h4 id="exceptions"><a class="anchor" href="#exceptions"></a>10.9.3. Exceptions</h4>
 <div class="paragraph">
-<p><a href="#req_oas30_exceptions-codes">[req_oas30_exceptions-codes]</a></p>
+<p><a href="#req_oas30_exceptions-codes"><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></p>
 </div>
-</div>
-</div>
+<div class="exampleblock">
+<div class="title">Example 38. An exception response object definition</div>
+<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-YAML" data-lang="YAML">description: An error occurred.
@@ -3626,13 +3818,14 @@ content:
       type: string</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div id="security" class="paragraph">
-<p>=== Security</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="security"><a class="anchor" href="#security"></a>10.10. Security</h3>
 <div class="paragraph">
-<p><a href="#req_oas30_security">[req_oas30_security]</a></p>
+<p><a href="#req_oas30_security"><strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</a></p>
 </div>
 <div class="paragraph">
 <p>The OpenAPI specification currently supports the following <a href="https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#security-scheme-object">security schemes</a>:</p>
@@ -3653,21 +3846,22 @@ content:
 </li>
 </ul>
 </div>
-<div id="requirements" class="paragraph">
-<p>== Requirements Detail</p>
 </div>
-<div class="paragraph">
-<p>=== Introduction</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="requirements"><a class="anchor" href="#requirements"></a>Annex A: Requirements Detail</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_2"><a class="anchor" href="#_introduction_2"></a>A.1. Introduction</h3>
 <div class="paragraph">
 <p>For clarity, the complete <a href="#requirements-class-definition">requirements test class</a> descriptions are omitted in the body of this specification. This annex contains the complete requirements test classes.</p>
 </div>
-<div class="paragraph">
-<p>=== Requirements Test Class Core</p>
 </div>
-<div id="rc_core" class="paragraph">
-<p>==== <strong>Requirements Class:</strong> OGC API-Environmental Data Retrieval Core</p>
-</div>
+<div class="sect2">
+<h3 id="_requirements_test_class_core"><a class="anchor" href="#_requirements_test_class_core"></a>A.2. Requirements Test Class Core</h3>
+<div class="sect3">
+<h4 id="rc_core"><a class="anchor" href="#rc_core"></a><strong>Requirements Class:</strong> OGC API-Environmental Data Retrieval Core</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -3691,9 +3885,9 @@ content:
 </tr>
 </tbody>
 </table>
-<div id="req_core_api-common" class="paragraph">
-<p>==== <strong>Requirement 1: /req/core/api-common</strong> OGC API-Common</p>
 </div>
+<div class="sect3">
+<h4 id="req_core_api-common"><a class="anchor" href="#req_core_api-common"></a><strong>Requirement 1: /req/core/api-common</strong> OGC API-Common</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3717,9 +3911,9 @@ content:
 </tr>
 </tbody>
 </table>
-<div id="req_core_conformance" class="paragraph">
-<p>==== <strong>Requirement 2: /req/core/conformance</strong> Core conformance classes</p>
 </div>
+<div class="sect3">
+<h4 id="req_core_conformance"><a class="anchor" href="#req_core_conformance"></a><strong>Requirement 2: /req/core/conformance</strong> Core conformance classes</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3749,9 +3943,9 @@ content:
 </tr>
 </tbody>
 </table>
-<div id="req_edr_coords-definition" class="paragraph">
-<p>==== <strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_coords-definition"><a class="anchor" href="#req_edr_coords-definition"></a><strong>Requirement 3: /req/edr/coords-definition</strong> Parameter coords definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3783,9 +3977,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_coords-response" class="paragraph">
-<p>==== <strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_coords-response"><a class="anchor" href="#req_edr_coords-response"></a><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3825,9 +4019,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_core_rc-datetime-parameter" class="paragraph">
-<p>==== <strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</p>
 </div>
+<div class="sect3">
+<h4 id="req_core_rc-datetime-parameter"><a class="anchor" href="#req_core_rc-datetime-parameter"></a><strong>Requirement 5: /req/core/rc-datetime-parameter</strong> Datetime parameter</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3854,9 +4048,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_parameters-definition" class="paragraph">
-<p>==== <strong>Requirement 6: /req/edr/parameters-definition</strong> Parameter parametername definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_parameters-definition"><a class="anchor" href="#req_edr_parameters-definition"></a><strong>Requirement 6: /req/edr/parameters-definition</strong> Parameter parametername definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3884,9 +4078,9 @@ schema:
 </tr>
 </tbody>
 </table>
-<div id="req_edr_parameters-response" class="paragraph">
-<p>==== <strong>Requirement 7: /req/edr/parameters-response</strong> Parameter parametername response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_parameters-response"><a class="anchor" href="#req_edr_parameters-response"></a><strong>Requirement 7: /req/edr/parameters-response</strong> Parameter parametername response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3907,9 +4101,9 @@ schema:
 </tr>
 </tbody>
 </table>
-<div id="req_edr_outputCRS-definition" class="paragraph">
-<p>==== <strong>Requirement 8: /req/edr/outputCRS-definition</strong> Parameter crs definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_outputCRS-definition"><a class="anchor" href="#req_edr_outputCRS-definition"></a><strong>Requirement 8: /req/edr/outputCRS-definition</strong> Parameter crs definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3935,9 +4129,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_outputCRS-response" class="paragraph">
-<p>==== <strong>Requirement 9: /req/edr/outputCRS-response</strong> Parameter crs response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_outputCRS-response"><a class="anchor" href="#req_edr_outputCRS-response"></a><strong>Requirement 9: /req/edr/outputCRS-response</strong> Parameter crs response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3964,9 +4158,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_outputFormat-definition" class="paragraph">
-<p>==== <strong>Requirement 10: /req/edr/outputFormat-definition</strong> Parameter outputFormat definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_outputFormat-definition"><a class="anchor" href="#req_edr_outputFormat-definition"></a><strong>Requirement 10: /req/edr/outputFormat-definition</strong> Parameter outputFormat definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -3992,9 +4186,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_outputFormat-response" class="paragraph">
-<p>==== <strong>Requirement 11: /req/edr/outputFormat-response</strong> Parameter outputFormat response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_outputFormat-response"><a class="anchor" href="#req_edr_outputFormat-response"></a><strong>Requirement 11: /req/edr/outputFormat-response</strong> Parameter outputFormat response</h4>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 50%;">
@@ -4015,9 +4209,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_z-definition" class="paragraph">
-<p>==== <strong>Requirement 12: /req/edr/z-definition</strong> Parameter z definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_z-definition"><a class="anchor" href="#req_edr_z-definition"></a><strong>Requirement 12: /req/edr/z-definition</strong> Parameter z definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4043,9 +4237,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_z-response" class="paragraph">
-<p>==== <strong>Requirement 13: /req/edr/z-response</strong> Parameter z response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_z-response"><a class="anchor" href="#req_edr_z-response"></a><strong>Requirement 13: /req/edr/z-response</strong> Parameter z response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4079,9 +4273,9 @@ level-list  = level1 "," level2 "," level3</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_within-definition" class="paragraph">
-<p>==== <strong>Requirement 14: /req/edr/within-definition</strong> Parameter within definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_within-definition"><a class="anchor" href="#req_edr_within-definition"></a><strong>Requirement 14: /req/edr/within-definition</strong> Parameter within definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4113,9 +4307,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_within-response" class="paragraph">
-<p>==== <strong>Requirement 15: /req/edr/within-response</strong> Parameter within response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_within-response"><a class="anchor" href="#req_edr_within-response"></a><strong>Requirement 15: /req/edr/within-response</strong> Parameter within response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4136,9 +4330,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_withinUnits-definition" class="paragraph">
-<p>==== <strong>Requirement 16: /req/edr/withinUnits-definition</strong> Parameter withinUnits definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_withinUnits-definition"><a class="anchor" href="#req_edr_withinUnits-definition"></a><strong>Requirement 16: /req/edr/withinUnits-definition</strong> Parameter withinUnits definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4170,9 +4364,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_withinUnits-response" class="paragraph">
-<p>==== <strong>Requirement 17: /req/edr/within-response</strong> Parameter withinUnits response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_withinUnits-response"><a class="anchor" href="#req_edr_withinUnits-response"></a><strong>Requirement 17: /req/edr/within-response</strong> Parameter withinUnits response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4185,9 +4379,9 @@ explode: false</code></pre>
 </tr>
 </thead>
 </table>
-<div id="req_edr_minz-definition" class="paragraph">
-<p>==== <strong>Requirement 18: /req/edr/minz-definition</strong> Parameter minx definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_minz-definition"><a class="anchor" href="#req_edr_minz-definition"></a><strong>Requirement 18: /req/edr/minz-definition</strong> Parameter minx definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4213,9 +4407,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_minz-response" class="paragraph">
-<p>==== <strong>Requirement 19: /req/edr/minz-response</strong> Parameter minz response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_minz-response"><a class="anchor" href="#req_edr_minz-response"></a><strong>Requirement 19: /req/edr/minz-response</strong> Parameter minz response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4235,9 +4429,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_maxz-definition" class="paragraph">
-<p>==== <strong>Requirement 20: /req/edr/maxz-definition</strong> Parameter maxz definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_maxz-definition"><a class="anchor" href="#req_edr_maxz-definition"></a><strong>Requirement 20: /req/edr/maxz-definition</strong> Parameter maxz definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4263,9 +4457,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_maxz-response" class="paragraph">
-<p>==== <strong>Requirement 21: /req/edr/maxz-response</strong> Parameter maxz response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_maxz-response"><a class="anchor" href="#req_edr_maxz-response"></a><strong>Requirement 21: /req/edr/maxz-response</strong> Parameter maxz response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4285,9 +4479,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_resolutionx-definition" class="paragraph">
-<p>==== <strong>Requirement 22: /req/edr/resolutionx-definition</strong> Parameter resolutionx definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_resolutionx-definition"><a class="anchor" href="#req_edr_resolutionx-definition"></a><strong>Requirement 22: /req/edr/resolutionx-definition</strong> Parameter resolutionx definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4313,9 +4507,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_resolutionx-response" class="paragraph">
-<p>==== <strong>Requirement 23: /req/edr/resolutionx-response</strong> Parameter resolutionx response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_resolutionx-response"><a class="anchor" href="#req_edr_resolutionx-response"></a><strong>Requirement 23: /req/edr/resolutionx-response</strong> Parameter resolutionx response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4353,9 +4547,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_resolutiony-definition" class="paragraph">
-<p>==== <strong>Requirement 24: /req/edr/resolutiony-definition</strong> Parameter resolutiony definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_resolutiony-definition"><a class="anchor" href="#req_edr_resolutiony-definition"></a><strong>Requirement 24: /req/edr/resolutiony-definition</strong> Parameter resolutiony definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4381,9 +4575,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_resolutiony-response" class="paragraph">
-<p>==== <strong>Requirement 25: /req/edr/resolutiony-response</strong> Parameter resolutiony response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_resolutiony-response"><a class="anchor" href="#req_edr_resolutiony-response"></a><strong>Requirement 25: /req/edr/resolutiony-response</strong> Parameter resolutiony response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4421,9 +4615,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_resolutionz-definition" class="paragraph">
-<p>==== <strong>Requirement 26: /req/edr/resolutionz-definition</strong> Parameter resolutionz definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_resolutionz-definition"><a class="anchor" href="#req_edr_resolutionz-definition"></a><strong>Requirement 26: /req/edr/resolutionz-definition</strong> Parameter resolutionz definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4449,9 +4643,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_resolutionz-response" class="paragraph">
-<p>==== <strong>Requirement 27: /req/edr/resolutionz-response</strong> Parameter resolutionz response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_resolutionz-response"><a class="anchor" href="#req_edr_resolutionz-response"></a><strong>Requirement 27: /req/edr/resolutionz-response</strong> Parameter resolutionz response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4489,9 +4683,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_corridorHeight-definition" class="paragraph">
-<p>==== <strong>Requirement 28: /req/edr/corridorHeight-definition</strong> Parameter corridorHeight definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_corridorHeight-definition"><a class="anchor" href="#req_edr_corridorHeight-definition"></a><strong>Requirement 28: /req/edr/corridorHeight-definition</strong> Parameter corridorHeight definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4517,9 +4711,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_corridorHeight-response" class="paragraph">
-<p>==== <strong>Requirement 29: /req/edr/corridorHeight-response</strong> Parameter corridorHeight response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_corridorHeight-response"><a class="anchor" href="#req_edr_corridorHeight-response"></a><strong>Requirement 29: /req/edr/corridorHeight-response</strong> Parameter corridorHeight response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4563,9 +4757,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_corridorWidth-definition" class="paragraph">
-<p>==== <strong>Requirement 30: /req/edr/corridorWidth-definition</strong> Parameter corridorWidth definition</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_corridorWidth-definition"><a class="anchor" href="#req_edr_corridorWidth-definition"></a><strong>Requirement 30: /req/edr/corridorWidth-definition</strong> Parameter corridorWidth definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4591,9 +4785,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_edr_corridorWidth-response" class="paragraph">
-<p>==== <strong>Requirement 31: /req/edr/corridorWidth-response</strong> Parameter corridorWidth response</p>
 </div>
+<div class="sect3">
+<h4 id="req_edr_corridorWidth-response"><a class="anchor" href="#req_edr_corridorWidth-response"></a><strong>Requirement 31: /req/edr/corridorWidth-response</strong> Parameter corridorWidth response</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4637,9 +4831,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_core_http" class="paragraph">
-<p>==== <strong>Requirement 32: /req/core/http</strong> HTTP</p>
 </div>
+<div class="sect3">
+<h4 id="req_core_http"><a class="anchor" href="#req_core_http"></a><strong>Requirement 32: /req/core/http</strong> HTTP</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4660,9 +4854,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_core_crs84" class="paragraph">
-<p>==== <strong>Requirement 33: /req/core/crs84</strong> CRS84</p>
 </div>
+<div class="sect3">
+<h4 id="req_core_crs84"><a class="anchor" href="#req_core_crs84"></a><strong>Requirement 33: /req/core/crs84</strong> CRS84</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4677,12 +4871,12 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Requirements Test Class OpenAPI 3.0</p>
 </div>
-<div id="rc_oas30" class="paragraph">
-<p>==== <strong>Requirements Class:</strong> OpenAPI 3.0</p>
 </div>
+<div class="sect2">
+<h3 id="_requirements_test_class_openapi_3_0"><a class="anchor" href="#_requirements_test_class_openapi_3_0"></a>A.3. Requirements Test Class OpenAPI 3.0</h3>
+<div class="sect3">
+<h4 id="rc_oas30"><a class="anchor" href="#rc_oas30"></a><strong>Requirements Class:</strong> OpenAPI 3.0</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -4710,9 +4904,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_oas30_oas-common" class="paragraph">
-<p>==== <strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</p>
 </div>
+<div class="sect3">
+<h4 id="req_oas30_oas-common"><a class="anchor" href="#req_oas30_oas-common"></a><strong>Requirement 34: /req/oas30/oas-common</strong> OpenAPI 3.0 API Common</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4729,9 +4923,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_oas30_conformance" class="paragraph">
-<p>==== <strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</p>
 </div>
+<div class="sect3">
+<h4 id="req_oas30_conformance"><a class="anchor" href="#req_oas30_conformance"></a><strong>Requirement 35</strong> |<strong>/req/oas30/conformance</strong> OpenAPI 3.0 Conformance</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4749,9 +4943,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_oas30_completeness" class="paragraph">
-<p>==== <strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</p>
 </div>
+<div class="sect3">
+<h4 id="req_oas30_completeness"><a class="anchor" href="#req_oas30_completeness"></a><strong>Requirement 36: /req/oas30/completeness</strong> OpenAPI 3.0 Completeness</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4772,9 +4966,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_oas30_exceptions-codes" class="paragraph">
-<p>==== <strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</p>
 </div>
+<div class="sect3">
+<h4 id="req_oas30_exceptions-codes"><a class="anchor" href="#req_oas30_exceptions-codes"></a><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4789,9 +4983,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div id="req_oas30_security" class="paragraph">
-<p>==== <strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</p>
 </div>
+<div class="sect3">
+<h4 id="req_oas30_security"><a class="anchor" href="#req_oas30_security"></a><strong>Requirement 38: /req/oas30/security</strong> OpenAPI 3.0 Security</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4806,18 +5000,21 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>== Abstract Test Suite (Normative)</p>
 </div>
-<div class="paragraph">
-<p>=== Introduction</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_abstract_test_suite_normative"><a class="anchor" href="#_abstract_test_suite_normative"></a>Annex B: Abstract Test Suite (Normative)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>B.1. Introduction</h3>
 <div class="paragraph">
 <p>OGC Web APIs are not a Web Services in the traditional sense. Rather, they define the behavior and content of a set of Resources exposed through a Web Application Programing Interface (Web API). Therefore, an API may expose resources in addition to those defined by the standard. A test engine must be able to traverse the API, identify and validate test points, and ignore resource paths which are not to be tested.</p>
 </div>
-<div class="paragraph">
-<p>=== Conformance Class Core</p>
 </div>
+<div class="sect2">
+<h3 id="_conformance_class_core"><a class="anchor" href="#_conformance_class_core"></a>B.2. Conformance Class Core</h3>
 <table id="ats_core" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -4840,12 +5037,10 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== General Tests</p>
-</div>
-<div class="paragraph">
-<p>===== HTTP</p>
-</div>
+<div class="sect3">
+<h4 id="_general_tests"><a class="anchor" href="#_general_tests"></a>B.2.1. General Tests</h4>
+<div class="sect4">
+<h5 id="_http"><a class="anchor" href="#_http"></a>HTTP</h5>
 <table id="ats_core_http" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -4885,9 +5080,10 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Landing Page {root}/</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_landing_page_root"><a class="anchor" href="#_landing_page_root"></a>B.2.2. Landing Page {root}/</h4>
 <table id="ats_core_root-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5008,9 +5204,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== API Definition Path {root}/api (link)</p>
 </div>
+<div class="sect3">
+<h4 id="_api_definition_path_rootapi_link"><a class="anchor" href="#_api_definition_path_rootapi_link"></a>B.2.3. API Definition Path {root}/api (link)</h4>
 <table id="ats_core_api_definition-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5094,9 +5290,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Conformance Path {root}/conformance</p>
 </div>
+<div class="sect3">
+<h4 id="_conformance_path_rootconformance"><a class="anchor" href="#_conformance_path_rootconformance"></a>B.2.4. Conformance Path {root}/conformance</h4>
 <table id="ats_core_conformance-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5184,9 +5380,10 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class Collections</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_collections"><a class="anchor" href="#_conformance_class_collections"></a>B.3. Conformance Class Collections</h3>
 <table id="ats_collections" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -5213,12 +5410,10 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== General Tests</p>
-</div>
-<div class="paragraph">
-<p>===== CRS 84</p>
-</div>
+<div class="sect3">
+<h4 id="_general_tests_2"><a class="anchor" href="#_general_tests_2"></a>B.3.1. General Tests</h4>
+<div class="sect4">
+<h5 id="_crs_84"><a class="anchor" href="#_crs_84"></a>CRS 84</h5>
 <table id="ats_core_crs84" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5258,9 +5453,10 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Environmental Data Collections {root}/collections</p>
 </div>
+</div>
+<div class="sect3">
+<h4 id="_environmental_data_collections_rootcollections"><a class="anchor" href="#_environmental_data_collections_rootcollections"></a>B.3.2. Environmental Data Collections {root}/collections</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5375,9 +5571,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Environmental Data Collection {root}/collections/{collectionId}</p>
 </div>
+<div class="sect3">
+<h4 id="_environmental_data_collection_rootcollectionscollectionid"><a class="anchor" href="#_environmental_data_collection_rootcollectionscollectionid"></a>B.3.3. Environmental Data Collection {root}/collections/{collectionId}</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5444,13 +5640,14 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Second Tier Collections Tests
-These tests are invoked by other tests.</p>
 </div>
+<div class="sect3">
+<h4 id="_second_tier_collections_tests"><a class="anchor" href="#_second_tier_collections_tests"></a>B.3.4. Second Tier Collections Tests</h4>
 <div class="paragraph">
-<p>===== Collection Extent</p>
+<p>These tests are invoked by other tests.</p>
 </div>
+<div class="sect4">
+<h5 id="_collection_extent"><a class="anchor" href="#_collection_extent"></a>Collection Extent</h5>
 <table id="ats_core_rc-md-extent" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5499,9 +5696,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Collection Queries</p>
 </div>
+<div class="sect4">
+<h5 id="_collection_queries"><a class="anchor" href="#_collection_queries"></a>Collection Queries</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5628,9 +5825,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Collection Links</p>
 </div>
+<div class="sect4">
+<h5 id="_collection_links"><a class="anchor" href="#_collection_links"></a>Collection Links</h5>
 <table id="ats_core_rc-collection-info-links" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5676,9 +5873,11 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class JSON</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_json"><a class="anchor" href="#_conformance_class_json"></a>B.4. Conformance Class JSON</h3>
 <table id="ats_json" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -5705,9 +5904,8 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== JSON Definition</p>
-</div>
+<div class="sect3">
+<h4 id="_json_definition"><a class="anchor" href="#_json_definition"></a>B.4.1. JSON Definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5747,9 +5945,10 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class GeoJSON</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_geojson"><a class="anchor" href="#_conformance_class_geojson"></a>B.5. Conformance Class GeoJSON</h3>
 <table id="ats_geojson" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -5776,9 +5975,8 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== JSON Definition</p>
-</div>
+<div class="sect3">
+<h4 id="_json_definition_2"><a class="anchor" href="#_json_definition_2"></a>B.5.1. JSON Definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5818,9 +6016,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== GeoJSON Content</p>
 </div>
+<div class="sect3">
+<h4 id="_geojson_content"><a class="anchor" href="#_geojson_content"></a>B.5.2. GeoJSON Content</h4>
 <table id="ats_geojson_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5863,9 +6061,10 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class EDR GeoJSON</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_edr_geojson"><a class="anchor" href="#_conformance_class_edr_geojson"></a>B.6. Conformance Class EDR GeoJSON</h3>
 <table id="ats_edr-geojson" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -5892,9 +6091,8 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== EDR GeoJSON Definition</p>
-</div>
+<div class="sect3">
+<h4 id="_edr_geojson_definition"><a class="anchor" href="#_edr_geojson_definition"></a>B.6.1. EDR GeoJSON Definition</h4>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5941,9 +6139,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== EDR GeoJSON Content</p>
 </div>
+<div class="sect3">
+<h4 id="_edr_geojson_content"><a class="anchor" href="#_edr_geojson_content"></a>B.6.2. EDR GeoJSON Content</h4>
 <table id="ats_edr-geojson_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -5986,9 +6184,10 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class CoverageJSON</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_coveragejson"><a class="anchor" href="#_conformance_class_coveragejson"></a>B.7. Conformance Class CoverageJSON</h3>
 <table id="ats_covjson" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6015,9 +6214,8 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== CoverageJSON Definition</p>
-</div>
+<div class="sect3">
+<h4 id="_coveragejson_definition"><a class="anchor" href="#_coveragejson_definition"></a>B.7.1. CoverageJSON Definition</h4>
 <table id="ats_covjson_definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6064,9 +6262,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== CoverageJSON Content</p>
 </div>
+<div class="sect3">
+<h4 id="_coveragejson_content"><a class="anchor" href="#_coveragejson_content"></a>B.7.2. CoverageJSON Content</h4>
 <table id="ats_covjson_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6109,9 +6307,10 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class HTML</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_html"><a class="anchor" href="#_conformance_class_html"></a>B.8. Conformance Class HTML</h3>
 <table id="ats_html" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6138,9 +6337,8 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== HTML Definition</p>
-</div>
+<div class="sect3">
+<h4 id="_html_definition"><a class="anchor" href="#_html_definition"></a>B.8.1. HTML Definition</h4>
 <table id="ats_html_definition" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6173,9 +6371,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== HTML Content</p>
 </div>
+<div class="sect3">
+<h4 id="_html_content"><a class="anchor" href="#_html_content"></a>B.8.2. HTML Content</h4>
 <table id="ats_html_content" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -6215,9 +6413,10 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class OpenAPI 3.0</p>
 </div>
+</div>
+<div class="sect2">
+<h3 id="_conformance_class_openapi_3_0"><a class="anchor" href="#_conformance_class_openapi_3_0"></a>B.9. Conformance Class OpenAPI 3.0</h3>
 <table id="ats_oas3" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6457,9 +6656,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>=== Conformance Class Queries</p>
 </div>
+<div class="sect2">
+<h3 id="_conformance_class_queries"><a class="anchor" href="#_conformance_class_queries"></a>B.10. Conformance Class Queries</h3>
 <table id="ats_queries" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -6490,12 +6689,10 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Query Pattern Tests</p>
-</div>
-<div class="paragraph">
-<p>===== Position</p>
-</div>
+<div class="sect3">
+<h4 id="_query_pattern_tests"><a class="anchor" href="#_query_pattern_tests"></a>B.10.1. Query Pattern Tests</h4>
+<div class="sect4">
+<h5 id="_position"><a class="anchor" href="#_position"></a>Position</h5>
 <table id="ats_position" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -7214,9 +7411,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Area</p>
 </div>
+<div class="sect4">
+<h5 id="_area"><a class="anchor" href="#_area"></a>Area</h5>
 <table id="ats_area" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -7935,9 +8132,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Trajectory</p>
 </div>
+<div class="sect4">
+<h5 id="_trajectory"><a class="anchor" href="#_trajectory"></a>Trajectory</h5>
 <table id="ats_trajectory" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -8662,12 +8859,12 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Collections and Instances</p>
 </div>
-<div class="paragraph">
-<p>===== Feature Collections {root}/collections</p>
 </div>
+<div class="sect3">
+<h4 id="_collections_and_instances"><a class="anchor" href="#_collections_and_instances"></a>B.10.2. Collections and Instances</h4>
+<div class="sect4">
+<h5 id="_feature_collections_rootcollections"><a class="anchor" href="#_feature_collections_rootcollections"></a>Feature Collections {root}/collections</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -8782,9 +8979,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Feature Collection {root}/collections/{collectionId}</p>
 </div>
+<div class="sect4">
+<h5 id="_feature_collection_rootcollectionscollectionid"><a class="anchor" href="#_feature_collection_rootcollectionscollectionid"></a>Feature Collection {root}/collections/{collectionId}</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -8851,9 +9048,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Features {root}/collections/{collectionId}/items</p>
 </div>
+<div class="sect4">
+<h5 id="_features_rootcollectionscollectioniditems"><a class="anchor" href="#_features_rootcollectionscollectioniditems"></a>Features {root}/collections/{collectionId}/items</h5>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -9163,9 +9360,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Instances {root}/collections/{collectionId}/instances</p>
 </div>
+<div class="sect4">
+<h5 id="_instances_rootcollectionscollectionidinstances"><a class="anchor" href="#_instances_rootcollectionscollectionidinstances"></a>Instances {root}/collections/{collectionId}/instances</h5>
 <table id="ats_instances_rc-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9280,9 +9477,9 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Instance {root}/collections/{collectionId}/instances/instanceId</p>
 </div>
+<div class="sect4">
+<h5 id="_instance_rootcollectionscollectionidinstancesinstanceid"><a class="anchor" href="#_instance_rootcollectionscollectionidinstancesinstanceid"></a>Instance {root}/collections/{collectionId}/instances/instanceId</h5>
 <table id="ats_instances_src-md-op" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9349,13 +9546,15 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>==== Second Tier Tests
-These tests are invoked by other tests.</p>
 </div>
-<div class="paragraph">
-<p>===== Items</p>
 </div>
+<div class="sect3">
+<h4 id="_second_tier_tests"><a class="anchor" href="#_second_tier_tests"></a>B.10.3. Second Tier Tests</h4>
+<div class="paragraph">
+<p>These tests are invoked by other tests.</p>
+</div>
+<div class="sect4">
+<h5 id="_items"><a class="anchor" href="#_items"></a>Items</h5>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9455,9 +9654,9 @@ These tests are invoked by other tests.</p>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>===== Locations</p>
 </div>
+<div class="sect4">
+<h5 id="_locations"><a class="anchor" href="#_locations"></a>Locations</h5>
 <table id="ats_locations" class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 25%;">
@@ -9935,23 +10134,28 @@ explode: false</code></pre>
 </tr>
 </tbody>
 </table>
-<div class="paragraph">
-<p>== Examples (Informative)</p>
 </div>
-<div id="openapi-examples" class="paragraph">
-<p>=== OpenAPI definition</p>
 </div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_examples_informative"><a class="anchor" href="#_examples_informative"></a>Annex C: Examples (Informative)</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="openapi-examples"><a class="anchor" href="#openapi-examples"></a>C.1. OpenAPI definition</h3>
 <div class="paragraph">
 <p><a href="openapi/EDR_OpenAPI.yaml">OpenAPI YAML</a></p>
 </div>
 <div class="paragraph">
 <p><a href="openapi/EDR_OpenAPI.json">OpenAPI JSON</a></p>
 </div>
-<div id="landing-page-examples" class="paragraph">
-<p>=== Example Landing Pages</p>
 </div>
-</div>
-</div>
+<div class="sect2">
+<h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>C.2. Example Landing Pages</h3>
+<div id="json-landing-page" class="exampleblock">
+<div class="title">Example 39. JSON Landing Page</div>
+<div class="content">
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-JSON" data-lang="JSON">{
@@ -9968,11 +10172,11 @@ explode: false</code></pre>
 }</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div id="oas-examples" class="paragraph">
-<p>=== API Description Examples</p>
 </div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="oas-examples"><a class="anchor" href="#oas-examples"></a>C.3. API Description Examples</h3>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -9985,11 +10189,12 @@ include::examples/tbd.adoc[]
 </tr>
 </table>
 </div>
-<div id="conformance-response-examples" class="paragraph">
-<p>=== Conformance Examples</p>
 </div>
-</div>
-</div>
+<div class="sect2">
+<h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>C.4. Conformance Examples</h3>
+<div class="exampleblock">
+<div class="title">Example 40. Conformance Response</div>
+<div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
 </div>
@@ -10005,13 +10210,14 @@ include::examples/tbd.adoc[]
 }</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>C.5. Collections Metadata Examples</h3>
 <div class="exampleblock">
+<div class="title">Example 41. Collections metadata response document</div>
 <div class="content">
-<div id="collections-metadata-examples" class="paragraph">
-<p>=== Collections Metadata Examples</p>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>The example below shows a service with two <a href="#collection-definition">collections</a>, one for observations and another for forecast data.  The forecast data is regenerated every hour so the <a href="#collection-definition">collection</a> provides access to multiple instances of the <a href="#collection-definition">collection</a> via an instances endpoint.</p>
 </div>
@@ -10746,13 +10952,14 @@ include::examples/tbd.adoc[]
 }</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>C.6. Instance Metadata Examples</h3>
 <div class="exampleblock">
+<div class="title">Example 42. Collection instance metadata response document</div>
 <div class="content">
-<div id="instance-metadata-examples" class="paragraph">
-<p>=== Instance Metadata Examples</p>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>This is an example of the metadata returned by the instances query</p>
 </div>
@@ -12160,13 +12367,14 @@ include::examples/tbd.adoc[]
 }</code></pre>
 </div>
 </div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="location-metadata-examples"><a class="anchor" href="#location-metadata-examples"></a>C.7. Location Query Metadata Examples</h3>
 <div class="exampleblock">
+<div class="title">Example 43. Collection instance metadata response document</div>
 <div class="content">
-<div id="location-metadata-examples" class="paragraph">
-<p>=== Location Query Metadata Examples</p>
-</div>
-</div>
-</div>
 <div class="paragraph">
 <p>A example of the Locations metadata from a collection that supports the <code>Location</code> query pattern.</p>
 </div>
@@ -12277,11 +12485,14 @@ include::examples/tbd.adoc[]
   ]</code></pre>
 </div>
 </div>
-<div class="exampleblock">
-<div class="content">
-<div id="glossary" class="paragraph">
-<p>= Glossary</p>
 </div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="glossary"><a class="anchor" href="#glossary"></a>Annex D: Glossary</h2>
+<div class="sectionbody">
 <div id="collection-definition" class="dlist">
 <dl>
 <dt class="hdlist1">Collection</dt>
@@ -12434,9 +12645,11 @@ The standardization target is the entity which may receive a certificate of conf
 </dd>
 </dl>
 </div>
-<div class="paragraph">
-<p>== Revision History</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="_revision_history"><a class="anchor" href="#_revision_history"></a>Annex E: Revision History</h2>
+<div class="sectionbody">
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
 <col style="width: 12%;">
@@ -12506,9 +12719,11 @@ The standardization target is the entity which may receive a certificate of conf
 </tr>
 </tbody>
 </table>
-<div id="Bibliography" class="paragraph">
-<p>= Bibliography</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="Bibliography"><a class="anchor" href="#Bibliography"></a>Annex F: Bibliography</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
@@ -12532,14 +12747,9 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 </div>
 </div>
-</div>
-</div>
-</div>
-</div>
-</div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-11-08 22:22:34 -0500
+Last updated 2020-11-09 21:12:13 UTC
 </div>
 </div>
 </body>
