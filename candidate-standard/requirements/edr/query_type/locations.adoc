@@ -13,6 +13,7 @@ return a list of location identifiers and relevant metadata for the metar <<coll
 
 
 Valid locationIDs can also be discovered via another mechanism such as the <<rc_items-section,`items`>> query.
+=================
 
 .locationID
 =================
