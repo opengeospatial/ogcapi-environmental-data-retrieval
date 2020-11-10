@@ -46,7 +46,7 @@ Gregorian calendar).
         { "href": "http://data.example.org/collections/dem/area",
           "rel": "data", "type": "area",
           "title": "Area query for the DEM collection" },          
-        { "href": "http://data.example.org/collections/dem?outputFormat=html",
+        { "href": "http://data.example.org/collections/dem?f=html",
           "rel": "describedBy", "type": "text/html",
           "title": "Metadata for the dem collection" },
         { "href": "https://data.example.org/collection/dem/licence-doc",

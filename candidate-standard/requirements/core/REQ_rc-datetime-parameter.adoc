@@ -3,6 +3,18 @@
 [width="90%",cols="2,6a"]
 |===
 ^|A |An EDR API SHALL support the Date-Time (datetime) parameter for `/collections` and `/collections/{collectionid}` requests.
+
+[source,YAML]
+----
+name: datetime
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+
 ^|B |Requests which include the Date-Time parameter SHALL comply with API-Common requirement `/req/core/rc-time-definition`.
 ^|C |Responses to Date-Time requests SHALL comply with API-Common requirement `/req/core/rc-time-response`.
 |===

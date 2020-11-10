@@ -19,25 +19,25 @@ Gregorian calendar).
 {
   "links": [
     {
-      "href": "http://data.example.org/collections/metar/raw?outputFormat=application%2Fjson",
+      "href": "http://data.example.org/collections/metar/raw?f=application%2Fjson",
       "rel": "self",
       "type": "application/json",
       "title": "raw document as json"
     },
     {
-      "href": "http://data.example.org/collections/metar/location?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/metar/location?f=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
       "title": "Metar location metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/metar/location?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/metar/location?f=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
       "title": "Metar location metadata document as  xml"
     },
     {
-      "href": "http://data.example.org/collections/metar/location?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/metar/location?f=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
       "title": "Metar location metadata document as html"

@@ -4,11 +4,11 @@
 ^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-outputformat-definition*
 ^|Test Purpose |Validate that the outputformat query parameters are constructed correctly.
 ^|Requirement |<<req_collections_rc-outputformat-definition,/req/edr/rc-outputformat-definition>>
-^|Test Method |Verify that the `outputformat` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+^|Test Method |Verify that the `f` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: outputformat
+name: f
 in: query
 required: false
 schema:

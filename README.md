@@ -48,7 +48,7 @@ These patterns would be accessed through endpoints like:
   coords={wkt-geometry}&
   parametername={parameter_1},{parameter_n}&
   datetime={RFC3339/ISO8601}&
-  outputformat={format}&
+  f={format}&
   {queryType-specific-parameter_n_}={queryType-specific-paramete_n_value}
 ```
 

@@ -11,7 +11,7 @@
 ^|G | Every Collection within collections array MUST have a `crs` parameter which must comply with the requirement `/req/edr/rc-crs`.
 ^|H | Every Collection within collections array MAY have a `distanceunits` parameter containing an array of supported distance units.  
 ^|I | If the `links` parameter includes a link to a `Radius` query there MUST be a `distanceunits` parameter
-^|J | Every Collection within collections array MUST have an `outputformat` parameter containing an array of values with describe the output formats supported by the collection.
+^|J | Every Collection within collections array MUST have an `f` parameter containing an array of values with describe the output formats supported by the collection.
 ^|J | Every Collection within collections array MUST have an `parameters` parameter containing a list of parameters must comply with the requirement `/req/edr/rc-parameters`.
 
 |===

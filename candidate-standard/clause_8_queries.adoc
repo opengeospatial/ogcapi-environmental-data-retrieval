@@ -155,7 +155,7 @@ The value of the `crs` query parameter will be one of the name values described 
 .Return data as coverageJSON
 =================
 
-`outputformat=coverageJSON`
+`f=coverageJSON`
 =================
 
 If not specified, the query will return data in the native format of the <<collection-definition,collection>>.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the <<collection-definition,collection>>, a `400` message SHOULD be returned.

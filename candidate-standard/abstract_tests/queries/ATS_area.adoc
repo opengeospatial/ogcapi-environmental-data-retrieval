@@ -46,7 +46,7 @@ Repeat these tests using the following parameter tests:
 * Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/conf/collections/rc-time-definition>>
 * Response <<../../requirements/collections/edr/REQ_rc-time-response,/conf/collections/rc-time-response>>
 
-Execute requests with combinations of the "coords","time","parametername","z","crs" and "outputformat" query parameters
+Execute requests with combinations of the "coords","time","parametername","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
 |===
 
