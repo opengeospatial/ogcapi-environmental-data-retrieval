@@ -12,7 +12,7 @@ properties:
   links:
     type: array
     items:
-      $ref: link.json
+      $ref: link.yaml
     example:
       - href: http://www.example.org/edr/api
         hreflang: en

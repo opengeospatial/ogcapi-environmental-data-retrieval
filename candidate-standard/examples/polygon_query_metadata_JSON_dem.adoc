@@ -19,25 +19,25 @@ Gregorian calendar).
 {
   "links": [
     {
-      "href": "http://data.example.org/collections/dem/area?outputFormat=application%2Fjson",
+      "href": "http://data.example.org/collections/dem/area?f=application%2Fjson",
       "rel": "self",
       "type": "application/json",
       "title": "Area metadata document as json"
     },
     {
-      "href": "http://data.example.org/collections/dem/area?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/dem/area?f=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
       "title": "Area metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/dem/area?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/dem/area?f=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
       "title": "Area metadata document as xml"
     },
     {
-      "href": "http://data.example.org/collections/dem/area?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/dem/area?f=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
       "title": "Area metadata document as html"

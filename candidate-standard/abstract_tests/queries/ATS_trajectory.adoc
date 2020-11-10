@@ -79,7 +79,7 @@ Repeat these tests using the following parameter tests:
 * Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/conf/collections/rc-parametername-response>>
 
 
-Execute requests with combinations of the "coords", "parametername","z","crs" and "outputformat" query parameters
+Execute requests with combinations of the "coords", "parametername","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
 |===
 

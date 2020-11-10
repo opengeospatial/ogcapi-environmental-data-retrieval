@@ -6,7 +6,7 @@ properties:
   links:
     type: array
     items:
-      $ref: link.json
+      $ref: link.yaml
     example:
       - href: https://wwww.example.org/service/description.html
         hreflang: en
@@ -56,13 +56,13 @@ properties:
     items:
       type: string
   extent:
-    $ref: extent.json
+    $ref: extent.yaml
   crs:
     description: list of the coordinate reference systems the collection results can
       be produced in
     type: array
     items:
-      $ref: crsObject.json
+      $ref: crsObject.yaml
   referencemetadata:
     description: Property to contain any extra metadata information that is specific
       to the collection
@@ -80,4 +80,4 @@ properties:
     type: object
     additionalProperties:
       items:
-        $ref: parameter.json
+        $ref: parameter.yaml

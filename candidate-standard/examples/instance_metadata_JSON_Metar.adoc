@@ -50,7 +50,7 @@ Gregorian calendar).
         { "href": "http://data.example.org/collections/metars",
           "rel": "describedBy", "type": "application/json",
           "title": "Metadata for Metar data" },
-        { "href": "http://data.example.org/collections/metars?outputFormat=html",
+        { "href": "http://data.example.org/collections/metars?f=html",
           "rel": "describedBy", "type": "text/html",
           "title": "Metadata for Metar data" },
         { "href": "https://data.example.org/collection/metar/licence-doc",

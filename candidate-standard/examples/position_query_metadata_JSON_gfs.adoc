@@ -19,25 +19,25 @@ Gregorian calendar).
 {
   "links": [
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=application%2Fjson",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?f=application%2Fjson",
       "rel": "self",
       "type": "application/json",
       "title": "latest position metadata document as json"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=application%2Fx-yaml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?f=application%2Fx-yaml",
       "rel": "alternate",
       "type": "application/x-yaml",
       "title": "latest position metadata document as yaml"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=text%2Fxml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?f=text%2Fxml",
       "rel": "alternate",
       "type": "text/xml",
       "title": "latest position metadata document as xml"
     },
     {
-      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?outputFormat=text%2Fhtml",
+      "href": "http://data.example.org/collections/gfs_025_time-height_above_ground-lat-lon/latest/position?f=text%2Fhtml",
       "rel": "alternate",
       "type": "text/html",
       "title": "latest position metadata document as html"
