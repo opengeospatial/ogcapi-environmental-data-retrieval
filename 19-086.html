@@ -1744,7 +1744,7 @@ or<br>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#rc_collection-section">Collections</a></p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="http://www.opengis.net/spec/ogcapi_common-2/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-2/1.0/req/collections</a></p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#requirements-class-openapi_3_0-clause">OpenAPI 3.0</a></p></td>
@@ -1819,14 +1819,36 @@ properties:
     example: Meteorological data server
   description:
     type: string
-    example: Access to Meteorological data via a Web API that conforms to the OGC API Environmental Data Retrieval specification.
+    example: Access to Meteorological data via a Web API that conforms to the OGC
+      API Environmental Data Retrieval specification.
   links:
     type: array
     items:
       $ref: link.yaml
+    example:
+      - href: http://www.example.org/edr/api
+        hreflang: en
+        rel: service
+        type: application/openapi+json;version=3.0
+        title: ""
+      - href: http://www.example.org/edr/conformance
+        hreflang: en
+        rel: data
+        type: application/json
+        title: ""
+      - href: http://www.example.org/edr/collections
+        hreflang: en
+        rel: data
+        type: application/json
+        title: ""
   keywords:
     type: array
     items: string
+    example:
+      - Temperature
+      - Wind
+      - Point
+      - Trajectory
   provider:
     type: object
     properties:
@@ -1870,7 +1892,34 @@ properties:
 <div id="landingPage-example" class="listingblock">
 <div class="title">Landing Page Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in clause_7_core.adoc - include::examples/JSON/landingPage_example.json[]</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "title": "string",
+  "description": "string",
+  "links": [
+    {
+      "href": "http://data.example.org/",
+      "rel": "self",
+      "type": "application/json",
+      "title": "this document"
+    },
+    {
+      "href": "http://data.example.org/api",
+      "rel": "service-desc",
+      "type": "application/openapi+json;version=3.0",
+      "title": "the API definition"
+    },
+    {
+      "href": "http://data.example.org/conformance",
+      "rel": "conformance",
+      "type": "application/json",
+      "title": "OGC conformance classes implemented by this API"
+    },
+    {
+      "href": "http://data.example.org/collections",
+      "title": "Metadata about the resource collections"
+    }
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -1991,7 +2040,16 @@ properties:
 <div id="conformance-example" class="listingblock">
 <div class="title">Conformance Information Example</div>
 <div class="content">
-<pre class="highlight"><code class="language-json" data-lang="json">Unresolved directive in clause_7_core.adoc - include::examples/JSON/conformance_example.json[]</code></pre>
+<pre class="highlight"><code class="language-json" data-lang="json">{
+  "conformsTo": [
+    "http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core",
+    "http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas3",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html",
+    "http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json",
+  ]
+}</code></pre>
 </div>
 </div>
 </div>
@@ -2304,7 +2362,7 @@ If none of the requested parameters exist in the <a href="#collection-definition
 <div class="title">Example 6. Return data as coverageJSON</div>
 <div class="content">
 <div class="paragraph">
-<p><code>outputformat=coverageJSON</code></p>
+<p><code>f=coverageJSON</code></p>
 </div>
 </div>
 </div>
@@ -3864,13 +3922,13 @@ content:
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/core</a></p>
+<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/conf/core" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/conf/core</a></p>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-1/1.0/req/collections</a></p>
+<p><a href="http://www.opengis.net/spec/ogcapi_common-2/1.0/conf/collections" class="bare">http://www.opengis.net/spec/ogcapi_common-2/1.0/conf/collections</a></p>
 </div></div></td>
 </tr>
 </tbody>
@@ -3896,7 +3954,7 @@ content:
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p><a href="http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/collections" class="bare">http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/collections</a></p>
+<p><a href="http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections" class="bare">http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections</a></p>
 </div></div></td>
 </tr>
 <tr>
@@ -3919,13 +3977,13 @@ content:
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Each resource collection operation SHALL support a parameter <code>coords</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Each geometry based resource (Position, Radius, Area, Cube , Trajectory, Corridor) collection operation SHALL support a parameter <code>coords</code> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
 <pre class="highlight"><code class="language-YAML" data-lang="YAML">name: coords
 in: query
-required: true
+required: false
 schema:
   type: string
 style: form
@@ -3996,6 +4054,17 @@ explode: false</code></pre>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
 <p>An EDR API SHALL support the Date-Time (datetime) parameter for <code>/collections</code> and <code>/collections/{collectionid}</code> requests.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: datetime
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</code></pre>
+</div>
 </div></div></td>
 </tr>
 <tr>
@@ -4161,15 +4230,15 @@ explode: false</code></pre>
 <tbody>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">If the <code>outputformat</code> parameter is provided, the returned information should be transformed to the defined data format.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">If the <code>f</code> parameter is provided, the returned information should be transformed to the defined data format.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The <code>outputformat</code> parameter SHALL consist of an string value based on an enumerated list of available options provided in the collections metadata.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">The <code>f</code> parameter SHALL consist of an string value based on an enumerated list of available options provided in the collections metadata.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">If an unsupported <code>outputformat</code> value is requested a `400' error message should be returned.</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">If an unsupported <code>f</code> value is requested a `400' error message should be returned.</p></td>
 </tr>
 </tbody>
 </table>
@@ -6834,7 +6903,7 @@ explode: false</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Execute requests with combinations of the "coords","time","parametername","z","crs" and "outputformat" query parameters
+<p>Execute requests with combinations of the "coords","time","parametername","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.</p>
 </div></div></td>
 </tr>
@@ -7310,11 +7379,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify that the <code>outputformat</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Verify that the <code>f</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: outputformat
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: f
 in: query
 required: false
 schema:
@@ -7341,7 +7410,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the outputformat query parameters are processed correctly.</p>
+<p>Validate that the <code>f</code> query parameters are processed correctly.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -7368,7 +7437,7 @@ explode: false</code></pre>
 <p>Verify that all outputformat values defined in the collections metadata are supported by the collection</p>
 </li>
 <li>
-<p>Validate that the outputformat parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
+<p>Validate that the <code>f</code> parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -7555,7 +7624,7 @@ explode: false</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Execute requests with combinations of the "coords","time","parametername","z","crs" and "outputformat" query parameters
+<p>Execute requests with combinations of the "coords","time","parametername","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.</p>
 </div></div></td>
 </tr>
@@ -8031,11 +8100,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify that the <code>outputformat</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Verify that the <code>f</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: outputformat
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: f
 in: query
 required: false
 schema:
@@ -8062,7 +8131,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the outputformat query parameters are processed correctly.</p>
+<p>Validate that the <code>f</code> query parameters are processed correctly.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -8089,7 +8158,7 @@ explode: false</code></pre>
 <p>Verify that all outputformat values defined in the collections metadata are supported by the collection</p>
 </li>
 <li>
-<p>Validate that the outputformat parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
+<p>Validate that the <code>f</code> parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -8449,7 +8518,7 @@ explode: false</code></pre>
 * Response <a href="#../../requirements/collections/edr/REQ_rc-parameter-response">/conf/collections/rc-parametername-response</a></p>
 </div>
 <div class="paragraph">
-<p>Execute requests with combinations of the "coords", "parametername","z","crs" and "outputformat" query parameters
+<p>Execute requests with combinations of the "coords", "parametername","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.</p>
 </div></div></td>
 </tr>
@@ -8758,11 +8827,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify that the <code>outputformat</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Verify that the <code>f</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: outputformat
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: f
 in: query
 required: false
 schema:
@@ -8789,7 +8858,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the outputformat query parameters are processed correctly.</p>
+<p>Validate that the <code>f</code> query parameters are processed correctly.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -8816,7 +8885,7 @@ explode: false</code></pre>
 <p>Verify that all outputformat values defined in the collections metadata are supported by the collection</p>
 </li>
 <li>
-<p>Validate that the outputformat parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
+<p>Validate that the <code>f</code> parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -9741,7 +9810,7 @@ explode: false</code></pre>
 </ul>
 </div>
 <div class="paragraph">
-<p>Execute requests with combinations of the "time","parametername","crs" and "outputformat" query parameters
+<p>Execute requests with combinations of the "time","parametername","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.</p>
 </div></div></td>
 </tr>
@@ -10033,11 +10102,11 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Method</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Verify that the <code>outputformat</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+<p>Verify that the <code>f</code> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: outputformat
+<pre class="highlight"><code class="language-YAML" data-lang="YAML">name: f
 in: query
 required: false
 schema:
@@ -10064,7 +10133,7 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Test Purpose</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>Validate that the outputformat query parameters are processed correctly.</p>
+<p>Validate that the <code>f</code> query parameters are processed correctly.</p>
 </div></div></td>
 </tr>
 <tr>
@@ -10091,7 +10160,7 @@ explode: false</code></pre>
 <p>Verify that all outputformat values defined in the collections metadata are supported by the collection</p>
 </li>
 <li>
-<p>Validate that the outputformat parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
+<p>Validate that the <code>f</code> parameter complies with the syntax described in <a href="#req_collections_rc-outputformat-response">/req/collections/edr/rc-output-response</a>.</p>
 </li>
 </ol>
 </div></div></td>
@@ -12713,7 +12782,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-11-09 22:22:42 -0500
+Last updated 2020-11-10 22:22:00 -0500
 </div>
 </div>
 </body>
