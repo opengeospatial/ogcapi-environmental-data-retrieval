@@ -1,6 +1,6 @@
 [[req_edr_outputFormat-response]]
 [width="90%",cols="2,6a"]
-==== *Requirement {counter:req-id}: /req/edr/outputFormat-response* Parameter f response
+==== *Requirement {counter:req-id}: /req/edr/outputFormat-response* Parameter `f` response
 |===
 ^|A|If the `f` parameter is provided, the returned information should be transformed to the defined data format.
 ^|B|The `f` parameter SHALL consist of an string value based on an enumerated list of available options provided in the collections metadata.
