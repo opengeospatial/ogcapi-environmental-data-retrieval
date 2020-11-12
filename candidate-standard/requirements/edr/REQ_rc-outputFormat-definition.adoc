@@ -1,5 +1,5 @@
 [[req_edr_outputFormat-definition]]
-==== *Requirement {counter:req-id}: /req/edr/outputFormat-definition* Parameter f definition
+==== *Requirement {counter:req-id}: /req/edr/outputFormat-definition* Parameter `f` definition
 [width="90%",cols="2,6a"]
 |===
 ^|A |Each resource collection operation SHALL support a parameter `f` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
