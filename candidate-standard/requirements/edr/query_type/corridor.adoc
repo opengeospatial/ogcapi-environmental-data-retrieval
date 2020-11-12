@@ -19,7 +19,7 @@ A 2D corridor, on the surface of earth all at the same time and no height dimens
 A 2D corridor, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the `z` query parameter : 
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&z=850 
 
-A 2D corridor, on the surface of earth all att a the same time and at a fixed height level, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the collection height units by the `z` query parameter : 
+A 2D corridor, on the surface of earth all at a the same time and at a fixed height level, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the collection height units by the `z` query parameter : 
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&datetime=2018-02-12T23:00:00Z&z=850 
 
 A 3D corridor, on the surface of the earth but over a time range with no height values:

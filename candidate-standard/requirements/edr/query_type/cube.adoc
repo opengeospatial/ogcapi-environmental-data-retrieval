@@ -11,7 +11,7 @@ are selected.
 
 The cube's X Y coordinates are defined using Rectangular Polygon as Well Known Text
 
-coords=POLYGON((x y,x1 y1,x2 y2, x3 y3, x y))
+coords=POLYGON\((x y,x1 y1,x2 y2, x3 y3, x y))
 
 which are values in the coordinate system defined by the crs query parameter 
 if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level  
@@ -22,7 +22,7 @@ South West England in WGS84 would look like
 .A cube covering the South West of the UK
 =================
 
-`coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))`
+`coords=POLYGON\((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))`
 
 =================
 
