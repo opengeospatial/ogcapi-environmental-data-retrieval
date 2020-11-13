@@ -2,9 +2,9 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr/1.0/conf/queries
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/queries
 |Target type |Web API
-|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi_edr/1.0/req/queries>>
+|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/queries>>
 |Dependency |<<ats_core,Conformance Class "OGC API Common Core">>
 |Dependency |<<ats_collections,Conformance Class "OGC API Common Collections">>
 |===
