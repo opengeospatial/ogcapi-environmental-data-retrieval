@@ -2,8 +2,8 @@
 ==== *Requirements Class:* OGC API-Environmental Data Retrieval Core
 [cols="1,4",width="90%"]
 |===
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core
 |Target type |Web API
-|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/req/collections
+|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/collections
 |===

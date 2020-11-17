@@ -1,7 +1,7 @@
 === *Requirements Class:* Collections
 [cols="1,4",width="90%"]
 |===
-2+|http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
+2+|http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
 |Target type |Web API
 |Dependency |<<rc_core,Requirements Class "OAPI Core">>
 |Dependency |<<iso19107,ISO 19107>>
