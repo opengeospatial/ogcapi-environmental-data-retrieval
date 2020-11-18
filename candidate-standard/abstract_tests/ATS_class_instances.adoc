@@ -4,7 +4,7 @@
 2+|*Conformance Class*
 2+|http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/collections
 |Target type |Web API
-|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/collections>>
+|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/collections>>
 |Dependency |<<ats_core,Conformance Class "OAPI Core">>
 |===
 
