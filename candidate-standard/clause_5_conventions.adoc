@@ -5,7 +5,7 @@
 
 The <<WEBARCH,Architecture of the World Wide Web>> establishes the URI as the single global identification system for the Web. Therefore, URIs or <<rfc6570,URI Templates>> are used in OGC Web API standards to identify key entities in those standards.
 
-The normative provisions in this standard are denoted by the URI
+The normative provisions in this standard are denoted by the URI:
 
 http://www.opengis.net/spec/ogcapi-edr-1/1.0
 
