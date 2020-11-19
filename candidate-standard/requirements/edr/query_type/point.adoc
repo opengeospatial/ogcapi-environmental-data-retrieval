@@ -1,4 +1,4 @@
-The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and the filter constraints are defined by the following query parameters:
+The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> . The filter constraints are defined by the following query parameters:
 
 ===== *Parameter coords*
 
@@ -6,27 +6,26 @@ The Position query returns data for the requested coordinate. Logic for identify
 
 <<req_edr_coords-response>>
 
-location(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string. to retrieve a single location :
+location(s) to return data for. The coordinates are defined by a Well Known Text (wkt) string. To retrieve a single location:
 
 `POINT(x y)` 
 
-And for a list of locations
+And for a list of locations:
 
 `MULTIPOINT\((x y),(x1 y1),(x2 y2),(x3 y3))`
 
-And for a list of locations at defined heights
+And for a list of locations at defined heights:
 
 `MULTIPOINT\((x y),(x1 y1),(x2 y2),(x3 y3))`
 
-see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+See http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry .
 
-the coordinate values will depend on the CRS parameter, if this is not defined
-the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)
+The coordinate values will depend on the CRS parameter. If this is not defined,
+the values will be assumed to WGS84 values (i.e x=longitude and y=latitude).
 
 .Single location
 =================
-retrieve data for Greenwich, London
+Retrieve data for Greenwich, London:
 
 `coords=POINT(0 51.48)`
 =================
@@ -34,7 +33,7 @@ retrieve data for Greenwich, London
 
 .Multiple locations
 =================
-retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W  
+Retrieve data for a list of locations: 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W:  
 
 `coords=MULTIPOINT\((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
 =================
@@ -48,37 +47,37 @@ retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E,
 Define the vertical level to return data from 
 i.e. z=level
 
-if data at all available levels is required z can be defined as ALL
+If data at all available levels is required, z can be defined as ALL
 i.e. z=ALL
 
 .A single vertical level
 ===========
 
-for instance if the 850hPa pressure level is being queried
+For example, if the 850hPa pressure level is being queried:
 
-z=850
+`z=850`
 ===========
 
 .Return data at all a levels defined by a list of vertical levels
 ===========
 
-Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
+Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa:
 
-z=1000,900,850,700
+`z=1000,900,850,700`
 ===========
 
 .Return data for all levels between and including 2 defined levels
 ===========
 
-Request data for all levels between 2m and 100m
+Request data for all levels between 2m and 100m:
 
-z=2/100
+`z=2/100`
 ===========
 
 .Return data at all available vertical levels
 ===========
 
-z=ALL
+`z=ALL`
 ===========
 
 `When not specified the API MUST return data from all available levels`
