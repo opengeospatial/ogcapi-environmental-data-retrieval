@@ -2,12 +2,19 @@
 ==== *Requirement {counter:req-id}: /req/edr/resolutionx-response* Parameter resolutionx response
 [width="90%",cols="2,6a"]
 |===
-^|A | If the `resolutionx` parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum width coordinates  
-^|B | The total number of intervals includes the values for the minimum and maximum coordinates  
-^|C | A `resolutionx` value of 0 MUST return all available data at the native x resolution between the minimum and maximum coordinates  
-^|D | IF `resolutionx` is not specified data should be returned for just the locations specified in the requested coordinates (**ONLY IF** interpolation is supported by the API)  
+^|A | If the `resolutionx` parameter is provided, it denotes the number of intervals to retrieve data for along the width of the corridor path including it’s minimum and maximum width coordinates.
+
+image::../../images/REQ_rc-resolutionx-a.png[interpolated corridor example]
+
+^|B | A `resolutionx` value of 0 MUST return all available data at the native x resolution between (and including) the minimum and maximum coordinates of the defined corridor.  
+
+image::../../images/REQ_rc-resolutionx-b.png[native resolution corridor example]
+
+^|C | IF `resolutionx` is not specified the API SHOULD return all available data at the optimal resolution is determined by the server itself including the minimum and maximum coordinates of the defined corridor.  
+|===
+
 [source,java]
 ----
 resolutionx = number of intervals
 ----
-|===
+

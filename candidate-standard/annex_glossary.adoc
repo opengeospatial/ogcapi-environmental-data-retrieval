@@ -3,6 +3,11 @@
 [[glossary]]
 = Glossary
 
+[[ats-definition]]
+Abstract Test Suite (ATS)::
+A compendium of test assertions applicable to
+implementations of the EDR API. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation under test conforms to all the relevant functional specifications.
+
 [[collection-definition]]
 Collection::
   body of resources that belong or are used together. An aggregate, set, or group of related resources. (<<ogc020-024,OGC 20-024>>)
