@@ -6,7 +6,7 @@
 [[ats-definition]]
 Abstract Test Suite (ATS)::
 A compendium of test assertions applicable to
-implementations of the EDR API. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation under test conforms to all the relevant functional specifications.
+implementations of a standard. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation under test conforms to all the relevant functional specifications.
 
 [[collection-definition]]
 Collection::
