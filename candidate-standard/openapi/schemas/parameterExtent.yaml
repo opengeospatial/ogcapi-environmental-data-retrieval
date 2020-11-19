@@ -53,7 +53,7 @@ properties:
         items:
           type: string
       geographic:
-        description: Definition of the area covered by the collection as a Well Know Text Bounding Box
+        description: Definition of the area covered by the collection as a Well Known Text Bounding Box
         type: string
     example:
       name:

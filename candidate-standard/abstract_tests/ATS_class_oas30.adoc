@@ -2,9 +2,9 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-common/1.0/conf/oas3
+2+|http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas3
 |Target type |Web API
-|Requirements Class |<<rc_oas3,http://www.opengis.net/spec/ogcapi_common/1.0/req/oas3>>
+|Requirements Class |<<rc_oas3,http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas3>>
 |Dependency |<<ats_core,Conformance Class "OAPI Core">>
 |===
 

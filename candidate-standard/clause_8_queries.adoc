@@ -146,7 +146,7 @@ If none of the requested parameters exist in the <<collection-definition,collect
 The value of the `crs` query parameter will be one of the name values described in the <<collection-definition,collection>> metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
-===== Parameter outputformat
+===== Parameter f
 
 <<req_edr_outputFormat-definition>>
 
@@ -158,7 +158,7 @@ The value of the `crs` query parameter will be one of the name values described 
 `f=coverageJSON`
 =================
 
-If not specified, the query will return data in the native format of the <<collection-definition,collection>>.  If the requested format system does not match an entry in the defined list of valid `outputFormats` for the <<collection-definition,collection>>, a `400` message SHOULD be returned.
+If not specified, the query will return data in the native format of the <<collection-definition,collection>>.  If the requested format system does not match an entry in the defined list of valid output formats for the <<collection-definition,collection>>, a `400` message SHOULD be returned.
 
 
 [[rc_position-section]]

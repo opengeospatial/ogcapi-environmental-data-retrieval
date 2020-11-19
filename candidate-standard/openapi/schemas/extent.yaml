@@ -10,6 +10,9 @@ properties:
   spatial:
     description: The spatial extent of the information in the collection.
     type: object
+    required:
+      - bbox
+      - crs
     properties:
       bbox:
         description: >-
@@ -101,22 +104,22 @@ properties:
             84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]
         default: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
           84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]
+      name:
+        description: Name of the vertical coordinate reference system
+        type: string
   temporal:
     description: The temporal extent of the information in the collection.
     type: object
+    required:
+      - interval
+      - trs
     properties:
       interval:
-        description: >-
-          One or more time intervals that describe the temporal extent of the
-          dataset.
-
-          The value `null` is supported and indicates an open time interval.
-
-          In the Core only a single time interval is supported. Extensions may support
-
-          multiple intervals. If multiple intervals are provided, the union of the
-
-          intervals describes the temporal extent.
+        description: RFC3339 compliant Date and Time, either as a time range specified
+          as start time / end time / interval (e.g.
+          2017-11-14T09:00Z/2017-11-14T21:00Z/PT3H) or a list of time values
+          (e.g.
+          2017-11-14T09:00Z,2017-11-14T12:00Z,2017-11-14T15:00Z,2017-11-14T18:00Z,2017-11-14T21:00Z)
         type: array
         minItems: 1
         items:
@@ -132,7 +135,7 @@ properties:
             format: date-time
             nullable: true
           example:
-            - 2011-11-11T12:22:11Z
+            - 2020-11-12T12:15Z,2020-11-12T12:30Z,2020-11-12T12:45Z
       trs:
         description: >-
           Coordinate reference system of the coordinates in the temporal extent
@@ -149,9 +152,15 @@ properties:
           - TIMECRS["DateTime",TDATUM["Gregorian
             Calendar"],CS[TemporalDateTime,1],AXIS["Time (T)",future]
         default: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+      name:
+        description: Name of the temporal coordinate reference system
+        type: string
   vertical:
     description: The vertical extent of the information in the collection.
     type: object
+    required:
+      - interval
+      - vrs
     properties:
       interval:
         description: >-
@@ -190,3 +199,6 @@ properties:
         enum:
           - VERTCS["WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]],AXIS["Up",UP]
         default: VERTCS["WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]],AXIS["Up",UP]
+      name:
+        description: Name of the vertical coordinate reference system
+        type: string

@@ -8,7 +8,7 @@ The definition of a `Collection` is very basic. All data parameters in a collect
 
 1. Share the same Geo-Temporal dimensions and units of measurement.
 2. Can all be re-gridded or interpolated to any of the output CRS values advertised by the `Collection`
-3. Can all be transformed into the outputFormats advertised by the `Collection`
+3. Can all be transformed into the output formats advertised by the `Collection`
 
 ### The API is completely data source agnostic
 

@@ -2,9 +2,9 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-common/1.0/conf/core
+2+|http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
 |Target type |Web API
-|Requirements Class |<<rc-core-section,http://www.opengis.net/spec/ogcapi_common/1.0/req/core>>
+|Requirements Class |<<rc-core-section,http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core>>
 |===
 
 ==== General Tests

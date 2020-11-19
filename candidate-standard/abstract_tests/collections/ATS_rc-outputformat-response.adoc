@@ -5,6 +5,6 @@
 ^|Test Purpose |Validate that the `f` query parameters are processed correctly.
 ^|Requirement |<<req_collections_rc-outputformat-response,/req/collections/rc-outputformat-response>>
 ^|Test Method |. Verify that the response is returned in the requested data format
-^|Test Method |. Verify that all outputformat values defined in the collections metadata are supported by the collection
+^|Test Method |. Verify that all output format values defined in the collections metadata are supported by the collection
 . Validate that the `f` parameter complies with the syntax described in <<req_collections_rc-outputformat-response,/req/collections/edr/rc-output-response>>.
 |===
