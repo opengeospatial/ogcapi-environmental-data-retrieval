@@ -82,23 +82,23 @@ Return 10 values across the defined corridor width
 `resolutionx=10`
 ===========
 
-.A get values along the width of the corridor at native resolution  
+.A get values across the width of the corridor at stored resolution  
 ===========
-Return values at the native resolution
+Return values at the stored resolution
 `resolutionx=0`
 ===========
 
 
 ===== <<req_edr_resolutionz-definition,resolutionz>>
-.A interpolate corridor values along the height  
+.A interpolate corridor values over the height  
 ===========
-Return 8 values across the defined corridor height
+Return 8 values over the defined corridor height
 `resolutionz=8`
 ===========
 
-.A get values along the height of the corridor at native resolution  
+.A get values over the height of the corridor at stored resolution  
 ===========
-Return values at the native resolution
+Return values at the stored resolution
 `resolutionz=0`
 ===========
 
