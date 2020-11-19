@@ -15,6 +15,6 @@ image::../../images/REQ_rc-resolutionx-b.png[native resolution corridor example]
 
 [source,java]
 ----
-resolutionx = number of intervals
+resolutionx = number of intervals + 1
 ----
 
