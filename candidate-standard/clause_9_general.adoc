@@ -5,7 +5,7 @@ The following general requirements and recomendations apply to all OGC APIs.
 
 === HTTP 1.1
 
-The standards used for Web APIs are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.
+The standards used for <<webapi-definition,Web APIs>> are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.
 
 <<req_core_http>>
 
@@ -20,7 +20,7 @@ The standards used for Web APIs are built on the HTTP protocol. Therefore, confo
 !===
 |Status code |Description
 |`200` |A successful request.
-|`202` |A successful request, but the response is still being generated. The response will include a  `Retry-After` header field giving a recommendation in seconds for the client to retry. 
+|`202` |A successful request, but the response is still being generated. The response will include a  `Retry-After` header field giving a recommendation in seconds for the client to retry.
 |`304` |An <<web-caching,entity tag>> was provided in the request and the resource has not been changed since the previous request.
 |`308` |The server cannot process the data through a synchronous request.  The response includes a `Location` header field which contains the URI of the location the result will be available at once the query is complete <<Asynchronous_queries,Asynchronous queries>>.
 |`400` |The server cannot or will not process the request due to an apparent client error. For example, a query parameter had an incorrect value.
@@ -72,7 +72,7 @@ For the reasons discussed in the Best Practices, EDR APIs MUST always support WG
 
 <<req_core_crs84>>
 
-The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`. 
+The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
 
 [[rc_encoding-section]]
 === Encodings
@@ -167,5 +167,3 @@ The OpenAPI specification currently supports the following link:https://github.c
 * an API key (either as a header or as a query parameter),
 * OAuth2's common flows (implicit, password, application and access code) as defined in RFC6749, and
 * OpenID Connect Discovery.
-
-
