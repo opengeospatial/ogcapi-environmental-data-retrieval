@@ -456,7 +456,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><strong class="big">Open Geospatial Consortium</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Submission Date: &lt;yyyy-mm-dd&gt;</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Submission Date: 2020-11-20</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Approval Date:   &lt;yyyy-mm-dd&gt;</p></td>
@@ -468,10 +468,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">External identifier of this OGC&#174; document: <a href="http://www.opengis.net/doc/is/ogcapi-edr-1/1.0" class="bare">http://www.opengis.net/doc/is/ogcapi-edr-1/1.0</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    19-086r1</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Internal reference number of this OGC&#174; document:    19-086r2</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.1</p></td>
+<td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Version: 0.9</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-right valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Category: OGC&#174; Implementation Specification</p></td>
@@ -948,10 +948,6 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Dave Blodgett <em>(editor)</em></p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">USGS</p></td>
 </tr>
-<tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">others</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">TBD</p></td>
-</tr>
 </tbody>
 </table>
 </div>
@@ -986,7 +982,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The one Standardization Target for this standard is Web APIs.</p>
 </div>
 <div class="paragraph">
-<p>OGC API - Common - Core  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This EDR API standard is as an extension of OGC API - Common - Core. Conformance to these standards requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common - Core.</p>
+<p>OGC API - Common - Core  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This OGC API - EDR standard is an extension of OGC API - Common - Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common - Core.</p>
 </div>
 <div class="paragraph">
 <p>This standard identifies fourteen (14) Conformance Classes. The Conformance Classes implemented by an API are advertised through the <code>/conformance</code> path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.</p>
@@ -1018,10 +1014,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <a href="#collection-definition">collections</a> of <a href="#spatial-resource-definition">spatial resources</a>.</p>
 </div>
 <div class="paragraph">
-<p>The structure and organization of a <a href="#collection-definition">collection</a> of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2:Collections specifies the requirements necessary to discover and understand a generic <a href="#collection-definition">collection</a> and its contents.</p>
+<p>The structure and organization of a <a href="#collection-definition">collection</a> of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2: Collections specifies the requirements necessary to discover and understand a generic <a href="#collection-definition">collection</a> and its contents.</p>
 </div>
 <div class="paragraph">
-<p>The EDR API <em>Collection Requirements Class</em> extends the common requirements to those specific to the query and retrieval of Environmental Data Resources.</p>
+<p>The EDR API <em>Collection Requirements Class</em> extends the common requirements to those specific to the query and retrieval of Environmental Data resources.</p>
 </div>
 <div class="paragraph">
 <p>The Collection requirements class is specified in <strong>Requirements Class Collection</strong> <a href="#rc_collection-section">(Chapter 9)</a>.</p>
@@ -1186,7 +1182,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect2">
 <h3 id="area-definition"><a class="anchor" href="#area-definition"></a>5.1. area</h3>
 <div class="paragraph">
-<p>region specified with an geographic envelope that may have vertical dimension</p>
+<p>region specified with a geographic envelope that may have vertical dimension</p>
 </div>
 </div>
 <div class="sect2">
@@ -1260,7 +1256,7 @@ A location is represented by one of a set of data types that describe a position
 <p>The <a href="#WEBARCH">Architecture of the World Wide Web</a> establishes the URI as the single global identification system for the Web. Therefore, URIs or <a href="#rfc6570">URI Templates</a> are used in OGC Web API standards to identify key entities in those standards.</p>
 </div>
 <div class="paragraph">
-<p>The normative provisions in this standard are denoted by the URI</p>
+<p>The normative provisions in this standard are denoted by the URI:</p>
 </div>
 <div class="paragraph">
 <p><a href="http://www.opengis.net/spec/ogcapi-edr-1/1.0" class="bare">http://www.opengis.net/spec/ogcapi-edr-1/1.0</a></p>
@@ -2374,7 +2370,7 @@ If none of the requested parameters exist in the <a href="#collection-definition
 <div class="sect3">
 <h4 id="rc_position-section"><a class="anchor" href="#rc_position-section"></a>9.3.2. Position query</h4>
 <div class="paragraph">
-<p>The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <a href="#collection-definition">collection</a> and the filter constraints are defined by the following query parameters:</p>
+<p>The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <a href="#collection-definition">collection</a> . The filter constraints are defined by the following query parameters:</p>
 </div>
 <div class="sect4">
 <h5 id="_parameter_coords"><a class="anchor" href="#_parameter_coords"></a><strong>Parameter coords</strong></h5>
@@ -2385,36 +2381,35 @@ If none of the requested parameters exist in the <a href="#collection-definition
 <p><a href="#req_edr_coords-response"><strong>Requirement 4: /req/edr/coords-response</strong> Parameter coords response</a></p>
 </div>
 <div class="paragraph">
-<p>location(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string. to retrieve a single location :</p>
+<p>location(s) to return data for. The coordinates are defined by a Well Known Text (wkt) string. To retrieve a single location:</p>
 </div>
 <div class="paragraph">
 <p><code>POINT(x y)</code></p>
 </div>
 <div class="paragraph">
-<p>And for a list of locations</p>
+<p>And for a list of locations:</p>
 </div>
 <div class="paragraph">
 <p><code>MULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))</code></p>
 </div>
 <div class="paragraph">
-<p>And for a list of locations at defined heights</p>
+<p>And for a list of locations at defined heights:</p>
 </div>
 <div class="paragraph">
 <p><code>MULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))</code></p>
 </div>
 <div class="paragraph">
-<p>see <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a></p>
+<p>See <a href="http://portal.opengeospatial.org/files/?artifact_id=25355" class="bare">http://portal.opengeospatial.org/files/?artifact_id=25355</a> and <a href="https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry" class="bare">https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry</a> .</p>
 </div>
 <div class="paragraph">
-<p>the coordinate values will depend on the CRS parameter, if this is not defined
-the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
+<p>The coordinate values will depend on the CRS parameter. If this is not defined,
+the values will be assumed to WGS84 values (i.e x=longitude and y=latitude).</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 7. Single location</div>
 <div class="content">
 <div class="paragraph">
-<p>retrieve data for Greenwich, London</p>
+<p>Retrieve data for Greenwich, London:</p>
 </div>
 <div class="paragraph">
 <p><code>coords=POINT(0 51.48)</code></p>
@@ -2425,7 +2420,7 @@ the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 <div class="title">Example 8. Multiple locations</div>
 <div class="content">
 <div class="paragraph">
-<p>retrieve data for a list of locations : 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W</p>
+<p>Retrieve data for a list of locations: 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W:</p>
 </div>
 <div class="paragraph">
 <p><code>coords=MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))</code></p>
@@ -2446,17 +2441,17 @@ the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)</p>
 i.e. z=level</p>
 </div>
 <div class="paragraph">
-<p>if data at all available levels is required z can be defined as ALL
+<p>If data at all available levels is required, z can be defined as ALL
 i.e. z=ALL</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 9. A single vertical level</div>
 <div class="content">
 <div class="paragraph">
-<p>for instance if the 850hPa pressure level is being queried</p>
+<p>For example, if the 850hPa pressure level is being queried:</p>
 </div>
 <div class="paragraph">
-<p>z=850</p>
+<p><code>z=850</code></p>
 </div>
 </div>
 </div>
@@ -2464,10 +2459,10 @@ i.e. z=ALL</p>
 <div class="title">Example 10. Return data at all a levels defined by a list of vertical levels</div>
 <div class="content">
 <div class="paragraph">
-<p>Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa</p>
+<p>Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa:</p>
 </div>
 <div class="paragraph">
-<p>z=1000,900,850,700</p>
+<p><code>z=1000,900,850,700</code></p>
 </div>
 </div>
 </div>
@@ -2475,10 +2470,10 @@ i.e. z=ALL</p>
 <div class="title">Example 11. Return data for all levels between and including 2 defined levels</div>
 <div class="content">
 <div class="paragraph">
-<p>Request data for all levels between 2m and 100m</p>
+<p>Request data for all levels between 2m and 100m:</p>
 </div>
 <div class="paragraph">
-<p>z=2/100</p>
+<p><code>z=2/100</code></p>
 </div>
 </div>
 </div>
@@ -2486,7 +2481,7 @@ i.e. z=ALL</p>
 <div class="title">Example 12. Return data at all available vertical levels</div>
 <div class="content">
 <div class="paragraph">
-<p>z=ALL</p>
+<p><code>z=ALL</code></p>
 </div>
 </div>
 </div>
@@ -3197,11 +3192,45 @@ coords=LINESTRINGZM(51.14 -2.98 0.1 1560507000,51.36 -2.87 0.2 1560507600, 51.03
 </div>
 <div class="sect4">
 <h5 id="_resolutionx"><a class="anchor" href="#_resolutionx"></a><a href="#req_edr_resolutionx-definition">resolutionx</a></h5>
-
+<div class="exampleblock">
+<div class="title">Example 34. A interpolate corridor values along the width</div>
+<div class="content">
+<div class="paragraph">
+<p>Return 10 values across the defined corridor width
+<code>resolutionx=10</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 35. A get values across the width of the corridor at stored resolution</div>
+<div class="content">
+<div class="paragraph">
+<p>Return values at the stored resolution
+<code>resolutionx=0</code></p>
+</div>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_resolutionz"><a class="anchor" href="#_resolutionz"></a><a href="#req_edr_resolutionz-definition">resolutionz</a></h5>
-
+<div class="exampleblock">
+<div class="title">Example 36. A interpolate corridor values over the height</div>
+<div class="content">
+<div class="paragraph">
+<p>Return 8 values over the defined corridor height
+<code>resolutionz=8</code></p>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="title">Example 37. A get values over the height of the corridor at stored resolution</div>
+<div class="content">
+<div class="paragraph">
+<p>Return values at the stored resolution
+<code>resolutionz=0</code></p>
+</div>
+</div>
+</div>
 </div>
 <div class="sect4">
 <h5 id="_corridorheight"><a class="anchor" href="#_corridorheight"></a><a href="#req_edr_corridorHeight-definition">corridorHeight</a></h5>
@@ -3264,7 +3293,7 @@ all other parameters for use with the Items query are defined by
 OGC API - Features.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 34. List available items</div>
+<div class="title">Example 38. List available items</div>
 <div class="content">
 <div class="paragraph">
 <p><code>/collections/{collectionId}/items</code></p>
@@ -3285,7 +3314,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 35. itemID</div>
+<div class="title">Example 39. itemID</div>
 <div class="content">
 <div class="paragraph">
 <p><code>/collections/{collectionId}/items/{itemID}</code></p>
@@ -3315,7 +3344,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p>With the locations query a location is defined by a unique identifier, this is a string value.  It can be anything as long as it is unique for the required location, for instance a GeoHash <code>gbsvn</code> or a WMO station id like <code>03772</code>, what3words like <code>bolt.lime.metro</code> or place name like <code>Devon</code>.  The metadata returned by the API must supply a geospatial definition for the identifier.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 36. get list of location id&#8217;s</div>
+<div class="title">Example 40. get list of location id&#8217;s</div>
 <div class="content">
 <div class="paragraph">
 <p>/collections/{collectionID}/locations/</p>
@@ -3332,7 +3361,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 </div>
 </div>
 <div class="exampleblock">
-<div class="title">Example 37. locationID</div>
+<div class="title">Example 41. locationID</div>
 <div class="content">
 <div class="paragraph">
 <p>/collections/{collectionID}/locations/{locationID}</p>
@@ -3826,7 +3855,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <p><a href="#req_oas30_exceptions-codes"><strong>Requirement 37: /req/oas30/exceptions-codes</strong> OpenAPI 3.0 Exception codes</a></p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 38. An exception response object definition</div>
+<div class="title">Example 42. An exception response object definition</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -4553,34 +4582,38 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>resolutionx</code> parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum width coordinates</p>
+<p>If the <code>resolutionx</code> parameter is provided, it denotes the number of positions to retrieve data for, across the width of the corridor path, including its minimum and maximum width coordinates.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="interpolated corridor example">
+</div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The total number of intervals includes the values for the minimum and maximum coordinates</p>
+<p>A <code>resolutionx</code> value of 0 SHALL return all available data at the stored resolution between (and including) the minimum and maximum coordinates of the defined corridor.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="native resolution corridor example">
+</div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A <code>resolutionx</code> value of 0 MUST return all available data at the native x resolution between the minimum and maximum coordinates</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>IF <code>resolutionx</code> is not specified data should be returned for just the locations specified in the requested coordinates (<strong>ONLY IF</strong> interpolation is supported by the API)</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">resolutionx = number of intervals</code></pre>
-</div>
+<p>If <code>resolutionx</code> is not specified, the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.</p>
 </div></div></td>
 </tr>
 </tbody>
 </table>
+<div class="listingblock">
+<div class="content">
+<pre class="highlight"><code class="language-java" data-lang="java">resolutionx = number of intervals + 1</code></pre>
+</div>
+</div>
 </div>
 <div class="sect3">
 <h4 id="req_edr_resolutiony-definition"><a class="anchor" href="#req_edr_resolutiony-definition"></a><strong>Requirement 24: /req/edr/resolutiony-definition</strong> Parameter resolutiony definition</h4>
@@ -4689,29 +4722,33 @@ explode: false</code></pre>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">A</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>If the <code>resolutionz</code> parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum z coordinates</p>
+<p>If the <code>resolutionz</code> parameter is provided, it denotes the number of positions to retrieve data for, over the depth of the corridor path including its minimum and maximum width coordinates.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="interpolated corridor example">
+</div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">B</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>The total number of intervals includes the values for the minimum and maximum coordinates</p>
+<p>A <code>resolutionz</code> value of 0 SHALL return all available data at the stored vertical resolution between (and including) the minimum and maximum coordinates of the defined corridor.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="data:image/png;base64," alt="native resolution corridor example">
+</div>
 </div></div></td>
 </tr>
 <tr>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">C</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>A <code>resolutionz</code> value of 0 MUST return all available data at the native vertical resolution between the minimum and maximum coordinates</p>
-</div></div></td>
-</tr>
-<tr>
-<td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"><p class="tableblock">D</p></td>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><div class="content"><div class="paragraph">
-<p>IF <code>resolutionz</code> is not specified data should be returned for just the locations specified in the requested coordinates (<strong>ONLY IF</strong> interpolation is supported by the API)</p>
+<p>If <code>resolutionz</code> is not specified the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlight"><code class="language-java" data-lang="java">resolutionz = number of intervals</code></pre>
+<pre class="highlight"><code class="language-java" data-lang="java">resolutionz = number of intervals + 1</code></pre>
 </div>
 </div></div></td>
 </tr>
@@ -5043,6 +5080,13 @@ explode: false</code></pre>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>B.1. Introduction</h3>
+<div class="paragraph">
+<p>The Abstract Test Suite (ATS) is a compendium of test assertions applicable to
+implementations of the EDR API. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation under test conforms to all the relevant functional specifications.</p>
+</div>
+<div class="paragraph">
+<p>The abstract test cases (assertions) are organized into test groups that correspond to distinct conformance test classes defined in the EDR API specification.</p>
+</div>
 <div class="paragraph">
 <p>OGC Web APIs are not a Web Services in the traditional sense. Rather, they define the behavior and content of a set of Resources exposed through a Web Application Programing Interface (Web API). Therefore, an API may expose resources in addition to those defined by the standard. A test engine must be able to traverse the API, identify and validate test points, and ignore resource paths which are not to be tested.</p>
 </div>
@@ -10188,7 +10232,7 @@ explode: false</code></pre>
 <div class="sect2">
 <h3 id="landing-page-examples"><a class="anchor" href="#landing-page-examples"></a>C.2. Example Landing Pages</h3>
 <div id="json-landing-page" class="exampleblock">
-<div class="title">Example 39. JSON Landing Page</div>
+<div class="title">Example 43. JSON Landing Page</div>
 <div class="content">
 <div class="listingblock">
 <div class="content">
@@ -10227,7 +10271,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="conformance-response-examples"><a class="anchor" href="#conformance-response-examples"></a>C.4. Conformance Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 40. Conformance Response</div>
+<div class="title">Example 44. Conformance Response</div>
 <div class="content">
 <div class="paragraph">
 <p>This example response in JSON is for an OGC API Features that supports OpenAPI 3.0 for the API definition and HTML and GeoJSON as encodings for resources.</p>
@@ -10250,7 +10294,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="collections-metadata-examples"><a class="anchor" href="#collections-metadata-examples"></a>C.5. Collections Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 41. Collections metadata response document</div>
+<div class="title">Example 45. Collections metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>The example below shows a service with two <a href="#collection-definition">collections</a>, one for observations and another for forecast data.  The forecast data is regenerated every hour so the <a href="#collection-definition">collection</a> provides access to multiple instances of the <a href="#collection-definition">collection</a> via an instances endpoint.</p>
@@ -10992,7 +11036,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="instance-metadata-examples"><a class="anchor" href="#instance-metadata-examples"></a>C.6. Instance Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 42. Collection instance metadata response document</div>
+<div class="title">Example 46. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>This is an example of the metadata returned by the instances query</p>
@@ -12407,7 +12451,7 @@ include::examples/tbd.adoc[]
 <div class="sect2">
 <h3 id="location-metadata-examples"><a class="anchor" href="#location-metadata-examples"></a>C.7. Location Query Metadata Examples</h3>
 <div class="exampleblock">
-<div class="title">Example 43. Collection instance metadata response document</div>
+<div class="title">Example 47. Collection instance metadata response document</div>
 <div class="content">
 <div class="paragraph">
 <p>A example of the Locations metadata from a collection that supports the <code>Location</code> query pattern.</p>
@@ -12527,6 +12571,15 @@ include::examples/tbd.adoc[]
 <div class="sect1">
 <h2 id="glossary"><a class="anchor" href="#glossary"></a>Annex D: Glossary</h2>
 <div class="sectionbody">
+<div id="ats-definition" class="dlist">
+<dl>
+<dt class="hdlist1">Abstract Test Suite (ATS)</dt>
+<dd>
+<p>A compendium of test assertions applicable to
+implementations of a standard. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation under test conforms to all the relevant functional specifications.</p>
+</dd>
+</dl>
+</div>
 <div id="collection-definition" class="dlist">
 <dl>
 <dt class="hdlist1">Collection</dt>
@@ -12783,7 +12836,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-11-18 22:22:38 -0500
+Last updated 2020-11-19 22:22:45 -0500
 </div>
 </div>
 </body>
