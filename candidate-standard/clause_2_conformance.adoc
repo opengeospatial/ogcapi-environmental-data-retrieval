@@ -5,7 +5,7 @@ The one Standardization Target for this standard is <<webapi-definition,Web APIs
 
 OGC API - Common - Core  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This OGC API - EDR standard is an extension of OGC API - Common - Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common - Core.
 
-This standard identifies fourteen (14) Conformance Classes. The <<ctc-definition,Conformance Classes>> implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more <<requirements-class-definition,Requirements Classes>>. The test classes in <<requirements>> are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
+This standard identifies nine (9) Conformance Classes. The <<ctc-definition,Conformance Classes>> implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more <<requirements-class-definition,Requirements Classes>>. The test classes in <<requirements>> are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.
 
 The conformance classes and their constituent requirements classes for OGC API-EDR are:
 
