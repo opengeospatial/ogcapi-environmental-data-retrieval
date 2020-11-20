@@ -3,7 +3,7 @@
 
 === Identifiers
 
-The <<WEBARCH,Architecture of the World Wide Web>> establishes the URI as the single global identification system for the Web. Therefore, URIs or <<rfc6570,URI Templates>> are used in OGC <<webapi-definition,Web API>> standards to identify key entities in those standards.
+The https://www.w3.org/TR/webarch/[Architecture of the World Wide Web] establishes the URI as the single global identification system for the Web. Therefore, URIs or <<rfc6570,URI Templates>> are used in OGC <<webapi-definition,Web API>> standards to identify key entities in those standards.
 
 The normative provisions in this standard are denoted by the URI:
 
@@ -19,7 +19,7 @@ Implementation of the URI Templates is recommended in that they provide a common
 
 === Link relations
 
-To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible. Additional link relation types are registered with the https://github.com/opengeospatial/NamingAuthority/blob/master/incubation/linkRelationTypes/linkrelations.csv[OGC Link Relation Registry].
+To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the https://github.com/opengeospatial/NamingAuthority/blob/master/registers/linkrelations.csv[OGC Link Relation Registry]. These are denoted below with [OGC].
 
 The following link-relations are in common use by OGC <<webapi-definition,Web API>> Standards.
 
@@ -87,7 +87,7 @@ JSON Schema is used throughout this standard to define the structure of resource
 
 === Use of HTTPS
 
-For simplicity, this document in general only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <<rfc2818,HTTPS>>, not <<rfc2616,HTTP>>.
+For simplicity, this document generally refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <<rfc2818,HTTPS>>, not <<rfc2616,HTTP>>.
 
 [[requirements-class-openapi_3_0-clause]]
 === API definition
@@ -100,7 +100,7 @@ This standard specifies requirements and recommendations for APIs that share spa
 
 ==== Role of OpenAPI
 
-This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the `/conformance` path.
+This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated <<ctc-definition,conformance class>> advertised through the `/conformance` path.
 
 This approach is used to avoid lock-in to a specific approach to defining an API. This standard includes a <<rc_oas30-section,conformance class>> for API definitions that follow the <<openapi,OpenAPI specification 3.0>>. Conformance classes for additional API definition languages will be added as the API landscape continues to evolve.
 
@@ -145,5 +145,3 @@ The path +`/mypath`+ in the OpenAPI definition of the API would be the URL +`htt
 ==== Reusable OpenAPI components
 
 Reusable components for OpenAPI definitions for a OGC API are referenced from this document.
-
-CAUTION: During the development phase, these components use a base URL of `https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master`, but eventually they are expected to be available under the base URL `http://schemas.opengis.net/ogcapi-edr-1/1.0`.

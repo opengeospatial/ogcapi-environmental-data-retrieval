@@ -3,14 +3,14 @@
 
 === General
 
-The OGC API standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type. 
+The https://ogcapi.ogc.org/[OGC API] standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type.
 
 This OGC API-EDR standard defines an API with two goals:
 
-. To allow service users to retrieve a subset of data created by the service in response to a standardized, coordinate orientated, query pattern;
-. To provide 'building blocks' allowing the construction of more complex services.
+. To allow clients to retrieve a subset of data created by the API in response to a standardized, coordinate orientated, query pattern;
+. To provide 'building blocks' allowing the construction of more complex applications.
 
-The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required. 
+The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the Environmental Data resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required.
 
 The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.
 
@@ -23,7 +23,7 @@ The functionality provided by EDR query patterns could be realized through speci
 .Environmental Data API Paths
 [width="90%",cols="2,^1,4",options="header"]
 |===
-^|**Path Template** ^|**Relation** ^|**Resource** 
+^|**Path Template** ^|**Relation** ^|**Resource**
 3+^|**Common**
 |<<landing-page,{root}/>> |none |Landing page
 |<<api-definition,{root}/api>> |`service-desc` +
@@ -32,13 +32,13 @@ or +
 |<<conformance-classes,{root}/conformance>> |`conformance` |Conformance Classes
 3+^|**Collections**
 |<<collections,{root}/collections>> |`data` |Metadata describing the <<collection-definition,collections>> of data available from this API.
-|<<collectionInfo,{root}/collections/{collectionId}>> | |Metadata describing the <<collection-definition,collection>> of data which has the unique identifier `{collectionId}`
+|<<collection-information-queries,{root}/collections/{collectionId}>> | |Metadata describing the <<collection-definition,collection>> of data which has the unique identifier `{collectionId}`
 3+^|**Features**
-|<<collectionInfo,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
+|<<collection-information-queries,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
 3+^|**Queries**
-|<<collectionInfo,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
-|<<collectionInfo,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about <<instance-definition,instances>> of a <<collection-definition,collection>>
-|<<collectionInfo,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific <<insance-definition,instance>> of a <<collection-definition,collection>> which has the unique identifier `{instanceId}`
+|<<collection-information-queries,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
+|<<collection-information-queries,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about <<instance-definition,instances>> of a <<collection-definition,collection>>
+|<<collection-information-queries,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific <<insance-definition,instance>> of a <<collection-definition,collection>> which has the unique identifier `{instanceId}`
 |===
 
 Where:
@@ -47,4 +47,3 @@ Where:
 * `{collectionId}` = an identifier for a specific <<collection-definition,collection>> of data
 * `{instanceId}` = an identifier for a specific version or <<instance-definition,instance>> of a <<collection-definition,collection>> of data
 * `{queryType}` = an identifier for a specific query pattern to retrieve data from a specific <<collection-definition,collection>> of data
-
