@@ -41,7 +41,7 @@ The `Core` Requirements Class is presented in five sections:
 [[api-platform-section]]
 === Platform
 
-API-Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.
+API-Common defines a set of common capabilities which are applicable to any OGC <<webapi-definition,Web API>>. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.
 
 [[landing-page]]
 ==== API landing page

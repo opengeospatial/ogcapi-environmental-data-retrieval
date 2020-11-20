@@ -27,7 +27,7 @@ rectangular area, with a vertical extent
 
 identifiable geographic place
 
-SOURCE: ISO 19112
+SOURCE: https://www.iso.org/standard/70742.html[ISO 19112]
 
 NOTE: A location is represented by one of a set of data types that describe a position, along with metadata about that data, including coordinates (from a coordinate reference system), a measure (from a linear referencing system), or an address (from an address system).
 
@@ -51,4 +51,4 @@ region specified with a geographic point and radial distance
 
 path of a moving point described by a one parameter set of points
 
-SOURCE: ISO 19141
+SOURCE: https://www.iso.org/standard/41445.html[ISO 19141]

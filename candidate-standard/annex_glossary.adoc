@@ -40,7 +40,7 @@ Executable Test Suite (ETS)::
 
 [[recomendation-definition]]
 Recommendation::
-  expression in the content of a document conveying that among several possibilities one is recommended as particularly suitable, without mentioning or excluding others, or that a certain course of action is preferred but not necessarily required, or that (in the negative form) a certain possibility or course of action is deprecated but not prohibited (<<ogc08-131,OGC 08-131>>) 
+  expression in the content of a document conveying that among several possibilities one is recommended as particularly suitable, without mentioning or excluding others, or that a certain course of action is preferred but not necessarily required, or that (in the negative form) a certain possibility or course of action is deprecated but not prohibited (<<ogc08-131,OGC 08-131>>)
 
 [[requirement-definition]]
 Requirement::
@@ -53,7 +53,7 @@ Requirements Class::
 [[requirements-module-definition]]
 Requirements Module::
   aggregate of requirements and recommendations of a specification against a single standardization target type (<<ogc08-131,OGC 08-131>>)
-  
+
 [[spatial-resource-definition]]
 Spatial Resource::
   <<resource-definition,resources>> usually considered as Geospatial Data. (<<apicore,OGC 19-072>>)
