@@ -620,7 +620,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 <li><a href="#environmental-resource-section">9. Query, Environmental and Information Resources</a>
 <ul class="sectlevel2">
-<li><a href="#_requirements_class_collections">9.1. <strong>Requirements Class:</strong> Collections</a></li>
+<li><a href="#collections">9.1. <strong>Requirements Class:</strong> Collections</a></li>
 <li><a href="#collections-access-section">9.2. Information Resources</a></li>
 <li><a href="#query-resources-section">9.3. Query Resources</a>
 <ul class="sectlevel3">
@@ -711,7 +711,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </li>
 </ul>
 </li>
-<li><a href="#_abstract_test_suite_normative">Annex B: Abstract Test Suite (Normative)</a>
+<li><a href="#ATS">Annex B: Abstract Test Suite (Normative)</a>
 <ul class="sectlevel2">
 <li><a href="#_introduction_3">B.1. Introduction</a></li>
 <li><a href="#_conformance_class_core">B.2. Conformance Class Core</a>
@@ -795,13 +795,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p><strong class="big">i.     Abstract</strong></p>
 </div>
 <div class="paragraph">
-<p>The Environmental Data Retrieval (EDR) Application Programming Interface (API) provides a family of lightweight query interfaces to access Environmental Data resources by requesting data at a <strong>Position</strong>, within an <strong>Area</strong> or along a <strong>Trajectory</strong>. An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the EDR query patterns. These patterns are described in the <a href="#rc_core-section">Requirement Class Core</a> section.</p>
+<p>The Environmental Data Retrieval (EDR) Application Programming Interface (API) provides a family of lightweight query interfaces to access Environmental Data resources by requesting data at a <strong>Position</strong>, within an <strong>Area</strong> or along a <strong>Trajectory</strong>. An Environmental Data resource is a collection of spatiotemporal data that can be sampled using the EDR query pattern geometries. These patterns are described in the <a href="#rc_core-section">Requirement Class Core</a> section.</p>
 </div>
 <div class="paragraph">
-<p>EDR API query patterns, such as <a href="#position-defintion">Position</a>, <a href="#area-definition">Area</a>, <a href="#cube-definition">Cube</a>, <a href="#trajectory-definition">Trajectory</a> or <a href="#corridor-definition">Corridor</a>, can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the <a href="https://www.ogc.org/standards/sos">Sensor Observation Service (SOS)</a>. A typical EDR data resource is a multidimensional dataset that possibly could be accessed via the <a href="http://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a>. In contrast to SOS and WCS, EDR implements the technical baseline of the OGC API family of standards and aims to provide a simple-to-use, single set of user-centric query patterns. EDR use cases range from location-centric real or virtual observation retrievals, including time-series, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but provide useful building blocks to allow the composition of APIs that satisfy a wide range of geospatial data use cases.  The definition of a set focused querying patterns (and no requirement to implement all of them), should help to simplify the design of systems as they can be performance tuned for the supported queries making it easier to build robust and scalable infrastructure.</p>
+<p>EDR API query patterns, such as <a href="#position-defintion">Position</a>, <a href="#area-definition">Area</a>, <a href="#cube-definition">Cube</a>, <a href="#trajectory-definition">Trajectory</a> or <a href="#corridor-definition">Corridor</a>, can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the <a href="https://www.ogc.org/standards/sos">Sensor Observation Service (SOS)</a>. A typical EDR data resource is a multidimensional dataset that could be accessed via the <a href="http://www.ogc.org/standards/wcs">Web Coverage Service (WCS)</a>. In contrast to SOS and WCS, EDR implements the technical baseline of the <a href="https://ogcapi.ogc.org/">OGC API</a> family of standards and aims to provide a single set of simple-to-use query patterns. Use cases for EDR range from real or virtual time-series observation retrievals, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but provide useful building blocks to allow the composition of APIs that satisfy a wide range of geospatial data use cases. By defining a set focused querying patterns (and no requirement to implement all of them), the EDR API should help to simplify the design of systems (as they can be performance tuned for the supported queries) making it easier to build robust and scalable infrastructure.</p>
 </div>
 <div class="paragraph">
-<p>The OGC has extended their suite of standards to include Resource Oriented Architectures and Web Application Programming Interfaces (APIs). These standards are based on a shared foundation, the OGC API-Common standard, which defines the resources and access paths that are supported by all OGC APIs. These are listed in <a href="#common-paths">Table 1</a>. This document extends that foundation to define the Environmental Data Retrieval API.</p>
+<p>With the OGC API family of standards. the OGC community has extended its suite of standards to include Resource Oriented Architectures and Web Application Programming Interfaces (APIs). These standards are based on a shared foundation, the OGC API-Common standard, which defines the resources and access paths that are supported by all OGC APIs. These are listed in <a href="#common-paths">Table 1</a>. This document extends that foundation to define the Environmental Data Retrieval API.</p>
 </div>
 <table id="common-paths" class="tableblock frame-all grid-all" style="width: 90%;">
 <caption class="title">Table 1. Overview of Resources</caption>
@@ -852,11 +852,23 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </tr>
 </tbody>
 </table>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Caution</div>
+</td>
+<td class="content">
+During the development phase, these components use a base URL of <code><a href="https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master" class="bare">https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master</a></code>, but eventually they are expected to be available under the base URL <code><a href="http://schemas.opengis.net/ogcapi-edr-1/1.0" class="bare">http://schemas.opengis.net/ogcapi-edr-1/1.0</a></code>.
+</td>
+</tr>
+</table>
+</div>
 <div class="paragraph">
 <p>The resources identified in  <a href="#common-paths">Table 1</a> primarily support Discovery operations. Discovery operations allow clients to interrogate the API to determine its capabilities and obtain information (metadata) about a distribution of a resource. This includes the API definition of the server(s) as well as metadata about the resources provided by those servers.</p>
 </div>
 <div class="paragraph">
-<p>This standard extends the common query operations of all OGC APIs by defining simple, coordinate-based, queries which should be applicable to many geospatial resource types. Other OGC API standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying geospatial resource data store. The information returned is based upon the selection criteria (query string) provided by the client.</p>
+<p>This standard extends the <a href="#common-paths">Table 1</a> common query operations by defining simple, coordinate-based, queries which are applicable to many geospatial resource types. Other OGC API standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying geospatial resource data store. The information returned is based upon the selection criteria (query string) provided by the client.</p>
 </div>
 <div class="paragraph">
 <p><strong class="big">ii.    Keywords</strong></p>
@@ -968,7 +980,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>An Environmental Data resource is a <strong><a href="#collection-definition">collection</a></strong> of spatio-temporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.</p>
 </div>
 <div class="paragraph">
-<p>Query operations allow other environmental data resources to be retrieved from the underlying Environmental Data resource, or data store, based upon simple selection criteria, defined by this standard and selected by the client.</p>
+<p>Query operations allow other environmental data resources to be sampled from the underlying Environmental Data resource, or data store, based upon EDR query geometry and other selection criteria, defined by this standard and selected by the client.</p>
 </div>
 </div>
 </div>
@@ -976,16 +988,16 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <h2 id="_conformance"><a class="anchor" href="#_conformance"></a>3. Conformance</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Conformance with this standard shall be checked using the tests specified in Annex B (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p>
+<p>Conformance with this standard shall be checked using the tests specified in <a href="#ATS">Abstract Test Suite (Normative)</a> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the <a href="https://www.ogc.org/compliance">OGC Compliance Testing</a> web site.</p>
 </div>
 <div class="paragraph">
-<p>The one Standardization Target for this standard is Web APIs.</p>
+<p>The one Standardization Target for this standard is <a href="#webapi-definition">Web APIs</a>.</p>
 </div>
 <div class="paragraph">
 <p>OGC API - Common - Core  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This OGC API - EDR standard is an extension of OGC API - Common - Core. Conformance to this standard requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common - Core.</p>
 </div>
 <div class="paragraph">
-<p>This standard identifies fourteen (14) Conformance Classes. The Conformance Classes implemented by an API are advertised through the <code>/conformance</code> path on the landing page. Each Conformance Class is defined by one or more Requirements Classes. The tests in Annex A are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.</p>
+<p>This standard identifies nine (9) Conformance Classes. The <a href="#ctc-definition">Conformance Classes</a> implemented by an API are advertised through the <code>/conformance</code> path on the landing page. Each Conformance Class is defined by one or more <a href="#requirements-class-definition">Requirements Classes</a>. The test classes in <a href="#requirements">Requirements Detail</a> are organized by Requirements Class. The Requirements Classes define the functional requirements which will be tested through the associated Conformance Class.</p>
 </div>
 <div class="paragraph">
 <p>The conformance classes and their constituent requirements classes for OGC API-EDR are:</p>
@@ -1014,13 +1026,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <a href="#collection-definition">collections</a> of <a href="#spatial-resource-definition">spatial resources</a>.</p>
 </div>
 <div class="paragraph">
-<p>The structure and organization of a <a href="#collection-definition">collection</a> of spatial resources is very much dependent on the nature of that resource and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2: Collections specifies the requirements necessary to discover and understand a generic <a href="#collection-definition">collection</a> and its contents.</p>
+<p>The structure and organization of a <a href="#collection-definition">collection</a> of spatial data is very much dependent on the nature of that data and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2: Collections, specifies the requirements necessary to discover and understand a generic <a href="#collection-definition">collection</a> of spatial data.</p>
 </div>
 <div class="paragraph">
-<p>The EDR API <em>Collection Requirements Class</em> extends the common requirements to those specific to the query and retrieval of Environmental Data resources.</p>
+<p>The EDR API <em>Collection Requirements Class</em> extends the common requirements to those specific to the query and retrieval of collections of Environmental Data.</p>
 </div>
 <div class="paragraph">
-<p>The Collection requirements class is specified in <strong>Requirements Class Collection</strong> <a href="#rc_collection-section">(Chapter 9)</a>.</p>
+<p>The EDR Collection requirements class is specified in <strong>Requirements Class Collection</strong> <a href="#rc_collection-section">(Chapter 9)</a>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1106,7 +1118,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The <em>Position</em>, <em>Area</em> and <em>Trajectory</em> requirements classes specify query patterns for which there are ubiquitous use cases.</p>
 </div>
 <div class="paragraph">
-<p>An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <a href="#position-definition">position</a> (with elevation and time) does simplify interoperability so support for <a href="#rc_position-section">Position</a> is highly recommended.</p>
+<p>An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <a href="#position-definition">position</a> (with elevation and time) does simplify interoperability so support for the <a href="#rc_position-section">position</a> query is highly recommended.</p>
 </div>
 <div class="paragraph">
 <p>The Queries Requirements Classes are specified in <strong>Queries Requirements Classes</strong> <a href="#query-resources-section">(Chapter 9)</a>.</p>
@@ -1203,7 +1215,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>identifiable geographic place</p>
 </div>
 <div class="paragraph">
-<p>SOURCE: ISO 19112</p>
+<p>SOURCE: <a href="https://www.iso.org/standard/70742.html">ISO 19112</a></p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -1242,7 +1254,7 @@ A location is represented by one of a set of data types that describe a position
 <p>path of a moving point described by a one parameter set of points</p>
 </div>
 <div class="paragraph">
-<p>SOURCE: ISO 19141</p>
+<p>SOURCE: <a href="https://www.iso.org/standard/41445.html">ISO 19141</a></p>
 </div>
 </div>
 </div>
@@ -1253,7 +1265,7 @@ A location is represented by one of a set of data types that describe a position
 <div class="sect2">
 <h3 id="_identifiers"><a class="anchor" href="#_identifiers"></a>6.1. Identifiers</h3>
 <div class="paragraph">
-<p>The <a href="#WEBARCH">Architecture of the World Wide Web</a> establishes the URI as the single global identification system for the Web. Therefore, URIs or <a href="#rfc6570">URI Templates</a> are used in OGC Web API standards to identify key entities in those standards.</p>
+<p>The <a href="https://www.w3.org/TR/webarch/">Architecture of the World Wide Web</a> establishes the URI as the single global identification system for the Web. Therefore, URIs or <a href="#rfc6570">URI Templates</a> are used in OGC <a href="#webapi-definition">Web API</a> standards to identify key entities in those standards.</p>
 </div>
 <div class="paragraph">
 <p>The normative provisions in this standard are denoted by the URI:</p>
@@ -1265,22 +1277,22 @@ A location is represented by one of a set of data types that describe a position
 <p>All <a href="#requirement-definition">Requirements</a> and <a href="#ctc-definition">Conformance Tests</a> that appear in this document are denoted by partial URIs which are relative to this base.</p>
 </div>
 <div class="paragraph">
-<p>A key requirement of Web API standards is the unambiguous identification of the <a href="#resource-definition">resources</a> they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <a href="#rfc6570">URI Templates</a> to identify <a href="#resource-category-definition">resource categories</a>. These resource categories are instantiated in the implementation of the standard.</p>
+<p>A key requirement of <a href="#webapi-definition">Web API</a> standards is the unambiguous identification of the <a href="#resource-definition">resources</a> they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <a href="#rfc6570">URI Templates</a> to identify <a href="#resource-category-definition">resource categories</a>. These resource categories are instantiated in the implementation of the standard.</p>
 </div>
 <div class="paragraph">
 <p>The scope of each URI Template is specified in the standard. In some cases, API implementations are required to implement the template as a path in their API. In most cases they are optional.</p>
 </div>
 <div class="paragraph">
-<p>Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC Web API standards.</p>
+<p>Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC <a href="#webapi-definition">Web API</a> standards.</p>
 </div>
 </div>
 <div class="sect2">
 <h3 id="_link_relations"><a class="anchor" href="#_link_relations"></a>6.2. Link relations</h3>
 <div class="paragraph">
-<p>To express relationships between resources, <a href="#rfc8288">RFC 8288 (Web Linking)</a> and <a href="#link-relations">registered link relation types</a> are used wherever possible. Additional link relation types are registered with the <a href="https://github.com/opengeospatial/NamingAuthority/blob/master/incubation/linkRelationTypes/linkrelations.csv">OGC Link Relation Registry</a>.</p>
+<p>To express relationships between resources, <a href="#rfc8288">RFC 8288 (Web Linking)</a> and <a href="#link-relations">registered link relation types</a> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the <a href="https://github.com/opengeospatial/NamingAuthority/blob/master/registers/linkrelations.csv">OGC Link Relation Registry</a>. These are denoted below with [OGC].</p>
 </div>
 <div class="paragraph">
-<p>The following link-relations are in common use by OGC Web API Standards.</p>
+<p>The following link-relations are in common use by OGC <a href="#webapi-definition">Web API</a> Standards.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1428,7 +1440,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <div class="sect2">
 <h3 id="_use_of_https"><a class="anchor" href="#_use_of_https"></a>6.6. Use of HTTPS</h3>
 <div class="paragraph">
-<p>For simplicity, this document in general only refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <a href="#rfc2818">HTTPS</a>, not <a href="#rfc2616">HTTP</a>.</p>
+<p>For simplicity, this document generally refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and simply is a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <a href="#rfc2818">HTTPS</a>, not <a href="#rfc2616">HTTP</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1445,7 +1457,7 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <div class="sect3">
 <h4 id="_role_of_openapi"><a class="anchor" href="#_role_of_openapi"></a>6.7.2. Role of OpenAPI</h4>
 <div class="paragraph">
-<p>This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated conformance class advertised through the <code>/conformance</code> path.</p>
+<p>This document uses OpenAPI 3.0 fragments as examples and to formally state requirements. Using OpenAPI 3.0 is not required for implementing an OGC API. Other API definition languages may be used along with, or instead of OpenAPI. However, any API definition language used should have an associated <a href="#ctc-definition">conformance class</a> advertised through the <code>/conformance</code> path.</p>
 </div>
 <div class="paragraph">
 <p>This approach is used to avoid lock-in to a specific approach to defining an API. This standard includes a <a href="#rc_oas30-section">conformance class</a> for API definitions that follow the <a href="#openapi">OpenAPI specification 3.0</a>. Conformance classes for additional API definition languages will be added as the API landscape continues to evolve.</p>
@@ -1523,18 +1535,6 @@ The CoverageJSON media type has not been registered yet with IANA and may change
 <div class="paragraph">
 <p>Reusable components for OpenAPI definitions for a OGC API are referenced from this document.</p>
 </div>
-<div class="admonitionblock caution">
-<table>
-<tr>
-<td class="icon">
-<div class="title">Caution</div>
-</td>
-<td class="content">
-During the development phase, these components use a base URL of <code><a href="https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master" class="bare">https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master</a></code>, but eventually they are expected to be available under the base URL <code><a href="http://schemas.opengis.net/ogcapi-edr-1/1.0" class="bare">http://schemas.opengis.net/ogcapi-edr-1/1.0</a></code>.
-</td>
-</tr>
-</table>
-</div>
 </div>
 </div>
 </div>
@@ -1545,7 +1545,7 @@ During the development phase, these components use a base URL of <code><a href="
 <div class="sect2">
 <h3 id="_general"><a class="anchor" href="#_general"></a>7.1. General</h3>
 <div class="paragraph">
-<p>The OGC API standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type.</p>
+<p>The <a href="https://ogcapi.ogc.org/">OGC API</a> standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type.</p>
 </div>
 <div class="paragraph">
 <p>This OGC API-EDR standard defines an API with two goals:</p>
@@ -1553,15 +1553,15 @@ During the development phase, these components use a base URL of <code><a href="
 <div class="olist arabic">
 <ol class="arabic">
 <li>
-<p>To allow service users to retrieve a subset of data created by the service in response to a standardized, coordinate orientated, query pattern;</p>
+<p>To allow clients to retrieve a subset of data created by the API in response to a standardized, coordinate orientated, query pattern;</p>
 </li>
 <li>
-<p>To provide 'building blocks' allowing the construction of more complex services.</p>
+<p>To provide 'building blocks' allowing the construction of more complex applications.</p>
 </li>
 </ol>
 </div>
 <div class="paragraph">
-<p>The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required.</p>
+<p>The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the Environmental Data resource of a relatively persistent data store. The query and its response are transient resources, which could be made persistent for re-use if required.</p>
 </div>
 <div class="paragraph">
 <p>The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the <a href="https://www.ogc.org/standards/common">OGC Web Services family of (XML-based) standards</a>. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the same use cases addressed by SOS and WCS in the past.</p>
@@ -1616,7 +1616,7 @@ or<br>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the <a href="#collection-definition">collections</a> of data available from this API.</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collection-information-queries">{root}/collections/{collectionId}</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Metadata describing the <a href="#collection-definition">collection</a> of data which has the unique identifier <code>{collectionId}</code></p></td>
 </tr>
@@ -1624,7 +1624,7 @@ or<br>
 <td class="tableblock halign-center valign-top" colspan="3" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Features</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/items</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collection-information-queries">{root}/collections/{collectionId}/items</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata about available items</p></td>
 </tr>
@@ -1632,17 +1632,17 @@ or<br>
 <td class="tableblock halign-center valign-top" colspan="3" style="background-color: #FFFFFF;"><p class="tableblock"><strong>Queries</strong></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/{queryType}</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collection-information-queries">{root}/collections/{collectionId}/{queryType}</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve data according to the query pattern</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/instances</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collection-information-queries">{root}/collections/{collectionId}/instances</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata about <a href="#instance-definition">instances</a> of a <a href="#collection-definition">collection</a></p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collectionInfo">{root}/collections/{collectionId}/instances/{instanceId}</a></p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock"><a href="#collection-information-queries">{root}/collections/{collectionId}/instances/{instanceId}</a></p></td>
 <td class="tableblock halign-center valign-top" style="background-color: #FFFFFF;"></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Retrieve metadata from a specific <a href="#insance-definition">instance</a> of a <a href="#collection-definition">collection</a> which has the unique identifier <code>{instanceId}</code></p></td>
 </tr>
@@ -1764,7 +1764,7 @@ or<br>
 <div class="sect2">
 <h3 id="api-platform-section"><a class="anchor" href="#api-platform-section"></a>8.2. Platform</h3>
 <div class="paragraph">
-<p>API-Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.</p>
+<p>API-Common defines a set of common capabilities which are applicable to any OGC <a href="#webapi-definition">Web API</a>. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support Environmental Data resources.</p>
 </div>
 <div class="sect3">
 <h4 id="landing-page"><a class="anchor" href="#landing-page"></a>8.2.1. API landing page</h4>
@@ -2063,7 +2063,7 @@ properties:
 <p>An Environmental Data resource is a <a href="#collection-definition">collection</a> of spatiotemporal data that can be sampled using the API-EDR query patterns.</p>
 </div>
 <div class="sect2">
-<h3 id="_requirements_class_collections"><a class="anchor" href="#_requirements_class_collections"></a>9.1. <strong>Requirements Class:</strong> Collections</h3>
+<h3 id="collections"><a class="anchor" href="#collections"></a>9.1. <strong>Requirements Class:</strong> Collections</h3>
 <table class="tableblock frame-all grid-all" style="width: 90%;">
 <colgroup>
 <col style="width: 20%;">
@@ -2192,6 +2192,11 @@ properties:
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/position</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Position</p></td>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data for the requested <a href="#position-definition">point location</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/radius</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Radius</p></td>
+<td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">Return data within a given <a href="#radius-definition">radius</a> of a position</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top" style="background-color: #FFFFFF;"><p class="tableblock">/collections/{collectionId}/area</p></td>
@@ -3487,7 +3492,7 @@ return query parameters to retrieve trapical storms using OGC API - Features and
 <div class="sect2">
 <h3 id="_http_1_1"><a class="anchor" href="#_http_1_1"></a>10.1. HTTP 1.1</h3>
 <div class="paragraph">
-<p>The standards used for Web APIs are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.</p>
+<p>The standards used for <a href="#webapi-definition">Web APIs</a> are built on the HTTP protocol. Therefore, conformance with HTTP or a closely related protocol is required.</p>
 </div>
 <div class="paragraph">
 <p><a href="#req_core_http"><strong>Requirement 32: /req/core/http</strong> HTTP</a></p>
@@ -5076,7 +5081,7 @@ explode: false</code></pre>
 </div>
 </div>
 <div class="sect1">
-<h2 id="_abstract_test_suite_normative"><a class="anchor" href="#_abstract_test_suite_normative"></a>Annex B: Abstract Test Suite (Normative)</h2>
+<h2 id="ATS"><a class="anchor" href="#ATS"></a>Annex B: Abstract Test Suite (Normative)</h2>
 <div class="sectionbody">
 <div class="sect2">
 <h3 id="_introduction_3"><a class="anchor" href="#_introduction_3"></a>B.1. Introduction</h3>
@@ -12836,7 +12841,7 @@ The standardization target is the entity which may receive a certificate of conf
 </div>
 <div id="footer">
 <div id="footer-text">
-Last updated 2020-11-19 22:22:45 -0500
+Last updated 2020-11-20 22:22:33 -0500
 </div>
 </div>
 </body>
