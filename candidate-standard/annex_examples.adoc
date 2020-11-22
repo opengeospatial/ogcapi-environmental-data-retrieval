@@ -2,13 +2,6 @@
 :appendix-caption: Annex
 == Examples (Informative)
 
-[[openapi-examples]]
-=== OpenAPI definition
-
-link:openapi/EDR_OpenAPI.yaml[OpenAPI YAML]
-
-link:openapi/EDR_OpenAPI.json[OpenAPI JSON]
-
 
 [[landing-page-examples]]
 === Example Landing Pages
@@ -18,7 +11,11 @@ include::examples/landing_page_JSON_1.adoc[]
 [[oas-examples]]
 === API Description Examples
 
-NOTE: include::examples/tbd.adoc[]
+The API is described using the OpenAPI 3.02 specification, example responses for a server which supports all possible EDR query patterns can be found at:
+
+link:openapi/EDR_OpenAPI.json[JSON OpenAPI document]
+
+link:openapi/EDR_OpenAPI.yaml[YAML OpenAPI document]
 
 [[conformance-response-examples]]
 === Conformance Examples
