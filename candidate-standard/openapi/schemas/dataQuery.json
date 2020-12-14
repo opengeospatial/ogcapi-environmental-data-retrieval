@@ -1,0 +1,65 @@
+{
+    "type": "object",
+    "properties": {
+        "id": {
+            "type": "string"
+        },
+        "title": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        },
+        "links": {
+            "type": "array",
+            "items": {
+                "$ref": "link.json"
+            }
+        },
+        "outputFormats": {
+            "type": "array",
+            "items": {
+                "type": "string"
+            },
+            "example": [
+                "CoverageJSON",
+                "KML",
+                "GeoJSON",
+                "GRIB2",
+                "NetCDF3",
+                "NetCDF4"
+            ]
+        },
+        "defaultOutputFormat": {
+            "type": "string",
+            "example": "CoverageJSON"
+        }
+    },
+    "required": [
+        "id",
+        "links",
+        "outputFormats",
+        "defaultOutputFormat"
+    ],
+    "example": {
+        "id": "position",
+        "title": "Position Query",
+        "description": "Data at point location",
+        "links": [
+            {
+                "href": "https://www.example.com/edr/collections/srtm/position",
+                "rel": "data",
+                "title": "Position Query"
+            }
+        ],
+        "outputFormats": [
+            "CoverageJSON",
+            "KML",
+            "GeoJSON",
+            "GRIB2",
+            "NetCDF3",
+            "NetCDF4"
+        ],
+        "defaultOutputFormat": "CoverageJSON"
+    }
+}

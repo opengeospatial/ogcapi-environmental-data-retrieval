@@ -2,6 +2,7 @@ type: object
 required:
   - links
   - id
+  - dataQueries
 properties:
   links:
     type: array
@@ -74,15 +75,10 @@ properties:
     example:
       - km
       - miles
-  outputformat:
-    description: list of formats the results can be presented in
+  dataQueries:
     type: array
-    items: string
-    example:
-      - CoverageJSON
-      - GeoJSON
-      - IWXXM
-      - GRIB
+    items:
+      $ref: dataQuery.yaml      
   parameters:
     description: list of the data parameters available in the collection
     type: object
