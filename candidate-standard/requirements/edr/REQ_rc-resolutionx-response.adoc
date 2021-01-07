@@ -4,11 +4,11 @@
 |===
 ^|A | If the `resolutionx` parameter is provided, it denotes the number of positions to retrieve data for, across the width of the corridor path, including its minimum and maximum width coordinates.
 
-image::../../images/REQ_rc-resolutionx-a.png[interpolated corridor example]
+image::images/REQ_rc-resolutionx-a.png[interpolated corridor example]
 
 ^|B | A `resolutionx` value of 0 SHALL return all available data at the stored resolution between (and including) the minimum and maximum coordinates of the defined corridor.  
 
-image::../../images/REQ_rc-resolutionx-b.png[native resolution corridor example]
+image::images/REQ_rc-resolutionx-b.png[native resolution corridor example]
 
 ^|C | If `resolutionx` is not specified, the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.  
 |===
