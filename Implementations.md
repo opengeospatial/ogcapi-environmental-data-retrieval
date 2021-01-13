@@ -2,14 +2,156 @@
 
 ## Overview
 
-This page points to clients and servers implementing drafts of the OGC EDR API.
+This page points to servers and clients implementing the OGC API - Environmental Data Retrieval standard.
 
-To help promote OGC API standards and their implementations, implementors of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering on the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
+Modern web browsers, with Javascript enabled, can, of course, act as clients.
+
+To help promote OGC API standards and their implementations, implementers of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering at the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
+
+These are the implementations that were used for the development of the standard:
+1. Mark Burgoyne  http://labs.metoffice.gov.uk/edr2/
+1. Shane Mill     https://data-api.mdl.nws.noaa.gov/EDR-API 
+1. Igor Andruska  https://ogcie.iblsoft.com/edr
+1. Peng Yue       http://geos.whu.edu.cn/whu-edr-demo/ 
+1. Pete Trevelyan ESRI Image Server facade
+1. Dave Blodgett  Monitoring Networks [wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)
+
+Further implementations are planned or have been proposed for 2021: 
+1. Unidata OpenDAP/THREDDS enhancement
+1. NASA/JPL enhancement to Extensible Data Gateway Environment (EDGE)
+
+Several other organisations, such as the European Centre for Medium-range Weather Forecasts (ECWMF), British Antarctic Survey (BAS)
+and the British Oceanographic Data Centre (BODC) and others, are currently waiting until the full formal standard is published.
 
 ## Implementations
 
+### Met Office
 Servers:
+- [Example Server](#example-server)
 
+Clients:
+- [Example Client](#example-client)
+
+## Example Server
+
+Server description
+
+### Sample requests
+- tbd
+- tbd
+
+## Example Client
+
+Client description
+
+### Sample workflows
+
+- sample URLs
+- command line invocations
+- code snippets
+
+### US National Weather Service
+Servers:
+- [Example Server](#example-server)
+
+Clients:
+- [Example Client](#example-client)
+
+## Example Server
+
+Server description
+
+### Sample requests
+- tbd
+- tbd
+
+## Example Client
+
+Client description
+
+### Sample workflows
+
+- sample URLs
+- command line invocations
+- code snippets
+
+### IBL
+Servers:
+- [Example Server](#example-server)
+
+Clients:
+- [Example Client](#example-client)
+
+## Example Server
+
+Server description
+
+### Sample requests
+- tbd
+- tbd
+
+## Example Client
+
+Client description
+
+### Sample workflows
+
+- sample URLs
+- command line invocations
+- code snippets
+
+### Wuhan University
+Servers:
+- [Example Server](#example-server)
+
+Clients:
+- [Example Client](#example-client)
+
+## Example Server
+
+Server description
+
+### Sample requests
+- tbd
+- tbd
+
+## Example Client
+
+Client description
+
+### Sample workflows
+
+- sample URLs
+- command line invocations
+- code snippets
+
+### EDR API facade for ESRI Image Server Proof of Concept
+Servers:
+- [Example Server](#example-server)
+
+Clients:
+- [Example Client](#example-client)
+
+## Example Server
+
+Server description
+
+### Sample requests
+- tbd
+- tbd
+
+## Example Client
+
+Client description
+
+### Sample workflows
+
+- sample URLs
+- command line invocations
+- code snippets
+
+### US Geological Survey Mock Up
+Servers:
 - [Example Server](#example-server)
 
 Clients:
