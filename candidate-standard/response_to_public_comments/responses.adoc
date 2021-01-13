@@ -1,8 +1,11 @@
 == Detailed Responses to Comments
 
 ## Comment 1
+
 Section number: General
+
 Criticality: Major
+
 Disposition: Addressed in current version
 
 ### Comment
@@ -18,8 +21,11 @@ The EDR API does not introduce any new type of data/resource. The EDR API is "da
 Environmental Data Resource is loosely defined in Section 9, but we will not define the term more precisely as the API can be used with any data that has consistent space-time coordinates and may be non-environmental data.
 
 ## Comment 2
+
 Section number: General
+
 Criticality: Major
+
 Disposition: Addressed in current version
 
 ### Comment
@@ -33,8 +39,11 @@ Server side implementers of EDR API are free to choose any payload as appropriat
 CoverageJSON is a work item in the newly re-chartered WCS SWG for potential standardisation and conceptual consistency with existing coverage encodings.
 
 ## Comment 3
+
 Section number: General
+
 Criticality: Major
+
 Disposition: Addressed in current version
 
 ### Comment
@@ -46,8 +55,11 @@ The EDR API , as 'data model agnostic', does not mandate any response payload fo
 An example of equivalent EDR API and O&M invocations will be added as an Annex. This should reveal how EDR API succeeds in hiding complexity from the end user or client, yet detailed provenance and use metadata can still be provided.
 
 ## Comment 4
+
 Section number: General
+
 Criticality: Major
+
 Disposition: Addressed in current version
 
 ### Comment
