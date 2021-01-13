@@ -9,12 +9,18 @@ Modern web browsers can, of course, act as clients.
 To help promote OGC API standards and their implementations, implementers of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering at the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
 
 These are the implementations that were used for the development of the standard:
-1. [UK Met Office, Mark Burgoyne](http://labs.metoffice.gov.uk/edr2/)              [Further details](#uk-met-office)
-1. [US NWS, Shane Mill](https://data-api.mdl.nws.noaa.gov/EDR-API)       [Further details](#us-national-weather-service)
-1. [IBL, Igor Andruska](https://ogcie.iblsoft.com/edr)      [Further details](#ibl)
-1. [Wuhan University, Peng Yue](http://geos.whu.edu.cn/whu-edr-demo/)       [Further details](#wuhan-university)
-1. ESRI Image Server facade, Pete Trevelyan      [Further details](#esri-image-server-facade)
-1. [USGS, Dave Blodgett, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      [Further details](#us-geological-survey)
+1. [UK Met Office](http://labs.metoffice.gov.uk/edr2/)              
+     [Further details](#uk-met-office) **This instance has been compromised. It is being re-built more securely. (2021-01-12)**
+1. [US NWS](https://data-api.mdl.nws.noaa.gov/EDR-API)       
+     [Further details](#us-national-weather-service)
+1. [IBL](https://ogcie.iblsoft.com/edr)      
+     [Further details](#ibl)
+1. [Wuhan University](http://geos.whu.edu.cn/whu-edr-demo/)       
+     [Further details](#wuhan-university)
+1. ESRI Image Server facade, Pete Trevelyan      
+     [Further details](#esri-image-server-facade)
+1. [USGS, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      
+     [Further details](#us-geological-survey)
 
 Further implementations are planned or have been proposed for 2021: 
 1. Unidata OpenDAP/THREDDS enhancement
