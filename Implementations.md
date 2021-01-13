@@ -4,7 +4,7 @@
 
 This page points to servers and clients implementing the OGC API - Environmental Data Retrieval standard.
 
-Modern web browsers, with Javascript enabled, can, of course, act as clients.
+Modern web browsers can, of course, act as clients.
 
 To help promote OGC API standards and their implementations, implementers of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering at the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
 
