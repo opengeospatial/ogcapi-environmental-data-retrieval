@@ -28,7 +28,7 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 ### UK Met Office
 
 Servers:
-- [Example Server](#http://labs.etoffice.gov.uk/edr2/)
+- [Example Server](http://labs.etoffice.gov.uk/edr2/)
 
 Clients:
 - [Example Client](#example-client)
