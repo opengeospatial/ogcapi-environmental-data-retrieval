@@ -102,7 +102,7 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-Server description: implemented using `pygeoapi` to provide a visual interface client. Supports point, area and trajectory queries
+Server description: implemented using `pygeoapi` to provide a visual interface client. Supports point, area, trajectory and corridor queries
 
 Client description:
 
@@ -118,7 +118,7 @@ Client description:
 
 ### ESRI Image Server facade
 Servers:
-- [Example Server](#example-server) Proof -of-Concept developed by Pete trevelyan and ESRI developers.
+- [Example Server](#example-server) Proof -of-Concept developed by Pete Trevelyan and ESRI developers.
 
 Clients:
 - [Example Client](#example-client)
