@@ -13,7 +13,7 @@ These are the implementations that were used for the development of the standard
 1. [US NWS, Shane Mill](https://data-api.mdl.nws.noaa.gov/EDR-API)       [Further details](#us-national-weather-service)
 1. [IBL, Igor Andruska](https://ogcie.iblsoft.com/edr)      [Further details](#ibl)
 1. [Wuhan University, Peng Yue](http://geos.whu.edu.cn/whu-edr-demo/)       [Further details](#wuhan-university)
-1. Pete Trevelyan, ESRI Image Server facade      [Further details](#esri-image-server-facade)
+1. ESRI Image Server facade, Pete Trevelyan      [Further details](#esri-image-server-facade)
 1. [USGS, Dave Blodgett, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      [Further details](#us-geological-survey)
 
 Further implementations are planned or have been proposed for 2021: 
@@ -28,7 +28,7 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 ### UK Met Office
 
 Servers:
-- [Example Server](#example-server)
+- [Example Server](#http://labs.etoffice.gov.uk/edr2/)
 
 Clients:
 - [Example Client](#example-client)
