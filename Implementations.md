@@ -1,4 +1,4 @@
-# Implementations
+# Implementations of OGC API - EDR
 
 ## Overview
 
