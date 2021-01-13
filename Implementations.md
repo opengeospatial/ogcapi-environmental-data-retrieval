@@ -9,12 +9,12 @@ Modern web browsers can, of course, act as clients.
 To help promote OGC API standards and their implementations, implementers of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering at the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
 
 These are the implementations that were used for the development of the standard:
-1. [UK Met Office, Mark Burgoyne](http://labs.metoffice.gov.uk/edr2/)              [Further details](#implementation-1)
-1. [US NWS, Shane Mill](https://data-api.mdl.nws.noaa.gov/EDR-API)       [Further details](#implementation2)
-1. [IBL, Igor Andruska](https://ogcie.iblsoft.com/edr)      [Further details](#implementation3)
-1. [Wuhan University, Peng Yue](http://geos.whu.edu.cn/whu-edr-demo/)       [Further details](#implementation4)
-1. Pete Trevelyan, ESRI Image Server facade      [Further details](#implementation5)
-1. [USGS, Dave Blodgett, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      [Further details](#implementation6)
+1. [UK Met Office, Mark Burgoyne](http://labs.metoffice.gov.uk/edr2/)              [Further details](#met-office)
+1. [US NWS, Shane Mill](https://data-api.mdl.nws.noaa.gov/EDR-API)       [Further details](#nws)
+1. [IBL, Igor Andruska](https://ogcie.iblsoft.com/edr)      [Further details](#ibl)
+1. [Wuhan University, Peng Yue](http://geos.whu.edu.cn/whu-edr-demo/)       [Further details](#whu)
+1. Pete Trevelyan, ESRI Image Server facade      [Further details](#esri)
+1. [USGS, Dave Blodgett, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      [Further details](#usgs)
 
 Further implementations are planned or have been proposed for 2021: 
 1. Unidata OpenDAP/THREDDS enhancement
@@ -25,7 +25,7 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 
 ## Implementations
 
-### implementation 1
+### met office
 
 Servers:
 - [Example Server](#example-server)
@@ -51,7 +51,7 @@ Client description
 - command line invocations
 - code snippets
 
-### US National Weather Service
+### nws
 Servers:
 - [Example Server](#example-server)
 
@@ -76,7 +76,7 @@ Client description
 - command line invocations
 - code snippets
 
-### IBL
+### ibl
 Servers:
 - [Example Server](#example-server)
 
@@ -101,7 +101,7 @@ Client description
 - command line invocations
 - code snippets
 
-### Wuhan University
+### whu
 Servers:
 - [Example Server](#example-server)
 
@@ -126,7 +126,7 @@ Client description
 - command line invocations
 - code snippets
 
-### EDR API facade for ESRI Image Server Proof of Concept
+### esri
 Servers:
 - [Example Server](#example-server)
 
@@ -151,7 +151,7 @@ Client description
 - command line invocations
 - code snippets
 
-### US Geological Survey Mock Up
+### usgs
 Servers:
 - [Example Server](#example-server)
 
