@@ -39,17 +39,14 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-## Example Server
+ Server description: implemented using `pygeoapi` to provide a visual interface client. 
+ Supports point, area and trajectory queries
 
-Server description
+Client description:
 
 ### Sample requests
 - tbd
 - tbd
-
-## Example Client
-
-Client description
 
 ### Sample workflows
 
@@ -64,17 +61,14 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-## Example Server
-
-Server description
+Server description: implemented using `pygeoapi` to provide a visual interface client. 
+ Supports point, area and trajectory queries
+ 
+Client description:
 
 ### Sample requests
 - tbd
 - tbd
-
-## Example Client
-
-Client description
 
 ### Sample workflows
 
@@ -89,17 +83,11 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-## Example Server
-
-Server description
+Server description: Supports point, area and trajectory queries.
 
 ### Sample requests
 - tbd
 - tbd
-
-## Example Client
-
-Client description
 
 ### Sample workflows
 
@@ -114,17 +102,13 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-## Example Server
+Server description: implemented using `pygeoapi` to provide a visual interface client. Supports point, area and trajectory queries
 
-Server description
+Client description:
 
 ### Sample requests
 - tbd
 - tbd
-
-## Example Client
-
-Client description
 
 ### Sample workflows
 
@@ -139,17 +123,13 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-## Example Server
+Server description: 
 
-Server description
+Client description:
 
 ### Sample requests
 - tbd
 - tbd
-
-## Example Client
-
-Client description
 
 ### Sample workflows
 
@@ -164,20 +144,18 @@ Servers:
 Clients:
 - [Example Client](#example-client)
 
-## Example Server
+Server description:
 
-Server description
+Client description:
 
 ### Sample requests
 - tbd
 - tbd
-
-## Example Client
-
-Client description
 
 ### Sample workflows
 
 - sample URLs
 - command line invocations
 - code snippets
+
+---
