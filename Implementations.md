@@ -9,7 +9,7 @@ Modern web browsers can, of course, act as clients.
 To help promote OGC API standards and their implementations, implementers of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering at the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
 
 These are the implementations that were used for the development of the standard:
-1. [UK Met Office, Mark Burgoyne](http://labs.metoffice.gov.uk/edr2/)              [Further details](#Implementation1)
+1. [UK Met Office, Mark Burgoyne](http://labs.metoffice.gov.uk/edr2/)              [Further details](#implementation1)
 1. [US NWS, Shane Mill](https://data-api.mdl.nws.noaa.gov/EDR-API)       Further details
 1. [IBL, Igor Andruska](https://ogcie.iblsoft.com/edr)      Further details
 1. [Wuhan University, Peng Yue](http://geos.whu.edu.cn/whu-edr-demo/)       Further details
@@ -25,7 +25,7 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 
 ## Implementations
 
-{# Implementation1}
+{#implementation1}
 ### Met Office 
 Servers:
 - [Example Server](#example-server)
