@@ -1,59 +1,59 @@
 == Detailed Responses to Comments
 
-Comment 1
+## Comment 1
 Section number: General
 Criticality: Major
 Disposition: Addressed in current version
 
-Comment
+### Comment
 Here have a new proposal for something new which is "Environmental Data resource is a collection of spatio-temporal data", according to the Scope, which can be sampled using OGC-API Environmental Data Retrieval query patterns.
 
 Apparently, such EDR may be Observations (though this is not claimed by the document), or Coverages or time-series. Is there (really) a real value in defining a new data type rather than using existing ones, for Environmental data?
 
 If there is really a new type of data / resource to be handled by the OGC standards, it is recommended to add the term "Environmental Data resource" to the Terminology section.
 
-Response
+### Response
 The EDR API does not introduce any new type of data/resource. The EDR API is "data model agnostic". Observations, coverages and time series are all possibilities to be supported.
 
 Environmental Data Resource is loosely defined in Section 9, but we will not define the term more precisely as the API can be used with any data that has consistent space-time coordinates and may be non-environmental data.
 
-Comment 2
+## Comment 2
 Section number: General
 Criticality: Major
 Disposition: Addressed in current version
 
-Comment
+### Comment
 The choice of CoverageJSON (which is an Engineering specification - dated 2016 - submitted to OGC but never voted) is to be questionned and justified, at least in OGC context. By the way, it is published under W3C with the OGC label (and authority - at least apparently) as document OGC 16-145 which has just been submitted to pending. Therefore clarification should be done whether it is to be considered as an OGC relevant standard, or not. There is no objection in principle to CoverageJSON, but the coherence in OGC with OGC API-Coverage is to be assessed. And if CoverageJSON is an encoding of interest for OGC standards, it should be in coordination with Coverage works in the OGC. Otherwise, there is a risk of confusion and lack of interoperability in Coverage encodings in the OGC standards ecosystem (at least for Coverages).
 
-Response
+### Response
 As the EDR API is 'data model agnostic', coverage encodings can be supported if the implementer desires. CoverageJSON is not mandated, but is recommended as an example of existing implementations that have been demonstrated to be performant.
 
 Server side implementers of EDR API are free to choose any payload as appropriate, such as O&M SOS/SWE records or CIS JSON.
 
 CoverageJSON is a work item in the newly re-chartered WCS SWG for potential standardisation and conceptual consistency with existing coverage encodings.
 
-Comment 3
+## Comment 3
 Section number: General
 Criticality: Major
 Disposition: Addressed in current version
 
-Comment
+### Comment
 The term Observation is used a number of times in this document, and analogy with SOS and Feature of Interest is considered in the Introduction. Therefore, why EDR API seems to be agnostic of O&M for its payload, at the time O&M seems to schedule both XML and JSON encoding? This might be a source of discrepancies when O&M-JSON is made available.
 
-Response
+### Response
 The EDR API , as 'data model agnostic', does not mandate any response payload format, though it recommends CoverageJSON as an existing practice that has been demonstrated to be effective and performant. Server side implementors are free to offer O&M compatible payloads.
 
 An example of equivalent EDR API and O&M invocations will be added as an Annex. This should reveal how EDR API succeeds in hiding complexity from the end user or client, yet detailed provenance and use metadata can still be provided.
 
-Comment 4
+## Comment 4
 Section number: General
 Criticality: Major
 Disposition: Addressed in current version
 
-Comment
+### Comment
 Coverages (which include timeseries, BTW) in OGC are handled by the Coverages WGs, which however have not been involved sufficiently in the development. Maybe as a consequence, it contains incompatibilities as well as substantial duplication of coverage functionality, albeit in an incompatible manner. Re incompatibility, the specification uses CoverageJSON; this has been investigated by the Coverages group and found strongly incompatible with OGC/ISO coverages. Rather, therefore, the JSON encoding of the official OGC/ISO Coverage Implementation Schema (CIS) should have been chosen which ensures, at the same time, coherence of encodings across JSON, RDF, and common binary formats. In the communities, this specification will lead to confusion and isolated, incompatible islands.
 
-Response
+### Response
 The EDR API does not mandate any payload encodings, so that developers are free to offer any of the existing WCS standardized encodings if they wish. There is at least one production-quality implementation of the EDR API that utilizes a WCS server 'under the covers', and there are implementations that offer WCS supported payloads such as NetCDF and GRIB2.
 
 CoverageJSON is recommended, but not mandated, as it has been proven with several implementations to be effective and scalable to large numbers of users and very large amounts of data using simple clients.
