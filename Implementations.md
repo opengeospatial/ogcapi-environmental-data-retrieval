@@ -17,7 +17,7 @@ These are the implementations that were used for the development of the standard
      [Further details](#ibl)
 1. [Wuhan University](http://geos.whu.edu.cn/whu-edr-demo/)       
      [Further details](#wuhan-university)
-1. ESRI Image Server facade, Pete Trevelyan      
+1. ESRI Image Server facade      
      [Further details](#esri-image-server-facade)
 1. [USGS, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      
      [Further details](#us-geological-survey)
@@ -34,7 +34,7 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 ### UK Met Office
 
 Servers:
-- [Example Server](http://labs.metoffice.gov.uk/edr2/)
+- [Example Server](http://labs.metoffice.gov.uk/edr2/) developed by Mark Burgoyne.
 
 Clients:
 - [Example Client](#example-client)
@@ -59,7 +59,7 @@ Client description
 
 ### US National Weather Service
 Servers:
-- [Example Server](#example-server)
+- [Example Server](#example-server) developed by Shane Mills
 
 Clients:
 - [Example Client](#example-client)
@@ -84,7 +84,7 @@ Client description
 
 ### IBL
 Servers:
-- [Example Server](#example-server)
+- [Example Server](#example-server) developed by Igor Andruska, Pavol Navotny and colleagues
 
 Clients:
 - [Example Client](#example-client)
@@ -109,7 +109,7 @@ Client description
 
 ### Wuhan University
 Servers:
-- [Example Server](#example-server)
+- [Example Server](#example-server) developed by 博屹 上官 (Boyi Shangguan), Lei Hu, 高 凡 (Gao Fan) under 乐鹏 (Prof. Yue Peng).
 
 Clients:
 - [Example Client](#example-client)
@@ -134,7 +134,7 @@ Client description
 
 ### ESRI Image Server facade
 Servers:
-- [Example Server](#example-server)
+- [Example Server](#example-server) Proof -of-Concept developed by Pete trevelyan and ESRI developers.
 
 Clients:
 - [Example Client](#example-client)
@@ -159,7 +159,7 @@ Client description
 
 ### US Geological Survey
 Servers:
-- [Example Server](#example-server)
+- [Example Server](#example-server) Mock-up to demonstrate usage and compatibility of EDR API and Features API 
 
 Clients:
 - [Example Client](#example-client)
