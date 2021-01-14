@@ -27,7 +27,7 @@ Further implementations are planned or have been proposed for 2021:
 1. NASA/JPL enhancement to Extensible Data Gateway Environment (EDGE)
 
 Several other organisations, such as the European Centre for Medium-range Weather Forecasts (ECWMF), British Antarctic Survey (BAS)
-and the British Oceanographic Data Centre (BODC) and others, are currently waiting until the full formal standard is published.
+and the British Oceanographic Data Centre (BODC) and others, are currently waiting until the full formal standard is published before committing resources.
 
 ## Implementations
 
