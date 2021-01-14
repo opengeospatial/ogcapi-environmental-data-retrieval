@@ -56,7 +56,7 @@ Client description:
 
 ### US National Weather Service
 Servers:
-- [Example Server](#example-server) developed by Shane Mills
+- [Example Server](#example-server) developed by Shane Mill
 
 Clients:
 - [Example Client](#example-client)
@@ -97,7 +97,7 @@ Server description: Supports point, area and trajectory queries.
 
 ### Wuhan University
 Servers:
-- [Example Server](#example-server) developed by 博屹 上官 (Boyi Shangguan), 胡磊 (Lei Hu), 高 凡 (Gao Fan) under 乐鹏 教授(Prof. Yue Peng).
+- [Example Server](#example-server) developed by 博屹 上官 (Boyi Shangguan), 胡 磊 (Hu Lei), 高 凡 (Fan Gao) under 乐 鹏 教授 (Prof. Yue Peng).
 
 Clients:
 - [Example Client](#example-client)
