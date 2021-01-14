@@ -8,7 +8,7 @@ The Corridor query returns data along and around the path defined by the `coords
 
 "Intersects" means that the geospatial shape specified by the parameter `coords`, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
 
-The corridor query supports the Linestring Well Known Text (WKT) geometry type, the corridor query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and a time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  The Linestring described by the <<req_edr_coords-definition, coords>> parameter defines the center point of the corridor with the <<req_edr_corridorHeight-definition,corridorHeight>> and <<req_edr_corridorWidth-definition,corridorWidth>> query parameters defining the depth and breadth of the corridor. 
+The corridor query supports the Linestring Well Known Text (WKT) geometry type, the corridor query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and a time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  The Linestring described by the <<req_edr_coords-definition, coords>> parameter defines the center point of the corridor with the <<req_edr_corridor-height-definition,corridor-height>> and <<req_edr_corridor-width-definition,corridor-width>> query parameters defining the depth and breadth of the corridor. 
 
 A 2D corridor, on the surface of earth with no time or height dimensions: 
     coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)
@@ -75,39 +75,39 @@ z=850
 
 ===== <<time>>
 
-===== <<req_edr_resolutionx-definition,resolutionx>>
+===== <<req_edr_resolution-x-definition,resolution-x>>
 .A interpolate corridor values along the width  
 ===========
 Return 10 values across the defined corridor width
-`resolutionx=10`
+`resolution-x=10`
 ===========
 
 .A get values across the width of the corridor at stored resolution  
 ===========
 Return values at the stored resolution
-`resolutionx=0`
+`resolution-x=0`
 ===========
 
 
-===== <<req_edr_resolutionz-definition,resolutionz>>
+===== <<req_edr_resolution-z-definition,resolution-z>>
 .A interpolate corridor values over the height  
 ===========
 Return 8 values over the defined corridor height
-`resolutionz=8`
+`resolution-z=8`
 ===========
 
 .A get values over the height of the corridor at stored resolution  
 ===========
 Return values at the stored resolution
-`resolutionz=0`
+`resolution-z=0`
 ===========
 
 
-===== <<req_edr_corridorHeight-definition,corridorHeight>>
+===== <<req_edr_corridor-height-definition,corridor-height>>
 
-===== <<req_edr_corridorWidth-definition,corridorWidth>>
+===== <<req_edr_corridor-width-definition,corridor-width>>
 
-===== <<parametername>>
+===== <<parameter-name>>
 
 ===== <<crs>>
 
