@@ -1,0 +1,19 @@
+[[ats_edr_rc-max-z-definition]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-max-z-definition*
+^|Test Purpose |Validate that the minimum vertical level query parameters are constructed correctly.
+^|Requirement |<<req_edr_rc-max-z-definition,/req/edr/rc-max-z-definition>>
+^|Test Method |Verify that the `max-z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: max-z
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

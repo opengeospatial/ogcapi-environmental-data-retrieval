@@ -1,0 +1,9 @@
+{
+  "name": "corridor-width",
+  "in": "query",
+  "description": "width of the corridor and the units of the width value\n\nThe width value represents the whole width of the corridor where\nthe trajectory supplied in the `coords` query parameter is the centre\npoint of the corridor\n\n`corridor-width={width}/{units}`\n\ne.g.  corridor-width=100/m\n\nWould be a request for a corridor 100m wide with the coords parameter values being the centre point of the requested corridor, \nthe request would be for data values 50m either side of the trajectory coordinates defined in the coords parameter. \n\nThe width units supported by the collection will be provided in the API metadata responses\n",
+  "required": true,
+  "schema": {
+    "type": "string"
+  }
+}

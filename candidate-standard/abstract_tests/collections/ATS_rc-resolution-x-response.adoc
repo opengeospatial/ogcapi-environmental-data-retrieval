@@ -1,0 +1,9 @@
+[[ats_collections_rc-resolution-x-response]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-resolution-x-response*
+^|Test Purpose |Validate that the resolution-x query parameters are processed correctly.
+^|Requirement |<<req_collections_rc-resolution-x-response,/req/edr/rc-resolution-x-response>>
+^|Test Method |. Verify that the data returned by the query contains the same number of values on the x axis as that requested in the `resolution-x` parameter
+. Validate that the `resolution-x` parameter complies with the syntax described in <<req_collections_rc-resolution-x-response,/req/edr/REQ_rc-resolution-x-response>>.
+|===

@@ -44,9 +44,9 @@ retrieve data for Greenwich, London
 
 The units supported by the collection will be listed in the collections end point
 
-<<req_edr_withinUnits-definition>>
+<<req_edr_within-units-definition>>
 
-<<req_edr_withinUnits-response>>
+<<req_edr_within-units-response>>
 
 
 .Define a 20Km radius
@@ -93,7 +93,7 @@ z=ALL
 
 ===== <<time>>
 
-===== <<parametername>>
+===== <<parameter-name>>
 
 ===== <<crs>>
 

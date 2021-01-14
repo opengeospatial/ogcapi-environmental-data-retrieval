@@ -1,0 +1,17 @@
+[[req_edr_resolution-y-definition]]
+==== *Requirement {counter:req-id}: /req/edr/resolution-y-definition* Parameter resolution-y definition
+[width="90%",cols="2,6a"]
+|===
+^|A |Each resource collection operation MAY support a parameter `resolution-y` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: resolution-y
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

@@ -1,0 +1,17 @@
+[[req_edr_min-z-definition]]
+==== *Requirement {counter:req-id}: /req/edr/min-z-definition* Parameter minx definition
+[width="90%",cols="2,6a"]
+|===
+^|A |Each resource collection operation MUST support a parameter `min-z`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: min-z
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

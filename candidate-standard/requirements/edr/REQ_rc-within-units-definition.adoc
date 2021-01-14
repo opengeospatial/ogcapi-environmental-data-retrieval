@@ -1,0 +1,17 @@
+[[req_edr_within-units-definition]]
+==== *Requirement {counter:req-id}: /req/edr/within-units-definition* Parameter within-units definition
+[width="90%",cols="2,6a"]
+|===
+^|A |Each resource collection operation MAY support a parameter `withinunits`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|B | A withinunits value MUST be one of the values defined in the instance metadata:
+[source,YAML]
+----
+name: withinunits
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

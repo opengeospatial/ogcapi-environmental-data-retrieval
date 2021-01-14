@@ -1,12 +1,12 @@
 [[req_edr_parameters-definition]]
-==== *Requirement {counter:req-id}: /req/edr/parameters-definition* Parameter parametername definition
+==== *Requirement {counter:req-id}: /req/edr/parameters-definition* Parameter parameter-name definition
 [width="90%",cols="2,6a"]
 |===
-^|A |Each resource collection operation SHALL support a parameter `parametername`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation SHALL support a parameter `parameter-name` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: parametername
+name: parameter-name
 in: query
 required: true
 explode: false

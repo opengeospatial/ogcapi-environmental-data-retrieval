@@ -113,8 +113,8 @@ March 18, 2018, 12:31:12 UTC or earlier:
 
 A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml[datetime.yaml].
 
-[[parametername]]
-===== Parameter parametername
+[[parameter-name]]
+===== Parameter parameter-name
 
 <<req_edr_parameters-definition>>
 
@@ -124,14 +124,14 @@ A template for the definition of the parameter in YAML according to OpenAPI 3.0 
 =================
 Only return values for the Maximum_temperature
 
-`parametername=Maximum_temperature`
+`parameter-name=Maximum_temperature`
 =================
 
 .Return multiple parameters
 =================
 Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 
-`parametername=Maximum_temperature,Minimum_temperature,Total_precipitation`
+`parameter-name=Maximum_temperature,Minimum_temperature,Total_precipitation`
 =================
 
 If a requested parameter doesn't exist in the <<collection-definition,collection>> the data for those parameters that do exist should be returned.
@@ -140,18 +140,18 @@ If none of the requested parameters exist in the <<collection-definition,collect
 [[crs]]
 ===== Parameter crs
 
-<<req_edr_outputCRS-definition>>
+<<req_edr_crs-definition>>
 
-<<req_edr_outputCRS-response>>
+<<req_edr_crs-response>>
 
 The value of the `crs` query parameter will be one of the name values described in the <<collection-definition,collection>> metadata for supported coordinate reference system transformations. 
 
 [[outputformat]]
 ===== Parameter f
 
-<<req_edr_outputFormat-definition>>
+<<req_edr_f-definition>>
 
-<<req_edr_outputFormat-response>>
+<<req_edr_f-response>>
 
 .Return data as coverageJSON
 =================
