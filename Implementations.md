@@ -97,24 +97,46 @@ Server description: Supports point, area and trajectory queries.
 
 ### Wuhan University
 Servers:
-- [Example Server](#example-server) developed by 博屹 上官 (Boyi Shangguan), 胡 磊 (Hu Lei), 高 凡 (Fan Gao) under 乐 鹏 教授 (Prof. Yue Peng).
+- [Example Server](http://geos.whu.edu.cn/whu-edr-demo/) developed by 上官博屹 (Boyi Shangguan), 胡磊 (Lei Hu), 高凡 (Fan Gao) under 乐鹏 教授 (Prof. Peng Yue).
 
 Clients:
-- [Example Client](#example-client)
+- [Example Client](http://geos.whu.edu.cn:8081/monitor-forecast-edr/) developed by 上官博屹 (Boyi Shangguan), 胡磊 (Lei Hu), 高凡 (Fan Gao) under 乐鹏 教授 (Prof. Peng Yue).
 
-Server description: implemented using `pygeoapi` to provide a visual interface client. Supports point, area, trajectory and corridor queries
+Server description: implemented using `pygeoapi` to provide a visual interface client. Supports position, area, trajectory and corridor queries.
 
-Client description:
+Client description: a web application for flood disaster decision support, implemented with EDR API to query related data such as population, schools and villages after obtaining a typhoon trajectory/corridor or flood inundation area.
 
 ### Sample requests
-- tbd
-- tbd
+- position query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/position?coords=POINT(109.858046 19.230770)&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
+- area query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/area?coords=POLYGON((109.795906 19.259092,109.885383 19.264480,109.879889 19.168519,109.795906 19.259092))&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
+- trajectory query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/trajectory?coords=LINESTRING(109.298000 19.139979,109.589138 19.321511,109.891262 19.513198,110.198879 19.761534)&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
+- corridor query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/corridor?coords=LINESTRING(109.243069 18.968637,109.429836 19.150357,109.726467 19.311143,110.138454 19.476950)&corridor-width=1000&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
 
 ### Sample workflows
 
 - sample URLs
 - command line invocations
 - code snippets
+```
+// Use Promise to send HTTP request, and analyse results together
+Promise.all([
+    $.ajax({
+        url: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/area?coords=${rangeWkt}&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`,
+        dataType: 'json'
+    }),
+]).then(function (result) {
+    let sum = 0;
+    result.forEach(value => {
+        if (value.ranges !== undefined && value.ranges.population.values !== null) {
+            value.ranges.population.values.forEach(value => {
+                if (value !== null) {
+                    sum += value;
+                }
+            })
+        }
+    });
+}
+```
 
 ### ESRI Image Server facade
 Servers:
