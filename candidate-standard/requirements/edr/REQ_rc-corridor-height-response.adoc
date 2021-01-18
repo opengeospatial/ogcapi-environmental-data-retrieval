@@ -2,12 +2,12 @@
 ==== *Requirement {counter:req-id}: /req/edr/corridor-height-response* Parameter corridor-height response
 [width="90%",cols="2,6a"]
 |===
-^|A|If the `corridorz` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed intervals.
-^|B |The `corridorz` information is a the corridor height and the corridor units. 
+^|A|If the `corridor-height` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed intervals.
+^|B |The `corridor-height` information is a the corridor height and the corridor units. 
 
 [source,java]
 ----
-corridorz = height "/" units
+corridor-height = height "/" units
 ---- 
 ^|C |The  height of corridor parameter is the total height of the required corridor.  
 ^|D |The coordinates of the `coords` parameter define the centre point of the corridor. 

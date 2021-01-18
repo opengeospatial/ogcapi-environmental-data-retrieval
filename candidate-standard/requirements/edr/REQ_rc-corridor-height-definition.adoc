@@ -2,11 +2,11 @@
 ==== *Requirement {counter:req-id}: /req/edr/corridor-height-definition* Parameter corridor-height definition
 [width="90%",cols="2,6a"]
 |===
-^|A |Each resource collection operation SHALL support a parameter `corridorz`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+^|A |Each resource collection operation SHALL support a parameter `corridor-height` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: corridorz
+name: corridor-height
 in: query
 required: true
 schema:
