@@ -16,7 +16,6 @@ The `Core` Requirements Class is presented in five sections:
 
 . <<api-platform-section,API Platform>>: a set of common capabilities
 . <<rc_collection-section,Collection Access>>: operations for accessing <<collection-definition,collections>> of environmental data.
-. <<environmental-resources-section,Environmental Resources>>: operations for accessing environmental data resources
 . <<query-resources-section,Query Resources>>: operations for accessing environmental data resources through queries
 . <<parameters-section,Parameters>>: parameters for use in the API-EDR operations.
 . <<general-section,General>>: general principles for use with this standard.
@@ -48,12 +47,9 @@ API-Common defines a set of common capabilities which are applicable to any OGC 
 
 The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API-Common already requires some common links. Those links are sufficient for this standard.
 
-[reftext='{table-caption} {counter:table-num}']
 .Dependencies
-[width="90%"]
-|====
-|http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|====
+
+http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 
 ===== Operation
 
@@ -92,12 +88,9 @@ The requirements for handling unsuccessful requests are provided in <<http-respo
 
 Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
 
-[reftext='{table-caption} {counter:table-num}']
 .Dependencies
-[width="90%"]
-|====
-|http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|====
+
+http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 
 ===== Operation
 
@@ -121,12 +114,8 @@ The requirements for handling unsuccessful requests are provided in <<http-respo
 
 To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API server, the API has to declare the conformance classes it claims to have implemented.
 
-[reftext='{table-caption} {counter:table-num}']
 .Dependencies
-[width="90%"]
-|====
-|http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|====
+http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 
 ===== Operation
 

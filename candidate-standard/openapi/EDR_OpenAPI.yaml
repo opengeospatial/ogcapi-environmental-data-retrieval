@@ -1,4 +1,4 @@
-openapi: 3.0.2
+openapi: 3.0.3
 info:
   title: Environmental Data Retrieval API's
   description: Example of Candidate Environmental Data Retrieval API OpenAPI docs
@@ -25,7 +25,7 @@ paths:
               schema:
                 type: string
       parameters:
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
   /conformance:
     get:
       tags:
@@ -44,7 +44,7 @@ paths:
               schema:
                 type: string
       parameters:
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
   /groups:
     get:
       tags:
@@ -71,7 +71,7 @@ paths:
               schema:
                 type: string
       parameters:
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
   /groups/{groupId}:
     get:
       tags:
@@ -99,7 +99,7 @@ paths:
                 type: string
     parameters:
       - $ref: parameters/groupId.yaml
-      - $ref: parameters/outputFormat.yaml
+      - $ref: parameters/f.yaml
   /collections:
     get:
       tags:
@@ -128,7 +128,7 @@ paths:
     parameters:
       - $ref: parameters/bbox.yaml
       - $ref: parameters/datetime.yaml
-      - $ref: parameters/outputFormat.yaml
+      - $ref: parameters/f.yaml
   /collections/{collectionId}:
     get:
       tags:
@@ -157,7 +157,7 @@ paths:
                 type: string
     parameters:
       - $ref: parameters/collectionId.yaml
-      - $ref: parameters/outputFormat.yaml
+      - $ref: parameters/f.yaml
   /collections/{collectionId}/position:
     get:
       tags:
@@ -172,7 +172,7 @@ paths:
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameterName.yaml        
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml        
+        - $ref: parameters/f.yaml        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -230,12 +230,12 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/radiusCoords.yaml
         - $ref: parameters/within.yaml
-        - $ref: parameters/withinUnits.yaml        
+        - $ref: parameters/within-units.yaml        
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameterName.yaml
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml            
+        - $ref: parameters/f.yaml            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -296,9 +296,9 @@ paths:
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameterName.yaml
         - $ref: parameters/crs.yaml
-        - $ref: parameters/resolutionX.yaml
-        - $ref: parameters/resolutionY.yaml
-        - $ref: parameters/outputFormat.yaml        
+        - $ref: parameters/resolution-x.yaml
+        - $ref: parameters/resolution-y.yaml
+        - $ref: parameters/f.yaml        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -355,15 +355,15 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/cubeCoords.yaml
-        - $ref: parameters/minZ.yaml
-        - $ref: parameters/maxZ.yaml
+        - $ref: parameters/min-z.yaml
+        - $ref: parameters/max-z.yaml
         - $ref: parameters/datetime.yaml        
         - $ref: parameters/parameterName.yaml
-        - $ref: parameters/resolutionX.yaml            
-        - $ref: parameters/resolutionY.yaml            
-        - $ref: parameters/resolutionZ.yaml            
+        - $ref: parameters/resolution-x.yaml            
+        - $ref: parameters/resolution-y.yaml            
+        - $ref: parameters/resolution-z.yaml            
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml            
+        - $ref: parameters/f.yaml            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -424,7 +424,7 @@ paths:
         - $ref: parameters/datetime.yaml      
         - $ref: parameters/parameterName.yaml
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml            
+        - $ref: parameters/f.yaml            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -484,12 +484,12 @@ paths:
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameterName.yaml         
-        - $ref: parameters/corridorWidth.yaml
-        - $ref: parameters/corridorHeight.yaml
-        - $ref: parameters/resolutionX.yaml
-        - $ref: parameters/resolutionZ.yaml
+        - $ref: parameters/corridor-width.yaml
+        - $ref: parameters/corridor-height.yaml
+        - $ref: parameters/resolution-x.yaml
+        - $ref: parameters/resolution-z.yaml
         - $ref: parameters/crs.yaml            
-        - $ref: parameters/outputFormat.yaml            
+        - $ref: parameters/f.yaml            
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -658,7 +658,7 @@ paths:
                 type: string
     parameters:
       - $ref: parameters/collectionId.yaml
-      - $ref: parameters/outputFormat.yaml
+      - $ref: parameters/f.yaml
   /collections/{collectionId}/instances/{instanceId}/position:
     get:
       tags:
@@ -674,7 +674,7 @@ paths:
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameterName.yaml
         - $ref: parameters/crs.yaml        
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -735,10 +735,10 @@ paths:
         - $ref: parameters/z.yaml       
         - $ref: parameters/datetime.yaml
         - $ref: parameters/within.yaml
-        - $ref: parameters/withinUnits.yaml
+        - $ref: parameters/within-units.yaml
         - $ref: parameters/parameterName.yaml
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml        
+        - $ref: parameters/f.yaml        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -799,10 +799,10 @@ paths:
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameterName.yaml
-        - $ref: parameters/resolutionX.yaml
-        - $ref: parameters/resolutionY.yaml
+        - $ref: parameters/resolution-x.yaml
+        - $ref: parameters/resolution-y.yaml
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -861,15 +861,15 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/cubeCoords.yaml
-        - $ref: parameters/minZ.yaml
-        - $ref: parameters/maxZ.yaml
+        - $ref: parameters/min-z.yaml
+        - $ref: parameters/max-z.yaml
         - $ref: parameters/datetime.yaml        
         - $ref: parameters/parameterName.yaml
-        - $ref: parameters/resolutionX.yaml            
-        - $ref: parameters/resolutionY.yaml            
-        - $ref: parameters/resolutionZ.yaml            
+        - $ref: parameters/resolution-x.yaml            
+        - $ref: parameters/resolution-y.yaml            
+        - $ref: parameters/resolution-z.yaml            
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -931,7 +931,7 @@ paths:
         - $ref: parameters/datetime.yaml        
         - $ref: parameters/parameterName.yaml
         - $ref: parameters/crs.yaml
-        - $ref: parameters/outputFormat.yaml        
+        - $ref: parameters/f.yaml        
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -992,12 +992,12 @@ paths:
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml        
         - $ref: parameters/parameterName.yaml
-        - $ref: parameters/corridorWidth.yaml
-        - $ref: parameters/corridorHeight.yaml
-        - $ref: parameters/resolutionX.yaml
-        - $ref: parameters/resolutionZ.yaml
+        - $ref: parameters/corridor-width.yaml
+        - $ref: parameters/corridor-height.yaml
+        - $ref: parameters/resolution-x.yaml
+        - $ref: parameters/resolution-z.yaml
         - $ref: parameters/crs.yaml        
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
       responses:
         '200':
           description: Data ranges required to construct valid queries for the choosen data collection
@@ -1104,7 +1104,7 @@ paths:
         - $ref: parameters/locId.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/crs.yaml          
-        - $ref: parameters/outputFormat.yaml
+        - $ref: parameters/f.yaml
       responses:
         '200':
           description: Data returned by querying by location identifier
@@ -1208,7 +1208,7 @@ paths:
         - $ref: parameters/locId.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/crs.yaml          
-        - $ref: parameters/outputFormat.yaml            
+        - $ref: parameters/f.yaml            
       responses:
         '200':
           description: Data returned when querying by identifier

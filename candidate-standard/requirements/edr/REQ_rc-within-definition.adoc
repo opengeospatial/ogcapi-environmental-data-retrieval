@@ -3,7 +3,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|A |Each resource collection operation MAY support a parameter `within`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
-^|B | If the instance metadata does not provide `withinUnits` values the API SHALL NOT support `within` queries:
+^|B | If the instance metadata does not provide `within-units` values the API SHALL NOT support `within` queries:
 
 [source,YAML]
 ----

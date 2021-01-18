@@ -38,15 +38,15 @@ Repeat these tests using the following parameter tests:
 * Response <<../../requirements/collections/edr/REQ_rc-z-response,/conf/collections/rc-z-response>>
 
 *Parameters*
-* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/conf/collections/rc-parametername-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/conf/collections/rc-parametername-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/conf/collections/rc-parameter-name-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/conf/collections/rc-parameter-name-response>>
 
 *DateTime*
 
 * Parameter <<../../requirements/collections/edr/REQ_rc-time-definition,/conf/collections/rc-time-definition>>
 * Response <<../../requirements/collections/edr/REQ_rc-time-response,/conf/collections/rc-time-response>>
 
-Execute requests with combinations of the "coords","time","parametername","z","crs" and "f" query parameters
+Execute requests with combinations of the "coords","time","parameter-name","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
 |===
 
@@ -62,9 +62,9 @@ include::../core/ATS_rc-time-definition.adoc[]
 
 include::../core/ATS_rc-time-response.adoc[]
 
-include::../collections/ATS_rc-parametername-definition.adoc[]
+include::../collections/ATS_rc-parameter-name-definition.adoc[]
 
-include::../collections/ATS_rc-parametername-response.adoc[]
+include::../collections/ATS_rc-parameter-name-response.adoc[]
 
 include::../collections/ATS_rc-crs-definition.adoc[]
 

@@ -1,0 +1,9 @@
+{
+  "name": "max-z",
+  "in": "query",
+  "required": true,
+  "description": "Define the location of the top of the cube \ni.e. max-z=level\n\nfor instance if top of cube is at the 650hPa pressure level\n\nmax-z=650\n\nThe units will default to those of the coordinate reference system.  \nIf no CRS is defined the values will be assumed to be \nheight above sea level in metres. \n",
+  "schema": {
+    "type": "string"
+  }
+}

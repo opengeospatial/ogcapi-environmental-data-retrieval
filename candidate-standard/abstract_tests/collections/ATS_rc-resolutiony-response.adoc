@@ -1,9 +1,0 @@
-[[ats_collections_rc-resolutiony-response]]
-[width="90%",cols="2,6a"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-resolutiony-response*
-^|Test Purpose |Validate that the `resolutiony` query parameters are processed correctly.
-^|Requirement |<<req_collections_rc-resolutiony-response,/req/edr/rc-resolutiony-response>>
-^|Test Method |. Verify that the data returned by the query contains the same number of values on the y axis as that requested in the `resolutiony` parameter
-. Validate that the `resolutiony` parameter complies with the syntax described in <<req_collections_rc-resolutiony-response,/req/edr/REQ_rc-resolutiony-response>>.
-|===

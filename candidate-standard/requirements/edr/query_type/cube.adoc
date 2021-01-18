@@ -1,4 +1,4 @@
-The `Cube` query returns a data cube defined by the  `coords`, `minz` and `maxz` parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the `coords` parameter.  The results are further filtered by the constraints defined by the following query parameters:
+The `Cube` query returns a data cube defined by the  `coords`, `min-z` and `max-z` parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the `coords` parameter.  The results are further filtered by the constraints defined by the following query parameters:
 
 ===== *Parameter coords*
 
@@ -30,43 +30,43 @@ South West England in WGS84 would look like
 
 see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
-===== *Parameter minz*
+===== *Parameter min-z*
 
-<<req_edr_minz-definition>>
+<<req_edr_min-z-definition>>
 
-<<req_edr_minz-response>>
+<<req_edr_min-z-response>>
 
 .Define the bottom of the cube
 =================
 denotes the minimum level to return data for 
 
-`minz=850`
+`min-z=850`
 
-would retrieve data for the 850 level and for data above the 850 level, if a `maxz` is not specified a `400` error should be thrown
+would retrieve data for the 850 level and for data above the 850 level, if a `max-z` is not specified a `400` error should be thrown
 
 =================
 
-===== *Parameter maxz*
+===== *Parameter max-z*
 
-<<req_edr_maxz-definition>>
+<<req_edr_max-z-definition>>
 
-<<req_edr_maxz-response>>
+<<req_edr_max-z-response>>
 
 .Define the top of the cube
 =================
 denotes the maximum level to return data for 
 
-`maxz=300`
+`max-z=300`
 
-would retrieve data for the 300 level and for data below the 850 level, if a `minz` is not specified a `400` error should be thrown
+would retrieve data for the 300 level and for data below the 850 level, if a `min-z` is not specified a `400` error should be thrown
 
 =================
 
-===== *Parameter resolutionx*
+===== *Parameter resolution-x*
 
-<<req_edr_resolutionx-definition>>
+<<req_edr_resolution-x-definition>>
 
-<<req_edr_resolutionx-response>>
+<<req_edr_resolution-x-response>>
 
 If not specified the query will not interpolate the data along the x-axis of the <<cube-definition,cube>> and only return values for the defined `coords` parameter values. 
 
@@ -75,17 +75,17 @@ If not specified the query will not interpolate the data along the x-axis of the
 =================
 denotes the number of intervals to retrieve data for across the defined x-axis of the <<cube-definition,cube>>
 
-`resolutionx=10`
+`resolution-x=10`
 
 would retrieve 10 values along the width from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).
 
 =================
 
-===== *Parameter resolutiony*
+===== *Parameter resolution-y*
 
-<<req_edr_resolutiony-definition>>
+<<req_edr_resolution-y-definition>>
 
-<<req_edr_resolutiony-response>>
+<<req_edr_resolution-y-response>>
 
 If not specified the query will not interpolate the data along the y-axis of the <<cube-definition,cube>> and only return values for the defined `coords` parameter values. 
 
@@ -94,17 +94,17 @@ If not specified the query will not interpolate the data along the y-axis of the
 =================
 denotes the number of intervals to retrieve data for across the defined y-axis of the <<cube-definition,cube>>
 
-`resolutiony=10`
+`resolution-y=10`
 
 would retrieve 10 values along the width from the minimum y coordinate to maximum y coordinate (i.e. a value at both the minimum y and maximum y coordinates and 8 values between).
 
 =================
 
-===== *Parameter resolutionz*
+===== *Parameter resolution-z*
 
-<<req_edr_resolutionz-definition>>
+<<req_edr_resolution-z-definition>>
 
-<<req_edr_resolutionz-response>>
+<<req_edr_resolution-z-response>>
 
 If not specified the query will not interpolate the data along the z-axis of the <<cube-definition,cube>> and only return values for the defined `coords` parameter values. 
 
@@ -113,7 +113,7 @@ If not specified the query will not interpolate the data along the z-axis of the
 =================
 denotes the number of intervals to retrieve data for the defined z-axis of the <<cube-definition,cube>>
 
-`resolutionz=10`
+`resolution-z=10`
 
 would retrieve 10 values along the z-axis from the minimum z coordinate to maximum z coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).
 
@@ -121,7 +121,7 @@ would retrieve 10 values along the z-axis from the minimum z coordinate to maxim
 
 ===== <<time>>
 
-===== <<parametername>>
+===== <<parameter-name>>
 
 ===== <<crs>>
 

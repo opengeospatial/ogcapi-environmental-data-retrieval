@@ -13,11 +13,11 @@ With the OGC API family of standards. the OGC community has extended its suite o
 [width="90%",cols="2,2,^1,4",options="header"]
 |====
 | Resource | Path | HTTP Method | Document Reference
-| Landing page | ``/`` | GET | https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/clause_0_front_material.adoc#landing-page[API Landing Page]
-| API definition | ``/api`` | GET | https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/clause_0_front_material.adoc#api-definition[API Definition]
-| Conformance classes | ``/conformance`` | GET | https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/clause_0_front_material.adoc#conformance-classes[Declaration of Conformance Classes]
-| Collections metadata | ``/collections`` | GET | https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/clause_0_front_material.adoc#collections-metadata[Collections Metadata]
-| Collection instance metadata | ``/collections/{collection_id}`` | GET | https://github.com/opengeospatial/Environmental-Data-Retrieval-API/blob/master/candidate-standard/clause_0_front_material.adoc#Collecttion-metadata[Collection Metadata]
+| Landing page | ``/`` | GET | <<landing-page,API Landing Page>>
+| API definition | ``/api`` | GET | <<api-definition,API Definition>>
+| Conformance classes | ``/conformance`` | GET |<<conformance-classes,Declaration of Conformance Classes>>
+| Collections metadata | ``/collections`` | GET | <<rc_collection-section,Collections Metadata>>
+| Collection instance metadata | ``/collections/{collection_id}`` | GET | <<collection-definition,Collection Metadata>>
 |====
 
 CAUTION: During the development phase, these components use a base URL of `https://github.com/opengeospatial/Environmental-Data-Retrieval-API/master`, but eventually they are expected to be available under the base URL `http://schemas.opengis.net/ogcapi-edr-1/1.0`.

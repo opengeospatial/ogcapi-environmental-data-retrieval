@@ -40,11 +40,31 @@ retrieve data for Greenwich, London
 
 <<req_edr_within-response>>
 
-====== *Parameter withinunits*
+===== *Parameter withinunits*
 
-<<req_edr_withinUnits-definition>>
+The units supported by the collection will be listed in the collections end point
 
-<<req_edr_withinUnits-response>>
+<<req_edr_within-units-definition>>
+
+<<req_edr_within-units-response>>
+
+
+.Define a 20Km radius
+===========
+i.e. Define the a Radius of 20 Km from the location defined by the coords query parameter  
+
+within=20&withinunits=km
+
+===========
+
+.Define a 5 mile radius
+===========
+i.e. Define the a Radius of 5 miles from the location defined by the coords query parameter  
+
+within=5&withinunits=miles
+
+===========
+
 
 ===== *Parameter z*
 
@@ -73,7 +93,7 @@ z=ALL
 
 ===== <<time>>
 
-===== <<parametername>>
+===== <<parameter-name>>
 
 ===== <<crs>>
 

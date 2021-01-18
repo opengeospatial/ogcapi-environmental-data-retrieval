@@ -7,7 +7,7 @@
     {
       "datetime": "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z",
       "label": "Monitoring site name",
-      "parametername": [
+      "parameter-name": [
         "velocity",
         "temperature"
       ],
@@ -16,7 +16,7 @@
   ],
   "required": [
     "datetime",
-    "parametername",
+    "parameter-name",
     "label",
     "edrqueryendpoint"
   ],
@@ -30,7 +30,7 @@
         "2018-02-12T00:00:00Z/2018-03-18T12:31:12Z"
       ]
     },
-    "parametername": {
+    "parameter-name": {
       "type": "array",
       "title": "Available Parameters",
       "description": "Unique IDs of available parameters, this is the value used for querying the data and corresponds to an ID in the parameter metadata of the collection.",
