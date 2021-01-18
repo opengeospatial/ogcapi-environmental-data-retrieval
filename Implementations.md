@@ -19,7 +19,7 @@ These are the implementations that were used for the development of the standard
      [Further details](#wuhan-university)
 1. ESRI Image Server facade      
      [Further details](#esri-image-server-facade)
-1. [USGS, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki/Monitoring-network-mockup)      
+1. [USGS, Monitoring Networks wiki page mockup](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Monitoring-network-mockup)      
      [Further details](#us-geological-survey)
 
 Further implementations are planned or have been proposed for 2021: 
