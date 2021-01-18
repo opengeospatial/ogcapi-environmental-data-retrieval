@@ -134,8 +134,8 @@ Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
 `parameter-name=Maximum_temperature,Minimum_temperature,Total_precipitation`
 =================
 
-If a requested parameter doesn't exist in the <<collection-definition,collection>> the data for those parameters that do exist should be returned.
-If none of the requested parameters exist in the <<collection-definition,collection>> a `400` message SHOULD be returned.
+For the requested parameters which do not exist in the <<collection-definition,collection>> null values should be returned, 
+if none of the requested parameters exist in the <<collection-definition,collection>> a `400` message SHOULD be returned.
 
 [[crs]]
 ===== Parameter crs
