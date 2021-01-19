@@ -90,7 +90,7 @@ Server description:
 ### Sample requests
 :warning: ***The server contains live data not older than two days. Therefore, before you execute the queries below, please update instance IDs (model run) as well as 'date-time' URL parameters to the present date, for example:***
 
-https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/instances/**20210119T000000Z**/position?parameter-name=1000000_spec:regular&date-time=**2021-01-19T09:00:00**&coords=POINT(17.11 48.14)&z=850&f=CoverageJSON
+/edr/collections/GFS_isobaric/instances/**20210119T000000Z**/position?parameter-name=1000000_spec:regular&date-time=**2021-01-19T09:00:00**&coords=POINT(17.11 48.14)&z=850&f=CoverageJSON
 
 #### Position
 ##### Single Point
