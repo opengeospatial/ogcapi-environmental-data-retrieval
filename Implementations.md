@@ -56,19 +56,24 @@ Client description:
 
 ### US National Weather Service
 Servers:
-- [Example Server](#example-server) developed by Shane Mill
+- [Example Server](https://data-api.mdl.nws.noaa.gov/EDR-API) developed by Shane Mill
 
 Clients:
-- [Example Client](#example-client)
+- [Example Client](https://data-api.mdl.nws.noaa.gov/EDR-CLIENT-API)
 
 Server description: implemented using `pygeoapi` to provide a visual interface client. 
- Supports point and area queries
+ Supports position, area, and cube queries. Provides schema support for CoverageJSON, JSON, 
+ text, XML (IWXXM), and GRIB. Implementation uses open source software such as Flask, Xarray,
+ Dask, and Zarr to name a few.
  
-Client description:
+Client description: A series of simple clients demonstrating the feature extraction of a position 
+  time series with visualization of the data in the form of a plotly graph. Demonstrates the ability
+  to extract data using structured EDR-API requests from a variety of data sources and systems.
 
 ### Sample requests
-- tbd
-- tbd
+- position query: `https://data-api.mdl.nws.noaa.gov/EDR-API/collections/automated_gfs_100_forecast_time0_lat_0_lon_0_Ground_or_water_surface/instance/00z/position?coords=POINT(-89.331642 41.803319)&parametername=TMP_P0_L1_GLL0&datetime=2021-01-14T00:00:00/2021-01-14T18:00:00&crs=EPSG:4326&interpolation=nearest_neighbor&f=CoverageJSON`
+- area query: `https://data-api.mdl.nws.noaa.gov/EDR-API/collections/automated_gfs_100_forecast_time0_lat_0_lon_0_Ground_or_water_surface/instance/00z/area?coords=POLYGON((-101.669985 54.012139,-116.184261 36.029225,-79.738717 25.623898,-62.986553 49.54781,-101.669985 54.012139))&parametername=TMP_P0_L1_GLL0&datetime=2021-01-14T00:00:00/2021-01-14T12:00:00&crs=EPSG:4326&interpolation-x=nearest_neighbor&interpolation-y=nearest_neighbor&f=CoverageJSON`
+- cube query: `https://data-api.mdl.nws.noaa.gov/EDR-API/collections/automated_gfs_100_forecast_time0_lat_0_lon_0_Ground_or_water_surface/instance/00z/cube?coords=POLYGON((-100.135432 26.033864,-100.135432 52.365371,-66.511224 52.365371,-66.511224 26.033864,-100.135432 26.033864))&parametername=TMP_P0_L1_GLL0&datetime=2021-01-14T00:00:00/2021-01-14T18:00:00&crs=EPSG:4326&interpolation-x=nearest_neighbor&interpolation-y=nearest_neighbor&f=CoverageJSON`
 
 ### Sample workflows
 
