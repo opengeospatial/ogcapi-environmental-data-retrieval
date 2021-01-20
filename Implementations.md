@@ -14,7 +14,7 @@ These are the implementations that were used for the development of the standard
 1. [US NWS](https://data-api.mdl.nws.noaa.gov/EDR-API)       
      [Further details](#us-national-weather-service)
 1. [IBL](https://ogcie.iblsoft.com/edr)      
-     [Further details](#ibl)
+     [Further details](#ibl-software-engineering)
 1. [Wuhan University](http://geos.whu.edu.cn/whu-edr-demo/)       
      [Further details](#wuhan-university)
 1. ESRI Image Server facade      
