@@ -58,16 +58,16 @@ NOTE: The query patterns of the EDR API use the link relation *data*. It is envi
 
 JSON media types that would typically be used in an OGC API that supports JSON are:
 
-* `application/prs.coverage+json` for resources that include coverage content, and
-* `application/geo+json` for feature <<collection-definition,collections>> and features, and
-* `application/json` for all other resources.
+* `application/prs.coverage+json` for resources that include coverage content
+* `application/geo+json` for feature <<collection-definition,collections>> and features
+* `application/json` for all other resource representations
 
 XML media types that would typically occur in an OGC API that supports XML are:
 
-* `application/gml+xml;version=3.2` for any GML 3.2 feature <<collection-definition,collections>> and features,
-* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 0 profile,
-* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile, and
-* `application/xml` for all other resources.
+* `application/gml+xml;version=3.2` for any GML 3.2 feature <<collection-definition,collections>> and features
+* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 0 profile
+* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile
+* `application/xml` for all other resources
 
 The typical HTML media type for all "web pages" in an OGC API would be `text/html`.
 

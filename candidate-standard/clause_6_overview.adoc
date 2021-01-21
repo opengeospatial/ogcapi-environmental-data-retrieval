@@ -34,7 +34,7 @@ or +
 |<<collections,{root}/collections>> |`data` |Metadata describing the <<collection-definition,collections>> of data available from this API.
 |<<collection-information-queries,{root}/collections/{collectionId}>> | |Metadata describing the <<collection-definition,collection>> of data which has the unique identifier `{collectionId}`
 3+^|**Features**
-|<<collection-information-queries,{root}/collections/{collectionId}/items>>| |Retrieve metadata about available items
+|<<collection-information-queries,{root}/collections/{collectionId}/items>>|`items`|Retrieve metadata about available items
 3+^|**Queries**
 |<<collection-information-queries,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
 |<<collection-information-queries,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about <<instance-definition,instances>> of a <<collection-definition,collection>>

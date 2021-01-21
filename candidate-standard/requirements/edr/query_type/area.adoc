@@ -23,8 +23,7 @@ South West England in WGS84 would look like:
 
 see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
-`The coords parameter will only support 2D POLYGON`
-
+The coords parameter will only support 2D POLYGON.
 
 .A polygon covering the UK 
 =================
@@ -61,7 +60,7 @@ i.e. z=ALL
 
 For example if the 850hPa pressure level is being queried
 
-z=850
+`z=850`
 ===========
 
 .Return data at all a levels defined by a list of vertical levels
@@ -69,7 +68,7 @@ z=850
 
 Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
 
-z=1000,900,850,700
+`z=1000,900,850,700`
 ===========
 
 .Return data for all levels between and including 2 defined levels
@@ -77,13 +76,13 @@ z=1000,900,850,700
 
 Request data for all levels between 2m and 100m
 
-z=2/100
+`z=2/100`
 ===========
 
 .Return data at all available vertical levels
 ===========
 
-z=ALL
+`z=ALL`
 ===========
 
 `When not specified the API MUST return data from all available levels`
