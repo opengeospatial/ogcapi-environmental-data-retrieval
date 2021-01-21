@@ -32,7 +32,6 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 ## Implementations
 
 ### UK Met Office
-
 Servers:
 - [Example Server](http://labs.metoffice.gov.uk/edr/) developed by Mark Burgoyne.
 
@@ -43,14 +42,13 @@ Server description: implemented using python supports point, radius, area, traje
 
 Client description:
 
-### Sample requests
+#### Sample requests
 - position: `http://labs.metoffice.gov.uk/edr/collections/terrain_tiles/position?coords=POINT(101.896366 45.209662)&parameter-name=Height&crs=CRS84&f=CoverageJSON`
 - area: http://labs.metoffice.gov.uk/edr/collections/global_pop_density/area?coords=POLYGON((-3.652394 51.373721,-3.511786 50.264415,-1.973894 50.499557,-2.114501 51.73946,-3.652394 51.373721))&parameter-name=Pop_Density&crs=CRS84&f=CoverageJSON
 - radius:  http://labs.metoffice.gov.uk/edr/collections/global_pop_density/radius?coords=POINT(-0.104939 51.513418)&within=30&within-units=km&parameter-name=Pop_Density&crs=CRS84&f=CoverageJSON
 - trajectory: `http://labs.metoffice.gov.uk/edr/collections/terrain_tiles/trajectory?coords=LINESTRING(-3.519 50.737,-3.511 50.745,-3.504 50.753,-3.496 50.762,-3.489 50.77,-3.481 50.778,-3.473 50.786,-3.466 50.795,-3.458 50.803,-3.451 50.811,-3.443 50.819,-3.435 50.828,-3.428 50.836,-3.42 50.844,-3.412 50.853,-3.403 50.857,-3.392 50.859,-3.381 50.861,-3.37 50.863,-3.359 50.865,-3.348 50.867,-3.336 50.869,-3.325 50.871,-3.314 50.873,-3.303 50.875,-3.292 50.877,-3.281 50.879,-3.27 50.881,-3.259 50.883,-3.248 50.885,-3.237 50.887,-3.226 50.889,-3.215 50.89,-3.204 50.892,-3.192 50.894,-3.181 50.896,-3.17 50.898,-3.159 50.9,-3.148 50.902,-3.137 50.904,-3.126 50.906,-3.115 50.908,-3.104 50.91,-3.093 50.912,-3.082 50.914,-3.071 50.916,-3.06 50.918,-3.049 50.92,-3.048 50.931,-3.046 50.943,-3.045 50.954,-3.043 50.965,-3.042 50.976,-3.041 50.987,-3.039 50.998,-3.038 51.009,-3.036 51.021,-3.035 51.032,-3.034 51.043,-3.032 51.054,-3.031 51.065,-3.029 51.076,-3.028 51.088,-3.027 51.099,-3.025 51.11,-3.024 51.121,-3.022 51.132,-3.021 51.143,-3.02 51.155,-3.018 51.165,-3.007 51.165,-2.995 51.165,-2.984 51.165,-2.973 51.165,-2.962 51.165,-2.95 51.164,-2.939 51.164,-2.928 51.164,-2.917 51.164,-2.906 51.164,-2.894 51.164,-2.883 51.163,-2.872 51.163,-2.861 51.163,-2.849 51.163,-2.838 51.163)&parameter-name=Height&crs=CRS84&f=CoverageJSON`
 
-### Sample workflows
-
+#### Sample workflows
 - sample URLs
 - command line invocations
 - code snippets
@@ -71,13 +69,12 @@ Client description: A series of simple clients demonstrating the feature extract
   time series with visualization of the data in the form of a plotly graph. Demonstrates the ability
   to extract data using structured EDR-API requests from a variety of data sources and systems.
 
-### Sample requests
+#### Sample requests
 - position query: `https://data-api.mdl.nws.noaa.gov/EDR-API/collections/automated_gfs_100_forecast_time0_lat_0_lon_0_Ground_or_water_surface/instance/00z/position?coords=POINT(-89.331642 41.803319)&parametername=TMP_P0_L1_GLL0&datetime=2021-01-14T00:00:00/2021-01-14T18:00:00&crs=EPSG:4326&interpolation=nearest_neighbor&f=CoverageJSON`
 - area query: `https://data-api.mdl.nws.noaa.gov/EDR-API/collections/automated_gfs_100_forecast_time0_lat_0_lon_0_Ground_or_water_surface/instance/00z/area?coords=POLYGON((-101.669985 54.012139,-116.184261 36.029225,-79.738717 25.623898,-62.986553 49.54781,-101.669985 54.012139))&parametername=TMP_P0_L1_GLL0&datetime=2021-01-14T00:00:00/2021-01-14T12:00:00&crs=EPSG:4326&interpolation-x=nearest_neighbor&interpolation-y=nearest_neighbor&f=CoverageJSON`
 - cube query: `https://data-api.mdl.nws.noaa.gov/EDR-API/collections/automated_gfs_100_forecast_time0_lat_0_lon_0_Ground_or_water_surface/instance/00z/cube?coords=POLYGON((-100.135432 26.033864,-100.135432 52.365371,-66.511224 52.365371,-66.511224 26.033864,-100.135432 26.033864))&parametername=TMP_P0_L1_GLL0&datetime=2021-01-14T00:00:00/2021-01-14T18:00:00&crs=EPSG:4326&interpolation-x=nearest_neighbor&interpolation-y=nearest_neighbor&f=CoverageJSON`
 
-### Sample workflows
-
+#### Sample workflows
 - sample URLs
 - command line invocations
 - code snippets
@@ -93,7 +90,7 @@ Server description:
 - Serves live GFS model data and live SYNOP, TEMP and METAR reports
 - Implements point, radius, area, cube and trajectory query
 
-### Sample requests
+#### Sample requests
 :warning: ***The server contains live data not older than two days. Therefore, before you execute the queries below, please update instance IDs (model run) as well as 'date-time' URL parameters to the present date, for example:***
 
 /edr/collections/GFS_isobaric/instances/**20210119T000000Z**/position?parameter-name=1000000_spec:regular&date-time=**2021-01-19T09:00:00**&coords=POINT(17.11 48.14)&z=850&f=CoverageJSON
@@ -190,14 +187,13 @@ Server description: implemented using `pygeoapi` to provide a visual interface c
 
 Client description: a web application for flood disaster decision support, implemented with EDR API to query related data such as population, schools and villages after obtaining a typhoon trajectory/corridor or flood inundation area.
 
-### Sample requests
+#### Sample requests
 - position query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/position?coords=POINT(109.858046 19.230770)&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
 - area query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/area?coords=POLYGON((109.795906 19.259092,109.885383 19.264480,109.879889 19.168519,109.795906 19.259092))&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
 - trajectory query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/trajectory?coords=LINESTRING(109.298000 19.139979,109.589138 19.321511,109.891262 19.513198,110.198879 19.761534)&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
 - corridor query: `http://geos.whu.edu.cn/whu-edr-demo/collections/hainan_pop/corridor?coords=LINESTRING(109.243069 18.968637,109.429836 19.150357,109.726467 19.311143,110.138454 19.476950)&corridor-width=1000&datetime=2019-01-01T00:00:00&parameter-name=population&interpolation=nearest_neighbour&f=CoverageJSON`
 
-### Sample workflows
-
+#### Sample workflows
 - sample URLs
 - command line invocations
 - code snippets
@@ -223,25 +219,21 @@ Promise.all([
 ```
 
 ### ESRI Image Server facade
-
 Servers:
-
 -   [Example Server](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md#example-server)  Proof-of-Concept developed by Pete Trevelyan and ESRI developers. Supports point and area queries. The server will be further developed to increase the supported EDR query patterns. 
 
 Clients:
-
--   [Example Client](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md#example-client) There will be no specialist client created other than those already available. At the most basic level the server may be accessed using Swagger Hub that is invoked by the home / address.
+-   [Example Client](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md#example-client) There will be no specialist client created other than those already available. At the most basic level the server may be accessed using Swagger Hub that is invoked by the `home / address`.
 
 Server description:
-
 The server in a simple proxy server that translates EDR queries into the native ESRI Rest API for Image Server.
 
-Client description:
+Client description: Not Applicable
 
-### Sample requests
--   The [sample requests](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md#sample-requests-4) will be generated by using the Swagger Hub based on the YMAL Swagger document that may be obtained using /doc
+#### Sample requests
+-   The [sample requests](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md#sample-requests-4) will be generated by using the Swagger Hub based on the YAML Swagger document that may be obtained using `/doc`
 
-### Sample workflows
+#### Sample workflows
 [Sample URLs](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md#sample-workflows-3)
  -   There is no need to support a semi-permanent server, as the proxy server will normally be set up by the user. 
  -   Command Line Invocations
@@ -260,12 +252,11 @@ Server description:
 
 Client description:
 
-### Sample requests
+#### Sample requests
 - tbd
 - tbd
 
-### Sample workflows
-
+#### Sample workflows
 - sample URLs
 - command line invocations
 - code snippets
