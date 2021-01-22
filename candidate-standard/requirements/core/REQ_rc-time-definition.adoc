@@ -1,7 +1,7 @@
 [[req_collections_rc-time-definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/collections/rc-time-definition* 
+^|*Requirement {counter:req-id}* |*/req/core/datetime-definition* 
 ^|A |The `datetime` parameter SHALL have the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

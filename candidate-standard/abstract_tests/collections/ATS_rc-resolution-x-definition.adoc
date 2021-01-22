@@ -3,7 +3,7 @@
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-resolution-x-definition*
 ^|Test Purpose |Validate that the `resolution-x` query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-resolution-x-definition,/req/edr/rc-resolution-x-definition>>
+^|Requirement |<<req_collections_rc-resolution-x-definition,/req/edr/resolution-x-definition>>
 ^|Test Method |Verify that the `resolution-x` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

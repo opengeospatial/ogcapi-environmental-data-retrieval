@@ -1,5 +1,5 @@
 [[req_edr_parameters-response]]
-==== *Requirement {counter:req-id}: /req/edr/parameters-response* Parameter parameter-name response
+==== *Requirement {counter:req-id}: /req/edr/parameter-name-response* Parameter parameter-name response
 [width="90%",cols="2,6a"]
 |===
 ^|A|If the `parameter-name` parameter is provided, only those parameters named SHALL be returned.  If the `parameter-name` parameter is not specified all parameters in the collection SHALL be returned. 

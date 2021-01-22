@@ -6,5 +6,5 @@
 ^|Requirement |<<req_edr_rc-crs-response,/req/edr/rc-crs-response>>
 ^|Test Method |. Verify that the geometry of the resources returned are valid for the requested coordinate reference system
 ^|Test Method |. Verify that all crs values defined in the collections metadata are supported by the collection
-. Validate that the crs parameter complies with the syntax described in <<req_collections_rc-crs-response,/req/collections/edr/rc-crs-response>>.
+. Validate that the crs parameter complies with the syntax described in <<req_collections_rc-crs-response,/req/collections/edr/crs-response>>.
 |===

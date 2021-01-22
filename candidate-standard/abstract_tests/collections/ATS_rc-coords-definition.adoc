@@ -3,7 +3,7 @@
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-coords-definition*
 ^|Test Purpose |Validate that the coords query parameters are constructed correctly.
-^|Requirement |<<req_edr_rc-coords-definition,/req/edr/rc-coords-definition>>
+^|Requirement |<<req_edr_rc-coords-definition,/req/edr/coords-definition>>
 ^|Test Method |Verify that the `coords` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
