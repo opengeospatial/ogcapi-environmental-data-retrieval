@@ -1,5 +1,5 @@
 {
-  "name": "withinunits",
+  "name": "within-units",
   "in": "query",
   "description": "Distance units for the within parameter",
   "required": true,
