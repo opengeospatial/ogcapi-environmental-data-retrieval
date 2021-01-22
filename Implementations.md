@@ -10,7 +10,7 @@ To help promote OGC API standards and their implementations, implementers of OGC
 
 These are the implementations that were used for the development of the standard:
 1. [UK Met Office](http://labs.metoffice.gov.uk/edr/)              
-     [Further details](#uk-met-office) **This demonstration instance is being re-built more securely. (2021-01-12)**
+     [Further details](#uk-met-office) 
 1. [US NWS](https://data-api.mdl.nws.noaa.gov/EDR-API)       
      [Further details](#us-national-weather-service)
 1. [IBL](https://ogcie.iblsoft.com/edr)      
