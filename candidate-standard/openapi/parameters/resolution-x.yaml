@@ -10,4 +10,6 @@ description: |+
   would retrieve 10 values along the x-axis from the minimum x coordinate to maximum x coordinate (i.e. a value at both the minimum x and maximum x coordinates and 8 values between).
 required: false
 schema:
-    type: string
+    items:
+      type: string
+

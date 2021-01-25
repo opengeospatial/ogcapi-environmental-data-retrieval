@@ -31,7 +31,8 @@ properties:
         title: ""
   keywords:
     type: array
-    items: string
+    items: 
+      type: string
     example:
       - Temperature
       - Wind

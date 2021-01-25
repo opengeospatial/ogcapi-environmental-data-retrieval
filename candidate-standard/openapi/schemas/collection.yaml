@@ -70,14 +70,16 @@ properties:
   distanceunits:
     description: list of distance units radius distance values can be specified in
     type: array
-    items: string
+    items: 
+      type: string
     example:
       - km
       - miles
   outputformat:
     description: list of formats the results can be presented in
     type: array
-    items: string
+    items: 
+      type: string
     example:
       - CoverageJSON
       - GeoJSON
