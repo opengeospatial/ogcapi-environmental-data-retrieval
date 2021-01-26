@@ -5,6 +5,8 @@
 ^|A |If the `z` parameter is provided, only resources that have a vertical geometry that intersects the vertical information in the `z` parameter SHALL be part of the result set.
 ^|B |The `z` can be defined as a height range by specifying a min-level and max-level seperated by a forward slash "/" 
 ^|C |A list of `z` can be defined be specifying a comma delimited list of values level1, level2, level3 etc 
+^|D |A `z` value of `ALL` can be defined to specify returning data at all available vertical levels
+^|E |If the `z` parameter is not provided, the server SHALL interpret this as equivalent to `z=ALL`
 
 
 [source,java]

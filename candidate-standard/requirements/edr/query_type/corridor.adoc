@@ -70,7 +70,7 @@ Used when the entire corridor occurs at the same vertical height the z query par
 
 for instance if the entire route is at the 850hPa pressure level
 
-z=850
+`z=850`
 ===========
 
 ===== <<time>>

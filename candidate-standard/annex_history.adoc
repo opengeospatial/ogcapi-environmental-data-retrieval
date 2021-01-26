@@ -12,4 +12,6 @@
 |2020-07-22 |Restructure branch |Chris Little |all |Restructure 7,8,9,10
 |2020-07-22 |Issues 106, 107 |Dave Blodgett |all |Fix broken links
 |2020-10-20 |Oct 2020 Master|Chris Little |Definitions |Added missing Cube definition
+|2021-01-14 |Issue 170|Tom Kralidis | all |normalize query parameters as kebab-case
+|2021-01-20 |master branch|Tom Kralidis | all |Editorial updates, requirement update for z parameter
 |===

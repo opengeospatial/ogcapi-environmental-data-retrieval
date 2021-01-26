@@ -40,7 +40,7 @@ retrieve data for Greenwich, London
 
 <<req_edr_within-response>>
 
-===== *Parameter withinunits*
+===== *Parameter within-units*
 
 The units supported by the collection will be listed in the collections end point
 
@@ -53,7 +53,7 @@ The units supported by the collection will be listed in the collections end poin
 ===========
 i.e. Define the a Radius of 20 Km from the location defined by the coords query parameter  
 
-within=20&withinunits=km
+`within=20&within-units=km`
 
 ===========
 
@@ -61,7 +61,7 @@ within=20&withinunits=km
 ===========
 i.e. Define the a Radius of 5 miles from the location defined by the coords query parameter  
 
-within=5&withinunits=miles
+`within=5&within-units=miles`
 
 ===========
 
@@ -79,16 +79,16 @@ i.e. z=ALL
 
 For example if the 80m level is being queried
 
-z=80
+`z=80`
 ===========
 
 .Return data at all available vertical levels
 ===========
 
-z=ALL
+`z=ALL`
 ===========
 
-`When not specified the API MUST return data from all available levels`
+When not specified the API MUST return data from all available levels.
 
 
 ===== <<time>>

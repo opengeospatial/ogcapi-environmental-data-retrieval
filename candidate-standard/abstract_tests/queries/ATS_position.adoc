@@ -38,6 +38,7 @@ Repeat these tests using the following parameter tests:
 * Response <<../../requirements/collections/edr/REQ_rc-z-response,/req/edr/z-response>>
 
 *Parameters*
+
 * Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/req/edr/parameter-name-definition>>
 * Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/req/edr/parameter-name-response>>
 

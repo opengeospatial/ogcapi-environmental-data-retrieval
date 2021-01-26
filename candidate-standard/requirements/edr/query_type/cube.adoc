@@ -1,4 +1,4 @@
-The `Cube` query returns a data cube defined by the  `coords`, `min-z` and `max-z` parameters, *Only WKT POLYGONS that define rectangles are valid inputs to the `coords` parameter.  The results are further filtered by the constraints defined by the following query parameters:
+The `Cube` query returns a data cube defined by the  `coords`, `min-z` and `max-z` parameters. Only WKT POLYGONS that define rectangles are valid inputs to the `coords` parameter.  The results are further filtered by the constraints defined by the following query parameters:
 
 ===== *Parameter coords*
 
