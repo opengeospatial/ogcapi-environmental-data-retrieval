@@ -66,17 +66,17 @@ Repeat these tests using the following parameter tests:
 
 *Coordinates*
 
-* Parameter <<../../requirements/collections/edr/REQ_rc-coords-definition,/conf/collections/rc-coords-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-coords-response,/conf/collections/rc-coords-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-coords-definition,/req/edr/coords-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-coords-response,/req/edr/coords-response>>
 
 *VerticalLevel*
 
-* Parameter <<../../requirements/collections/edr/REQ_rc-z-definition,/conf/collections/rc-z-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-z-response,/conf/collections/rc-z-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-z-definition,/req/edr/z-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-z-response,/req/edr/z-response>>
 
 *Parameters*
-* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/conf/collections/rc-parameter-name-definition>>
-* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/conf/collections/rc-parameter-name-response>>
+* Parameter <<../../requirements/collections/edr/REQ_rc-parameter-definition,/req/edr/rc-parameter-name-definition>>
+* Response <<../../requirements/collections/edr/REQ_rc-parameter-response,/req/edr/rc-parameter-name-response>>
 
 
 Execute requests with combinations of the "coords", "parameter-name","z","crs" and "f" query parameters

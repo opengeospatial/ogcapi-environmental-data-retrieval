@@ -94,9 +94,9 @@ properties:
                 description: Array of string values
                 type: array
                 items:
-                  anyOf:
-                    - number
-                    - string
+                  oneOf:
+                    - type: string
+                    - type: number                     
             example:
               - -10
               - -5
@@ -194,9 +194,9 @@ properties:
               description: Parameter data values
               type: array
               items:
-                anyOf:
-                  - number
-                  - string
+                oneOf:
+                  - type: number
+                  - type: string
         - required:
             - type
             - dataType

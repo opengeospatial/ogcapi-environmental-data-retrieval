@@ -295,7 +295,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -407,7 +407,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -513,7 +513,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -628,7 +628,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/resolution-x.json"
@@ -743,7 +743,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -849,7 +849,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/corridor-width.json"
@@ -1172,7 +1172,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -1287,7 +1287,7 @@
             "$ref": "parameters/within-units.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -1396,7 +1396,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/resolution-x.json"
@@ -1514,7 +1514,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/resolution-x.json"
@@ -1632,7 +1632,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -1741,7 +1741,7 @@
             "$ref": "parameters/datetime.json"
           },
           {
-            "$ref": "parameters/parameterName.json"
+            "$ref": "parameters/parameter-name.json"
           },
           {
             "$ref": "parameters/corridor-width.json"

@@ -3,7 +3,7 @@
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-crs-definition*
 ^|Test Purpose |Validate that the crs query parameters are constructed correctly.
-^|Requirement |<<req_edr_rc-crs-definition,/req/edr/rc-crs-definition>>
+^|Requirement |<<req_edr_rc-crs-definition,/req/edr/crs-definition>>
 ^|Test Method |Verify that the `crs` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

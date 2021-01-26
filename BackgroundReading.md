@@ -4,11 +4,11 @@
 
 2. The Met Ocean Domain Working Group will produce an OGC Best Practice document to give guidance to implementers of services in a meteorological context. This will be in a new OGC GitHub repository.
 
-3. There are some simple [use cases or scenarios](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/tree/master/use-cases). 
+3. There are some simple [use cases or scenarios](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/master/use-cases). 
 
 4. There is some more background material in the [Weather on the Web repo](https://github.com/opengeospatial/weather-on-the-web). The README.md file is a good place to start. Some of the [challenges](https://github.com/opengeospatial/Weather-on-the-Web-ER/blob/master/7-challenges.adoc) are described.
 
-5. The [minutes](https://github.com/opengeospatial/Environmental-Data-Retrieval-API/wiki) of this group should highlight the decisions that have been made.
+5. The [minutes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki) of this group should highlight the decisions that have been made.
 
 6. The [background for an API](https://docs.opengeospatial.org/wp/16-019r4/16-019r4.html), rather than protocol, serialisation or data format, describes the OGC approach. See also this [blog entry](https://www.opengeospatial.org/blog/2996). The European Union Joint Research Centre (JRC) has also published a [report on Web APIs](https://op.europa.eu/en/publication-detail/-/publication/7144b6b0-0cf9-11ea-8c1f-01aa75ed71a1/language-en).
 

@@ -3,7 +3,7 @@
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-time-definition*
 ^|Test Purpose |Validate that the dateTime query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-time-definition,/req/core/rc-time-definition>>
+^|Requirement |<<req_collections_rc-time-definition,/req/core/datetime-parameter>>
 ^|Test Method |Verify that the `time` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

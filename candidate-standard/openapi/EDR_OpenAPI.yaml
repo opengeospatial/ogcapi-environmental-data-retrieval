@@ -170,7 +170,7 @@ paths:
         - $ref: parameters/pointCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
-        - $ref: parameters/parameterName.yaml        
+        - $ref: parameters/parameter-name.yaml        
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml        
       responses:
@@ -233,7 +233,7 @@ paths:
         - $ref: parameters/within-units.yaml        
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
       responses:
@@ -294,7 +294,7 @@ paths:
         - $ref: parameters/areaCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/resolution-x.yaml
         - $ref: parameters/resolution-y.yaml
@@ -358,7 +358,7 @@ paths:
         - $ref: parameters/min-z.yaml
         - $ref: parameters/max-z.yaml
         - $ref: parameters/datetime.yaml        
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/resolution-x.yaml            
         - $ref: parameters/resolution-y.yaml            
         - $ref: parameters/resolution-z.yaml            
@@ -422,7 +422,7 @@ paths:
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml      
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
       responses:
@@ -483,7 +483,7 @@ paths:
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
-        - $ref: parameters/parameterName.yaml         
+        - $ref: parameters/parameter-name.yaml         
         - $ref: parameters/corridor-width.yaml
         - $ref: parameters/corridor-height.yaml
         - $ref: parameters/resolution-x.yaml
@@ -672,7 +672,7 @@ paths:
         - $ref: parameters/pointCoords.yaml        
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml        
         - $ref: parameters/f.yaml
       responses:
@@ -736,7 +736,7 @@ paths:
         - $ref: parameters/datetime.yaml
         - $ref: parameters/within.yaml
         - $ref: parameters/within-units.yaml
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml        
       responses:
@@ -798,7 +798,7 @@ paths:
         - $ref: parameters/areaCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/resolution-x.yaml
         - $ref: parameters/resolution-y.yaml
         - $ref: parameters/crs.yaml
@@ -864,7 +864,7 @@ paths:
         - $ref: parameters/min-z.yaml
         - $ref: parameters/max-z.yaml
         - $ref: parameters/datetime.yaml        
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/resolution-x.yaml            
         - $ref: parameters/resolution-y.yaml            
         - $ref: parameters/resolution-z.yaml            
@@ -929,7 +929,7 @@ paths:
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml        
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml        
       responses:
@@ -991,7 +991,7 @@ paths:
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml        
-        - $ref: parameters/parameterName.yaml
+        - $ref: parameters/parameter-name.yaml
         - $ref: parameters/corridor-width.yaml
         - $ref: parameters/corridor-height.yaml
         - $ref: parameters/resolution-x.yaml

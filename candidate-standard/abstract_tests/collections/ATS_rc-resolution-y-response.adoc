@@ -3,7 +3,7 @@
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-resolution-y-response*
 ^|Test Purpose |Validate that the `resolution-y` query parameters are processed correctly.
-^|Requirement |<<req_collections_rc-resolution-y-response,/req/edr/rc-resolution-y-response>>
+^|Requirement |<<req_collections_rc-resolution-y-response,/req/edr/resolution-y-response>>
 ^|Test Method |. Verify that the data returned by the query contains the same number of values on the y axis as that requested in the `resolution-y` parameter
-. Validate that the `resolution-y` parameter complies with the syntax described in <<req_collections_rc-resolution-y-response,/req/edr/REQ_rc-resolution-y-response>>.
+. Validate that the `resolution-y` parameter complies with the syntax described in <<req_collections_rc-resolution-y-response,/req/edr/resolution-y-response>>.
 |===

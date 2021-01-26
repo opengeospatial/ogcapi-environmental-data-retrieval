@@ -10,4 +10,5 @@ description: |+
   would retrieve 10 values along the y-axis from the minimum y coordinate to maximum y coordinate (i.e. a value at both the minimum y and maximum y coordinates and 8 values between).
 required: false
 schema:
-    type: string
+    items:
+      type: string
