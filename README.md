@@ -16,7 +16,6 @@ The repository contains:
   
 - [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
 - [Standard document, as a work-in-progress draft](./standard_template/standard). 
-- [Best Practice document, as a work-in-progress draft](./BestPractice.md)
 
 It will also contain the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) of meetings on the associated Wiki pages. 
 
