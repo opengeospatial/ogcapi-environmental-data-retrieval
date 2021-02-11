@@ -21,7 +21,7 @@ OGC API - Features.
 `/collections/{collectionId}/items`
 
 e.g.  
-return query parameters to retrieve trapical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an <<area-definition,area>> query end point, a time range, a list of available parameters, and a representative geojson geometry.
+return query parameters to retrieve tropical storms using OGC API - Features and the EDR FeatureCollection GeoJSON schema. Each item would include an <<area-definition,area>> query end point, a time range, a list of available parameters, and a representative geojson geometry.
 
 `/collections/tropical_storms/items`
 
