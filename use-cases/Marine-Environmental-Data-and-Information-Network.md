@@ -1,0 +1,3 @@
+The British Oceanographic Data Centre (BODC) is part of the UK's Marine Environmental Data and Information Network (MEDIN)
+
+MEDIN plans to trial the Environmental Data Retrieval API for the UK marine community by funding 2 (or more) of the MEDIN Data Centres to implement the EDR API for their data holdings, so that we can trial how it works for disparate marine data. The pilot study will include feedback (to MEDIN) and also to OGC to help the wider UK marine community understand the implications and benefits of adopting the OGC EDR API. Our overall aim for this work is to streamline access to UK marine data and this pilot will help us understand whether the OGC EDR API is the appropriate means to do so.  
