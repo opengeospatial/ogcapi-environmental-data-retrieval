@@ -77,6 +77,8 @@ The EDR API Standard Working Group charter lists initial deliverables in [sectio
 
 In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. 
 
+**Conformance Test Suite** work is starting at the beginning of 2021.
+
 ### Draft Spec
 
 The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
