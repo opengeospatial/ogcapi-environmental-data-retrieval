@@ -9,7 +9,7 @@ The **OGC API - Environmental Data Retrieval** candidate standard is part of the
 ### EDR API Query Patterns
 The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. The main patterns are:
 - **1 - Position**: Retrieve data for point/position for several parameters at a time instant, or as a timeseries, or as a vertical profile for a time instant.
-- **2 - Area**:  Retrieve data within a polygon or rectangular tile/subset at a time instant, or a timeseries, or a vertical profile for a time instant.
+- **2 - Area**:  Retrieve data within a polygon or rectangular tile/subset at a time instant, or as a timeseries, or as a vertical profile for a time instant.
 - **3 - Trajectory and Corridor**: Retrieve data along a 2D, 3D or 4D trajectory or within a defined corridor around a trajectory.
 
 These patterns would be accessed through endpoints like:
