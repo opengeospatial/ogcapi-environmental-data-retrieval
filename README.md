@@ -42,20 +42,20 @@ The Environmental Data Retrieval (EDR) API can be considered both a 'simple' API
 
 It is considered a 'simple' API because:
 * From an implementation viewpoint, the specification encourages a 'core' plus 'plug-in' framework;
-*	It does not require much domain knowledge compared to other OGC WxS and API standards;
-*       It uses Key/Value pairs;
-*	The metadata is based on the data being queried and is not verbose;
-*	The queries are “fixed” and predefined in the OpenAPI definition;
-*	The specification encourages the data publisher to publish data in fixed formats that are described within the metadata in a simple way.
+* It does not require much domain knowledge compared to other OGC WxS and API standards;
+* It uses Key/Value pairs;
+* The metadata is based on the data being queried and is not verbose;
+* The queries are “fixed” and predefined in the OpenAPI definition;
+* The specification encourages the data publisher to publish data in fixed formats that are described within the metadata in a simple way.
 
 It is considered a 'convenience' API because:
-*	It complements and provides synergy with other OGC APIs;
-*	The query patterns allow users to get just the data that they need;
-*	Users do not need to know the structure of the underlying data;
-*	It is not constrained to a particular data structure susch as grids, point clouds, features, etc.;
-*	It hides the complication of any underlying time structures because queries retrieve data for the time(s) that the user selects;
-	It is the responsibility of the publisher to simplify appropriately the output, making it convenient for the user to consume the data;
-*	Implementations are constrained by the API definition, so all implementations will have the same URL structure.
+* It complements and provides synergy with other OGC APIs;
+* The query patterns allow users to get just the data that they need;
+* Users do not need to know the structure of the underlying data;
+* It is not constrained to a particular data structure susch as grids, point clouds, features, etc.;
+* It hides the complication of any underlying time structures because queries retrieve data for the time(s) that the user selects;
+* It is the responsibility of the publisher to simplify appropriately the output, making it convenient for the user to consume the data;
+* Implementations are constrained by the API definition, so all implementations will have the same URL structure.
 
 The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic as to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of, or a model of, real world phenomena. While the former is the emphasis, EDR APIs can provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier. There is an assumption that the data store is non-sparse, in that most queries are expected to return useful values rather than 'data not found'.
 
