@@ -26,7 +26,7 @@ There are also other variants of these query patterns to make the API easier and
 
 - **4 - Radius**: Retrieve data within a specified horizontal radius of a point/position 
 
-- **5 - Cube**: Retrieve data within a specified 2-D, 3-D, or 4-D bounding box. [Note: Currently the bounding box is specified as a polygon.]
+- **5 - Cube**: Retrieve data within a specified 2D, 3D, or 4D bounding box. [Note: Currently the bounding box is specified as a polygon.]
 
 - **6 - Location** Retrieve data for point/position identified by a name rather than coordinates.
 
