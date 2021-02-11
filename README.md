@@ -12,6 +12,8 @@ The EDR API allows a query, constructed of a spatio-temporal pattern, to retriev
 - **2 - Area**:  Retrieve data within a polygon or rectangular tile/subset at a time instant, or as a timeseries, or as a vertical profile for a time instant.
 - **3 - Trajectory and Corridor**: Retrieve data along a 2D, 3D or 4D trajectory or within a defined corridor around a trajectory.
 
+Each of these patterns is optional, but a compliant API should implement at least one of them.
+
 These patterns would be accessed through endpoints like:
 
 ```
@@ -33,8 +35,6 @@ There are also other variants of these query patterns to make the API easier and
 - **7 - Items** Retrieve a feature by identifier. The coordinates in the feature could be used to create an EDR query. The feature could also be a previously stored query. Compatible with OGC API - Features - Part 1: Core.
 
 - **8 - Instance** This allows discrimination between different versions of a collection. [Note: This may become part of API - Common as hierarchical collections.]
-
-- **9 - Ensembles**: Support for explicitly related ensembles of EDR resources, such as simply derived statistical data. [Note: This will be in a later version.]
 
 ### EDR API Vision
 
