@@ -77,7 +77,7 @@ The EDR API Standard Working Group charter lists initial deliverables in [sectio
 
 In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. 
 
-## Draft Spec
+### Draft Spec
 
 The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
 
@@ -88,7 +88,7 @@ The latest draft of the standard in this repository is built daily (based on the
 
 * [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html) 
 
-## [Contributing](CONTRIBUTING.md)
+### Contributing
 
 The contributor understands that any contributions, if accepted by the OGC Membership, shall be incorporated into OGC standards documents and that all copyright and intellectual property shall be vested to the OGC.
 
