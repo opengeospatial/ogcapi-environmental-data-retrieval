@@ -167,7 +167,7 @@ paths:
       operationId: getDataForPoint
       parameters:
         - $ref: parameters/collectionId.yaml
-        - $ref: parameters/pointCoords.yaml
+        - $ref: parameters/positionCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml        
@@ -669,7 +669,7 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/instanceId.yaml
-        - $ref: parameters/pointCoords.yaml        
+        - $ref: parameters/positionCoords.yaml
         - $ref: parameters/z.yaml
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml

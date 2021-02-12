@@ -286,7 +286,7 @@
             "$ref": "parameters/collectionId.json"
           },
           {
-            "$ref": "parameters/pointCoords.json"
+            "$ref": "parameters/positionCoords.json"
           },
           {
             "$ref": "parameters/z.json"
@@ -1163,7 +1163,7 @@
             "$ref": "parameters/instanceId.json"
           },
           {
-            "$ref": "parameters/pointCoords.json"
+            "$ref": "parameters/positionCoords.json"
           },
           {
             "$ref": "parameters/z.json"
