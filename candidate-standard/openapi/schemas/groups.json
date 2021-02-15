@@ -25,7 +25,7 @@
         },
         {
           "href": "http://schemas.example.org/1.0/foobar.xsd",
-          "rel": "describedBy",
+          "rel": "describedby",
           "type": "application/xml",
           "title": "XML schema for Acme Corporation data"
         }
