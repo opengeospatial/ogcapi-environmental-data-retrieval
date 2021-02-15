@@ -855,7 +855,13 @@
             "$ref": "parameters/corridor-width.json"
           },
           {
+            "$ref": "parameters/width-units.json"
+          },
+          {
             "$ref": "parameters/corridor-height.json"
+          },
+          {
+            "$ref": "parameters/height-units.json"
           },
           {
             "$ref": "parameters/resolution-x.json"
@@ -1747,7 +1753,13 @@
             "$ref": "parameters/corridor-width.json"
           },
           {
+            "$ref": "parameters/width-units.json"
+          },
+          {
             "$ref": "parameters/corridor-height.json"
+          },
+          {
+            "$ref": "parameters/height-units.json"
           },
           {
             "$ref": "parameters/resolution-x.json"

@@ -71,9 +71,17 @@ include::requirements/edr/REQ_rc-corridor-height-definition.adoc[]
 
 include::requirements/edr/REQ_rc-corridor-height-response.adoc[]
 
+include::requirements/edr/REQ_rc-height-units-definition.adoc[]
+
+include::requirements/edr/REQ_rc-height-units-response.adoc[]
+
 include::requirements/edr/REQ_rc-corridor-width-definition.adoc[]
 
 include::requirements/edr/REQ_rc-corridor-width-response.adoc[]
+
+include::requirements/edr/REQ_rc-width-units-definition.adoc[]
+
+include::requirements/edr/REQ_rc-width-units-response.adoc[]
 
 include::requirements/core/REQ_http.adoc[]
 
