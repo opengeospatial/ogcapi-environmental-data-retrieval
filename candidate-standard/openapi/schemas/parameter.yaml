@@ -16,6 +16,19 @@ properties:
     properties:
       en:
         type: string
+  label:
+    type: object
+    required:
+      - en
+    properties:
+      en:
+        type: string
+  data-type:
+    description: Data type of returned parameter
+    enum:
+      - integer
+      - float
+      - string                
   unit:
     $ref: units.yaml
   observedProperty:

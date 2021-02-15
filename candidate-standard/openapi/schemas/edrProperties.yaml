@@ -26,7 +26,6 @@ properties:
       type: array
       title: Available Parameters
       description: Unique IDs of available parameters, this is the value used for querying the data and corresponds to an ID in the parameter metadata of the collection.
-      default: []
       items:
           type: string
           title: Parameter ID list
