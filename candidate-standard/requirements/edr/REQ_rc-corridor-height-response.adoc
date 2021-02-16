@@ -2,7 +2,7 @@
 ==== *Requirement {counter:req-id}: /req/edr/corridor-height-response* Parameter corridor-height response
 [width="90%",cols="2,6a"]
 |===
-^|A|If the `corridor-height` parameter is defined the result set SHALL contain values derieved based on the chosen interpolation algorithm at the number of specifed intervals.
+^|A|If the `corridor-height` parameter is defined the result set SHALL contain values derived from the chosen interpolation algorithm at the number of specifed intervals.
 
 
 [source,java]
