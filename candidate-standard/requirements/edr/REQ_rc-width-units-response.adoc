@@ -2,7 +2,7 @@
 ==== *Requirement {counter:req-id}: /req/edr/width-units-response* Parameter width-units response
 [width="90%",cols="2,6a"]
 |===
-^|A|If the `width-units` parameter is defined the result set SHALL contain values derieved based on the chosen units.
+^|A|If the `width-units` parameter is defined the result set SHALL contain values derived based on the chosen units.
 
 
 [source,java]
