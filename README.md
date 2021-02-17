@@ -77,6 +77,8 @@ The EDR API Standard Working Group charter lists initial deliverables in [sectio
 
 In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. 
 
+**Implementations** are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
+
 **Conformance Test Suite** work is starting at the beginning of 2021.
 
 ### Draft Spec
@@ -84,7 +86,13 @@ In December 2020, the OGC Technical Committee agreed, with no objections to unan
 The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
 
 * [OGC API - Environmental Data Retrieval Standard](http://docs.opengeospatial.org/DRAFTS/19-086.html)
-* DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
+* DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html) Future Work
+
+### Future Work
+
+Proposed changes and extensions to the standard will be documented in the folder [proposals](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/master/proposals).
+
+Longer term work is being recorded [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Future-Work)
 
 ### Best Practice
 
