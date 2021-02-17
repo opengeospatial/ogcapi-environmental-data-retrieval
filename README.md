@@ -99,7 +99,7 @@ In December 2020, the OGC Technical Committee agreed, with no objections to unan
 
 ### Best Practice
 
-* [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html) 
+* [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html) - No Content yet
 
 ### Contributing
 
