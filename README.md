@@ -61,38 +61,41 @@ The EDR API can be considered a 'Sampling API'. EDR queries create discrete samp
 
 ## Progress
 
-The repository contains:
-  
-- [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
-- [Standard document, as a work-in-progress draft](./standard_template/standard). 
-
-It also contains the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) of meetings on the associated Wiki pages. 
-
-### EDR API Standard Working Group
-The EDR API Standard Working Group charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
-
-**The public comment period on the EDR API closed 28th September 2020.** [Go here for more information.](https://www.ogc.org/standards/requests/215)
-
-**A public Hackathon/Sprint** was held [virtually in March 2020](https://github.com/opengeospatial/EDR-API-Sprint) and another was held [9-10 November 2020](https://github.com/opengeospatial/OGCAPI-EDR-Sprint2) to help finalise the specification. There was a **public Webinar** outlining the Sprint's objectives on Wednesday 4 November 2020.
-
-In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. 
-
-**Implementations** are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
-
-**Conformance Test Suite** work is starting at the beginning of 2021.
-
 ### Draft Spec
 
 The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
 
 * [OGC API - Environmental Data Retrieval Standard](http://docs.opengeospatial.org/DRAFTS/19-086.html)
-* DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html) Future Work
+* DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
+
+### Implementations
+
+Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
 
 ### Future Work
 
 Proposed changes and extensions to the standard will be documented in the folder [proposals](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/master/proposals).
 
 Longer term work is being recorded [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Future-Work)
+
+**Conformance Test Suite** work is starting at the beginning of 2021.
+
+### EDR API Standard Working Group
+
+The repository contains:
+  
+- [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
+- [Standard document, as a work-in-progress draft](./standard_template/standard).
+
+The charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
+
+The repository also contains the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) of meetings on the associated Wiki pages. 
+
+**The public comment period on the EDR API closed 28th September 2020.** [Go here for more information.](https://www.ogc.org/standards/requests/215)
+
+**A public Hackathon/Sprint** was held [virtually in March 2020](https://github.com/opengeospatial/EDR-API-Sprint) and another was held [9-10 November 2020](https://github.com/opengeospatial/OGCAPI-EDR-Sprint2) to help finalise the specification. There was a **public Webinar** outlining the Sprint's objectives on Wednesday 4 November 2020.
+
+In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. 
 
 ### Best Practice
 
