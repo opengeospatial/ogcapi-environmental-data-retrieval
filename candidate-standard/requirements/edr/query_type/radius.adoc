@@ -7,7 +7,9 @@ The Radius query returns data within the defined radius of the requested coordin
 <<req_edr_coords-response>>
 
 position(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string. To retrieve data for a single location:
+(wkt) string. 
+
+To retrieve data for a single location:
 
 POINT(x y) 
 
