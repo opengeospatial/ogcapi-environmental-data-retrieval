@@ -70,18 +70,14 @@ i.e. Define a Radius of 5 miles from the location defined by the coords query pa
 
 ===== *Parameter z*
 
-Define the vertical level to return data from 
+Define the vertical level to return data from, i.e. z=level
 
-i.e. z=level
-
-if data at all available levels is required z can be defined as ALL
-
-i.e. z=ALL
+if data at all available levels is required z can be defined as ALL, i.e. z=ALL
 
 .A single vertical level
 ===========
 
-For example if the 80m level is being queried
+For example if the 80m level is being queried:
 
 `z=80`
 ===========
