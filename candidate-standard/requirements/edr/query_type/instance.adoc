@@ -31,10 +31,10 @@ The queryType options are exactly the same as those available to <<collection-de
 see the <<query-resources-section>> section for details of the query parameters supported by the queryTypes.
 
 
-. A point query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>> 
+. A posiotion query on an Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>> 
 =================
 
-/collections/metar/instance/raw/point
+/collections/metar/instance/raw/position
 
 
 =================
