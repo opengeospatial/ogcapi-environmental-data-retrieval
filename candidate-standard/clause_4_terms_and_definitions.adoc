@@ -46,7 +46,7 @@ SOURCE: https://www.iso.org/standard/32551.html[ISO 19133:2005]:
 [[radius-definition]]
 === radius
 
-region specified with a geographic point and radial distance
+region specified with a geographic position and radial distance
 
 [[trajectory-definition]]
 === trajectory
