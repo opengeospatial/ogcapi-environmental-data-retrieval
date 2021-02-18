@@ -7,7 +7,7 @@
 
 [source,java]
 ----
-corridor-width = width "/" units
+corridor-width = width 
 ---- 
 ^|C |If the width value is the total width of the corridor. 
 ^|D |The coordinates of the `coords` parameter define the centre point of the corridor. 

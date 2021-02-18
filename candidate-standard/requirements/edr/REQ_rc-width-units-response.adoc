@@ -1,0 +1,13 @@
+[[req_edr_height_units-response]]
+==== *Requirement {counter:req-id}: /req/edr/width-units-response* Parameter width-units response
+[width="90%",cols="2,6a"]
+|===
+^|A|If the `width-units` parameter is defined the result set SHALL contain values derived based on the chosen units.
+
+
+[source,java]
+----
+width-units = units 
+---- 
+^|B |If an unsupported units value is requested a `400` error should be returned. 
+|===

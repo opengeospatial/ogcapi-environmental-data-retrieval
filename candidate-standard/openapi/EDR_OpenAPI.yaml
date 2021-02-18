@@ -485,7 +485,9 @@ paths:
         - $ref: parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml         
         - $ref: parameters/corridor-width.yaml
+        - $ref: parameters/width-units.yaml
         - $ref: parameters/corridor-height.yaml
+        - $ref: parameters/height-units.yaml
         - $ref: parameters/resolution-x.yaml
         - $ref: parameters/resolution-z.yaml
         - $ref: parameters/crs.yaml            
@@ -993,7 +995,9 @@ paths:
         - $ref: parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/corridor-width.yaml
+        - $ref: parameters/width-units.yaml
         - $ref: parameters/corridor-height.yaml
+        - $ref: parameters/height-units.yaml
         - $ref: parameters/resolution-x.yaml
         - $ref: parameters/resolution-z.yaml
         - $ref: parameters/crs.yaml        

@@ -1,0 +1,17 @@
+[[req_edr_height_units-definition]]
+==== *Requirement {counter:req-id}: /req/edr/height-units-definition* Parameter height-units definition
+[width="90%",cols="2,6a"]
+|===
+^|A |Each corridor resource collection operation SHALL support a parameter `height-units` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: height-units
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===
