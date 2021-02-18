@@ -53,7 +53,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 [width="90%",cols="2,1,4",options="header"]
 |===
 ^|**Path Template** ^|**Query Type** ^|**Description**
-|/collections/{collectionId}/position | Position | Return data for the requested <<position-definition,point location>>
+|/collections/{collectionId}/position | Position | Return data for the requested <<position-definition,position location>>
 |/collections/{collectionId}/radius | Radius | Return data within a given <<radius-definition,radius>> of a position
 |/collections/{collectionId}/area | Area | Return data for the requested <<area-definition,area>>
 |/collections/{collectionId}/cube | Cube | Return data for a spatial <<cube-definition,cube>>
