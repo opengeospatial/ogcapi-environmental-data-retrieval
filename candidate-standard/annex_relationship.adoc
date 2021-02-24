@@ -1,0 +1,34 @@
+[appendix]
+:appendix-caption: Annex
+[[relationship]]
+== Relationship With Other OGC Standards
+
+=== Introduction
+
+This Annex outlines the relationships, in terms of underlying conceptual models, overlaps, gaps, and target use cases and technologies, with other OGC standards, both established approved Standards and those that are being developed at the time of approval of this Standard.
+
+=== Relationship with Established Standards
+
+:sectnums!:
+
+include::relationships/coverages.adoc[]
+
+include::relationships/coverages_metocean_app_profile.adoc[]
+
+include::relationships/api_features.adoc[]
+
+include::relationships/moving_features.adoc[]
+    
+include::relationships/sensor_things_api.adoc[]
+
+include::relationships/sensor_observation_service.adoc[]
+    
+:sectnums:
+
+=== Relationship with Developing Standards
+
+:sectnums!:
+
+include::relationships/api_coverages.adoc[]
+
+:sectnums:
