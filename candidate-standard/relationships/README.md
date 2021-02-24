@@ -1,8 +1,8 @@
-Relationship files go here in this folder
+There is now an Annex in the EDR API Specification describing the relationship to several other OGC standards. 
 
-In AsciiDoc format
+One AsciiDoc format file  goes here in this folder for each OGC standard. 
 
-Probably need 
+**Probably need for current standards:** 
 
 relationships/coverages.adoc
 
@@ -16,7 +16,7 @@ relationships/sensor_things_api.adoc
 
 relationships/sensor_observation_service.adoc
 
-A.1. Relationship with Developing Standards
+**For relationship with Developing Standards**
 
 relationships/api_coverages.adoc
 
