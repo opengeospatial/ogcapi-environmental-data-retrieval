@@ -1,8 +1,0 @@
-// [[ats_collections_rc-response]]
-[width="90%",cols="2,6a"]
-|===
-^|*Abstract Test {counter:ats-id}* |*/conf/collections/rc-response*
-^|Test Purpose |Validate that the Resource Collection complies with the require structure and contents.
-^|Requirement |<<req_collections_rc-response,/req/collections/rc-response>>
-^|Test Method |The test method is specific to the resource type returned.
-|===

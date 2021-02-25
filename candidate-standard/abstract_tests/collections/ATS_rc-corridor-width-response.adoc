@@ -1,0 +1,9 @@
+// [[ats_collections_rc-corridor-width-response]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/collections/REQ_rc-corridor-width-response*
+^|Test Purpose |Validate that the `corridor-width` query parameters are processed correctly.
+^|Requirement |<<req_collections_rc-corridor-width-response,/req/edr/REQ_rc-corridor-width-response>>
+^|Test Method |. Verify that an `400` error will be generated if corridor-width is not specified 
+. Validate that the `corridor-width` parameter complies with the syntax described in <<req_collections_rc-corridor-width-response,/req/edr/REQ_rc-corridor-width-response>>.
+|===

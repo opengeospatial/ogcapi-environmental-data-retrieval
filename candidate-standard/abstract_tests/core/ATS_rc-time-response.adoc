@@ -1,10 +1,10 @@
 //[[ats_core_rc-time-response]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-time-response*
+^|*Abstract Test {counter:ats-id}* |*/conf/core/datetime-response*
 ^|Test Purpose |Validate that the dataTime query parameters are processed correctly.
-^|Requirement |<<req_core_rc-time-response,/req/core/rc-time-response>>
+^|Requirement |<<req_core_rc-time-response,/req/core/datetime-response>>
 ^|Test Method |. Verify that only resources that have a temporal geometry that intersects the temporal information in the `datetime` parameter were included in the result set
 . Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set
-. Validate that the dateime parameter complies with the syntax described in <<req_core_rc-time-response,/req/core/rc-time-response>>.
+. Validate that the dateime parameter complies with the syntax described in <<req_core_rc-time-response,/req/core/datetime-response>>.
 |===

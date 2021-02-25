@@ -1,9 +1,9 @@
 [[ats_core_api_definition-op]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/core/api-definition-op*
+^|*Abstract Test {counter:ats-id}* |*/conf/core/api-definition*
 ^|Test Purpose |Validate that the API Definition document can be retrieved from the expected location.
-^|Requirement |<<req_core_api-definition-op,/req/core/api-definition-op>>
+^|Requirement |<<req_core_api-definition-op,/req/core/api-definition>>
 ^|Test Purpose |Validate that the API Definition document can be retrieved from the expected location.
 ^|Test Method |. Construct a path for each API Definition link on the landing page
 . Issue a HTTP GET request on each path

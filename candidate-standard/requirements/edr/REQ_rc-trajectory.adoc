@@ -1,0 +1,14 @@
+[[req_edr_rc-trajectory]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/edr/rc-trajectory* 
+^|A |For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/trajectory`.
+^|B |The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
+^|C |A `trajectory` GET operation MUST include a `coords` query parameter
+^|D |If the `coords` query parameter is not specified a HTTP `400` error should be generated
+^|E |A `trajectory` GET operation MAY include a `z` query parameter
+^|F |A `trajectory` GET operation SHOULD include a `parameter-name` query parameter
+^|G |A `trajectory` GET operation MAY include a `datetime` query parameter
+^|H |A `trajectory` GET operation SHOULD include a `crs` query parameter
+^|I |A `trajectory` GET operation SHOULD include a `f` query parameter
+|===

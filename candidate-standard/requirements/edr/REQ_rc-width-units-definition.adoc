@@ -1,5 +1,5 @@
 [[req_edr_width_units-definition]]
-==== *Requirement {counter:req-id}: /req/edr/width-units-definition* Parameter width-units definition
+==== *Requirement {counter:req-id}: /req/edr/REQ_rc-width-units-definition* Parameter width-units definition
 [width="90%",cols="2,6a"]
 |===
 ^|A |Each corridor resource collection operation SHALL support a parameter `width-units` with the following characteristics (using an OpenAPI Specification 3.0 fragment):

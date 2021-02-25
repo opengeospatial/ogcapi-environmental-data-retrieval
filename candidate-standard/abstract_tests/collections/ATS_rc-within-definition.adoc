@@ -1,0 +1,19 @@
+// [[ats_collections_rc-within-definition]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/REQ_rc-within-definition*
+^|Test Purpose |Validate that the `within` query parameter is constructed correctly.
+^|Requirement |<<req_collections_rc-within-definition,/req/edr/within-definition>>
+^|Test Method |Verify that the `within` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: within
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===
