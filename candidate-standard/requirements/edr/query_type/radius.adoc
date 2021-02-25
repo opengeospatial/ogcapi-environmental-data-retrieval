@@ -6,30 +6,32 @@ The Radius query returns data within the defined radius of the requested coordin
 
 <<req_edr_coords-response>>
 
-location(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string. To retrieve data for a single location :
+position(s) to return data for, the coordinates are defined by a Well Known Text
+(wkt) string. 
+
+To retrieve data for a single location:
 
 POINT(x y) 
 
-A point at height `z`
+A position at height `z`:
+
 POINT(x y z)
 
-And for a list of locations
+And for a list of positions:
 
 MULTIPOINT\((x y),(x1 y1),(x2 y2),(x3 y3))
 
-And for a list of locations at defined heights
+And for a list of positions at defined heights:
 
 MULTIPOINT\((x y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3))
 
-see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+See http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
 
-The coordinate values will depend on the CRS parameter. If this is not defined
-the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude)
+The coordinate values will depend on the CRS parameter. If this is not defined, the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude)
 
 .Single location
 =================
-retrieve data for Greenwich, London
+Retrieve data for Greenwich, London
 
 `coords=POINT(0 51.48)`
 =================
@@ -51,7 +53,7 @@ The units supported by the collection will be listed in the collections end poin
 
 .Define a 20Km radius
 ===========
-i.e. Define the a Radius of 20 Km from the location defined by the coords query parameter  
+I.e. Define a Radius of 20 Km from the position defined by the coords query parameter  
 
 `within=20&within-units=km`
 
@@ -59,7 +61,7 @@ i.e. Define the a Radius of 20 Km from the location defined by the coords query 
 
 .Define a 5 mile radius
 ===========
-i.e. Define the a Radius of 5 miles from the location defined by the coords query parameter  
+i.e. Define a Radius of 5 miles from the location defined by the coords query parameter  
 
 `within=5&within-units=miles`
 
@@ -68,16 +70,14 @@ i.e. Define the a Radius of 5 miles from the location defined by the coords quer
 
 ===== *Parameter z*
 
-Define the vertical level to return data from 
-i.e. z=level
+Define the vertical level to return data from, i.e. z=level
 
-if data at all available levels is required z can be defined as ALL
-i.e. z=ALL
+if data at all available levels is required z can be defined as ALL, i.e. z=ALL
 
 .A single vertical level
 ===========
 
-For example if the 80m level is being queried
+For example if the 80m level is being queried:
 
 `z=80`
 ===========
@@ -88,8 +88,7 @@ For example if the 80m level is being queried
 `z=ALL`
 ===========
 
-When not specified the API MUST return data from all available levels.
-
+When z is not specified, the API MUST return data from all available levels.
 
 ===== <<time>>
 

@@ -39,12 +39,14 @@ version, release, or run of a given data collection
 [[position-definition]]
 === position
 
-a place specified with a geographic point
+data type that describes a point or geometry potentially occupied by an object or person
+
+SOURCE: https://www.iso.org/standard/32551.html[ISO 19133:2005]:
 
 [[radius-definition]]
 === radius
 
-region specified with a geographic point and radial distance
+region specified with a geographic position and radial distance
 
 [[trajectory-definition]]
 === trajectory
