@@ -61,8 +61,8 @@ Clients:
 - [Example Client](https://data-api.mdl.nws.noaa.gov/EDR-CLIENT-API)
 
 Server description: implemented using `pygeoapi` to provide a visual interface client. 
- Supports position, area, and cube queries. Provides schema support for CoverageJSON, JSON, 
- text, XML (IWXXM), and GRIB. Implementation uses open source software such as Flask, Xarray,
+ Supports position, area, cube and XY trajectory queries. Provides schema support for CoverageJSON, JSON, 
+ text, XML (IWXXM), GRIB and netCDF. Implementation uses open source software such as Flask, Xarray,
  Dask, and Zarr to name a few.
  
 Client description: A series of simple clients demonstrating the feature extraction of a position 
