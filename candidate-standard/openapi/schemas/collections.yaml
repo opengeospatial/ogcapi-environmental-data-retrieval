@@ -11,7 +11,7 @@ properties:
       - href: http://www.example.org/edr/collections
         hreflang: en
         rel: self
-        type: application/jyamlson
+        type: application/yaml
       - href: http://www.example.org/edr/collections?f=html
         hreflang: en
         rel: alternate
