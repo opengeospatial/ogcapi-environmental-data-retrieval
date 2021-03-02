@@ -3,7 +3,7 @@
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-z-definition*
 ^|Test Purpose |Validate that the vertical level query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-z-definition,/req/edr/rc-z-definition>>
+^|Requirement |<<req_edr_z-definition,/req/edr/rc-z-definition>>
 ^|Test Method |Verify that the `z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

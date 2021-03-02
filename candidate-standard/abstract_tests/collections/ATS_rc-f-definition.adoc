@@ -1,9 +1,9 @@
-// [[ats_collections_rc-outputformat-definition]]
+// [[ats_collections_rc-f-definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-outputformat-definition*
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-f-definition*
 ^|Test Purpose |Validate that the `f` query parameter is constructed correctly.
-^|Requirement |<<req_collections_rc-outputformat-definition,/req/edr/rc-outputformat-definition>>
+^|Requirement |<<req_edr_f-definition,/req/edr/rc-f-definition>>
 ^|Test Method |Verify that the `f` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

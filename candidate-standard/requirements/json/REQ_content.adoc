@@ -1,0 +1,10 @@
+[[req_json_content]] 
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/json/content* 
+^|A |Every `200`-response with the media type `application/json` SHALL be
+
+^|B |The links specified in the requirements `/req/core/rc-collection-info-links` and `/req/core/rc-collection-info-links` MAY be added in a extension property (foreign member) with the name `links`.
+^|C |The parameters specified in the requirements `/req/edr/rc-parameters` MAY be added in a extension property (foreign member) with the name `parameters`.
+^|D |The schema of all responses with the media type `application/json` SHALL conform with the JSON Schema specified for the resource in the <<rc_core,Core>> requirements class.
+|===

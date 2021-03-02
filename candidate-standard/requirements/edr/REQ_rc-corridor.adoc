@@ -1,0 +1,24 @@
+[[req_edr_rc-corridor]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/edr/rc-corridor* 
+^|A |For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/corridor`.
+^|B |The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
+^|C |A `corridor` GET operation MUST include a `coords` query parameter
+^|D |If the `coords` query parameter is not specified a HTTP `400` error should be generated
+^|E |A `corridor` GET operation MUST include a `corridor-width` query parameter
+^|F |If the `corridor-width` query parameter is not specified a HTTP `400` error should be generated
+^|G |A `corridor` GET operation MUST include a `corridor-height` query parameter
+^|H |If the `corridor-height` query parameter is not specified a HTTP `400` error should be generated
+^|I |A `corridor` GET operation MUST include a `width-units` query parameter
+^|J |If the `width-units` query parameter is not specified a HTTP `400` error should be generated
+^|K |If the `width-units` query parameter value is not one of the supported values a HTTP `400` error should be generated
+^|L |A `corridor` GET operation MUST include a `height-units` query parameter
+^|M |If the `height-units` query parameter is not specified a HTTP `400` error should be generated
+^|N |If the `height-units` query parameter value is not one of the supported values a HTTP `400` error should be generated
+^|O |A `corridor` GET operation MAY include a `z` query parameter
+^|P |A `corridor` GET operation SHOULD include a `parameter-name` query parameter
+^|Q |A `corridor` GET operation MAY include a `datetime` query parameter
+^|R |A `corridor` GET operation SHOULD include a `crs` query parameter
+^|S |A `corridor` GET operation SHOULD include a `f` query parameter
+|===

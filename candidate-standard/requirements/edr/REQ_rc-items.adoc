@@ -1,0 +1,7 @@
+[[req_core_rc-items]]
+[width="90%",cols="2,6a"]
+|===
+^|*Requirement {counter:req-id}* |*/req/edr/rc-items* 
+^|A |For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/items`.
+^|B |The parameter `collectionId` is each `id` property in the feature collections response (JSONPath: `$.collections[*].id`).
+|===

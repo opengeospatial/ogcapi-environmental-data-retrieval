@@ -1,5 +1,5 @@
 [[req_edr_within-response]]
-==== *Requirement {counter:req-id}: /req/edr/within-response* Parameter within response
+==== *Requirement {counter:req-id}: /req/edr/REQ_rc-within-response* Parameter within response
 [width="90%",cols="2,6a"]
 |===
 ^|A |If the `within` parameter is provided, all selected information within the specified radius SHALL be part of the result set.

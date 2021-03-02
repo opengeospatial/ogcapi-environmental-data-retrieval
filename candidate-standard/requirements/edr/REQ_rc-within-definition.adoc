@@ -1,5 +1,5 @@
 [[req_edr_within-definition]]
-==== *Requirement {counter:req-id}: /req/edr/within-definition* Parameter within definition
+==== *Requirement {counter:req-id}: /req/edr/REQ_rc-within-definition* Parameter within definition
 [width="90%",cols="2,6a"]
 |===
 ^|A |Each resource collection operation MAY support a parameter `within`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
@@ -9,7 +9,7 @@
 ----
 name: within
 in: query
-required: false
+required: true
 schema:
   type: string
 style: form

@@ -1,0 +1,19 @@
+// [[ats_collections_rc-height-units-definition]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/REQ_rc-height-units-definition*
+^|Test Purpose |Validate that the `height-units` query parameter is constructed correctly.
+^|Requirement |<<req_collections_rc-height-units-definition,/req/edr/REQ_rc-height-units-definition>>
+^|Test Method |Verify that the `within-units` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: height-units
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

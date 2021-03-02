@@ -1,0 +1,9 @@
+{
+  "name": "z",
+  "in": "query",
+  "description": "Define the vertical level to return data from \ni.e. z=level\n\nfor instance if the 850hPa pressure level is being queried\n\nz=850\n\nor a range to return data for all levels between and including 2 defined levels\ni.e. z=minimum value/maximum value\n\nfor instance if all values between and including 10m and 100m\n\nz=10/100\n\nfinally a list of height values can be specified\ni.e. z=value1,value2,value3\n\nfor instance if values at 2m, 10m and 80m are required\n\nz=2,10,80\n\nWhen not specified data from all available heights SHOULD be returned\n",
+  "required": false,
+  "schema": {
+    "type": "string"
+  }
+}

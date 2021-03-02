@@ -1,9 +1,9 @@
 [[ats_core_bbox-definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/core/bbox-definition*
+^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-bbox-definition*
 ^|Test Purpose |Validate that the bounding box query parameters are constructed correctly.
-^|Requirement |<<req_core_bbox-definition,/req/core/bbox-definition>>
+^|Requirement |<<req_core_rc-bbox-definition,/req/core/rc-bbox-definition>>
 ^|Test Method |Verify that the `bbox` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

@@ -1,14 +1,14 @@
 //[[ats_collections_rc-time-definition]]
 [width="90%",cols="2,6a"]
 |===
-^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-time-definition*
+^|*Abstract Test {counter:ats-id}* |*/conf/core/datetime-definition*
 ^|Test Purpose |Validate that the dateTime query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-time-definition,/req/core/datetime-parameter>>
-^|Test Method |Verify that the `time` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+^|Requirement |<<req_collections_rc-time-definition,/req/core/datetime-definition>>
+^|Test Method |Verify that the `datetime` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
-name: time
+name: datetime
 in: query
 required: false
 schema:

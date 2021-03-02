@@ -1,5 +1,5 @@
 [[req_edr_corridor-width-definition]]
-==== *Requirement {counter:req-id}: /req/edr/corridor-width-definition* Parameter corridor-width definition
+==== *Requirement {counter:req-id}: /req/edr/REQ_rc-corridor-width-definition* Parameter corridor-width definition
 [width="90%",cols="2,6a"]
 |===
 ^|A |Each resource collection operation SHALL support a parameter `corridor-width`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
