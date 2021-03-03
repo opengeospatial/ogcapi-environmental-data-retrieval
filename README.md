@@ -95,7 +95,7 @@ The repository also contains the plan of work and links to other relevant docume
 
 **A public Hackathon/Sprint** was held [virtually in March 2020](https://github.com/opengeospatial/EDR-API-Sprint) and another was held [9-10 November 2020](https://github.com/opengeospatial/OGCAPI-EDR-Sprint2) to help finalise the specification. There was a **public Webinar** outlining the Sprint's objectives on Wednesday 4 November 2020.
 
-In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. 
+In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an **electronic vote** to recommend the specification for public release as an OGC Standard. ** The OGC TC e-vote finishes on 8 March 2021 **
 
 ### Best Practice
 
