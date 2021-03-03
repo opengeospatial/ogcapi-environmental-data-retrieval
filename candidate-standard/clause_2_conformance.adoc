@@ -42,7 +42,7 @@ The OGC API-Common Part 1:Core standard does not mandate any encoding or format 
 
 The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter 10)>>.
 
-* <<query-resources-section,Queries>>, eight Requirements classes
+* <<query-resources-section,Queries>>, nine Requirements classes
 ** <<rc_position-section,Position>>
 ** <<rc_radius-section,Radius>>
 ** <<rc_area-section,Area>>
@@ -57,6 +57,6 @@ The EDR API Queries Conformance class does not mandate any specific query patter
 
 An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <<position-definition,position>> (with elevation and time) does simplify interoperability so support for the <<rc_position-section,position>> query is highly recommended.
 
-At least one of the 8 queries shall be implemented.
+At least one of the 9 queries shall be implemented.
 
 The Queries Requirements Classes are specified in *Queries Requirements Classes* <<query-resources-section,(Chapter 9)>>.
