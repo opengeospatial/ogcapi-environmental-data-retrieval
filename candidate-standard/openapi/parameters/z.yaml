@@ -22,6 +22,15 @@ description: |+
 
     z=2,10,80
 
+    An Arithmetic sequence using Recurring height intervals, the difference is the number of recurrences is defined at the start 
+    and the amount to increment the height by is defined at the end
+
+    i.e. z=Rn/min height/height interval
+
+    so if the request was for 20 height levels 50m apart starting at 100m:
+
+    z=R20/100/50
+
     When not specified data from all available heights SHOULD be returned
 required: false
 schema:

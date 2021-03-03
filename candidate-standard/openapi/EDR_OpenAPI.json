@@ -616,28 +616,16 @@
             "$ref": "parameters/collectionId.json"
           },
           {
-            "$ref": "parameters/cubeCoords.json"
+            "$ref": "parameters/bbox.json"
           },
           {
-            "$ref": "parameters/min-z.json"
-          },
-          {
-            "$ref": "parameters/max-z.json"
+            "$ref": "parameters/cube-z.json"
           },
           {
             "$ref": "parameters/datetime.json"
           },
           {
             "$ref": "parameters/parameter-name.json"
-          },
-          {
-            "$ref": "parameters/resolution-x.json"
-          },
-          {
-            "$ref": "parameters/resolution-y.json"
-          },
-          {
-            "$ref": "parameters/resolution-z.json"
           },
           {
             "$ref": "parameters/crs.json"
@@ -1508,28 +1496,16 @@
             "$ref": "parameters/instanceId.json"
           },
           {
-            "$ref": "parameters/cubeCoords.json"
+            "$ref": "parameters/bbox.json"
           },
           {
-            "$ref": "parameters/min-z.json"
-          },
-          {
-            "$ref": "parameters/max-z.json"
+            "$ref": "parameters/cube-z.json"
           },
           {
             "$ref": "parameters/datetime.json"
           },
           {
             "$ref": "parameters/parameter-name.json"
-          },
-          {
-            "$ref": "parameters/resolution-x.json"
-          },
-          {
-            "$ref": "parameters/resolution-y.json"
-          },
-          {
-            "$ref": "parameters/resolution-z.json"
           },
           {
             "$ref": "parameters/crs.json"

@@ -1,0 +1,9 @@
+// [[ats_collections_rc-cube-z-response]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/rc-cube-z-response*
+^|Test Purpose |Validate that the vertical level query parameters are processed correctly.
+^|Requirement |<<req_edr_cube-z-response,/req/edr/cube-z-response>>
+^|Test Method |. Verify that only resources that have a vertical geometry that intersects the vertical information in the `z` parameter were included in the result set
+. Validate that the vertical level parameter complies with the syntax described in <<req_edr_cube-z-response,/req/edr/cube-z-response>>.
+|===

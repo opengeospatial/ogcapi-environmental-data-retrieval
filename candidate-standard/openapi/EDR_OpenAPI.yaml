@@ -354,14 +354,10 @@ paths:
       operationId: GetDataForCube
       parameters:
         - $ref: parameters/collectionId.yaml
-        - $ref: parameters/cubeCoords.yaml
-        - $ref: parameters/min-z.yaml
-        - $ref: parameters/max-z.yaml
+        - $ref: parameters/bbox.yaml
+        - $ref: parameters/cube-z.yaml
         - $ref: parameters/datetime.yaml        
-        - $ref: parameters/parameter-name.yaml
-        - $ref: parameters/resolution-x.yaml            
-        - $ref: parameters/resolution-y.yaml            
-        - $ref: parameters/resolution-z.yaml            
+        - $ref: parameters/parameter-name.yaml       
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
       responses:
@@ -862,14 +858,10 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/instanceId.yaml
-        - $ref: parameters/cubeCoords.yaml
-        - $ref: parameters/min-z.yaml
-        - $ref: parameters/max-z.yaml
+        - $ref: parameters/bbox.yaml
+        - $ref: parameters/cube-z.yaml
         - $ref: parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml
-        - $ref: parameters/resolution-x.yaml            
-        - $ref: parameters/resolution-y.yaml            
-        - $ref: parameters/resolution-z.yaml            
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml
       responses:

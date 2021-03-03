@@ -13,22 +13,11 @@
 ^|Test Method |. coords query parameter is not specified
 . Validate that a document was returned with a status code 400.
 
-^|*Abstract Test {counter:ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that an error is returned by a `Cube` query when the `min-z` query parameter is not specified.
-^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. Check that the min-z query parameter is specified (i.e. check there is a defined bottom of the cube)
-. Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that an error is returned by a `Cube` query when the `max-z` query parameter is not specified.
+^|Test Purpose |Validate that an error is returned by a `Cube` query when the coords query parameter does not contain a valid bbox value.
 ^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. Check that the max-z query parameter is specified (i.e. check that the top of the cube is defined)
-. Validate that a document was returned with a status code 400.
-
-^|*Abstract Test {counter:ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that an error is returned by a `Cube` query when the coords query parameter does not contain a valid POLYGON Well Known Text value.
-^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. Check coords query parameter is *Rectangular* area defined using a valid Well Known Text Polygon value, if the Well Known Text Polygon is not a rectangle throw an error  
+^|Test Method |. Check bbox query parameter is valid
 . Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/conf/cube*
@@ -39,15 +28,15 @@
 
 Repeat these tests using the following parameter tests:
 
-*Coordinates*
+*bbox*
 
-* Parameter <<req_edr_coords-definition,/req/edr/coords-definition>>
-* Response <<req_edr_coords-response,/req/edr/coords-response>>
+* Parameter <<req_core_rc-bbox-definition,/req/core/rc-bbox-definition>>
+* Response <<req_core_rc-bbox-response,/req/core/rc-bbox-response>>
 
 *VerticalLevel*
 
 * Parameter <<req_edr_z-definition,/req/edr/z-definition>>
-* Response <<req_edr_z-response,/req/edr/z-response>>
+* Response <<req_edr_cube-z-response,/req/edr/cube-z-response>>
 
 *Parameters*
 
@@ -59,19 +48,8 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
 * Response <<.req_core_rc-time-response,/req/core/datetime-response>>
 
-*min-z*
 
-* Parameter <<req_edr_min-z-definition,/req/edr/min-z-definition>>
-* Response <<req_edr_min-z-response,/req/edr/min-z-response>>
-
-*max-z*
-
-* Parameter <<req_edr_max-z-definition,/req/edr/max-z-definition>>
-* Response <<req_edr_max-z-response,/req/edr/max-z-response>>
-
-
-
-Execute requests with combinations of the "coords","time","parameter-name","min-z","max-z","crs" and "f" query parameters
+Execute requests with combinations of the "bbox","time","parameter-name","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
 |===
 
@@ -79,25 +57,9 @@ include::../collections/ATS_rc-coords-definition.adoc[]
 
 include::../collections/ATS_rc-coords-response.adoc[]
 
-include::../collections/ATS_rc-min-z-definition.adoc[]
+include::../collections/ATS_rc-z-definition.adoc[]
 
-include::../collections/ATS_rc-min-z-response.adoc[]
-
-include::../collections/ATS_rc-max-z-definition.adoc[]
-
-include::../collections/ATS_rc-max-z-response.adoc[]
-
-include::../collections/ATS_rc-resolution-x-definition.adoc[]
-
-include::../collections/ATS_rc-resolution-x-response.adoc[]
-
-include::../collections/ATS_rc-resolution-y-definition.adoc[]
-
-include::../collections/ATS_rc-resolution-y-response.adoc[]
-
-include::../collections/ATS_rc-resolution-z-definition.adoc[]
-
-include::../collections/ATS_rc-resolution-z-response.adoc[]
+include::../collections/ATS_rc-cube-z-response.adoc[]
 
 include::../core/ATS_rc-time-definition.adoc[]
 
