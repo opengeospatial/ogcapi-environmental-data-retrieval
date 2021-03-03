@@ -11,17 +11,17 @@ The conformance classes and their constituent requirements classes for OGC API-E
 
 * <<rc_core-section,Core>>, one Requirement Class
 
-The _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of the EDR API.
+The OGC API-Common-Part 1: _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of the EDR API.
 
-The Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter 8)>>.
+The OGC API-Common-Part 1: Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter 8)>>.
 
 * <<rc_collection-section,Collections>>, one Requirement Class
 
 The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
-The structure and organization of a <<collection-definition,collection>> of spatial data is very much dependent on the nature of that data and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2: Collections, specifies the requirements necessary to discover and understand a generic <<collection-definition,collection>> of spatial data.
+The structure and organization of a <<collection-definition,collection>> of spatio-temporal data is very much dependent on the nature of that data and the expected access patterns. This is information which cannot be specified in a common manner. The OGC API-Common Part 2: Collections, specifies the requirements necessary to discover and understand a generic <<collection-definition,collection>> of spatio-temporal data.
 
-The EDR API _Collection Requirements Class_ extends the common requirements to those specific to the query and retrieval of collections of Environmental Data.
+The EDR API _Collection Requirements Class_ extends the common requirements to those specific to the query and retrieval of collections of spatio-temporal data.
 
 The EDR Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter 9)>>.
 
@@ -32,7 +32,7 @@ The EDR Collection requirements class is specified in *Requirements Class Collec
 
 Neither the _Core_ nor _Collection_ requirements classes mandate specific encodings or formats for representing resources. The _HTML_, _GeoJSON_ and _CoverageJSON_ requirements classes specify representations for these resources in frequently used encodings for spatial data on the web.
 
-None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format.
+None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatio-temporal data.
 
 The Encoding Requirements Classes are specified in *Encoding Requirements Classes* <<rc_encoding-section,(Chapter 10)>>.
 
@@ -56,5 +56,7 @@ The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Cla
 The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The _Position_, _Area_ and _Trajectory_ requirements classes specify query patterns for which there are ubiquitous use cases.
 
 An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <<position-definition,position>> (with elevation and time) does simplify interoperability so support for the <<rc_position-section,position>> query is highly recommended.
+
+At least one of the 8 queries shall be implemented.
 
 The Queries Requirements Classes are specified in *Queries Requirements Classes* <<query-resources-section,(Chapter 9)>>.
