@@ -72,6 +72,10 @@ The latest draft of the standard in this repository is built daily (based on the
 
 Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
 
+### Development Guidelines
+
+The development of the API has used other well-established standards and guidelines. The overlaps, and gaps, with other OGC standards are also being described here.
+
 ### Future Work
 
 Proposed changes and extensions to the standard will be documented in the folder [proposals](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/master/proposals).
