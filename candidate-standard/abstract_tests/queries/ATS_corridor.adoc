@@ -83,13 +83,13 @@
 ^|*Abstract Test {counter:ats-id}* |*/conf/corridor*
 ^|Test Purpose |Validate that an error is returned by a `corridor` query when the `width-units` query parameter contains invalid units
 ^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Specify a width-units value  that is not listed in the collection reposnse
+^|Test Method |. Specify a width-units value  that is not listed in the collection response
 . Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/conf/corridor*
 ^|Test Purpose |Validate that an error is returned by a `corridor` query when the `height-units` query parameter contains invalid units
 ^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Specify a height-units value  that is not listed in the collection reposnse
+^|Test Method |. Specify a height-units value  that is not listed in the collection response
 . Validate that a document was returned with a status code 400.
 
 ^|*Abstract Test {counter:ats-id}* |*/conf/corridor*
