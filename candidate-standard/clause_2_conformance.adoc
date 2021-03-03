@@ -9,13 +9,13 @@ This standard identifies nine (9) Conformance Classes. The <<ctc-definition,Conf
 
 The conformance classes and their constituent requirements classes for OGC API-EDR are:
 
-* <<rc_core-section,Core>>, one Requirement Class
+* <<rc_core-section,Core>>, one Requirements Class
 
 The OGC API-Common-Part 1: _Core Requirements Class_ is the minimal useful service interface for an OGC API. The requirements specified in this Requirements Class are mandatory for all implementations of the EDR API.
 
-The OGC API-Common-Part 1: Core requirements class is specified in *Requirements Class Core* <<rc_core-section,(Chapter 8)>>.
+The OGC API-Common-Part 1: Core requirements class is specified in *Core Requirements Class* <<rc_core-section,(Chapter 8)>>.
 
-* <<rc_collection-section,Collections>>, one Requirement Class
+* <<rc_collection-section,Collections>>, one Requirements Class
 
 The API-Common Part 2: Collections standard extends the API-Common Part 1: Core to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
@@ -23,7 +23,7 @@ The structure and organization of a <<collection-definition,collection>> of spat
 
 The EDR API _Collection Requirements Class_ extends the common requirements to those specific to the query and retrieval of collections of spatio-temporal data.
 
-The EDR Collection requirements class is specified in *Requirements Class Collection* <<rc_collection-section,(Chapter 9)>>.
+The EDR Collection requirements class is specified in *Collection Requirements Class* <<rc_collection-section,(Chapter 9)>>.
 
 * <<rc_encoding-section,Encodings>>, three Requirements Classes
 ** <<rc_html-section,HTML>>
@@ -38,11 +38,11 @@ The Encoding Requirements Classes are specified in *Encoding Requirements Classe
 
 * <<rc_oas30-section,OpenAPI 3.0>>, one Requirements Class
 
-The OGC API-Common Part 1:Core standard does not mandate any encoding or format for the formal definition of the API. However, the prefered option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
+The OGC API-Common Part 1:Core standard does not mandate any encoding or format for the formal definition of the API. However, the preferred option is the OpenAPI 3.0 specification. Therefore the EDR APIs will be defined using _OpenAPI 3.0_.
 
 The OpenAPI 3.0 Requirements Class is specified in *OpenAPI 3.0 Requirements Class* <<rc_oas30-section,(Chapter 10)>>.
 
-* <<query-resources-section,Queries>>, nine Requirements classes
+* <<query-resources-section,Queries>>, one Requirements Class
 ** <<rc_position-section,Position>>
 ** <<rc_radius-section,Radius>>
 ** <<rc_area-section,Area>>
@@ -59,4 +59,4 @@ An implementation of the EDR API may decide to implement another query pattern i
 
 At least one of the 9 queries shall be implemented.
 
-The Queries Requirements Classes are specified in *Queries Requirements Classes* <<query-resources-section,(Chapter 9)>>.
+The Queries Requirements Class are specified in *Queries Requirements Class* <<query-resources-section,(Chapter 9)>>.
