@@ -21,6 +21,7 @@ The standards used for <<webapi-definition,Web APIs>> are built on the HTTP prot
 |Status code |Description
 |`200` |A successful request.
 |`202` |A successful request, but the response is still being generated. The response will include a  `Retry-After` header field giving a recommendation in seconds for the client to retry.
+|`204` |A successful request, but the resource has no data resulting from the request.  No additional content or message body is provided.
 |`304` |An <<web-caching,entity tag>> was provided in the request and the resource has not been changed since the previous request.
 |`308` |The server cannot process the data through a synchronous request.  The response includes a `Location` header field which contains the URI of the location the result will be available at once the query is complete <<Asynchronous_queries,Asynchronous queries>>.
 |`400` |The server cannot or will not process the request due to an apparent client error. For example, a query parameter had an incorrect value.
