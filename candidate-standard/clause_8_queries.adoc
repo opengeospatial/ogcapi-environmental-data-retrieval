@@ -78,7 +78,7 @@ Query parameters are used in URLs to define the resources which are returned on 
 
 <<req_edr_coords-response>>
 
-[[time]]
+[[datetime]]
 ===== Parameter datetime
 
 <<req_core_rc-datetime-parameter>>

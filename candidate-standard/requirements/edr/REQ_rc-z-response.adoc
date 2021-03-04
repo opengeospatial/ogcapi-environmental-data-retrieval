@@ -6,9 +6,9 @@
 ^|B |The `z` can be defined as a height range by specifying a min-level and max-level seperated by a forward slash "/" 
 ^|C |A list of `z` can be defined be specifying a comma delimited list of values level1, level2, level3 etc 
 ^|D |An Arithmetic sequence using Recurring height intervals can be specified by **R**`number of intervals`**/**`min height`**/**`height interval`
-^|E |A `z` value of `ALL` can be defined to specify returning data at all available vertical levels
-^|F |If the `z` parameter is not provided, the server SHALL interpret this as equivalent to `z=ALL`
+^|E |If the `z` parameter is not provided, the server SHOULD return data at all available vertical levels
 |===
+=======
 
 [source,java]
 ----
