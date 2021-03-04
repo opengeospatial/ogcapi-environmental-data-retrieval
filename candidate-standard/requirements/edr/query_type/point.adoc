@@ -47,9 +47,6 @@ Retrieve data for a list of locations: 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 
 Define the vertical level to return data from 
 i.e. z=level
 
-If data at all available levels is required, z can be defined as ALL
-i.e. z=ALL
-
 .A single vertical level
 ===========
 
@@ -74,15 +71,9 @@ Request data for all levels between 2m and 100m:
 `z=2/100`
 ===========
 
-.Return data at all available vertical levels
-===========
-
-`z=ALL`
-===========
-
 `When not specified the API MUST return data from all available levels`
 
-===== <<time>>
+===== <<datetime>>
 
 ===== <<parameter-name>>
 
