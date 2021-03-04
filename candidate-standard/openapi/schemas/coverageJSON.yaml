@@ -50,7 +50,7 @@ properties:
         type: object
         properties:
           composite:
-            $ref: compositeAxes.json
+            $ref: compositeAxes.yaml
           x:
             title: X axis values
             description: x coordinates definition
@@ -155,7 +155,7 @@ properties:
   parameters:
     type: object
     additionalProperties:
-      $ref: parameter.json
+      $ref: parameter.yaml
   ranges:
     type: object
     additionalProperties:
