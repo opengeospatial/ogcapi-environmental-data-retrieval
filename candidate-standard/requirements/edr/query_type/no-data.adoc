@@ -1,0 +1,6 @@
+[[req_edr_query_type-nodata]]
+==== *Requirement {counter:req-id}: /req/edr/query_type/no-data* No data handling
+[width="90%",cols="2,6a"]
+|===
+^|A |An EDR API implementation SHALL return HTTP 204 for queries in which no data exists.
+|===
