@@ -15,7 +15,7 @@ region specified with a geographic envelope that may have vertical dimension
 [[corridor-definition]]
 === corridor
 
-path of a moving point described by a one-parameter window around a set of points
+two parameter set of points around a trajectory
 
 [[cube-definition]]
 === cube

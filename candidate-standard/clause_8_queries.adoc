@@ -1,15 +1,15 @@
 
 [[environmental-resource-section]]
-== Query, Environmental and Information Resources
+== Query, Spatio-Temporal and Information Resources
 
-Query resources are spatial queries which support the operation of the API or the access and use of the Environmental Data resources. The API-EDR standard has identified an initial set of common `queryTypes` to implement, described in the <<query-resources-section>> section. This list may change as the standard is used and experience gained. 
+Query resources are spatial queries which support the operation of the API or the access and use of the spatio-temporal data resources. The API-EDR standard has identified an initial set of common `queryTypes` to implement, described in the <<query-resources-section>> section. This list may change as the standard is used and experience gained. 
 
 [[rc_collection-section]]
-An Environmental Data resource is a <<collection-definition,collection>> of spatiotemporal data that can be sampled using the API-EDR query patterns. 
+A spatio-temporal data resource is a <<collection-definition,collection>> of spatio-temporal data that can be sampled using the API-EDR query patterns. 
 
 include::requirements/requirements_class_collections.adoc[]
 
-Query resources related to Environmental Data resources (<<collection-definition,collections>> of spatiotemporal data) can be exposed using the path templates:
+Query resources related to spatio-temporal data resources (<<collection-definition,collections>> of spatio-temporal data) can be exposed using the path templates:
 
 * `/collections/{collectionId}/{queryType}`
 * `/collections/{collectionId}/instances/{instanceId}/{queryType}`
@@ -22,7 +22,7 @@ Where
 
 `{queryType}` = a text string identifying the query pattern performed by the API.
 
-The `instanceId` parameter allows support for multiple <<instance-definition,instances>> or versions of the same underlying datasource to be accessed by the API.  This is applicable when the entire datasource has been regenerated rather than individual values in the datasource being changed.  If only one <<instance-definition,instance>> of the datasource exists a value of `_default_` or `_latest_` could be used.
+The `instanceId` parameter allows support for multiple <<instance-definition,instances>> or versions of the same underlying data source to be accessed by the API.  This is applicable when the entire data source has been regenerated rather than individual values in the data source being changed.  If only one <<instance-definition,instance>> of the data source exists a value of `_default_` or `_latest_` could be used.
 
 [[collection-information-queries]]
 Information resources associated with a specific <<collection-definition,collection>> should be accessed through the `/collections` path. Information resources not associated with a specific <<collection-definition,collection>> should be accessed via the `/{instanceId}/{queryType}` path template.
@@ -38,8 +38,8 @@ The resources returned from each node in these templates are described in <<quer
 [width="90%",cols="2,4",options="header"]
 |===
 ^|**Path Template** ^|**Resource**
-|/collections |The root resource describing the <<collection-definition,collections>> of geospatial data available from this API.
-|/collections/{collectionId} |Identifies a <<collection-definition,collection>> of geospatial data with the unique identifier `{collectionId}`
+|/collections |The root resource describing the <<collection-definition,collections>> of spatio-temporal data available from this API.
+|/collections/{collectionId} |Identifies a <<collection-definition,collection>> of spatio-temporal data with the unique identifier `{collectionId}`
 |/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {queryType} associated with the `{collectionId}` <<collection-definition,collection>>.
 |===
 
@@ -58,7 +58,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 |/collections/{collectionId}/area | Area | Return data for the requested <<area-definition,area>>
 |/collections/{collectionId}/cube | Cube | Return data for a spatial <<cube-definition,cube>>
 |/collections/{collectionId}/trajectory | Trajectory | Return data along a defined <<trajectory-definition,trajectory>>
-|/collections/{collectionId}/corridor | Corridor | Return data within a spatial <<corridor-definition,corridor>>
+|/collections/{collectionId}/corridor | Corridor | Return data within a spatio-temporal <<corridor-definition,corridor>>
 |/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` <<collection-definition,collection>>.
 |/collections/{collectionId}/locations | Locations |Location identifers associated with the `{collectionId}` <<collection-definition,collection>>.
 |/collections/{collectionId}/instances | Instances | List the available instances of the <<collection-definition,collection>>
