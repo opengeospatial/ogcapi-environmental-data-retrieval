@@ -111,7 +111,7 @@ March 18, 2018, 12:31:12 UTC or earlier:
 `datetime=..%2F2018-03-18T12%3A31%3A12Z`
 =================
 
-A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/parameters/datetime.yaml[datetime.yaml].
+A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml[datetime.yaml].
 
 [[parameter-name]]
 ===== Parameter parameter-name

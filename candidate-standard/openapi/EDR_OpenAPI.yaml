@@ -127,7 +127,7 @@ paths:
                 type: string
     parameters:
       - $ref: parameters/bbox.yaml
-      - $ref: parameters/datetime.yaml
+      - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
       - $ref: parameters/f.yaml
   /collections/{collectionId}:
     get:
@@ -169,7 +169,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/positionCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml        
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml        
@@ -232,7 +232,7 @@ paths:
         - $ref: parameters/within.yaml
         - $ref: parameters/within-units.yaml        
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
@@ -293,7 +293,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/areaCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/resolution-x.yaml
@@ -356,7 +356,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/bbox.yaml
         - $ref: parameters/cube-z.yaml
-        - $ref: parameters/datetime.yaml        
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml       
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
@@ -417,7 +417,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml      
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml      
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
@@ -478,7 +478,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml         
         - $ref: parameters/corridor-width.yaml
         - $ref: parameters/width-units.yaml
@@ -544,7 +544,7 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/bbox.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
       responses:
         '200':
           description: List of pre-existing items available for retrieval 
@@ -669,7 +669,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/positionCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml        
         - $ref: parameters/f.yaml
@@ -731,7 +731,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/radiusCoords.yaml
         - $ref: parameters/z.yaml       
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/within.yaml
         - $ref: parameters/within-units.yaml
         - $ref: parameters/parameter-name.yaml
@@ -795,7 +795,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/areaCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/resolution-x.yaml
         - $ref: parameters/resolution-y.yaml
@@ -860,7 +860,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/bbox.yaml
         - $ref: parameters/cube-z.yaml
-        - $ref: parameters/datetime.yaml        
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml
@@ -922,7 +922,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml        
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml        
@@ -984,7 +984,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/trajectoryCoords.yaml
         - $ref: parameters/z.yaml
-        - $ref: parameters/datetime.yaml        
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/corridor-width.yaml
         - $ref: parameters/width-units.yaml
@@ -1050,7 +1050,7 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/bbox.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
       responses:
         '200':
           description: List of predefined locations available from the collection
@@ -1098,7 +1098,7 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/locId.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/crs.yaml          
         - $ref: parameters/f.yaml
       responses:
@@ -1153,7 +1153,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/bbox.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
       responses:
         '200':
           description: List of predefined locations available from the instance of the collection
@@ -1202,7 +1202,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/locId.yaml
-        - $ref: parameters/datetime.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
         - $ref: parameters/crs.yaml          
         - $ref: parameters/f.yaml            
       responses:
