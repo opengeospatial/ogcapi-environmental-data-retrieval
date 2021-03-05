@@ -11,13 +11,13 @@ Repeat these tests using the following parameter tests:
 
 *Bounding Box:*
 
-* Parameter <<ats_core_rc-bbox-definition,/conf/core/rc-bbox-definition>>
+* Parameter <<ats_core_bbox-definition,/conf/core/rc-bbox-definition>>
 * Response <<ats_core_rc-bbox-response,/conf/core/rc-bbox-response>>
 
 *DateTime:*
 
-* Parameter <<ats_time-definition,/conf/core/rc-time-definition>>
-* Response <<ats_time-response,/conf/core/rc-time-response>>
+* Parameter <<ats_collections_rc-time-definition,/conf/core/rc-time-definition>>
+* Response <<ats_core_rc-time-response,/conf/core/rc-time-response>>
 
 Execute requests with combinations of the "bbox" and "datetime" query parameters
 and verify that only features are returned that match both selection criteria.
