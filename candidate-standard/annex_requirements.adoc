@@ -13,15 +13,15 @@ For clarity, the complete <<requirements-class-definition,requirements test clas
 
 include::requirements/requirements_class_core.adoc[]
 
-include::requirements/core/REQ_api-common.adoc[]
-
 include::requirements/core/REQ_core_conformance.adoc[]
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
 
-include::requirements/core/REQ_rc-datetime-parameter.adoc[]
+include::requirements/core/REQ_rc-time-definition.adoc[]
+
+include::requirements/core/REQ_rc-time-response.adoc[]
 
 include::requirements/edr/REQ_rc-parameters-definition.adoc[]
 
@@ -94,10 +94,6 @@ include::requirements/core/REQ_crs84.adoc[]
 :sectnums!:
 
 include::requirements/requirements_class_oas30.adoc[]
-
-include::requirements/oas30/REQ_oas-common.adoc[]
-
-include::requirements/oas30/REQ_oas-conformance.adoc[]
 
 include::requirements/oas30/REQ_completeness.adoc[]
 

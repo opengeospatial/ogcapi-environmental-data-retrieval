@@ -9,20 +9,15 @@
 ^|E |If the `z` parameter is not provided, the server SHOULD return data at all available vertical levels
 |===
 
-[source,java]
-----
-single-level  = level
-interval-closed  = min-level "/" max-level
-level-list  = level1 "," level2 "," level3 
-repeating-interval = "R"number of intervals "/" min-level "/" height to increment by 
 
-----
+* single-level  = level
+* interval-closed  = min-level "/" max-level
+* level-list  = level1 "," level2 "," level3 
+* repeating-interval = "R"number of intervals "/" min-level "/" height to increment by 
+
 
 [source,java]
 ----
-
-Single level at level 850
-z=850
 
 All data between levels 100 and 550
 z=100/550
@@ -32,5 +27,5 @@ z=10,80,200
 
 Data at 20 levels at 50 unit intervals starting a level 100 
 z=R20/100/50 
-
 ----
+
