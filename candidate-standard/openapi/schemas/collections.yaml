@@ -23,4 +23,4 @@ properties:
   collections:
     type: array
     items:
-      $ref: collection.yaml
+      $ref: collectionInfo.yaml
