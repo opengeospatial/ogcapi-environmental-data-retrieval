@@ -21,13 +21,13 @@ include::core/ATS_root-success.adoc[]
 
 ==== API Definition Path {root}/api (link)
 
-include::core/ATS_api-definition-op.adoc[]
+include::core/ATS_api-definition.adoc[]
 
 include::core/ATS_api-definition-success.adoc[]
 
 ==== Conformance Path {root}/conformance
 
-include::core/ATS_conformance-op.adoc[]
+include::core/ATS_conformance.adoc[]
 
 include::core/ATS_conformance-success.adoc[]
 
