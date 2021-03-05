@@ -39,7 +39,7 @@
 
 ^|*Abstract Test {counter:ats-id}* |*/conf/trajectory*
 ^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGMZ Well Known Text value.
-^|Requirement |<<req_edr_rc-trajectory,/req/queries/trajectory>>
+^|Requirement |<<req_edr_rc-trajectory,/req/edr/rc-trajectory>>
 ^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGMZ value, the `Z` coordinate must be a within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
 

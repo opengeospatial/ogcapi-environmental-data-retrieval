@@ -49,7 +49,7 @@ It is considered a 'simple' API because:
 * The specification encourages the data publisher to publish data in fixed formats that are described within the metadata in a simple way.
 
 It is considered a 'convenience' API because:
-* It complements and provides synergy with other OGC APIs;
+* It complements and provides synergy with other web based OGC APIs;
 * The query patterns allow users to get just the data that they need;
 * Users do not need to know the structure of the underlying data;
 * It is not constrained to a particular data structure susch as grids, point clouds, features, etc.;
@@ -57,7 +57,7 @@ It is considered a 'convenience' API because:
 * It is the responsibility of the publisher to simplify appropriately the output, making it convenient for the user to consume the data;
 * Implementations are constrained by the API definition, so all implementations will have the same URL structure.
 
-The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent spatio-temporal data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic as to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of, or a model of, real world phenomena. While the former is the emphasis, EDR APIs can provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier. There is an assumption that the spatio-temporal data store is non-sparse, in that most queries are expected to return useful values rather than 'data not found'.
+The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent spatio-temporal data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic as to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of, or a model of, real world phenomena. While the former is the emphasis, EDR APIs can also provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier. There is an assumption that the spatio-temporal data store is non-sparse, in that most queries are expected to return useful values rather than 'data not found'.
 
 ## Progress
 
@@ -82,7 +82,7 @@ Proposed changes and extensions to the standard will be documented in the folder
 
 Longer term work is being recorded [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Future-Work)
 
-**Conformance Test Suite** work is starting at the beginning of 2021.
+**Conformance Test Suite** work started at the beginning of 2021.
 
 ### EDR API Standard Working Group
 

@@ -72,8 +72,6 @@ i.e. Define a Radius of 5 miles from the location defined by the coords query pa
 
 Define the vertical level to return data from, i.e. z=level
 
-if data at all available levels is required z can be defined as ALL, i.e. z=ALL
-
 .A single vertical level
 ===========
 
@@ -82,15 +80,9 @@ For example if the 80m level is being queried:
 `z=80`
 ===========
 
-.Return data at all available vertical levels
-===========
-
-`z=ALL`
-===========
-
 When z is not specified, the API MUST return data from all available levels.
 
-===== <<time>>
+===== <<datetime>>
 
 ===== <<parameter-name>>
 

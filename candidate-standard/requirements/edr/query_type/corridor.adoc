@@ -73,7 +73,7 @@ for instance if the entire route is at the 850hPa pressure level
 `z=850`
 ===========
 
-===== <<time>>
+===== <<datetime>>
 
 ===== <<req_edr_resolution-x-definition,resolution-x>>
 .A interpolate corridor values along the width  

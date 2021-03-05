@@ -6,12 +6,12 @@ properties:
   links:
     type: array
     items:
-      $ref: link.json
+      $ref: link.yaml
     example:
       - href: http://www.example.org/edr/collections
         hreflang: en
         rel: self
-        type: application/json
+        type: application/yaml
       - href: http://www.example.org/edr/collections?f=html
         hreflang: en
         rel: alternate
@@ -23,4 +23,4 @@ properties:
   collections:
     type: array
     items:
-      $ref: collection.json
+      $ref: collection.yaml
