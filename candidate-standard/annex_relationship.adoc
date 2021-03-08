@@ -15,16 +15,12 @@ This Annex outlines the relationships, in terms of underlying conceptual models,
 The EDR API is completely compatible with OGC API-Features-Part 1 Core, in that it supports Collections and Items. It extends the Collection functionaliaty by allowing 'Instances', a form of 'collection of collections'. The EDR API also supports the retrieval of spatiotemporal data by named location as well as coordinates.
 
 === Relationships between the OGC API-EDR and the Moving Features standards 
-There are four Moving Features standards: conceptual model with XML encoding, database retrieval, CSV encoding, and JSON encoding. 
-Moving features concerns things that move along a trajectory, and simultaneously change their orientation through rigid body rotation. The concepts are defined in UML and encoded in GML.
-
-EDR API does not have the concept of orientation, or foliation or prisms.
-
-EDR API is OpenAPI defined, over HTTP(S), and not database orientated.
+There are four Moving Features standards: conceptual model with XML encoding, access, CSV encoding, and JSON encoding. 
+Moving features concerns things that move along a trajectory, and simultaneously change their orientation through rigid body rotation. The concepts are defined in UML and encoded in GML. EDR API does not have the concept of orientation, or foliation or prisms. EDR API is OpenAPI defined, over HTTP(S), and not defined in UML.
 
 Moving Features and EDR API do share a common conceptual definition, from ISO, of a Trajectory, but Moving features encode in GML whereas EDR API encodes trajectories in WKT. Moving Features supports relationships between trajectories and other features, including other trajectories, EDR API does not. Moving Features also supports explictly concepts such as velocity, acceleration and distance along a trajectory. EDR API does not.
 
-Moving Features considers trajectories as a primary resource to be queried, manipulated and processed, whereas in the EDR API, it is simply a query sampling pattern into a spatiotemporal data resource.
+Moving Features considers trajectories as a primary resource to be queried, manipulated and processed, whereas in the EDR API, a trajectory is simply a query sampling pattern, encoded in WKT and ISO8601, into a spatiotemporal data resource.
 
 === Relationships between the OGC API-EDR and the WCS and CIS
 The primary messaging mechanism of the EDR API is JSON, including CoverageJSON, over HTTP(S). Implementations of the EDR API are described using the OpenAPI V3.0 specification. The target users are web-developers and end-users who are not geospatial experts. The target data resources are any dataset described as spatiotemporal, accessible by coordinates. 
