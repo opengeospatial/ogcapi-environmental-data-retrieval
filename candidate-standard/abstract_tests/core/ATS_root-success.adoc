@@ -22,6 +22,6 @@ The landing page may be retrieved in a number of different formats. The followin
 [width="90%",cols="3",options="header"]
 |===
 |Format |Schema Document |Test ID
-|HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/landingPage.json[landingPage.json]|<<ats_html_content,/conf/html/content>>
-|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/landingPage.json[landingPage.json] |<<ats_geojson_content,/conf/geojson/content>>
+|HTML |link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/core/openapi/schemas/landingPage.json[landingPage.json]|<<ats_html_content,/conf/html/content>>
+|JSON |link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/core/openapi/schemas/landingPage.json[landingPage.json] |<<ats_geojson_content,/conf/geojson/content>>
 |===
