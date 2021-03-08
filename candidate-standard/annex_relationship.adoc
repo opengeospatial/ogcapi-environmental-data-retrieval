@@ -27,7 +27,7 @@ The EDR API is consistent with the WCS and CIS standards but do not require the 
 
 The EDR API, with only a single form of spatiotemporal query, allows the retrieval of data from other data stores adhering to data models that are not coverages, such as features or observations. 
  
-=== Relationships between OGC API-EDR and the WCS Met Ocean Application Profile
+=== Relationship between OGC API-EDR and the WCS Met Ocean Application Profile
 The OGC API-EDR has developed out of the experiences of creating the WCS 2.1 Met Ocean Application Profile, ostensibly for similar use cases, but for differing technology bases.
 
 The primary messaging mechanism of the EDR API is JSON, including CoverageJSON, over HTTP(S). Implementations of the EDR API are described using the OpenAPI V3.0 specification. The target users are web-developers and end-users who are not geospatial experts. The target data resources are any data described as spatiotemporal, accessible by coordinates, not just meteorological or oceanographic.
