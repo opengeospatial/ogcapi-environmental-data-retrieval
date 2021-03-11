@@ -20,7 +20,7 @@ properties:
         hreflang: en
         rel: alternate
         type: application/xml
-  collections:
+  instances:
     type: array
     items:
       $ref: collection.yaml
