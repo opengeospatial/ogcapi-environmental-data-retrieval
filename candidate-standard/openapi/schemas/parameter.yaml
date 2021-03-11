@@ -10,19 +10,9 @@ properties:
     enum:
       - Parameter
   description:
-    type: object
-    required:
-      - en
-    properties:
-      en:
-        type: string
+    type: string
   label:
-    type: object
-    required:
-      - en
-    properties:
-      en:
-        type: string
+    type: string
   data-type:
     description: Data type of returned parameter
     enum:
@@ -66,15 +56,12 @@ properties:
 example:
   type: Parameter
   id: sea_ice
-  description:
-    en: Sea Ice concentration (ice=1;no ice=0)
+  description: Sea Ice concentration (ice=1;no ice=0)
   unit:
-    label:
-      en: Ratio
+    label: Ratio
     symbol:
       value: "1"
       type: http://www.opengis.net/def/uom/UCUM/
   observedProperty:
     id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
-    label:
-      en: Sea Ice Concentration
+    label: Sea Ice Concentration
