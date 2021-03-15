@@ -18,4 +18,4 @@
 
 9. The EDR API SWG will follow wherever possible the approach of the first modern API standard from OGC, the "[OGC API - Features](https://github.com/opengeospatial/ogcapi-features)" also available as a [single document](https://docs.opengeospatial.org/is/17-069r3/17-069r3.html). Please bear in mind that we are not dealing with pre-defined features with identifiers.
 
-10. The EDR API SWG is also obliged by OGC Policy to be compatible with the "[OGC API - Common](https://github.com/opengeospatial/oapi_common)" emerging standard wherever possible, and to liaise with the appropriate Standards Working Groups and document incompatible essential differences, for future work.
+10. The EDR API SWG is also obliged by OGC Policy to be compatible with the "[OGC API - Common](https://github.com/opengeospatial/ogcapi-common)" emerging standard wherever possible, and to liaise with the appropriate Standards Working Groups and document incompatible essential differences, for future work.

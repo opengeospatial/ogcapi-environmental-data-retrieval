@@ -3,6 +3,6 @@
 [width="90%",cols="3",options="header"]
 |===
 |Format |Schema Document |Test ID
-|HTML |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json]|<<ats_html_content,/conf/html/content>>
-|JSON |link:https://raw.githubusercontent.com/opengeospatial/oapi_common/master/standard/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_json_content,/conf/json/content>>
+|HTML |link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/schemas/collectionInfo.json[collectionInfo.json]|<<ats_html_content,/conf/html/content>>
+|JSON |link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/schemas/collectionInfo.json[collectionInfo.json] |<<ats_json_content,/conf/json/content>>
 |===
