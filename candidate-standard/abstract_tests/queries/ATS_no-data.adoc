@@ -1,0 +1,10 @@
+[[ats_edr_query_no-data]]
+[width="90%",cols="2,6a"]
+|===
+^|*Abstract Test {counter:ats-id}* |*/conf/edr/query_type/no-data*
+^|Test Purpose |Validate that the correct response code is returned for queries where no data exists.
+^|Requirement |<<req_edr_query_type-no-data,/req/edr/query_type/no-data>>
+^|Test Method |. Perform a query with a shared query parameter that is outside the associated extent identified in collection metadata
+. Validate that a document was returned with a status code 204
+. Validate the contents of the returned document using test <<ats_core_root-success,/conf/core/root-success>>.
+|===

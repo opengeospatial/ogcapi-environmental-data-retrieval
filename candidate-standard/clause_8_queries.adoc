@@ -64,7 +64,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 |/collections/{collectionId}/instances | Instances | List the available instances of the <<collection-definition,collection>>
 |===
 
-<<req_edr_query_type-nodata>>
+<<req_edr_query_type-no-data>>
 
 [[parameters-section]]
 ==== Shared query parameters
