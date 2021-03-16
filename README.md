@@ -70,7 +70,7 @@ The latest draft of the standard in this repository is built daily (based on the
 
 ### Implementations
 
-Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/Implementations.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
+Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/implementations.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
 
 ### Development Guidelines
 
