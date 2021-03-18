@@ -555,7 +555,7 @@ There are also links to the license information for the observation and forecast
                 "CoverageJSON",
                 "GeoJSON"
             ],
-            "parameters": {
+            "parameter-names": {
                 "Wind Direction": {
                     "type": "Parameter",
                     "description": {

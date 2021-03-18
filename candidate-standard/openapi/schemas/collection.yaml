@@ -84,7 +84,7 @@ properties:
       - GeoJSON
       - IWXXM
       - GRIB
-  parameters:
+  parameter-names:
     description: list of the data parameters available in the collection
     type: object
     additionalProperties:
