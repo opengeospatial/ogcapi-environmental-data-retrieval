@@ -58,23 +58,22 @@ properties:
   extent:
     $ref: extent.yaml
   crs:
-    description: list of the coordinate reference systems the collection results can
-      be produced in
+    description: list of the coordinate reference systems the collection results can support
     type: array
     items:
-      $ref: crsObject.yaml
-  referencemetadata:
-    description: Property to contain any extra metadata information that is specific
-      to the collection
-    type: object
-  distanceunits:
-    description: list of distance units radius distance values can be specified in
-    type: array
-    items: 
       type: string
-    example:
-      - km
-      - miles
+  dataQueries:
+    description: Detailed information relevant to individual query types
+    Position:
+      $ref: dataQuery.yaml
+    Radius:
+      $ref: dataQuery.yaml
+    Area:
+      $ref: dataQuery.yaml
+    Trajectory:
+      $ref: dataQuery.yaml
+    Corridor:
+      $ref: dataQuery.yaml
   outputformat:
     description: list of formats the results can be presented in
     type: array
