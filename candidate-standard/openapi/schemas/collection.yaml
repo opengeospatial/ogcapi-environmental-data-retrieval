@@ -64,15 +64,15 @@ properties:
       type: string
   dataQueries:
     description: Detailed information relevant to individual query types
-    Position:
+    position:
       $ref: dataQuery.yaml
-    Radius:
+    radius:
       $ref: dataQuery.yaml
-    Area:
+    area:
       $ref: dataQuery.yaml
-    Trajectory:
+    trajectory:
       $ref: dataQuery.yaml
-    Corridor:
+    corridor:
       $ref: dataQuery.yaml
   outputformat:
     description: list of formats the results can be presented in
