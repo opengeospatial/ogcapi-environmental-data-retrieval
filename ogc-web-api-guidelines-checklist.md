@@ -2,7 +2,7 @@
 
 # Overview
 
-This document outlines EDR support of the design principles put forth as part of the [OGC Web API Guidelines](https://github.com/opengeospatial/OGC-Web-API-Guidelines).
+This document outlines EDR API support of the design principles of the [OGC Web API Guidelines](https://github.com/opengeospatial/OGC-Web-API-Guidelines).
 
 - [x]  Principle #1 – Don’t Reinvent
   - adopts concepts from OGC API - Common (landing page, conformance, collections, datetime query parameter) and OGC API - Features (`/collections/{collectionId}/items`) and uses WKT and ISO8601 for most syntax
