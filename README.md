@@ -74,7 +74,7 @@ Implementations are being advertised [here](https://github.com/opengeospatial/og
 
 ### Development Guidelines
 
-The development of the API has used other [well-established standards and guidelines](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Guidelines). The overlaps, and gaps, with other OGC standards are also being described [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Examples).
+The development of the API has used other [well-established standards and guidelines](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Guidelines). The overlaps, and gaps, with other OGC standards are also being described [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Examples).  The API also supports the [OGC Web API Guidelines](ogc-web-api-guidelines-checklist.md).
 
 ### Future Work
 
