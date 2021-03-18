@@ -7,18 +7,6 @@
 ^|Test Method |. For every resource collection identified in Collections, issue an HTTP GET request to the URL `/collections/{collectionId}/items` where `{collectionId}` is the `id` property for a Collection described in the Collections content.
 . Validate that a document was returned with a status code 200.
 
-Repeat these tests using the following parameter tests:
-
-*Bounding Box:*
-
-* Parameter <<ats_core_rc-bbox-definition,/conf/core/rc-bbox-definition>>
-* Response <<ats_core_rc-bbox-response,/conf/core/rc-bbox-response>>
-
-*DateTime:*
-
-* Parameter <<ats_time-definition,/conf/core/rc-time-definition>>
-* Response <<ats_time-response,/conf/core/rc-time-response>>
-
 Execute requests with combinations of the "bbox" and "datetime" query parameters
 and verify that only features are returned that match both selection criteria.
 |===

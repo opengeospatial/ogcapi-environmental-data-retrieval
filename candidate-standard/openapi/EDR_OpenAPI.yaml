@@ -355,8 +355,8 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/bbox.yaml
-        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/cube-z.yaml
+        - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml       
         - $ref: parameters/crs.yaml
         - $ref: parameters/f.yaml            
@@ -858,8 +858,14 @@ paths:
       parameters:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/instanceId.yaml
+<<<<<<< HEAD
         - $ref: parameters/bbox.yaml
         - $ref: parameters/cube-z.yaml
+=======
+        - $ref: parameters/cubeCoords.yaml
+        - $ref: parameters/min-z.yaml
+        - $ref: parameters/max-z.yaml
+>>>>>>> upstream/master
         - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml        
         - $ref: parameters/parameter-name.yaml
         - $ref: parameters/crs.yaml

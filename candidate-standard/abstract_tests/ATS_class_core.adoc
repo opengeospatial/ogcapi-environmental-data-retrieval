@@ -1,10 +1,13 @@
 [[ats_core]]
 [cols="1,4",width="90%"]
+
 |===
+
 2+|*Conformance Class*
 2+|http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
 |Target type |Web API
 |Requirements Class |<<rc-core-section,http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core>>
+
 |===
 
 ==== General Tests
@@ -21,13 +24,13 @@ include::core/ATS_root-success.adoc[]
 
 ==== API Definition Path {root}/api (link)
 
-include::core/ATS_api-definition-op.adoc[]
+include::core/ATS_api-definition.adoc[]
 
 include::core/ATS_api-definition-success.adoc[]
 
 ==== Conformance Path {root}/conformance
 
-include::core/ATS_conformance-op.adoc[]
+include::core/ATS_conformance.adoc[]
 
 include::core/ATS_conformance-success.adoc[]
 

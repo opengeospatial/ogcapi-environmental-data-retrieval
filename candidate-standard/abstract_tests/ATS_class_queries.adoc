@@ -44,9 +44,7 @@ include::collections/ATS_src-md-success.adoc[]
 
 NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
 
-include::core/ATS_rc-op.adoc[]
-
-include::collections/ATS_rc-response.adoc[]
+include::core/ATS_items.adoc[]
 
 ===== Instances {root}/collections/{collectionId}/instances
 [[ats_instances_rc-md-op]]
@@ -65,11 +63,6 @@ include::instances/ATS_src-md-success.adoc[]
 ==== Second Tier Tests
 These tests are invoked by other tests.
 
-===== Items
-
-include::collections/ATS_rc-collection-info.adoc[]
-
-include::collections/ATS_rc-md-collection-info-links.adoc[]
 
 ===== Locations
 

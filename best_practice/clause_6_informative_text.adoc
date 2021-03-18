@@ -9,7 +9,7 @@ It will not always be possible to respond to queries synchronously, if the resou
 
 2. etc
 
-include::recommendations/core/REC_asynchronous-queries.adoc[]
+include::../candidate-standard/recommendations/core/REC_asynchronous-queries.adoc[]
 
 * See link:https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)[Asynchrony]
 
