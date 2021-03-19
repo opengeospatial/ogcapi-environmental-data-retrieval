@@ -26,7 +26,7 @@ properties:
     example:
       - m
       - hPa
-  outputformat:
+  output-formats:
     description: list of formats the results can be presented in
     type: array
     items: 
@@ -36,10 +36,10 @@ properties:
       - GeoJSON
       - IWXXM
       - GRIB
-  defaultOutputFormat:
+  default-output-format:
     description: default outputformat
     type: string
-  crs:
+  crs-details:
     description: List of key/value definitions for the CRS's supported by a query.  The key is the query parameter and the value is the Well Known Text description
     type: array
     items:
