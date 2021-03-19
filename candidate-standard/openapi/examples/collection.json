@@ -1,17 +1,3 @@
-.Collections metadata response document
-=================
-The example below shows a service with two <<collection-definition,collections>>, one for observations and another for forecast data.  The forecast data is regenerated every hour so the <<collection-definition,collection>> provides access to multiple instances of the <<collection-definition,collection>> via an instances endpoint.
-
-There are links to the responses of the <<collection-definition,collections>> (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self"). 
-
-Representations of these resource in other formats are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "alternate".
-
-The data queries that are supported by each <<collection-definition,collection>> are referenced using link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "data".
-
-There are also links to the license information for the observation and forecast data (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "license") and also the terms and conditions of service (using:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type] "restrictions") .
-
-[source,json]
-----
 {
     "links": [
         {
@@ -810,5 +796,3 @@ There are also links to the license information for the observation and forecast
         }
     ]
 }    
-----
-=================
