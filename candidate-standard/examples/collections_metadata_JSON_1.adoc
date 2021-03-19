@@ -119,21 +119,21 @@ There are also links to the license information for the observation and forecast
                 }
             },
             "crs": [
-                "EPSG:4326"
+                "CRS84"
             ],
-            "dataQueries": {
+            "data-queries": {
                 "position": {
                     "title": "Position query",
                     "description": "Position query",
-                    "outputformat": [
+                    "output-formats": [
                         "CoverageJSON",
                         "GeoJSON",
                         "IWXXM"
                     ],
-                    "defaultOutputFormat": "IWXXM",
-                    "crs": [
+                    "default-output-format": "IWXXM",
+                    "crs-details": [
                         {
-                            "name": "CRS84",
+                            "crs": "CRS84",
                             "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                         }
                     ]
@@ -141,19 +141,19 @@ There are also links to the license information for the observation and forecast
                 "radius": {
                     "title": "Radius query",
                     "description": "Radius query",
-                    "outputformat": [
+                    "output-formats": [
                         "CoverageJSON",
                         "GeoJSON",
                         "IWXXM"
                     ],
-                    "defaultOutputFormat": "GeoJSON",
+                    "default-output-format": "GeoJSON",
                     "width-units": [
                         "km",
                         "miles"
                     ],
-                    "crs": [
+                    "crs-details": [
                         {
-                            "name": "CRS84",
+                            "crs": "CRS84",
                             "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                         }
                     ]
@@ -161,22 +161,22 @@ There are also links to the license information for the observation and forecast
                 "area": {
                     "title": "Area query",
                     "description": "Area query",
-                    "outputformat": [
+                    "output-formats": [
                         "CoverageJSON",
                         "GeoJSON",
                         "BUFR",
                         "IWXXM"
                     ],
-                    "defaultOutputFormat": "CoverageJSON",
-                    "crs": [
+                    "default-output-format": "CoverageJSON",
+                    "crs-details": [
                         {
-                            "name": "CRS84",
+                            "crs": "CRS84",
                             "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                         }
                     ]
                 }
             },
-            "outputformat": [
+            "output-formats": [
                 "CoverageJSON",
                 "GeoJSON",
                 "IWXXM"
@@ -184,13 +184,9 @@ There are also links to the license information for the observation and forecast
             "parameters": {
                 "Wind Direction": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "degree true"
-                        },
+                        "label": "degree true",
                         "symbol": {
                             "value": "°",
                             "type": "http://www.example.org/edr/metadata/units/degree"
@@ -198,9 +194,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_windDirection",
-                        "label": {
-                            "en": "Wind Direction"
-                        }
+                        "label":  "Wind Direction"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -209,13 +203,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Wind Speed": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "mph"
-                        },
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://www.example.org/edr/metadata/units/mph"
@@ -223,9 +213,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_windSpeed",
-                        "label": {
-                            "en": "Wind Speed"
-                        }
+                        "label": "Wind Speed"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -234,13 +222,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Wind Gust": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "mph"
-                        },
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://www.example.org/edr/metadata/units/mph"
@@ -248,9 +232,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_maximumWindGustSpeed",
-                        "label": {
-                            "en": "Wind Gust"
-                        }
+                        "label": "Wind Gust"
                     },
                     "measurementType": {
                         "method": "maximum",
@@ -259,13 +241,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Air Temperature": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "degC"
-                        },
+                        "label":  "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://www.example.org/edr/metadata/units/degC"
@@ -273,9 +251,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label": {
-                            "en": "Air Temperature"
-                        }
+                        "label": "Air Temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -284,13 +260,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Weather": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "weather"
-                        },
+                        "label": "weather",
                         "symbol": {
                             "value": "",
                             "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
@@ -298,9 +270,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
-                        "label": {
-                            "en": "Weather"
-                        }
+                        "label": "Weather"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -309,13 +279,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Relative Humidity": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "percent"
-                        },
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://www.example.org/edr/metadata/units/percent"
@@ -323,9 +289,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/bufr4/b/13/_009",
-                        "label": {
-                            "en": "Relative Humidity"
-                        }
+                        "label": "Relative Humidity"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -334,13 +298,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Dew point": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "degC"
-                        },
+                        "label": "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://www.example.org/edr/metadata/units/degC"
@@ -348,9 +308,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_dewPointTemperature",
-                        "label": {
-                            "en": "Dew point"
-                        }
+                        "label": "Dew point"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -359,13 +317,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Pressure": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "hPa"
-                        },
+                        "label": "hPa",
                         "symbol": {
                             "value": "hPa",
                             "type": "http://www.example.org/edr/metadata/units/hPa"
@@ -373,9 +327,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/bufr4/b/10/_051",
-                        "label": {
-                            "en": "Pressure"
-                        }
+                        "label": "Pressure"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -384,13 +336,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Pressure Tendancy": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "tendency"
-                        },
+                        "label": "tendency",
                         "symbol": {
                             "value": "",
                             "type": "http://www.example.org/edr/metadata/units/hPa"
@@ -398,9 +346,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_pressureTendency",
-                        "label": {
-                            "en": "Pressure Tendancy"
-                        }
+                        "label": "Pressure Tendancy"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -409,13 +355,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Visibility": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "m"
-                        },
+                        "label": "m",
                         "symbol": {
                             "value": "m",
                             "type": "http://www.example.org/edr/metadata/units/m"
@@ -423,9 +365,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
-                        "label": {
-                            "en": "Visibility"
-                        }
+                        "label": "Visibility"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -498,20 +438,20 @@ There are also links to the license information for the observation and forecast
                 }
             },
             "crs": [
-                "EPSG:4326"
+                "CRS84"
             ],
-            "dataQueries": {
+            "data-queries": {
                 "position": {
                     "title": "Position query",
                     "description": "Position query",
-                    "outputformat": [
+                    "output-formats": [
                         "CoverageJSON",
                         "GeoJSON"
                     ],
-                    "defaultOutputFormat": "GeoJSON",
-                    "crs": [
+                    "default-output-format": "GeoJSON",
+                    "crs-details": [
                         {
-                            "name": "CRS84",
+                            "crs": "CRS84",
                             "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                         }
                     ]
@@ -519,18 +459,18 @@ There are also links to the license information for the observation and forecast
                 "radius": {
                     "title": "Radius query",
                     "description": "Radius query",
-                    "outputformat": [
+                    "output-formats": [
                         "CoverageJSON",
                         "GeoJSON"
                     ],
-                    "defaultOutputFormat": "GeoJSON",
+                    "default-output-format": "GeoJSON",
                     "width-units": [
                         "km",
                         "miles"
                     ],
-                    "crs": [
+                    "crs-details": [
                         {
-                            "name": "CRS84",
+                            "crs": "CRS84",
                             "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                         }
                     ]
@@ -538,33 +478,29 @@ There are also links to the license information for the observation and forecast
                 "area": {
                     "title": "Area query",
                     "description": "Area query",
-                    "outputformat": [
+                    "output-formats": [
                         "CoverageJSON",
                         "GeoJSON"
                     ],
-                    "defaultOutputFormat": "CoverageJSON",
-                    "crs": [
+                    "default-output-format": "CoverageJSON",
+                    "crs-details": [
                         {
-                            "name": "CRS84",
+                            "crs": "CRS84",
                             "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                         }
                     ]
                 }
             },
-            "outputformat": [
+            "output-formats": [
                 "CoverageJSON",
                 "GeoJSON"
             ],
             "parameter-names": {
                 "Wind Direction": {
                     "type": "Parameter",
-                    "description": {
-                        "en": "Direction wind is from"
-                    },
+                    "description": "Direction wind is from",
                     "unit": {
-                        "label": {
-                            "en": "degree true"
-                        },
+                        "label": "degree true",
                         "symbol": {
                             "value": "°",
                             "type": "http://www.example.org/edr/metadata/units/degree"
@@ -572,10 +508,8 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
-                        "label": {
-                            "en": "Wind Direction"
-                        }
-                    },
+                        "label": "Wind Direction"
+                                            },
                     "measurementType": {
                         "method": "mean",
                         "period": "-PT10M/PT0M"
@@ -583,13 +517,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Wind Speed": {
                     "type": "Parameter",
-                    "description": {
-                        "en": "Average wind speed"
-                    },
+                    "description":"Average wind speed",
                     "unit": {
-                        "label": {
-                            "en": "mph"
-                        },
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://www.example.org/edr/metadata/units/mph"
@@ -597,9 +527,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
-                        "label": {
-                            "en": "Wind Speed"
-                        }
+                        "label":  "Wind Speed"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -608,13 +536,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Wind Gust": {
                     "type": "Parameter",
-                    "description": {
-                        "en": "Wind gusts are a rapid increase in strength of the wind relative to the wind speed."
-                    },
+                    "description":  "Wind gusts are a rapid increase in strength of the wind relative to the wind speed.",
                     "unit": {
-                        "label": {
-                            "en": "mph"
-                        },
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://www.example.org/edr/metadata/units/mph"
@@ -622,9 +546,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
-                        "label": {
-                            "en": "Wind Gust"
-                        }
+                        "label": "Wind Gust"
                     },
                     "measurementType": {
                         "method": "maximum",
@@ -633,13 +555,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Air Temperature": {
                     "type": "Parameter",
-                    "description": {
-                        "en": "2m air temperature in the shade and out of the wind"
-                    },
+                    "description":  "2m air temperature in the shade and out of the wind",
                     "unit": {
-                        "label": {
-                            "en": "degC"
-                        },
+                        "label":  "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://www.example.org/edr/metadata/units/degC"
@@ -647,9 +565,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label": {
-                            "en": "Air Temperature"
-                        }
+                        "label": "Air Temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -658,13 +574,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Weather": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "weather"
-                        },
+                        "label":  "weather",
                         "symbol": {
                             "value": "",
                             "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
@@ -672,9 +584,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
-                        "label": {
-                            "en": "Weather"
-                        }
+                        "label": "Weather"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -683,13 +593,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Relative Humidity": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "percent"
-                        },
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://www.example.org/edr/metadata/units/percent"
@@ -697,9 +603,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label": {
-                            "en": "Relative Humidity"
-                        }
+                        "label":  "Relative Humidity"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -708,13 +612,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Feels like temperature": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "degC"
-                        },
+                        "label": "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://www.example.org/edr/metadata/units/degC"
@@ -722,9 +622,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label": {
-                            "en": "Feels like temperature"
-                        }
+                        "label": "Feels like temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -733,13 +631,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "UV index": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "UV_index"
-                        },
+                        "label":  "UV_index",
                         "symbol": {
                             "value": "",
                             "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
@@ -747,9 +641,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
-                        "label": {
-                            "en": "UV index"
-                        }
+                        "label": "UV index"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -758,13 +650,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Probabilty of precipitation": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "percent"
-                        },
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://www.example.org/edr/metadata/units/percent"
@@ -772,9 +660,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label": {
-                            "en": "Probabilty of precipitation"
-                        }
+                        "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -783,13 +669,9 @@ There are also links to the license information for the observation and forecast
                 },
                 "Visibility": {
                     "type": "Parameter",
-                    "description": {
-                        "en": ""
-                    },
+                    "description": "",
                     "unit": {
-                        "label": {
-                            "en": "quality"
-                        },
+                        "label": "quality",
                         "symbol": {
                             "value": "",
                             "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
@@ -797,9 +679,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
-                        "label": {
-                            "en": "Visibility"
-                        }
+                        "label":  "Visibility"
                     },
                     "measurementType": {
                         "method": "instantaneous",

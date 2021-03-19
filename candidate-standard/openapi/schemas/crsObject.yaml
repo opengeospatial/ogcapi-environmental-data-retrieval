@@ -1,9 +1,9 @@
 type: object
 required:
-  - name
+  - crs
   - wkt
 properties:
-  name:
+  crs:
     description: name of the coordinate reference system, used as the value in the crs query parameter to define the required output CRS
     type: string
     example: native
