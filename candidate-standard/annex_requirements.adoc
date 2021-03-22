@@ -13,6 +13,7 @@ For clarity, the complete <<requirements-class-definition,requirements test clas
 
 include::requirements/requirements_class_core.adoc[]
 
+
 include::requirements/core/REQ_core_conformance.adoc[]
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
@@ -46,14 +47,6 @@ include::requirements/edr/REQ_rc-within-response.adoc[]
 include::requirements/edr/REQ_rc-within-units-definition.adoc[]
 
 include::requirements/edr/REQ_rc-within-units-response.adoc[]
-
-include::requirements/edr/REQ_rc-min-z-definition.adoc[]
-
-include::requirements/edr/REQ_rc-min-z-response.adoc[]
-
-include::requirements/edr/REQ_rc-max-z-definition.adoc[]
-
-include::requirements/edr/REQ_rc-max-z-response.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-x-definition.adoc[]
 

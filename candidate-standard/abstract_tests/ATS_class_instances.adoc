@@ -12,7 +12,7 @@
 
 ===== CRS 84
 
-include::core/ATS_crs84.adoc[]
+include::collections/ATS_crs84.adoc[]
 
 ==== Instance {root}/collections/{collectionId}/instances/{instanceId}
 
@@ -20,22 +20,13 @@ include::collections/ATS_src-md-op.adoc[]
 
 include::collections/ATS_src-md-success.adoc[]
 
-==== Instance {root}/collections/{collectionId}/instances/{instanceId}/{queryType}
-
-
-include::core/ATS_items.adoc[]
-
 
 ==== Second Tier Tests
 These tests are invoked by other tests.
 
-===== Extent
-
-include::core/ATS_rc-md-extent.adoc[]
 
 ===== Queries
 
-include::collections/ATS_rc-collection-info.adoc[]
 
 include::collections/ATS_rc-md-collection-info-table.adoc[]
 
