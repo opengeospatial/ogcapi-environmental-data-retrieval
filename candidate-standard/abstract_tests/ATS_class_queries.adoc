@@ -25,7 +25,7 @@ include::queries/ATS_trajectory.adoc[]
 
 ==== Collections and Instances
 
-===== Feature Collections {root}/collections
+===== Collections {root}/collections
 
 include::collections/ATS_rc-md-op.adoc[]
 
@@ -34,17 +34,12 @@ include::collections/ATS_rc-md-success.adoc[]
 
 include::collections/ATS_rc-md-success-table.adoc[]
 
-===== Feature Collection {root}/collections/{collectionId}
+=====  Collection {root}/collections/{collectionId}
 
 include::collections/ATS_src-md-op.adoc[]
 
 include::collections/ATS_src-md-success.adoc[]
 
-===== Features {root}/collections/{collectionId}/items
-
-NOTE: This test is too Feature centric. Will need to be greatly reduced in scope.
-
-include::core/ATS_items.adoc[]
 
 ===== Instances {root}/collections/{collectionId}/instances
 [[ats_instances_rc-md-op]]
@@ -63,11 +58,14 @@ include::instances/ATS_src-md-success.adoc[]
 ==== Second Tier Tests
 These tests are invoked by other tests.
 
+===== Items
+
+include::collections/ATS_rc-collection-info.adoc[]
+
+include::collections/ATS_rc-md-collection-info-links.adoc[]
 
 ===== Locations
 
 include::queries/ATS_locations.adoc[]
 
-===== No Data
 
-include::queries/ATS_no-data.adoc[]
