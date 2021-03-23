@@ -48,7 +48,7 @@ properties:
         example: mean
       duration:
         type: string
-        title: Measurement time duartion
+        title: Measurement time duration
         description: The time duration that the value was calculated for as an RFC3339
           duration value.  If the method value is instantaneous this value is
           not required.
