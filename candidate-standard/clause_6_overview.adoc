@@ -14,7 +14,7 @@ The EDR API can be considered a 'Sampling API'. The query creates a discrete sam
 
 The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the simple similar use cases addressed by SOS and WCS in the past.
 
-The EDR API only defines behaviour for the HTTP operation GET. 
+The EDR API defines behaviour for the HTTP GET operation. Future versions may introduce additional methods as required, consistent with RFC 7231.
 
 [[resource-paths]]
 === Resource Paths
