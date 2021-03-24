@@ -116,7 +116,7 @@ GFS temperature in Bratislava at 2021-01-19 09:00 UTC, all available vertical le
 ##### Time Series
 GFS 850 hPa temperature in Bratislava from 2021-01-19 00:00 UTC until 2021-01-20 00:00 UTC @ 1h step:
 
-`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/position?parameter-name=temperature&datetime=2021-01-19T00:00:00/PT1H/25&coords=POINT(17.11 48.14)&z=850&f=CoverageJSON`
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/position?parameter-name=temperature&datetime=R25/2021-01-19T00:00:00/PT1H&coords=POINT(17.11 48.14)&z=850&f=CoverageJSON`
 
 #### Radius
 Air temperature, wind speed and wind direction from METARs within 100 km radius around Bratislava, 24h interval:
@@ -153,12 +153,12 @@ Wind (U and V component) within Slovakia, all available forecasts starting from 
 - Time Extent: 2021-01-19 06:00 UTC → 2021-01-20 06:00 UTC
 - Output format: GRIB2
 
-`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/cube?parameter-name=temperature&coords=BOX(16.82 47.73, 22.57 49.62)&min-z=1000&max-z=300&datetime=2021-01-19T06:00:00/2021-01-20T06:00:00&f=GRIB2`
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/cube?parameter-name=temperature&bbox=16.82,47.73,22.57,49.62&z=1000/300&datetime=2021-01-19T06:00:00/2021-01-20T06:00:00&f=GRIB2`
 
 ##### GFS Data Within 4D Cube - Oversampled
 The same as above but with a denser sampling (in all dimensions):
 
-`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/cube?parameter-name=temperature&coords=BOX(16.82 47.73, 22.57 49.62)&resolution-x=24&resolution-y=8&min-z=1000&max-z=300&resolution-z=10&datetime=2021-01-19T06:00:00/PT1H/25&f=GRIB2`
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/cube?parameter-name=temperature&bbox=16.82,47.73,22.57,49.62&resolution-x=24&resolution-y=8&z=R14/1000/-50&&datetime=R25/2021-01-19T06:00:00/PT1H&f=GRIB2`
 
 ##### TEMP Within 4D Cube
 - Parameters: Pressure, Geopotential Height, Air Temperature, Wind- Speed, Wind Direction
@@ -166,7 +166,7 @@ The same as above but with a denser sampling (in all dimensions):
 - Vertical Extent: 1000 hPa → 300 hPa
 - Time Extent: 2021-01-18 06:00 UTC → 2021-01-20 06:00 UTC
 
-`https://ogcie.iblsoft.com/edr/collections/temp-pressure/cube?parameter-name=station,validity,pressure,geopotential,air-temperature,wind-speed,wind-direction&coords=BOX(16.82 47.73, 22.57 49.62)&min-z=1000&max-z=300&datetime=2021-01-18T06:00:00/2021-01-20T06:00:00&f=KernelTSV`
+`https://ogcie.iblsoft.com/edr/collections/temp-pressure/cube?parameter-name=station,validity,pressure,geopotential,air-temperature,wind-speed,wind-direction&bbox=16.82,47.73,22.57,49.62&z=1000/300&datetime=2021-01-18T06:00:00/2021-01-20T06:00:00&f=KernelTSV`
 
 #### Trajectory
 ##### XY Trajectory (LINESTRING)
