@@ -67,7 +67,7 @@ For example, if the query requires handling asynchronously, one option, but ther
 [[coordinate_reference_system]]
 === Coordinate Reference Systems
 
-As discussed in Chapter 9 of the OGC/W3C Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geospatial data and it is important to be clear about the coordinate reference system that the coordinates use.
+As discussed in Chapter 9 of the OGC/W3C Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geospatial or spatio-temporal data and it is important to be clear about the coordinate reference system that the coordinates use.
 
 For the reasons discussed in the Best Practices, EDR APIs MUST always support WGS84 longitude and latitude as a coordinate reference system.
 
