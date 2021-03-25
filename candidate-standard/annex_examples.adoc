@@ -13,8 +13,6 @@ include::examples/landing_page_JSON_1.adoc[]
 
 The API is described using the OpenAPI 3.02 specification, example responses for a server which supports all possible EDR query patterns can be found at:
 
-link:openapi/EDR_OpenAPI.json[JSON OpenAPI document]
-
 link:openapi/EDR_OpenAPI.yaml[YAML OpenAPI document]
 
 [[conformance-response-examples]]
