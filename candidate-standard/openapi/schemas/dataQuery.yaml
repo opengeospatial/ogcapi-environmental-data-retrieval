@@ -10,7 +10,7 @@ properties:
     description: description of the query
     type: string
     example: Query to return data for a defined well known text point
-  width-units:
+  width_units:
     description: list of width distance units distance values can be specified in
     type: array
     items: 
@@ -18,7 +18,7 @@ properties:
     example:
       - km
       - miles
-  height-units:
+  height_units:
     description: list of height distance units distance values can be specified in
     type: array
     items: 
@@ -26,7 +26,7 @@ properties:
     example:
       - m
       - hPa
-  output-formats:
+  output_formats:
     description: list of formats the results can be presented in
     type: array
     items: 
@@ -36,10 +36,10 @@ properties:
       - GeoJSON
       - IWXXM
       - GRIB
-  default-output-format:
+  default_output_format:
     description: default outputformat
     type: string
-  crs-details:
+  crs_details:
     description: List of key/value definitions for the CRS's supported by a query.  The key is the query parameter and the value is the Well Known Text description
     type: array
     items:

@@ -63,20 +63,7 @@ properties:
     type: array
     items:
       type: string
-  data-queries:
-    description: Detailed information relevant to individual query types
-    properties:
-      position:
-        $ref: dataQuery.yaml
-      radius:
-        $ref: dataQuery.yaml
-      area:
-        $ref: dataQuery.yaml
-      trajectory:
-        $ref: dataQuery.yaml
-      corridor:
-        $ref: dataQuery.yaml
-  output-formats:
+  output_formats:
     description: list of formats the results can be presented in
     type: array
     items: 
@@ -86,7 +73,7 @@ properties:
       - GeoJSON
       - IWXXM
       - GRIB
-  parameter-names:
+  parameter_names:
     description: list of the data parameters available in the collection
     type: object
     additionalProperties:

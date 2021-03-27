@@ -63,21 +63,74 @@
                     "hreflang": "en",
                     "rel": "data",
                     "type": "position",
-                    "title": ""
+                    "title": "",
+                    "variables": {
+                        "title": "Position query",
+                        "description": "Position query",
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON",
+                            "IWXXM"
+                        ],
+                        "default_output_format": "IWXXM",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 },
                 {
                     "href": "http://www.example.org/edr/collections/hrly_obs/radius",
                     "hreflang": "en",
                     "rel": "data",
                     "type": "radius",
-                    "title": ""
+                    "title": "",
+                    "variables": {
+                        "title": "Radius query",
+                        "description": "Radius query",
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON",
+                            "IWXXM"
+                        ],
+                        "default_output_format": "GeoJSON",
+                        "width_units": [
+                            "km",
+                            "miles"
+                        ],
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 },
                 {
                     "href": "http://www.example.org/edr/collections/hrly_obs/area",
                     "hreflang": "en",
                     "rel": "data",
                     "type": "area",
-                    "title": ""
+                    "title": "",
+                    "variables": {
+                        "title": "Area query",
+                        "description": "Area query",
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON",
+                            "BUFR",
+                            "IWXXM"
+                        ],
+                        "default_output_format": "CoverageJSON",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 },
                 {
                     "href": "http://www.example.org/edr/collections/hrly_obs/locations",
@@ -107,67 +160,12 @@
             "crs": [
                 "CRS84"
             ],
-            "data-queries": {
-                "position": {
-                    "title": "Position query",
-                    "description": "Position query",
-                    "output-formats": [
-                        "CoverageJSON",
-                        "GeoJSON",
-                        "IWXXM"
-                    ],
-                    "default-output-format": "IWXXM",
-                    "crs-details": [
-                        {
-                            "crs": "CRS84",
-                            "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                        }
-                    ]
-                },
-                "radius": {
-                    "title": "Radius query",
-                    "description": "Radius query",
-                    "output-formats": [
-                        "CoverageJSON",
-                        "GeoJSON",
-                        "IWXXM"
-                    ],
-                    "default-output-format": "GeoJSON",
-                    "width-units": [
-                        "km",
-                        "miles"
-                    ],
-                    "crs-details": [
-                        {
-                            "crs": "CRS84",
-                            "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                        }
-                    ]
-                },
-                "area": {
-                    "title": "Area query",
-                    "description": "Area query",
-                    "output-formats": [
-                        "CoverageJSON",
-                        "GeoJSON",
-                        "BUFR",
-                        "IWXXM"
-                    ],
-                    "default-output-format": "CoverageJSON",
-                    "crs-details": [
-                        {
-                            "crs": "CRS84",
-                            "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                        }
-                    ]
-                }
-            },
-            "output-formats": [
+            "output_formats": [
                 "CoverageJSON",
                 "GeoJSON",
                 "IWXXM"
             ],
-            "parameters": {
+            "parameter_names": {
                 "Wind Direction": {
                     "type": "Parameter",
                     "description": "",
@@ -425,63 +423,12 @@
             },
             "crs": [
                 "CRS84"
-            ],
-            "data-queries": {
-                "position": {
-                    "title": "Position query",
-                    "description": "Position query",
-                    "output-formats": [
-                        "CoverageJSON",
-                        "GeoJSON"
-                    ],
-                    "default-output-format": "GeoJSON",
-                    "crs-details": [
-                        {
-                            "crs": "CRS84",
-                            "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                        }
-                    ]
-                },
-                "radius": {
-                    "title": "Radius query",
-                    "description": "Radius query",
-                    "output-formats": [
-                        "CoverageJSON",
-                        "GeoJSON"
-                    ],
-                    "default-output-format": "GeoJSON",
-                    "width-units": [
-                        "km",
-                        "miles"
-                    ],
-                    "crs-details": [
-                        {
-                            "crs": "CRS84",
-                            "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                        }
-                    ]
-                },
-                "area": {
-                    "title": "Area query",
-                    "description": "Area query",
-                    "output-formats": [
-                        "CoverageJSON",
-                        "GeoJSON"
-                    ],
-                    "default-output-format": "CoverageJSON",
-                    "crs-details": [
-                        {
-                            "crs": "CRS84",
-                            "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                        }
-                    ]
-                }
-            },
-            "output-formats": [
+           ],
+            "output_formats": [
                 "CoverageJSON",
                 "GeoJSON"
             ],
-            "parameter-names": {
+            "parameter_names": {
                 "Wind Direction": {
                     "type": "Parameter",
                     "description": "Direction wind is from",

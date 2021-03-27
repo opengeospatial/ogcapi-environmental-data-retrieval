@@ -20,3 +20,5 @@ properties:
     example: Monitoring site name
   length:
     type: integer
+  variables:
+    $ref: dataQuery.yaml
