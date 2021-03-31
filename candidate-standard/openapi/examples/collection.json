@@ -66,6 +66,7 @@
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
+                        "query_type": "position",
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -88,6 +89,7 @@
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
+                        "query_type": "radius",
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -114,6 +116,7 @@
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
+                        "query_type": "area",
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",

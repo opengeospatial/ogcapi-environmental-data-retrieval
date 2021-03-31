@@ -10,6 +10,11 @@ properties:
     description: description of the query
     type: string
     example: Query to return data for a defined well known text point
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: [position, radius, area, cube, trajectory, corridor, items, locations, instances]
+    example: trajectory  
   width_units:
     description: list of width distance units distance values can be specified in
     type: array
