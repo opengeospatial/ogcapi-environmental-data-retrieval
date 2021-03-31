@@ -62,7 +62,6 @@
                     "href": "http://www.example.org/edr/collections/hrly_obs/position",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "position",
                     "title": "",
                     "variables": {
                         "title": "Position query",
@@ -85,7 +84,6 @@
                     "href": "http://www.example.org/edr/collections/hrly_obs/radius",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "radius",
                     "title": "",
                     "variables": {
                         "title": "Radius query",
@@ -112,7 +110,6 @@
                     "href": "http://www.example.org/edr/collections/hrly_obs/area",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "area",
                     "title": "",
                     "variables": {
                         "title": "Area query",
@@ -136,7 +133,6 @@
                     "href": "http://www.example.org/edr/collections/hrly_obs/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "location",
                     "title": ""
                 }
             ],
@@ -400,7 +396,6 @@
                     "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances",
                     "hreflang": "en",
                     "rel": "collection",
-                    "type": "instances",
                     "title": ""
                 }
             ],

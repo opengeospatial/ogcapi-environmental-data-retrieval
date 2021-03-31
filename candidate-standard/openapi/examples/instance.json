@@ -62,7 +62,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "position",
                     "title": "",
                     "variables": {
                         "title": "Position query",
@@ -85,7 +84,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "radius",
                     "title": "",
                     "variables": {
                         "title": "Radius query",
@@ -113,7 +111,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "area",
                     "title": "",
                     "variables": {
                         "title": "Area query",
@@ -137,7 +134,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "location",
                     "title": ""
                 }
             ],
@@ -378,7 +374,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "position",
                     "title": "",
                     "variables": {
                         "title": "Position query",
@@ -401,7 +396,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "radius",
                     "title": "",
                     "variables": {
                         "title": "Radius query",
@@ -429,7 +423,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "area",
                     "title": "",
                     "variables": {
                         "title": "Area query",
@@ -453,7 +446,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "location",
                     "title": ""
                 }
             ],
@@ -694,7 +686,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "position",
                     "title": "",
                     "variables": {
                         "title": "Position query",
@@ -717,7 +708,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "radius",
                     "title": "",
                     "variables": {
                         "title": "Radius query",
@@ -745,7 +735,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "area",
                     "title": "",
                     "variables": {
                         "title": "Area query",
@@ -769,7 +758,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "location",
                     "title": ""
                 }
             ],
@@ -1010,7 +998,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "position",
                     "title": "",
                     "variables": {
                         "title": "Position query",
@@ -1033,7 +1020,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "radius",
                     "title": "",
                     "variables": {
                         "title": "Radius query",
@@ -1061,7 +1047,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "area",
                     "title": "",
                     "variables": {
                         "title": "Area query",
@@ -1085,7 +1070,6 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "location",
                     "title": ""
                 }
             ],

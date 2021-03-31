@@ -76,7 +76,6 @@ There are also links to the license information for the observation and forecast
                     "href": "http://www.example.org/edr/collections/hrly_obs/position",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "position",
                     "title": "",
                     "variables": {
                         "title": "Position query",
@@ -99,7 +98,6 @@ There are also links to the license information for the observation and forecast
                     "href": "http://www.example.org/edr/collections/hrly_obs/radius",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "radius",
                     "title": "",
                     "variables": {
                         "title": "Radius query",
@@ -126,7 +124,6 @@ There are also links to the license information for the observation and forecast
                     "href": "http://www.example.org/edr/collections/hrly_obs/area",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "area",
                     "title": "",
                     "variables": {
                         "title": "Area query",
@@ -150,7 +147,6 @@ There are also links to the license information for the observation and forecast
                     "href": "http://www.example.org/edr/collections/hrly_obs/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "type": "location",
                     "title": ""
                 }
             ],
@@ -414,7 +410,6 @@ There are also links to the license information for the observation and forecast
                     "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances",
                     "hreflang": "en",
                     "rel": "collection",
-                    "type": "instances",
                     "title": ""
                 }
             ],
