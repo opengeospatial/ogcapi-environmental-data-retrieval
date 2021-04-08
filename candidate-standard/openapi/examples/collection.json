@@ -41,25 +41,22 @@
                     "href": "http://www.example.org/uk-hourly-site-specific-observations",
                     "hreflang": "en",
                     "rel": "service-doc",
-                    "type": "text/html",
-                    "title": ""
+                    "type": "text/html"
                 },
                 {
                     "href": "http://www.example.org/terms-and-conditions---datapoint#datalicence",
                     "hreflang": "en",
                     "rel": "license",
-                    "type": "text/html",
-                    "title": ""
+                    "type": "text/html"
                 },
                 {
                     "href": "https://www.metoffice.gov.uk/services/data/datapoint/terms-and-conditions---datapoint#termsofservice",
                     "hreflang": "en",
                     "rel": "restrictions",
-                    "type": "text/html",
-                    "title": ""
+                    "type": "text/html"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/position",
+                    "href": "http://www.example.org/edr/collections/hrly_obs/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -67,6 +64,10 @@
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -82,7 +83,7 @@
                     }
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/radius",
+                    "href": "http://www.example.org/edr/collections/hrly_obs/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -90,6 +91,10 @@
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -109,7 +114,7 @@
                     }
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/area",
+                    "href": "http://www.example.org/edr/collections/hrly_obs/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -117,6 +122,10 @@
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -136,7 +145,25 @@
                     "href": "http://www.example.org/edr/collections/hrly_obs/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": ""
+                    "variables": {
+                        "title": "Location query",
+                        "description": "Location query",
+                        "query_type": "locations",
+                        "templated": false,
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON",
+                            "BUFR",
+                            "IWXXM"
+                        ],
+                        "default_output_format": "CoverageJSON",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 }
             ],
             "extent": {
@@ -378,28 +405,24 @@
                     "href": "https://http://www.example.org/uk-3-hourly-site-specific-forecast",
                     "hreflang": "en",
                     "rel": "service-doc",
-                    "type": "text/html",
-                    "title": ""
+                    "type": "text/html"
                 },
                 {
                     "href": "https://http://www.example.org/terms-and-conditions---datapoint#datalicence",
                     "hreflang": "en",
                     "rel": "licence",
-                    "type": "text/html",
-                    "title": ""
+                    "type": "text/html"
                 },
                 {
                     "href": "https://http://www.example.org/terms-and-conditions---datapoint#termsofservice",
                     "hreflang": "en",
                     "rel": "restrictions",
-                    "type": "text/html",
-                    "title": ""
+                    "type": "text/html"
                 },
                 {
                     "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances",
                     "hreflang": "en",
-                    "rel": "collection",
-                    "title": ""
+                    "rel": "collection"
                 }
             ],
             "extent": {

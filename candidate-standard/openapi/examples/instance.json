@@ -59,7 +59,7 @@
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -67,6 +67,10 @@
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },                        
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -82,14 +86,17 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },                        
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -110,14 +117,17 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -137,7 +147,23 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": ""
+                    "variables": {
+                        "title": "Locations query",
+                        "description": "Locations query",
+                        "query_type": "location",
+                        "templated": false,
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON"
+                        ],
+                        "default_output_format": "GeoJSON",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 }
             ],
             "extent": {
@@ -374,14 +400,17 @@
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },                        
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -397,7 +426,7 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -405,6 +434,10 @@
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -425,7 +458,7 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -433,6 +466,10 @@
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -452,7 +489,23 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": ""
+                    "variables": {
+                        "title": "Locations query",
+                        "description": "Locations query",
+                        "query_type": "location",
+                        "templated": false,
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON"
+                        ],
+                        "default_output_format": "GeoJSON",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 }
             ],
             "extent": {
@@ -689,14 +742,17 @@
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -712,14 +768,17 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -740,14 +799,17 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -767,7 +829,23 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": ""
+                    "variables": {
+                        "title": "Locations query",
+                        "description": "Locations query",
+                        "query_type": "location",
+                        "templated": false,
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON"
+                        ],
+                        "default_output_format": "GeoJSON",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 }
             ],
             "extent": {
@@ -1004,14 +1082,17 @@
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -1027,7 +1108,7 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
@@ -1035,6 +1116,10 @@
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -1055,14 +1140,17 @@
 
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
+                        "templated": true,
+                        "coords" :{
+                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                        },
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON",
@@ -1082,7 +1170,23 @@
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": ""
+                    "variables": {
+                        "title": "Locations query",
+                        "description": "Locations query",
+                        "query_type": "location",
+                        "templated": false,
+                        "output_formats": [
+                            "CoverageJSON",
+                            "GeoJSON"
+                        ],
+                        "default_output_format": "GeoJSON",
+                        "crs_details": [
+                            {
+                                "crs": "CRS84",
+                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                            }
+                        ]    
+                    }
                 }
             ],
             "extent": {
