@@ -79,11 +79,11 @@ There are also links to the license information for the observation and forecast
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
+                    "templated": true,
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },                        
@@ -105,11 +105,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },                        
@@ -136,11 +136,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                         },
@@ -163,11 +163,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": false,
                     "variables": {
                         "title": "Locations query",
                         "description": "Locations query",
                         "query_type": "location",
-                        "templated": false,
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -419,11 +419,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },                        
@@ -445,12 +445,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
+                    "templated": true,
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },
@@ -478,11 +477,11 @@ There are also links to the license information for the observation and forecast
                     "hreflang": "en",
                     "rel": "data",
                     "title": "",
+                    "templated": true,
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                         },
@@ -505,11 +504,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": false,
                     "variables": {
                         "title": "Locations query",
                         "description": "Locations query",
                         "query_type": "location",
-                        "templated": false,
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -761,11 +760,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },
@@ -787,11 +786,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },
@@ -818,11 +817,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                         },
@@ -845,11 +844,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": false,
                     "variables": {
                         "title": "Locations query",
                         "description": "Locations query",
                         "query_type": "location",
-                        "templated": false,
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
@@ -1101,11 +1100,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Position query",
                         "description": "Position query",
                         "query_type": "position",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },
@@ -1127,12 +1126,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
-                    "title": "",
+                    "templated": true,
                     "variables": {
                         "title": "Radius query",
                         "description": "Radius query",
                         "query_type": "radius",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                         },
@@ -1159,11 +1157,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": true,
                     "variables": {
                         "title": "Area query",
                         "description": "Area query",
                         "query_type": "area",
-                        "templated": true,
                         "coords" :{
                             "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                         },
@@ -1186,11 +1184,11 @@ There are also links to the license information for the observation and forecast
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
                     "rel": "data",
+                    "templated": false,
                     "variables": {
                         "title": "Locations query",
                         "description": "Locations query",
                         "query_type": "location",
-                        "templated": false,
                         "output_formats": [
                             "CoverageJSON",
                             "GeoJSON"
