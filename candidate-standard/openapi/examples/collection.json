@@ -101,7 +101,7 @@
                             "IWXXM"
                         ],
                         "default_output_format": "GeoJSON",
-                        "width_units": [
+                        "within_units": [
                             "km",
                             "miles"
                         ],

@@ -115,7 +115,7 @@ There are also links to the license information for the observation and forecast
                             "IWXXM"
                         ],
                         "default_output_format": "GeoJSON",
-                        "width_units": [
+                        "within_units": [
                             "km",
                             "miles"
                         ],

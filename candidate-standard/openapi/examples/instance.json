@@ -103,7 +103,7 @@
                             "CSV"
                         ],
                         "default_output_format": "GeoJSON",
-                        "width_units": [
+                        "within_units": [
                             "km",
                             "miles"
                         ],
@@ -443,7 +443,7 @@
                             "CSV"
                         ],
                         "default_output_format": "GeoJSON",
-                        "width_units": [
+                        "within_units": [
                             "km",
                             "miles"
                         ],
@@ -784,7 +784,7 @@
                             "CSV"
                         ],
                         "default_output_format": "GeoJSON",
-                        "width_units": [
+                        "within_units": [
                             "km",
                             "miles"
                         ],
@@ -1124,7 +1124,7 @@
                             "CSV"
                         ],
                         "default_output_format": "GeoJSON",
-                        "width_units": [
+                        "within_units": [
                             "km",
                             "miles"
                         ],
