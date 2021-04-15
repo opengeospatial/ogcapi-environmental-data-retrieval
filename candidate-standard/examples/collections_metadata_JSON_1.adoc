@@ -70,114 +70,24 @@ There are also links to the license information for the observation and forecast
                     "type": "text/html"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/position?coords={coords}",
+                    "href": "http://www.example.org/edr/collections/hrly_obs/position",
                     "hreflang": "en",
-                    "rel": "data",
-                    "title": "",
-                    "templated": true,
-                    "variables": {
-                        "title": "Position query",
-                        "description": "Position query",
-                        "query_type": "position",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "IWXXM"
-                        ],
-                        "default_output_format": "IWXXM",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/radius?coords={coords}",
+                    "href": "http://www.example.org/edr/collections/hrly_obs/radius",
                     "hreflang": "en",
-                    "rel": "data",
-                    "title": "",
-                    "templated": true,
-                    "variables": {
-                        "title": "Radius query",
-                        "description": "Radius query",
-                        "query_type": "radius",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "IWXXM"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "within_units": [
-                            "km",
-                            "miles"
-                        ],
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/area?coords={coords}",
+                    "href": "http://www.example.org/edr/collections/hrly_obs/area",
                     "hreflang": "en",
-                    "rel": "data",
-                    "title": "",
-                    "templated": true,
-                    "variables": {
-                        "title": "Area query",
-                        "description": "Area query",
-                        "query_type": "area",
-                        "coords" :{
-                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "BUFR",
-                            "IWXXM"
-                        ],
-                        "default_output_format": "CoverageJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 },
                 {
                     "href": "http://www.example.org/edr/collections/hrly_obs/locations",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": false,
-                    "variables": {
-                        "title": "Location query",
-                        "description": "Location query",
-                        "query_type": "locations",
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "BUFR",
-                            "IWXXM"
-                        ],
-                        "default_output_format": "CoverageJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 }
             ],
             "extent": {
@@ -195,6 +105,123 @@ There are also links to the license information for the observation and forecast
                         "2020-04-19T11:00:00Z/2020-06-30T09:00:00Z"
                     ],
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                }
+            },
+            "data_queries" : {
+                "position": {
+                    "link": {
+                        "href": "http://www.example.org/edr/collections/hrly_obs/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "query_type": "position",
+                            "coords" :{
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "IWXXM",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }                    
+                },
+                "radius": {
+                    "link": {
+                        "href": "http://www.example.org/edr/collections/hrly_obs/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "query_type": "radius",
+                            "coords" :{
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }                  
+                },
+                "area": {
+                    "link":                 {
+                        "href": "http://www.example.org/edr/collections/hrly_obs/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "query_type": "area",
+                            "coords" :{
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "BUFR",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "http://www.example.org/edr/collections/hrly_obs/locations",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Location query",
+                            "description": "Location query",
+                            "query_type": "locations",
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "BUFR",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }                    
                 }
             },
             "crs": [
@@ -657,6 +684,6 @@ There are also links to the license information for the observation and forecast
             }
         }
     ]
-}    
+}      
 ----
 =================

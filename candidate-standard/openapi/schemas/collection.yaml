@@ -58,6 +58,31 @@ properties:
       type: string
   extent:
     $ref: extent.yaml
+  data_queries:
+    position:
+      link: 
+        $ref: link.yaml
+    radius:
+      link: 
+        $ref: link.yaml
+    area:
+      link: 
+        $ref: link.yaml
+    cube:
+      link: 
+        $ref: link.yaml
+    trajectory:
+      link: 
+        $ref: link.yaml
+    corridor:
+      link: 
+        $ref: link.yaml
+    location:
+      link: 
+        $ref: link.yaml
+    item:
+      link: 
+        $ref: link.yaml
   crs:
     description: list of the coordinate reference systems the collection results can support
     type: array

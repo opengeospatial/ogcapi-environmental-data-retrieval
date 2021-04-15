@@ -75,111 +75,24 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
-                    "rel": "data",
-                    "title": "",
-                    "templated": true,
-                    "variables": {
-                        "title": "Position query",
-                        "description": "Position query",
-                        "query_type": "position",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },                        
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Radius query",
-                        "description": "Radius query",
-                        "query_type": "radius",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },                        
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "within_units": [
-                            "km",
-                            "miles"
-                        ],
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Area query",
-                        "description": "Area query",
-                        "query_type": "area",
-                        "coords" :{
-                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "CoverageJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-                    
+                    "rel": "data"
                 },
                 {
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": false,
-                    "variables": {
-                        "title": "Locations query",
-                        "description": "Locations query",
-                        "query_type": "location",
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 }
             ],
             "extent": {
@@ -199,7 +112,123 @@ There are also links to the license information for the observation and forecast
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
                 }
             },
-            "crs": ["CRS84"],
+            "data_queries": {
+                "position": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "title": "",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "query_type": "position",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "radius": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "query_type": "radius",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "area": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "query_type": "area",
+                            "coords": {
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Locations query",
+                            "description": "Locations query",
+                            "query_type": "location",
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "crs": [
+                "CRS84"
+            ],
             "output_formats": [
                 "GeoJSON",
                 "CoverageJSON",
@@ -218,7 +247,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
-                        "label":  "Wind Direction"
+                        "label": "Wind Direction"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -229,7 +258,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Average wind speed",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -248,7 +277,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Wind gusts are a rapid increase in strength of the wind relative to the wind speed.",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -286,7 +315,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "weather",
+                        "label": "weather",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
@@ -305,7 +334,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -313,7 +342,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Relative Humidity"
+                        "label": "Relative Humidity"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -324,7 +353,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "degC",
+                        "label": "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://http://www.example.org/edr/metadata/units/degC"
@@ -332,7 +361,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label":  "Feels like temperature"
+                        "label": "Feels like temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -343,7 +372,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "UV_index",
+                        "label": "UV_index",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
@@ -351,7 +380,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
-                        "label":  "UV index"
+                        "label": "UV index"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -362,7 +391,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -370,7 +399,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Probabilty of precipitation"
+                        "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -381,7 +410,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "quality",
+                        "label": "quality",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
@@ -389,7 +418,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
-                        "label":  "Visibility"
+                        "label": "Visibility"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -416,111 +445,24 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Position query",
-                        "description": "Position query",
-                        "query_type": "position",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },                        
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Radius query",
-                        "description": "Radius query",
-                        "query_type": "radius",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "within_units": [
-                            "km",
-                            "miles"
-                        ],
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
-                    "rel": "data",
-                    "title": "",
-                    "templated": true,
-                    "variables": {
-                        "title": "Area query",
-                        "description": "Area query",
-                        "query_type": "area",
-                        "coords" :{
-                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "CoverageJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-                    
+                    "rel": "data"
                 },
                 {
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": false,
-                    "variables": {
-                        "title": "Locations query",
-                        "description": "Locations query",
-                        "query_type": "location",
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 }
             ],
             "extent": {
@@ -540,7 +482,123 @@ There are also links to the license information for the observation and forecast
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
                 }
             },
-            "crs": ["CRS84"],
+            "data_queries": {
+                "position": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "query_type": "position",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "radius": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "query_type": "radius",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "area": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "title": "",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "query_type": "area",
+                            "coords": {
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Locations query",
+                            "description": "Locations query",
+                            "query_type": "location",
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "crs": [
+                "CRS84"
+            ],
             "output_formats": [
                 "GeoJSON",
                 "CoverageJSON",
@@ -559,7 +617,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
-                        "label":  "Wind Direction"
+                        "label": "Wind Direction"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -570,7 +628,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Average wind speed",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -589,7 +647,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Wind gusts are a rapid increase in strength of the wind relative to the wind speed.",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -627,7 +685,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "weather",
+                        "label": "weather",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
@@ -646,7 +704,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -654,7 +712,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Relative Humidity"
+                        "label": "Relative Humidity"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -665,7 +723,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "degC",
+                        "label": "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://http://www.example.org/edr/metadata/units/degC"
@@ -673,7 +731,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label":  "Feels like temperature"
+                        "label": "Feels like temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -684,7 +742,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "UV_index",
+                        "label": "UV_index",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
@@ -692,7 +750,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
-                        "label":  "UV index"
+                        "label": "UV index"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -703,7 +761,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -711,7 +769,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Probabilty of precipitation"
+                        "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -722,7 +780,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "quality",
+                        "label": "quality",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
@@ -730,7 +788,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
-                        "label":  "Visibility"
+                        "label": "Visibility"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -757,110 +815,24 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Position query",
-                        "description": "Position query",
-                        "query_type": "position",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Radius query",
-                        "description": "Radius query",
-                        "query_type": "radius",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "within_units": [
-                            "km",
-                            "miles"
-                        ],
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Area query",
-                        "description": "Area query",
-                        "query_type": "area",
-                        "coords" :{
-                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "CoverageJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-                    
+                    "rel": "data"
                 },
                 {
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": false,
-                    "variables": {
-                        "title": "Locations query",
-                        "description": "Locations query",
-                        "query_type": "location",
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 }
             ],
             "extent": {
@@ -880,7 +852,123 @@ There are also links to the license information for the observation and forecast
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
                 }
             },
-            "crs": ["CRS84"],
+            "data_queries": {
+                "position": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "query_type": "position",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "radius": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "query_type": "radius",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "area": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "title": "",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "query_type": "area",
+                            "coords": {
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Locations query",
+                            "description": "Locations query",
+                            "query_type": "location",
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "crs": [
+                "CRS84"
+            ],
             "output_formats": [
                 "GeoJSON",
                 "CoverageJSON",
@@ -899,7 +987,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
-                        "label":  "Wind Direction"
+                        "label": "Wind Direction"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -910,7 +998,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Average wind speed",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -929,7 +1017,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Wind gusts are a rapid increase in strength of the wind relative to the wind speed.",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -967,7 +1055,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "weather",
+                        "label": "weather",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
@@ -986,7 +1074,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -994,7 +1082,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Relative Humidity"
+                        "label": "Relative Humidity"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1005,7 +1093,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "degC",
+                        "label": "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://http://www.example.org/edr/metadata/units/degC"
@@ -1013,7 +1101,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label":  "Feels like temperature"
+                        "label": "Feels like temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1024,7 +1112,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "UV_index",
+                        "label": "UV_index",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
@@ -1032,7 +1120,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
-                        "label":  "UV index"
+                        "label": "UV index"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1043,7 +1131,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -1051,7 +1139,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Probabilty of precipitation"
+                        "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1062,7 +1150,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "quality",
+                        "label": "quality",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
@@ -1070,7 +1158,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
-                        "label":  "Visibility"
+                        "label": "Visibility"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1097,110 +1185,24 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Position query",
-                        "description": "Position query",
-                        "query_type": "position",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Radius query",
-                        "description": "Radius query",
-                        "query_type": "radius",
-                        "coords" :{
-                            "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "within_units": [
-                            "km",
-                            "miles"
-                        ],
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-
+                    "rel": "data"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": true,
-                    "variables": {
-                        "title": "Area query",
-                        "description": "Area query",
-                        "query_type": "area",
-                        "coords" :{
-                            "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
-                        },
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON",
-                            "CSV"
-                        ],
-                        "default_output_format": "CoverageJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
-                    
+                    "rel": "data"
                 },
                 {
                     "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                     "hreflang": "en",
-                    "rel": "data",
-                    "templated": false,
-                    "variables": {
-                        "title": "Locations query",
-                        "description": "Locations query",
-                        "query_type": "location",
-                        "output_formats": [
-                            "CoverageJSON",
-                            "GeoJSON"
-                        ],
-                        "default_output_format": "GeoJSON",
-                        "crs_details": [
-                            {
-                                "crs": "CRS84",
-                                "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
-                            }
-                        ]    
-                    }
+                    "rel": "data"
                 }
             ],
             "extent": {
@@ -1220,7 +1222,122 @@ There are also links to the license information for the observation and forecast
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
                 }
             },
-            "crs": ["CRS84"],
+            "data_queries": {
+                "position": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "query_type": "position",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "radius": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "query_type": "radius",
+                            "coords": {
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "area": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "query_type": "area",
+                            "coords": {
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "CSV"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Locations query",
+                            "description": "Locations query",
+                            "query_type": "location",
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                }
+            },
+            "crs": [
+                "CRS84"
+            ],
             "output_formats": [
                 "GeoJSON",
                 "CoverageJSON",
@@ -1239,7 +1356,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
-                        "label":  "Wind Direction"
+                        "label": "Wind Direction"
                     },
                     "measurementType": {
                         "method": "mean",
@@ -1250,7 +1367,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Average wind speed",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -1269,7 +1386,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "Wind gusts are a rapid increase in strength of the wind relative to the wind speed.",
                     "unit": {
-                        "label":  "mph",
+                        "label": "mph",
                         "symbol": {
                             "value": "mph",
                             "type": "http://http://www.example.org/edr/metadata/units/mph"
@@ -1307,7 +1424,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "weather",
+                        "label": "weather",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
@@ -1326,7 +1443,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -1334,7 +1451,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Relative Humidity"
+                        "label": "Relative Humidity"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1345,7 +1462,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "degC",
+                        "label": "degC",
                         "symbol": {
                             "value": "°C",
                             "type": "http://http://www.example.org/edr/metadata/units/degC"
@@ -1353,7 +1470,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
-                        "label":  "Feels like temperature"
+                        "label": "Feels like temperature"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1364,7 +1481,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "UV_index",
+                        "label": "UV_index",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
@@ -1372,7 +1489,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
-                        "label":  "UV index"
+                        "label": "UV index"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1383,7 +1500,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "percent",
+                        "label": "percent",
                         "symbol": {
                             "value": "%",
                             "type": "http://http://www.example.org/edr/metadata/units/percent"
@@ -1391,7 +1508,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
-                        "label":  "Probabilty of precipitation"
+                        "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1402,7 +1519,7 @@ There are also links to the license information for the observation and forecast
                     "type": "Parameter",
                     "description": "",
                     "unit": {
-                        "label":  "quality",
+                        "label": "quality",
                         "symbol": {
                             "value": "",
                             "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
@@ -1410,7 +1527,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "observedProperty": {
                         "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
-                        "label":  "Visibility"
+                        "label": "Visibility"
                     },
                     "measurementType": {
                         "method": "instantaneous",
@@ -1418,7 +1535,6 @@ There are also links to the license information for the observation and forecast
                     }
                 }
             }
-
         }
     ]
 }
