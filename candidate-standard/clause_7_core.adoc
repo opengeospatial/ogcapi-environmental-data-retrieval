@@ -79,7 +79,7 @@ The following JSON fragment is an example of a response to an OGC API-EDR Landin
 include::examples/json/landingPage_example.json[]
 ----
 
-===== Error situations
+===== Error Handling
 
 The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
 
@@ -105,7 +105,7 @@ Only the link is required by API-Common.
 
 A successful response to the API Definition request is a resource which documents the design of the API. API-Common leaves the selection of format for the API Definition response to the API implementor. However, the options are limited to those which have been defined in the API-Common standard. At this time OpenAPI 3.0 is the only option provided.
 
-===== Error situations
+===== Error Handling
 
 The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
 
