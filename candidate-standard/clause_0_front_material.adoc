@@ -32,7 +32,7 @@ This standard extends the <<common-paths>> common query operations by defining s
 
 The following are keywords to be used by search engines and document catalogues.
 
-ogcdoc, OGC document, property, geographic information, spatial data, spatial things, spatio-temporal, dataset, distribution, API, JSON, geojson, coverageJSON, html, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, time-series, radius, polygon, wkt
+ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, geoJSON, coverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
 
 [big]*iii.   Preface*
 
