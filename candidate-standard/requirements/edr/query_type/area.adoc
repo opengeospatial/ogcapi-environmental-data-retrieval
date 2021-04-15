@@ -1,4 +1,4 @@
-The Area query returns data within the polygon defined by the `coords` parameter. The height or time of the area are specified through separate paremeters. The results are further filtered by the constraints defined by the following query parameters:
+The Area query returns data within the polygon defined by the `coords` parameter. The height or time of the area are specified through separate parameters. The results are further filtered by the constraints defined by the following query parameters:
 
 ===== *Parameter coords*
 
