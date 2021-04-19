@@ -20,3 +20,8 @@ properties:
     example: Monitoring site name
   length:
     type: integer
+  templated:
+    description: defines if the link href value is a template with values requiring replacement 
+    type: boolean
+  variables:
+    $ref: dataQuery.yaml

@@ -2,6 +2,7 @@ type: object
 required:
   - links
   - id
+  - parameter-names
 properties:
   links:
     type: array
@@ -57,25 +58,37 @@ properties:
       type: string
   extent:
     $ref: extent.yaml
+  data_queries:
+    position:
+      link: 
+        $ref: link.yaml
+    radius:
+      link: 
+        $ref: link.yaml
+    area:
+      link: 
+        $ref: link.yaml
+    cube:
+      link: 
+        $ref: link.yaml
+    trajectory:
+      link: 
+        $ref: link.yaml
+    corridor:
+      link: 
+        $ref: link.yaml
+    location:
+      link: 
+        $ref: link.yaml
+    item:
+      link: 
+        $ref: link.yaml
   crs:
-    description: list of the coordinate reference systems the collection results can
-      be produced in
+    description: list of the coordinate reference systems the collection results can support
     type: array
     items:
-      $ref: crsObject.yaml
-  referencemetadata:
-    description: Property to contain any extra metadata information that is specific
-      to the collection
-    type: object
-  distanceunits:
-    description: list of distance units radius distance values can be specified in
-    type: array
-    items: 
       type: string
-    example:
-      - km
-      - miles
-  outputformat:
+  output_formats:
     description: list of formats the results can be presented in
     type: array
     items: 
@@ -85,7 +98,7 @@ properties:
       - GeoJSON
       - IWXXM
       - GRIB
-  parameters:
+  parameter_names:
     description: list of the data parameters available in the collection
     type: object
     additionalProperties:
