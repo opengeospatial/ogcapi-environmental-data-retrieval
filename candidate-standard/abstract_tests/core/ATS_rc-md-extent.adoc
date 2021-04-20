@@ -2,7 +2,7 @@
 [width="90%",cols="2,6a"]
 |===
 ^|*Abstract Test {counter:ats-id}* |*/conf/core/rc-extent* 
-^|Test Purpose |Validate that the `extent` property if it is present
+^|Test Purpose |Validate the `extent` property if it is present
 ^|Requirement |<<req_core_rc-extent,/req/core/rc-extent>>
 ^|Test Method |
 
