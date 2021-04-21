@@ -15,7 +15,7 @@ The `Core` Requirements Class defines the requirements for locating, understandi
 The `Core` Requirements Class is presented in five sections:
 
 . <<api-platform-section,API Platform>>: a set of common capabilities
-. <<rc_collection-section,Collection Access>>: operations for accessing <<collection-definition,collections>> of environmental data.
+. <<rc_collection-section,Collection Access>>: operations for accessing <<collection-definition,collections>> of spatio-temporal data.
 . <<query-resources-section,Query Resources>>: operations for accessing spatio-temporal data resources through queries
 . <<parameters-section,Parameters>>: parameters for use in the API-EDR operations.
 . <<general-section,General>>: general principles for use with this standard.
