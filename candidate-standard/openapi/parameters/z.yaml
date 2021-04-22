@@ -35,3 +35,5 @@ description: |+
 required: false
 schema:
   type: string
+style: form
+explode: false
