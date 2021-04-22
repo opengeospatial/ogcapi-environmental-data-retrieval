@@ -45,6 +45,6 @@ SensorThings API follows OData’s specification for requesting entities. That m
 
 Further, the EDR API allows for retrieval of coverage data and HTML responses – both of which are not supported by the SensorThings API. Therefore, developers that are interested in IoT devices and OData, and do not have a need for HTML previews of content are advised to make use of the SensorThings API instead. Similarly developers that are interested in XML-encoded observations and sensor model descriptions are advised to make use of the SOS.
 
-Similarly users and developers that do not need the full details of observational, feature or coverage conceptual models and associated metadata could use the EDR API to hide the extra complexity.
+Similarly, an EDR or STA interface could be deployed on the same data set, so that users and developers that do not need the full details of observational, feature or coverage conceptual models and associated metadata could use the EDR API to hide the extra complexity, while users that do need all the details can use the STA API to retrieve those.
 
 :sectnums:

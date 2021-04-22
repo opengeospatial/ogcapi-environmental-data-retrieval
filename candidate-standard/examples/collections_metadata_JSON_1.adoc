@@ -443,19 +443,19 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "https://http://www.example.org/uk-3-hourly-site-specific-forecast",
+                    "href": "https://www.example.org/uk-3-hourly-site-specific-forecast",
                     "hreflang": "en",
                     "rel": "service-doc",
                     "type": "text/html"
                 },
                 {
-                    "href": "https://http://www.example.org/terms-and-conditions---datapoint#datalicence",
+                    "href": "https://www.example.org/terms-and-conditions---datapoint#datalicence",
                     "hreflang": "en",
                     "rel": "licence",
                     "type": "text/html"
                 },
                 {
-                    "href": "https://http://www.example.org/terms-and-conditions---datapoint#termsofservice",
+                    "href": "https://www.example.org/terms-and-conditions---datapoint#termsofservice",
                     "hreflang": "en",
                     "rel": "restrictions",
                     "type": "text/html"

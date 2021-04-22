@@ -5,8 +5,9 @@
 
 The https://ogcapi.ogc.org/[OGC API] standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type.
 
-This OGC API-EDR standard defines an API with two goals:
+This OGC API-EDR standard defines an API with the following goals:
 
+. to make it easier to access a wide range of data through a uniform, well-defined simple Web interface;
 . To allow clients to retrieve a subset of data created by the API in response to a standardized, coordinate orientated, query pattern;
 . To provide 'building blocks' allowing the construction of more complex applications.
 

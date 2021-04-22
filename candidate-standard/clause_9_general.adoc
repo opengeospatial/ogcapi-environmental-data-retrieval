@@ -73,12 +73,12 @@ For the reasons discussed in the Best Practices, EDR APIs MUST always support WG
 
 <<req_core_crs84>>
 
-The implementations compliant with the OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
+Implementations compliant with OGC API Common Part 1: Core are only required to support publishing geometries in coordinate reference system `http://www.opengis.net/def/crs/OGC/1.3/CRS84`.
 
 [[rc_encoding-section]]
 === Encodings
 
-While the OGC API Common standard does not specify any mandatory encoding, the following encodings are recommended. See <<overview,Clause 7 (Overview)>> for a discussion of this issue.
+While the OGC API Common Part 1: Core does not specify any mandatory encoding, the following encodings are recommended. See <<overview,Clause 7 (Overview)>> for a discussion of this issue.
 
 [[rc_html-section]]
 HTML encoding recomendation:
@@ -89,7 +89,7 @@ GeoJSON encoding recommendation:
 include::recommendations/core/REC_geojson.adoc[]
 
 [[rc_covjson-section]]
-CoverageJSON encoding recommendation:
+CoverageJSON encoding recommendation. This is specific to the EDR API:
 include::recommendations/core/REC_covjson.adoc[]
 
 Requirement <<req_core_http,`/req/core/http`>> implies that the encoding of a response is determined using content negotiation as specified by the HTTP RFC.
@@ -159,6 +159,8 @@ content:
 
 [[security]]
 === Security
+
+The OGC API Common Core does not specify any specific security controls. However, it was constructed so that security controls can be added without impacting conformance.
 
 <<req_oas30_security>>
 
