@@ -8,10 +8,12 @@ anyOf:
       - symbol
 properties:
   label:
-    type: object
-    properties:
-      en:
-        type: string
+    anyOf:
+      - type: object
+        properties:
+          en:
+            type: string
+      - type: string
   symbol:
     title: Decribe unit symbol
     anyOf:

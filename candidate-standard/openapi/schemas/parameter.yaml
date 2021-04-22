@@ -32,7 +32,7 @@ properties:
           items:
             type: integer
   extent:
-    $ref: parameterExtent.yaml
+    $ref: extent.yaml
   id:
     description: Unique ID of the parameter, this is the value used for querying the data
     type: string
