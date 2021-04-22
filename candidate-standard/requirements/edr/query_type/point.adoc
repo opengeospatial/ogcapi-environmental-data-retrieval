@@ -35,7 +35,9 @@ Retrieve data for Greenwich, London:
 =================
 Retrieve data for a list of locations: 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W:  
 
-`coords=MULTIPOINT\((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))`
+`coords=MULTIPOINT\((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))`
+
+Note that for this example, the coordinate reference system has the coordinate order: (longitude, latitude)
 =================
 
 ===== *Parameter z*
