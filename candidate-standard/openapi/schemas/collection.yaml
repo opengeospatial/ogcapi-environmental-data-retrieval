@@ -2,6 +2,7 @@ type: object
 required:
   - links
   - id
+  - extent
   - parameter-names
 properties:
   links:
