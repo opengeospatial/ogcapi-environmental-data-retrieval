@@ -63,5 +63,6 @@ This document outlines EDR API support of the design principles of the [OGC Web 
   - provides both safe and idempotent operations via HTTP `GET`
 - [x]  Principle #22 – Make resources discoverable
   - implements common OGC API link relations
-- [ ]  Principle #23 - Make default behavior explicit
-  - ? TBD (per https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/233)
+- [x]  Principle #23 - Make default behavior explicit
+  - collection metadata provides the ability for link relations via URL templates along with explanations of templated variables
+  - example: https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/candidate-standard/examples/collections_metadata_JSON_1.adoc
