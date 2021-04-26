@@ -9,7 +9,7 @@ properties:
     enum:
       - Feature
   geometry:
-      oneOf:
+    oneOf:
       - $ref: pointGeoJSON.yaml
       - $ref: multipointGeoJSON.yaml
       - $ref: linestringGeoJSON.yaml
