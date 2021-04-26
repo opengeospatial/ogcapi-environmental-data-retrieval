@@ -3,6 +3,8 @@
 [[collection_metadata_desc]]
 == Collection Response Metadata (Informative)
 
+This Annex contains a more-easily human-readable view of the content in the OpenAPI definitions.
+
 The collection response structure provides the details which describe the information available and the query capabilities supported by the collections served by the API. Collection objects describe both collections and instances of a collection. 
 
 === EDR Collection Object Structure
