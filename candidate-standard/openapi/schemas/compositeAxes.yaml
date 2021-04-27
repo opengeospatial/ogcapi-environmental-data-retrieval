@@ -18,5 +18,5 @@ properties:
       type: array
       items:
         anyOf:
-          - number
-          - string
+          - type: number
+          - type: string
