@@ -16,9 +16,15 @@ properties:
     enum: [position, radius, area, cube, trajectory, corridor, items, locations, instances]
     example: trajectory
   coords:
-    description: WKT geometry
-    type: string
-    example: POINT(-120 55)
+    description: Description of valid coords query parameter values
+    type: object
+    properties:
+      description:
+        type: string
+      type:
+        type: string
+      example:
+        type: string
   within_units:
     description: list of distance units radius values can be specified in
     type: array
