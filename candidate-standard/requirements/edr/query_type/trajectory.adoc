@@ -61,7 +61,7 @@ From Bristol to Exeter
 
 ===== *Parameter z*
 
-Used when the entire trajectory occurs at the same vertical height the z query parameter is used to define the height
+Used when the entire trajectory occurs at the same vertical coordinate. The `z` query parameter is used to define the height
 
 
 .A single vertical level
