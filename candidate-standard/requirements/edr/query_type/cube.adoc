@@ -1,4 +1,4 @@
-The `Cube` query returns a data cube defined by the  `bbox` and `z`parameters. 
+The `Cube` query returns a data cube defined by the  `bbox` and `z` parameters. 
 The results are further filtered by the constraints defined by the following query parameters:
 
 ===== *Parameter bbox*
