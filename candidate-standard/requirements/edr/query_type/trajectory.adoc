@@ -67,9 +67,8 @@ Used when the entire trajectory occurs at the same vertical height the z query p
 .A single vertical level
 ===========
 
-for instance if the entire route is at the 850hPa pressure level
-
-z=850
+Example: if the entire route is at the 850hPa pressure level
+`coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)&z=850`
 ===========
 
 ===== <<datetime>>
