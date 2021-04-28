@@ -16,7 +16,7 @@ description: |-
     For instance a cube that roughly describes an area that contains 
     South West England in WGS84 would look like
 
-    coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,,-6.0 52.0,-6.0 50.0))
+    coords=POLYGON((-6.0 50.0,-4.35 50.0,-4.35 52.0,-6.0 52.0,-6.0 50.0))
 
     `If the WKT does not define a Rectangle the service will generate 
     an 400 error message`

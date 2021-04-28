@@ -59,7 +59,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 |/collections/{collectionId}/cube | Cube | Return data for a spatial <<cube-definition,cube>>
 |/collections/{collectionId}/trajectory | Trajectory | Return data along a defined <<trajectory-definition,trajectory>>
 |/collections/{collectionId}/corridor | Corridor | Return data within a spatio-temporal <<corridor-definition,corridor>>
-|/collections/{collectionId}/items | Item |Items associated with the `{collectionId}` <<collection-definition,collection>>.
+|/collections/{collectionId}/items | Items |Items associated with the `{collectionId}` <<collection-definition,collection>>.
 |/collections/{collectionId}/locations | Locations |Location identifers associated with the `{collectionId}` <<collection-definition,collection>>.
 |/collections/{collectionId}/instances | Instances | List the available instances of the <<collection-definition,collection>>
 |===
