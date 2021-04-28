@@ -48,6 +48,11 @@ SOURCE: https://www.iso.org/standard/32551.html[ISO 19133:2005]:
 
 region specified with a geographic position and radial distance
 
+[[spatio-temporal-data-definition]]
+=== spatio-temporal data
+
+data associated with a position in space-time
+
 [[trajectory-definition]]
 === trajectory
 
