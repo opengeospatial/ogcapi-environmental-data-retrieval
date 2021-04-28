@@ -82,7 +82,7 @@ Proposed changes and extensions to the standard will be documented in the folder
 
 Longer term work is being recorded [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Future-Work)
 
-**Conformance Test Suite** work started at the beginning of 2021.
+**Conformance Test Suite** work started at the beginning of 2021 using [TeamEngine](https://github.com/opengeospatial/teamengine).
 
 ### EDR API Standard Working Group
 
