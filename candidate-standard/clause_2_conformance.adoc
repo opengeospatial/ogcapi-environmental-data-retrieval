@@ -25,7 +25,7 @@ The EDR API _Collection Requirements Class_ extends the common requirements to t
 
 The EDR Collection requirements class is specified in *Collection Requirements Class* <<rc_collection-section,(Chapter 9)>>.
 
-* The *<<rc_json-section,JSON>>* and *<<rc_edr-geojson-section,EDR GeoJSON>>* conformance classes ensure that basic discovery of Core and Collection resources for the EDR API can be performed. they have one requirements class each
+* The *<<rc_json-section,JSON>>* and *<<rc_edr-geojson-section,EDR GeoJSON>>* conformance classes ensure that basic discovery of Core and Collection resources for the EDR API can be performed. They have one Requirements Class each
 
 * <<rc_encoding-section,Encodings>>, three Requirements Classes
 ** <<rc_html-section,HTML>>
