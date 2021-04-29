@@ -101,6 +101,8 @@ The repository also contains the plan of work and links to other relevant docume
 
 In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an electronic vote to recommend the specification for public release as an OGC Standard. The OGC TC e-vote was **passed** with quorum on 8 March 2021. The OGC Planning Committee on 30 March 2021 voted, with no objections to unanimous consent, **to recommend the OGC API - EDR as a full OGC Standard**, and to not change the name.
 
+On 28 April 2021, at 16:00 UTC, the standard started editing for publication as a formal standard.
+
 ### Best Practice
 
 * [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html) - No Content yet
