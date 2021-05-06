@@ -4,7 +4,7 @@
 
 This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.opengeospatial.org/projects/groups/edr-apiswg).
 
-The **OGC API - Environmental Data Retrieval** candidate standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
+The **OGC API - Environmental Data Retrieval** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
 
 ### EDR API Query Patterns
 The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. Each of these patterns is optional, but a compliant API should implement at least one of them. 
@@ -28,7 +28,7 @@ There are also other variants of these query patterns to make the API easier and
 
 - **4 - Radius**: Retrieve data within a specified horizontal radius of a point/position 
 
-- **5 - Cube**: Retrieve data within a specified 2D, 3D, or 4D bounding box. [Note: Currently the bounding box is specified as a polygon.]
+- **5 - Cube**: Retrieve data within a specified 2D, 3D, or 4D bounding box. This is just a restricted special case of a polygon.
 
 - **6 - Location** Retrieve data for point/position identified by a name rather than coordinates.
 
@@ -61,9 +61,11 @@ The EDR API can be considered a 'Sampling API'. EDR queries create discrete samp
 
 ## Progress
 
-### Draft Spec
+### Standard and Draft Specifications
 
-The latest draft of the standard in this repository is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
+The standard is in the V1.0.0 Branch.
+
+The Master Branch is the latest draft of the standard, currently V1.0.1, and is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
 
 * [OGC API - Environmental Data Retrieval Standard](http://docs.opengeospatial.org/DRAFTS/19-086.html)
 * DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
