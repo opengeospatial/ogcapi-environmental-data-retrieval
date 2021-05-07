@@ -13,12 +13,15 @@ For clarity, the complete <<requirements-class-definition,requirements test clas
 
 include::requirements/requirements_class_core.adoc[]
 
-
 include::requirements/core/REQ_core_conformance.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
+
+<<<
 
 include::requirements/core/REQ_rc-time-definition.adoc[]
 
@@ -36,6 +39,8 @@ include::requirements/edr/REQ_rc-f-definition.adoc[]
 
 include::requirements/edr/REQ_rc-f-response.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-z-definition.adoc[]
 
 include::requirements/edr/REQ_rc-z-response.adoc[]
@@ -44,11 +49,15 @@ include::requirements/edr/REQ_rc-within-definition.adoc[]
 
 include::requirements/edr/REQ_rc-within-response.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-within-units-definition.adoc[]
 
 include::requirements/edr/REQ_rc-within-units-response.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-x-definition.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-resolution-x-response.adoc[]
 
@@ -56,23 +65,33 @@ include::requirements/edr/REQ_rc-resolution-y-definition.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-y-response.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-resolution-z-definition.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-z-response.adoc[]
 
 include::requirements/edr/REQ_rc-corridor-height-definition.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-corridor-height-response.adoc[]
 
 include::requirements/edr/REQ_rc-height-units-definition.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-height-units-response.adoc[]
 
 include::requirements/edr/REQ_rc-corridor-width-definition.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-corridor-width-response.adoc[]
 
 include::requirements/edr/REQ_rc-width-units-definition.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-width-units-response.adoc[]
 
@@ -80,6 +99,8 @@ include::requirements/core/REQ_http.adoc[]
 
 include::requirements/core/REQ_crs84.adoc[]
 
+<<<
+    
 :sectnums:
 
 === Requirements Test Class OpenAPI 3.0

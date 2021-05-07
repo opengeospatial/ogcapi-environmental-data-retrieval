@@ -35,6 +35,8 @@ The following link-relations are in common use by OGC <<webapi-definition,Web AP
 
 * *item*: The target IRI points to a resource that is a member of the <<collection-definition,collection>> represented by the context IRI. [IANA]
 
+<<<
+
 * *items*: Refers to a resource that comprises members of the <<collection-definition,collection>> represented by the link's context. [OGC]
 
 * *license*: Refers to a license associated with this context. [IANA]
@@ -70,6 +72,8 @@ XML media types that would typically occur in an OGC API that supports XML are:
 * `application/xml` for all other resources
 
 The typical HTML media type for all "web pages" in an OGC API would be `text/html`.
+
+<<<
 
 The media types for an OpenAPI definition are `vnd.oai.openapi+json;version=3.0` (JSON) and `application/vnd.oai.openapi;version=3.0` (YAML).
 
@@ -119,6 +123,8 @@ In this case, the following changes to the pre-defined OpenAPI component are per
 
 For API definitions that do not conform to the <<openapi,OpenAPI Specification 3.0>> the normative statement should be interpreted in the context of the API definition language used.
 
+<<<
+  
 ==== Paths in OpenAPI definitions
 
 All paths in an OpenAPI definition are relative to the base URL of a server. Unlike Web Services, an API is decoupled from the server(s). Some ramifications of this are:

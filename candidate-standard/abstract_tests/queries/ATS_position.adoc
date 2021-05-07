@@ -13,6 +13,8 @@
 ^|Test Method |. coords query parameter is not specified
 . Validate that a document was returned with a status code 400.
 
+<<<
+
 ^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter does not contain a valid POINT Well Known Text value.
 ^|Requirement |<<req_edr_rc-position,/req/queries/position>>
@@ -27,7 +29,7 @@
 
 Repeat these tests using the following parameter tests:
 
-*Coordinates*
+<<<
 
 *Coordinates*
 
@@ -43,6 +45,8 @@ Repeat these tests using the following parameter tests:
 
 * Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
 * Response <<req_edr_parameters-response,/req/edr/parameter-name-response>>
+
+<<<
 
 *DateTime*
 
@@ -70,10 +74,14 @@ include::../collections/ATS_rc-parameter-name-definition.adoc[]
 
 include::../collections/ATS_rc-parameter-name-response.adoc[]
 
+<<<
+
 include::../collections/ATS_rc-crs-definition.adoc[]
 
 include::../collections/ATS_rc-crs-response.adoc[]
 
 include::../collections/ATS_rc-f-definition.adoc[]
+
+<<<
 
 include::../collections/ATS_rc-f-response.adoc[]

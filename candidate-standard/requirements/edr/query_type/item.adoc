@@ -9,7 +9,6 @@ query parameters including time range, parameters, and spatial characteristics.
 include::../../../recommendations/core/REC_edr-geojson.adoc[]
 
 ===== Parameter itemID
-
 If an itemID is not specified, the query will return a list of the available
 itemID's. This behavior is specified in in <<ogc17-069r3,OGC API - Features.>> 
 all other parameters for use with the Items query are defined by 
@@ -17,7 +16,6 @@ OGC API - Features.
 
 .List available items
 =================
-
 `/collections/{collectionId}/items`
 
 e.g.  
@@ -27,13 +25,10 @@ return query parameters to retrieve tropical storms using OGC API - Features and
 
 e.g. return query parameters to retrieve monitoring data from a <<collection-definition,collection>> end point, a time range, a list of available parameters and a representative geojson geometry.
  
-`/collections/stream_gages/items`
-
+`/collections/stream_gauges/items`
 =================
-
 .itemID
 =================
-
 `/collections/{collectionId}/items/{itemID}`
 
 e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar <<collection-definition,collection>>. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station. 
@@ -43,5 +38,4 @@ e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z
 e.g. return information for the requested item with an id of warning_12345 from the forecast <<collection-definition,collection>>. Returned data would include an <<area-definition,area>> query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.
 
 `/collections/forecast/items/warning_12345`
-
 =================

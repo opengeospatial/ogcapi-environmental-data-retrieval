@@ -42,6 +42,8 @@ Executable Test Suite (ETS)::
 Recommendation::
   expression in the content of a document conveying that among several possibilities one is recommended as particularly suitable, without mentioning or excluding others, or that a certain course of action is preferred but not necessarily required, or that (in the negative form) a certain possibility or course of action is deprecated but not prohibited (<<ogc08-131,OGC 08-131>>)
 
+<<<
+  
 [[requirement-definition]]
 Requirement::
   expression in the content of a document conveying criteria to be fulfilled if compliance with the document is to be claimed and from which no deviation is permitted (<<ogc08-131,OGC 08-131>>)

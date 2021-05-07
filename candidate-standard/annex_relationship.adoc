@@ -20,6 +20,8 @@ Moving Features and EDR API do share a common conceptual definition, from ISO, o
 
 Moving Features considers trajectories as a primary resource to be queried, manipulated and processed, whereas in the EDR API, a trajectory is simply a query sampling pattern, encoded in WKT and ISO8601, into a spatiotemporal data resource.
 
+<<<
+
 === Relationships between OGC API-EDR and WCS and CIS
 The primary messaging mechanism of the EDR API is JSON, including CoverageJSON, over HTTP(S). Implementations of the EDR API are described using the OpenAPI V3.0 specification. The target users are web-developers and end-users who are not geospatial experts. The target data resources are any dataset described as spatiotemporal, accessible by coordinates. 
 
@@ -36,6 +38,8 @@ In contrast, the Met Ocean Application Profile of Web Coverage Service 2.1 (WCS)
 
 The EDR API and the Met Ocean WCS Profile therefore support different use cases. Developers that are interested in extending their OWS or WCS solutions to support the Met Ocean domain are advised to use WCS Met Ocean Application Profile. Developers that are implementing Web APIs that make use of the OpenAPI specification are advised to use the EDR API.
 
+<<<
+    
 === Relationships between OGC API-EDR, SOS and SensorThings API 
 Both the Sensor Observation Service (SOS) and the SensorThings API enable access to observations made by sensors and transmitted over networks. As stated in Part 1 of SensorThings API “The main difference between the SensorThings API and the OGC SOS and Sensor Plannning Service (SPS) is that the SensorThings API is designed specifically for the resource-constrained IoT devices and the Web developer community” (OGC 15-078r6). 
 

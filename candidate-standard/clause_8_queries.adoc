@@ -35,7 +35,7 @@ The resources returned from each node in these templates are described in <<quer
 
 [#query-resource-paths,reftext='{table-caption} {counter:table-num}']
 .Information Resource Paths
-[width="90%",cols="2,4",options="header"]
+[width="100%",cols="3,3",options="header"]
 |===
 ^|**Path Template** ^|**Resource**
 |/collections |The root resource describing the <<collection-definition,collections>> of spatio-temporal data available from this API.
@@ -50,7 +50,7 @@ The OGC API-Common standards do not define any information resource types. Howev
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
-[width="90%",cols="2,1,4",options="header"]
+[width="100%",cols="4,1,2",options="header"]
 |===
 ^|**Path Template** ^|**Query Type** ^|**Description**
 |/collections/{collectionId}/position | Position | Return data for the requested <<position-definition,position>>
@@ -161,7 +161,8 @@ The value of the `crs` query parameter will be one of the name values described 
 
 If not specified, the query will return data in the native format of the <<collection-definition,collection>>.  If the requested format system does not match an entry in the defined list of valid output formats for the <<collection-definition,collection>>, a `400` message SHOULD be returned.
 
-
+<<<
+    
 [[rc_position-section]]
 ==== Position query
 

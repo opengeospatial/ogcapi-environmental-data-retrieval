@@ -30,6 +30,9 @@ coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 156
 
 A 3D trajectory, through a 3D volume with vertical height or depth, but no defined time:
 coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)
+
+<<<
+    
 A 3D trajectory, through a 3D volume with height or depth, but at a fixed time value defined in ISO8601 format by the `datetime` query parameter:
 coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)&datetime=2018-02-12T23:00:00Z
 
@@ -47,15 +50,12 @@ https://en.wikipedia.org/wiki/Unix_time
 .A basic surface route 
 =================
 From Bristol to Exeter
-
 `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)`
-
 =================
 
 .A basic surface route with defined `datetime` intervals
 =================
 From Bristol to Exeter 
-
 `coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)`
 =================
 
@@ -63,11 +63,9 @@ From Bristol to Exeter
 
 Used when the entire trajectory occurs at the same vertical coordinate. The `z` query parameter is used to define the height
 
-
 .A single vertical level
 ===========
-
-If the entire route is at the 850hPa pressure level:
+Entire route is at the 850hPa pressure level:
 `coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)&z=850`
 ===========
 
@@ -78,4 +76,3 @@ If the entire route is at the 850hPa pressure level:
 ===== <<crs>>
 
 ===== <<outputformat>>
-    

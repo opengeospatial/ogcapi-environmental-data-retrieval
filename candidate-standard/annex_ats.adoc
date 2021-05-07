@@ -1,3 +1,4 @@
+
 [appendix]
 :appendix-caption: Annex
 [[ATS]]
@@ -16,6 +17,8 @@ OGC APIs are not Web Services in the traditional sense. Rather, they define the 
 
 include::abstract_tests/ATS_class_core.adoc[]
 
+<<<
+
 === Conformance Class Collections
 
 include::abstract_tests/ATS_class_collections.adoc[]
@@ -24,26 +27,38 @@ include::abstract_tests/ATS_class_collections.adoc[]
 
 include::abstract_tests/ATS_class_json.adoc[]
 
+<<<
+
 === Conformance Class GeoJSON
 
 include::abstract_tests/ATS_class_geojson.adoc[]
+
+<<<
 
 === Conformance Class EDR GeoJSON
 
 include::abstract_tests/ATS_class_edr-geojson.adoc[]
 
+<<<
+
 === Conformance Class CoverageJSON
 
 include::abstract_tests/ATS_class_covjson.adoc[]
+
+<<<
 
 === Conformance Class HTML
 
 include::abstract_tests/ATS_class_html.adoc[]
 
+<<<
+
 === Conformance Class OpenAPI 3.0
 
 include::abstract_tests/ATS_class_oas30.adoc[]
 
+<<<
+    
 === Conformance Class Queries
 
 include::abstract_tests/ATS_class_queries.adoc[]

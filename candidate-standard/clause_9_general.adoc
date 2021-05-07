@@ -84,6 +84,8 @@ While the OGC API Common Part 1: Core does not specify any mandatory encoding, t
 HTML encoding recomendation:
 include::recommendations/core/REC_html.adoc[]
 
+<<<
+
 [[rc_geojson-section]]
 GeoJSON encoding recommendation:
 include::recommendations/core/REC_geojson.adoc[]
@@ -107,6 +109,8 @@ Two common approaches are:
 * an additional path for each encoding of each resource (this can be expressed, for example, using format specific suffixes like `.html`);
 * an additional query parameter (for example, `accept` or `f`) that overrides the Accept header of the HTTP request.
 =========================================================
+
+<<<
 
 === Link Headers
 
@@ -137,6 +141,8 @@ Note, for example, that APIs which are access-controlled (see <<security,Securit
 
 Clients have to be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.
 
+<<<
+  
 [[exceptions]]
 ==== Exceptions
 

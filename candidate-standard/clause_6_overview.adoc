@@ -17,6 +17,8 @@ The functionality provided by EDR query patterns could be realized through speci
 
 The EDR API defines behaviour for the HTTP GET operation. Future versions may introduce additional methods as required, consistent with RFC 7231.
 
+<<<
+    
 [[resource-paths]]
 === Resource Paths
 

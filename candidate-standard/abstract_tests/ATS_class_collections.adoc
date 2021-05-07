@@ -18,6 +18,8 @@ include::core/ATS_crs84.adoc[]
 
 include::collections/ATS_rc-md-op.adoc[]
 
+<<<
+
 include::collections/ATS_rc-md-success.adoc[]
 
 [[collections-metadata-schema]]
@@ -27,6 +29,8 @@ include::collections/ATS_rc-md-success-table.adoc[]
 
 include::collections/ATS_src-md-op.adoc[]
 
+<<<
+    
 [[ats_collections_src-md-success]]
 include::collections/ATS_src-md-success.adoc[]
 

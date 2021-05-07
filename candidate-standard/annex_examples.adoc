@@ -22,7 +22,6 @@ include::examples/conformance_response_JSON_1.adoc[]
 
 [[collections-metadata-examples]]
 === Collections Metadata Examples
-
 include::examples/collections_metadata_JSON_1.adoc[]
 
 [[instance-metadata-examples]]
