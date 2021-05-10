@@ -2,13 +2,13 @@ This is an example of the metadata returned by the instances query
 
 (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
-There is a link to the instance response itself http://defs.opengis.net/vocprez/object?uri=http%3A//www.opengis.net/def/rel/iana/1.0/self[link relation type "self"]. 
+There is a link to the instance response itself http://www.opengis.net/def/rel/iana/1.0/self[link relation type "self"]. 
 
-Representations of this resource in other formats are referenced using Representations of these resource in other formats are referenced using http://defs.opengis.net/vocprez/object?uri=http%3A//www.opengis.net/def/rel/iana/1.0/alternate[link relation type "alternate"].
+Representations of this resource in other formats are referenced using Representations of these resource in other formats are referenced using http://www.opengis.net/def/rel/iana/1.0/alternate[link relation type "alternate"].
 
-The data queries that are supported by each instance are referenced using http://defs.opengis.net/vocprez/object?uri=http%3A//www.opengis.net/def/rel/ogc/1.0/data[link relation type "data"].
+The data queries that are supported by each instance are referenced using http://www.opengis.net/def/rel/ogc/1.0/data[link relation type "data"].
 
-There are also links to the license information for the observation and forecast data http://defs.opengis.net/vocprez/object?uri=http%3A//www.opengis.net/def/rel/iana/1.0/license[link relation type "license"] and also the terms and conditions of service https://www.iana.org/go/rfc6903[link relation type "restrictions"].
+There are also links to the license information for the observation and forecast data http://www.opengis.net/def/rel/iana/1.0/license[link relation type "license"] and also the terms and conditions of service https://www.iana.org/go/rfc6903[link relation type "restrictions"].
 
 .Collection instance metadata response document
 =================
