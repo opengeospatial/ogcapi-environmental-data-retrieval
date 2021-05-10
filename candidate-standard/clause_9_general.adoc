@@ -125,13 +125,13 @@ include::recommendations/core/REC_link-header.adoc[]
 
 The OpenAPI 3.0 Requirements Class used in OGC API Common is applicable to the EDR API as well. So an implementation of EDR API which supports OpenAPI 3.0 as an API Description format must also comply with the OGC API-Common oas30 Conformance Class.
 
-<<req_oas30_oas-common>>
+<<req_oas30_oas-definition-2>>
 
 Implementations must also advertise conformance with this Requirements Class.
 
-<<req_oas30_conformance>>
+<<req_oas30_oas-impl>>
 
-Two example OpenAPI documents are included in <<oas-examples,Annex B>>.
+An example OpenAPI document is included in <<oas-examples,Annex B>>.
 
 ==== Complete definition
 

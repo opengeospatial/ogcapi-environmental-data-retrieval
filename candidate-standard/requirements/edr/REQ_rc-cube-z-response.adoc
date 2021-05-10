@@ -1,5 +1,5 @@
 [[req_edr_cube-z-response]]
-==== *Requirement {counter:req-id}: /req/edr/cube-z-response* Parameter z response
+==== *Requirement {counter:req-id}: /req/edr/cube-z-response* Parameter z response for cube queries
 [width="90%",cols="2,6a"]
 |===
 ^|A |If the `z` parameter is provided, only resources that have a vertical geometry that intersects the vertical information in the `z` parameter SHALL be part of the result set.
