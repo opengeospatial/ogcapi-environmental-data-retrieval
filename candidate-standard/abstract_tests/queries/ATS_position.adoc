@@ -6,21 +6,29 @@
 ^|Requirement |<<req_edr_rc-position,/req/queries/position>>
 ^|Test Method |. No query parameters are specified
 . Validate that a document was returned with a status code 400.
-
+|===
+[width="90%",cols="2,6a"]
+|===
 ^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter is not specified.
 ^|Requirement |<<req_edr_rc-position,/req/queries/position>>
 ^|Test Method |. coords query parameter is not specified
 . Validate that a document was returned with a status code 400.
-
+|===
 <<<
-
+[width="90%",cols="2,6a"]
+|===
 ^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter does not contain a valid POINT Well Known Text value.
 ^|Requirement |<<req_edr_rc-position,/req/queries/position>>
 ^|Test Method |. Check coords query parameter is a valid Well Known Text Point value 
 . Validate that a document was returned with a status code 400.
+|===
 
+<<<
+    
+[width="90%",cols="2,6a"]
+|===
 ^|*Abstract Test {counter:ats-id}* |*/conf/position*
 ^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Position` query using  query parameters.
 ^|Requirement |<<req_edr_rc-position,/req/queries/position>>
@@ -28,8 +36,6 @@
 . Validate that a document was returned with a status code 200.
 
 Repeat these tests using the following parameter tests:
-
-<<<
 
 *Coordinates*
 
@@ -46,8 +52,6 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
 * Response <<req_edr_parameters-response,/req/edr/parameter-name-response>>
 
-<<<
-
 *DateTime*
 
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
@@ -58,6 +62,8 @@ Execute requests with combinations of the "coords","time","parameter-name","z","
 and verify that only information that matches the selection criteria is returned.
 |===
 
+<<<
+
 include::../collections/ATS_rc-coords-definition.adoc[]
 
 include::../collections/ATS_rc-coords-response.adoc[]
@@ -66,9 +72,13 @@ include::../collections/ATS_rc-z-definition.adoc[]
 
 include::../collections/ATS_rc-z-response.adoc[]
 
+<<<
+
 include::../core/ATS_rc-time-definition.adoc[]
 
 include::../core/ATS_rc-time-response.adoc[]
+
+<<<
 
 include::../collections/ATS_rc-parameter-name-definition.adoc[]
 
@@ -80,8 +90,8 @@ include::../collections/ATS_rc-crs-definition.adoc[]
 
 include::../collections/ATS_rc-crs-response.adoc[]
 
-include::../collections/ATS_rc-f-definition.adoc[]
-
 <<<
+    
+include::../collections/ATS_rc-f-definition.adoc[]
 
 include::../collections/ATS_rc-f-response.adoc[]

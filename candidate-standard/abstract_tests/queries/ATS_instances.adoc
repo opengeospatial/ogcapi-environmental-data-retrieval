@@ -38,4 +38,4 @@ include::../core/ATS_rc-md-extent.adoc[]
 
 ===== Links
 
-include::../collections/ATS_rc-md-links.adoc[]
+<<ats_core_rc-collection-info-links,/conf/core/rc-collection-info-links>>

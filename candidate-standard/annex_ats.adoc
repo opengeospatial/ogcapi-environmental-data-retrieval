@@ -23,6 +23,8 @@ include::abstract_tests/ATS_class_core.adoc[]
 
 include::abstract_tests/ATS_class_collections.adoc[]
 
+<<<
+    
 === Conformance Class JSON
 
 include::abstract_tests/ATS_class_json.adoc[]
