@@ -4,7 +4,7 @@
 2+|*Conformance Class*
 2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/queries
 |Target type |Web API
-|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/queries>>
+|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/queries>>
 |Dependency |<<ats_core,Conformance Class "OGC API Common Core">>
 |Dependency |<<ats_collections,Conformance Class "OGC API Common Collections">>
 |===

@@ -4,7 +4,7 @@
 2+|*Conformance Class*
 2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/covjson
 |Target type |Web API
-|Requirements Class |<<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/covjson>>
+|Requirements Class |<<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/covjson>>
 |Dependency |<<ats_core,Conformance Class "OAPI Core">>
 |===
 
