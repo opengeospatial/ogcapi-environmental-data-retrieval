@@ -1,23 +1,23 @@
-===== Parameter locationID
+===== Parameter locationId
 
 With the locations query a position is defined by a unique identifier that is a string value.  It can be anything as long as it is unique for the required position, for instance a GeoHash `gbsvn` or a WMO station id like `03772`, what3words like `bolt.lime.metro` or place name like `Devon`.  The metadata returned by the API must supply a geospatial definition for the identifier.
 
 
 .get list of location id's
 =================
-/collections/{collectionID}/locations/
+/collections/{collectionId}/locations/
 
 return a list of location identifiers and relevant metadata for the metar <<collection-definition,collection>> 
 
 /collections/metar/locations/
 
 
-Valid locationIDs can also be discovered via another mechanism such as the <<rc_items-section,`items`>> query.
+Valid locationIds can also be discovered via another mechanism such as the <<rc_items-section,`items`>> query.
 =================
 
-.locationID
+.locationId
 =================
-/collections/{collectionID}/locations/{locationID}
+/collections/{collectionId}/locations/{locationId}
 
 return all available data for the metar <<collection-definition,collection>> for the requested location identifier, where the location is defined by the Heathrow METAR id
 

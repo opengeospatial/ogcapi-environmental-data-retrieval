@@ -17,7 +17,7 @@ The main patterns are:
 These patterns would be accessed through endpoints like:
 
 ```
-/collections/{collectionID}/{queryType}?
+/collections/{collectionId}/{queryType}?
   coords={wkt-geometry}&
   parameter-name={parameter_1},{parameter_n}&
   datetime={RFC3339/ISO8601}&
