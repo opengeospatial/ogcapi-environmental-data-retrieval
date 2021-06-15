@@ -1,5 +1,5 @@
 [[req_edr_resolution-x-response]]
-==== *Requirement {counter:req-id}: /req/edr/resolution-x-response* Parameter resolution-x response
+==== *Requirement {counter:req-id}: /req/edr/resolution-x-response* Parameter resolution-x
 [width="90%",cols="2,6a"]
 |===
 ^|A | If the `resolution-x` parameter is provided, it denotes the number of positions to retrieve data for, across the width of the corridor path, including its minimum and maximum width coordinates.

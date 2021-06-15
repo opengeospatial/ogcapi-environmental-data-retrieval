@@ -1,7 +1,7 @@
 [[req_covjson_content]] 
+==== *Requirement {counter:req-id}: /req/covjson/content* 
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/covjson/content* 
 ^|A |Every `200`-response with the media type `application/prs.coverage+json` SHALL be
 
 * a link:https://www.w3.org/TR/covjson-overview/[CoverageJSON Object]

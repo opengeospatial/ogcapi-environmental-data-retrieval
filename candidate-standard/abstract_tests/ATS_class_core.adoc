@@ -25,6 +25,8 @@ include::core/ATS_api-definition.adoc[]
 
 include::core/ATS_api-definition-success.adoc[]
 
+<<<
+    
 ==== Conformance Path {root}/conformance
 
 include::core/ATS_conformance.adoc[]

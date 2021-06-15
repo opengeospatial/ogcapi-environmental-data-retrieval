@@ -1088,12 +1088,12 @@ paths:
             text/html:
               schema:
                 type: string
-  /collections/{collectionId}/locations/{locId}:
+  /collections/{collectionId}/locations/{locationId}:
     get:
       tags:
         - Collection data queries
       summary: 'Query end point for queries of collection {collectionId} defined by a location id'
-      description: Return data the for the location defined by locid
+      description: Return data the for the location defined by locationId
       operationId: GetCollectionDataForLocation
       parameters:
         - $ref: parameters/collectionId.yaml
@@ -1191,12 +1191,12 @@ paths:
             text/html:
               schema:
                 type: string
-  /collections/{collectionId}/instances/{instanceId}/locations/{locId}:
+  /collections/{collectionId}/instances/{instanceId}/locations/{locationId}:
     get:
       tags:
         - Instance data queries
       summary: 'Query end point for queries of instance {instanceId} of collection {collectionId} defined by a location id'
-      description: Return data the for the location defined by locid
+      description: Return data the for the location defined by locatioId
       operationId: GetInstanceDataForLocation
       parameters:
         - $ref: parameters/collectionId.yaml

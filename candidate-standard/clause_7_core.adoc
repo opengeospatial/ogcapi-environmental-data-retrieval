@@ -3,8 +3,6 @@
 
 The OGC API-EDR standard is an extension of the OGC API-Common Part 1: Core and Part 2: Collections standards. Therefore, an implementation of API-EDR shall first satisfy the appropriate Requirements Classes from API-Common.
 
-<<req_core_api-common>>
-
 [[rc_core-section]]
 === Overview
 
@@ -37,6 +35,8 @@ The `Core` Requirements Class is presented in five sections:
 |<<media-types-section,HTML>>| http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
 |====
 
+<<<
+
 [[api-platform-section]]
 === Platform
 
@@ -50,7 +50,7 @@ The landing page provides links to start exploration of the resources offered by
 .Dependencies
 
 http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-
+    
 ===== Operation
 
 The `Landing Page` operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support spatio-temporal data resources. The `Core` conformance class specifies only one way of performing this operation:
@@ -82,6 +82,8 @@ include::examples/json/landingPage_example.json[]
 ===== Error Handling
 
 The requirements for handling unsuccessful requests are provided in <<http-response>>. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>.
+
+<<<
 
 [[api-definition]]
 ==== API definition
@@ -117,6 +119,8 @@ To support "generic" clients that want to access multiple OGC API standards and 
 .Dependencies
 http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 
+<<<
+    
 ===== Operation
 
 This operation is defined in the `Core` conformance class of API-Common. No modifications are needed to support spatio-temporal data resources. The `Core` conformance class describes two ways of performing this operation:

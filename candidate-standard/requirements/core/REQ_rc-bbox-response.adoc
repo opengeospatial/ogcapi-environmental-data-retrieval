@@ -1,7 +1,7 @@
 [[req_core_rc-bbox-response]]
+==== *Requirement {counter:req-id}: /req/core/rc-bbox-response* Parameter bbox response
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/core/rc-bbox-response*
 ^|A |Only features that have a spatial geometry that intersects the bounding box SHALL be part of the result set, if the `bbox` parameter is provided.
 ^|B |If a feature has multiple spatial geometry properties, it is the decision of the server whether only a single spatial geometry property is used to determine the extent or all relevant geometries.
 ^|C |The `bbox` parameter SHALL match all features in the collection that are not associated with a spatial geometry, too.

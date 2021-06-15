@@ -28,6 +28,8 @@ coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1
 A 3D corridor, on the surface of the earth but over a range of time values with a fixed height value, height defined in the collection height units by the `z` query parameter : 
 coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&z=200
 
+<<<
+
 A 3D corridor, through a 3D volume with vertical height or depth, but no defined time:
 coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)
 
@@ -73,62 +75,41 @@ From Bristol to Exeter
 `width-units=km`
 =================
 
+<<<
+    
 ===== *Parameter z*
-
 Used when the entire corridor occurs at the same vertical height. The `z` query parameter is used to define the height.
-
-
 .A corridor with a single vertical height
 ===========
-
-If the entire route corridor is at the 850hPa pressure level
+Entire route corridor is at the 850hPa pressure level
 `coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)`
 `corridor-width=5`
 `width-units=km`
 `z=850`
 ===========
-
 ===== <<datetime>>
-
 ===== <<req_edr_resolution-x-definition,resolution-x>>
 .Interpolate corridor values across the width  
 ===========
-Return 10 values across the defined corridor width
-`resolution-x=10`
+Return 10 values across the defined corridor width: `resolution-x=10`
 ===========
-
 .Get values across the width of the corridor at stored resolution  
 ===========
-Return values at the stored resolution
-`resolution-x=0`
+Return values at the stored resolution: `resolution-x=0`
 ===========
-
-
 ===== <<req_edr_resolution-z-definition,resolution-z>>
 .Interpolate corridor values over the corridor height  
 ===========
-Return 8 values over the defined corridor height
-`resolution-z=8`
+Return 8 values over the defined corridor height: `resolution-z=8`
 ===========
-
 .Get values over the defined corridor height at stored resolution  
 ===========
-Return values at the stored resolution
-`resolution-z=0`
+Return values at the stored resolution: `resolution-z=0`
 ===========
-
-
 ===== <<req_edr_corridor-height-definition,corridor-height>>
-
 ===== <<req_edr_height_units-definition,height-units>>
-
 ===== <<req_edr_corridor-width-definition,corridor-width>>
-
 ===== <<req_edr_width_units-definition,width-units>>
-
 ===== <<parameter-name>>
-
 ===== <<crs>>
-
 ===== <<outputformat>>
-    

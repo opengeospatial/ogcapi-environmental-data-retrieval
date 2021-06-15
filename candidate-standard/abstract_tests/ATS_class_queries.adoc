@@ -4,7 +4,7 @@
 2+|*Conformance Class*
 2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/queries
 |Target type |Web API
-|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/queries>>
+|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/queries>>
 |Dependency |<<ats_core,Conformance Class "OGC API Common Core">>
 |Dependency |<<ats_collections,Conformance Class "OGC API Common Collections">>
 |===
@@ -15,39 +15,29 @@
 
 include::queries/ATS_position.adoc[]
 
+<<<
+
 ===== Area
 
 include::queries/ATS_area.adoc[]
+
+<<<
 
 ===== Trajectory
 
 include::queries/ATS_trajectory.adoc[]
 
-==== Collections and Instances
-
-===== Collections {root}/collections
-
-include::collections/ATS_rc-md-op.adoc[]
-
-[[ats_collections_rc-md-success]]
-include::collections/ATS_rc-md-success.adoc[]
-
-include::collections/ATS_rc-md-success-table.adoc[]
-
-=====  Collection {root}/collections/{collectionId}
-
-include::collections/ATS_src-md-op.adoc[]
-
-include::collections/ATS_src-md-success.adoc[]
-
+<<<
 
 ===== Instances {root}/collections/{collectionId}/instances
-[[ats_instances_rc-md-op]]
+
 include::instances/ATS_rc-md-op.adoc[]
 
 include::instances/ATS_rc-md-success.adoc[]
 
 include::collections/ATS_rc-md-success-table.adoc[]
+
+<<<
 
 ===== Instance {root}/collections/{collectionId}/instances/instanceId
 
@@ -55,15 +45,8 @@ include::instances/ATS_src-md-op.adoc[]
 
 include::instances/ATS_src-md-success.adoc[]
 
-==== Second Tier Tests
-These tests are invoked by other tests.
-
-===== Items
-
-include::collections/ATS_rc-collection-info.adoc[]
-
-include::collections/ATS_rc-md-collection-info-links.adoc[]
-
+<<<
+    
 ===== Locations
 
 include::queries/ATS_locations.adoc[]

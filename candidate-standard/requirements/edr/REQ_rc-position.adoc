@@ -1,7 +1,7 @@
 [[req_edr_rc-position]]
+==== *Requirement {counter:req-id}: /req/queries/position* 
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/queries/position* 
 ^|A |For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/position`.
 ^|B |The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
 ^|C |A `position` GET operation MUST include a `coords` query parameter

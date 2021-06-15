@@ -18,6 +18,8 @@ include::core/ATS_crs84.adoc[]
 
 include::collections/ATS_rc-md-op.adoc[]
 
+<<<
+
 include::collections/ATS_rc-md-success.adoc[]
 
 [[collections-metadata-schema]]
@@ -27,6 +29,8 @@ include::collections/ATS_rc-md-success-table.adoc[]
 
 include::collections/ATS_src-md-op.adoc[]
 
+<<<
+    
 [[ats_collections_src-md-success]]
 include::collections/ATS_src-md-success.adoc[]
 
@@ -37,6 +41,8 @@ These tests are invoked by other tests.
 
 include::core/ATS_rc-md-extent.adoc[]
 
+<<<
+
 ===== Collection Queries
 
 include::collections/ATS_rc-collection-info.adoc[]
@@ -44,9 +50,14 @@ include::collections/ATS_rc-collection-info.adoc[]
 [[collection-entry-schema]]
 include::collections/ATS_rc-md-collection-info-table.adoc[]
 
+<<<
+    
 include::collections/ATS_rc-md-query-links.adoc[]
 
 ===== Collection Links
 
 include::collections/ATS_rc-md-links.adoc[]
 
+===== Collection Parameters
+
+include::collections/ATS_rc-parameters.adoc[]

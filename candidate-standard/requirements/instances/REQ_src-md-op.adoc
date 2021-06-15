@@ -1,7 +1,7 @@
-[[req_collections_src-md-op]]
+[[req_instances_src-md-op]]
+==== *Requirement {counter:req-id}: /req/instances/src-md-op* 
 [width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/instances/src-md-op* 
+|=== 
 ^|A|The API SHALL support the HTTP GET operation at the path `/collections/{collectionId}/instances/{instanceId}`.
 ^|B|The parameter `collectionId` is each `id` property in the resource collections response (JSONPath: `$.collections[*].id`) and `instanceId` is each id property of instances of the chosen collection.
 |===

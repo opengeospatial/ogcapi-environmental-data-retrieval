@@ -1,7 +1,7 @@
 [[req_core_api-definition-op]]
+==== *Requirement {counter:req-id}: /req/core/api-definition-op* 
 [width="90%",cols="2,6a"]
 |===
-^|*Requirement {counter:req-id}* |*/req/core/api-definition-op* 
 ^|A |The server SHALL support the HTTP GET operation on all links from the landing page which have the relation type `service-desc`.
 ^|B |The server SHALL support the HTTP GET operation on all links from the landing page which have the relation type `service-doc`.
 ^|C |The responses to all HTTP GET requests issued in `A` and `B` SHALL satisfy requirement <<req_core_api_definition_success,/req/core/api-definition-success>>.

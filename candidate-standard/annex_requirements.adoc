@@ -13,12 +13,37 @@ For clarity, the complete <<requirements-class-definition,requirements test clas
 
 include::requirements/requirements_class_core.adoc[]
 
+include::requirements/core/REQ_root-op.adoc[]
+
+include::requirements/core/REQ_root-success.adoc[]
+
+<<<
+
+include::requirements/core/REQ_rc-api-definition-op.adoc[]
+
+include::requirements/core/REQ_rc-api-definition-success.adoc[]
 
 include::requirements/core/REQ_core_conformance.adoc[]
+
+include::requirements/core/REQ_conformance-success.adoc[]
+
+
+
+<<<
+
+include::requirements/core/REQ_rc-bbox-definition.adoc[]
+
+<<<
+
+include::requirements/core/REQ_rc-bbox-response.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-coords-definition.adoc[]
 
 include::requirements/edr/REQ_rc-coords-response.adoc[]
+
+<<<
 
 include::requirements/core/REQ_rc-time-definition.adoc[]
 
@@ -36,6 +61,8 @@ include::requirements/edr/REQ_rc-f-definition.adoc[]
 
 include::requirements/edr/REQ_rc-f-response.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-z-definition.adoc[]
 
 include::requirements/edr/REQ_rc-z-response.adoc[]
@@ -44,11 +71,19 @@ include::requirements/edr/REQ_rc-within-definition.adoc[]
 
 include::requirements/edr/REQ_rc-within-response.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-within-units-definition.adoc[]
 
 include::requirements/edr/REQ_rc-within-units-response.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-x-definition.adoc[]
+
+<<<
+
+include::requirements/edr/REQ_rc-cube-z-response.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-resolution-x-response.adoc[]
 
@@ -56,23 +91,33 @@ include::requirements/edr/REQ_rc-resolution-y-definition.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-y-response.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-resolution-z-definition.adoc[]
 
 include::requirements/edr/REQ_rc-resolution-z-response.adoc[]
 
 include::requirements/edr/REQ_rc-corridor-height-definition.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-corridor-height-response.adoc[]
 
 include::requirements/edr/REQ_rc-height-units-definition.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-height-units-response.adoc[]
 
 include::requirements/edr/REQ_rc-corridor-width-definition.adoc[]
 
+<<<
+
 include::requirements/edr/REQ_rc-corridor-width-response.adoc[]
 
 include::requirements/edr/REQ_rc-width-units-definition.adoc[]
+
+<<<
 
 include::requirements/edr/REQ_rc-width-units-response.adoc[]
 
@@ -82,11 +127,167 @@ include::requirements/core/REQ_crs84.adoc[]
 
 :sectnums:
 
+<<<
+
+=== Requirements Test Class Collections    
+
+:sectnums:
+
+include::requirements/collections/REQ_rc-md-op.adoc[]
+
+include::requirements/collections/REQ_rc-md-success.adoc[]
+
+include::requirements/collections/REQ_src-md-op.adoc[]
+
+include::requirements/collections/REQ_src-md-success.adoc[]
+
+<<<
+
+include::requirements/edr/REQ_rc-collection-info.adoc[]
+
+<<<
+
+include::requirements/core/REQ_rc-collection-info-links.adoc[]
+
+include::requirements/core/REQ_rc-extent.adoc[]
+
+include::requirements/edr/REQ_rc-md-query-links.adoc[]
+
+<<<
+    
+include::requirements/edr/REQ_rc-crs.adoc[]
+
+include::requirements/edr/REQ_rc-parameters.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class Position    
+
+:sectnums:
+
+include::requirements/edr/REQ_rc-position.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class Area    
+
+:sectnums:
+
+include::requirements/edr/REQ_rc-area.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class Trajectory    
+
+:sectnums:
+
+include::requirements/edr/REQ_rc-trajectory.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class Locations    
+
+:sectnums:
+
+include::requirements/edr/REQ_rc-locations.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class Instances    
+
+:sectnums:
+
+include::requirements/instances/REQ_rc-md-op.adoc[]
+
+include::requirements/instances/REQ_rc-md-success.adoc[]
+
+include::requirements/instances/REQ_src-md-op.adoc[]
+
+include::requirements/instances/REQ_src-md-success.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class JSON    
+
+:sectnums:
+
+include::requirements/json/REQ_content.adoc[]
+
+include::requirements/json/REQ_definition.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class GeoJSON    
+
+:sectnums:
+
+include::requirements/geojson/REQ_content.adoc[]
+
+include::requirements/geojson/REQ_definition.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class EDR GeoJSON    
+
+:sectnums:
+
+include::requirements/edr-geojson/REQ_content.adoc[]
+
+include::requirements/edr-geojson/REQ_definition.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class CoverageJSON    
+
+:sectnums:
+
+include::requirements/covjson/REQ_content.adoc[]
+
+include::requirements/covjson/REQ_definition.adoc[]
+
+:sectnums:
+
+<<<
+
+=== Requirements Test Class HTML    
+
+:sectnums:
+
+include::requirements/html/REQ_content.adoc[]
+
+include::requirements/html/REQ_definition.adoc[]
+
+:sectnums:
+
 === Requirements Test Class OpenAPI 3.0
 
 :sectnums!:
 
 include::requirements/requirements_class_oas30.adoc[]
+
+include::requirements/oas30/REQ_oas-impl.adoc[]
+
+include::requirements/oas30/oas-definition-1.adoc[]
+
+include::requirements/oas30/oas-definition-2.adoc[]
 
 include::requirements/oas30/REQ_completeness.adoc[]
 

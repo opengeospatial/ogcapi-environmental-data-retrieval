@@ -10,6 +10,8 @@ The EDR API query patterns, such as <<position-defintion,Position>>, <<area-defi
 
 With the OGC API family of standards, the OGC community has extended its suite of standards to include Resource Oriented Architectures and Web Application Programming Interfaces (APIs). These standards are based on a shared foundation, the OGC API-Common standard, which defines the resources and access paths that are supported by all OGC APIs. These are listed in <<common-paths>>. This document extends that foundation to define the Environmental Data Retrieval API.
 
+<<<
+
 [#common-paths,reftext='{table-caption} {counter:table-num}']
 .Overview of Resources
 [width="90%",cols="2,2,^1,4",options="header"]
@@ -34,6 +36,8 @@ The following are keywords to be used by search engines and document catalogues.
 
 ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, geoJSON, coverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
 
+<<<
+    
 [big]*iii.   Preface*
 
 *OGC Declaration*
