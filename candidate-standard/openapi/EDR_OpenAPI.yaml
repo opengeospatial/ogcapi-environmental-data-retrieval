@@ -545,6 +545,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/bbox.yaml
         - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+        - $ref: parameters/limit.yaml
       responses:
         '200':
           description: List of pre-existing items available for retrieval 
@@ -1051,6 +1052,7 @@ paths:
         - $ref: parameters/collectionId.yaml
         - $ref: parameters/bbox.yaml
         - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+        - $ref: parameters/limit.yaml
       responses:
         '200':
           description: List of predefined locations available from the collection
@@ -1154,6 +1156,7 @@ paths:
         - $ref: parameters/instanceId.yaml
         - $ref: parameters/bbox.yaml
         - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+        - $ref: parameters/limit.yaml
       responses:
         '200':
           description: List of predefined locations available from the instance of the collection

@@ -14,6 +14,11 @@
 * Upper right corner, coordinate axis 2
 * Maximum value, coordinate axis 3 (optional)
 
-^|E |The bounding box SHALL consist of four numbers and the coordinate reference system of the values SHALL be interpreted as WGS 84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84) unless a different coordinate reference system is specified in a parameter `bbox-crs`.
-^|F |The coordinate values SHALL be within the extent specified for the coordinate reference system.
+^|E |The bounding box SHALL consist of four numbers and the coordinate reference system of the values SHALL be interpreted as the coordinate reference system is specified in a parameter `crs`.
+
+^|F |If the `crs` query parameter **is not** defined, the bounding box SHALL consist of four numbers and the coordinate reference system of the values SHALL be interpreted as the default coordinate reference system specified for the query type.
+
+^|G | If the `crs` query parameter **is not** defined **and** a default `crs` **is not** defined for the query, the bounding box SHALL consist of four numbers and the coordinate reference system of the values SHALL be interpreted as WGS 84 longitude/latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84).
+
+^|H |The coordinate values SHALL be within the extent specified for the coordinate reference system.
 |===
