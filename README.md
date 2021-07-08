@@ -6,6 +6,17 @@ This is the GitHub repository of the [OGC Environmental Data Retrieval API Stand
 
 The **OGC API - Environmental Data Retrieval** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
 
+### EDR API Collections
+As with other OGC APIs that include a `/collections` end point, EDR supports distribution of _collections_ of geospatial data in particular ways. An EDR collection can contain virtually any data about the natural or built environment that needs to be _sampled_ using a spatio-temporal query pattern. The following is a list of examples that illustrate what this environmental data sampling paradigm might entail.
+
+1. A climate model or weather reanalysis might be accessed at a point or within a bounding rectangle.
+1. Geospatial gridded data such as a digital elevation model might be accessed along a transect.
+1. Weather information from meteorological stations might be queried within a specified polygon.
+1. An ensemble of forecast model data might be accessed for a specific location.
+1. Information from a hydrologic sensor might be found spatially or accessed by ID.
+
+EDR aims to specify the minimum yet sufficient diversity in metadata, query patterns, and response formats to enable this wide range of environmental data retrieval applications.
+
 ### EDR API Query Patterns
 The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. Each of these patterns is optional, but a compliant API should implement at least one of them. 
 
