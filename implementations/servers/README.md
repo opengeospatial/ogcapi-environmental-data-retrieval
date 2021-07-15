@@ -7,3 +7,4 @@ We welcome pull requests to update this page to add or update an entry for a ser
 - [pygeoapi](pygeoapi.md)
 - [Open Weather](open-weather.md)
 - [US National Weather Service](national-weather-service.md)
+- [WHU EDR Server](whu-edr-server.md)
