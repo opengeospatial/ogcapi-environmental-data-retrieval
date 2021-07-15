@@ -1,23 +1,22 @@
 # Open Weather
 
-[Open Weather](https://www.iblsoft.com/products/open-weather)
+[Open Weather](https://www.iblsoft.com/products/open-weather) is a general-purpose weather data processing software. It is able to ingest raw meteorological data in numerous data formats, organize the data in a database and then expose the data via various interfaces including
 
-TODO: add product description and EDR support information.
+- Command-line interface (shell)
+- Python API
+- Web services, such as WCS and OGC-API EDR
 
-## Servers
+Open Weather's EDR implementation supports gridded data (NWP, radar, sattelite) as well as point data (in-situ observations).
 
-- [https://ogcie.iblsoft.com/edr](https://ogcie.iblsoft.com/edr)
+When deployed in cloud, Open Weather can process data on a very large scale with low latency.
 
-## Server description
+## Demo Server
 
-- Serves live GFS model data and live SYNOP, TEMP and METAR reports
-- Implements point, radius, area, cube and trajectory query
+- Landing page: [https://ogcie.iblsoft.com/edr](https://ogcie.iblsoft.com/edr)
+- OpenAPI schema: [https://ogcie.iblsoft.com/edr/api?f=JSON](https://ogcie.iblsoft.com/edr/api?f=JSON)
 
 ## Sample requests
-
-:warning: ***The server contains live data not older than two days. Therefore, before you execute the queries below, please update 'datetime' URL parameter to the present date, for example:***
-
-`/edr/collections/GFS_isobaric/position?parameter-name=temperature&datetime=**2021-01-19T09:00:00**&coords=POINT(17.11 48.14)&z=850&f=CoverageJSON`
+***Note: The demo server contains live data not older than two days. Therefore, before you execute the queries below, please update 'datetime' URL parameter to the present date.***
 
 ### Position
 #### Single Point
@@ -111,3 +110,38 @@ Fixed vertical coordinate, 100 samples along trajectory:
 `https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/trajectory?parameter-name=temperature&coords=LINESTRINGZM(14.74 43.44 1000 1611036000, 9.39 46.89 800 1611039600, 14.42 48.05 500 1611043200, 7.66 51.4 500 1611046800, 7.1 55.9 700 1611050400, 2.31 53.72 1000 1611054000)&resolution=100&f=CoverageJSON`
 
 ***Note: Before running this query, don't forget to update the time stamps in the trajectory specification to the present date. The server contains data only for the past two days.***
+
+### Corridor
+#### XY Corridor
+A 2D corridor across a horizontal plane. Time and vertical coordinates are fixed (2021-07-13T18:00:00, 850 hPa)
+
+- 50 samples taken along the corridor
+- The corridor is 100 km wide, 5 samples taken in lateral dimension (25 km spacing)
+
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/corridor?parameter-name=temperature&datetime=2021-07-13T18:00:00&coords=LINESTRING(14.74 43.44, 9.39 46.89, 14.42 48.05, 7.66 51.4, 7.1 55.9, 2.31 53.72)&corridor-width=100000&resolution-x=5&resolution-y=50&z=850&f=CoverageJSON`
+
+#### XYZ Corridor
+A 3D corridor travelling in X, Y and Z dimensions. Fixed time coordinate (2021-07-13T18:00:00)
+
+- 50 samples taken along the corridor
+- The corridor is 100 km wide, 9 samples taken in lateral dimension
+- The corridor is 100 hPa high, 5 samples taken in vertical dimension
+
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/corridor?parameter-name=temperature&datetime=2021-07-13T18:00:00&coords=LINESTRINGZ(14.74 43.44 1000, 9.39 46.89 800, 14.42 48.05 500, 7.66 51.4 500, 7.1 55.9 700, 2.31 53.72 1000)&corridor-width=100000&resolution-x=9&corridor-height=100&resolution-z=5&resolution-y=50&f=CoverageJSON`
+
+#### XYT Corridor
+A 3D corridor travelling in X, Y and T dimensions. Fixed vertical coordinate (850 hPa)
+
+- 50 samples taken along the corridor
+- The corridor is 100 km wide, 9 samples taken in lateral dimension
+
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/corridor?parameter-name=temperature&coords=LINESTRINGM(14.74 43.44 1626199200, 9.39 46.89 1626202800, 14.42 48.05 1626206400, 7.66 51.4 1626210000, 7.1 55.9 1626213600, 2.31 53.72 1626217200)&corridor-width=100000&resolution-x=5&z=850&resolution-y=50&f=CoverageJSON`
+
+#### XYZT Corridor
+A corridor travelling in all dimensions
+
+- 50 samples taken along the corridor
+- The corridor is 100 km wide, 9 samples taken in lateral dimension
+- The corridor is 100 hPa high, 5 samples taken in vertical dimension
+
+`https://ogcie.iblsoft.com/edr/collections/GFS_isobaric/corridor?parameter-name=temperature&coords=LINESTRINGZM(14.74 43.44 1000 1626199200, 9.39 46.89 800 1626202800, 14.42 48.05 500 1626206400, 7.66 51.4 500 1626210000, 7.1 55.9 700 1626213600, 2.31 53.72 1000 1626217200)&corridor-width=100000&resolution-x=9&corridor-height=100&resolution-z=5&resolution-y=50&f=CoverageJSON`
