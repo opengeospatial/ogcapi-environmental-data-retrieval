@@ -1,0 +1,28 @@
+[[req_core_rc-bbox-definition]]
+==== *Requirement /req/core/rc-bbox-definition* Parameter bbox definition
+[requirement,type="general",id="/req/core/rc-bbox-definition", label="/req/core/rc-bbox-definition"]
+====
+
+*A:*
+
+The operation SHALL support a parameter `bbox` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: bbox
+in: query
+required: false
+schema:
+  type: array
+  oneOf:
+  - minItems: 4
+    maxItems: 4
+  - minItems: 6
+    maxItems: 6
+  items:
+    type: number
+style: form
+explode: false
+----
+====

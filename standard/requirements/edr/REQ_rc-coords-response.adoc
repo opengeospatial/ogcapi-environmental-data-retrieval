@@ -1,0 +1,25 @@
+[[req_edr_coords-response]]
+==== *Requirement /req/edr/coords-response* Parameter coords response
+
+[requirement,type="general",id="/req/edr/coords-response", label="/req/edr/coords-response"]
+====
+
+*A:*
+
+Only those resources that have a spatial geometry that intersects the area defined by the `coords` parameter SHALL be part of the result set.
+
+---
+*B:*
+
+The coordinates SHALL consist of a Well Known Text (WKT) geometry string.
+
+---
+*C:*
+
+The coordinate reference system of the values SHALL be interpreted as WGS84 longitude/latitude
+
+
+    WKT: GEOGCS["WGS 84", DATUM["WGS_1984", SPHEROID["WGS 84", 6378137, 298.257223563, AUTHORITY["EPSG", "7030"]], AUTHORITY["EPSG", "6326"]], PRIMEM["Greenwich", 0 , AUTHORITY["EPSG", "8901"]], UNIT["degree", 0.01745329251994328, AUTHORITY["EPSG", "9122"]], AUTHORITY["EPSG", "4326"]]
+
+unless a  different coordinate reference system is specified in a parameter `crs`.
+====

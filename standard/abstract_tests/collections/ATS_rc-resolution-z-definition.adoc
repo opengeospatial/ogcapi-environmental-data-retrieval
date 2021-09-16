@@ -1,0 +1,21 @@
+[[ats_collections_rc-resolution-z-definition]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/edr/rc-resolution-z-definition*
+^|Test Purpose |Validate that the resolution-z query parameters are constructed correctly.
+^|Requirement |<<req_collections_rc-resolution-z-definition,/req/edr/resolution-z-definition>>
+^|Test Method |Verify that the `resolution-z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: resolution-z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

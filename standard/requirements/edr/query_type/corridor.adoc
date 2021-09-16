@@ -1,0 +1,145 @@
+The Corridor query returns data along and around the path defined by the `coords` parameter. *The logic to match the data for the requested path will depend on, and be defined by, the <<collection-definition,collection>>*.  The results are further filtered by the constraints defined by the following query parameters:
+
+===== *Parameter coords*
+
+Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for Parameter coords definition.
+
+Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
+
+"Intersects" means that the geospatial shape specified by the parameter `coords`, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
+
+The corridor query supports the Linestring Well Known Text (WKT) geometry type, the corridor query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical height value (z) and a time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).  The Linestring described by the <<req_edr_coords-definition, coords>> parameter defines the center point of the corridor with the <<req_edr_corridor-height-definition,corridor-height>> and <<req_edr_corridor-width-definition,corridor-width>> query parameters defining the depth and breadth of the corridor.
+
+A 2D corridor, on the surface of earth with no time or vertical dimensions:
+    coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)
+
+A 2D corridor, on the surface of earth all at the same time and no vertical dimension, time value defined in ISO8601 format by the `datetime` query parameter :
+    coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&datetime=2018-02-12T23:00:00Z
+
+A 2D corridor, on the surface of earth with no time value but at a fixed vertical height, height defined in the collection height units by the `z` query parameter :
+    coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&z=850
+
+A 2D corridor, on the surface of earth all at a the same time and at a fixed vertical height, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the collection height units by the `z` query parameter :
+    coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&datetime=2018-02-12T23:00:00Z&z=850
+
+A 3D corridor, on the surface of the earth but over a range of time values with no height values:
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)
+
+A 3D corridor, on the surface of the earth but over a range of time values with a fixed height value, height defined in the collection height units by the `z` query parameter :
+coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&z=200
+
+A 3D corridor, through a 3D volume with vertical height or depth, but no defined time:
+coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)
+
+A 3D corridor, through a 3D volume with a vertical extent, but at a fixed time, time value defined in ISO8601 format by the `datetime` query parameter:
+coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)&datetime=2018-02-12T23:00:00Z
+
+A 4D corridor, through a 3D volume but over a range of time values:
+coords=LINESTRINGZM (-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11 51.02 0.3 1560510600,-2.85 51.42 0.41560513600,-2.59 51.46 0.5 1560515400)
+
+If the coords specify a 4D corridor i.e. coords=LINESTRINGZM(...) an error MUST be thrown by the server if the client application defines either the `z` or `datetime` query parameters
+
+where *Z* in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.
+`If the specified CRS does not define the height units, the heights units will default to metres above mean sea level`
+
+and the *M* in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+https://en.wikipedia.org/wiki/Unix_time
+
+.A basic surface route 2D corridor
+=================
+From Bristol to Exeter, for a width of 5 km. The units are specified by the `width-units`.
+
+`coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&corridor-width=5&width-units=km`
+
+=================
+
+.A surface route 2D corridor with defined time intervals, 5km wide
+=================
+From Bristol to Exeter
+
+`coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)&corridor-width=5000&width-units=m`
+=================
+
+.A 4D corridor with defined time intervals and changing pressure heights
+=================
+From Bristol to Exeter
+
+`coords=LINESTRINGZM(-3.53 50.72 1000 1560507000,-3.35 50.92 850 1560508800,-3.11 51.02 700 1560510600,-2.85 51.42 850 1560513600,-2.59 51.46 1000 1560515400)&corridor-width=5&width-units=km`
+=================
+
+===== *Parameter z*
+
+Used when the entire corridor occurs at the same vertical height. The `z` query parameter is used to define the height.
+
+
+.A corridor with a single vertical height
+===========
+
+If the entire route corridor is at the 850hPa pressure level
+`coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)&corridor-width=5&width-units=km&z=850`
+===========
+
+===== *Parameter datetime*
+
+For Parameter datetime, see <<datetime>>.
+
+===== *Parameter resolution-x*
+
+For Parameter resolution-x, see <<req_edr_resolution-x-definition>>.
+
+.Interpolate corridor values across the width
+===========
+Return 10 values across the defined corridor width
+`resolution-x=10`
+===========
+
+.Get values across the width of the corridor at stored resolution
+===========
+Return values at the stored resolution
+`resolution-x=0`
+===========
+
+===== *Parameter resolution-z*
+
+For Parameter resolution-z, see <<req_edr_resolution-z-definition>>.
+
+
+.Interpolate corridor values over the corridor height
+===========
+Return 8 values over the defined corridor height
+`resolution-z=8`
+===========
+
+.Get values over the defined corridor height at stored resolution
+===========
+Return values at the stored resolution
+`resolution-z=0`
+===========
+
+===== *Parameter corridor-height*
+
+For Parameter corridor-height, see <<req_edr_corridor-height-definition>>.
+
+===== *Parameter height-units*
+
+For Parameter height-units, see <<req_edr_height_units-definition>>.
+
+===== *Parameter corridor-width*
+
+For Parameter corridor-width, see <<req_edr_corridor-width-definition>>.
+
+===== *Parameter width-units*
+
+For Parameter width-units, see <<req_edr_width_units-definition>>.
+
+===== *Parameter parameter-name*
+
+For Parameter parameter-name, see <<parameter-name>>.
+
+===== *Parameter crs*
+
+For Parameter crs, see <<crs>>.
+
+===== *Parameter f*
+
+For Parameter f, see <<outputformat>>.

@@ -1,0 +1,17 @@
+[[req_edr_parameters-response]]
+==== *Requirement /req/edr/parameter-name-response* Parameter parameter-name response
+
+[requirement,type="general",id="/req/edr/parameter-name-response", label="/req/edr/parameter-name-response"]
+====
+
+*A:*
+
+If the `parameter-name` parameter is provided, only those parameters named SHALL be returned.  If the `parameter-name` parameter is not specified all parameters in the collection SHALL be returned.
+
+---
+*B:*
+
+The `parameter-name` parameter SHALL consist of a comma delimited string value based on an enumerated list of options listed in the collections metadata.
+
+
+====

@@ -1,0 +1,15 @@
+[[req_core_conformance-success]]
+
+[requirement,type="general",id="/req/core/conformance-success", label="/req/core/conformance-success"]
+====
+
+*A:*
+
+A successful execution of the operation SHALL be reported as a response with a HTTP status code `200`.
+
+---
+*B:*
+
+The content of that response SHALL be based upon the schema link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/confClasses.yaml[confClasses.yaml] and list all OGC API conformance classes that the API conforms to.
+
+====

@@ -1,0 +1,11 @@
+[[req_core_crs84]]
+==== *Requirement /req/core/crs84* CRS84
+
+[requirement,type="general",id="/req/core/crs84", label="/req/core/crs84"]
+====
+
+*A:*
+
+Unless the client explicitly requests a different coordinate reference system, all spatial geometries SHALL be in the  http://www.opengis.net/def/crs/OGC/1.3/CRS84[CRS84] (WGS 84 longitude/latitude) coordinate reference system for geometries without height information and http://www.opengis.net/def/crs/OGC/0/CRS84h[CRS84h] (WGS 84 longitude/latitude plus ellipsoidal height) for geometries with height information.
+
+====

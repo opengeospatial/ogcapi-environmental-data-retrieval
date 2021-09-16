@@ -1,0 +1,73 @@
+[[ats_locations]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/locations*
+^|Test Purpose |Validate that a list of valid locations are returned by a `Locations` query if no query parameters are specified.
+^|Requirement |<<_req_edr_rc-locations,/req/edr/rc-locations>>
+^|Test Method |. No query parameters are specified
+. Validate that a GeoJSON document was returned with a status code 200 containing at least a list of features one for each location supported by the collection.
+|===
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/locations*
+^|Test Purpose |Validate that an error is returned by a `Locations` query when the the locationId is invalid.
+^|Requirement |<<_req_edr_rc-locations,/req/edr/rc-locations>>
+^|Test Method |. Check that invalid `locationId` values return an error message
+. Validate that a document was returned with a status code 404.
+|===
+
+
+
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/locations*
+^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Locations` query using  query parameters.
+^|Requirement |<<_req_edr_rc-locations,/req/edr/rc-locations>>
+^|Test Method |. Test with valid query parameters
+. Validate that a document was returned with a status code 200.
+
+Repeat these tests using the following parameter tests:
+
+*Parameters*
+
+* Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
+* Response <<req_edr_parameters-response,/req/edr/parameter-name-response>>
+
+*DateTime*
+
+* Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
+* Response <<req_core_rc-time-response,/req/core/datetime-response>>
+
+Execute requests with combinations of the "time","parameter-name","crs" and "f" query parameters
+and verify that only information that matches the selection criteria is returned.
+|===
+
+
+
+include::../core/ATS_rc-time-definition.adoc[]
+
+include::../core/ATS_rc-time-response.adoc[]
+
+
+
+include::../collections/ATS_rc-parameter-name-definition.adoc[]
+
+include::../collections/ATS_rc-parameter-name-response.adoc[]
+
+
+
+include::../collections/ATS_rc-crs-definition.adoc[]
+
+include::../collections/ATS_rc-crs-response.adoc[]
+
+
+
+include::../collections/ATS_rc-f-definition.adoc[]
+
+include::../collections/ATS_rc-f-response.adoc[]

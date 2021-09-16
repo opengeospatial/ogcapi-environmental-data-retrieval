@@ -1,8 +1,0 @@
-[reftext='{table-caption} {counter:table-num}']
-.Schema and Tests for Collections content
-[width="90%",cols="3",options="header"]
-|===
-|Format |Schema Document |Test ID
-|HTML |link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/schemas/collections.json[collections.json]|<<ats_html_content,/conf/html/content>>
-|JSON |link:https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/schemas/collections.json[collections.json] |<<ats_geojson_content,/conf/geojson/content>>
-|===

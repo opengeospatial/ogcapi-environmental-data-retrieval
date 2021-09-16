@@ -1,9 +1,0 @@
-[[req_core_rc-md-query-links]] 
-==== *Requirement {counter:req-id}: /req/core/rc-md-query-links* 
-[width="90%",cols="2,6a"]
-|=== 
-^|A |For each collection included in the response, the `links` property of the collection SHALL include at least one link to a query resource (relation: `data`) 
- or an instance resource (relation: `instance`).
-
-^|B |All links SHALL include the `rel` and `type` link parameters.
-|===

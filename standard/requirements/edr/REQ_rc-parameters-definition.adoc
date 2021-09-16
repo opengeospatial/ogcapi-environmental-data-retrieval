@@ -1,0 +1,24 @@
+[[req_edr_parameters-definition]]
+==== *Requirement /req/edr/REQ_rc-parameter-name-definition* Parameter parameter-name definition
+
+[requirement,type="general",id="/req/edr/REQ_rc-parameter-name-definition", label="/req/edr/REQ_rc-parameter-name-definition"]
+====
+
+*A:*
+
+Each resource collection operation SHALL support a parameter `parameter-name` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: parameter-name
+in: query
+required: true
+explode: false
+schema:
+    minItems: 1
+    type: array
+    items:
+        type: string
+----
+====

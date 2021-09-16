@@ -1,0 +1,22 @@
+[[req_edr_crs-definition]]
+==== *Requirement /req/edr/REQ_rc-crs-definition* Parameter crs definition
+
+[requirement,type="general",id="/req/edr/REQ_rc-crs-definition", label="/req/edr/REQ_rc-crs-definition"]
+====
+
+*A:*
+
+Each resource collection operation SHALL support a parameter `crs` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: crs
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====

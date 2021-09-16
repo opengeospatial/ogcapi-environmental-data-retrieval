@@ -1,0 +1,20 @@
+[[req_core_rc-collection-info-links]] 
+
+[requirement,type="general",id="/req/core/rc-collection-info-links", label="/req/core/rc-collection-info-links"]
+====
+
+*A:*
+
+A `200`-response SHALL include the following links in the `links` property of the response:
+
+
+* a link to this response document (relation: `self`),
+* a link to the response document in every other media type supported by the server (relation: `alternate`).
+* at least one link to a query end point.
+
+---
+*B:*
+
+All links SHALL include the `rel` and `type` link parameters.
+
+====

@@ -1,0 +1,22 @@
+[[req_edr_height_units-response]]
+==== *Requirement /req/edr/height-units-response* Parameter height-units response
+
+[requirement,type="general",id="/req/edr/height-units-response", label="/req/edr/height-units-response"]
+====
+
+*A:*
+
+If the `height-units` parameter is defined the result set SHALL contain values derived based on the chosen units.
+
+
+
+[source,java]
+----
+height-units = units
+----
+---
+*B:*
+
+If an unsupported units value is requested a `400` error should be returned.
+
+====

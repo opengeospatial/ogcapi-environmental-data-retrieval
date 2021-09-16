@@ -1,0 +1,27 @@
+[[req_json_content]]
+
+[requirement,type="general",id="/req/json/content", label="/req/json/content"]
+====
+*A:*
+
+Every `200`-response with the media type `application/json` SHALL be a payload encoded according to the https://tools.ietf.org/html/rfc8259[JSON Interchange Format].
+
+---
+
+*B:*
+
+The links specified in the requirements `/req/core/rc-collection-info-links` and `/req/core/rc-collection-info-links` MAY be added in an extension property (foreign member) with the name `links`.
+
+---
+
+*C:*
+
+The parameters specified in the requirements `/req/edr/rc-parameters` MAY be added in an extension property (foreign member) with the name `parameters`.
+
+---
+
+*D:*
+
+The schema of all responses with the media type `application/json` SHALL conform with the JSON Schema specified for the resource in the <<rc_core,Core>> requirements class.
+
+====

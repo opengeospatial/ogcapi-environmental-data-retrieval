@@ -1,0 +1,10 @@
+[[req_oas30_oas-impl]]
+==== *Requirement /req/oas30/oas-impl* OpenAPI 3.0 implementation
+[requirement,type="general",id="/req/oas30/oas-impl", label="/req/oas30/oas-impl"]
+====
+
+*A:*
+
+The server SHALL implement all capabilities specified in the OpenAPI definition.
+
+====

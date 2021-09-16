@@ -1,0 +1,25 @@
+[[req_core_api-definition-success]]
+
+[requirement,type="general",id="/req/core/api-definition-success", label="/req/core/api-definition-success"]
+====
+
+*A:*
+
+A successful execution of the operation SHALL be reported as a response with a HTTP status code `200`.
+
+---
+*B:*
+
+The content of that response SHALL be an API Definition document.
+
+---
+*C:*
+
+The API Definition document SHALL shall be consistent with the media type identified through HTTP content negotiation.
+
+---
+*Note:*
+
+The `f` parameter MAY be used to satisfy this requirement.
+
+====

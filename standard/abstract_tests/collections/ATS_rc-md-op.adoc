@@ -1,0 +1,13 @@
+// [[ats_collections_rc-md-op]]
+{counter2:ats-id}
+
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/collections/rc-md-op*
+^|Test Purpose |Validate that information about the Collections can be retrieved from the expected location.
+^|Requirement |<<_req_collections_rc-md-op,/req/collections/rc-md-op>>
+^|Test Method |. Issue an HTTP GET request to the URL {root}/collections
+. Validate that a document was returned with a status code 200
+. Validate the contents of the returned document using test <<ats_collections_rc-md-success,/conf/rc-md-success>>.
+|===

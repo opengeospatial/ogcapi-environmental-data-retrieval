@@ -1,0 +1,40 @@
+[[req_edr_rc-locations]]
+
+[requirement,type="general",id="/req/edr/rc-locations", label="/req/edr/rc-locations"]
+====
+
+*A:*
+
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/locations`.
+
+---
+*B:*
+
+The parameter `collectionId` is each `id` property in the feature collections response (JSONPath: `$.collections[*].id`).
+
+---
+*C:*
+
+If a `locationId` is not specified a list of valid locationId's MUST be returned with a description of their geo-spatial extent.
+
+---
+*D:*
+
+A `locations` GET operation SHOULD include a `parameter-name` query parameter
+
+---
+*E:*
+
+A `locations` GET operation MAY include a `datetime` query parameter
+
+---
+*F:*
+
+A `locations` GET operation SHOULD include a `crs` query parameter
+
+---
+*G:*
+
+A `locations` GET operation SHOULD include a `f` query parameter
+
+====

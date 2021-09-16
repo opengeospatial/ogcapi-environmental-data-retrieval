@@ -1,0 +1,15 @@
+[[ats_core_rc-collection-info-links]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/core/rc-collection-info-links*
+^|Test Purpose |Validate that the required links are included in the Collections Metadata document.
+^|Requirement |<<_req_core_rc-collection-info-links,/req/core/rc-collection-info-links>>
+^|Test Method |Verify that the response document includes:
+
+. a link to this response document (relation: `self`),
+. a link to the response document in every other media type supported by the server (relation: `alternate`).
+
+Verify that all links include the `rel` and `type` link parameters.
+|===

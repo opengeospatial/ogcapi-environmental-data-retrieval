@@ -1,0 +1,21 @@
+[[req_collections_rc-time-definition]]
+==== *Requirement /req/core/datetime-definition* datetime definition
+[requirement,type="general",id="/req/core/datetime-definition", label="/req/core/datetime-definition"]
+====
+
+*A:*
+
+The `datetime` parameter SHALL have the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: datetime
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====

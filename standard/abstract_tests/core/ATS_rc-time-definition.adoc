@@ -1,0 +1,20 @@
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/core/datetime-definition*
+^|Test Purpose |Validate that the datetime query parameters are constructed correctly.
+^|Requirement |<<req_collections_rc-time-definition,/req/core/datetime-definition>>
+^|Test Method |Verify that the `datetime` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: datetime
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

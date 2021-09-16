@@ -1,0 +1,92 @@
+The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> . The filter constraints are defined by the following query parameters:
+
+===== *Parameter coords*
+
+Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for Parameter coords definition.
+
+Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
+
+Accepts position(s) to return data for. The coordinates are defined by a Well Known Text (WKT) string. To retrieve a single position:
+
+`POINT(x y)`
+
+And for a list of positions:
+
+`MULTIPOINT\((x y),(x1 y1),(x2 y2),(x3 y3))`
+
+And for a list of positions at defined heights:
+
+`MULTIPOINTZ\((x y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3))`
+
+See http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry .
+
+The coordinate values will depend on the CRS parameter. If this is not defined,
+the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude).
+
+.Single position
+=================
+Retrieve data for Greenwich, London:
+
+`coords=POINT(0 51.48)`
+=================
+
+
+.Multiple positions
+=================
+Retrieve data for a list of positions: 38.9N 77W, 48.85N 2.35E, 39.92N 116.38E, 35.29S 149.1E, 51.5N 0.1W:
+
+`coords=MULTIPOINT\((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))`
+
+Note that for this example, the coordinate reference system has the coordinate order: (longitude/latitude)
+=================
+
+===== *Parameter z*
+
+Apply <<req_edr_z-definition,Requirement /req/edr/z-definition>> for Parameter z definition.
+
+Apply <<req_edr_z-response,Requirement /req/edr/z-response>> for Parameter z response.
+
+Define the vertical level to return data from
+i.e. z=level
+
+.A single vertical level
+===========
+
+For example, if the 850hPa pressure level is being queried:
+
+`z=850`
+===========
+
+.Return data at all a levels defined by a list of vertical levels
+===========
+
+Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa:
+
+`z=1000,900,850,700`
+===========
+
+.Return data for all levels between and including 2 defined levels
+===========
+
+Request data for all levels between 2m and 100m:
+
+`z=2/100`
+===========
+
+`When not specified the API MUST return data from all available levels`
+
+===== *Parameter datetime*
+
+For Parameter datetime, see <<datetime>>.
+
+===== *Parameter parameter-name*
+
+For Parameter parameter-name, see <<parameter-name>>.
+
+===== *Parameter crs*
+
+For Parameter crs, see <<crs>>.
+
+===== *Parameter f*
+
+For Parameter f, see <<outputformat>>.

@@ -1,0 +1,20 @@
+[[req_edr_rc-crs]]
+
+[requirement,type="general",id="/req/edr/rc-crs", label="/req/edr/rc-crs"]
+====
+
+*A:*
+
+A crs object MUST have a unique (to the collection) `name` property, it MAY be an EPSG code.
+
+---
+*B:*
+
+A crs object MUST have a `wkt` property which MUST be a correctly structured Well Known Text definition for the CRS.
+
+---
+*C:*
+
+A crs object MAY have a `proj4` property which MAY be a correctly structured proj4 definition for the CRS (and MUST be equivalent to the wkt property).
+
+====

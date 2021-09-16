@@ -1,0 +1,18 @@
+[[ats_covjson]]
+[cols="1,4",width="90%"]
+.Conformance Class "CoverageJSON"
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/covjson
+|Target type |Web API
+|Requirements Class |<<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/covjson>>
+|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core>>
+|===
+
+==== CoverageJSON Definition
+
+include::covjson/ATS_definition.adoc[]
+
+==== CoverageJSON Content
+
+include::covjson/ATS_content.adoc[]

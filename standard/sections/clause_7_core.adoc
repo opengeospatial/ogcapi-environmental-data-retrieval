@@ -1,0 +1,155 @@
+[[dependencies-overview]]
+== Dependencies on Core and Collections Requirements Classes of OGC API - Common
+
+The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of OGC API-EDR shall first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
+
+* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+* Collections, <<OGC20-024,http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections>>
+
+[[rc_core-section]]
+=== Overview
+
+The `Core` Requirements Class of OGC API — Environmental Data Retrieval defines the requirements for locating, understanding, and accessing spatio-temporal data resources.
+
+See <<rc_core,Requirements Class "OGC API — Environmental Data Retrieval Core">> for a detailed specification of the `Core` Requirements Class.
+
+The following five sections explain aspects of the `Core`, `Collections` and `Queries` Requirements Classes:
+
+. <<api-platform-section,API Platform>>: a set of common capabilities
+. <<rc_collection-section,Collection Access>>: operations for accessing <<collection-definition,collections>> of spatio-temporal data.
+. <<query-resources-section,Query Resources>>: operations for accessing spatio-temporal data resources through queries
+. <<parameters-section,Parameters>>: parameters for use in OGC API-EDR operations.
+. <<general-section,General>>: general principles for use with this standard.
+
+<<mapping-to-common>> Identifies the OGC API — Common Requirements Classes which are applicable to each section of this Standard. Instructions on when and how to apply these Requirements Classes are provided in each section.
+
+[#mapping-to-common,reftext='{table-caption} {counter:table-num}']
+.Mapping OGC API - EDR Sections to OGC API — Common Requirements Classes
+[width="90%",cols="2,4,4",options="header"]
+|====
+^|*API-EDR Section* ^|*API-EDR Requirements Class* ^|*API-Common Requirements Class*
+|<<landing-page,API Landing Page>>| <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+|<<api-definition,API Definition>>| <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+|<<conformance-classes,Declaration of Conformance Classes>>| <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+|<<rc_collection-section,Collections>>| <<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/collections>> | http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
+|<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| <<rc_oas30,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/oas30>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+|<<rc_geojson,GeoJSON>>| <<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/geojson>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+|<<rc_covjson,CoverageJSON>>| <<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/covjson>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+|<<rc_html,HTML>>| <<rc_html,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/html>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/html
+|====
+
+[[api-platform-section]]
+=== Platform
+
+OGC API — Common defines a set of common capabilities which are applicable to any OGC <<webapi-definition,Web API>>. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
+
+[[landing-page]]
+==== API landing page
+
+The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API - Common already requires some common links, sufficient for this standard, that are stated in the following Requirements Class of OGC API - Common:
+
+.Dependencies
+
+* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+
+===== Operation
+
+The `Landing Page` operation is defined in the `Core` conformance class of OGC API — Common. No modifications are needed to support spatio-temporal data resources. The `Core` conformance class specifies only one way of performing this operation:
+
+. Issue a `GET` request on the `{root}/` path
+
+Support for `GET` on the `{root}/` path is required by OGC API — Common.
+
+===== Response
+
+A successful response to the `Landing Page` operation is defined in OGC API — Common. The schema for this resource is provided in <<landingPage-schema>>.
+
+[#landingPage-schema,reftext='Landing Page Response Schema']
+.Landing Page Response Schema
+[source,yaml]
+----
+include::../openapi/schemas/landingPage.yaml[]
+----
+
+The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
+
+[#landingPage-example,reftext=`Landing Page Example`]
+.Landing Page Example
+[source,json]
+----
+include::../examples/json/landingPage_example.json[]
+----
+
+===== Error Handling
+
+The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
+
+[[api-definition]]
+==== API definition
+
+Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
+
+Support for an API definition is specified in the following Requirements Class of OGC API - Common:
+
+.Dependencies
+
+* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+
+===== Operation
+
+This operation is defined in the `Core` conformance class of OGC API — Common. No modifications are needed to support spatio-temporal data resources. The `Core` conformance class describes two ways of performing this operation:
+
+. Issue a `GET` request on the `{root}/api` path
+. Follow the `service-desc` or `service-doc` link on the landing page
+
+Only the link is required by OGC API — Common.
+
+===== Response
+
+A successful response to the API Definition request is a resource which documents the design of the API. OGC API — Common leaves the selection of format for the API Definition response to the API implementor. However, the options are limited to those which have been defined in the API-Common standard. At this time OpenAPI 3.0 is the only option provided.
+
+===== Error Handling
+
+The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
+
+[[conformance-classes]]
+==== Declaration of conformance classes
+
+To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API server, the API has to declare the conformance classes it claims to have implemented.
+
+Support for the declaration of conformance classes is specified in the following Requirements Class of OGC API - Common:
+
+.Dependencies
+
+* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+
+===== Operation
+
+This operation is defined in the `Core` conformance class of OGC API — Common. No modifications are needed to support spatio-temporal data resources. The `Core` conformance class describes two ways of performing this operation:
+
+. Issue a `GET` request on the `{root}/conformance` path
+. Follow the `conformance` link on the landing page
+
+Both techniques are required by OGC API — Common.
+
+===== Response
+
+A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this API claims conformance. The schema for this resource is defined in OGC API — Common and provided for reference in <<conformance-schema>>.
+
+Apply Requirement <<req_core_conformance,/req/core/conformance>> on declaration of Core conformance classes.
+
+[#conformance-schema,reftext='Conformance Response Schema']
+.Conformance Response Schema
+[source,yaml]
+----
+include::../openapi/schemas/confClasses.yaml[]
+----
+
+The following JSON fragment is an example of a response to an OGC API-EDR conformance operation.
+
+[#conformance-example,reftext=`Conformance Information Example`]
+.Conformance Information Example
+[source,json]
+----
+include::../examples/json/conformance_example.json[]
+----

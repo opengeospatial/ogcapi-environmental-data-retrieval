@@ -1,0 +1,17 @@
+[[rc_json]]
+// *Requirements Class:* JSON
+
+[%unnumbered]
+[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/json",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json"]
+.JSON Requirements Class
+====
+
+[requirement,type="general",label="/req/json/content"]
+======
+======
+
+[requirement,type="general",label="/req/json/definition"]
+======
+======
+
+====

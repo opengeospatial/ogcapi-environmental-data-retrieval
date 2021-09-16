@@ -1,0 +1,67 @@
+<bibdata type="standard">
+  <fetched>2021-04-29</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Reference model</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Fundamentals</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Reference model - Part 1: Fundamentals</title>
+  <uri type="src">https://www.iso.org/standard/59164.html</uri>
+  <uri type="obp">https://www.iso.org/obp/ui/#!iso:std:59164:en</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/05/91/59164.detail.rss</uri>
+  <docidentifier type="ISO">ISO 19101-1:2014</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso:19101:-1:stage-90.93:ed-1:en</docidentifier>
+  <docnumber>19101</docnumber>
+  <date type="published">
+    <on>2014-11</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">ISO 19101-1:2014 defines the reference model for standardization in the field of geographic information. This reference model describes the notion of interoperability and sets forth the fundamentals by which this standardization takes place.Although structured in the context of information technology and information technology standards, ISO 19101-1:2014 is independent of any application development method or technology implementation approach.</abstract>
+  <status>
+    <stage>90</stage>
+    <substage>93</substage>
+  </status>
+  <copyright>
+    <from>2014</from>
+    <owner>
+      <organization>
+        <name>ISO</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO 19101:2002</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/WD 19101-1</formattedref>
+      <date type="circulated">
+        <on>2020-04-27</on>
+      </date>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="211" type="TC">ISO/TC 211Geographic information/Geomatics</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.240.70</code>
+      <text>IT applications in science</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO 19101</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

@@ -1,6 +1,0 @@
-[[req_oas30_oas-impl]] 
-==== *Requirement {counter:req-id}: /req/oas30/oas-impl* OpenAPI 3.0 implementation
-[width="90%",cols="2,6"]
-|===
-^|A |The server SHALL implement all capabilities specified in the OpenAPI definition.
-|===

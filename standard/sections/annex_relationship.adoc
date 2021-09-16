@@ -1,0 +1,48 @@
+[appendix,obligation="informative"]
+[[relationship]]
+== Relationship With Other OGC Standards
+
+=== Introduction
+
+This Annex outlines the relationships, in terms of underlying conceptual models, overlaps, gaps, and target use cases and technologies, with other OGC standards.
+
+:sectnums!:
+
+=== Relationship between OGC API-EDR and OGC API-Features
+The EDR API is completely compatible with http://docs.opengeospatial.org/is/17-069r3/17-069r3.html[OGC API - Features - Part 1: Core (OGC 17-069r3)], in that it supports Collections and Items. It extends the Collection functionality by allowing 'Instances', a form of 'collection of collections'. The EDR API also supports the retrieval of spatiotemporal data by named location as well as coordinates.
+
+=== Relationships between OGC API-EDR and Moving Features standards
+There are four OGC Moving Features standards: http://docs.opengeospatial.org/is/18-075/18-075.html[conceptual model with XML encoding (OGC 18-075)], http://docs.opengeospatial.org/is/16-120r3/16-120r3.html[access (OGC 16-120r3)], http://docs.opengeospatial.org/is/14-084r2/14-084r2.html[CSV encoding (OGC 14-084r2)], and http://docs.opengeospatial.org/is/19-045r3/19-045r3.html[JSON encoding (OGC 19-045r3)]. The Moving Features Standards are concerned with things that move along a trajectory, and simultaneously change their orientation through rigid body rotation. The concepts are defined in https://www.uml.org[Unified Modeling Language (UML)] and encoded in GML. The EDR API does not have the concept of orientation, or foliation or prisms. EDR API is OpenAPI defined, over HTTP(S), and not defined in UML.
+
+Moving Features and EDR API do share a common conceptual definition, from ISO, of a Trajectory, but the Moving Features Standards encode trajectories in GML, CSV and Moving Features JSON, whereas the EDR API encodes trajectories in WKT. The Moving Features Standards support relationships between trajectories and other features, including other trajectories, the EDR API does not. Moving Features also explicitly supports concepts such as velocity, acceleration and distance along a trajectory, whereas the EDR API does not.
+
+The Moving Features Standards consider trajectories as a primary resource to be queried, manipulated and processed, whereas in the EDR API, a trajectory is simply a query sampling pattern, encoded in WKT and https://www.iso.org/iso-8601-date-and-time-format.html[ISO 8601 Date Time Format], into a spatiotemporal data resource.
+
+=== Relationships between OGC API-EDR and Web Coverage Service and Coverage Implementation Schema
+The primary messaging mechanism of the EDR API is JSON, including CoverageJSON, over HTTP(S). Implementations of the EDR API are described using the OpenAPI V3.0 specification. The target users are web-developers and end-users who are not geospatial experts. The target data resources are any dataset described as spatiotemporal, accessible by coordinates.
+
+The EDR API is consistent with the http://docs.opengeospatial.org/is/17-089r1/17-089r1.html[Web Coverage Service (WCS)] and http://docs.opengeospatial.org/is/09-146r8/09-146r8.html[Coverage Implementation Schema (CIS)] standards but does not require the end user or developer to use the terms Domain and RangeSet. The EDR API can also be used to generate a single query against a collection of coverages, providing the data coordinate reference systems are consistent. The EDR API can support any of the WCS and CIS output formats if required. At the time of publication of version 1.0.0 of the EDR API, at least one EDR API implementation had been created by building on top of a WCS/CIS implementation.
+
+The EDR API, with only a single form of spatiotemporal query, allows the retrieval of data from other data stores adhering to data models that are not coverages, such as features or observations.
+
+=== Relationship between OGC API-EDR and the OGC MetOcean Application profile of Web Coverage Service (WCS) 2.1
+The OGC API-EDR has developed out of the experiences of creating http://docs.ogc.org/is/15-045r7/15-045r7.html[Part 0], http://docs.ogc.org/is/15-108r3/15-108r3.html[Part 1] and http://docs.ogc.org/is/17-086r3/17-086r3.html[Part 2] of the WCS 2.1 Met Ocean Application Profile, *ostensibly* for similar use cases, but for differing technology bases.
+
+The primary messaging mechanism of the EDR API is JSON, including CoverageJSON, over HTTP(S). Implementations of the EDR API are described using the OpenAPI V3.0 specification. The target users are web-developers and end-users who are not geospatial experts. The target data resources are any data described as spatiotemporal, accessible by coordinates, not just meteorological or oceanographic.
+
+In contrast, the Met Ocean Application Profile of WCS 2.1 is designed primarily to support XML-encoded messaging, in particular, for GetCapabilities and GetCoverage requests. Responses returning coverages are modelled according to the CIS, which can be XML, JSON or JSON-LD. Developers and end-users are expected to be familiar with the geospatial terminology of coverages, and use the Profile with predominantly meteorological or oceanographic data.
+
+The EDR API and the Met Ocean WCS Profile therefore support different use cases. Developers that are interested in extending their OWS or WCS solutions to support the Met Ocean domain are advised to use the Met Ocean Application Profile of WCS. Developers that are implementing Web APIs that make use of the OpenAPI specification are advised to use the EDR API.
+
+=== Relationships between OGC API-EDR, SOS and SensorThings API
+Both the OGC Sensor Observation Service (SOS) and the OGC SensorThings API enable access to observations made by sensors and transmitted over networks. As stated in Part 1 of the SensorThings API Standard “The main difference between the SensorThings API and the OGC SOS and Sensor Planning Service (SPS) is that the SensorThings API is designed specifically for the resource-constrained IoT devices and the Web developer community” (OGC 15-078r6).
+
+Therefore, although the SensorThings API had overlaps with SOS within Web use cases, the OGC Membership acknowledged that there were some use cases within the IoT that could not be efficiently nor effectively addressed by the SOS. The same is true for the relationship between the EDR API and the SensorThings API.
+
+SensorThings API follows OData’s specification for requesting entities. That means the entity control information, resource path usages, query options, the relevant JSON encodings, and batch-processing request follow OData 4.0. In contrast, the EDR API makes use of the OpenAPI V3.0 specification for describing resource paths, query options, JSON schema, and other aspects.
+
+Further, the EDR API allows for retrieval of coverage data and HTML responses – both of which are not supported by the SensorThings API. Therefore, developers that are interested in IoT devices and OData, and do not have a need for HTML previews of content are advised to make use of the SensorThings API instead. Similarly developers that are interested in XML-encoded observations and sensor model descriptions are advised to make use of the SOS.
+
+Similarly, an EDR or SensorThings API interface could be deployed on the same data set, so that users and developers that do not need the full details of observational, feature or coverage conceptual models and associated metadata could use the EDR API to hide the extra complexity, while users that do need all the details can use the SensorThings API to retrieve those.
+
+:sectnums:

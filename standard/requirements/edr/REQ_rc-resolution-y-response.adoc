@@ -1,0 +1,31 @@
+[[req_edr_resolution-y-response]]
+==== *Requirement /req/edr/resolution-y-response* Parameter resolution-y response
+
+[requirement,type="general",id="/req/edr/resolution-y-response", label="/req/edr/resolution-y-response"]
+====
+
+*A:*
+
+If the `resolution-y` parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum y coordinates
+
+---
+*B:*
+
+The total number of intervals includes the values for the minimum and maximum coordinates
+
+---
+*C:*
+
+A `resolution-y` value of 0 MUST return all available data at the native y resolution between the minimum and maximum coordinates
+
+---
+*D:*
+
+IF `resolution-y` is not specified, data should be returned for just the locations specified in the requested coordinates (**ONLY IF** interpolation is supported by the API)
+
+
+[source,txt]
+----
+resolution-y = number of intervals
+----
+====

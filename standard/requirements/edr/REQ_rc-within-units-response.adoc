@@ -1,0 +1,12 @@
+[[req_edr_within-units-response]]
+==== *Requirement /req/edr/REQ_rc-within-units-response* Parameter within-units response
+
+[requirement,type="general",id="/req/edr/REQ_rc-within-units-response", label="/req/edr/REQ_rc-within-units-response"]
+====
+
+*A:*
+
+The `within-units` parameter defines the distance units of the `within` query parameter value.
+
+
+====

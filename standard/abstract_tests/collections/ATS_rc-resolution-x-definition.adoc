@@ -1,0 +1,21 @@
+[[ats_collections_rc-resolution-x-definition]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/edr/rc-resolution-x-definition*
+^|Test Purpose |Validate that the `resolution-x` query parameters are constructed correctly.
+^|Requirement |<<req_collections_rc-resolution-x-definition,/req/edr/resolution-x-definition>>
+^|Test Method |Verify that the `resolution-x` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: resolution-x
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+|===

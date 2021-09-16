@@ -1,0 +1,7 @@
+[[rec_core_covjson]]
+[recommendation,type="general",id="/rec/core/covjson", label="/rec/core/covjson"]
+====
+*A:*
+
+If the resource can be represented for the intended use in CoverageJSON, implementations SHOULD consider to support CoverageJSON as an encoding.
+====

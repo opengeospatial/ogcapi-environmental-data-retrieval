@@ -1,0 +1,7 @@
+[[rec_core_html]]
+[recommendation,type="general",id="/rec/core/html", label="/rec/core/html"]
+====
+*A:*
+
+To support browsing an API definition through a web browser and to enable search engines to crawl and index the dataset, implementations SHOULD consider to support an HTML encoding.
+====

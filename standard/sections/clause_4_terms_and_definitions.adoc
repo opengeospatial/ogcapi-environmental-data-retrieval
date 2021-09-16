@@ -1,0 +1,65 @@
+[[terms_and_definitions]]
+== Terms and definitions
+
+This document uses the terms defined in https://portal.ogc.org/public_ogc/directives/directives.php[OGC Policy Directive 49], which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.
+
+This document also uses terms defined in the OGC Standard for Modular specifications (https://portal.opengeospatial.org/files/?artifact_id=34762[OGC 08-131r3]), also known as the 'ModSpec'. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+The <<glossary,Glossary>> includes terms from other standards and specifications that, while not normative, are critical to accurately understand this specification.
+
+For the purposes of this document, the following additional terms and definitions apply.
+
+[[area-definition]]
+=== area
+
+region specified with a geographic envelope that may have vertical dimension
+
+[[corridor-definition]]
+=== corridor
+
+two parameter set of points around a trajectory
+
+[[cube-definition]]
+=== cube
+
+rectangular area, with a vertical extent
+
+[[location-definition]]
+=== location
+
+identifiable geographic place
+
+(Source: https://www.iso.org/standard/70742.html[ISO 19112:2019])
+
+NOTE: A location is represented by one of a set of data types that describe a position, along with metadata about that data, including coordinates (from a coordinate reference system), a measure (from a linear referencing system), or an address (from an address system).
+
+[[instance-definition]]
+=== instance
+
+version, release, or run of a given data collection
+
+[[position-definition]]
+=== position
+
+data type that describes a point or geometry potentially occupied by an object or person
+
+(Source: https://www.iso.org/standard/32551.html[ISO 19133:2005])
+
+[[radius-definition]]
+=== radius
+
+region specified with a geographic position and radial distance
+
+[[spatio-temporal-data-definition]]
+=== spatio-temporal data
+
+data associated with a position in space-time
+
+[[trajectory-definition]]
+=== trajectory
+
+path of a moving point described by a one parameter set of points
+
+(Source: https://www.iso.org/standard/41445.html[ISO 19141:2008])
