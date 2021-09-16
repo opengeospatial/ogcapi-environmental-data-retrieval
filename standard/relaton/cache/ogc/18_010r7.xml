@@ -1,0 +1,39 @@
+<bibdata type="standard">
+  <fetched>2021-05-17</fetched>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
+  <uri type="obp">http://docs.opengeospatial.org/is/18-010r7/18-010r7.html</uri>
+  <docidentifier type="OGC">18-010r7</docidentifier>
+  <date type="published">
+    <on>2019-08-13</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Roger Lott</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <edition>7</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">This Standard defines the structure and content of well-known text strings describing coordinate reference systems (CRSs) and coordinate operations between coordinate reference systems. It does not prescribe how implementations should read or write these strings.&#13;
+&#13;
+This Standard provides an updated version of WKT representation of coordinate reference systems that follows the provisions of ISO 19111:2019. It extends the WKT in OGC document 12-063r5 (ISO 19162) which was based on ISO 19111:2007 and ISO 19111-2:2009. That version consolidated several disparate versions of earlier WKT (so-called WKT1) and added the description of coordinate operations.&#13;
+&#13;
+This jointly developed draft has been submitted by ISO TC211 for circulation as a Draft International Standard (DIS). This version incorporates comments made during the ISO TC211 New Work Item Proposal acceptance ballot.</abstract>
+  <ext>
+    <doctype>standard</doctype>
+    <docsubtype>implementation</docsubtype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

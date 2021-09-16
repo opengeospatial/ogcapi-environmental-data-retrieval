@@ -1,0 +1,22 @@
+[bibliography]
+== References
+
+The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
+
+* [[[openapi,openapi]]] Open API Initiative: OpenAPI Specification 3.0.3, https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md[https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.3.md]
+* [[[rfc2616,rfc2616]]] Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, HTTP/1.1, https://tools.ietf.org/rfc/rfc2616.txt[https://tools.ietf.org/rfc/rfc2616.txt]
+* [[[rfc2818,rfc2818]]] Rescorla, E.: IETF RFC 2818, HTTP Over TLS, https://tools.ietf.org/rfc/rfc2818.txt[https://tools.ietf.org/rfc/rfc2818.txt]
+* [[[rfc3339,rfc3339]]] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, https://tools.ietf.org/rfc/rfc3339.txt[https://tools.ietf.org/rfc/rfc3339.txt]
+* [[[rfc3896,rfc3896]]] Berners-Lee, T., Fielding, R., Masinter, L: IETF RFC 3896, Uniform Resource Identifier (URI): Generic Syntax, https://tools.ietf.org/rfc/rfc3896.txt[https://tools.ietf.org/rfc/rfc3896.txt]
+* [[[rfc7946,rfc7946]]] Butler, H., Daly, M., Doyle, A., Gillies, S., Hagen, S., Schaub, T.: IETF RFC 7946, The GeoJSON Format, https://tools.ietf.org/rfc/rfc7946.txt[https://tools.ietf.org/rfc/rfc7946.txt]
+* [[[rfc8288,rfc8288]]] Nottingham, M.: IETF RFC 8288, Web Linking, https://tools.ietf.org/rfc/rfc8288.txt[https://tools.ietf.org/rfc/rfc8288.txt]
+* [[[rfc6570,rfc6570]]] Gregorio, J., Fielding, R., Hadley, M., Nottingham, M., Orchard, D.: IETF RFC 6570, URI Template, https://datatracker.ietf.org/doc/html/rfc6570[https://datatracker.ietf.org/doc/html/rfc6570]
+* [[[html5,html5]]] W3C: HTML5, W3C Recommendation, https://www.w3.org/TR/html5/[https://www.w3.org/TR/html5/]
+* [[[schema_org,schema_org]]]Schema.org: https://schema.org/docs/schemas.html[https://schema.org/docs/schemas.html]
+* [[[covjson,covjson]]] Blower, J., Riechert, M., Roberts, B.: Overview of the CoverageJSON format, https://www.w3.org/TR/covjson-overview/[https://www.w3.org/TR/covjson-overview/]
+* [[[rfc2413,rfc2413]]] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: IETF RFC 2413, Dublin Core Metadata for Resource Discovery, https://tools.ietf.org/rfc/rfc2413.txt[https://tools.ietf.org/rfc/rfc2413.txt]
+* [[[OGC06-103r4,OGC 06-103r4]]] Herring, J.: Simple Feature Access - Part 1: Common Architecture, http://portal.opengeospatial.org/files/?artifact_id=25355[http://portal.opengeospatial.org/files/?artifact_id=25355]
+* [[[OGC18-010r7,OGC 18-010r7]]] Lott, R.: Well-Known Text representation of Coordinate Reference Systems, http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[http://docs.opengeospatial.org/is/18-010r7/18-010r7.html]
+* [[[OGC17-069r3,OGC 17-069r3]]] Portele, C., Vretanos, P., Heazel, C.: OGC API - Features - Part 1: Core, http://www.opengis.net/doc/IS/ogcapi-features-1/1.0[http://www.opengis.net/doc/IS/ogcapi-features-1/1.0]
+* [[[OGC19-072,OGC 19-072]]] Heazel, C.: OGC API - Common - Part 1: Core (Draft). OGC 19-072, Open Geospatial Consortium, http://docs.ogc.org/DRAFTS/19-072.html[http://docs.ogc.org/DRAFTS/19-072.html]
+* [[[OGC20-024,OGC 20-024]]] Heazel, C.: OGC API - Common - Part 2: Geospatial Data (Draft). OGC 20-024, Open Geospatial Consortium, http://docs.ogc.org/DRAFTS/20-024.html[http://docs.ogc.org/DRAFTS/20-024.html]

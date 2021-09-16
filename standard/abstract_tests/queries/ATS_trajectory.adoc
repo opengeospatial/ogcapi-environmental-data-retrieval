@@ -1,0 +1,162 @@
+[[ats_trajectory]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query if no query parameters are specified.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. No query parameters are specified
+. Validate that a document was returned with a status code 400.
+|===
+
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter is not specified.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. coords query parameter is not specified
+. Validate that a document was returned with a status code 400.
+|===
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRING Well Known Text value.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Check coords query parameter is a valid Well Known Text Linestring value
+. Validate that a document was returned with a status code 400.
+|===
+
+
+
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGM Well Known Text value.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM value, the `M` coordinate must be a valid Epoch value (as known as UNIX time)
+. Validate that a document was returned with a status code 400.
+|===
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZ coordinate and the `z`query parameter is specified
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
+. Validate that a document was returned with a status code 400.
+|===
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZM coordinate and the `z`query parameter is specified
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
+. Validate that a document was returned with a status code 400.
+|===
+
+
+
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGZM Well Known Text value.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZM value, the `Z` coordinate must be a within the range of vertical levels advertised in the Collection metadata
+. Validate that a document was returned with a status code 400.
+|===
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGZ Well Known Text value.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ value, the `Z` coordinate must be a within the range of vertical levels advertised in the Collection metadata
+. Validate that a document was returned with a status code 400.
+|===
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter contains invalid time coordinates
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. If a time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata
+. Validate that a document was returned with a status code 400.
+|===
+
+
+
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/trajectory*
+^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Trajectory` query using  query parameters.
+^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
+^|Test Method |. Test with valid query parameters
+. Validate that a document was returned with a status code 200.
+
+Repeat these tests using the following parameter tests:
+
+*Coordinates*
+
+* Parameter <<req_edr_coords-definition,/req/edr/coords-definition>>
+* Response <<req_edr_coords-response,/req/edr/coords-response>>
+
+*VerticalLevel*
+
+* Parameter <<req_edr_z-definition,/req/edr/z-definition>>
+* Response <<req_edr_z-response,/req/edr/z-response>>
+
+*Parameters*
+
+* Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
+* Response <<req_edr_parameters-response,/req/edr/parameter-name-response>>
+
+*DateTime*
+
+* Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
+* Response <<req_core_rc-time-response,/req/core/datetime-response>>
+
+
+
+Execute requests with combinations of the "coords", "parameter-name","z","crs" and "f" query parameters
+and verify that only information that matches the selection criteria is returned.
+|===
+
+
+
+include::../collections/ATS_rc-coords-definition.adoc[]
+
+include::../collections/ATS_rc-coords-response.adoc[]
+
+
+
+include::../collections/ATS_rc-parameter-name-definition.adoc[]
+
+include::../collections/ATS_rc-parameter-name-response.adoc[]
+
+
+
+include::../collections/ATS_rc-crs-definition.adoc[]
+
+include::../collections/ATS_rc-crs-response.adoc[]
+
+
+
+include::../collections/ATS_rc-f-definition.adoc[]
+
+include::../collections/ATS_rc-f-response.adoc[]

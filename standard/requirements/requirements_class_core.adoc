@@ -1,0 +1,215 @@
+[[rc_core]]
+// *Requirements Class:* OGC API - Environmental Data Retrieval Core
+
+[%unnumbered]
+[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core;http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections"]
+.OGC API - Environmental Data Retrieval Core Requirements Class
+====
+
+// 1
+[requirement,type="general",label="/req/core/root-op"]
+======
+======
+
+// 2
+[requirement,type="general",label="/req/core/root-success"]
+======
+======
+
+// 3
+[requirement,type="general",label="/req/core/api-definition-op"]
+======
+======
+
+// 4
+[requirement,type="general",label="/req/core/api-definition-success"]
+======
+======
+
+// 5
+[requirement,type="general",label="/req/core/conformance"]
+======
+======
+
+// 6
+[requirement,type="general",label="/req/core/conformance-success"]
+======
+======
+
+// 7
+[requirement,type="general",label="/req/core/rc-bbox-definition"]
+======
+======
+
+// 8
+[requirement,type="general",label="/req/core/rc-bbox-response"]
+======
+======
+
+// 9
+[requirement,type="general",label="/req/edr/coords-definition"]
+======
+======
+
+// 10
+[requirement,type="general",label="/req/edr/coords-response"]
+======
+======
+
+// 11
+[requirement,type="general",label="/req/core/datetime-definition"]
+======
+======
+
+// 12
+[requirement,type="general",label="/req/core/datetime-response"]
+======
+======
+
+// 13
+[requirement,type="general",label="/req/edr/REQ_rc-parameter-name-definition"]
+======
+======
+
+// 14
+[requirement,type="general",label="/req/edr/parameter-name-response"]
+======
+======
+
+// 15
+[requirement,type="general",label="/req/edr/REQ_rc-crs-definition"]
+======
+======
+
+// 16
+[requirement,type="general",label="/req/edr/REQ_rc-crs-response"]
+======
+======
+
+// 17
+[requirement,type="general",label="/req/edr/rc-f-definition"]
+======
+======
+
+// 18
+[requirement,type="general",label="/req/edr/REQ_rc-f-response"]
+======
+======
+
+// 19
+[requirement,type="general",label="/req/edr/z-definition"]
+======
+======
+
+// 20
+[requirement,type="general",label="/req/edr/z-response"]
+======
+======
+
+// 21
+[requirement,type="general",label="/req/edr/within-definition"]
+======
+======
+
+// 22
+[requirement,type="general",label="/req/edr/REQ_rc-within-response"]
+======
+======
+
+// 23
+[requirement,type="general",label="/req/edr/within-units-definition"]
+======
+======
+
+// 24
+[requirement,type="general",label="/req/edr/REQ_rc-within-units-response"]
+======
+======
+
+// 25
+[requirement,type="general",label="/req/edr/resolution-x-definition"]
+======
+======
+
+// 26
+[requirement,type="general",label="/req/edr/resolution-x-response"]
+======
+======
+
+
+// 27
+[requirement,type="general",label="/req/edr/cube-z-response"]
+======
+======
+
+// 28
+[requirement,type="general",label="/req/edr/resolution-y-definition"]
+======
+======
+
+// 29
+[requirement,type="general",label="/req/edr/resolution-y-response"]
+======
+======
+
+// 30
+[requirement,type="general",label="/req/edr/resolution-z-definition"]
+======
+======
+
+// 31
+[requirement,type="general",label="/req/edr/resolution-z-response"]
+======
+======
+
+// 32
+[requirement,type="general",label="/req/edr/REQ_rc-corridor-height-definition"]
+======
+======
+
+// 33
+[requirement,type="general",label="/req/edr/REQ_rc-corridor-height-response"]
+======
+======
+
+// 34
+[requirement,type="general",label="/req/edr/REQ_rc-height-units-definition"]
+======
+======
+
+// 35
+[requirement,type="general",label="/req/edr/height-units-response"]
+======
+======
+
+// 36
+[requirement,type="general",label="/req/edr/corridor-width-definition"]
+======
+======
+
+// 37
+[requirement,type="general",label="/req/edr/REQ_rc-corridor-width-response"]
+======
+======
+
+// 38
+[requirement,type="general",label="/req/edr/REQ_rc-width-units-definition"]
+======
+======
+
+// 39
+[requirement,type="general",label="/req/edr/width-units-response"]
+======
+======
+
+// 40
+[requirement,type="general",label="/req/core/http"]
+======
+======
+
+// 41
+[requirement,type="general",label="/req/core/crs84"]
+======
+======
+
+====

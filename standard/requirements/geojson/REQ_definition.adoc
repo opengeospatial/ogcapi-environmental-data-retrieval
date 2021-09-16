@@ -1,0 +1,15 @@
+[[req_geojson_definition]]
+
+[requirement,type="general",id="/req/geojson/definition", label="/req/geojson/definition"]
+====
+*A:* 
+
+`200`-responses of the server SHALL support the following media types:
+
+
+
+* `application/geo+json` for resources that include feature content, and
+
+* `application/json` for all other resources.
+
+====

@@ -1,0 +1,20 @@
+[[req_core_api-definition-op]]
+
+[requirement,type="general",id="/req/core/api-definition-op", label="/req/core/api-definition-op"]
+====
+
+*A:*
+
+The server SHALL support the HTTP GET operation on all links from the landing page which have the relation type `service-desc`.
+
+---
+*B:*
+
+The server SHALL support the HTTP GET operation on all links from the landing page which have the relation type `service-doc`.
+
+---
+*C:*
+
+The responses to all HTTP GET requests issued in `A` and `B` SHALL satisfy requirement <<req_core_api-definition-success,/req/core/api-definition-success>>.
+
+====

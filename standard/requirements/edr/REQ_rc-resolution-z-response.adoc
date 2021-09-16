@@ -1,0 +1,32 @@
+[[req_edr_resolution-z-response]]
+==== *Requirement /req/edr/resolution-z-response* Parameter resolution-z response
+
+[requirement,type="general",id="/req/edr/resolution-z-response", label="/req/edr/resolution-z-response"]
+====
+
+*A:*
+
+If the `resolution-z` parameter is provided, it denotes the number of positions to retrieve data for, over the depth of the corridor path including its minimum and maximum width coordinates.
+
+
+image::images/REQ_rc-resolution-z-a.png[interpolated corridor example]
+
+---
+*B:*
+
+A `resolution-z` value of 0 SHALL return all available data at the stored vertical resolution between (and including) the minimum and maximum coordinates of the defined corridor.
+
+
+image::images/REQ_rc-resolution-z-b.png[native resolution corridor example]
+
+---
+*C:*
+
+If `resolution-z` is not specified the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.
+
+
+[source,txt]
+----
+resolution-z = number of intervals + 1
+----
+====

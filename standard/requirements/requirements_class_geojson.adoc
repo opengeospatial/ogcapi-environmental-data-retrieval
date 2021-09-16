@@ -1,0 +1,17 @@
+[[rc_geojson]]
+// *Requirements Class:* GeoJSON
+
+[%unnumbered]
+[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/geojson",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core"]
+.GeoJSON Requirements Class
+====
+
+[requirement,type="general",label="/req/geojson/content"]
+======
+======
+
+[requirement,type="general",label="/req/geojson/definition"]
+======
+======
+
+====

@@ -1,0 +1,11 @@
+// [[ats_collections_rc-parameter-name-response]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/edr/rc-parameter-name-response*
+^|Test Purpose |Validate that the parameter-name query parameters are processed correctly.
+^|Requirement |<<req_edr_parameters-response,/req/edr/parameter-name-response>>
+^|Test Method |. Verify that only resources for the requested parameters were included in the result set
+. Validate that the parameter-name parameter complies with the syntax described in <<req_edr_parameters-response,/req/edr/parameter-name-response>>.
+|===

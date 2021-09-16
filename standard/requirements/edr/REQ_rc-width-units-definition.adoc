@@ -1,0 +1,22 @@
+[[req_edr_width_units-definition]]
+==== *Requirement /req/edr/REQ_rc-width-units-definition* Parameter width-units definition
+
+[requirement,type="general",id="/req/edr/REQ_rc-width-units-definition", label="/req/edr/REQ_rc-width-units-definition"]
+====
+
+*A:*
+
+Each corridor resource collection operation SHALL support a parameter `width-units` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: width-units
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+====

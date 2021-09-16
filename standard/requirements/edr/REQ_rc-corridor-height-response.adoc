@@ -1,0 +1,32 @@
+[[req_edr_corridor-height-response]]
+==== *Requirement /req/edr/REQ_rc-corridor-height-response* Parameter corridor-height response
+
+[requirement,type="general",id="/req/edr/REQ_rc-corridor-height-response", label="/req/edr/REQ_rc-corridor-height-response"]
+====
+
+*A:*
+
+If the `corridor-height` parameter is defined the result set SHALL contain values derived from the chosen interpolation algorithm at the number of specifed intervals.
+
+
+
+[source,java]
+----
+corridor-height = height
+----
+---
+*B:*
+
+The height of corridor parameter is the total height of the required corridor.
+
+---
+*C:*
+
+The coordinates of the `coords` parameter define the centre point of the corridor.
+
+---
+*D:*
+
+If an unsupported units value is requested a `400` error should be returned.
+
+====

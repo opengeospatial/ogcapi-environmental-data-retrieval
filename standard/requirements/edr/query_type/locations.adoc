@@ -1,0 +1,41 @@
+===== Parameter locationId
+
+With the locations query a position is defined by a unique identifier that is a string value.  It can be anything as long as it is unique for the required position, for instance a http://en.wikipedia.org/wiki/Geohash[GeoHash] `gbsvn` or a World Meteorological Organization (WMO) station identifier like `03772`, or place name like `Devon`.  The metadata returned by the API must supply a geospatial definition for the identifier.
+
+
+.get a list of locationId's
+=================
+/collections/{collectionID}/locations/
+
+return a list of location identifiers and relevant metadata for the metar <<collection-definition,collection>>
+
+/collections/metar/locations/
+
+
+Valid locationId's can also be discovered via another mechanism such as the <<rc_items-section,items>> query.
+=================
+
+.locationId
+=================
+/collections/{collectionID}/locations/{locationId}
+
+return all available data for the metar <<collection-definition,collection>> for the requested location identifier, where the location is defined by the Heathrow METAR identifier
+
+/collections/metar/locations/EGLL
+=================
+
+===== *Parameter datetime*
+
+For Parameter datetime, see <<datetime>>.
+
+===== *Parameter parameter-name*
+
+For Parameter parameter-name, see <<parameter-name>>.
+
+===== *Parameter crs*
+
+For Parameter crs, see <<crs>>.
+
+===== *Parameter f*
+
+For Parameter f, see <<outputformat>>.

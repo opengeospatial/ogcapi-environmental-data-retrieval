@@ -1,6 +1,0 @@
-name: locationId
-in: path
-required: true
-description: Retreive data for the location defined by locationId (i.e. London_Heathrow, EGLL, 03772 etc)
-schema:
-    type: string

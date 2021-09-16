@@ -1,0 +1,7 @@
+[[rec_core_geojson]]
+[recommendation,type="general",id="/rec/core/geojson", label="/rec/core/geojson"]
+====
+*A:*
+
+If the resource can be represented for the intended use in GeoJSON, implementations SHOULD consider to support GeoJSON as an encoding.
+====

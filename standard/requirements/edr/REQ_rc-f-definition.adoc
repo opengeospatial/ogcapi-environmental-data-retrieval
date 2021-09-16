@@ -1,0 +1,22 @@
+[[req_edr_f-definition]]
+==== *Requirement /req/edr/rc-f-definition* Parameter `f` definition
+
+[requirement,type="general",id="/req/edr/rc-f-definition", label="/req/edr/rc-f-definition"]
+====
+
+*A:*
+
+Each resource collection operation SHALL support a parameter `f` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: f
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====

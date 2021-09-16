@@ -1,0 +1,22 @@
+[[req_edr_z-definition]]
+==== *Requirement /req/edr/z-definition* Parameter z definition
+
+[requirement,type="general",id="/req/edr/z-definition", label="/req/edr/z-definition"]
+====
+
+*A:*
+
+Each resource collection operation MAY support a parameter `z` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====

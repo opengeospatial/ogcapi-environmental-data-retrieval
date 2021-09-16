@@ -1,0 +1,7 @@
+[[rec_core_edr-geojson]]
+[recommendation,type="general",id="/rec/core/edr-geojson", label="/rec/core/edr-geojson"]
+====
+*A:*
+
+If a collection using other EDR queries uses the <<rc_items-section,`items`>> query, implementations SHOULD consider support for the EDR GeoJSON Schema as an encoding.
+====

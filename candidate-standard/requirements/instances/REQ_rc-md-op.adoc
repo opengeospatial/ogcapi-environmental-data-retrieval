@@ -1,6 +1,0 @@
-[[req_instances_rc-md-op]]
-==== *Requirement {counter:req-id}: /req/instances/rc-md-op*
-[width="90%",cols="2,6a"]
-|=== 
-^|A |The API MAY support the HTTP GET operation at the path `/collections/{collection_id}/instances`.
-|===

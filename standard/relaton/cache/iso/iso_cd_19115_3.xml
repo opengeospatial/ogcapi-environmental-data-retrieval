@@ -1,0 +1,97 @@
+<bibdata type="standard">
+  <fetched>2021-04-29</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Metadata</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 3: XML schema implementation for fundamental concepts</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Metadata - Part 3: XML schema implementation for fundamental concepts</title>
+  <uri type="src">https://www.iso.org/standard/80874.html</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/08/08/80874.detail.rss</uri>
+  <docidentifier type="ISO">ISO/CD 19115-3</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso-cd:19115:-3:stage-30.99:ed-1:en</docidentifier>
+  <docnumber>19115</docnumber>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <status>
+    <stage>30</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>unknown</from>
+    <owner>
+      <organization>
+        <name>ISO/CD</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="obsoletes">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/TS 19115-3:2016</formattedref>
+    </bibitem>
+  </relation>
+  <relation type="instance">
+    <bibitem type="standard">
+      <fetched>2021-04-29</fetched>
+      <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
+      <title type="title-main" format="text/plain" language="en" script="Latn">Metadata</title>
+      <title type="title-part" format="text/plain" language="en" script="Latn">Part 3: XML schema implementation for fundamental concepts</title>
+      <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Metadata - Part 3: XML schema implementation for fundamental concepts</title>
+      <uri type="src">https://www.iso.org/standard/80874.html</uri>
+      <uri type="rss">https://www.iso.org/contents/data/standard/08/08/80874.detail.rss</uri>
+      <docidentifier type="ISO">ISO/CD 19115-3</docidentifier>
+      <docidentifier type="URN">urn:iso:std:iso-cd:19115:-3:stage-30.99:ed-1:en</docidentifier>
+      <docnumber>19115</docnumber>
+      <contributor>
+        <role type="publisher"/>
+        <organization>
+          <name>International Organization for Standardization</name>
+          <abbreviation>ISO</abbreviation>
+          <uri>www.iso.org</uri>
+        </organization>
+      </contributor>
+      <edition>1</edition>
+      <language>en</language>
+      <script>Latn</script>
+      <status>
+        <stage>30</stage>
+        <substage>99</substage>
+      </status>
+      <copyright>
+        <from>unknown</from>
+        <owner>
+          <organization>
+            <name>ISO/CD</name>
+          </organization>
+        </owner>
+      </copyright>
+      <relation type="obsoletes">
+        <bibitem type="standard">
+          <formattedref format="text/plain">ISO/TS 19115-3:2016</formattedref>
+        </bibitem>
+      </relation>
+      <place>Geneva</place>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>international-standard</doctype>
+    <editorialgroup>
+      <technical-committee number="211" type="TC">ISO/TC 211Geographic information/Geomatics</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.240.70</code>
+      <text>IT applications in science</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO/CD 19115</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

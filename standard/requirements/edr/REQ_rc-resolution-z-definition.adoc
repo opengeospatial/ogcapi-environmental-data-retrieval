@@ -1,0 +1,22 @@
+[[req_edr_resolution-z-definition]]
+==== *Requirement /req/edr/resolution-z-definition* Parameter resolution-z definition
+
+[requirement,type="general",id="/req/edr/resolution-z-definition", label="/req/edr/resolution-z-definition"]
+====
+
+*A:*
+
+Each resource collection operation MAY support a parameter `resolution-z` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: resolution-z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====

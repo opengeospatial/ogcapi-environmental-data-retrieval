@@ -1,0 +1,19 @@
+[[ats_json]]
+[cols="1,4",width="90%"]
+.Conformance Class "JSON"
+|===
+2+|*Conformance Class*
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/json
+|Target type |Web API
+|Requirements Class |<<rc_json,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/json>>
+|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core>>
+|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json[http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/json]
+|===
+
+==== JSON Definition
+
+include::json/ATS_definition.adoc[]
+
+==== JSON Content
+
+include::json/ATS_content.adoc[]

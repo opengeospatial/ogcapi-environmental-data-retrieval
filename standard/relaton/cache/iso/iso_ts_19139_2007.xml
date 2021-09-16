@@ -1,0 +1,61 @@
+<bibdata type="standard">
+  <fetched>2021-04-29</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Metadata</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">XML schema implementation</title>
+  <title type="main" format="text/plain" language="en" script="Latn">Geographic information - Metadata - XML schema implementation</title>
+  <uri type="src">https://www.iso.org/standard/32557.html</uri>
+  <uri type="rss">https://www.iso.org/contents/data/standard/03/25/32557.detail.rss</uri>
+  <docidentifier type="ISO">ISO/TS 19139:2007</docidentifier>
+  <docidentifier type="URN">urn:iso:std:iso-ts:ts:19139:stage-95.99:ed-1:en</docidentifier>
+  <docnumber>19139</docnumber>
+  <date type="published">
+    <on>2007-04</on>
+  </date>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>International Organization for Standardization</name>
+      <abbreviation>ISO</abbreviation>
+      <uri>www.iso.org</uri>
+    </organization>
+  </contributor>
+  <edition>1</edition>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">ISO/TS 19139:2007 defines Geographic MetaData XML (gmd) encoding, an XML Schema implementation derived from ISO 19115.</abstract>
+  <status>
+    <stage>95</stage>
+    <substage>99</substage>
+  </status>
+  <copyright>
+    <from>2007</from>
+    <owner>
+      <organization>
+        <name>ISO/TS</name>
+      </organization>
+    </owner>
+  </copyright>
+  <relation type="updates">
+    <bibitem type="standard">
+      <formattedref format="text/plain">ISO/TS 19139-1:2019</formattedref>
+      <date type="circulated">
+        <on>2019-02-25</on>
+      </date>
+    </bibitem>
+  </relation>
+  <place>Geneva</place>
+  <ext>
+    <doctype>technical-specification</doctype>
+    <editorialgroup>
+      <technical-committee number="211" type="TC">ISO/TC 211Geographic information/Geomatics</technical-committee>
+    </editorialgroup>
+    <ics>
+      <code>35.240.70</code>
+      <text>IT applications in science</text>
+    </ics>
+    <structuredidentifier type="ISO">
+      <project-number>ISO/TS 19139</project-number>
+    </structuredidentifier>
+  </ext>
+</bibdata>

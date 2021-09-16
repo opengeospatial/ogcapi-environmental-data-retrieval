@@ -1,0 +1,61 @@
+[[req_edr_rc-collection-info]]
+
+[requirement,type="general",id="/req/edr/rc-collection-info", label="/req/edr/rc-collection-info"]
+====
+
+*A:*
+
+Every Collection within a collections array MUST have an unique (within the array) `id` parameter.
+
+---
+*B:*
+
+Every Collection within a collections array SHOULD have a `title` parameter.
+
+---
+*C:*
+
+Every Collection within a collections array SHOULD have a `description` parameter.
+
+---
+*D:*
+
+Every Collection within a collections array SHOULD have a `Keywords` parameter containing an array of values with describe the collection.
+
+---
+*E:*
+
+Every Collection within a collections array MUST have a `links` parameter which must comply with the requirement `/req/core/rc-collection-info-links`.
+
+---
+*F:*
+
+Every Collection within a collections array MUST have an `extent` parameter which must comply with the requirement `/req/core/rc-extent`.
+
+---
+*G:*
+
+Every Collection within a collections array MUST have a `crs` parameter which must comply with the requirement `/req/edr/rc-crs`.
+
+---
+*H:*
+
+Every Collection within a collections array MAY have a `distanceunits` parameter containing an array of supported distance units.
+
+---
+*I:*
+
+If the `links` parameter includes a link to a `Radius` query there MUST be a `distanceunits` parameter
+
+---
+*J:*
+
+Every Collection within a collections array MUST have an `f` parameter containing an array of values with describe the output formats supported by the collection.
+
+---
+*K:*
+
+Every Collection within a collections array MUST have an `parameters` parameter containing a list of parameters must comply with the requirement `/req/edr/rc-parameters`.
+
+
+====

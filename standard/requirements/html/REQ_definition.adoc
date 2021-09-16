@@ -1,0 +1,9 @@
+[[req_html_definition]] 
+
+[requirement,type="general",id="/req/html/definition", label="/req/html/definition"]
+====
+*A:* 
+
+Every `200`-response of an operation of the server SHALL support the media type `text/html`.
+
+====

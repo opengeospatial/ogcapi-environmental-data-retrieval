@@ -1,0 +1,51 @@
+[[req_edr_rc-parameters]]
+
+[requirement,type="general",id="/req/edr/rc-parameters", label="/req/edr/rc-parameters"]
+====
+
+*A:*
+
+A parameter object MAY have any number of members (name/value pairs).
+
+---
+*B:*
+
+A parameter object MUST have a member with the name "type" and the value "Parameter".
+
+---
+*C:*
+
+A parameter object MAY have a member with the name "id" where the value MUST be a string and SHOULD be a common identifier.
+
+---
+*D:*
+
+A parameter object MAY have a member with the name "label" where the value MUST be an i18n object that is the name of the parameter and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the "label" of the "observedProperty" member.
+
+---
+*E:*
+
+A parameter object MAY have a member with the name "description" where the value MUST be an i18n object which is a, perhaps lengthy, textual description of the parameter.
+
+---
+*F:*
+
+A parameter object MUST have a member with the name "observedProperty" where the value is an object which MUST have the members "label" and "id" and which MAY have the members "description", and "categories". The value of "label" MUST be an i18n object that is the name of the observed property and which SHOULD be short. The value of "id" MUST be a string and SHOULD be a common identifier. If given, the value of "description" MUST be an i18n object with a textual description of the observed property. If given, the value of "categories" MUST be a non-empty array of category objects. A category object MUST an "id" and a "label" member, and MAY have a "description" member. The value of "id" MUST be a valid URI string and SHOULD resolve to more detailed information. The value of "label" MUST be an i18n object of the name of the category and SHOULD be short. If given, the value of "description" MUST be an i18n object with a textual description of the category.
+
+---
+*G:*
+
+A parameter object MAY have a member with the name "categoryEncoding" where the value is an object where each key is equal to an "id" value of the "categories" array within the "observedProperty" member of the parameter object. There MUST be no duplicate keys. The value is either an integer or an array of integers where each integer MUST be unique within the object.
+
+---
+*H:*
+
+A parameter object MAY have a member with the name "unit" where the value is an object which MUST have either or both the members "label" or/and “symbol”, and which MAY have the member "id". If given, the value of "symbol" MUST either be a string of the symbolic notation of the unit, or an object with the members "value" and "type" where "value" is the symbolic unit notation and "type" references the unit serialization scheme that is used. "type" MUST HAVE the value "http://www.opengis.net/def/uom/UCUM/” if UCUM is used, or a custom value as recommended in section “Extensions”. If given, the value of "label" MUST be an i18n object of the name of the unit and SHOULD be short. If given, the value of "id" MUST be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
+
+---
+*I:*
+
+A parameter object MUST NOT have a "unit" member if the "observedProperty" member has a "categories" member.
+
+
+====

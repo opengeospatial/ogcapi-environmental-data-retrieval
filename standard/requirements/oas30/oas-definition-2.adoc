@@ -1,0 +1,10 @@
+[[req_oas30_oas-definition-2]]
+==== *Requirement /req/oas30/oas-definition-2* OpenAPI 3.0 conformance
+[requirement,type="general",id="/req/oas30/oas-definition-2", label="/req/oas30/oas-definition-2"]
+====
+
+*A:*
+
+The JSON representation SHALL conform to the <<OpenAPI,OpenAPI Specification, version 3.0>>.
+
+====

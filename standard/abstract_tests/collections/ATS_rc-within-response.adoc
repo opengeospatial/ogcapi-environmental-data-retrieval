@@ -1,0 +1,11 @@
+// [[ats_collections_rc-within-response]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/collections/REQ_rc-within-response*
+^|Test Purpose |Validate that the `within` query parameters are processed correctly.
+^|Requirement |<<req_collections_rc-within-response,/req/edr/REQ_rc-within-response>>
+^|Test Method |. Verify that if the `within-units` is not specified with the `within` parameter a `400` error message will be generated
+. Validate that the `within` parameter complies with the syntax described in <<req_collections_rc-within-response,/req/edr/REQ_rc-within-response>>.
+|===
