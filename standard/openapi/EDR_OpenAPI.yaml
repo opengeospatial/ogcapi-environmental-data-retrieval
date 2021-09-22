@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
   title: Environmental Data Retrieval API's
-  description: Example of Candidate Environmental Data Retrieval API OpenAPI docs
+  description: Example of Environmental Data Retrieval API OpenAPI docs
   version: 1.0.0
 servers:
   - url: 'http://www.example.org/edr'
