@@ -32,7 +32,7 @@ Sample requests:
 - Position queries:
   - Specific point, all parameters: https://demo.pygeoapi.io/master/collections/icoads-sst/position?f=json&coords=POINT(33%2033)
   - Specific point, sea surface temperature (SST): https://demo.pygeoapi.io/master/collections/icoads-sst/position?f=json&coords=POINT(33%2033)&parameter-name=SST
-  - Specific point, all parameters, temporal instant: https://demo.pygeoapi.io/master/collections/icoads-sst/position?f=json&coords=POINT(33%2033)&datetime=2000-01-16
+  - Specific point, all parameters, temporal instant: https://demo.pygeoapi.io/master/collections/icoads-sst/position?f=json&coords=POINT(33%2033)&datetime=2000-04-16
 
 More information about pygeoapi:
 - [GitHub repository](https://github.com/geopython/pygeoapi)
