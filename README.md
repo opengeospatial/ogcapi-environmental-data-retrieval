@@ -116,7 +116,7 @@ In December 2020, the OGC Technical Committee agreed, with no objections to unan
 
 On 28 April 2021, at 16:00 UTC, the standard started editing for publication as a formal standard.
 
-The [standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 Septmber 2021.
+The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 September 2021.
 
 ### Best Practice
 
