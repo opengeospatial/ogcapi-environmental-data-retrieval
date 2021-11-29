@@ -1,4 +1,4 @@
-# Candidate specification for the Environmental Data Retrieval API
+# OGC API - Environmental Data Retrieval
 
 [<img src="http://www.opengeospatial.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png" width="200"/>](https://www.opengeospatial.org)
 
