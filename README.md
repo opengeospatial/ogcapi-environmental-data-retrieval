@@ -4,7 +4,7 @@
 
 This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.opengeospatial.org/projects/groups/edr-apiswg).
 
-The **[OGC API - Environmental Data Retrieval](http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0)** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
+The **[OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr/)** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
 
 ### EDR API Collections
 As with other OGC APIs that include a `/collections` end point, EDR supports distribution of _collections_ of geospatial data in particular ways. An EDR collection can contain virtually any data about the natural or built environment that needs to be _sampled_ using a spatio-temporal query pattern. The following is a list of examples that illustrate what this environmental data sampling paradigm might entail.
