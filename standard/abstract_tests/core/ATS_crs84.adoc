@@ -4,8 +4,8 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/core/crs84*
-^|Test Purpose |Validate that all spatial geometries provided through the API are in the CRS84 spatial reference system unless otherwise requested by the client.
+^|Test Purpose |Validate that all spatial geometries provided through the API are in the `http://www.opengis.net/def/crs/OGC/1.3/CRS84` spatial reference system unless otherwise requested by the client.
 ^|Requirement |<<req_core_crs84,/req/core/crs84>>
-^|Test Method |. Do not specify a coordinate reference system in any request. All spatial data should be in the CRS84 reference system.
+^|Test Method |. Do not specify a coordinate reference system in any request. All spatial data should be in the `http://www.opengis.net/def/crs/OGC/1.3/CRS84` reference system.
 . Validate retrieved spatial data using the CRS84 reference system.
 |===
