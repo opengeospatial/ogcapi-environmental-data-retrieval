@@ -1090,7 +1090,7 @@ paths:
   /collections/{collectionId}/instances/{instanceId}/locations:
     get:
       tags:
-        - Instance metadata
+        - Instance data queries
       summary: List available location identifers for the instance
       description: List the locations available for the instance of the collection
       operationId: ListDataInstanceLocations
@@ -1194,8 +1194,6 @@ tags:
     description: Essential characteristics of the information available from the API.
   - name: Collection metadata
     description: Description of the information available from the collections
-  - name: Instance metadata
-    description: Description of the information available from instances of a collection
   - name: Collection data queries
     description: Data queries available.
   - name: Instance data queries
