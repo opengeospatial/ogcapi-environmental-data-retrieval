@@ -2,7 +2,7 @@ openapi: 3.0.3
 info:
   title: Environmental Data Retrieval API's
   description: Example of Environmental Data Retrieval API OpenAPI docs
-  version: 1.0.0
+  version: 1.0.1
 servers:
   - url: 'http://www.example.org/edr'
     description: ''
@@ -45,61 +45,6 @@ paths:
                 type: string
       parameters:
         - $ref: parameters/f.yaml
-  /groups:
-    get:
-      tags:
-        - Capabilities
-      summary: Provide a list of avialable data groups
-      operationId: listGroups
-      responses:
-        '200':
-          description: List the available data groups.
-          content:
-            application/json:
-              schema:
-                $ref: schemas/groups.yaml
-            text/html:
-              schema:
-                type: string
-        default:
-          description: An error occured.
-          content:
-            application/json:
-              schema:
-                $ref: schemas/exception.yaml
-            text/html:
-              schema:
-                type: string
-      parameters:
-        - $ref: parameters/f.yaml
-  /groups/{groupId}:
-    get:
-      tags:
-        - Capabilities
-      summary: List of links to information available in the group
-      operationId: groupInfomation
-      responses:
-        '200':
-          description: List of links to the data members of the group, these can either be other groups or collections.
-          content:
-            application/json:
-              schema:
-                $ref: schemas/groups.yaml
-            text/html:
-              schema:
-                type: string
-        default:
-          description: An error occured.
-          content:
-            application/json:
-              schema:
-                $ref: schemas/exception.yaml
-            text/html:
-              schema:
-                type: string
-    parameters:
-      - $ref: parameters/groupId.yaml
-      - $ref: parameters/f.yaml
   /collections:
     get:
       tags:
@@ -1145,7 +1090,7 @@ paths:
   /collections/{collectionId}/instances/{instanceId}/locations:
     get:
       tags:
-        - Instance metadata
+        - Instance data queries
       summary: List available location identifers for the instance
       description: List the locations available for the instance of the collection
       operationId: ListDataInstanceLocations
@@ -1249,8 +1194,6 @@ tags:
     description: Essential characteristics of the information available from the API.
   - name: Collection metadata
     description: Description of the information available from the collections
-  - name: Instance metadata
-    description: Description of the information available from instances of a collection
   - name: Collection data queries
     description: Data queries available.
   - name: Instance data queries
