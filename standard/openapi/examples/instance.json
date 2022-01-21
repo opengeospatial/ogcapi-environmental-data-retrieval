@@ -81,16 +81,19 @@
             ],
             "extent": {
                 "spatial": {
-                    "bbox": [
+                    "bbox": [[
                         -15.0,
                         48.0,
                         5.0,
                         62.0
-                    ],
+                    ]],
                     "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                 },
                 "temporal": {
                     "interval": [
+                        ["2020-06-30T06:00:00Z","2020-07-04T21:00:00Z"]
+                    ],
+                    "values": [
                         "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
@@ -451,16 +454,19 @@
             ],
             "extent": {
                 "spatial": {
-                    "bbox": [
+                    "bbox": [[
                         -15.0,
                         48.0,
                         5.0,
                         62.0
-                    ],
+                    ]],
                     "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                 },
                 "temporal": {
                     "interval": [
+                        ["2020-06-30T06:00:00Z","2020-07-04T21:00:00Z"]
+                    ],
+                    "values": [
                         "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
@@ -821,17 +827,20 @@
             ],
             "extent": {
                 "spatial": {
-                    "bbox": [
+                    "bbox": [[
                         -15.0,
                         48.0,
                         5.0,
                         62.0
-                    ],
+                    ]],
                     "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                 },
                 "temporal": {
                     "interval": [
-                        "2020-06-30T03:00:00Z/2020-07-04T21:00:00Z"
+                        ["2020-06-30T06:00:00Z","2020-07-04T21:00:00Z"]
+                    ],
+                    "values": [
+                        "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
                 }
@@ -1191,17 +1200,20 @@
             ],
             "extent": {
                 "spatial": {
-                    "bbox": [
+                    "bbox": [[
                         -15.0,
                         48.0,
                         5.0,
                         62.0
-                    ],
+                    ]],
                     "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
                 },
                 "temporal": {
                     "interval": [
-                        "2020-06-30T03:00:00Z/2020-07-04T21:00:00Z"
+                        ["2020-06-30T06:00:00Z","2020-07-04T21:00:00Z"]
+                    ],
+                    "values": [
+                        "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
                 }

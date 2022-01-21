@@ -40,11 +40,23 @@ Gregorian calendar).
       "title": "Latest",
       "description": "GFS parameters based on heights above ground level from the latest model run",
       "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
-        "vertical": ["2.0","10.0","80.0"]
-      },
-  
+        "spatial": {
+            "bbox": [[
+                -15.0,
+                48.0,
+                5.0,
+                62.0
+            ]],
+            "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+        },
+        "temporal": {
+            "interval" :[["2020-02-01T12:00:00Z","2020-02-12T00:00:00Z"]], 
+            "values" :[ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ]
+        },
+        "vertical": {
+          "interval": [["2.0","80.0"]],
+          "values": ["2.0","10.0","80.0"]}
+      },  
       "links": [
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/latest",
           "rel": "describedBy", "type": "application/json",
@@ -68,9 +80,22 @@ Gregorian calendar).
       "title": "2020-02-01T12:00:00Z",
       "description": "GFS parameters based on heights above ground level from the 2020-02-01T12:00:00Z run",
       "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ],
-        "vertical": ["2.0","10.0","80.0"]
+        "spatial": {
+            "bbox": [[
+                -15.0,
+                48.0,
+                5.0,
+                62.0
+            ]],
+            "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+        },
+        "temporal": {
+            "interval" :[["2020-02-01T12:00:00Z","2020-02-12T00:00:00Z"]], 
+            "values" :[ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ]
+        },
+        "vertical": {
+          "interval": [["2.0","80.0"]],
+          "values": ["2.0","10.0","80.0"]}
       },
       "links": [
         { "href": "http://data.example.org/collections/gfs_time-height_above_ground-lat-lon/instances/2020-02-01T12:00:00Z",
@@ -96,9 +121,22 @@ Gregorian calendar).
       "title": "2020-02-01T00:00:00Z",
       "description": "GFS parameters based on heights above ground level from the 2020-02-01T00:00:00Z run",
       "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ],
-        "temporal": [ "2020-02-01T00:00:00Z/2020-02-11T12:00:00Z" ],
-        "vertical": ["2.0","10.0","80.0"]
+        "spatial": {
+            "bbox": [[
+                -15.0,
+                48.0,
+                5.0,
+                62.0
+            ]],
+            "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+        },
+        "temporal": {
+            "interval" :[["2020-02-01T12:00:00Z","2020-02-12T00:00:00Z"]], 
+            "values" :[ "2020-02-01T12:00:00Z/2020-02-12T00:00:00Z" ]
+        },
+        "vertical": {
+          "interval": [["2.0","80.0"]],
+          "values": ["2.0","10.0","80.0"]}
       },
       "dataDetails": {
           "@context": {
