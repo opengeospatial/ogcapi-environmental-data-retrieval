@@ -95,13 +95,8 @@ properties:
 
           In the Core this is the only supported coordinate reference system.
 
-          Extensions may support additional coordinate reference systems and add
-
-          additional enum values.
+          Extensions may support additional coordinate reference systems 
         type: string
-        enum:
-          - GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
-            84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]
         default: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
           84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]
       name:
@@ -131,11 +126,11 @@ properties:
             format: date-time
             nullable: true
           example:
-            - "2020-11-12T12:15Z","2020-11-12T12:15Z"
-            - "2020-11-12T12:15Z","2020-11-12T12:45Z"
-            - "2022-01-14T09:00Z","2022-01-15T09:00Z"
-            - "2022-01-14T09:00Z","2022-01-14T21:00Z"
-            - "2022-01-14T09:00Z","2022-01-16T09:00Z"
+            - ["2020-11-12T12:15Z","2020-11-12T12:15Z"]
+            - ["2020-11-12T12:15Z","2020-11-12T12:45Z"]
+            - ["2022-01-14T09:00Z","2022-01-15T09:00Z"]
+            - ["2022-01-14T09:00Z","2022-01-14T21:00Z"]
+            - ["2022-01-14T09:00Z","2022-01-16T09:00Z"]
 
       values:
         description: |-
@@ -148,17 +143,16 @@ properties:
         type: array
         minItems: 1
         items:
-          description: |-
           type: string
           minItems: 1
           format: date-time
           nullable: true
           example:
-            - "2020-11-12T12:15Z"
-            - "2020-11-12T12:15Z","2020-11-12T12:30Z","2020-11-12T12:45Z"
-            - "R12/2022-01-14T09:00Z/2022-01-15T09:00Z"
-            - "R12/2022-01-14T09:00Z/PT1H"
-            - "R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"
+            - ["2020-11-12T12:15Z"]
+            - ["2020-11-12T12:15Z","2020-11-12T12:30Z","2020-11-12T12:45Z"]
+            - ["R12/2022-01-14T09:00Z/2022-01-15T09:00Z"]
+            - ["R12/2022-01-14T09:00Z/PT1H"]
+            - ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
 
       trs:
         description: >-
@@ -168,9 +162,7 @@ properties:
 
           In the Core this is the only supported temporal coordinate reference system.
 
-          Extensions may support additional temporal coordinate reference systems and add
-
-          additional enum values.
+          Extensions may support additional temporal coordinate reference systems 
         type: string
         example: TIMECRS["DateTime",TDATUM["Gregorian Calendar"],CS[TemporalDateTime,1],AXIS["Time (T)",future]
         default: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
@@ -207,7 +199,7 @@ properties:
             type: string
             nullable: true
           example:
-            - "2","100"
+            - ["2","100"]
       values:
         description: |-
           Vertical level intervals that data in the collection is available at 
@@ -222,9 +214,9 @@ properties:
           type: string
           nullable: true
           example:
-            - "2/100"
-            - "R50/1000/-50"
-            - "2","10","80", "100"
+            - ["2/100"]
+            - ["R50/1000/-50"]
+            - ["2","10","80", "100"]
       vrs:
         description: |-
           Coordinate reference system of the coordinates in the vertical extent
