@@ -20,3 +20,8 @@ properties:
         anyOf:
           - type: number
           - type: string
+          - type: array
+            items:
+              anyOf:
+                - type: string
+                - type: array

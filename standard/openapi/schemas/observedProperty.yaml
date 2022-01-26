@@ -12,7 +12,14 @@ properties:
       the observed property
     type: string
   label:
-    type: string
+    anyOf:
+      - type: string
+      - type: object
+        required:
+         - en
+        properties:
+          en:
+            type: string
   description:
     type: string
   categories:
@@ -32,9 +39,23 @@ properties:
             the observed property
           type: string
         label:
-          type: string
+          anyOf:
+            - type: string
+            - type: object
+              required:
+              - en
+              properties:
+                en:
+                  type: string
         description:
-          type: string
+          anyOf:
+            - type: string
+            - type: object
+              required:
+              - en
+              properties:
+                en:
+                  type: string
 example:
   id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
   label: Sea Ice Concentration

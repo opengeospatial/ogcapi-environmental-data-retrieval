@@ -10,7 +10,14 @@ properties:
     enum:
       - Parameter
   description:
-    type: string
+    anyOf:
+      - type: string
+      - type: object
+        required:
+        - en
+        properties:
+          en:
+            type: string
   label:
     type: string
   data-type:

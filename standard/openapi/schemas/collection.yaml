@@ -3,7 +3,7 @@ required:
   - links
   - id
   - extent
-  - parameter-names
+  - parameter_names
 properties:
   links:
     type: array
