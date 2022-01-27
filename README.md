@@ -118,6 +118,8 @@ On 28 April 2021, at 16:00 UTC, the standard started editing for publication as 
 
 The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 September 2021.
 
+The Working Group is now developing a Corrigendum and future enhancements.
+
 ### Best Practice
 
 * [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html) - No Content yet
