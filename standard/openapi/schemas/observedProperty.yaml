@@ -1,61 +1,26 @@
 type: object
-title: name of property
-description: Description of the property
-required:
-  - label
+description: A definition of the quantity being measured.
 properties:
   id:
-    description: >-
-      URI linking to an external registry which contains the definitive
-      definition of
-
-      the observed property
     type: string
   label:
-    anyOf:
-      - type: string
-      - type: object
-        required:
-         - en
-        properties:
-          en:
-            type: string
+    $ref: i18n.yaml
   description:
-    type: string
+    $ref: i18n.yaml
   categories:
     type: array
     items:
-      minItems: 1
       type: object
+      properties:
+        id:
+          type: string
+        label:
+          $ref: i18n.yaml
+        description:
+          $ref: i18n.yaml
       required:
         - id
         - label
-      properties:
-        id:
-          description: >-
-            URI linking to an external registry which contains the definitive
-            definition of
-
-            the observed property
-          type: string
-        label:
-          anyOf:
-            - type: string
-            - type: object
-              required:
-              - en
-              properties:
-                en:
-                  type: string
-        description:
-          anyOf:
-            - type: string
-            - type: object
-              required:
-              - en
-              properties:
-                en:
-                  type: string
-example:
-  id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
-  label: Sea Ice Concentration
+    minItems: 1
+required:
+  - label

@@ -1,0 +1,8 @@
+description: Validates any axis
+if:
+  required:
+    - values
+then:
+  $ref: valuesAxis.yaml
+else:
+  $ref: numericRegularlySpacedAxis.yaml

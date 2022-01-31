@@ -1,0 +1,14 @@
+description: A regularly-spaced numeric axis
+properties:
+  start:
+    type: number
+  stop:
+    type: number
+  num:
+    type: integer
+    minimum: 1
+required:
+  - start
+  - stop
+  - num
+additionalProperties: false
