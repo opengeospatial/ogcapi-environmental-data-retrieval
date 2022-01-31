@@ -7,6 +7,9 @@
 ^|Test Purpose |Verify the content of an EDR GeoJSON document given an input document and schema.
 ^|Requirement |<<req_edr-geojson_content,/req/edr-geojson/content>>
 ^|Test Method |. Validate that the document is an EDR GeoJSON document.
-. Validate the document against the schema using an JSON Schema validator.
-. Validate the document against the schema using an EDR GeoJSON Schema validator.
+. Validate the document against one of the EDR GeoJSON schemas:
+    * FeatureCollection: link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/edrFeatureCollectionGeoJSON.yaml[edrFeatureCollectionGeoJSON.yaml] 
+    * Feature: link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/featureGeoJSON.yaml[featureGeoJSON.yaml] 
+    * GeometryCollection: link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/geometrycollectionGeoJSON.yaml[geometrycollectionGeoJSON.yaml] using a JSON Schema validator.
+
 |===
