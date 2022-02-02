@@ -150,7 +150,7 @@ The temporal object describes the time period covered by the information availab
 .Temporal Object
 |==========================
 |Field Name|Type|Required|Description
-|**interval**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings, each member of the the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
+|**interval**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings, each member of the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
 |**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
