@@ -3,5 +3,6 @@
 ====
 *A:*
 
-If a collection using other EDR queries uses the <<rc_items-section,`items`>> query, implementations SHOULD consider support for the EDR GeoJSON Schema as an encoding.
+If a collection using other EDR queries uses the <<rc_items-section,`items`>> query, implementations SHOULD consider support for the http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/edrFeatureCollectionGeoJSON.yaml[EDR GeoJSON Schema] as an encoding.
+
 ====

@@ -83,7 +83,7 @@ The Master Branch is the latest draft of the standard, currently V1.0.1, and is 
 
 ### Implementations
 
-Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/deployments.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept".
+Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/deployments.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept". There are other implementations in development but not yet public.
 
 ### Development Guidelines
 
@@ -117,6 +117,8 @@ In December 2020, the OGC Technical Committee agreed, with no objections to unan
 On 28 April 2021, at 16:00 UTC, the standard started editing for publication as a formal standard.
 
 The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 September 2021.
+
+The Working Group is now developing a Corrigendum and future enhancements.
 
 ### Best Practice
 
