@@ -150,7 +150,8 @@ The temporal object describes the time period covered by the information availab
 .Temporal Object
 |==========================
 |Field Name|Type|Required|Description
-|**interval**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings, each member of the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
+|**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601) 
+|**values**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
 |**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
@@ -162,7 +163,8 @@ The vertical object describes the vertical extent of information available in th
 .Vertical Object
 |==========================
 |Field Name|Type|Required|Description
-|**interval**  | String Array|**Yes**| Array of height values supported by the collection.
+|**interval**  | String Array|**Yes**| Array of level values array, each Level value Array should contain two values first being the minimum vertical level and second the maximum vertical level for information in the collection
+|**values**  | String Array|**Yes**| Array of height values supported by the collection.
 |**vrs**     |String|**Yes**|  Follows the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
@@ -171,7 +173,7 @@ A simple extent object example for collection with no vertical or temporal dimen
 ----
 "extent": {
     "spatial": {
-        "bbox": [1393.0196, 13494.9764, 671196.3657, 1230275.0454],
+        "bbox": [[1393.0196, 13494.9764, 671196.3657, 1230275.0454]],
         "crs": "PROJCS[\"OSGB 1936 / British National Grid\",
         GEOGCS[\"OSGB 1936\",DATUM[\"OSGB_1936\",
         SPHEROID[\"Airy 1830\",6377563.396,299.3249646,
@@ -195,7 +197,7 @@ This more complex extent object example is a collection with vertical and tempor
 ----
 "extent": {
     "spatial": {
-        "bbox": [-180.0,-90.0,180.0,90.0],
+        "bbox": [[-180.0,-90.0,180.0,90.0]],
         "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",
         SPHEROID[\"WGS 84\",6378137,298.257223563,
         AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],
@@ -204,13 +206,15 @@ This more complex extent object example is a collection with vertical and tempor
         AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
     },
     "temporal": {
-        "interval": ["R82/2021-04-22T00:00:00Z/PT3H",
-                    "R11/2021-05-02T12:00:00Z/PT12H"],
+        "interval": [["2021-04-22T00:00:00Z","2021-05-03T12:00:00Z"]],
+        "values": ["R82/2021-04-22T00:00:00Z/PT3H",
+                    "R2/2021-05-02T12:00:00Z/PT12H"],
         "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],
                 CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
     },
     "vertical": {
-        "interval": ["1829.0","2743.0","3658.0"],
+        "interval": [["1829.0","3658.0"]],
+        "values": ["1829.0","2743.0","3658.0"],
         "vrs": "VERT_CS['MSL height',
                 VERT_DATUM['Mean Sea Level',2005,
                 AUTHORITY['EPSG','5100']],

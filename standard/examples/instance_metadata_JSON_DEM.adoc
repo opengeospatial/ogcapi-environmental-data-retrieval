@@ -31,7 +31,15 @@ Gregorian calendar).
       "title": "data",
       "description": "Global Digital Elevation Model height data",
       "extent": {
-        "spatial": [ -180.0, -89.9, 180, 89.9 ]
+          "spatial": {
+              "bbox": [[
+                  -15.0,
+                  48.0,
+                  5.0,
+                  62.0
+              ]],
+              "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+          }
       },     
       "links": [
         { "href": "https://data.example.org/collection/dem/link-for-more-details",
