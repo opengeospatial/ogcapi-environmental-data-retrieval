@@ -17,19 +17,19 @@ There are also links to the license information for the observation and forecast
 {
     "links": [
         {
-            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/",
+            "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/",
             "hreflang": "en",
             "rel": "self",
             "type": "application/json"
         },
         {
-            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/?f=html",
+            "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/?f=html",
             "hreflang": "en",
             "rel": "alternate",
             "type": "text/html"
         },
         {
-            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/?f=xml",
+            "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/?f=xml",
             "hreflang": "en",
             "rel": "alternate",
             "type": "application/xml"
@@ -75,19 +75,19 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z",
                     "hreflang": "en",
                     "rel": "self",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=html",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=xml",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=xml",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "application/xml"
@@ -117,7 +117,7 @@ There are also links to the license information for the observation and forecast
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -145,7 +145,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "radius": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -177,7 +177,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "area": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -205,7 +205,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "locations": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -244,7 +244,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://http://www.example.org/edr/metadata/units/degree"
+                            "type": "http://www.example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -263,7 +263,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -282,7 +282,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -301,7 +301,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -320,7 +320,7 @@ There are also links to the license information for the observation and forecast
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -339,7 +339,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -358,7 +358,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -377,7 +377,7 @@ There are also links to the license information for the observation and forecast
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -396,7 +396,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -415,7 +415,7 @@ There are also links to the license information for the observation and forecast
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
@@ -447,19 +447,19 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z",
                     "hreflang": "en",
                     "rel": "self",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=html",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=xml",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=xml",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "application/xml"
@@ -488,7 +488,7 @@ There are also links to the license information for the observation and forecast
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -515,7 +515,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "radius": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -547,7 +547,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "area": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -576,7 +576,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "locations": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -615,7 +615,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://http://www.example.org/edr/metadata/units/degree"
+                            "type": "http://www.example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -634,7 +634,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -653,7 +653,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -672,7 +672,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -691,7 +691,7 @@ There are also links to the license information for the observation and forecast
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -710,7 +710,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -729,7 +729,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -748,7 +748,7 @@ There are also links to the license information for the observation and forecast
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -767,7 +767,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -786,7 +786,7 @@ There are also links to the license information for the observation and forecast
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
@@ -818,19 +818,19 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z",
                     "hreflang": "en",
                     "rel": "self",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z?f=html",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z?f=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z?f=xml",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z?f=xml",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "application/xml"
@@ -859,7 +859,7 @@ There are also links to the license information for the observation and forecast
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -886,7 +886,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "radius": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -918,7 +918,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "area": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -947,7 +947,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "locations": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -986,7 +986,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://http://www.example.org/edr/metadata/units/degree"
+                            "type": "http://www.example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -1005,7 +1005,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1024,7 +1024,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1043,7 +1043,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1062,7 +1062,7 @@ There are also links to the license information for the observation and forecast
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -1081,7 +1081,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1100,7 +1100,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1119,7 +1119,7 @@ There are also links to the license information for the observation and forecast
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -1138,7 +1138,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1157,7 +1157,7 @@ There are also links to the license information for the observation and forecast
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
@@ -1189,19 +1189,19 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z",
                     "hreflang": "en",
                     "rel": "self",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z?f=html",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z?f=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z?f=xml",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z?f=xml",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "application/xml"
@@ -1230,7 +1230,7 @@ There are also links to the license information for the observation and forecast
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1257,7 +1257,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "radius": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1289,7 +1289,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "area": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1317,7 +1317,7 @@ There are also links to the license information for the observation and forecast
                 },
                 "locations": {
                     "link": {
-                        "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -1356,7 +1356,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://http://www.example.org/edr/metadata/units/degree"
+                            "type": "http://www.example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -1375,7 +1375,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1394,7 +1394,7 @@ There are also links to the license information for the observation and forecast
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://http://www.example.org/edr/metadata/units/mph"
+                            "type": "http://www.example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1413,7 +1413,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1432,7 +1432,7 @@ There are also links to the license information for the observation and forecast
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -1451,7 +1451,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1470,7 +1470,7 @@ There are also links to the license information for the observation and forecast
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://http://www.example.org/edr/metadata/units/degC"
+                            "type": "http://www.example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1489,7 +1489,7 @@ There are also links to the license information for the observation and forecast
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -1508,7 +1508,7 @@ There are also links to the license information for the observation and forecast
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://http://www.example.org/edr/metadata/units/percent"
+                            "type": "http://www.example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1527,7 +1527,7 @@ There are also links to the license information for the observation and forecast
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
