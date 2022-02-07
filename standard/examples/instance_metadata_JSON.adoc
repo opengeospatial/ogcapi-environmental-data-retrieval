@@ -23,13 +23,13 @@ There are also links to the license information for the observation and forecast
             "type": "application/json"
         },
         {
-            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/",
+            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/?f=html",
             "hreflang": "en",
             "rel": "alternate",
             "type": "text/html"
         },
         {
-            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/",
+            "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/?f=xml",
             "hreflang": "en",
             "rel": "alternate",
             "type": "application/xml"
@@ -75,25 +75,24 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "self",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=html",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=xml",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "application/xml"
                 }
+                
             ],
             "extent": {
                 "spatial": {
@@ -448,24 +447,22 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "self",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=html",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=xml",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "application/xml"
                 }
             ],
             "extent": {
@@ -821,24 +818,22 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "self",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z?f=html",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z?f=xml",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "application/xml"
                 }
             ],
             "extent": {
@@ -1194,24 +1189,22 @@ There are also links to the license information for the observation and forecast
             ],
             "links": [
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "self",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z?f=html",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 },
                 {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
+                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z?f=xml",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "application/xml"
                 }
             ],
             "extent": {
