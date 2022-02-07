@@ -5,7 +5,7 @@ required:
 properties:
   href:
     type: string
-    example: http://data.example.com/collections/monitoringsites/locations/1234
+    example: http://data.example.com/collections/monitoringsites/cube
   rel:
     type: string
     example: alternate
@@ -23,3 +23,5 @@ properties:
   templated:
     description: defines if the link href value is a template with values requiring replacement 
     type: boolean
+  variables:
+    $ref: cubeDataQuery.yaml

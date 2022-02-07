@@ -13,10 +13,8 @@ properties:
     oneOf:
       - type: string
       - type: object
-        required:
-        - en
-        properties:
-          en:
+        patternProperties:
+          ".+":
             type: string
   label:
     type: string
@@ -32,12 +30,15 @@ properties:
     $ref: observedPropertyCollection.yaml
   categoryEncoding:
     type: object
-    additionalProperties:
-      oneOf:
-        - type: integer
-        - type: array
-          items:
-            type: integer
+    patternProperties:
+      ".+" :
+        oneOf:
+          - type: integer
+          - type: array
+            items:
+              type: integer
+            minItems: 1
+            uniqueItems: true
   extent:
     $ref: extent.yaml
   id:

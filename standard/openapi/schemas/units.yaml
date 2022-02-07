@@ -1,21 +1,24 @@
 type: object
 title: unit name
-description: definition of data units with allows plain strings as well as i18n values
-oneOf:
+description: definition of data units
+anyOf:   
   - required:
       - label
   - required:
+      - symbol
+  - required:
+      - label
       - symbol
 properties:
   label:
     oneOf:
       - type: object
-        properties:
-          en:
+        patternProperties:
+          ".+":
             type: string
       - type: string
   symbol:
-    title: Decribe unit symbol
+    title: Describe unit symbol
     oneOf:
       - type: object
         description: Information about the symbol used to describe the units
