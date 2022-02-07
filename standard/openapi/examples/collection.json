@@ -58,6 +58,7 @@
                 {
                     "href": "http://www.example.org/edr/collections/hrly_obs?f=json",
                     "hreflang": "en",
+                    "rel": "collection",
                     "type": "application/json"
                 },
                 {
@@ -449,6 +450,7 @@
                 {
                     "href": "http://www.example.org/edr/collections/3_hrly_fcst?f=json",
                     "hreflang": "en",
+                    "rel": "collection",
                     "type": "application/json"
                 },
                 {
