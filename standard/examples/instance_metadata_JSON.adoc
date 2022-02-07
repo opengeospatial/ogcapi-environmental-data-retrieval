@@ -35,21 +35,21 @@ There are also links to the license information for the observation and forecast
             "type": "application/xml"
         },
         {
-            "href": "https://http://www.example.org/terms-and-conditions---datapoint#termsofservice",
+            "href": "http://www.example.org/terms-and-conditions---datapoint#termsofservice",
             "hreflang": "en",
             "rel": "restrictions",
             "type": "text/html",
             "title": ""
         },
         {
-            "href": "https://http://www.example.org/terms-and-conditions---datapoint#datalicence",
+            "href": "http://www.example.org/terms-and-conditions---datapoint#datalicence",
             "hreflang": "en",
             "rel": "license",
             "type": "text/html",
             "title": ""
         },
         {
-            "href": "https://http://www.example.org/uk-3-hourly-site-specific-forecast",
+            "href": "http://www.example.org/uk-3-hourly-site-specific-forecast",
             "hreflang": "en",
             "rel": "service-doc",
             "type": "text/html",
