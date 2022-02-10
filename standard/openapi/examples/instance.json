@@ -19,21 +19,21 @@
             "type": "application/xml"
         },
         {
-            "href": "https://http://www.example.org/terms-and-conditions---datapoint#termsofservice",
+            "href": "https://www.example.org/terms-and-conditions---datapoint#termsofservice",
             "hreflang": "en",
             "rel": "restrictions",
             "type": "text/html",
             "title": ""
         },
         {
-            "href": "https://http://www.example.org/terms-and-conditions---datapoint#datalicence",
+            "href": "https://www.example.org/terms-and-conditions---datapoint#datalicence",
             "hreflang": "en",
             "rel": "license",
             "type": "text/html",
             "title": ""
         },
         {
-            "href": "https://http://www.example.org/uk-3-hourly-site-specific-forecast",
+            "href": "https://www.example.org/uk-3-hourly-site-specific-forecast",
             "hreflang": "en",
             "rel": "service-doc",
             "type": "text/html",
@@ -59,24 +59,16 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=json",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "collection",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Zf=html",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 }
             ],
             "extent": {
@@ -432,24 +424,16 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=json",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "collection",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Zf=html",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 }
             ],
             "extent": {
@@ -475,7 +459,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -502,7 +486,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -534,7 +518,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -563,7 +547,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -805,24 +789,16 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Zf=json",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "collection",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Zf=html",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 }
             ],
             "extent": {
@@ -848,7 +824,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -875,7 +851,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -907,7 +883,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -936,7 +912,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -1178,24 +1154,16 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Zf=json",
                     "hreflang": "en",
-                    "rel": "data"
+                    "rel": "collection",
+                    "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius",
+                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Zf=html",
                     "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
-                    "hreflang": "en",
-                    "rel": "data"
+                    "rel": "alternate",
+                    "type": "text/html"
                 }
             ],
             "extent": {
@@ -1221,7 +1189,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1248,7 +1216,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1280,7 +1248,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1308,7 +1276,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,

@@ -64,30 +64,11 @@ There are also links to the license information for the observation and forecast
                     "type": "text/html"
                 },
                 {
-                    "href": "https://www.metoffice.gov.uk/services/data/datapoint/terms-and-conditions---datapoint#termsofservice",
+                    "href": "https://www.example.org/services/data/
+                    terms-and-conditions---datapoint#termsofservice",
                     "hreflang": "en",
                     "rel": "restrictions",
                     "type": "text/html"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/position",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/radius",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/area",
-                    "hreflang": "en",
-                    "rel": "data"
-                },
-                {
-                    "href": "http://www.example.org/edr/collections/hrly_obs/locations",
-                    "hreflang": "en",
-                    "rel": "data"
                 }
             ],
             "extent": {
