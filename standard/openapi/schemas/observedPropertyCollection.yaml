@@ -1,6 +1,6 @@
 type: object
 title: name of property
-description: Description of the property which allows plain strings as well as i18n values
+description: Description of the property
 required:
   - label
 properties:
@@ -17,8 +17,8 @@ properties:
       - type: object
         required:
          - en
-        properties:
-          en:
+        patternProperties:
+          ".+":
             type: string
   description:
     type: string
@@ -44,8 +44,8 @@ properties:
             - type: object
               required:
               - en
-              properties:
-                en:
+              patternProperties:
+                ".+":
                   type: string
         description:
           oneOf:

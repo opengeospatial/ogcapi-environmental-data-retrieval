@@ -67,42 +67,42 @@ properties:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: positionLink.yaml
       radius:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: radiusLink.yaml
       area:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: areaLink.yaml
       cube:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: cubeLink.yaml
       trajectory:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: trajectoryLink.yaml
       corridor:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: corridorLink.yaml
       locations:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: locationsLink.yaml
       items:
         type: object
         properties:
           link:
-            $ref: link.yaml
+            $ref: itemsLink.yaml
   crs:
     description: list of the coordinate reference systems the collection results can support
     type: array

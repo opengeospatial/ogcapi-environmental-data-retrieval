@@ -1,0 +1,8 @@
+allOf:
+  - $ref: link.yaml
+properties:
+  href:
+    type: string
+    example: http://data.example.com/collections/monitoringsites/corridor
+  variables:
+    $ref: corridorDataQuery.yaml
