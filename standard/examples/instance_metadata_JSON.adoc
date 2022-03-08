@@ -229,7 +229,7 @@ There are also links to the license information for the observation and forecast
                 }
             },
             "crs": [
-                "CRS84"
+                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -600,7 +600,7 @@ There are also links to the license information for the observation and forecast
                 }
             },
             "crs": [
-                "CRS84"
+                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -971,7 +971,7 @@ There are also links to the license information for the observation and forecast
                 }
             },
             "crs": [
-                "CRS84"
+                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -1341,7 +1341,7 @@ There are also links to the license information for the observation and forecast
                 }
             },
             "crs": [
-                "CRS84"
+                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
