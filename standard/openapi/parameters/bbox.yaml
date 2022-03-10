@@ -26,11 +26,13 @@ required: false
 schema:
   type: array
   oneOf:
-  - minItems: 4
-    maxItems: 4
-  - minItems: 6
-    maxItems: 6
-  items:
-    type: number
+  - items:
+      minItems: 4
+      maxItems: 4
+      type: number
+  - items:
+      minItems: 6
+      maxItems: 6
+      type: number
 style: form
 explode: false
