@@ -24,15 +24,16 @@ description: |-
   the extent or all relevant geometries.
 required: false
 schema:
-  type: array
   oneOf:
-  - items:
-      minItems: 4
-      maxItems: 4
-      type: number
-  - items:
-      minItems: 6
-      maxItems: 6
-      type: number
+    - items:
+        minItems: 4
+        maxItems: 4
+        type: number
+      type: array  
+    - items:
+        minItems: 6
+        maxItems: 6
+        type: number
+      type: array  
 style: form
 explode: false
