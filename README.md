@@ -85,19 +85,18 @@ The Master Branch is the latest draft of the standard, currently V1.0.1, and is 
 
 An OGC API-EDR conformance test suite is being developed so that implementations can be formally certified as conforming to the standard, if so desired.
 
-The [Executable Test Suite (ETS) of OGC API - EDR](http://cite.opengeospatial.org/te2/) is at beta version, second revision.
+The [Executable Test Suite (ETS) of OGC API - EDR](http://cite.opengeospatial.org/te2/) is at Beta version, second revision.
 
-Implementers should first focus on passing the Core conformance class, as the minimum needed to apply for certification. The first three implementations to pass the compliance testing and certification procedure, while the test is in beta, will have the annual certification fee waived for the first year.
+Implementers should first focus on passing the Core conformance class, as the minimum needed to apply for certification. The first three implementations to pass the compliance testing and certification procedure, while the test is in Beta, will have the annual certification fee waived for the first year.
 
 If you encounter any bugs, please [log the issues](https://github.com/opengeospatial/ets-ogcapi-edr10/issues). 
 
-There are three apporaches to testing:
+There are three approaches to testing:
 * Option 1: Run the ETS on the [Beta OGC Validator](http://cite.opengeospatial.org/te2/).
 
 * Option 2: Run the ETS through `docker` by executing this command: `docker run -p 8081:8080 ogccite/ets-ogcapi-edr10`
 
-* Option 3: Use the ETS from within an IDE such as Eclipse or IntelliJ. There is a [Maven project](https://github.com/opengeospatial/ets-ogcapi-edr10). If you are planning to use an IDE for testing, as we can arrange a brief telecon to help you set up your environment.
-
+* Option 3: Use the ETS from within an IDE such as Eclipse or IntelliJ. There is a [Maven project](https://github.com/opengeospatial/ets-ogcapi-edr10). If you are planning to use an IDE for testing, we can arrange a brief telecon to help you set up your environment.
 
 ### Implementations
 
