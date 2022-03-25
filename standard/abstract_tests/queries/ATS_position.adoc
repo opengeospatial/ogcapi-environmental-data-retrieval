@@ -25,9 +25,9 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/position*
-^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter does not contain a valid POINT Well Known Text value.
+^|Test Purpose |Validate that an error is returned by a `Position` query when the coords query parameter does not contain a valid POINT or MULTIPOINT Well Known Text value.
 ^|Requirement |<<_req_queries_position,/req/queries/position>>
-^|Test Method |. Check coords query parameter is a valid Well Known Text Point value
+^|Test Method |. Check coords query parameter is a valid Well Known Text Point or MultiPoint value
 . Validate that a document was returned with a status code 400.
 |===
 
