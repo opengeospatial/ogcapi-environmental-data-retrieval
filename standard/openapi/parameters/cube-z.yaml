@@ -2,7 +2,9 @@ name: z
 in: query
 description: |+
     Define the vertical levels to return data from 
-
+    
+    The value will override any vertical values defined in the BBOX query parameter 
+    
     A range to return data for all levels between and including 2 defined levels
 
     i.e. z=minimum value/maximum value
