@@ -15,15 +15,6 @@ properties:
     type: string
     enum: [position]
     example: position
-  coords:
-    description:  Well Known Text Point which describes the required position
-    type: object
-    properties:
-      description:
-        type: string
-      type:
-        type: string
-    example: POINT(0 51.48)
   output_formats:
     description: list of output formats supported by the Position query
     type: array
