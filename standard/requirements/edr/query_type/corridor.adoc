@@ -13,6 +13,9 @@ The corridor query supports the Linestring Well Known Text (WKT) geometry type, 
 A 2D corridor, on the surface of earth with no time or vertical dimensions:
     coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)
 
+A 2D corridor with mutiple segments, on the surface of earth with no time or vertical dimensions:
+    coords=MULTILINESTRING((-3.53 50.72,-3.35 50.92),(-3.11 51.02,-2.85 51.42,-2.59 51.46))
+
 A 2D corridor, on the surface of earth all at the same time and no vertical dimension, time value defined in ISO8601 format by the `datetime` query parameter :
     coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&datetime=2018-02-12T23:00:00Z
 
