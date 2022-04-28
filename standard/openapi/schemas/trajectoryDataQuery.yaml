@@ -15,23 +15,6 @@ properties:
     type: string
     enum: [trajectory]
     example: trajectory
-  coords:
-    description: Definition of the trajectory as Well Known Text 
-      LineString for A 2D trajectory, on the surface of earth with no time or vertical dimensions (these can be specified for the whole trajectory using datetime and z query parameters), 
-      LineStringM A 3D trajectory, on the surface of the earth but over a range of time values with no height values (the z query parameter can specify a the height data for all points in the trajectory)
-      LineStringZ A 3D trajectory, through a 3D volume with vertical height or depth (the datetime query parameter can specify a the time data for all points in the trajectory)
-      LineStringZM A 4D trajectory, over a range of height and time values 
-    type: object
-    properties:
-      description:
-        type: string
-      type:
-        type: string
-    example:
-      - LINESTRING(-3.53 50.72, -3.35 50.92, -3.11 51.02, -2.85 51.42, -2.59 51.46)
-      - LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)
-      - LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)
-      - LINESTRINGZM(-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11 51.02 0.3 1560510600,-2.85 51.42 0.4 1560513600,-2.59 51.46 0.5 1560515400)
   output_formats:
     description: list of ouputformats supported by the Trajectory query
     type: array

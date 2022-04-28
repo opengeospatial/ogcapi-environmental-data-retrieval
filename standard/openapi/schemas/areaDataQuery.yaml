@@ -15,16 +15,6 @@ properties:
     type: string
     enum: [area]
     example: area
-  coords:
-    description: Well Known Text Polygon which describes the bounds of the area
-    type: object
-    properties:
-      description:
-        type: string
-      type:
-        type: string
-    example:
-      POLYGON((-110.055 42.288,-111.109 35.596,-96.699 32.982,-97.050 42.158,-110.055 42.288))
   height_units:
     description: list of height distance units distance values can be specified in
     type: array

@@ -15,15 +15,6 @@ properties:
     type: string
     enum: [radius]
     example: radius
-  coords:
-    description: Well Known Text Point which describes the center position of the circular area to retrieve data for
-    type: object
-    properties:
-      description:
-        type: string
-      type:
-        type: string
-    example:  POINT(149.127 -35.293)
   within_units:
     description: list of distance units radius values can be specified in
     type: array
