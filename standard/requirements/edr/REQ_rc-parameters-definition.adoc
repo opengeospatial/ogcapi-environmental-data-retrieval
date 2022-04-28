@@ -13,7 +13,7 @@ Each resource collection operation SHALL support a parameter `parameter-name` wi
 ----
 name: parameter-name
 in: query
-required: true
+required: false
 explode: false
 schema:
     minItems: 1
