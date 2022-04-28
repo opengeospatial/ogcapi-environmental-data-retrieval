@@ -33,12 +33,12 @@ The bounding box is provided as four or six numbers, depending on whether the co
 ---
 *E:*
 
-The bounding box SHALL consist of four numbers and the coordinate reference system of the values SHALL be interpreted as the coordinate reference system that is specified in a parameter `crs`.
+The bounding box SHALL consist of four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth) and the coordinate reference system of the values SHALL be interpreted as the coordinate reference system that is specified in a parameter `crs`.
 
 ---
 *F:*
 
-If the `crs` query parameter **is not** defined, the bounding box SHALL consist of four numbers and the coordinate reference system of the values SHALL be interpreted as the default coordinate reference system specified for the query type.
+If the `crs` query parameter **is not** defined, the bounding box SHALL consist of four or six numbers, depending on whether the coordinate reference system includes a vertical axis (height or depth) and the coordinate reference system of the values SHALL be interpreted as the default coordinate reference system specified for the query type.
 
 ---
 *G:*

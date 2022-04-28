@@ -15,50 +15,45 @@ The parameter `collectionId` is each `id` property in the collections response (
 ---
 *C:*
 
-A `cube` GET operation MUST include a `coords` query parameter
+A `cube` GET operation MUST include a `bbox` query parameter
 
 ---
 *D:*
 
-If the `coords` query parameter is not specified a HTTP `400` error should be generated
+A The `bbox` query parameter SHOULD only consist of four values, any vertical values defined by `bbox` will be overridden by the values assigned to the `z` query parameter
 
 ---
 *E:*
 
-A `cube` GET operation MUST include a `min-z` query parameter
+If the `bbox` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *F:*
 
-If the `min-z` query parameter is not specified a HTTP `400` error should be generated
+A `cube` GET operation MUST include a `z` query parameter
 
 ---
 *G:*
 
-A `cube` GET operation MUST include a `max-z` query parameter
+If the `z` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *H:*
 
-If the `max-z` query parameter is not specified a HTTP `400` error should be generated
+A `cube` GET operation SHOULD include a `parameter-name` query parameter
 
 ---
 *I:*
 
-A `cube` GET operation SHOULD include a `parameter-name` query parameter
+A `cube` GET operation MAY include a `datetime` query parameter
 
 ---
 *J:*
 
-A `cube` GET operation MAY include a `datetime` query parameter
-
----
-*K:*
-
 A `cube` GET operation SHOULD include a `crs` query parameter
 
 ---
-*L:*
+*K:*
 
 A `cube` GET operation SHOULD include a `f` query parameter
 
