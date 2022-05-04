@@ -91,7 +91,7 @@
                     "values": [
                         "2020-04-19T11:00:00Z/2020-06-30T09:00:00Z"
                     ],
-                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
             "data_queries" : {
@@ -488,7 +488,7 @@
                     "values": [
                         "2020-04-19T11:00:00Z/2020-06-30T09:00:00Z"
                     ],
-                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
             "crs": [

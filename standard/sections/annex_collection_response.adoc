@@ -210,7 +210,7 @@ This more complex extent object example is a collection with vertical and tempor
         "values": ["R82/2021-04-22T00:00:00Z/PT3H",
                     "R2/2021-05-02T12:00:00Z/PT12H"],
         "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],
-                CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
     },
     "vertical": {
         "interval": [["1829.0","3658.0"]],
