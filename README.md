@@ -18,7 +18,7 @@ As with other OGC APIs that include a `/collections` end point, EDR supports dis
 EDR aims to specify the minimum yet sufficient diversity in metadata, query patterns, and response formats to enable this wide range of environmental data retrieval applications.
 
 ### EDR API Query Patterns
-The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. Each of these patterns is optional, but a compliant API should implement at least one of them. 
+The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. Each of these patterns is optional, but a compliant API should implement at least one of them.
 
 The main patterns are:
 - **1 - Position**: Retrieve data for point/position for several parameters at a time instant, or as a timeseries, or as a vertical profile for a time instant.
@@ -37,7 +37,7 @@ These patterns would be accessed through endpoints like:
 ```
 There are also other variants of these query patterns to make the API easier and more convenient to use. These are:
 
-- **4 - Radius**: Retrieve data within a specified horizontal radius of a point/position 
+- **4 - Radius**: Retrieve data within a specified horizontal radius of a point/position
 
 - **5 - Cube**: Retrieve data within a specified 2D, 3D, or 4D bounding box. This is just a restricted special case of a polygon.
 
@@ -49,7 +49,7 @@ There are also other variants of these query patterns to make the API easier and
 
 ### EDR API Vision
 
-The Environmental Data Retrieval (EDR) API can be considered both a 'simple' API and a 'convenience' API. 
+The Environmental Data Retrieval (EDR) API can be considered both a 'simple' API and a 'convenience' API.
 
 It is considered a 'simple' API because:
 * From an implementation viewpoint, the specification encourages a 'core' plus 'plug-in' framework;
@@ -78,7 +78,7 @@ The standard is in the V1.0.0 Branch.
 
 The Master Branch is the latest draft of the standard, currently V1.0.1, and is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
 
-* [OGC API - Environmental Data Retrieval Standard](http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0)
+* [OGC API - Environmental Data Retrieval Standard, version 1.0.0](http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0)
 * DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
 
 ### Conformance Test Suite
@@ -89,7 +89,7 @@ The [Executable Test Suite (ETS) of OGC API - EDR](http://cite.opengeospatial.or
 
 Implementers should first focus on passing the Core conformance class, as the minimum needed to apply for certification. The first three implementations to pass the compliance testing and certification procedure, while the test is in Beta, will have the annual certification fee waived for the first year.
 
-If you encounter any bugs, please [log the issues](https://github.com/opengeospatial/ets-ogcapi-edr10/issues). 
+If you encounter any bugs, please [log the issues](https://github.com/opengeospatial/ets-ogcapi-edr10/issues).
 
 There are three approaches to testing:
 * Option 1: Run the ETS on the [Beta OGC Validator](http://cite.opengeospatial.org/te2/).
@@ -117,13 +117,13 @@ Longer term work is being recorded [here](https://github.com/opengeospatial/ogca
 ### EDR API Standard Working Group
 
 The repository contains:
-  
+
 - [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
 - [Standard document, as a work-in-progress draft](./standard_template/standard).
 
 The charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
 
-The repository also contains the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) of meetings on the associated Wiki pages. 
+The repository also contains the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) of meetings on the associated Wiki pages.
 
 **The public comment period on the EDR API closed 28th September 2020.** [Go here for more information.](https://www.ogc.org/standards/requests/215)
 
