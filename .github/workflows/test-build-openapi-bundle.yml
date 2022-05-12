@@ -26,5 +26,5 @@ jobs:
     - name: Generate OpenAPI bundle
       run: |
         cd standard/openapi
-        swagger-cli bundle -o /ogcapi-environmental-data-retrieval-1.bundled.json /ogcapi-environmental-data-retrieval-1.yaml
+        swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
 
