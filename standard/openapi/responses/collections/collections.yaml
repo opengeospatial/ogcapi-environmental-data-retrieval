@@ -1,0 +1,8 @@
+description: Metadata about the Environmental data collections shared by this API
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/collections/collections.yaml
+  text/html:
+    schema:
+      type: string

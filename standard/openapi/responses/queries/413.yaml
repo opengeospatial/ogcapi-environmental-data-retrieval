@@ -1,0 +1,6 @@
+description: Requested data volume to large to be handled by this service.
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/core/exception.yaml
+  text/xml: {}

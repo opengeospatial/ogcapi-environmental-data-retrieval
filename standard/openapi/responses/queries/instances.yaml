@@ -1,0 +1,8 @@
+description: Metadata about the instance of {collectionId} collection shared by this API
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/queries/instances.yaml
+  text/html:
+    schema:
+      type: string

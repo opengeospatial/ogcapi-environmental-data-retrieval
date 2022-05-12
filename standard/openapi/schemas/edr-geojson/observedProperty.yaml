@@ -1,0 +1,26 @@
+type: object
+description: A definition of the quantity being measured.
+properties:
+  id:
+    type: string
+  label:
+    $ref: ../i18n.yaml
+  description:
+    $ref: ../i18n.yaml
+  categories:
+    type: array
+    items:
+      type: object
+      properties:
+        id:
+          type: string
+        label:
+          $ref: ../i18n.yaml
+        description:
+          $ref: ../i18n.yaml
+      required:
+        - id
+        - label
+    minItems: 1
+required:
+  - label
