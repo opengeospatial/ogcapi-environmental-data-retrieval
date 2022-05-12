@@ -1,0 +1,15 @@
+# Collection
+get:
+  tags:
+    - Collection metadata
+  summary: List query types supported by the collection
+  description: This will provide information about the query types that are supported by the chosen collection Use content negotiation to request HTML or JSON
+  operationId: getQueries
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    200:
+      $ref: ../../responses/collections/collection.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

@@ -1,0 +1,7 @@
+description: List of pre-existing items available for retrieval
+content:
+  application/geo+json:
+    schema:
+      $ref: ../../schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml
+  application/json: {}
+  text/xml: {}

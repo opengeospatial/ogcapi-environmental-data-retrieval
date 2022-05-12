@@ -1,0 +1,29 @@
+type: object
+required:
+  - type
+  - geometry
+  - properties
+properties:
+  type:
+    type: string
+    enum:
+      - Feature
+  geometry:
+    oneOf:
+      - $ref: pointGeoJSON.yaml
+      - $ref: multipointGeoJSON.yaml
+      - $ref: linestringGeoJSON.yaml
+      - $ref: multilinestringGeoJSON.yaml
+      - $ref: polygonGeoJSON.yaml
+      - $ref: multipolygonGeoJSON.yaml
+      - $ref: geometrycollectionGeoJSON.yaml
+  properties:
+    $ref: ../edr-geojson/edrProperties.yaml
+  id:
+    oneOf:
+      - type: string
+      - type: integer
+  links:
+    type: array
+    items:
+      $ref: ../core/link.yaml

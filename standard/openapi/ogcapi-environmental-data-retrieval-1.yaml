@@ -1,0 +1,73 @@
+openapi: 3.0.3
+info:
+  title: OGC API - Environmental Data Retrieval Standard
+  description: Example of OGC API - Environmental Data Retrieval Standard OpenAPI document
+  version: 1.0.1
+  contact:
+    name: Tom Kralidis
+    email: tomkralidis@gmail.com
+  license:
+    name: OGC License
+    url: 'https://www.ogc.org/legal'
+servers:
+  - url: 'https://www.example.org/edr'
+    description: Example OGC API - Environmental Data Retrieval server
+tags:
+  - name: Capabilities
+    description: Essential characteristics of the information available from the API.
+  - name: Collection metadata
+    description: Description of the information available from the collections
+  - name: Collection data queries
+    description: Data queries available.
+  - name: Instance data queries
+    description: Data queries available on instances of the collection.
+paths:
+  # OGC API - Environmental Data Retrieval: Core
+  /:
+    $ref: paths/core/landingPage.yaml
+  /conformance:
+    $ref: paths/core/conformance.yaml
+  # OGC API - Environmental Data Retrieval: Collections
+  /collections:
+    $ref: paths/collections/collections.yaml
+  /collections/{collectionId}:
+    $ref: paths/collections/collection.yaml
+  # OGC API - Environmental Data Retrieval: Queries
+  /collections/{collectionId}/position:
+    $ref: paths/queries/position.yaml
+  /collections/{collectionId}/radius:
+    $ref: paths/queries/radius.yaml
+  /collections/{collectionId}/area:
+    $ref: paths/queries/area.yaml
+  /collections/{collectionId}/cube:
+    $ref: paths/queries/cube.yaml
+  /collections/{collectionId}/trajectory:
+    $ref: paths/queries/trajectory.yaml
+  /collections/{collectionId}/corridor:
+    $ref: paths/queries/corridor.yaml
+  /collections/{collectionId}/items:
+    $ref: paths/queries/items.yaml
+  /collections/{collectionId}/items/{itemId}:
+    $ref: paths/queries/item.yaml
+  /collections/{collectionId}/instances:
+    $ref: paths/queries/instances.yaml
+  /collections/{collectionId}/instances/{instanceId}/position:
+    $ref: paths/queries/instance-position.yaml
+  /collections/{collectionId}/instances/{instanceId}/radius:
+    $ref: paths/queries/instance-radius.yaml
+  /collections/{collectionId}/instances/{instanceId}/area:
+    $ref: paths/queries/instance-area.yaml
+  /collections/{collectionId}/instances/{instanceId}/cube:
+    $ref: paths/queries/instance-cube.yaml
+  /collections/{collectionId}/instances/{instanceId}/trajectory:
+    $ref: paths/queries/instance-trajectory.yaml
+  /collections/{collectionId}/instances/{instanceId}/corridor:
+    $ref: paths/queries/instance-corridor.yaml
+  /collections/{collectionId}/locations:
+    $ref: paths/queries/locations.yaml
+  /collections/{collectionId}/locations/{locId}:
+    $ref: paths/queries/location.yaml
+  /collections/{collectionId}/instances/{instanceId}/locations:
+    $ref: paths/queries/instance-locations.yaml
+  /collections/{collectionId}/instances/{instanceId}/locations/{locId}:
+    $ref: paths/queries/instance-location.yaml

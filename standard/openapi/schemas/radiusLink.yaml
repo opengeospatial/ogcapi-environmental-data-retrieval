@@ -1,8 +1,0 @@
-allOf:
-  - $ref: link.yaml
-properties:
-  href:
-    type: string
-    example: http://data.example.com/collections/monitoringsites/radius
-  variables:
-    $ref: radiusDataQuery.yaml
