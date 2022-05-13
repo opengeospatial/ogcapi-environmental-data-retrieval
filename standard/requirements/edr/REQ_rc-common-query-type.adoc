@@ -1,0 +1,37 @@
+[[req_edr_rc-common-query-type]]
+
+[requirement,type="general",id="/req/edr/rc-common-query-type", label="/req/edr/rc-common-query-type"]
+====
+
+*A:*
+
+A `data_queries` object MUST include a `link` property
+
+---
+*A:*
+
+A `link` property MUST include a `href` property
+
+---
+*B:*
+
+A `link` property MUST include a `rel` property
+
+---
+*C:*
+
+A `link` property MUST include a `variables` property 
+
+---
+*C:*
+
+. if the attribute type is `position` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the query type is `radius` verify the `variables` property complies with  <<ats_edr_rc-radius-variables,/req/edr/rc-radius-variables>>
+. if the attribute type is `area` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the attribute type is `cube` verify the `variables` property complies with <<ats_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
+. if the attribute type is `trajectory` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the attribute type is `corridor` verify the `variables` property complies with <<ats_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
+. if the attribute type is `items` verify the `variables` property complies with  <<ats_edr_rc-items-variables,/req/edr/rc-items-variables>>
+. if the attribute type is `locations` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+
+====

@@ -1,0 +1,15 @@
+[[req_edr_rc-radius-variables]]
+
+[requirement,type="general",id="/req/edr/rc-radius-variables", label="/req/edr/rc-radius-variables"]
+====
+
+*A:*
+
+A `variables` property MUST  comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*B:*
+
+A `variables` property MUST include a `within_units` property which MUST be a string array
+
+====

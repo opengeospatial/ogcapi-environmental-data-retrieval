@@ -1,0 +1,21 @@
+[[ats_edr_rc-data-queries]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/edr/rc-data-queries*
+^|Test Purpose |Validate that the data_queries section in the collection is correctly defined.
+^|Requirement |<<req_edr_rc-data-queries,/req/edr/rc-data-queries>>
+^|Test Method a|. Verify that at least one of the following data query types are defined in the data query section: 
+* position
+* radius
+* area
+* cube
+* trajectory
+* corridor
+* items
+* locations
+
+    
+. verify that all query types defined comply with <<ats_edr_rc-common_query_type,/req/edr/rc-common_query_type>>
+|===

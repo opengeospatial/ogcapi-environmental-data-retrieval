@@ -52,6 +52,19 @@ include::collections/ATS_rc-collection-info.adoc[]
 include::collections/ATS_rc-md-collection-info-table.adoc[]
 
 
+include::collections/ATS_rc-data_queries.adoc[]
+
+include::collections/ATS_rc-common_query_type.adoc[]
+
+include::collections/ATS_rc-common-variables.adoc[]
+
+include::collections/ATS_rc-radius-variables.adoc[]
+
+include::collections/ATS_rc-cube-variables.adoc[]
+
+include::collections/ATS_rc-corridor-variables.adoc[]
+
+include::collections/ATS_rc-items-variables.adoc[]
 
 include::collections/ATS_rc-md-query-links.adoc[]
 

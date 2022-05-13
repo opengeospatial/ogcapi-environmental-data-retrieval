@@ -1,0 +1,15 @@
+[[req_edr_rc-cube-variables]]
+
+[requirement,type="general",id="/req/edr/rc-cube-variables", label="/req/edr/rc-cube-variables"]
+====
+
+*A:*
+
+A cube `data_queries` object `variables` property MUST  comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*B:*
+
+A cube `data_queries` object `variables` property MUST include a `height_units` property which MUST be a string array
+
+====
