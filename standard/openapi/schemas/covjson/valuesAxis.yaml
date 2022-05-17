@@ -1,24 +1,6 @@
 description: Validates any values-based axis
-allOf:
+oneOf:
   - $ref: valuesAxisBase.yaml
-  - if:
-      not:
-        required:
-          - dataType
-    then:
-      $ref: primitiveValuesAxis.yaml
-dependentSchemas:
-  dataType:
-    allOf:
-      - if:
-          properties:
-            dataType:
-              const: tuple
-        then:
-          $ref: tupleValuesAxis.yaml
-      - if:
-          properties:
-            dataType:
-              const: polygon
-        then:
-          $ref: polygonValuesAxis.yaml
+  - $ref: primitiveValuesAxis.yaml
+  - $ref: tupleValuesAxis.yaml
+  - $ref: polygonValuesAxis.yaml

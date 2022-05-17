@@ -11,12 +11,8 @@ anyOf:
       - symbol
 properties:
   label:
-    oneOf:
-      - type: object
-        patternProperties:
-          ".+":
-            type: string
-      - type: string
+    additionalProperties:
+      type: string
   symbol:
     title: Describe unit symbol
     oneOf:

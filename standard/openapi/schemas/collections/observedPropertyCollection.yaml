@@ -15,11 +15,6 @@ properties:
     oneOf:
       - type: string
       - type: object
-        required:
-         - en
-        patternProperties:
-          ".+":
-            type: string
   description:
     type: string
   categories:
@@ -42,11 +37,6 @@ properties:
           oneOf:
             - type: string
             - type: object
-              required:
-              - en
-              patternProperties:
-                ".+":
-                  type: string
         description:
           oneOf:
             - type: string

@@ -1,8 +1,4 @@
 description: Simple axis with numeric values
-if:
-  required:
-    - values
-then:
-  $ref: numericValuesAxis.yaml
-else:
-  $ref: numericRegularlySpacedAxis.yaml
+oneOf:
+  - $ref: numericValuesAxis.yaml
+  - $ref: numericRegularlySpacedAxis.yaml

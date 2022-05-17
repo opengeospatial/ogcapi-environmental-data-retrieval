@@ -3,7 +3,8 @@ allOf:
   - $ref: valuesAxisBase.yaml
   - properties:
       dataType:
-        const: polygon
+        enum: 
+          - polygon
       values:
         items:
           description: A GeoJSON polygon

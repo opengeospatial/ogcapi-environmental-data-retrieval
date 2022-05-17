@@ -3,7 +3,8 @@ description: Object representing a multidimensional (>= 0D) array with named
   axes, encoded as a flat one-dimensional array in row-major order
 properties:
   type:
-    const: NdArray
+    enum: 
+      - NdArray
   dataType:
     enum:
       - float
@@ -20,65 +21,35 @@ properties:
     uniqueItems: true
   values:
     type: array
+    items:
+      type: number
+      nullable: true
+
     minItems: 1
-allOf:
-  - if:
-      properties:
-        dataType:
-          const: float
-    then:
-      properties:
-        values:
-          items:
-            type:
-              - number
-              - "null"
-  - if:
-      properties:
-        dataType:
-          const: integer
-    then:
-      properties:
-        values:
-          items:
-            type:
-              - integer
-              - "null"
-  - if:
-      properties:
-        dataType:
-          const: string
-    then:
-      properties:
-        values:
-          items:
-            type:
-              - string
-              - "null"
-  - if:
-      anyOf:
-        - properties:
-            values:
-              minItems: 2
-        - properties:
-            shape:
-              minItems: 1
-          required:
-            - shape
-        - properties:
-            axisNames:
-              minItems: 1
-          required:
-            - axisNames
-    then:
-      properties:
-        shape:
-          minItems: 1
-        axisNames:
-          minItems: 1
-      required:
-        - shape
-        - axisNames
+oneOf:
+  - properties:
+      values:
+        items:
+          type: number
+        nullable: true
+  - properties:
+      values:
+        items:
+          type: integer
+        nullable: true
+  - properties:
+      values:
+        items:
+          type: string
+        nullable: true
+  - properties:
+      shape:
+        minItems: 1
+      axisNames:
+        minItems: 1
+    required:
+      - shape
+      - axisNames
 required:
   - type
   - dataType

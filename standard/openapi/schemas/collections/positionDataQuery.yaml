@@ -13,7 +13,8 @@ properties:
   query_type:
     description: Type of EDR query
     type: string
-    enum: [position]
+    enum: 
+      - position
     example: position
   output_formats:
     description: list of output formats supported by the Position query

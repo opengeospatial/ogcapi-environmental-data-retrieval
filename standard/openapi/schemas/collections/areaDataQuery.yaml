@@ -13,16 +13,9 @@ properties:
   query_type:
     description: Type of EDR query
     type: string
-    enum: [area]
+    enum: 
+      - area
     example: area
-  height_units:
-    description: list of height distance units distance values can be specified in
-    type: array
-    items: 
-      type: string
-    example:
-      - m
-      - hPa
   output_formats:
     description: list of output formats supported by the Area query
     type: array

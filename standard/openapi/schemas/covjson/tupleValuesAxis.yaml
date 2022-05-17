@@ -3,15 +3,16 @@ allOf:
   - $ref: valuesAxisBase.yaml
   - properties:
       dataType:
-        const: tuple
+        enum: 
+          - tuple
       values:
         items:
           description: A tuple of axis values (numbers or strings)
           type: array
           items:
-            type:
-              - number
-              - string
+            anyOf:
+              - type: number
+              - type: string
           minItems: 2
       coordinates: {}
     required:

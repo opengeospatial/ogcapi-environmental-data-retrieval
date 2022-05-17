@@ -13,5 +13,6 @@ properties:
   query_type:
     description: Type of EDR query
     type: string
-    enum: [items]
+    enum: 
+      - items
     example: items
