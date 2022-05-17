@@ -5,7 +5,8 @@ properties:
     type: string
   type:
     description: Type of the parameter object, must be "Parameter"
-    const: Parameter
+    enum: 
+      - Parameter
   description:
     $ref: ../i18n.yaml
   observedProperty:
@@ -15,15 +16,12 @@ properties:
   categoryEncoding:
     type: object
     description: Maps IDs of categories in the observedProperty to range values
-    patternProperties:
-      .+:
-        oneOf:
-          - type: integer
-          - type: array
-            items:
-              type: integer
-            minItems: 1
-            uniqueItems: true
+    additionalProperties:
+      oneOf:
+        - type: integer
+        - type: array
+          items:
+            type: integer
 required:
   - type
   - observedProperty

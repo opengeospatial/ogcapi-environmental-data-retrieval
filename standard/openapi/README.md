@@ -15,7 +15,7 @@ npm install -g @apidevtools/swagger-cli
 
 # generate OpenAPI bundle
 cd standard/openapi
-swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
+swagger-cli bundle -r -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
 ```
 
 See also [Swagger CLI](https://apitools.dev/swagger-cli/) and its [GitHub repository](https://github.com/APIDevTools/swagger-cli).

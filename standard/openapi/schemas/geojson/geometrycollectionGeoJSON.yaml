@@ -17,4 +17,3 @@ properties:
       - $ref: multilinestringGeoJSON.yaml
       - $ref: polygonGeoJSON.yaml
       - $ref: multipolygonGeoJSON.yaml
-      - $ref: geometrycollectionGeoJSON.yaml

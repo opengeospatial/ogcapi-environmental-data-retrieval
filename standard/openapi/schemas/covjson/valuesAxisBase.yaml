@@ -1,9 +1,10 @@
-$comment: Base schema for values-based axis schemas
+description: Base schema for values-based axis schemas
 properties:
   dataType:
     type: string
     not:
-      const: primitive
+      enum: 
+        - primitive
   values:
     type: array
     minItems: 1

@@ -1,19 +1,13 @@
 description: Validates any axis with primitive values
 allOf:
   - $ref: valuesAxisBase.yaml
-  - $comment: This redundant branch exists to fail early with succinct errors
+  - description: This redundant branch exists to fail early with succinct errors
     properties:
       values:
         items:
           oneOf:
             - type: number
             - type: string
-  - if:
-      properties:
-        values:
-          items:
-            type: number
-    then:
-      $ref: numericValuesAxis.yaml
-    else:
-      $ref: stringValuesAxis.yaml
+  - oneOf:
+      - $ref: numericValuesAxis.yaml
+      - $ref: stringValuesAxis.yaml

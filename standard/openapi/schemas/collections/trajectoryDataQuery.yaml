@@ -13,7 +13,8 @@ properties:
   query_type:
     description: Type of EDR query
     type: string
-    enum: [trajectory]
+    enum: 
+      - trajectory
     example: trajectory
   output_formats:
     description: list of ouputformats supported by the Trajectory query

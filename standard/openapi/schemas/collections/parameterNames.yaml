@@ -10,12 +10,7 @@ properties:
     enum:
       - Parameter
   description:
-    oneOf:
-      - type: string
-      - type: object
-        patternProperties:
-          ".+":
-            type: string
+    type: string
   label:
     type: string
   data-type:
@@ -30,15 +25,12 @@ properties:
     $ref: observedPropertyCollection.yaml
   categoryEncoding:
     type: object
-    patternProperties:
-      ".+" :
-        oneOf:
-          - type: integer
-          - type: array
-            items:
-              type: integer
-            minItems: 1
-            uniqueItems: true
+    additionalProperties:
+      oneOf:
+        - type: integer
+        - type: array
+          items:
+            type: integer
   extent:
     $ref: extent.yaml
   id:

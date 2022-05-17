@@ -29,19 +29,16 @@ properties:
         domain:
           "$ref": domain.yaml
         ranges:
-          patternProperties:
-            .+:
+          additionalProperties:
               type: object
               "$ref": ndArray.yaml
   parameters:
-    patternProperties:
-      .+:
+    additionalProperties:
         type: object
         $ref: ../edr-geojson/parameter.yaml
   ranges:
     type: object
-    patternProperties:
-      .+:
+    additionalProperties:
         type: object
         $ref: ndArray.yaml
   referencing:

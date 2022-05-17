@@ -13,7 +13,8 @@ properties:
   query_type:
     description: Type of EDR query
     type: string
-    enum: [corridor]
+    enum: 
+      - corridor
     example: corridor
   width_units:
     description: list of width distance units distance values can be specified in

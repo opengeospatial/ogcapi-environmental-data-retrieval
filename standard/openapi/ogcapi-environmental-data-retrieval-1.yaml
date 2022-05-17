@@ -17,6 +17,8 @@ tags:
     description: Essential characteristics of the information available from the API.
   - name: Collection metadata
     description: Description of the information available from the collections
+  - name: Instance metadata
+    description: Description of the information available from the instances of a collection
   - name: Collection data queries
     description: Data queries available.
   - name: Instance data queries
