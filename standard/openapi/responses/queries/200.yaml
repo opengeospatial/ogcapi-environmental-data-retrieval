@@ -1,4 +1,4 @@
-description: Data ranges required to enumruct valid queries for the choosen data collection
+description: Data ranges required to construct valid queries for the choosen data collection
 content:
   application/prs.coverage+json:
     schema:
