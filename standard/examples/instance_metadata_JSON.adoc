@@ -111,7 +111,7 @@ There are also links to the license information for the observation and forecast
                     "values": [
                         "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
-                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
             "data_queries": {
@@ -482,7 +482,7 @@ There are also links to the license information for the observation and forecast
                     "values": [
                         "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
-                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
             "data_queries": {
@@ -853,7 +853,7 @@ There are also links to the license information for the observation and forecast
                     "values": [
                         "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
-                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
             "data_queries": {
@@ -1224,7 +1224,7 @@ There are also links to the license information for the observation and forecast
                     "values": [
                         "2020-06-30T06:00:00Z/2020-07-04T21:00:00Z"
                     ],
-                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]"
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
             "data_queries": {

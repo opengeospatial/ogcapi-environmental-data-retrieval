@@ -167,7 +167,7 @@ properties:
 
           Extensions may support additional temporal coordinate reference systems 
         type: string
-        example: TIMECRS["DateTime",TDATUM["Gregorian Calendar"],CS[TemporalDateTime,1],AXIS["Time (T)",future]
+        example: TIMECRS["DateTime",TDATUM["Gregorian Calendar"],CS[TemporalDateTime,1],AXIS["Time (T)",future]]
         default: http://www.opengis.net/def/uom/ISO-8601/0/Gregorian
       name:
         description: Name of the temporal coordinate reference system
