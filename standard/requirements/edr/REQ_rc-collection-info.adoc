@@ -5,7 +5,7 @@
 
 *A:*
 
-Every Collection within a collections array MUST have an unique (within the array) `id` parameter.
+Every Collection within a collections array MUST have a unique (within the array) `id` parameter.
 
 ---
 *B:*
