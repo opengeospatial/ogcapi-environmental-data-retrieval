@@ -50,7 +50,7 @@ Every Collection within a collections array MUST have an `output_formats` parame
 ---
 *K:*
 
-Every Collection within a collections array MUST have an `parameter_names` parameter containing a list of parameters must comply with the requirement `/req/edr/rc-parameters`.
+Every Collection within a collections array MUST have a `parameter_names` parameter containing a list of parameters must comply with the requirement `/req/edr/rc-parameters`.
 
 
 ====
