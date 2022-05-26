@@ -1,0 +1,31 @@
+# Instance Cube query
+get:
+  tags:
+    - Instance data queries
+  summary: 'Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube'
+  description: Return the data values for the data Cube defined by the query parameters
+  operationId: GetInstanceDataForCube
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/queries/instanceId.yaml
+    - $ref: ../../parameters/core/bbox.yaml
+    - $ref: ../../parameters/core/cube-z.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: ../../parameters/core/parameter-name.yaml
+    - $ref: ../../parameters/core/crs.yaml
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    200:
+      $ref: ../../responses/queries/200.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

@@ -1,0 +1,6 @@
+description: Invalid request.
+content:
+  application/json:
+    schema:
+      $ref: ../../schemas/core/exception.yaml
+  text/xml: {}

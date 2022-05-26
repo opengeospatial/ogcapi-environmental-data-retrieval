@@ -1,0 +1,27 @@
+# Locations query
+get:
+  tags:
+    - Collection data queries
+  summary: List available location identifers for the collection
+  description: List the locations available for the collection
+  operationId: ListCollectionDataLocations
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/core/bbox.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+  responses:
+    200:
+      $ref: ../../responses/queries/items.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml
+

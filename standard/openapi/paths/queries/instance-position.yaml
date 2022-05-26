@@ -1,0 +1,31 @@
+# Instance Position query
+get:
+  tags:
+    - Instance data queries
+  summary: 'Query end point for position queries of instance {instanceId} of collection {collectionId}'
+  description: Query end point for position queries
+  operationId: getInstanceDataForPoint
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/queries/instanceId.yaml
+    - $ref: ../../parameters/core/positionCoords.yaml
+    - $ref: ../../parameters/core/z.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: ../../parameters/core/parameter-name.yaml
+    - $ref: ../../parameters/core/crs.yaml
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    200:
+      $ref: ../../responses/queries/200.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

@@ -1,0 +1,23 @@
+description: Base schema for values-based axis schemas
+properties:
+  dataType:
+    type: string
+    not:
+      enum: 
+        - primitive
+  values:
+    type: array
+    minItems: 1
+    uniqueItems: true
+  coordinates:
+    type: array
+    items:
+      type: string
+    minItems: 2
+  bounds:
+    description: Optional axis bounds. Must be twice as long (and same data type) as
+      "values"
+    type: array
+    minItems: 2
+required:
+  - values

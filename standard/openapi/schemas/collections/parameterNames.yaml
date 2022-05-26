@@ -1,0 +1,67 @@
+type: object
+title: Parameter name
+description: Definition of data parameter
+required:
+  - type
+  - observedProperty
+properties:
+  type:
+    description: type
+    enum:
+      - Parameter
+  description:
+    type: string
+  label:
+    type: string
+  data-type:
+    description: Data type of returned parameter
+    enum:
+      - integer
+      - float
+      - string                
+  unit:
+    $ref: units.yaml
+  observedProperty:
+    $ref: observedPropertyCollection.yaml
+  categoryEncoding:
+    type: object
+    additionalProperties:
+      oneOf:
+        - type: integer
+        - type: array
+          items:
+            type: integer
+  extent:
+    $ref: extent.yaml
+  id:
+    description: Unique ID of the parameter, this is the value used for querying the data
+    type: string
+  measurementType:
+    type: object
+    title: Parameter measurement approach
+    description: Approach to calculating the data values
+    required:
+      - method
+    properties:
+      method:
+        type: string
+        example: mean
+      duration:
+        type: string
+        title: Measurement time duration
+        description: The time duration that the value was calculated for as an RFC3339
+          duration value.  If the method value is instantaneous this value is
+          not required.
+        example: PT10M
+example:
+  type: Parameter
+  id: sea_ice
+  description: Sea Ice concentration (ice=1;no ice=0)
+  unit:
+    label: Ratio
+    symbol:
+      value: "1"
+      type: http://www.opengis.net/def/uom/UCUM/
+  observedProperty:
+    id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
+    label: Sea Ice Concentration

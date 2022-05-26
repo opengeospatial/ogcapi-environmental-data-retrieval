@@ -1,0 +1,51 @@
+type: object
+title: name of property
+description: Description of the property
+required:
+  - label
+properties:
+  id:
+    description: >-
+      URI linking to an external registry which contains the definitive
+      definition of
+
+      the observed property
+    type: string
+  label:
+    oneOf:
+      - type: string
+      - type: object
+  description:
+    type: string
+  categories:
+    type: array
+    items:
+      minItems: 1
+      type: object
+      required:
+        - id
+        - label
+      properties:
+        id:
+          description: >-
+            URI linking to an external registry which contains the definitive
+            definition of
+
+            the observed property
+          type: string
+        label:
+          oneOf:
+            - type: string
+            - type: object
+        description:
+          oneOf:
+            - type: string
+            - type: object
+              required:
+              - en
+              properties:
+                en:
+                  type: string
+example:
+  id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
+  label: Sea Ice Concentration

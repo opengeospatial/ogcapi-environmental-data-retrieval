@@ -1,6 +1,0 @@
-name: groupId
-in: path
-description: Identifier (name) of a specific group
-required: true
-schema:
-    type: string

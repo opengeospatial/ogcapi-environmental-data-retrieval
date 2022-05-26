@@ -1,0 +1,25 @@
+# Item query
+get:
+  tags:
+    - Collection data queries
+  summary: Return item {itemId} from collection {collectionId}
+  description: 'Query end point to retrieve data from collection {collectionId} using a unique identifier'
+  operationId: GetDataForItem
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/queries/itemId.yaml
+  responses:
+    200:
+      $ref: ../../responses/queries/200.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

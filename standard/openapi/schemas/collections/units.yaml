@@ -1,0 +1,42 @@
+type: object
+title: unit name
+description: definition of data units
+anyOf:   
+  - required:
+      - label
+  - required:
+      - symbol
+  - required:
+      - label
+      - symbol
+properties:
+  label:
+    additionalProperties:
+      type: string
+  symbol:
+    title: Describe unit symbol
+    oneOf:
+      - type: object
+        description: Information about the symbol used to describe the units
+        required:
+          - value
+          - type
+        properties:
+          value:
+            description: representation of the units symbol
+            type: string
+          type:
+            description: uri to detailed desxcription of the units
+            type: string
+      - type: string
+    example:
+      value: hPa
+      type: http://www.opengis.net/def/uom/UCUM/
+  id:
+    type: string
+example:
+  label:
+    en: Kelvin
+  symbol:
+    value: K
+    type: http://www.opengis.net/def/uom/UCUM/

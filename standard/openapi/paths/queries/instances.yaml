@@ -1,0 +1,15 @@
+# Instances query
+get:
+  tags:
+    - Instance metadata
+  summary: 'List data instances of {collectionId}'
+  description: This will provide list of the avalable instances of the collection Use content negotiation to request HTML or JSON.
+  operationId: getCollectionInstances
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    '200':
+      $ref: ../../responses/queries/instances.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

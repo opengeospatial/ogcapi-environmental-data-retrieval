@@ -1,0 +1,44 @@
+description: Property to contain any extra metadata information that is specific
+  to an individual data queries
+type: object
+properties:
+  title:
+    description: title of the query
+    type: string
+    example: Cube query
+  description:
+    description: description of the query
+    type: string
+    example: Query to return data for a defined well known text point
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: 
+      - cube
+    example: cube
+  height_units:
+    description: list of height distance units distance values can be specified in
+    type: array
+    items: 
+      type: string
+    example:
+      - m
+      - hPa    
+  output_formats:
+    description: list of output formats supported by the Cube query
+    type: array
+    items: 
+      type: string
+    example:
+      - CoverageJSON
+      - GeoJSON
+      - IWXXM
+      - GRIB
+  default_output_format:
+    description: default output format of the Cube query
+    type: string
+  crs_details:
+    description: List of key/value definitions for the CRS's supported by the Cube query.  The key is the query parameter and the value is the Well Known Text description
+    type: array
+    items:
+      $ref: crsObject.yaml

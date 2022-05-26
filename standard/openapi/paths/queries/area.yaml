@@ -1,0 +1,32 @@
+# Area query
+get:
+  tags:
+    - Collection data queries
+  summary: 'Query end point for area queries  of collection {collectionId} defined by a polygon'
+  description: Return the data values for the data area defined by the query parameters
+  operationId: GetDataForArea
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/core/areaCoords.yaml
+    - $ref: ../../parameters/core/z.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: ../../parameters/core/parameter-name.yaml
+    - $ref: ../../parameters/core/crs.yaml
+    - $ref: ../../parameters/core/resolution-x.yaml
+    - $ref: ../../parameters/core/resolution-y.yaml
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    200:
+      $ref: ../../responses/queries/200.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

@@ -1,0 +1,14 @@
+description: Data ranges required to construct valid queries for the choosen data collection
+content:
+  application/prs.coverage+json:
+    schema:
+      $ref: ../../schemas/covjson/coverageJSON.yaml
+  application/geo+json:
+    schema:
+      $ref: ../../schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml
+  application/x-netcdf: 
+    schema:
+      type: object  
+  text/xml: 
+    schema:
+      type: string  

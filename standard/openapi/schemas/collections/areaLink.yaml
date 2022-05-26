@@ -1,0 +1,8 @@
+allOf:
+  - $ref: ../core/link.yaml
+properties:
+  href:
+    type: string
+    example: http://data.example.com/collections/monitoringsites/area
+  variables:
+    $ref: areaDataQuery.yaml

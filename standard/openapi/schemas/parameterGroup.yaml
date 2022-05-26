@@ -3,7 +3,8 @@ description: Represents logical groups of parameters
 properties:
   type:
     description: Type of the parameter group object, must be "ParameterGroup"
-    const: ParameterGroup
+    enum: 
+      - ParameterGroup
   id:
     type: string
   label:
