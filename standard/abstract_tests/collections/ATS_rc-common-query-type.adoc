@@ -1,0 +1,19 @@
+[[ats_edr_rc-common-query-type]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/edr/rc-common-query-type*
+^|Test Purpose |Validate variables property for a query data type in the data_queries section in the collection is correctly defined.
+^|Requirement |<<req_edr_rc-common-query-type,/req/edr/rc-common-query-type>>
+^|Test Method a|. Verify that the data queries object has a `link` property
+  
+. Verify that the `link` property has a `href` property
+. Verify that the `link` property has a `rel` property
+. Verify that the `link` property has a `variables` property
+. Verify that if the `data_queries` object is of type `position`,`area`,`trajectory` or `locations` the property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>> 
+. Verify that if the `data_queries` object is of type `radius`the property complies with <<ats_edr_rc-radius-variables,/req/edr/rc-radius-variables>>
+. Verify that if the `data_queries` object is of type `cube`the property complies with <<ats_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
+. Verify that if the `data_queries` object is of type `corridor`the property complies with <<ats_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
+. Verify that if the `data_queries` object is of type `items`the property complies with <<ats_edr_rc-items-variables,/req/edr/rc-items-variables>>
+|===

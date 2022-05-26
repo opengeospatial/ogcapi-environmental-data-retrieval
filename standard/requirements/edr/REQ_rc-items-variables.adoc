@@ -1,0 +1,15 @@
+[[req_edr_rc-items-variables]]
+
+[requirement,type="general",id="/req/edr/rc-items-variables", label="/req/edr/rc-items-variables"]
+====
+
+*A:*
+
+An items `data_queries` object `variables` property MUST include a `query_type` property the value of which MUST match the query type 
+
+---
+*B:*
+
+An items `data_queries` object `variables` property MAY include a `title` property of type string
+
+====

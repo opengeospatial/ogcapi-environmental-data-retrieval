@@ -1,0 +1,24 @@
+[[req_edr_rc-data-queries]]
+
+[requirement,type="general",id="/req/edr/rc-data-queries", label="/req/edr/rc-data-queries"]
+====
+
+*A:*
+
+A `data_queries` object MUST have a least one of the following query data types defined:
+
+* position
+* radius
+* area
+* cube
+* trajectory
+* corridor
+* items
+* locations
+
+---
+*B:*
+
+All query types defined in the `data_queries` object MUST comply with the requirement `/req/edr/rc-common-query-type`
+
+====
