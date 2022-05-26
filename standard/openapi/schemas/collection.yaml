@@ -3,7 +3,6 @@ required:
   - links
   - id
   - extent
-  - data_queries
   - parameter_names
 properties:
   links:
