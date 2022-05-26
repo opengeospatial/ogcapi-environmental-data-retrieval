@@ -71,7 +71,7 @@ XML media types that would typically occur in an OGC API that supports XML are:
 
 The typical HTML media type for all "web pages" in an OGC API would be `text/html`.
 
-The media types for an OpenAPI definition are `vnd.oai.openapi+json;version=3.0` (JSON) and `application/vnd.oai.openapi;version=3.0` (YAML).
+The media types for an OpenAPI definition are `application/vnd.oai.openapi+json;version=3.0` (JSON) and `application/vnd.oai.openapi;version=3.0` (YAML).
 
 NOTE: The OpenAPI media type has not been registered yet with IANA and may change.
 

@@ -11,7 +11,7 @@
     {
       "href": "http://data.example.org/api",
       "rel": "service-desc",
-      "type": "application/openapi+json;version=3.0",
+      "type": "application/vnd.oai.openapi+json;version=3.0",
       "title": "the API definition"
     },
     {
