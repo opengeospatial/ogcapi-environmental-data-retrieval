@@ -3,7 +3,10 @@ required:
   - links
   - id
   - extent
+  - data_queries
   - parameter_names
+  - output_formats
+  - crs
 properties:
   links:
     type: array
