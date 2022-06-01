@@ -85,7 +85,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z`query parameter is specified
+^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z` query parameter is specified
 ^|Requirement |<<_req_edr_rc-corridor,/req/edr/rc-corridor>>
 ^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
 . Validate that a document was returned with a status code 400.
@@ -95,7 +95,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter is a valid LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z`query parameter is specified
+^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter is a valid LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z` query parameter is specified
 ^|Requirement |<<_req_edr_rc-corridor,/req/edr/rc-corridor>>
 ^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
 . Validate that a document was returned with a status code 400.
