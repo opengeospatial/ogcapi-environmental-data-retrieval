@@ -21,6 +21,6 @@ explode: false
 
 Use a coords value in all requests:
 
-* A valid Well-known text representation of geometry string
+* A valid Well-Known Text (WKT) representation of geometry string
 
 |===

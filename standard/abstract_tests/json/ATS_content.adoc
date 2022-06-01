@@ -7,5 +7,5 @@
 ^|Test Purpose |Verify the content of a JSON document given an input document and schema.
 ^|Requirement |<<_req_json_content,/req/json/content>>
 ^|Test Method |. Validate that the document is a JSON document.
-. Validate the document against the schema using an JSON Schema validator.
+. Validate the document against the schema using a JSON Schema validator.
 |===

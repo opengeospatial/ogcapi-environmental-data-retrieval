@@ -4,7 +4,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/edr/rc-items-variables*
-^|Test Purpose |Validate variables property for a query data type in the data_queries section in the collection is correctly defined.
+^|Test Purpose |Validate `variables` property for a query data type in the `data_queries` section in the collection is correctly defined.
 ^|Requirement |<<req_edr_rc-items-variables,/req/edr/rc-items-variables>>
 ^|Test Method a|. Verify that the `variables` object has a `query_type` property
 . Verify that the value of the `query_type` property is items
