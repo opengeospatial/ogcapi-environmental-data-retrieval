@@ -8,4 +8,4 @@ Discovery operations allow the API to be interrogated to determine its capabilit
 
 A spatio-temporal data resource is a **<<collection-definition,collection>>** of spatio-temporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.
 
-Query operations allow other data resources, such as environmental, to be sampled from the underlying spatio-temporal data resource, or data store, based upon EDR query geometry and other selection criteria, defined by this standard and selected by the client.
+Query operations allow other data resources, such as environmental ones, to be sampled from the underlying spatio-temporal data resource, or data store, based upon EDR query geometry and other selection criteria, defined by this standard and selected by the client.
