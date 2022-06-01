@@ -155,10 +155,10 @@ Apply <<req_edr_f-definition,Requirement /req/edr/rc-f-definition>> for Paramete
 
 Apply <<req_edr_f-response,Requirement /req/edr/REQ_rc-f-response>> for Parameter f response.
 
-.Return data as coverageJSON
+.Return data as CoverageJSON
 =================
 
-`f=coverageJSON`
+`f=CoverageJSON`
 =================
 
 If not specified, the query will return data in the native format of the <<collection-definition,collection>>.  If the requested format system does not match an entry in the defined list of valid output formats for the <<collection-definition,collection>>, a `400` message SHOULD be returned.

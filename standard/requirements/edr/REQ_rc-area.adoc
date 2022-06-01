@@ -45,6 +45,6 @@ An `area` GET operation SHOULD include a `crs` query parameter
 ---
 *I:*
 
-An `area` GET operation SHOULD include a `f` query parameter
+An `area` GET operation SHOULD include an `f` query parameter
 
 ====

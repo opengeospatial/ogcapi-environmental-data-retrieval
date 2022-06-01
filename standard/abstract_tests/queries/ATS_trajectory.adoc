@@ -25,7 +25,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
-^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LILINESTRING or MULTILINESTRING Well Known Text value.
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRING or MULTILINESTRING Well Known Text value.
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
 ^|Test Method |. Check coords query parameter is a valid Well Known Text LineString or MultiLineString value
 . Validate that a document was returned with a status code 400.
@@ -38,7 +38,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
-^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LLINESTRINGM or MULTILINESTRINGM Well Known Text value.
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
 ^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate must be a valid Epoch value (as known as UNIX time)
 . Validate that a document was returned with a status code 400.
@@ -48,7 +48,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
-^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z`query parameter is specified
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z` query parameter is specified
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
 ^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
 . Validate that a document was returned with a status code 400.
@@ -58,7 +58,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
-^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z`query parameter is specified
+^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z` query parameter is specified
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
 ^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
 . Validate that a document was returned with a status code 400.
@@ -93,7 +93,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
 ^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the `coords` query parameter contains invalid time coordinates
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
-^|Test Method |. If a time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata
+^|Test Method |. If time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata.
 . Validate that a document was returned with a status code 400.
 |===
 

@@ -6,7 +6,7 @@
 *A:*
 
 A `variables` property MUST include a `query_type` property with a
-value which matches the query type name. 
+value which matches the query type name.
 
 ---
 *B:*
@@ -16,7 +16,7 @@ A `variables` property MAY include a `title` property of type string
 ---
 *C:*
 
-A `variables` property MAY include a `output_formats` property which MUST be a string array
+A `variables` property MAY include an `output_formats` property which MUST be a string array
 
 ---
 *D:*
@@ -31,11 +31,11 @@ If a `default_output_format` property exists the defined value MUST be a value c
 ---
 *F:*
 
-A `variables` property MAY include a `crs_details` property which MUST be an array of objects. 
+A `variables` property MAY include a `crs_details` property which MUST be an array of objects.
 
 ---
 *G:*
 
-objects in a `crs_details` array MUST have a `crs` and `wkt` property both of which are of type string.
+Objects in a `crs_details` array MUST have a `crs` and `wkt` property both of which are of type string.
 
 ====

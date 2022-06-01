@@ -15,7 +15,7 @@ The parameter `collectionId` is each `id` property in the feature collections re
 ---
 *C:*
 
-If a `locationId` is not specified a list of valid locationId's MUST be returned with a description of their geo-spatial extent.
+If a `locationId` is not specified a list of valid locationId's MUST be returned with a description of their geospatial extent.
 
 ---
 *D:*
@@ -35,6 +35,6 @@ A `locations` GET operation SHOULD include a `crs` query parameter
 ---
 *G:*
 
-A `locations` GET operation SHOULD include a `f` query parameter
+A `locations` GET operation SHOULD include an `f` query parameter
 
 ====

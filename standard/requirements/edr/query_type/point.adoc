@@ -57,7 +57,7 @@ For example, if the 850hPa pressure level is being queried:
 `z=850`
 ===========
 
-.Return data at all a levels defined by a list of vertical levels
+.Return data at all levels defined by a list of vertical levels
 ===========
 
 Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa:
@@ -73,7 +73,7 @@ Request data for all levels between 2m and 100m:
 `z=2/100`
 ===========
 
-`When not specified the API MUST return data from all available levels`
+NOTE: When not specified the API MUST return data from all available levels
 
 ===== *Parameter datetime*
 

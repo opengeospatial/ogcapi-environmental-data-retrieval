@@ -18,7 +18,7 @@ are selected.
 bbox=minx,miny,maxx,maxy
 
 The X and Y coordinates are values in the coordinate system defined by the crs query parameter.
-If crs is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level.
+If crs is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in meters above mean sea level.
 
 For instance a <<req_core_rc-bbox-definition,bbox>> that roughly describes an <<area-definition,area>> that contains
 South West England in WGS84 would look like

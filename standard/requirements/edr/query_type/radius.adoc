@@ -6,8 +6,8 @@ Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for P
 
 Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
 
-position(s) to return data for, the coordinates are defined by a Well Known Text
-(wkt) string.
+Accepts position(s) to return data for; the coordinates are defined by a Well Known Text
+(WKT) string.
 
 To retrieve data for a single position:
 
@@ -44,7 +44,7 @@ Apply <<req_edr_within-response,Requirement /req/edr/REQ_rc-within-response>> fo
 
 ===== *Parameter within-units*
 
-The units supported by the collection will be listed in the collections end point
+The units supported by the collection will be listed in the collections endpoint.
 
 Apply <<req_edr_within-units-definition,Requirement /req/edr/within-units-definition>> for Parameter `within-units` definition.
 

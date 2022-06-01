@@ -15,7 +15,7 @@ The content of that response SHALL be an API Definition document.
 ---
 *C:*
 
-The API Definition document SHALL shall be consistent with the media type identified through HTTP content negotiation.
+The API Definition document SHALL be consistent with the media type identified through HTTP content negotiation.
 
 ---
 *Note:*

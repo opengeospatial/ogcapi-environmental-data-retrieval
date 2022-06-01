@@ -45,6 +45,6 @@ A `position` GET operation SHOULD include a `crs` query parameter
 ---
 *I:*
 
-A `position` GET operation SHOULD include a `f` query parameter
+A `position` GET operation SHOULD include an `f` query parameter
 
 ====
