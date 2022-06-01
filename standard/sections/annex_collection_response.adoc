@@ -139,7 +139,7 @@ The spatial object describes the spatial area covered by the information availab
             * Lower left corner, coordinate axis 2
             * Upper right corner, coordinate axis 1
             * Upper right corner, coordinate axis 2
-|**crs**     |String|**Yes**| This can either be a http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text definition] of the CRS or follow a convention of http://www.opengis.net/def/crs/{authority}/{version}/{code} where the token **{authority}** is a placeholder for a code the designates to authority responsible for the definition of this CRS. Typical values include "EPSG" and "OGC".The token **{version}** is a placeholder for the specific version of the coordinate reference system definition or 0 for the latest version or if the version is unknown.The token **{code}** is a placeholder for the authority’s code for the CRS.
+|**crs**     |String|**Yes**| This can either be a http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text definition] of the CRS or follow a convention of http://www.opengis.net/def/crs/{authority}/{version}/{code} where the token **{authority}** is a placeholder for a code the designates to authority responsible for the definition of this CRS. Typical values include "EPSG" and "OGC". The token **{version}** is a placeholder for the specific version of the coordinate reference system definition or 0 for the latest version or if the version is unknown. The token **{code}** is a placeholder for the authority’s code for the CRS.
 |==========================
 
 
@@ -150,8 +150,8 @@ The temporal object describes the time period covered by the information availab
 .Temporal Object
 |==========================
 |Field Name|Type|Required|Description
-|**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601) 
-|**values**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
+|**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601)
+|**values**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
 |**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
@@ -326,7 +326,7 @@ A data query object example for a collection that supports Position and Radius q
 [[col-parameter_names]]
 ==== Parameter Names Object
 The parameter-names object provides information about the data parameters supported by the collection. As
-a set of key-value pairs, where the key is the name of the parameter and the value is a <<col-parameter, Parameter>> object i.e. as a Dictonary (Python) or HashMap(Java).
+a set of key-value pairs, where the key is the name of the parameter and the value is a <<col-parameter, Parameter>> object i.e. as a Dictionary (Python) or HashMap(Java).
 
 
 [[col-parameter]]

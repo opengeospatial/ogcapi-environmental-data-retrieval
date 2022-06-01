@@ -3,7 +3,7 @@
 
 An example of the Locations metadata from a collection that supports the `Location` query pattern.
 
- (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
+(link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "items").
 
 There is a link to the collections response itself (link:https://www.iana.org/assignments/link-relations/link-relations.xhtml[link relation type]: "self").
 
