@@ -15,8 +15,8 @@
 :fullname_3: Chuck Heazel
 :fullname_4: Chris Little
 :docsubtype: Interface
-:keywords: ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, geoJSON, coverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
-:submitting-organizations: UK Met Office; US Geological Service (USGS); US National Weather Service; Wuhan University; Meteorological Service of Canada; Finnish Meteorological Institute; Esri; National Aeronautics and Space Administration (NASA); Météo-France
+:keywords: ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, GeoJSON, CoverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
+:submitting-organizations: UK Met Office; US Geological Survey (USGS); US National Weather Service; Wuhan University; Meteorological Service of Canada; Finnish Meteorological Institute; Esri; National Aeronautics and Space Administration (NASA); Météo-France
 :docfile: document.adoc
 :mn-document-class: ogc
 :mn-output-extensions: xml,html,doc,pdf
