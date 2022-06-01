@@ -95,6 +95,6 @@ A `corridor` GET operation SHOULD include a `crs` query parameter
 ---
 *S:*
 
-A `corridor` GET operation SHOULD include a `f` query parameter
+A `corridor` GET operation SHOULD include an `f` query parameter
 
 ====
