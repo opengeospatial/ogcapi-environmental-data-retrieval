@@ -43,7 +43,7 @@ coords=LINESTRINGZM (-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11
 If the coords specify a 4D corridor i.e. coords=LINESTRINGZM(...) an error MUST be thrown by the server if the client application defines either the `z` or `datetime` query parameters
 
 where *Z* in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.
-`If the specified CRS does not define the height units, the heights units will default to metres above mean sea level`
+`If the specified CRS does not define the height units, the heights units will default to meters above mean sea level`
 
 and the *M* in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
 https://en.wikipedia.org/wiki/Unix_time
