@@ -16,8 +16,8 @@ properties:
     example:
       - href: http://www.example.org/edr/api
         hreflang: en
-        rel: service
-        type: application/openapi+json;version=3.0
+        rel: service-desc
+        type: application/vnd.oai.openapi+json;version=3.0
         title: ""
       - href: http://www.example.org/edr/conformance
         hreflang: en
