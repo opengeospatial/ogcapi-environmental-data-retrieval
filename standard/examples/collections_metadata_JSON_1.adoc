@@ -35,7 +35,7 @@ There are also links to the license information for the observation and forecast
     ],
     "collections": [
         {
-            "id": "hourly observations",
+            "id": "hrly_obs",
             "title": "Hourly Site Specific observations",
             "description": "Observation data for UK observing sites",
             "keywords": [
@@ -410,7 +410,7 @@ There are also links to the license information for the observation and forecast
             }
         },
         {
-            "id": "UK 3 hourly forecast",
+            "id": "3_hrly_forecast",
             "title": "UK 3 Hourly Site Specific Forecast",
             "description": "Five day site specific forecast for 6000 UK locations",
             "keywords": [
@@ -470,9 +470,109 @@ There are also links to the license information for the observation and forecast
                     "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
                 }
             },
+            "data_queries" : {
+                "position": {
+                    "link": {
+                        "href": "http://www.example.org/edr/collections/3_hrly_forecast/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "query_type": "position",
+                            "coords" :{
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "IWXXM",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "radius": {
+                    "link": {
+                        "href": "http://www.example.org/edr/collections/3_hrly_forecast/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "query_type": "radius",
+                            "coords" :{
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "area": {
+                    "link":                 {
+                        "href": "http://www.example.org/edr/collections/3_hrly_forecast/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "query_type": "area",
+                            "coords" :{
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]
+                        }
+                    }
+                },
+                "instances": {
+                    "link":                 {
+                        "href": "http://www.example.org/edr/collections/3_hrly_forecast/instances",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Instances query",
+                            "description": "Instances query",
+                            "query_type": "instances"
+                        }
+                    }
+                }
+            },            
             "crs": [
                 "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
-           ],
+           ],    
             "output_formats": [
                 "CoverageJSON",
                 "GeoJSON"
