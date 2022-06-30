@@ -23,7 +23,7 @@ jobs:
     - name: Generate OpenAPI bundle
       run: |
         cd standard/openapi
-        swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
+        swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json EDR_OpenAPI.yaml
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
       with:
