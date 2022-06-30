@@ -6,15 +6,15 @@ get:
   description: Query end point for to return values within a defined radius of a point queries
   operationId: getDataForRadius
   parameters:
-    - $ref: ../../parameters/collections/collectionId.yaml
-    - $ref: ../../parameters/core/radiusCoords.yaml
-    - $ref: ../../parameters/core/within.yaml
-    - $ref: ../../parameters/core/within-units.yaml
-    - $ref: ../../parameters/core/z.yaml
+    - $ref: ../../parameters/collectionId.yaml
+    - $ref: ../../parameters/radiusCoords.yaml
+    - $ref: ../../parameters/within.yaml
+    - $ref: ../../parameters/within-units.yaml
+    - $ref: ../../parameters/z.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
-    - $ref: ../../parameters/core/parameter-name.yaml
-    - $ref: ../../parameters/core/crs.yaml
-    - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/parameter-name.yaml
+    - $ref: ../../parameters/crs.yaml
+    - $ref: ../../parameters/f.yaml
   responses:
     200:
       $ref: ../../responses/queries/200.yaml

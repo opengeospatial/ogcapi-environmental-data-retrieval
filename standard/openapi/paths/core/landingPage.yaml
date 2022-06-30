@@ -6,7 +6,7 @@ get:
   description: The landing page provides links to the API definition, the Conformance statements and the metadata about the feature data in this dataset.
   operationId: getLandingPage
   parameters:
-    - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/f.yaml
   responses:
     '200':
       $ref: ../../responses/core/landingPage.yaml

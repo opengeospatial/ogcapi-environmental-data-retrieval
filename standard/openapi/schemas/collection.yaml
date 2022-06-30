@@ -11,7 +11,7 @@ properties:
   links:
     type: array
     items:
-      $ref: ../core/link.yaml
+      $ref: link.yaml
     example:
       - href: https://wwww.example.org/service/description.html
         hreflang: en

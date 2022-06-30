@@ -18,18 +18,18 @@ oneOf:
       id:
         type: string
       label:
-        $ref: ../i18n.yaml
+        $ref: i18n.yaml
       description:
-        $ref: ../i18n.yaml
+        $ref: i18n.yaml
       targetConcept:
         type: object
         properties:
           id:
             type: string
           label:
-            $ref: ../i18n.yaml
+            $ref: i18n.yaml
           description:
-            $ref: ../i18n.yaml
+            $ref: i18n.yaml
         required:
           - label
       identifiers:
@@ -40,9 +40,9 @@ oneOf:
             id:
               type: string
             label:
-              $ref: ../i18n.yaml
+              $ref: i18n.yaml
             description:
-              $ref: ../i18n.yaml
+              $ref: i18n.yaml
           required:
             - label
     required:

@@ -2,7 +2,7 @@ description: Metadata about the instance of {collectionId} collection shared by 
 content:
   application/json:
     schema:
-      $ref: ../../schemas/queries/instances.yaml
+      $ref: ../../schemas/instances.yaml
   text/html:
     schema:
       type: string

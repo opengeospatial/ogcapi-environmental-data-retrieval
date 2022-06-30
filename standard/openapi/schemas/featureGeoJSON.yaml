@@ -18,7 +18,7 @@ properties:
       - $ref: multipolygonGeoJSON.yaml
       - $ref: geometrycollectionGeoJSON.yaml
   properties:
-    $ref: ../edr-geojson/edrProperties.yaml
+    $ref: edrProperties.yaml
   id:
     oneOf:
       - type: string
@@ -26,4 +26,4 @@ properties:
   links:
     type: array
     items:
-      $ref: ../core/link.yaml
+      $ref: link.yaml

@@ -1,5 +1,5 @@
 allOf:
-  - $ref: ../core/link.yaml
+  - $ref: link.yaml
 properties:
   href:
     type: string
