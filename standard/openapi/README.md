@@ -19,3 +19,15 @@ swagger-cli bundle -r -o ogcapi-environmental-data-retrieval-1.bundled.json ogca
 ```
 
 See also [Swagger CLI](https://apitools.dev/swagger-cli/) and its [GitHub repository](https://github.com/APIDevTools/swagger-cli).
+
+
+### Please note
+The files listed below have been retained to avoid breaking external links referencing them but are intentionally not used. 
+Whilst the schema has not changed, the schema definition files have been refactored in EDR v1.0.1 and the listed files now duplicate information available elsewhere.
+
+* schemas/compositeAxes.yaml
+* schemas/dataQuery.yaml
+* schemas/groups.yaml
+* schemas/parameterExtent.yaml
+* parameters/cubeCoords.yaml
+* parameters/groupId.yaml

@@ -1,0 +1,160 @@
+type: object
+description: Definition of the geo-temporal extent of a parameter
+required:
+  - dimensions
+  - wkt
+  - horizontal
+properties:
+  dimensions:
+      title: Coordinate's shape
+      description: definition of the shape of the coordinate axis
+      required:
+        - x
+        - y
+      type: object
+      properties:
+        x:
+          format: int32
+          description: x coordinate resolution
+          type: integer
+        y:
+          format: int32
+          description: y coordinate resolution
+          type: integer
+        z:
+          format: int32
+          description: vertical level resolution
+          type: integer
+        time:
+          format: int32
+          description: Time step resolution
+          type: integer
+  wkt:
+    description: |-
+      Well Known Text description of the collections coordinate reference system
+      see http://docs.opengeospatial.org/is/12-063r5/12-063r5.html
+    type: string
+    example: 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]'
+  horizontal:
+    title: Horizontal coordinate range of the parameter
+    description: Definition of the spatial area supported by the parameter
+    required:
+      - coordinates
+      - geographic
+    type: object
+    properties:
+      name:
+        description: A list of the names of the coordinates MUST be in the same order as the values in the coordinates array
+        type: array
+        items: {}
+      coordinates:
+        description: A list of the coordinates
+        type: array
+        items:
+          type: string
+      geographic:
+        description: Definition of the area covered by the collection as a Well Known Text Bounding Box
+        type: string
+    example:
+      name:
+        - longitude
+        - latitude
+      coordinates:
+        - x
+        - 'y'
+      geographic: 'BBOX[359.875,90.125,-0.125,-90.125]'
+  vertical:
+    title: Vertical coordinate range of the parameter
+    description: Definition of the valid vertical coordinates for the parameter
+    required:
+      - name
+      - coordinates
+      - range
+    type: object
+    properties:
+      name:
+        description: Name of the coordinates
+        type: array
+        items:
+          type: string
+      coordinates:
+        description: coordinate
+        type: array
+        items:
+          type: string
+      range:
+        type: array
+        items:
+          type: number
+    example:
+      name:
+        - height_above_ground
+      coordinates:
+        - z
+      range:
+        - 2
+  temporal:
+    title: Time coordinate range of the parameter
+    description: Definition of the Time range supported by the parameter
+    required:
+      - coordinates
+      - name
+      - range
+    type: object
+    properties:
+      name:
+        description: Array of coordinate names MUST be in the same order as the coordinates array
+        type: string
+      coordinates:
+        description: Coordinate axes names
+        type: array
+        items:
+          type: string
+      range:
+        description: List of the available time dimension values in the collection
+        type: array
+        items:
+          type: string
+    example:
+      name: time
+      coordinates:
+        - time
+      range:
+        - '2019-05-28T06:00:00Z'
+        - '2019-05-28T18:00:00Z'
+        - '2019-05-29T06:00:00Z'
+        - '2019-05-29T18:00:00Z'
+        - '2019-05-30T06:00:00Z'
+example:
+  dimensions:
+    x: 92
+    y: 33
+    z: 8
+    time: 98
+  wkt: 'GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"],TIMEEXTENT[2019-05-28T06:00:00Z,2019-05-30T06:00:00Z],VERTICALEXTENT[2.0,2.0,LENGTHUNIT["metre",1.0]]]'
+  horizontal:
+    name:
+      - longitude
+      - latitude
+    coordinates:
+      - x
+      - y
+    geographic: 'BBOX[359.875,90.125,-0.125,-90.125]'
+  vertical:
+    name:
+      - height_above_ground
+    coordinates:
+      - z
+    range:
+      - 36.47
+      - 99.07
+  temporal:
+    name: time
+    coordinates:
+      - time
+    range:
+      - '2019-05-28T06:00:00Z'
+      - '2019-05-28T18:00:00Z'
+      - '2019-05-29T06:00:00Z'
+      - '2019-05-29T18:00:00Z'
+      - '2019-05-30T06:00:00Z'

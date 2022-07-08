@@ -1,0 +1,69 @@
+description: Property to contain any extra metadata information that is specific
+  to an individual data queries
+type: object
+properties:
+  title:
+    description: title of the query
+    type: string
+    example: Position query
+  description:
+    description: description of the query
+    type: string
+    example: Query to return data for a defined well known text point
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: [position, radius, area, cube, trajectory, corridor, items, locations, instances]
+    example: trajectory
+  coords:
+    description: Description of valid coords query parameter values
+    type: object
+    properties:
+      description:
+        type: string
+      type:
+        type: string
+      example:
+        type: string
+  within_units:
+    description: list of distance units radius values can be specified in
+    type: array
+    items:
+      type: string
+    example:
+      - km
+      - miles
+  width_units:
+    description: list of width distance units distance values can be specified in
+    type: array
+    items:
+      type: string
+    example:
+      - km
+      - miles
+  height_units:
+    description: list of height distance units distance values can be specified in
+    type: array
+    items:
+      type: string
+    example:
+      - m
+      - hPa
+  output_formats:
+    description: list of formats the results can be presented in
+    type: array
+    items:
+      type: string
+    example:
+      - CoverageJSON
+      - GeoJSON
+      - IWXXM
+      - GRIB
+  default_output_format:
+    description: default outputformat
+    type: string
+  crs_details:
+    description: List of key/value definitions for the CRS's supported by a query.  The key is the query parameter and the value is the Well Known Text description
+    type: array
+    items:
+      $ref: crsObject.yaml
