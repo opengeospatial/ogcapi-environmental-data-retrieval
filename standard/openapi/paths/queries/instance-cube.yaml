@@ -6,14 +6,14 @@ get:
   description: Return the data values for the data Cube defined by the query parameters
   operationId: GetInstanceDataForCube
   parameters:
-    - $ref: ../../parameters/collections/collectionId.yaml
-    - $ref: ../../parameters/queries/instanceId.yaml
-    - $ref: ../../parameters/core/bbox.yaml
-    - $ref: ../../parameters/core/cube-z.yaml
+    - $ref: ../../parameters/collectionId.yaml
+    - $ref: ../../parameters/instanceId.yaml
+    - $ref: ../../parameters/bbox.yaml
+    - $ref: ../../parameters/cube-z.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
-    - $ref: ../../parameters/core/parameter-name.yaml
-    - $ref: ../../parameters/core/crs.yaml
-    - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/parameter-name.yaml
+    - $ref: ../../parameters/crs.yaml
+    - $ref: ../../parameters/f.yaml
   responses:
     200:
       $ref: ../../responses/queries/200.yaml

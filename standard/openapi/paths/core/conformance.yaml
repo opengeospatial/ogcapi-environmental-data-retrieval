@@ -6,7 +6,7 @@ get:
   description: List all requirements classes specified in a standard that the server conforms to
   operationId: getRequirementsClasses
   parameters:
-    - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/f.yaml
   responses:
     '200':
       $ref: ../../responses/core/conformance.yaml

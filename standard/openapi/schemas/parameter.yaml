@@ -8,7 +8,7 @@ properties:
     enum: 
       - Parameter
   description:
-    $ref: ../i18n.yaml
+    $ref: i18n.yaml
   observedProperty:
     $ref: observedProperty.yaml
   unit:

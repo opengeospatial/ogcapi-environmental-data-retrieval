@@ -6,15 +6,15 @@ get:
   description: Return the data values for the data area defined by the query parameters
   operationId: GetDataForArea
   parameters:
-    - $ref: ../../parameters/collections/collectionId.yaml
-    - $ref: ../../parameters/core/areaCoords.yaml
-    - $ref: ../../parameters/core/z.yaml
+    - $ref: ../../parameters/collectionId.yaml
+    - $ref: ../../parameters/areaCoords.yaml
+    - $ref: ../../parameters/z.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
-    - $ref: ../../parameters/core/parameter-name.yaml
-    - $ref: ../../parameters/core/crs.yaml
-    - $ref: ../../parameters/core/resolution-x.yaml
-    - $ref: ../../parameters/core/resolution-y.yaml
-    - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/parameter-name.yaml
+    - $ref: ../../parameters/crs.yaml
+    - $ref: ../../parameters/resolution-x.yaml
+    - $ref: ../../parameters/resolution-y.yaml
+    - $ref: ../../parameters/f.yaml
   responses:
     200:
       $ref: ../../responses/queries/200.yaml

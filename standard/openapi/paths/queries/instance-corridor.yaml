@@ -6,20 +6,20 @@ get:
   description: Return the data values for the Corridor defined by the query parameters
   operationId: GetInstanceDataForCorridor
   parameters:
-    - $ref: ../../parameters/collections/collectionId.yaml
-    - $ref: ../../parameters/queries/instanceId.yaml
-    - $ref: ../../parameters/core/trajectoryCoords.yaml
-    - $ref: ../../parameters/core/z.yaml
+    - $ref: ../../parameters/collectionId.yaml
+    - $ref: ../../parameters/instanceId.yaml
+    - $ref: ../../parameters/trajectoryCoords.yaml
+    - $ref: ../../parameters/z.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
-    - $ref: ../../parameters/core/parameter-name.yaml
-    - $ref: ../../parameters/core/corridor-width.yaml
-    - $ref: ../../parameters/core/width-units.yaml
-    - $ref: ../../parameters/core/corridor-height.yaml
-    - $ref: ../../parameters/core/height-units.yaml
-    - $ref: ../../parameters/core/resolution-x.yaml
-    - $ref: ../../parameters/core/resolution-z.yaml
-    - $ref: ../../parameters/core/crs.yaml
-    - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/parameter-name.yaml
+    - $ref: ../../parameters/corridor-width.yaml
+    - $ref: ../../parameters/width-units.yaml
+    - $ref: ../../parameters/corridor-height.yaml
+    - $ref: ../../parameters/height-units.yaml
+    - $ref: ../../parameters/resolution-x.yaml
+    - $ref: ../../parameters/resolution-z.yaml
+    - $ref: ../../parameters/crs.yaml
+    - $ref: ../../parameters/f.yaml
   responses:
     200:
       $ref: ../../responses/queries/200.yaml

@@ -2,7 +2,7 @@ description: An error occured.
 content:
   application/json:
     schema:
-      $ref: ../../schemas/core/exception.yaml
+      $ref: ../../schemas/exception.yaml
   text/html:
     schema:
       type: string

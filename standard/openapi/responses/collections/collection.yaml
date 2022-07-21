@@ -2,7 +2,7 @@ description: Metadata about the {collectionId} collection shared by this API
 content:
   application/json:
     schema:
-      $ref: ../../schemas/collections/collection.yaml
+      $ref: ../../schemas/collection.yaml
   text/html:
     schema:
       type: string

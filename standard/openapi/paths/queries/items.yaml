@@ -6,8 +6,8 @@ get:
   description: List the items available in the collection accessible via a unique identifier
   operationId: ListDataItems
   parameters:
-    - $ref: ../../parameters/collections/collectionId.yaml
-    - $ref: ../../parameters/core/bbox.yaml
+    - $ref: ../../parameters/collectionId.yaml
+    - $ref: ../../parameters/bbox.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
   responses:
     200:

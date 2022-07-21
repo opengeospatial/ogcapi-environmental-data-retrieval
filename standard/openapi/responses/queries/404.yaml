@@ -2,5 +2,5 @@ description: Requested data not found.
 content:
   application/json:
     schema:
-      $ref: ../../schemas/core/exception.yaml
+      $ref: ../../schemas/exception.yaml
   text/xml: {}
