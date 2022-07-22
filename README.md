@@ -80,7 +80,8 @@ The Master Branch is the latest draft of the standard, currently V1.0.1, and is 
 
 * [OGC API - Environmental Data Retrieval Standard, Version 1.0.0](http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0)
 * DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
-* DRAFT [OGC API - Environmental Data Retrieval Standard, Version 1.0.1](https://opengeospatial.github.io/ogcna-auto-review/19-086.html)
+* DRAFT [OGC API - Environmental Data Retrieval Standard, Version 1.0.1](https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html)
+* DRAFT [OGC API - Environmental Data Retrieval Standard, Version 1.1.0](https://opengeospatial.github.io/ogcna-auto-review/19-086r6.html)
 
 ### Conformance Test Suite
 
