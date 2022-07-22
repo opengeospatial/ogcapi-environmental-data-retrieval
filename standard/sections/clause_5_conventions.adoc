@@ -139,7 +139,7 @@ servers:
     description: Production server
 ----
 
-The path +`/mypath`+ in the OpenAPI definition of the API would be the URL +`https://data.example.org/mypath`+ for the production server.
+The path +'/mypath'+ in the OpenAPI definition of the API would be the URL +'https://data.example.org/mypath'+ for the production server.
 ===========================================
 
 ==== Reusable OpenAPI components
