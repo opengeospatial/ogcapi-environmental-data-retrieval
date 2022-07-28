@@ -30,3 +30,28 @@ get:
       $ref: ../../responses/queries/413.yaml
     default:
       $ref: ../../responses/core/exception.yaml
+post:
+  tags:
+    - Collection data queries
+  summary: 'Query end point for area queries  of collection {collectionId} defined by a polygon'
+  description: Return the data values for the data area defined by the query parameters
+  operationId: PostDataForArea
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml  
+  requestBody:
+    - $ref: ../../request-bodies/area.yaml  
+  responses:
+    200:
+      $ref: ../../responses/queries/200.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml          

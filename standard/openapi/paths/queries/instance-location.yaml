@@ -27,4 +27,30 @@ get:
       $ref: ../../responses/queries/413.yaml
     default:
       $ref: ../../responses/core/exception.yaml
-
+post:
+  tags:
+    - Instance data queries
+  summary: 'Query end point for queries of instance {instanceId} of collection {collectionId} defined by a location id'
+  description: Return data the for the location defined by locid
+  operationId: PostInstanceDataForLocation
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+    - $ref: ../../parameters/queries/instanceId.yaml
+    - $ref: ../../parameters/queries/locationId.yaml
+  requestBody:
+    - $ref: ../../request-bodies/location.yaml
+  responses:
+    200:
+      $ref: ../../responses/queries/200.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

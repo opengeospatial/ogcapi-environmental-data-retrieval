@@ -11,7 +11,7 @@ The `corridor-width` information is the total width of the required corridor.
 ---
 *B:*
 
-The supported `corridor-width` width units will be supplied by the query metadata information.
+The supported `corridor-width` width units will be supplied by the query metatdata information.
 
 
 [source,java]
@@ -26,7 +26,7 @@ If the width value is the total width of the corridor.
 ---
 *D:*
 
-The coordinates of the `coords` parameter define the center point of the corridor.
+The coordinates of the `coords` parameter define the centre point of the corridor.
 
 ---
 *E:*

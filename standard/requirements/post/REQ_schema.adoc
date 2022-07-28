@@ -1,0 +1,9 @@
+[[req_post_schema]] 
+
+[requirement,type="general",id="/req/post/schema", label="/req/post/schema"]
+====
+*A:*
+
+OpenAPI documentation for HTTP POST queries MUST provide a valid schema to describe the message body
+
+====

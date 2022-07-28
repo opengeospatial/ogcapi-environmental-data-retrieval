@@ -1,93 +1,97 @@
-The Trajectory query returns data along the path defined by the `coords` parameter. *The logic to match the data for the requested path will depend on and be defined by the <<collection-definition,collection>>*.  The results are further filtered by the constraints defined by the following query parameters:
+The Trajectory query returns data along the path defined by the `coords` parameter. *Logic for identifying the best matches for the requested trajectory will depend on the <<collection-definition,collection>> and is at the discretion of the query implementer* .  The results are further filtered by the constraints defined by the following query parameters:
 
-===== *Parameter coords*
+[#trajectory-def-table,reftext='{table-caption} {counter:table-num}']
+.Trajectory query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **coords**
 
-Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for Parameter coords definition.
+* <<req_edr_coords-definition,definition>> 
 
-Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
+* <<req_edr_linestring-coords-response,rules>>|WKT string|**Yes** a|  The coordinates are defined by one of the following Well Known Text (WKT) strings:
 
-"Intersects" means that the geospatial shape specified by the parameter `coords`, includes a coordinate that is part of the (spatial) geometry of the resource. This includes the boundaries of the geometries.
+* LINESTRING 
+* LINESTRINGZ
+* LINESTRINGM
+* LINESTRINGZM 
+ 
 
-The trajectory query supports the Linestring Well Known Text (WKT) geometry type, the trajectory query SHOULD support 2D, 3D and 4D queries allowing the definition of a vertical level value (z) and a time value (as an epoch time) therefore coordinates for geometries may be 2D (x, y), 3D (x, y, z) or 4D (x, y, z, t).
+* The *Z* in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.
+`If the specified CRS does not define the height units, the heights units will default to metres above mean sea level`
 
-A 2D trajectory, on the surface of the earth with no time or vertical dimensions:
-    coords=LINESTRING(-3.53 50.72, -3.35 50.92, -3.11 51.02, -2.85 51.42, -2.59 51.46)
+* The *M* in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+https://en.wikipedia.org/wiki/Unix_time a| * A Simple 2D corridor
+    `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)`
 
-A 2D trajectory with multiple segments, on the surface of the earth with no time or vertical dimensions:
-    coords=MULTILINESTRING((-3.53 50.72, -3.35 50.92), (-3.11 51.02, -2.85 51.42, -2.59 51.46))
+* A 2D corridor with mutiple segments:
+    `coords=MULTILINESTRING((-3.53 50.72,-3.35 50.92),(-3.11 51.02,-2.85 51.42,-2.59 51.46))`
 
-A 2D trajectory, on the surface of the earth all at the same time and no vertical dimension, time value defined in ISO8601 format by the `datetime` query parameter :
-    coords=LINESTRING(-3.53 50.72, -3.35 50.92, -3.11 51.02, -2.85 51.42, -2.59 51.46)&datetime=2018-02-12T23:00:00Z
+* A 2D corridor with all waypoints at same time:
+    `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&datetime=2018-02-12T23:00:00Z`
 
-A 2D trajectory, on the surface of the earth with no time value but at a fixed height level, height defined in the <<collection-definition,collection>> height units by the `z` query parameter :
-    coords=LINESTRING(-3.53 50.72, -3.35 50.92, -3.11 51.02, -2.85 51.42, -2.59 51.46)&z=850
+* A 2D corridor, all waypoints at the same height :
+    `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)&z=850`
 
-A 2D trajectory, on the surface of the earth all at the same time and at a fixed height level, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the <<collection-definition,collection>> height units by the `z` query parameter :
-    coords=LINESTRING(-3.53 50.72, -3.35 50.92, -3.11 51.02, -2.85 51.42, -2.59 51.46)&datetime=2018-02-12T23:00:00Z&z=850
+* A 2D corridor, all waypoints at the same time and height:
+    `coords=LINESTRING(51.14 -2.98, 51.36 -2.87, 51.03 -3.15, 50.74 -3.48, 50.9 -3.36)&datetime=2018-02-12T23:00:00Z&z=850`
 
-A 3D trajectory, on the surface of the earth but over a range of time values with no height values:
-coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)
+* A 3D corridor each waypoint at a different time:
+`coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)`
 
-A 3D trajectory, on the surface of the earth but over a range of time values with a fixed vertical height value, height defined in the <<collection-definition,collection>> height units by the `z` query parameter :
-coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)&z=200
+* A 3D corridor, each waypoint at a different time by at the same height:
+`coords=LINESTRINGM(51.14 -2.98 1560507000, 51.36 -2.87 1560507600, 51.03 -3.15 1560508200, 50.74 -3.48 1560508500, 50.9 -3.36 1560510240)&z=200`
 
-A 3D trajectory, through a 3D volume with vertical height or depth, but no defined time:
-coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)
+* A 3D corridor, each waypoint at a different height:
+`coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)`
 
-A 3D trajectory, through a 3D volume with height or depth, but at a fixed time value defined in ISO8601 format by the `datetime` query parameter:
-coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)&datetime=2018-02-12T23:00:00Z
+* A 3D corridor each waypoint at a different height but the same time:
+`coords=LINESTRINGZ(-3.53 50.72 0.1,-3.35 50.92 0.2,-3.11 51.02 0.3,-2.85 51.42 0.4,-2.59 51.46 0.5)&datetime=2018-02-12T23:00:00Z`
 
-A 4D trajectory, through a 3D volume and over a range of time values:
-coords=LINESTRINGZM(-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11 51.02 0.3 1560510600,-2.85 51.42 0.4 1560513600,-2.59 51.46 0.5 1560515400)
+* A 4D corridor, each waypoint at different heights and times:
+`coords=LINESTRINGZM (-3.53 50.72 0.1 1560507000,-3.35 50.92 0.2 1560508800,-3.11 51.02 0.3 1560510600,-2.85 51.42 0.41560513600,-2.59 51.46 0.5 1560515400)`
 
-If the coords specify a 4D trajectory i.e. coords=LINESTRINGZM(...) an error MUST be thrown by the server if the client application defines either the `z` or `datetime` query parameters
+a| **z**
 
-where `Z` in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.
-`If the specified CRS does not define the height units, the heights units will default to meters above mean sea level`
+* <<req_edr_z-definition,definition>> 
 
-and the `M` in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
-https://en.wikipedia.org/wiki/Unix_time
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
 
-.A basic surface route
-=================
-From Bristol to Exeter
+* <<req_collections_rc-time-definition,definition>> 
 
-`coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)`
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
 
-=================
+* <<req_edr_parameters-definition,definition>> 
 
-.A basic surface route with defined time intervals
-=================
-From Bristol to Exeter
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature`
+a| **crs**
 
-`coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)`
-=================
+* <<req_edr_crs-definition,definition>> 
 
-===== *Parameter z*
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
 
-Used when the entire trajectory occurs at the same vertical coordinate. The `z` query parameter is used to define the height
+* <<req_edr_f-definition,definition>> 
+
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
+
+#If any of the following occurs:#
+
+* client request contains coords=LINESTRINGZ(...) and a *z* query parameter 
+* client request contains coords=LINESTRINGM(...) and a *datetime* query parameter 
+* client request contains coords=LINESTRINGZM(...) and *z* or *datetime* query parameters 
+
+#An error MUST be thrown by the server#
 
 
-.A single vertical level
-===========
-
-If the entire route is at the 850hPa pressure level:
-
-`coords=LINESTRINGM(-3.53 50.72 1560507000,-3.35 50.92 1560508800,-3.11 51.02 1560510600,-2.85 51.42 1560513600,-2.59 51.46 1560515400)&z=850`
-===========
-
-===== *Parameter datetime*
-
-For Parameter datetime, see <<datetime>>.
-
-===== *Parameter parameter-name*
-
-For Parameter parameter-name, see <<parameter-name>>.
-
-===== *Parameter crs*
-
-For Parameter crs, see <<crs>>.
-
-===== *Parameter f*
-
-For Parameter f, see <<outputformat>>.

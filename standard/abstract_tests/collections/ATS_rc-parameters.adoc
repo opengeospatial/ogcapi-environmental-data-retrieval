@@ -9,7 +9,7 @@
 ^|Test Method |. Verify that all parameters listed in a `collection` have the required properties.
 . Verify that each parameter property has a unique name (in the collection).
 . Verify that each parameter property has a `type` property.
-. Verify that each parameter property has an `observedProperty` property.
+. Verify that each parameter property has a `observedProperty` property.
 . Verify that the `observedProperty` property has a `label` property with correctly defined i18n compliant values.
 . Verify that the `observedProperty` property has an `id` property.
 |===

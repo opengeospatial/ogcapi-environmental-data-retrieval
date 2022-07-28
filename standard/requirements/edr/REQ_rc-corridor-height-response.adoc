@@ -6,7 +6,7 @@
 
 *A:*
 
-If the `corridor-height` parameter is defined the result set SHALL contain values derived from the chosen interpolation algorithm at the number of specified intervals.
+If the `corridor-height` parameter is defined the result set SHALL contain values derived from the chosen interpolation algorithm at the number of specifed intervals.
 
 
 
@@ -22,7 +22,7 @@ The height of corridor parameter is the total height of the required corridor.
 ---
 *C:*
 
-The coordinates of the `coords` parameter define the center point of the corridor.
+The coordinates of the `coords` parameter define the centre point of the corridor.
 
 ---
 *D:*

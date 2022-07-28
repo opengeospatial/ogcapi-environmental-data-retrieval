@@ -1,0 +1,10 @@
+[[ats_post_content_type]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/post/content_type*
+^|Test Purpose |Verify that any HTTP POST functionality defined correctly.
+^|Requirement |<<_req_post_content_type,/req/post/content_type>>
+^|Test Method |. Validate that a HTTP POST request of the content type defined in the OpenAPI documentation produces a response with *HTTP 2xx* or *HTTP 3xx* status code.
+|===

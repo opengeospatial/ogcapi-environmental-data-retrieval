@@ -1,99 +1,61 @@
 The Radius query returns data within the defined radius of the requested coordinate. The filter constraints are defined by the following query parameters:
 
-===== *Parameter coords*
+[#radius-def-table,reftext='{table-caption} {counter:table-num}']
+.Radius query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **coords**
 
-Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for Parameter coords definition.
+* <<req_edr_coords-definition,definition>> 
 
-Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
+* <<req_edr_coords-response,rules>>|WKT string|**Yes**| The coordinates are defined by a Point Well Known Text (WKT) string a| * `coords=POINT(-3 51)`
+* `coords= MULTIPOINT\((-77 38.9),(2.35 48.85),(116.38 39.92),(149.1 -35.29),(-0.1 51.5))`
+a| **z**
 
-Accepts position(s) to return data for; the coordinates are defined by a Well Known Text
-(WKT) string.
+* <<req_edr_z-definition,definition>> 
 
-To retrieve data for a single position:
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
 
-POINT(x y)
+* <<req_collections_rc-time-definition,definition>> 
 
-A position at height `z`:
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
 
-POINT(x y z)
+* <<req_edr_parameters-definition,definition>> 
 
-And for a list of positions:
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature``
+a| **within**
 
-MULTIPOINT\((x y),(x1 y1),(x2 y2),(x3 y3))
+* <<req_edr_coords-definition,definition>> 
 
-And for a list of positions at defined heights:
+* <<req_edr_point-coords-response,rules>>     |String  |*Yes*|  Defines radius of area around defined coordinates to include in the data selection a| * `within=20` 
+a| **within-units**
 
-MULTIPOINTZ\((x y z),(x1 y1 z1),(x2 y2 z2),(x3 y3 z3))
+* <<req_edr_within-units-definition,definition>> 
 
-See http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+* <<req_edr_within-units-response,rules>>     |String  |*Yes*|  Distance units for the within parameter (available options defined in the *within_units* attribute of the radius data_query section in the <<collection_metadata_desc, collections>> metadata response)
+ a| * `within-units=Miles`
+a| **crs**
 
-The coordinate values will depend on the CRS parameter. If this is not defined, the values will be assumed to be WGS84 values (i.e x=longitude and y=latitude)
+* <<req_edr_crs-definition,definition>> 
 
-.Single position
-=================
-Retrieve data for Greenwich, London
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
 
-`coords=POINT(0 51.48)`
-=================
+* <<req_edr_f-definition,definition>> 
 
-===== *Parameter within*
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
 
-Apply <<req_edr_within-definition,Requirement /req/edr/within-definition>> for Parameter `within` definition.
+#If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#
 
-Apply <<req_edr_within-response,Requirement /req/edr/REQ_rc-within-response>> for Parameter `within` response.
-
-===== *Parameter within-units*
-
-The units supported by the collection will be listed in the collections endpoint.
-
-Apply <<req_edr_within-units-definition,Requirement /req/edr/within-units-definition>> for Parameter `within-units` definition.
-
-Apply <<req_edr_within-units-response,Requirement /req/edr/REQ_rc-within-units-response>> for Parameter `within-units` response.
-
-
-.Define a 20Km radius
-===========
-I.e. Define a Radius of 20 Km from the position defined by the coords query parameter
-
-`within=20&within-units=km`
-
-===========
-
-.Define a 5 mile radius
-===========
-i.e. Define a Radius of 5 miles from the position defined by the coords query parameter
-
-`within=5&within-units=miles`
-
-===========
-
-
-===== *Parameter z*
-
-Define the vertical level to return data from, i.e. z=level
-
-.A single vertical level
-===========
-
-For example if the 80m level is being queried:
-
-`z=80`
-===========
-
-When z is not specified, the API MUST return data from all available levels.
-
-===== *Parameter datetime*
-
-For Parameter datetime, see <<datetime>>.
-
-===== *Parameter parameter-name*
-
-For Parameter parameter-name, see <<parameter-name>>.
-
-===== *Parameter crs*
-
-For Parameter crs, see <<crs>>.
-
-===== *Parameter f*
-
-For Parameter f, see <<outputformat>>.

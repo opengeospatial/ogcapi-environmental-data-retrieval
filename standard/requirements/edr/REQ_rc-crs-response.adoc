@@ -6,7 +6,7 @@
 
 *A:*
 
-If the `crs` parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the `crs` parameter is not specified the data will be returned in its native projection.
+If the `crs` parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the `crs` parameter is not specifed the data will be returned in its native projection.
 
 ---
 *B:*

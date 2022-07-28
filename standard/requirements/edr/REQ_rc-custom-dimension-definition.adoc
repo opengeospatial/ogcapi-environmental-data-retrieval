@@ -1,0 +1,23 @@
+[[req_edr_custom-dimension-definition]]
+==== *Requirement /req/edr/custom-dimension-definition* Custom Parameter definition
+
+[requirement,type="general",id="/req/edr/custom-dimension-definition", label="/req/edr/custom-dimension-definition"]
+====
+
+*A:*
+
+Each resource collection operation MAY support custom parameters with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====
+

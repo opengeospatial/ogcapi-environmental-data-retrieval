@@ -60,108 +60,10 @@ The OGC API — Common specification does not define any information resourc
 |/collections/{collectionId}/trajectory | Trajectory | Return data along a defined <<trajectory-definition,trajectory>>
 |/collections/{collectionId}/corridor | Corridor | Return data within a spatio-temporal <<corridor-definition,corridor>>
 |/collections/{collectionId}/items | Items |Items associated with the `{collectionId}` <<collection-definition,collection>>.
-|/collections/{collectionId}/locations | Locations |Location identifiers associated with the `{collectionId}` <<collection-definition,collection>>.
+|/collections/{collectionId}/locations | Locations |Location identifers associated with the `{collectionId}` <<collection-definition,collection>>.
 |/collections/{collectionId}/instances | Instances | List the available instances of the <<collection-definition,collection>>
 |===
 
-[[parameters-section]]
-==== Shared query parameters
-
-Query parameters are used in URLs to define the resources which are returned on a GET request. The following are defined as standard shared parameters for use.
-
-[[coords]]
-===== Parameter coords
-
-Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for Parameter coords definition.
-
-Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
-
-[[datetime]]
-===== Parameter datetime
-
-Apply <<req_collections_rc-time-definition,Requirement /req/core/datetime-definition>> for datetime definition.
-
-Apply <<req_core_rc-time-response,Requirement /req/core/datetime-response>> for datetime response.
-
-The `datetime` parameter is defined in OGC API — Common. The following information is provided here as a convenience.
-
-"Intersects" means that the time (instant or duration) specified in the parameter `datetime` includes a timestamp that is part of the temporal geometry of the resource (again, a time instant or duration). Time durations include the start and end times.
-
-.A datetime
-=================
-February 12, 2018, 23:20:52 GMT:
-
-`datetime=2018-02-12T23%3A20%3A52Z`
-=================
-
-For resources with a temporal property that is a timestamp (like `lastUpdate`), a `datetime` value would match all resources where the temporal property is identical.
-
-For resources with a temporal property that is a date or a time interval, a `datetime` value would match all resources where the timestamp is on that day or within the time interval.
-
-.Intervals
-=================
-February 12, 2018, 00:00:00 GMT to March 18, 2018, 12:31:12 GMT:
-
-`datetime=2018-02-12T00%3A00%3A00Z%2F2018-03-18T12%3A31%3A12Z`
-
-February 12, 2018, 00:00:00 UTC or later:
-
-`datetime=2018-02-12T00%3A00%3A00Z%2F..`
-
-March 18, 2018, 12:31:12 UTC or earlier:
-
-`datetime=..%2F2018-03-18T12%3A31%3A12Z`
-=================
-
-A template for the definition of the parameter in YAML according to OpenAPI 3.0 is available at link:http://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml[datetime.yaml].
-
-[[parameter-name]]
-===== Parameter parameter-name
-
-Apply <<req_edr_parameters-definition,Requirement /req/edr/REQ_rc-parameter-name-definition>> for Parameter parameter-name definition.
-
-Apply <<req_edr_parameters-response,Requirement /req/edr/parameter-name-response>> for Parameter parameter-name response.
-
-.A single parameter
-=================
-Only return values for the Maximum_temperature
-
-`parameter-name=Maximum_temperature`
-=================
-
-.Return multiple parameters
-=================
-Values for the Maximum_temperature, Minimum_temperature and Total_precipitation
-
-`parameter-name=Maximum_temperature,Minimum_temperature,Total_precipitation`
-=================
-
-For the requested parameters which do not exist in the <<collection-definition,collection>>, null values should be returned.
-If none of the requested parameters exist in the <<collection-definition,collection>>, a `400` message SHOULD be returned.
-
-[[crs]]
-===== Parameter crs
-
-Apply <<req_edr_crs-definition,Requirement /req/edr/REQ_rc-crs-definition>> for Parameter crs definition.
-
-Apply <<req_edr_crs-response,Requirement /req/edr/REQ_rc-crs-response>> for Parameter crs response.
-
-The value of the `crs` query parameter will be one of the name values described in the <<collection-definition,collection>> metadata for supported coordinate reference system transformations.
-
-[[outputformat]]
-===== Parameter f
-
-Apply <<req_edr_f-definition,Requirement /req/edr/rc-f-definition>> for Parameter f definition.
-
-Apply <<req_edr_f-response,Requirement /req/edr/REQ_rc-f-response>> for Parameter f response.
-
-.Return data as CoverageJSON
-=================
-
-`f=CoverageJSON`
-=================
-
-If not specified, the query will return data in the native format of the <<collection-definition,collection>>.  If the requested format system does not match an entry in the defined list of valid output formats for the <<collection-definition,collection>>, a `400` message SHOULD be returned.
 
 
 [[rc_position-section]]
@@ -221,3 +123,9 @@ include::../requirements/edr/query_type/locations.adoc[]
 ==== Instances query
 
 include::../requirements/edr/query_type/instance.adoc[]
+
+
+[[rc_custom-dimensions-section]]
+==== Custom dimension support
+
+include::../requirements/requirements_class_custom_dimensions.adoc[]

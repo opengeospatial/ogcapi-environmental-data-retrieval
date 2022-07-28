@@ -45,6 +45,6 @@ A `trajectory` GET operation SHOULD include a `crs` query parameter
 ---
 *I:*
 
-A `trajectory` GET operation SHOULD include an `f` query parameter
+A `trajectory` GET operation SHOULD include a `f` query parameter
 
 ====

@@ -1,0 +1,143 @@
+Support for dimensions other than the standard GeoTemporal dimensions can be provided by adding the custom dimension type to the EDR extent object in the <<collection_metadata_desc, collections>> response.  The custom dimension type allows for an array of custom query dimensions to be defined.  Each custom dimension item is defined with the following characteristics (using an OpenAPI Specification 3.0 fragment) 
+
+.Schema for custom query parameter metadata 
+====
+[source,YAML]
+----
+type: object
+required:
+    - id
+    - interval
+    - reference
+properties:
+    id:
+        type: string
+    interval:
+        type: array
+        minItems: 1
+        items:
+            type: array
+            minItems: 1
+            items:
+            anyOf:
+                - type: string
+                - type: number
+            nullable: true
+    values:
+        type: array
+        minItems: 1
+        items:
+            anyOf:
+                - type: string
+                - type: number
+            nullable: true
+    reference:
+        type: string
+----
+====
+
+Following the conventions used for the temporal on vertical extents, custom extent objects must provide the following information:
+
+* id - Name of the <<rc_custom-dimensions-section,custom dimension>>
+* interval - data value range of the dimension (minimum value, maximum value)
+* values - defines all of the supported data values 
+* reference - string which describes the <<rc_custom-dimensions-section,custom dimension>> (this can be a link to a detailed description)
+
+
+.<<rc_custom-dimensions-section,custom dimension>> definitions in a collections response 
+====
+[source,json]
+----
+
+"extent": {
+"spatial": {
+    "bbox": [[-180,-90,180,90]],
+    "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",
+      SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\","7030"]],
+      AUTHORITY[\"EPSG\",\"6326\"]],
+      PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],
+      UNIT[\"degree\",0.0174532925199433,AUTHORITY[\"EPSG\",\"9122\"]],
+      AUTHORITY[\"EPSG\",\"4326\"]]",
+},
+"temporal": {
+    "interval": [["2017-06-14T00:00:00Z","2017-06-14T12:00:00Z"]],
+    "values": ["2017-06-14T00:00:00Z","2017-06-14T06:00:00Z",
+               "2017-06-14T12:00:00Z","2017-06-14T18:00:00Z"],
+    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],
+            CS[TemporalDateTime,1],
+            AXIS[\"Time (T)\",future]]"
+},
+"custom": [
+    {
+        "id": "realisations",
+        "interval": [[1,50]],
+        "values": ["R50/1/1"],
+        "reference": "Ensemble members"
+    },
+    {
+        "id": "icao_ids",
+        "interval": [["EB", "EB"]],
+        "values": ["EBAW","EBBR","EBBR","EBKT","EBLG","EBOS"],
+        "reference": "https://en.wikipedia.org/wiki/ICAO_airport_code"
+    }
+]
+}
+
+----
+====
+
+The `id` field can then be used as the name of a query parameter in any of the any of the <<query-resources-section, query_types>> supported by the collection.  The query parameter value definition will follow the same conventions as the `datetime` and `z` query parameters by supporting single value, value lists and value ranges as valid inputs. 
+
+**Custom query parameter definition**
+
+[#custom-query-table,reftext='{table-caption} {counter:table-num}']
+.Custom query parameter structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **_custom_dimension_name_**^1^
+
+* <<req_edr_custom-dimension-definition,definition>> 
+
+* <<req_edr_custom-dimension-response,rules>>     |String  |No|  The value range to return data for (available options defined in the values attribute of the custom dimension definition in the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `realisations=5` 
+* `realisations=1,9,15,25` 
+* `realisations=9/15`
+|====
+
+^1^ The names of the custom dimension query parameters are defined as the `id` value within the `custom` attribute of the `extent` object in the collection metadata response.
+
+
+
+.Return the 5th, 10th, 15th and 20th ensemble members between 2022-05-10T00:00Z and 2022-05-10T06:00Z at height level 2.0 
+====
+https://server.example/global_model/area?
+
+**coords**=POLYGON((-12.602 59.367,-12.954 46.580,2.169 47.061,2.169 60.769,-12.602 59.367))
+
+&**parameter-name**=Temperature
+
+&**datetime**=2022-05-10T00:00Z/2022-05-10T06:00Z
+
+&**realisations**=R4/5/5
+
+&**z**=2.0
+
+&**crs**=EPSG:4326
+
+&**f**=CoverageJSON
+====
+
+.Only return data for EBBR EBOS between 2022-05-10T00:00Z and 2022-05-10T06:00Z from the available sites in the European area. 
+====
+https://server.example/observations/locations/europe?
+
+&**parameter-name**=wind_speed,wind_direction
+
+&**datetime**=2022-05-10T00:00Z/2022-05-10T06:00Z
+
+&**icao_ids**=EBBR,EBOS
+
+&**crs**=EPSG:4326
+
+&**f**=CoverageJSON
+====
