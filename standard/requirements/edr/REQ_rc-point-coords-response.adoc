@@ -16,7 +16,7 @@ The coordinates SHALL consist of a Well Known Text (WKT) POINT or (if supported 
 ---
 *C:*
 
-If an unsupported  Well Known Text (WKT) geometry is requested a `405` error SHOULD be returned.
+If an unsupported  Well Known Text (WKT) geometry is requested a `400` error SHOULD be returned.
 
 ---
 *D:*

@@ -4,6 +4,8 @@ content:
       type: object
       required:
         - coords
+        - within
+        - within-units
       properties:
         coords:
           description: Well Known Text Point definition

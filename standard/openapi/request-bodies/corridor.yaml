@@ -4,6 +4,10 @@ content:
         type: object
         required:
             - coords
+            - corridor-width
+            - width-units
+            - corridor-height
+            - height-units
         properties:
             coords:
                 description: Well Known Text LineString definition
