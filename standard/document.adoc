@@ -2,14 +2,14 @@
 :doctype: standard
 :encoding: utf-8
 :lang: en
-:status: draft
+:status: approved
 :committee: technical
 :draft: 3.0
 :external-id: http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0
 :docnumber: 19-086r5
 :received-date: 2022-02-11
 :issued-date: 2022-03-04
-:published-date: 2029-03-30
+:published-date: 2022-08-05
 :fullname: Mark Burgoyne
 :fullname_2: David Blodgett
 :fullname_3: Charles Heazel
@@ -19,12 +19,10 @@
 :submitting-organizations: UK Met Office; US Geological Survey (USGS); US National Weather Service; Wuhan University; Meteorological Service of Canada; Finnish Meteorological Institute; Esri; National Aeronautics and Space Administration (NASA); Météo-France
 :docfile: document.adoc
 :mn-document-class: ogc
-:mn-output-extensions: xml,html,doc,pdf
+:mn-output-extensions: html,pdf
 :local-cache-only:
 :data-uri-image:
-:pdf-uri: ./document.pdf
-:xml-uri: ./document.xml
-:doc-uri: ./document.doc
+:pdf-uri: ./19-086r5.pdf
 :edition: 1.0.1
 
 ////
