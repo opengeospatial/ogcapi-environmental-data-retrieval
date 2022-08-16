@@ -1,4 +1,4 @@
-The Corridor query returns data along and around the path defined by the `coords` parameter.  *Logic for identifying the best match for the requested corridor will depend on the <<collection-definition,collection>> and is at the discretion of the query implementer* .  The results are further filtered by the constraints defined by the following query parameters:
+The Corridor query returns data along and around the path defined by the `coords` parameter.  *Logic for identifying the best match for the requested corridor will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer* .  The results are further filtered by the constraints defined by the following query parameters:
 
 [#corridor-def-table,reftext='{table-caption} {counter:table-num}']
 .Corridor query structure
