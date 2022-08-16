@@ -6,5 +6,5 @@
 ^|*Abstract Test {ats-id}* |*/conf/post/schema*
 ^|Test Purpose |Verify that the Request Body Schema defined in the OpenAPI documentation is valid.
 ^|Requirement |<<_req_post_schema,/req/post/schema>>
-^|Test Method |. Validate that a post request with a message body format defined by the information in the OpenAPI schema produces a response with *HTTP 2xx* or *HTTP 3xx* status code.
+^|Test Method |. Validate that a POST request with a message body format defined by the information in the OpenAPI schema produces a response with *HTTP 2xx* or *HTTP 3xx* status code.
 |===
