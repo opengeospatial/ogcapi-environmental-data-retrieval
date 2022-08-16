@@ -27,7 +27,7 @@ a| **z**
 
 * <<req_edr_z-definition,definition>> 
 
-* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response a| * `z=850` 
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `z=850` 
 * `z=1000,900,850,700` 
 * `z=2/100`
 a| **datetime**
@@ -46,7 +46,7 @@ a| **crs**
 
 * <<req_edr_crs-definition,definition>> 
 
-* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response) a| * `crs=EPSG:4326` 
 * `crs=A_CUSTOM_LABEL`
 a| **f**
 
