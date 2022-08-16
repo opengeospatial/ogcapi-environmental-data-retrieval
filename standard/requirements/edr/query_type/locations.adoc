@@ -1,4 +1,4 @@
-The Locations query returns data for the named location. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query implementer*. If a location id is not defined the API *MUST* return a GeoJSON features array of valid location identifiers. 
+The Locations query returns data for the named location. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. If a location id is not defined the API *MUST* return a GeoJSON features array of valid location identifiers. 
 
 The filter constraints are defined by the following query parameters:
 [#locations-def-table,reftext='{table-caption} {counter:table-num}']
