@@ -58,4 +58,4 @@ a| **f**
 * `f=CSV`
 |====
 
-#If a client request has a *bbox* value which includes a height values and defines a *z* query parameter the *z* query parameter will be the definition of the requested height value#
+#If a client request has a *bbox* value which includes height values and defines a *z* query parameter the *z* query parameter will be the definition of the requested height value#
