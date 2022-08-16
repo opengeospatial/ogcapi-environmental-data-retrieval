@@ -34,6 +34,7 @@ post:
     - Instance data queries
   summary: 'Query end point for position queries of instance {instanceId} of collection {collectionId}'
   description: Query end point for position queries
+  
   operationId: PostInstanceDataForPoint
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
