@@ -34,6 +34,7 @@ post:
     - Instance data queries
   summary: 'Query end point for trajectory queries of instance {instanceId} of collection {collectionId} defined by a wkt linestring and a iso8601 time period'
   description: Return the data values for the data Polygon defined by the query parameters
+  
   operationId: PostInstanceDataForTrajectory
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
