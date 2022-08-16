@@ -34,6 +34,7 @@ post:
     - Instance data queries
   summary: 'Query end point for Cube queries of instance {instanceId} of collection {collectionId} defined by a cube'
   description: Return the data values for the data Cube defined by the query parameters
+  
   operationId: PostInstanceDataForCube
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
