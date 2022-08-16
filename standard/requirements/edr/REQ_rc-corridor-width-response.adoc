@@ -11,7 +11,7 @@ The `corridor-width` information is the total width of the required corridor.
 ---
 *B:*
 
-The supported `corridor-width` width units will be supplied by the query metatdata information.
+The supported `corridor-width` width units will be supplied by the query metadata information.
 
 
 [source,java]
