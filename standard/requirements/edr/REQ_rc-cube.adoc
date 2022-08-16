@@ -20,7 +20,7 @@ A `cube` GET operation MUST include a `bbox` query parameter
 ---
 *D:*
 
-A The `bbox` query parameter SHOULD only consist of four values, any vertical values defined by `bbox` will be overridden by the values assigned to the `z` query parameter
+A `bbox` query parameter SHOULD only consist of four values, any vertical values defined by `bbox` will be overridden by the values assigned to the `z` query parameter
 
 ---
 *E:*
