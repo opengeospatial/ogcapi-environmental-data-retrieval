@@ -1,4 +1,4 @@
-The Area query returns data within the polygon defined by the `coords` parameter. *Logic for identifying the best match for the requested area will depend on the <<collection-definition,collection>> and is at the discretion of the query implementer*. The height or time of the area are specified through separate parameters. The results are further filtered by the constraints defined by the following query parameters:
+The Area query returns data within the polygon defined by the `coords` parameter. *Logic for identifying the best match for the requested area will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. The height or time of the area are specified through separate parameters. The results are further filtered by the constraints defined by the following query parameters:
 
 [#area-def-table,reftext='{table-caption} {counter:table-num}']
 .Area query structure
