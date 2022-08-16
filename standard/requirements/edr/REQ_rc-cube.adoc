@@ -55,6 +55,6 @@ A `cube` GET operation SHOULD include a `crs` query parameter
 ---
 *K:*
 
-A `cube` GET operation SHOULD include a `f` query parameter
+A `cube` GET operation SHOULD include an `f` query parameter
 
 ====
