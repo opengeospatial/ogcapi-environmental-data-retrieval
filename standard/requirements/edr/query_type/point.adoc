@@ -1,4 +1,4 @@
-The Position query returns data for the requested coordinate. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query implementer*. The filter constraints are defined by the following query parameters:
+The Position query returns data for the requested coordinate. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. The filter constraints are defined by the following query parameters:
 
 [#position-def-table,reftext='{table-caption} {counter:table-num}']
 .Position query structure
