@@ -54,4 +54,5 @@ post:
     413:
       $ref: ../../responses/queries/413.yaml
     default:
-      $ref: ../../responses/core/exception.yaml          
+      $ref: ../../responses/core/exception.yaml      
+      
