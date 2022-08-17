@@ -36,7 +36,7 @@ properties:
 ----
 ====
 
-Following the conventions used for the temporal on vertical extents, custom extent objects must provide the following information:
+Following the conventions used for the temporal or vertical extents, custom extent objects must provide the following information:
 
 * id - Name of the <<rc_custom-dimensions-section,custom dimension>>
 * interval - data value range of the dimension (minimum value, maximum value)
