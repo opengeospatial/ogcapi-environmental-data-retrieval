@@ -24,3 +24,40 @@ get:
       $ref: ../../responses/queries/413.yaml
     default:
       $ref: ../../responses/core/exception.yaml
+post:
+  tags:
+    - Collection data queries
+  summary: List available items
+  description: List the items available in the collection accessible via a unique identifier
+  operationId: PostListDataItems
+  parameters:
+    - $ref: ../../parameters/collections/collectionId.yaml
+
+  requestBody:
+  
+    content:
+      application/json:
+        schema:
+            type: object
+            required:
+                - bbox
+            properties:
+                bbox:
+                    type: string
+                datetime:
+                    type: string        
+  responses:
+    200:
+      $ref: ../../responses/queries/items.yaml
+    202:
+      $ref: ../../responses/queries/202.yaml
+    308:
+      $ref: ../../responses/queries/308.yaml
+    400:
+      $ref: ../../responses/queries/400.yaml
+    404:
+      $ref: ../../responses/queries/404.yaml
+    413:
+      $ref: ../../responses/queries/413.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

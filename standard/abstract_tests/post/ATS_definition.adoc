@@ -1,0 +1,10 @@
+[[ats_post_definition]]
+{counter2:ats-id}
+[width="90%",cols="2,6a"]
+.Abstract Test {ats-id}
+|===
+^|*Abstract Test {ats-id}* |*/conf/post/definition*
+^|Test Purpose |Verify that support for HTTP POST queries is correctly defined.
+^|Requirement |<<_req_post_definition,/req/post/definition>>
+^|Test Method | Verify that any OpenAPI HTTP POST definitions provide details for the URL, Request Body type and a Request Body schema.
+|===

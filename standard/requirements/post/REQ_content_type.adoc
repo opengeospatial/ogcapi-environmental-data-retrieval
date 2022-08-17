@@ -1,0 +1,9 @@
+[[req_post_content_type]] 
+
+[requirement,type="general",id="/req/post/content_type", label="/req/post/content_type"]
+====
+*A:*
+
+OpenAPI documentation for HTTP POST queries MUST provide details for the HTTP POST request body.
+
+====

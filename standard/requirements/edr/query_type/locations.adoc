@@ -1,41 +1,41 @@
-===== Parameter locationId
+The Locations query returns data for the named location. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. If a location id is not defined the API *MUST* return a GeoJSON features array of valid location identifiers. 
 
-With the locations query a position is defined by a unique identifier that is a string value.  It can be anything as long as it is unique for the required position, for instance a http://en.wikipedia.org/wiki/Geohash[GeoHash] `gbsvn` or a World Meteorological Organization (WMO) station identifier like `03772`, or place name like `Devon`.  The metadata returned by the API must supply a geospatial definition for the identifier.
+The filter constraints are defined by the following query parameters:
+[#locations-def-table,reftext='{table-caption} {counter:table-num}']
+.locations query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **locationId**| String|No| a unique identifier for the required location, i.e. a http://en.wikipedia.org/wiki/Geohash[GeoHash], a World Meteorological Organization (WMO) station identifier or place name.  a| * `EGLL`
+* `Ottawa`
+* `limit.broom.flip`
+* `gbsvn`
+a| **datetime**
+
+* <<req_collections_rc-time-definition,definition>> 
+
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
+
+* <<req_edr_parameters-definition,definition>> 
+
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature``
+a| **crs**
+
+* <<req_edr_crs-definition,definition>> 
+
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
+
+* <<req_edr_f-definition,definition>> 
+
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
 
 
-.get a list of locationId's
-=================
-/collections/{collectionID}/locations/
-
-return a list of location identifiers and relevant metadata for the metar <<collection-definition,collection>>
-
-/collections/metar/locations/
-
-
-Valid locationId's can also be discovered via another mechanism such as the <<rc_items-section,items>> query.
-=================
-
-.locationId
-=================
-/collections/{collectionID}/locations/{locationId}
-
-return all available data for the metar <<collection-definition,collection>> for the requested location identifier, where the location is defined by the Heathrow METAR identifier
-
-/collections/metar/locations/EGLL
-=================
-
-===== *Parameter datetime*
-
-For Parameter datetime, see <<datetime>>.
-
-===== *Parameter parameter-name*
-
-For Parameter parameter-name, see <<parameter-name>>.
-
-===== *Parameter crs*
-
-For Parameter crs, see <<crs>>.
-
-===== *Parameter f*
-
-For Parameter f, see <<outputformat>>.

@@ -1,0 +1,24 @@
+[[rc_post]]
+
+
+[%unnumbered]
+[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/post",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core"]
+.POST Requirements Class
+====
+
+======
+
+[requirement,type="general",label="/req/post/definition"]
+======
+
+======
+
+[requirement,type="general",label="/req/post/content_type"]
+======
+
+======
+
+[requirement,type="general",label="/req/post/schema"]
+======
+
+====

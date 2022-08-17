@@ -1,95 +1,49 @@
-The Area query returns data within the polygon defined by the `coords` parameter. The height or time of the area are specified through separate parameters. The results are further filtered by the constraints defined by the following query parameters:
+The Area query returns data within the polygon defined by the `coords` parameter. *Logic for identifying the best match for the requested area will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. The height or time of the area are specified through separate parameters. The results are further filtered by the constraints defined by the following query parameters:
 
-===== *Parameter coords*
+[#area-def-table,reftext='{table-caption} {counter:table-num}']
+.Area query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **coords**
 
-Apply <<req_edr_coords-definition,Requirement /req/edr/coords-definition>> for Parameter coords definition.
+* <<req_edr_coords-definition,definition>> 
 
-Apply <<req_edr_coords-response,Requirement /req/edr/coords-response>> for Parameter coords response.
+* <<req_edr_polygon-coords-response,rules>>|WKT string|**Yes**| The coordinates are defined by a Polygon Well Known Text (WKT) string a| * `coords=POLYGON\((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))`
+* `coords=MULTIPOLYGON\(((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8)),((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3)))`
+a| **z**
 
-Only data that has a geometry that intersects the <<area-definition,area>> defined by the polygon
-are selected.
+* <<req_edr_z-definition,definition>> 
 
-The polygon is defined using a Well Known Text string following
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
 
-`coords=POLYGON\((x y,x1 y1,x2 y2,...,xn yn, x y))`
+* <<req_collections_rc-time-definition,definition>> 
 
-which are values in the coordinate system defined by the crs query parameter
-(if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
 
-For instance a polygon that roughly describes an <<area-definition,area>> that contains
-South West England in WGS84 would look like:
+* <<req_edr_parameters-definition,definition>> 
 
-`coords=POLYGON\((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3))`
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature``
+a| **crs**
 
-see http://portal.opengeospatial.org/files/?artifact_id=25355 and https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+* <<req_edr_crs-definition,definition>> 
 
-The coords parameter will only support 2D POLYGON.
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
 
-.A polygon covering the UK
-=================
-An <<area-definition,area>> covering the UK in WGS84 (from 15°W to 5°E and from 60.95°S to 48.8°S)
+* <<req_edr_f-definition,definition>> 
 
-`coords=POLYGON\((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8))`
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
 
-=================
-
-
-.Multiple areas
-=================
-Selecting data for two different regions
-
-`coords=MULTIPOLYGON\(((-15 48.8,-15 60.95,5 60.85,5 48.8,-15 48.8)),((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1 50.3)))`
-=================
-
-
-
-===== *Parameter z*
-
-Apply <<req_edr_z-definition,Requirement /req/edr/z-definition>> for Parameter z definition.
-
-Apply <<req_edr_z-response,Requirement /req/edr/z-response>> for Parameter z response.
-
-Define the vertical level to return data from
-i.e. z=level
-
-.A single vertical level
-===========
-
-For example if the 850hPa pressure level is being queried
-
-`z=850`
-===========
-
-.Return data at all levels defined by a list of vertical levels
-===========
-
-Request data at levels 1000hPa, 900hPa, 850hPa, and 700hPa
-
-`z=1000,900,850,700`
-===========
-
-.Return data for all levels between and including 2 defined levels
-===========
-
-Request data for all levels between 2m and 100m
-
-`z=2/100`
-===========
-
-`When not specified the API MUST return data from all available levels`
-
-===== *Parameter datetime*
-
-For Parameter datetime, see <<datetime>>.
-
-===== *Parameter parameter-name*
-
-For Parameter parameter-name, see <<parameter-name>>.
-
-===== *Parameter crs*
-
-For Parameter crs, see <<crs>>.
-
-===== *Parameter f*
-
-For Parameter f, see <<outputformat>>.
+#If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#

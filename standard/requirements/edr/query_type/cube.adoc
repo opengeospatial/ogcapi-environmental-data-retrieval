@@ -1,12 +1,16 @@
 The `Cube` query returns a data cube defined by the  `bbox` and `z` parameters.
 The results are further filtered by the constraints defined by the following query parameters:
 
-===== *Parameter bbox*
+[#cube-def-table,reftext='{table-caption} {counter:table-num}']
+.Cube query structure
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
+a| **bbox**
 
-Apply <<req_core_rc-bbox-definition,Requirement /req/core/rc-bbox-definition>> for Parameter bbox definition.
+* <<req_core_rc-bbox-definition,definition>> 
 
-Apply <<req_core_rc-bbox-response,Requirement /req/core/rc-bbox-response>> for Parameter bbox response.
-
+* <<req_core_rc-bbox-response,rules>>|String|**Yes** a| The coordinates are defined by a BBOX string 
 Only data that has a geometry that intersects the <<area-definition,area>> defined by the <<req_core_rc-bbox-definition,bbox>>
 are selected.
 
@@ -18,52 +22,40 @@ are selected.
 bbox=minx,miny,maxx,maxy
 
 The X and Y coordinates are values in the coordinate system defined by the crs query parameter.
-If crs is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in meters above mean sea level.
+If crs is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in metres above mean sea level. a| * `bbox=-6.0,50.0,-4.35,52.0`
+a| **z**
 
-For instance a <<req_core_rc-bbox-definition,bbox>> that roughly describes an <<area-definition,area>> that contains
-South West England in WGS84 would look like
+* <<req_edr_z-definition,definition>> 
 
-.A cube covering the South West of the UK
-=================
+* <<req_edr_z-response,rules>>     |String  |No|  The vertical level to return data for (available options defined in the vertical attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `z=850` 
+* `z=1000,900,850,700` 
+* `z=2/100`
+a| **datetime**
 
-`bbox=-6.0,50.0,-4.35,52.0`
+* <<req_collections_rc-time-definition,definition>> 
 
-=================
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
+* `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
+a| **parameter-name**
 
-===== *Parameter z*
+* <<req_edr_parameters-definition,definition>> 
 
-Apply <<req_edr_z-definition,Requirement /req/edr/z-definition>> for Parameter z definition.
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names available options listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response a| * `parameter-name=Visibility,Air%20Temperature``
+a| **crs**
 
-Apply <<req_edr_cube-z-response,Requirement /req/edr/cube-z-response>> for Parameter z response for cube queries.
+* <<req_edr_crs-definition,definition>> 
 
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response) a| * `crs=EPSG:4326` 
+* `crs=A_CUSTOM_LABEL`
+a| **f**
 
-.A cube covering all data between vertical levels 100 and 550
-=================
-`z=100/550`
-=================
+* <<req_edr_f-definition,definition>> 
 
-.A cube covering data at vertical levels 10,80,100
-=================
-`z=10,80,200`
-=================
+* <<req_edr_f-response,rules>>  |String|No| Data format for the output data (available options listed in the <<collection_metadata_desc, collections>> response), schemas describing JSON and XML outputs can be defined in the OpenAPI documentation (see https://swagger.io/docs/specification/data-models/) a| * `f=GeoJSON`
+* `f=netCDF4`
+* `f=CoverageJSON`
+* `f=CSV`
+|====
 
-.A cube covering data for 20 vertical levels at 50 unit intervals starting a level 100
-=================
-`z=R20/100/50`
-=================
-
-===== *Parameter datetime*
-
-For Parameter datetime, see <<datetime>>.
-
-===== *Parameter parameter-name*
-
-For Parameter parameter-name, see <<parameter-name>>.
-
-===== *Parameter crs*
-
-For Parameter crs, see <<crs>>.
-
-===== *Parameter f*
-
-For Parameter f, see <<outputformat>>.
+#If a client request has a *bbox* value which includes height values and defines a *z* query parameter the *z* query parameter will be the definition of the requested height value#

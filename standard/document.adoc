@@ -7,15 +7,15 @@
 :draft: 3.0
 :external-id: http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0
 :docnumber: 19-086r6
-:received-date: 2022-02-11
-:issued-date: 2022-03-04
-:published-date: 2029-03-30
+:received-date: 2022-07-26
+:issued-date: 2022-09-30
+:published-date: 2023-03-30
 :fullname: Mark Burgoyne
 :fullname_2: David Blodgett
-:fullname_3: Charles Heazel
+:fullname_3: Chuck Heazel
 :fullname_4: Chris Little
 :docsubtype: Interface
-:keywords: ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, GeoJSON, CoverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
+:keywords: ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, geoJSON, coverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
 :submitting-organizations: UK Met Office; US Geological Survey (USGS); US National Weather Service; Wuhan University; Meteorological Service of Canada; Finnish Meteorological Institute; Esri; National Aeronautics and Space Administration (NASA); Météo-France
 :docfile: document.adoc
 :mn-document-class: ogc
@@ -25,7 +25,7 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
-:edition: 1.1.0
+:edition: 1.1
 
 ////
 Make sure to complete each included document
