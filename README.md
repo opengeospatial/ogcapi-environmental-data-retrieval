@@ -135,9 +135,9 @@ In December 2020, the OGC Technical Committee agreed, with no objections to unan
 
 On 28 April 2021, at 16:00 UTC, the standard started editing for publication as a formal standard.
 
-The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 September 2021.
+The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 September 2021 and a Corrigendum V1.0.1 published on 5 August 2022.
 
-The Working Group is now developing a Corrigendum (V1.0.1) and backwards-compatible future enhancements (V1.1).
+The Working Group is now developing a backwards-compatible V1.1 and future enhancements.
 
 ### Best Practice
 
