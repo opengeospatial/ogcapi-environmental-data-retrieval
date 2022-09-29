@@ -1,4 +1,4 @@
-Support for dimensions other than the standard GeoTemporal dimensions can be provided by adding the custom dimension type to the EDR extent object in the <<collection_metadata_desc, collections>> response.  The custom dimension type allows for an array of custom query dimensions to be defined.  Each custom dimension item is defined with the following characteristics (using an OpenAPI Specification 3.0 fragment) 
+Support for dimensions other than the standard spatio-temporal dimensions can be provided by adding the custom dimension type to the EDR extent object in the <<collection_metadata_desc, collections>> response.  The custom dimension type allows for an array of custom query dimensions to be defined.  Each custom dimension item is defined with the following characteristics (using an OpenAPI Specification 3.0 fragment) 
 
 .Schema for custom query parameter metadata 
 ====
