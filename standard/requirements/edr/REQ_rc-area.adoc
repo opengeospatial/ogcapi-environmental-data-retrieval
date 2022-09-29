@@ -8,43 +8,50 @@
 For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/area`.
 
 ---
+
 *B:*
+
+For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/area`.
+
+---
+
+*C:*
 
 The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
 
 ---
-*C:*
+*D:*
 
 An `area` GET operation MUST include a `coords` query parameter
 
 ---
-*D:*
+*E:*
 
 If the `coords` query parameter is not specified a HTTP `400` error should be generated
 
 ---
-*E:*
-
-An `area` GET operation MAY include a `z` query parameter
-
----
 *F:*
 
-An `area` GET operation SHOULD include a `parameter-name` query parameter
+An `area` GET or POST operation MAY include a `z` query parameter
 
 ---
 *G:*
 
-An `area` GET operation MAY include a `datetime` query parameter
+An `area` GET or POSToperation SHOULD include a `parameter-name` query parameter
 
 ---
 *H:*
 
-An `area` GET operation SHOULD include a `crs` query parameter
+An `area` GET or POST operation MAY include a `datetime` query parameter
 
 ---
 *I:*
 
-An `area` GET operation SHOULD include a `f` query parameter
+An `area` GET or POST operation SHOULD include a `crs` query parameter
+
+---
+*J:*
+
+An `area` GET or POST operation SHOULD include a `f` query parameter
 
 ====

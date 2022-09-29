@@ -335,7 +335,7 @@ a set of key-value pairs, where the key is the name of the parameter and the val
 .Parameter Object
 |==========================
 |Field Name|Type|Required|Description
-|**id**  |String|**Yes**| parameter id
+|id  |String|No| parameter id
 |**type**  |String|**Yes**| Always 'Parameter'
 |label  | String |No| A short text label for the parameter
 |description |String|No|  A description of the parameter

@@ -1,0 +1,76 @@
+[[req_edr_rc-position]]
+
+[requirement,type="general",id="/req/queries/position", label="/req/queries/position"]
+====
+
+*A:*
+
+For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/radius`.
+
+---
+*B:*
+
+For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/radius`.
+
+---
+*C:*
+
+The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
+
+---
+*D:*
+
+A `radius` GET or POST operation MUST include a `coords` query parameter
+
+---
+*E:*
+
+If the `coords` query parameter is not specified a HTTP `400` error should be generated
+
+---
+*F:*
+
+A `radius` GET or POST operation MUST include a `within` query parameter
+
+---
+*G:*
+
+If the `within` query parameter is not specified a HTTP `400` error should be generated
+
+---
+*H:*
+
+A `radius` GET or POST operation MUST include a `within-units` query parameter
+
+---
+*I:*
+
+If the `within-units` query parameter is not specified a HTTP `400` error should be generated
+
+---
+
+*J:*
+
+A `radius` GET or POST operation MAY include a `z` query parameter
+
+---
+*K:*
+
+A `radius` GET or POST operation SHOULD include a `parameter-name` query parameter
+
+---
+*L:*
+
+A `radius` GET or POST operation MAY include a `datetime` query parameter
+
+---
+*M:*
+
+A `radius` GET or POST operation SHOULD include a `crs` query parameter
+
+---
+*N:*
+
+A `radius` GET or POST operation SHOULD include an `f` query parameter
+
+====
