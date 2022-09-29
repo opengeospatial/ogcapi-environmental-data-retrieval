@@ -10,91 +10,96 @@ For every collection identified in the collections response (path `/collections`
 ---
 *B:*
 
-The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/corridor`.
 
 ---
 *C:*
 
-A `corridor` GET operation MUST include a `coords` query parameter
+The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
 
 ---
 *D:*
 
-If the `coords` query parameter is not specified a HTTP `400` error should be generated
+A `corridor` GET operation MUST include a `coords` query parameter
 
 ---
 *E:*
 
-A `corridor` GET operation MUST include a `corridor-width` query parameter
+If the `coords` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *F:*
 
-If the `corridor-width` query parameter is not specified a HTTP `400` error should be generated
+A `corridor` GET operation MUST include a `corridor-width` query parameter
 
 ---
 *G:*
 
-A `corridor` GET operation MUST include a `corridor-height` query parameter
+If the `corridor-width` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *H:*
 
-If the `corridor-height` query parameter is not specified a HTTP `400` error should be generated
+A `corridor` GET operation MUST include a `corridor-height` query parameter
 
 ---
 *I:*
 
-A `corridor` GET operation MUST include a `width-units` query parameter
+If the `corridor-height` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *J:*
 
-If the `width-units` query parameter is not specified a HTTP `400` error should be generated
+A `corridor` GET operation MUST include a `width-units` query parameter
 
 ---
 *K:*
 
-If the `width-units` query parameter value is not one of the supported values a HTTP `400` error should be generated
+If the `width-units` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *L:*
 
-A `corridor` GET operation MUST include a `height-units` query parameter
+If the `width-units` query parameter value is not one of the supported values a HTTP `400` error should be generated
 
 ---
 *M:*
 
-If the `height-units` query parameter is not specified a HTTP `400` error should be generated
+A `corridor` GET operation MUST include a `height-units` query parameter
 
 ---
 *N:*
 
-If the `height-units` query parameter value is not one of the supported values a HTTP `400` error should be generated
+If the `height-units` query parameter is not specified a HTTP `400` error should be generated
 
 ---
 *O:*
 
-A `corridor` GET operation MAY include a `z` query parameter
+If the `height-units` query parameter value is not one of the supported values a HTTP `400` error should be generated
 
 ---
 *P:*
 
-A `corridor` GET operation SHOULD include a `parameter-name` query parameter
+A `corridor` GET or POST operation MAY include a `z` query parameter
 
 ---
 *Q:*
 
-A `corridor` GET operation MAY include a `datetime` query parameter
+A `corridor` GET or POST operation SHOULD include a `parameter-name` query parameter
 
 ---
 *R:*
 
-A `corridor` GET operation SHOULD include a `crs` query parameter
+A `corridor` GET or POST operation MAY include a `datetime` query parameter
 
 ---
 *S:*
 
-A `corridor` GET operation SHOULD include a `f` query parameter
+A `corridor` GET or POST operation SHOULD include a `crs` query parameter
+
+---
+*T:*
+
+A `corridor` GET or POST operation SHOULD include a `f` query parameter
 
 ====
