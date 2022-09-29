@@ -16,7 +16,7 @@ The EDR API can be considered a 'Sampling API'. The query creates a discrete sam
 
 The functionality provided by EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the simple similar use cases addressed by SOS and WCS in the past.
 
-The EDR API defines behavior for the HTTP GET operation. Future versions may introduce additional methods as required, consistent with RFC 7231.
+The EDR API defines behavior for the HTTP GET and POST operations. Future versions may introduce additional methods as required, consistent with RFC 7231.  The HTTP methods supported by an EDR service MUST be defined by the service OpenAPI description.
 
 [[resource-paths]]
 === Resource Paths
@@ -25,24 +25,25 @@ The EDR API defines behavior for the HTTP GET operation. Future versions may int
 
 [#edr-paths,reftext='{table-caption} {counter:table-num}']
 .Environmental Data Retrieval API Paths
-[width="90%",cols="3,2,5",options="header"]
+[width="90%",cols="2,2,1,5",options="header"]
 |===
-^|**Path Template** ^|**Relation** ^|**Resource**
-3+^|**Common**
-|<<landing-page,{root}/>> |none |Landing page
+^|**Path Template** ^|**Relation** ^|**Method** ^|**Resource**
+4+^|**Common**
+|<<landing-page,{root}/>> |none |GET|Landing page
 |<<api-definition,{root}/api>> |`service-desc` +
 or +
-`service-doc` |API Description (optional)
-|<<conformance-classes,{root}/conformance>> |`conformance` |Conformance Classes
-3+^|**Collections**
-|<<collection-information-queries,{root}/collections>> |`data` |Metadata describing the <<collection-definition,collections>> of data available from this API.
-|<<collection-information-queries,{root}/collections/{collectionId}>> | |Metadata describing the <<collection-definition,collection>> of data which has the unique identifier `{collectionId}`
-3+^|**Features**
-|<<collection-information-queries,{root}/collections/{collectionId}/items>>|`items`|Retrieve metadata about available items
-3+^|**Queries**
-|<<collection-information-queries,{root}/collections/{collectionId}/{queryType}>>| |Retrieve data according to the query pattern
-|<<collection-information-queries,{root}/collections/{collectionId}/instances>>| |Retrieve metadata about <<instance-definition,instances>> of a <<collection-definition,collection>>
-|<<collection-information-queries,{root}/collections/{collectionId}/instances/{instanceId}>>| |Retrieve metadata from a specific <<instance-definition,instance>> of a <<collection-definition,collection>> which has the unique identifier `{instanceId}`
+`service-doc` |GET|API Description (optional)
+|<<conformance-classes,{root}/conformance>> |`conformance` |GET|Conformance Classes
+4+^|**Collections**
+|<<collection-information-queries,{root}/collections>> |`data` |GET |Metadata describing the <<collection-definition,collections>> of data available from this API.
+|<<collection-information-queries,{root}/collections/{collectionId}>> | |GET|Metadata describing the <<collection-definition,collection>> of data which has the unique identifier `{collectionId}`
+4+^|**Features**
+|<<collection-information-queries,{root}/collections/{collectionId}/items>>|`items`|GET|Retrieve metadata about available items
+4+^|**Queries**
+|<<collection-information-queries,{root}/collections/{collectionId}/{queryType}>>| |GET, POST(Optional)|Retrieve data according to the query pattern from a <<collection-definition,collection>> with the unique identifier `{collectionId}`
+|<<collection-information-queries,{root}/collections/{collectionId}/instances>>| |GET|Retrieve metadata about <<instance-definition,instances>> of a <<collection-definition,collection>>
+|<<collection-information-queries,{root}/collections/{collectionId}/instances/{instanceId}>>| |GET|Retrieve metadata from a specific <<instance-definition,instance>> of a <<collection-definition,collection>> with the unique identifiers `{collectionId}` and `{instanceId}`
+|<<collection-information-queries,{root}/collections/{collectionId}/instances/{instanceId}/{queryType}>>| |GET, POST(Optional)|Retrieve data according to the query pattern from a specific <<instance-definition,instance>> of a <<collection-definition,collection>>  with the unique identifiers `{collectionId}` and `{instanceId}`
 |===
 
 Where:
