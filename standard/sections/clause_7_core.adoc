@@ -9,7 +9,7 @@ The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 
 [[rc_core-section]]
 === Overview
 
-The `Core` Requirements Class of OGC API — Environmental Data Retrieval defines the requirements for locating, understanding, and accessing spatio-temporal data resources.
+The OGC API — Environmental Data Retrieval Core Requirements Class defines the requirements for locating, understanding, and accessing spatio-temporal data resources.
 
 See <<rc_core,Requirements Class "OGC API — Environmental Data Retrieval Core">> for a detailed specification of the `Core` Requirements Class.
 
@@ -46,7 +46,7 @@ OGC API — Common defines a set of common capabilities which are applicable
 [[landing-page]]
 ==== API landing page
 
-The landing page provides links to start exploration of the resources offered by an API. Its most important component is a list of links. OGC API - Common already requires some common links, sufficient for this standard, that are stated in the following Requirements Class of OGC API - Common:
+The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. OGC API - Common already requires some common links, sufficient for this standard, that are stated in the following Requirements Class of OGC API - Common:
 
 .Dependencies
 
@@ -115,7 +115,7 @@ The requirements for handling unsuccessful requests are provided in Recommendati
 [[conformance-classes]]
 ==== Declaration of conformance classes
 
-To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API server, the API has to declare the conformance classes it claims to have implemented.
+To support "generic" clients that want to access multiple OGC API standards and extensions - and not "just" a specific API server, the EDR API has to declare the conformance classes it claims to have implemented.
 
 Support for the declaration of conformance classes is specified in the following Requirements Class of OGC API - Common:
 
@@ -134,7 +134,7 @@ Both techniques are required by OGC API — Common.
 
 ===== Response
 
-A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this API claims conformance. The schema for this resource is defined in OGC API — Common and provided for reference in <<conformance-schema>>.
+A successful response to the Conformance operation is a list of URLs. Each URL identifies an OGC Conformance Class for which this EDR API claims conformance. The schema for this resource is defined in OGC API — Common and provided for reference in <<conformance-schema>>.
 
 Apply Requirement <<req_core_conformance,/req/core/conformance>> on declaration of Core conformance classes.
 
