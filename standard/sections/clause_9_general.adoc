@@ -48,7 +48,7 @@ include::../recommendations/core/REC_etag.adoc[]
 [[cross-origin]]
 === Support for Cross-Origin Requests
 
-Access to data from a HTML page is by default prohibited for security reasons, if the data is located on another host than the webpage ("same-origin policy"). A typical example is a web-application accessing feature data from multiple distributed datasets.
+If data is located on another host than the webpage ("same-origin policy"), access to data from a HTML page is by default prohibited for security reasons. A typical example is a web-application accessing feature data from multiple distributed datasets.
 
 include::../recommendations/core/REC_cross-origin.adoc[]
 
@@ -60,9 +60,9 @@ Two common mechanisms to support cross-origin requests are:
 [[asynchronous_queries]]
 === Asynchronous queries
 
-It will not always be possible to respond to queries synchronously. This standard does not specify how to handle any asynchrony. Different services may propose different best practices.
+Responding to queries synchronously is not always be possible. The EDR API standard does not specify how to handle asynchronous requests. Different services may propose different best practices.
 
-For example, if the query requires handling requests asynchronously, one option, but there are others, is that the system could respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
+For example, if the query requires handling requests asynchronously, one option of many, is that the system could respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
 
 [[coordinate_reference_system]]
 === Coordinate Reference Systems
@@ -94,7 +94,7 @@ Requirement <<req_core_http,`/req/core/http`>> implies that the encoding of a re
 
 The section <<media-types-section,Media Types>> includes guidance on media types for encodings that are specified in this document.
 
-Note that any API that supports multiple encodings will have to support a mechanism to create encoding-specific URIs for resources in order to express links, for example, to alternative representations of the same resource. This document does not mandate any particular approach to how this is supported by the API.
+Note that any API that supports multiple encodings will have to support a mechanism to create encoding-specific URIs for resources to express links, such as for alternative representations of the same resource. This document does not mandate any approach to how this is supported by the API.
 
 As clients simply need to dereference the URI of the link, the implementation details and the mechanism of how the encoding is included in the URI of the link are not important. Developers interested in the approach of a particular implementation, can study the API definition.
 
@@ -102,8 +102,8 @@ As clients simply need to dereference the URI of the link, the implementation de
 =========================================================
 Two common approaches are:
 
-* an additional path for each encoding of each resource (this can be expressed, for example, using format specific suffixes like `.html`);
-* an additional query parameter (for example, `accept` or `f`) that overrides the Accept header of the HTTP request.
+* An additional path for each encoding of each resource (this can be expressed, for example, using format specific suffixes like `.html`);
+* An additional query parameter (for example, `accept` or `f`) that overrides the Accept header of the HTTP request.
 =========================================================
 
 === Link Headers
@@ -131,9 +131,9 @@ An example OpenAPI definition document is available at http://schemas.opengis.ne
 
 Apply <<req_oas30_completeness,Requirement /req/oas30/completeness>> for OpenAPI 3.0 Completeness.
 
-Note, for example, that APIs which are access-controlled (see <<security,Security>>), support web cache validation, CORS or that use HTTP redirection will make use of additional HTTP status codes beyond regular codes such as `200` for successful GET requests and `400`, `404` or `500` for error situations. See <<http-status-codes>>.
+Note, for example, that APIs which are access-controlled (see <<security,Security>>), support web cache validation, CORS, or that use HTTP redirection will make use of additional HTTP status codes as well as common codes such as `200` for successful GET requests and `400`, `404` or `500` for error situations. See <<http-status-codes>>.
 
-Clients have to be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.
+Clients must be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.
 
 [[exceptions]]
 ==== Exceptions
@@ -158,7 +158,7 @@ content:
 [[security]]
 === Security
 
-The <<OGC19-072,OGC API - Common - Part 1: Core>> specification does not mandate any specific security controls. However, it was constructed so that security controls can be added without impacting conformance.
+The <<OGC19-072,OGC API - Common - Part 1: Core>> Standard does not mandate any specific security controls. However, the Standard was constructed so that security controls can be added without impacting conformance.
 
 Apply <<req_oas30_security,Requirement /req/oas30/security>> for OpenAPI 3.0 Security support.
 
