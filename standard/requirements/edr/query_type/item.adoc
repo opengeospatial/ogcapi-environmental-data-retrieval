@@ -53,18 +53,18 @@ a| **limit**
 
 |====
 
-To retrieve an item, specify the required Item identifier. 
-
 .itemId
 =================
 
+To retrieve an item, specify the required Item identifier: 
+
 `/collections/{collectionId}/items/{itemId}`
 
-e.g. return information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar <<collection-definition,collection>>. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station.
+The following example returns information for the requested item with an id of KIAD_2020-05-19T00Z from the Metar <<collection-definition,collection>>. Returned data would include a location query end point, time range, a list of available parameters, and a representative geometry for the KIAD METAR station.
 
 `/collections/metar/items/KIAD_2020-05-19T00Z`
 
-e.g. return information for the requested item with an id of warning_12345 from the forecast <<collection-definition,collection>>. Returned data would include an <<area-definition,area>> query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.
+The following example returns information for the requested item with an id of warning_12345 from the forecast <<collection-definition,collection>>. Returned data would include an <<area-definition,area>> query end point, time range, a list of available parameters and a representative geometry for the warning_12345 warning area.
 
 `/collections/forecast/items/warning_12345`
 
