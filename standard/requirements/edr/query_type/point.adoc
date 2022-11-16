@@ -22,7 +22,7 @@ a| **datetime**
 
 * <<req_collections_rc-time-definition,definition>> 
 
-* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
+* <<req_core_rc-time-response,rules>> |String  |No| Datetime range to return data (the available range is defined in the temporal attribute of the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `datetime=2018-02-12T00:00Z` 
 * `datetime=2018-02-12T00:00/2018-03-18T12:31Z`
 * `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
 a| **parameter-name**
@@ -34,7 +34,7 @@ a| **crs**
 
 * <<req_edr_crs-definition,definition>> 
 
-* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
+* <<req_edr_crs-response,rules>>    |String|No|  Coordinate reference system identifier for the **coords** values and output data (available options listed in the <<collection_metadata_desc, collections>> metadata response a| * `crs=EPSG:4326` 
 * `crs=A_CUSTOM_LABEL`
 a| **f**
 
@@ -46,4 +46,4 @@ a| **f**
 * `f=CSV`
 |====
 
-#If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value#
+#If a client request has a *coords* value which includes a height value and defines a *z* query parameter, the *z* query parameter will be the requested height value#
