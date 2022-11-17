@@ -18,12 +18,14 @@ The <<glossary,Glossary>> includes terms from other standards and specifications
 [[area-definition]]
 === area
 
-region specified with a geographic envelope that may have vertical dimension
+region specified with a geographic envelope that may have a vertical extent
 
 [[corridor-definition]]
 === corridor
 
 two parameter set of points around a trajectory
+
+(Note: generalised from the ISO definition of a trajectory)
 
 [[cube-definition]]
 === cube
@@ -42,7 +44,7 @@ NOTE: A location is represented by one of a set of data types that describe a po
 [[instance-definition]]
 === instance
 
-version, release, or run of a given data collection
+attribute, such as version, release, or run, of a given data collection
 
 [[position-definition]]
 === position
@@ -56,8 +58,8 @@ data type that describes a point or geometry potentially occupied by an object o
 
 region specified with a geographic position and radial distance
 
-[[spatio-temporal-data-definition]]
-=== spatio-temporal data
+[[spatiotemporal-data-definition]]
+=== spatiotemporal data
 
 data associated with a position in space-time
 

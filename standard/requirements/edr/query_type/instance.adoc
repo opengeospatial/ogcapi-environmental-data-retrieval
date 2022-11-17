@@ -1,8 +1,8 @@
-It is not unusual in the scientific world for there to be multiple versions or instances of the same <<collection-definition,collection>>, where the same information is reprocessed or regenerated.  Although they could be described as new <<collection-definition,collections>> the instance query type allows this data to be described as different views of the same <<collection-definition,collection>>.
+Having multiple versions or instances of the same <<collection-definition,collection>>, where the same information is reprocessed or regenerated is not unusal.  Although these versions could be described as new <<collection-definition,collections>> the instance query type allows this data to be described as different views of the same <<collection-definition,collection>>.
 
 ===== *Parameter instanceId*
 
-A unique identifier for the instance of the <<collection-definition,collection>>
+A unique identifier for the instance of the <<collection-definition,collection>> is specified as:
 
 /collections/{collectionId}/instance/{instanceId}
 
@@ -24,7 +24,7 @@ A unique identifier for the instance of the <<collection-definition,collection>>
 
 ===== *Parameter queryType*
 
-The queryType options are exactly the same as those available to <<collection-definition,collections>> that do not have multiple instances and support the same query parameters and functionality.  See the <<query-resource-table>> for the  mappings of the query types.
+The queryType options are exactly the same as those available for <<collection-definition,collections>> that do not have multiple instances and support the same query parameters and functionality.  See the <<query-resource-table>> for the  mappings of the query types. The queryType structure is:
 
 /collections/{collectionId}/instance/{instanceId}/{queryType}
 
