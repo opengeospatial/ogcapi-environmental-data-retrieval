@@ -76,14 +76,14 @@ properties:
             the extent or all relevant geometries.
           oneOf:
             - items:
-                minItems: 4
-                maxItems: 4
                 type: number
+              minItems: 4
+              maxItems: 4                
               type: array  
             - items:
-                minItems: 6
-                maxItems: 6
                 type: number
+              minItems: 6
+              maxItems: 6
               type: array  
         example:
           - -180
