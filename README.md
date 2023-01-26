@@ -74,7 +74,7 @@ The EDR API can be considered a 'Sampling API'. EDR queries create discrete samp
 
 ### Standard and Draft Specifications
 
-The standard is in the V1.0.0 Branch.
+The standard is in the V1.0.1 Branch.
 
 The Master Branch is the latest draft of the standard, currently V1.1.0, and is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
 
