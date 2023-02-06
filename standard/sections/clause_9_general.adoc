@@ -71,7 +71,6 @@ As discussed in Chapter 9 of the OGC/W3C Spatial Data on the Web <<SDWBP,Best Pr
 
 For the reasons discussed in the Best Practices, EDR APIs SHOULD support WGS84 longitude and latitude (http://www.opengis.net/def/crs/OGC/1.3/CRS84) as a coordinate reference system.
 
-Apply <<req_core_crs84,Requirement /req/core/crs84>> for CRS84 support.
 
 [[rc_encoding-section]]
 === Encodings

@@ -11,9 +11,9 @@
 
 ==== General Tests
 
-===== CRS 84
+===== CRS
 
-include::core/ATS_crs84.adoc[]
+include::core/ATS_crs.adoc[]
 
 ==== Environmental Data Collections {root}/collections
 
