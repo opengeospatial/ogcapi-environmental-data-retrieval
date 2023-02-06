@@ -31,7 +31,7 @@ include::../requirements/core/REQ_conformance-success.adoc[]
 
 include::../requirements/core/REQ_http.adoc[]
 
-include::../requirements/core/REQ_crs84.adoc[]
+include::../requirements/core/REQ_crs.adoc[]
 
 :sectnums:
 
