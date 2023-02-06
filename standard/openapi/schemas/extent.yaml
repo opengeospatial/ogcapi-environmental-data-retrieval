@@ -76,14 +76,14 @@ properties:
             the extent or all relevant geometries.
           oneOf:
             - items:
-                minItems: 4
-                maxItems: 4
                 type: number
+              minItems: 4
+              maxItems: 4                
               type: array  
             - items:
-                minItems: 6
-                maxItems: 6
                 type: number
+              minItems: 6
+              maxItems: 6
               type: array  
         example:
           - -180
@@ -140,7 +140,7 @@ properties:
             Provides information about the time intervals available in the collection 
             as ISO8601 compliant dates, either as a time range specified 
             as start time / end time  (e.g. 2017-11-14T09:00Z/2017-11-14T21:00Z)  or
-            as number of repetitions / start time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) 
+            as number of repeatitions / end time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) 
             or a list of time values (e.g.
             2017-11-14T09:00Z,2017-11-14T12:00Z,2017-11-14T15:00Z,2017-11-14T18:00Z,2017-11-14T21:00Z)
         type: array
@@ -218,7 +218,7 @@ properties:
           nullable: true
           example:
             - ["2/100"]
-            - ["R50/1000/-50"]
+            - ["R20/1000/-50"]
             - ["2","10","80", "100"]
       vrs:
         description: |-
