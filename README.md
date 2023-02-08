@@ -76,10 +76,10 @@ The EDR API can be considered a 'Sampling API'. EDR queries create discrete samp
 
 The standard is in the V1.0.1 Branch.
 
-The Master Branch is the latest draft of the standard, currently V1.1.0, and is built daily (based on the configuration contained in the [asciidoctor.json](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/asciidoctor.json) file):
+The Master Branch is the latest draft of the standard, currently V1.1.0, and is built daily (based on the configuration contained in this [GitHub Action](https://github.com/opengeospatial/ogcna-auto-review/blob/main/.github/workflows/generate_19-086r6.yml) file):
 
-* [OGC API - Environmental Data Retrieval Standard, Version 1.0.0](http://www.opengis.net/doc/IS/ogcapi-edr-1/1.0)
-* [OGC API - Environmental Data Retrieval Standard, with Corrigendum, Version 1.0.1](https://opengeospatial.github.io/ogcna-auto-review/19-086r5.html)
+* [OGC API - Environmental Data Retrieval Standard, Version 1.0.0](https://docs.ogc.org/is/19-086r4/19-086r4.html)
+* [OGC API - Environmental Data Retrieval Standard, with Corrigendum, Version 1.0.1](https://docs.ogc.org/is/19-086r5/19-086r5.html)
 * DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
 * DRAFT [OGC API - Environmental Data Retrieval Standard, Version 1.1.0](https://opengeospatial.github.io/ogcna-auto-review/19-086r6.html)
 
@@ -87,14 +87,17 @@ The Master Branch is the latest draft of the standard, currently V1.1.0, and is 
 
 An OGC API-EDR conformance test suite is being developed so that implementations can be formally certified as conforming to the standard, if so desired.
 
-The [Executable Test Suite (ETS) of OGC API - EDR](http://cite.opengeospatial.org/te2/) is at Beta version, second revision.
+The [Executable Test Suite (ETS) of OGC API - EDR](https://cite.ogc.org/teamengine/) is available on the OGC Validator.
 
-Implementers should first focus on passing the Core conformance class, as the minimum needed to apply for certification. The first three implementations to pass the compliance testing and certification procedure, while the test is in Beta, will have the annual certification fee waived for the first year.
+Implementations that pass the conformance tests can be submitted for Compliance certification, by following the steps to [Get Certified](https://www.ogc.org/compliance/getCertified).
+
+Implementations that are Certified OGC Compliant are listed on the [OGC Product Database](https://www.ogc.org/resource/products/compliant?display_opt=1&specid=1247).
 
 If you encounter any bugs, please [log the issues](https://github.com/opengeospatial/ets-ogcapi-edr10/issues).
 
 There are three approaches to testing:
-* Option 1: Run the ETS on the [Beta OGC Validator](http://cite.opengeospatial.org/te2/).
+
+* Option 1: Run the ETS on the [OGC Validator](https://cite.ogc.org/teamengine/).
 
 * Option 2: Run the ETS through `docker` by executing this command: `docker run -p 8081:8080 ogccite/ets-ogcapi-edr10`
 
