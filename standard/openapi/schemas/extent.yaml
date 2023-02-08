@@ -140,7 +140,7 @@ properties:
             Provides information about the time intervals available in the collection 
             as ISO8601 compliant dates, either as a time range specified 
             as start time / end time  (e.g. 2017-11-14T09:00Z/2017-11-14T21:00Z)  or
-            as number of repeatitions / end time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) 
+            as number of repetitions / end time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) 
             or a list of time values (e.g.
             2017-11-14T09:00Z,2017-11-14T12:00Z,2017-11-14T15:00Z,2017-11-14T18:00Z,2017-11-14T21:00Z)
         type: array
@@ -208,7 +208,7 @@ properties:
           Vertical level intervals that data in the collection is available at 
           these can be defined as follows:
           min level / max level (e.g. "2/100") or 
-          as number of repeatitions / min level / interval (e.g."R5/100/50") 
+          as number of repetitions / min level / interval (e.g."R5/100/50") 
           or a list of vertical levels (e.g. "2",10,"80","100"}
           The value `null` is supported and indicates an open vertical interval.
         type: array
