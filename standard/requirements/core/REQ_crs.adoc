@@ -1,0 +1,11 @@
+[[req_core_crs]]
+==== *Requirement /req/core/crs* CRS
+
+[requirement,type="general",id="/req/core/crs", label="/req/core/crs"]
+====
+
+*A:*
+
+Unless the client explicitly requests a different coordinate reference system, all spatial geometries SHALL be in the data's original coordinate reference system.
+
+====
