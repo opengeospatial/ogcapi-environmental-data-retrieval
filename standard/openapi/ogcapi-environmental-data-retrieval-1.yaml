@@ -1,4 +1,5 @@
 openapi: 3.0.3
+foo: bar
 info:
   title: OGC API - Environmental Data Retrieval Standard
   description: Example of OGC API - Environmental Data Retrieval Standard OpenAPI document
