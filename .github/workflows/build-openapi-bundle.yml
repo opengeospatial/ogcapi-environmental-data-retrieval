@@ -33,4 +33,3 @@ jobs:
         add: '*.json'
         cwd: './standard/openapi/'
         push: origin master --force
-

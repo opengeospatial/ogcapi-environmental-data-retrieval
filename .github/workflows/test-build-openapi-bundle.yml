@@ -5,6 +5,7 @@ on:
     branches:
       - master
     paths:
+      - '.github/workflows/**.yml'
       - 'standard/openapi/**.yaml'
 
 jobs:
@@ -27,4 +28,12 @@ jobs:
       run: |
         cd standard/openapi
         swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
-
+    - name: Commit changes
+      uses: EndBug/add-and-commit@v9
+      with:
+        author_name: Tom Kralidis
+        author_email: tomkralidis@gmail.com
+        message: 'Updating OpenAPI bundle'
+        add: '*.json'
+        cwd: './standard/openapi/'
+        push: origin master --force
