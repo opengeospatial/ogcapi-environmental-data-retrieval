@@ -32,4 +32,5 @@ jobs:
         message: 'Updating OpenAPI bundle'
         add: '*.json'
         cwd: './standard/openapi/'
+        push: origin master --force
 
