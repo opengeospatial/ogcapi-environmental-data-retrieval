@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    paths:
-      - 'standard/openapi/**.yaml'
+    #paths:
+    #  - 'standard/openapi/**.yaml'
 
 jobs:
   build-openapi-bundle:
