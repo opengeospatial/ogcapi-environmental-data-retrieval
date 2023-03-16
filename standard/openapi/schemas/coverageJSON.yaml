@@ -7,6 +7,7 @@ required:
 properties:
   type:
     description: Coverage domain type
+    type: string   
     enum:
       - Coverage
       - CoverageCollection
@@ -24,6 +25,7 @@ properties:
       properties:
         type:
           description: Coverage domain type
+          type: string 
           enum:
             - Coverage
         domain:

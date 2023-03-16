@@ -5,6 +5,7 @@ properties:
     type: string
   type:
     description: Type of the parameter object, must be "Parameter"
+    type: string
     enum: 
       - Parameter
   description:

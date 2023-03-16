@@ -3,6 +3,7 @@ description: A Domain, which defines a set of positions and their extent in one
 type: object
 properties:
   type:
+    type: string  
     enum: 
       - Domain
   domainType:

@@ -7,6 +7,7 @@ required:
 properties:
   type:
     description: type
+    type: string
     enum:
       - Parameter
   description:
@@ -15,6 +16,7 @@ properties:
     type: string
   data-type:
     description: Data type of returned parameter
+    type: string
     enum:
       - integer
       - float
