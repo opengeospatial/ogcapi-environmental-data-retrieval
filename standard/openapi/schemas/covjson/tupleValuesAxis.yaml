@@ -3,6 +3,7 @@ allOf:
   - $ref: valuesAxisBase.yaml
   - properties:
       dataType:
+        type: string
         enum: 
           - tuple
       values:

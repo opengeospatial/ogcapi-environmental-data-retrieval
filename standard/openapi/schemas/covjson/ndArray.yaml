@@ -3,6 +3,7 @@ description: Object representing a multidimensional (>= 0D) array with named
   axes, encoded as a flat one-dimensional array in row-major order
 properties:
   type:
+    type: string
     enum: 
       - NdArray
   dataType:
