@@ -1,7 +1,7 @@
 {
         "0":  {
-                "OGC_doc_number": "19-086r4",
-                "urn":"http://www.opengis.net/doc/IS/ogcapi-edr/1.0.1",
+                "OGC_doc_number": "19-086r6",
+                "urn":"http://www.opengis.net/doc/IS/ogcapi-edr/1.1",
                 "title":"OGC API - Environmental Data Retrieval Standard",
                 "path":"standard/document.adoc",
                 "options": ["--trace"],
