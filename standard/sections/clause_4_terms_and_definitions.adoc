@@ -69,3 +69,58 @@ data associated with a position in space-time
 path of a moving point described by a one parameter set of points
 
 (Source: https://www.iso.org/standard/41445.html[ISO 19141:2008])
+
+=== Broker
+
+Intermediary between Subscribers and other Publishers which have been previously registered with the Broker. The Broker is not the original producer of Messages, but acts as an intermediary, (re-)publishing messages received from other Publishers and decoupling them from their Subscribers.
+
+=== Subscriber
+
+An entity that creates a subscription to a Publisher.
+
+=== Message
+
+A container within which data (such as JSON, XML, binary data, or other content) is transported. Messages may include additional information beyond data, including headers or other metadata used for routing or security purposes.
+
+=== Channel
+
+A term (string) used to filter messages from a Broker.
+
+=== Abbreviated terms
+
+AMQP::
+  Advanced Message Queuing Protocol
+AMQPS::
+  Advanced Message Queuing Protocol Secure
+API::
+  Application Programming Interface
+CORS::
+  Cross-Origin Resource Sharing
+GeoJSON::
+   Geospatial JavaScript Object Notation (JSON)
+HTTP::
+  Hypertext Transfer Protocol
+HTTPS::
+  Hypertext Transfer Protocol Secure
+IANA::
+  Internet Assigned Numbers Authority
+JSON::
+  JavaScript Object Notation
+MQP::
+  Message Queuing Protocol
+MQTT::
+  Message Queuing Telemetry Transport 
+MQTTS::
+  Message Queuing Telemetry Transport Secure
+OASIS::
+  Organization for the Advancement of Structured Information Standards 
+OGC::
+  Open Geospatial Consortium
+URI::
+  Uniform Resource Identifier
+WIS::
+  WMO Information System
+WMO::
+  World Meteorological Organization
+YAML::
+  YAML Ain't Markup Language

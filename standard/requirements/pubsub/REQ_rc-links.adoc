@@ -1,0 +1,16 @@
+[[req_pubsub_links]]
+
+[requirement,type="general",id="/req/pubsub/links", label="/req/pubsub/links"]
+====
+
+*A:*
+
+An OGC API endpoint SHALL provide a link reference to a Publish-Subscribe server from an OGC API endpoint when Publish-Subscribe capabilities exist related to the OGC API endpoint.
+
+---
+
+*B:*
+
+A Publish-Subscribe link reference SHALL provide the `+channel+` property to allow for granular subscription.
+
+====

@@ -1,0 +1,40 @@
+{
+    "id": "31e9d66a-cd83-4174-9429-b932f1abe1be",
+    "version": "v04",
+    "type": "Feature",
+    "geometry": {
+        "type": "Point",
+        "coordinates": [
+            6.146255135536194,
+            46.223296618227444
+        ]   
+    },  
+    "properties": {
+        "pubtime": "2022-03-20T04:50:18.314854383Z",
+        "operation": "create",
+        "datetime": "2022-03-20T04:45:00Z",
+        "integrity": {
+            "method": "sha512",
+            "value": "A2KNxvks...S8qfSCw=="
+        },  
+        "data_id": "dataset/123/data-granule/UANT01_CWAO_200445___15103.bufr4",
+        "metadata_id": "urn:x-wmo:md:can:eccc-msc:observations.swob",
+        "content": {
+            "encoding": "utf-8",
+            "value": "encoded bytes from the file",
+            "size": 457 
+        }   
+    },  
+    "links": [
+        {   
+            "href": "https://example.org/data/4Pubsub/92c557ef-d28e-4713-91af-2e2e7be6f8ab.bufr4",
+            "rel": "canonical",
+            "type": "application/x-bufr"
+        },
+        {
+            "href": "https://example.org/oapi/collections/my-dataset/items/my-data-granule",
+            "rel": "item",
+            "type": "application/json"
+        }
+    ]
+}

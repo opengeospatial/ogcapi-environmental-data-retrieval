@@ -14,6 +14,7 @@
 :fullname_2: David Blodgett
 :fullname_3: Chuck Heazel
 :fullname_4: Chris Little
+:fullname_5: Tom Kralidis
 :docsubtype: Interface
 :keywords: ogcdoc, OGC document, property, geographic information, spatial data, spatial thing, spatio-temporal, dataset, distribution, API, JSON, geoJSON, coverageJSON, HTML, OpenAPI, AsyncAPI, REST, Common, position, area, trajectory, corridor, cube, time-series, radius, polygon, WKT
 :submitting-organizations: UK Met Office; US Geological Survey (USGS); US National Weather Service; Wuhan University; Meteorological Service of Canada; Finnish Meteorological Institute; Esri; National Aeronautics and Space Administration (NASA); Météo-France
@@ -50,6 +51,10 @@ include::sections/clause_8_queries.adoc[]
 
 include::sections/clause_9_general.adoc[]
 
+include::sections/clause_10_pubsub.adoc[]
+
+include::sections/clause_10_pubsub_message_payload.adoc[]
+
 ////
 add or remove annexes after "A" as necessary
 ////
@@ -62,6 +67,10 @@ include::sections/annex_collection_response.adoc[]
 include::sections/annex_examples.adoc[]
 
 include::sections/annex_relationship.adoc[]
+
+include::sections/annex_pubsub.adoc[]
+
+include::sections/annex_pubsub_message_payload.adoc[]
 
 include::sections/annex_glossary.adoc[]
 
