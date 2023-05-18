@@ -15,6 +15,7 @@ properties:
     type: string
   data-type:
     description: Data type of returned parameter
+    type: string
     enum:
       - integer
       - float

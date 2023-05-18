@@ -6,7 +6,7 @@
 
 *A:*
 
-Each geometry based resource (Position, Radius, Area, Cube , Trajectory, Corridor) collection operation SHALL support a parameter `coords` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+Each geometry based resource (Position, Radius, Area, Trajectory, Corridor) collection operation SHALL support a parameter `coords` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 
 [source,YAML]
