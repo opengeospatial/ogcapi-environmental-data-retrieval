@@ -6,6 +6,6 @@
 ^|*Abstract Test {ats-id}* |*/conf/core/crs*
 ^|Test Purpose |Validate that all spatial geometries provided through the API are in the data's original coordinate reference system unless otherwise requested by the client.
 ^|Requirement |<<req_core_crs,/req/core/crs>>
-^|Test Method |. Do not specify a coordinate reference system in any request. All spatial data should be in the data's original reference system.
-. Validate retrieved spatial data is using its original coordinate reference system.
+^|Test Method |. Do not specify a coordinate reference system in any request. All spatial data should be in the CRS defined by the spatial element of the extent section in the collection response.
+. Validate retrieved spatial data is using the CRS defined by the spatial element of the extent section in the collection response.
 |===
