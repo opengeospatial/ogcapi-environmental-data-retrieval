@@ -20,7 +20,7 @@ The parameter `collectionId` is each `id` property in the collections response (
 ---
 *D:*
 
-A `cube` GET or POST operation MUST include a `bbox` query parameter
+A `cube` GET or POST operation SHALL include a `bbox` query parameter
 
 ---
 *E:*
@@ -35,7 +35,7 @@ If the `bbox` query parameter is not specified a HTTP `400` error should be gene
 ---
 *G:*
 
-A `cube` GET or POST operation MUST include a `z` query parameter
+A `cube` GET or POST operation SHALL include a `z` query parameter
 
 ---
 *H:*
