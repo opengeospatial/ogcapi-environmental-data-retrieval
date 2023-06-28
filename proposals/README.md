@@ -12,7 +12,7 @@ Draft features will be documented as GitHub issues and labeled with the ``draft-
 
 If during the development of a draft feature, it is determined that the feature needs to change in a way that may break existing draft implementations, the extension name itself may be versioned with a version suffix. e.g. ``-v2``. When a draft feature becomes part of a future update to the specification any version suffix will be removed.
 
-Draft features that are deemed not appropriate for inclusion MUST be marked with the ``draft:abandoned`` label.
+Draft features that are deemed not appropriate for inclusion SHALL be marked with the ``draft:abandoned`` label.
 
 Draft-features that are considered suitably specified and have had successful pilot implementations will be marked with the ``draft:graduated`` label.
 
