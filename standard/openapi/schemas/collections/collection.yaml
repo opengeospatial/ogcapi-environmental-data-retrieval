@@ -13,32 +13,32 @@ properties:
     items:
       $ref: ../core/link.yaml
     example:
-      - href: https://wwww.example.org/service/description.html
+      - href: https://example.org/service/description.html
         hreflang: en
         rel: service-doc
         type: text/html
         title: ""
-      - href: https://www.example.org/service/licence.html
+      - href: https://example.org/service/licence.html
         hreflang: en
         rel: licence
         type: text/html
         title: ""
-      - href: https://www.example.org/service/terms-and-conditions.html
+      - href: https://example.org/service/terms-and-conditions.html
         hreflang: en
         rel: restrictions
         type: text/html
         title: ""
-      - href: http://www.example.org/edr/collections/the_collection_id/
+      - href: https://example.org/edr/collections/the_collection_id/
         hreflang: en
         rel: collection
         type: collection
         title: Collection
-      - href: http://www.example.org/edr/collections/the_collection_id/position
+      - href: https://example.org/edr/collections/the_collection_id/position
         hreflang: en
         rel: data
         type: position
         title: Position
-      - href: http://www.example.org/edr/collections/the_collection_id/area
+      - href: https://example.org/edr/collections/the_collection_id/area
         hreflang: en
         rel: data
         type: area
