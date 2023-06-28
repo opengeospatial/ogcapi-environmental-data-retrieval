@@ -9,5 +9,4 @@
 ^|Test Method |. Verify that the crs property in the collection Metadata is valid.
 . Verify that each crs entry includes a unique (to the collection) `name` property.
 . Verify that each crs entry includes a valid Well Known Text definition for the `wkt` property.
-. Verify that if the crs entry includes a `proj4` property, the property is equivalent to the value in the `wkt` property.
 |===
