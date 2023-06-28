@@ -4,6 +4,6 @@
 ====
 *A:*
 
-OpenAPI documentation for HTTP POST queries MUST provide details for the HTTP POST request body.
+OpenAPI documentation for HTTP POST queries SHALL provide details for the HTTP POST request body.
 
 ====
