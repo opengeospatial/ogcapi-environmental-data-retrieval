@@ -5,13 +5,13 @@
 ----
 {
   "links": [
-    { "href": "http://example.org/",
+    { "href": "https://example.org/",
       "rel": "self", "type": "application/json", "title": "this document" },
-    { "href": "http://example.org/api",
+    { "href": "https://example.org/api",
       "rel": "service-desc", "type": "application/vnd.oai.openapi+json;version=3.0", "title": "the API definition" },
-    { "href": "http://example.org/conformance",
+    { "href": "https://example.org/conformance",
       "rel": "conformance", "type": "application/json", "title": "OGC conformance classes implemented by this API" },
-    { "href": "http://example.org/collections",
+    { "href": "https://example.org/collections",
       "rel": "data", "type": "application/json", "title": "Metadata about the resource collections" }
   ]
 }
