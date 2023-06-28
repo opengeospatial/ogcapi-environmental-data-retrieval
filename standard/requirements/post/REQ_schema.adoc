@@ -4,6 +4,6 @@
 ====
 *A:*
 
-OpenAPI documentation for HTTP POST queries MUST provide a valid schema to describe the message body
+OpenAPI documentation for HTTP POST queries SHALL provide a valid schema to describe the message body
 
 ====
