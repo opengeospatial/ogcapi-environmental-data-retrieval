@@ -161,7 +161,7 @@ include::../requirements/instances/REQ_src-md-success.adoc[]
 ==== *Requirements Class:* Query parameters
 
 :sectnums: 
-include::../requirements/requirements_query_parameters.adoc[]
+include::../requirements/requirements_class_query_parameters.adoc[]
 
 include::../requirements/core/REQ_rc-bbox-definition.adoc[]
 
