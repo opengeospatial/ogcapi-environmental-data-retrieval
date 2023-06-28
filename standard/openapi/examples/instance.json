@@ -1,39 +1,39 @@
 {
     "links": [
         {
-            "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/",
+            "href": "https://example.org/edr/collections/3_hrly_fcst/instances/",
             "hreflang": "en",
             "rel": "self",
             "type": "application/json"
         },
         {
-            "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/",
+            "href": "https://example.org/edr/collections/3_hrly_fcst/instances/",
             "hreflang": "en",
             "rel": "alternate",
             "type": "text/html"
         },
         {
-            "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/",
+            "href": "https://example.org/edr/collections/3_hrly_fcst/instances/",
             "hreflang": "en",
             "rel": "alternate",
             "type": "application/xml"
         },
         {
-            "href": "https://www.example.org/terms-and-conditions---datapoint#termsofservice",
+            "href": "https://example.org/terms-and-conditions---datapoint#termsofservice",
             "hreflang": "en",
             "rel": "restrictions",
             "type": "text/html",
             "title": ""
         },
         {
-            "href": "https://www.example.org/terms-and-conditions---datapoint#datalicence",
+            "href": "https://example.org/terms-and-conditions---datapoint#datalicence",
             "hreflang": "en",
             "rel": "license",
             "type": "text/html",
             "title": ""
         },
         {
-            "href": "https://www.example.org/uk-3-hourly-site-specific-forecast",
+            "href": "https://example.org/uk-3-hourly-site-specific-forecast",
             "hreflang": "en",
             "rel": "service-doc",
             "type": "text/html",
@@ -59,13 +59,13 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=json",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z?f=json",
                     "hreflang": "en",
                     "rel": "collection",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Zf=html",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Zf=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
@@ -94,7 +94,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -122,7 +122,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -154,7 +154,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -182,7 +182,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T10:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -221,7 +221,7 @@
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://www.example.org/edr/metadata/units/degree"
+                            "type": "https://example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -240,7 +240,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -259,7 +259,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -278,7 +278,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -297,7 +297,7 @@
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -316,7 +316,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -335,7 +335,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -354,7 +354,7 @@
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -373,7 +373,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -392,7 +392,7 @@
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
@@ -424,13 +424,13 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=json",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z?f=json",
                     "hreflang": "en",
                     "rel": "collection",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Zf=html",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Zf=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
@@ -459,7 +459,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/position?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -486,7 +486,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/radius?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -518,7 +518,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/area?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -547,7 +547,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/locations",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T09:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -586,7 +586,7 @@
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://www.example.org/edr/metadata/units/degree"
+                            "type": "https://example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -605,7 +605,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -624,7 +624,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -643,7 +643,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -662,7 +662,7 @@
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -681,7 +681,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -700,7 +700,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -719,7 +719,7 @@
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -738,7 +738,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -757,7 +757,7 @@
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
@@ -789,13 +789,13 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Zf=json",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Zf=json",
                     "hreflang": "en",
                     "rel": "collection",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Zf=html",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Zf=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
@@ -824,7 +824,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/position?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -851,7 +851,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/radius?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -883,7 +883,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/area?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "title": "",
@@ -912,7 +912,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/locations",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T08:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -951,7 +951,7 @@
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://www.example.org/edr/metadata/units/degree"
+                            "type": "https://example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -970,7 +970,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -989,7 +989,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1008,7 +1008,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1027,7 +1027,7 @@
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -1046,7 +1046,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1065,7 +1065,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1084,7 +1084,7 @@
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -1103,7 +1103,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1122,7 +1122,7 @@
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
@@ -1154,13 +1154,13 @@
             ],
             "links": [
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Zf=json",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Zf=json",
                     "hreflang": "en",
                     "rel": "collection",
                     "type": "application/json"
                 },
                 {
-                    "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Zf=html",
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Zf=html",
                     "hreflang": "en",
                     "rel": "alternate",
                     "type": "text/html"
@@ -1189,7 +1189,7 @@
             "data_queries": {
                 "position": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/position?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/position?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1216,7 +1216,7 @@
                 },
                 "radius": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/radius?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/radius?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1248,7 +1248,7 @@
                 },
                 "area": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/area?coords={coords}",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/area?coords={coords}",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": true,
@@ -1276,7 +1276,7 @@
                 },
                 "locations": {
                     "link": {
-                        "href": "http://www.example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/locations",
+                        "href": "https://example.org/edr/collections/3_hrly_fcst/instances/2020-06-30T07:00:00Z/locations",
                         "hreflang": "en",
                         "rel": "data",
                         "templated": false,
@@ -1315,7 +1315,7 @@
                         "label": "degree true",
                         "symbol": {
                             "value": "°",
-                            "type": "http://www.example.org/edr/metadata/units/degree"
+                            "type": "https://example.org/edr/metadata/units/degree"
                         }
                     },
                     "observedProperty": {
@@ -1334,7 +1334,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1353,7 +1353,7 @@
                         "label": "mph",
                         "symbol": {
                             "value": "mph",
-                            "type": "http://www.example.org/edr/metadata/units/mph"
+                            "type": "https://example.org/edr/metadata/units/mph"
                         }
                     },
                     "observedProperty": {
@@ -1372,7 +1372,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1391,7 +1391,7 @@
                         "label": "weather",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_weather"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_weather"
                         }
                     },
                     "observedProperty": {
@@ -1410,7 +1410,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1429,7 +1429,7 @@
                         "label": "degC",
                         "symbol": {
                             "value": "°C",
-                            "type": "http://www.example.org/edr/metadata/units/degC"
+                            "type": "https://example.org/edr/metadata/units/degC"
                         }
                     },
                     "observedProperty": {
@@ -1448,7 +1448,7 @@
                         "label": "UV_index",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_uv"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_uv"
                         }
                     },
                     "observedProperty": {
@@ -1467,7 +1467,7 @@
                         "label": "percent",
                         "symbol": {
                             "value": "%",
-                            "type": "http://www.example.org/edr/metadata/units/percent"
+                            "type": "https://example.org/edr/metadata/units/percent"
                         }
                     },
                     "observedProperty": {
@@ -1486,7 +1486,7 @@
                         "label": "quality",
                         "symbol": {
                             "value": "",
-                            "type": "http://www.example.org/edr/metadata/lookup/mo_dp_visibility"
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_visibility"
                         }
                     },
                     "observedProperty": {
