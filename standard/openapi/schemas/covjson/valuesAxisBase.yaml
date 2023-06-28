@@ -15,7 +15,7 @@ properties:
       type: string
     minItems: 2
   bounds:
-    description: Optional axis bounds. Must be twice as long (and same data type) as
+    description: Optional axis bounds. Shall be twice as long (and same data type) as
       "values"
     type: array
     minItems: 2
