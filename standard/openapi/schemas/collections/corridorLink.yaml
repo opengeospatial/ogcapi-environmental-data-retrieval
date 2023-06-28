@@ -3,6 +3,6 @@ allOf:
 properties:
   href:
     type: string
-    example: http://data.example.com/collections/monitoringsites/corridor
+    example: https://example.com/collections/monitoringsites/corridor
   variables:
     $ref: corridorDataQuery.yaml
