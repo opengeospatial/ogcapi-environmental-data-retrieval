@@ -12,9 +12,5 @@ A crs object SHALL have a unique (to the collection) `name` property, it MAY be 
 
 A crs object SHALL have a `wkt` property which SHALL be a correctly structured Well Known Text definition for the CRS.
 
----
-*C:*
-
-A crs object MAY have a `proj4` property which SHALL be a correctly structured proj4 definition for the CRS (and SHALL be equivalent to the `wkt` property).
 
 ====
