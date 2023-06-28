@@ -116,11 +116,11 @@ include::../recommendations/core/REC_link-header.adoc[]
 
 Apply the <<rc_oas30,OpenAPI 3.0 Requirements Class>>.
 
-The OpenAPI 3.0 Requirements Class used in OGC API - Common is applicable to the EDR API as well. So an implementation of EDR API which supports OpenAPI 3.0 as an API Description format must also comply with the OpenAPI 3.0 Requirements Class (http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30) specified in OGC API — Common.
+The OpenAPI 3.0 Requirements Class used in OGC API - Common is applicable to the EDR API as well. So an implementation of EDR API which supports OpenAPI 3.0 as an API Description format shall also comply with the OpenAPI 3.0 Requirements Class (http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30) specified in OGC API — Common.
 
 Apply <<req_oas30_oas-definition-2,Requirement /req/oas30/oas-definition-2>> for OpenAPI 3.0 conformance.
 
-Implementations must also advertise conformance with this Requirements Class.
+Implementations shall also advertise conformance with this Requirements Class.
 
 Apply <<req_oas30_oas-impl,Requirement /req/oas30/oas-impl>> for OpenAPI 3.0 implementation.
 
@@ -132,7 +132,7 @@ Apply <<req_oas30_completeness,Requirement /req/oas30/completeness>> for OpenAPI
 
 Note, for example, that APIs which are access-controlled (see <<security,Security>>), support web cache validation, CORS, or that use HTTP redirection will make use of additional HTTP status codes as well as common codes such as `200` for successful GET requests and `400`, `404` or `500` for error situations. See <<http-status-codes>>.
 
-Clients must be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.
+Clients shall be prepared to receive responses not documented in the OpenAPI definition. For example, additional errors may occur in the transport layer outside of the server.
 
 [[exceptions]]
 ==== Exceptions
