@@ -5,7 +5,7 @@
 
 *A:*
 
-A `variables` property MUST include a `query_type` property with a
+A `variables` property SHALL include a `query_type` property with a
 value which matches the query type name.
 
 ---
@@ -16,7 +16,7 @@ A `variables` property MAY include a `title` property of type string
 ---
 *C:*
 
-A `variables` property MAY include an `output_formats` property which MUST be a string array
+A `variables` property MAY include an `output_formats` property which SHALL be a string array
 
 ---
 *D:*
