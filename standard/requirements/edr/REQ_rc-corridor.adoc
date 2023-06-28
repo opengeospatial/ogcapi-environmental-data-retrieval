@@ -20,7 +20,7 @@ The parameter `collectionId` is each `id` property in the collections response (
 ---
 *D:*
 
-A `corridor` GET operation MUST include a `coords` query parameter
+A `corridor` GET operation SHALL include a `coords` query parameter
 
 ---
 *E:*
@@ -30,7 +30,7 @@ If the `coords` query parameter is not specified a HTTP `400` error should be ge
 ---
 *F:*
 
-A `corridor` GET operation MUST include a `corridor-width` query parameter
+A `corridor` GET operation SHALL include a `corridor-width` query parameter
 
 ---
 *G:*
