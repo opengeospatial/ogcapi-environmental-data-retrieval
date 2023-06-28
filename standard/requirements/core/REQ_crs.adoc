@@ -6,6 +6,6 @@
 
 *A:*
 
-Unless the client explicitly requests a different coordinate reference system, all spatial geometries SHALL be in the data's original coordinate reference system.
+Unless the client explicitly requests a different coordinate reference system, all spatial geometries SHALL be in the CRS defined by the spatial element of the extent section in the collection response.
 
 ====

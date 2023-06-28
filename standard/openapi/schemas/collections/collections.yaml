@@ -8,15 +8,15 @@ properties:
     items:
       $ref: ../core/link.yaml
     example:
-      - href: http://www.example.org/edr/collections
+      - href: https://example.org/edr/collections
         hreflang: en
         rel: self
         type: application/yaml
-      - href: http://www.example.org/edr/collections?f=html
+      - href: https://example.org/edr/collections?f=html
         hreflang: en
         rel: alternate
         type: text/html
-      - href: http://www.example.org/edr/collections?f=xml
+      - href: https://example.org/edr/collections?f=xml
         hreflang: en
         rel: alternate
         type: application/xml

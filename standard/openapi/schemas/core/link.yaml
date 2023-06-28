@@ -5,7 +5,7 @@ required:
 properties:
   href:
     type: string
-    example: http://data.example.com/collections/monitoringsites/locations/1234
+    example: https://example.com/collections/monitoringsites/locations/1234
   rel:
     type: string
     example: alternate

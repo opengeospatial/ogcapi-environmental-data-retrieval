@@ -14,17 +14,17 @@ properties:
     items:
       $ref: link.yaml
     example:
-      - href: http://www.example.org/edr/api
+      - href: https://example.org/edr/api
         hreflang: en
         rel: service-desc
         type: application/vnd.oai.openapi+json;version=3.0
         title: ""
-      - href: http://www.example.org/edr/conformance
+      - href: https://example.org/edr/conformance
         hreflang: en
         rel: data
         type: application/json
         title: ""
-      - href: http://www.example.org/edr/collections
+      - href: https://example.org/edr/collections
         hreflang: en
         rel: data
         type: application/json

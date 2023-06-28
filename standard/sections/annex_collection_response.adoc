@@ -94,7 +94,7 @@ A more complex link example supporting a templated `href` as the `coords` parame
 [source,json]
 ----
 "link": {
-    "href": "http://www.example.org/sourcedata/position?coords={coords}",
+    "href": "https://example.org/sourcedata/position?coords={coords}",
     "hreflang": "en",
     "rel": "data",
     "templated": true,
@@ -261,7 +261,7 @@ A data query object example for a collection that supports Position and Radius q
 "data_queries": {
     "position": {
         "link": {
-            "href": "http://www.example.org/collections/sampledata/position",
+            "href": "https://example.org/collections/sampledata/position",
             "hreflang": "en",
             "rel": "data",
             "templated":false,
@@ -289,7 +289,7 @@ A data query object example for a collection that supports Position and Radius q
     },
     "radius": {
         "link": {
-            "href": "http://www.example.org/collections/sampledata/radius",
+            "href": "https://example.org/collections/sampledata/radius",
             "hreflang": "en",
             "rel": "data",
             "variables": {

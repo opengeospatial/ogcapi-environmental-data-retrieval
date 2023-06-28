@@ -110,9 +110,9 @@ a| **_custom_dimension_name_**^1^
 
 .Return the 5th, 10th, 15th and 20th ensemble members between 2022-05-10T00:00Z and 2022-05-10T06:00Z at height level 2.0 
 ====
-https://server.example/global_model/area?
+https://server.example/collections/global_model/area?
 
-**coords**=POLYGON((-12.602 59.367,-12.954 46.580,2.169 47.061,2.169 60.769,-12.602 59.367))
+**coords**=POLYGON\((-12.602 59.367,-12.954 46.580,2.169 47.061,2.169 60.769,-12.602 59.367))
 
 &**parameter-name**=Temperature
 
@@ -129,7 +129,7 @@ https://server.example/global_model/area?
 
 .Only return data for EBBR EBOS between 2022-05-10T00:00Z and 2022-05-10T06:00Z from the available sites in the European area. 
 ====
-https://server.example/observations/locations/europe?
+https://server.example/collections/observations/locations/europe?
 
 &**parameter-name**=wind_speed,wind_direction
 

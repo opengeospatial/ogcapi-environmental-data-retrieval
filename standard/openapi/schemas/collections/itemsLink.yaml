@@ -3,6 +3,6 @@ allOf:
 properties:
   href:
     type: string
-    example: http://data.example.com/collections/monitoringsites/items
+    example: https://example.com/collections/monitoringsites/items
   variables:
     $ref: itemsDataQuery.yaml
