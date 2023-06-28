@@ -5,22 +5,22 @@
 
 *A:*
 
-A `data_queries` object MUST include a `link` property
+A `data_queries` object SHALL include a `link` property
 
 ---
 *B:*
 
-A `link` property MUST include an `href` property
+A `link` property SHALL include an `href` property
 
 ---
 *C:*
 
-A `link` property MUST include a `rel` property
+A `link` property SHALL include a `rel` property
 
 ---
 *D:*
 
-A `link` property MUST include a `variables` property
+A `link` property SHALL include a `variables` property
 
 ---
 *E:*
