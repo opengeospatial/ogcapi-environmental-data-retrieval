@@ -16,7 +16,7 @@ The total number of intervals includes the values for the minimum and maximum co
 ---
 *C:*
 
-A `resolution-y` value of 0 MUST return all available data at the native y resolution between the minimum and maximum coordinates
+A `resolution-y` value of 0 SHALL return all available data at the native y resolution between the minimum and maximum coordinates
 
 ---
 *D:*
