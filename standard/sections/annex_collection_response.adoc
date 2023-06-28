@@ -26,7 +26,7 @@ The collection response structure provides the details which describe the inform
 
 
 [[col-links]]
-==== Link Object
+=== Link Object
 OGC Web API Standards use <<rfc8288,RFC 8288 (Web Linking)>>  to express relationships between resources.  The "link" elements provide a convention for associating resources related to the collection.
 
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
@@ -46,7 +46,7 @@ OGC Web API Standards use <<rfc8288,RFC 8288 (Web Linking)>>  to express relatio
 
 
 [[col-variables]]
-==== Variables Object
+=== Variables Object
 The variables object provides fields to describe information that only applies to the owning link
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Variables Object
@@ -67,7 +67,7 @@ The variables object provides fields to describe information that only applies t
 
 
 [[col-crs_details]]
-==== CRS Details Object
+=== CRS Details Object
 A crs details object describes a coordinate system
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .CRS Details Object
@@ -115,7 +115,7 @@ A more complex link example supporting a templated `href` as the `coords` parame
 
 
 [[col-extent]]
-==== Extent Object
+=== Extent Object
 The extent object describes the spatio-temporal area covered by the information available in the collection
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Extent Object
@@ -127,7 +127,7 @@ The extent object describes the spatio-temporal area covered by the information 
 |==========================
 
 [[col-spatial]]
-==== Spatial Object
+=== Spatial Object
 The spatial object describes the spatial area covered by the information available in the collection
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Spatial Object
@@ -144,7 +144,7 @@ The spatial object describes the spatial area covered by the information availab
 
 
 [[col-temporal]]
-==== Temporal Object
+=== Temporal Object
 The temporal object describes the time period covered by the information available in the collection
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Temporal Object
@@ -157,7 +157,7 @@ The temporal object describes the time period covered by the information availab
 
 
 [[col-vertical]]
-==== Vertical Object
+=== Vertical Object
 The vertical object describes the vertical extent of information available in the collection
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Vertical Object
@@ -226,7 +226,7 @@ This more complex extent object example is a collection with vertical and tempor
 
 
 [[col-data_queries]]
-==== Data Queries Object
+=== Data Queries Object
 The data queries object provides the extra metadata required for the queries supported by the collection.
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Data Queries Object
@@ -245,7 +245,7 @@ The data queries object provides the extra metadata required for the queries sup
 
 
 [[col-edr_query]]
-==== EDR Query Object
+=== EDR Query Object
 The EDR query object provides the metadata for the specified query type.
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .EDR Query Object
@@ -324,13 +324,13 @@ A data query object example for a collection that supports Position and Radius q
 
 
 [[col-parameter_names]]
-==== Parameter Names Object
+=== Parameter Names Object
 The parameter-names object provides information about the data parameters supported by the collection. As
 a set of key-value pairs, where the key is the name of the parameter and the value is a <<col-parameter, Parameter>> object i.e. as a Dictionary (Python) or HashMap(Java).
 
 
 [[col-parameter]]
-==== Parameter Object
+=== Parameter Object
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Parameter Object
 |==========================
@@ -349,7 +349,7 @@ a set of key-value pairs, where the key is the name of the parameter and the val
 
 
 [[col-unit]]
-==== Unit Object
+=== Unit Object
 The unit object provides the information to describe the units of measure of the parameter values.
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Unit Object
@@ -360,7 +360,7 @@ The unit object provides the information to describe the units of measure of the
 |==========================
 
 [[col-symbol]]
-==== Symbol Object
+=== Symbol Object
 The symbol object provides the information to describe the symbols which represent the unit of a value.
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Symbol Object
@@ -374,7 +374,7 @@ The symbol object provides the information to describe the symbols which represe
 
 
 [[col-observed_property]]
-==== Observed Property Object
+=== Observed Property Object
 The observedProperty object provides the metadata for the specified query type.
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Observed Property Object
@@ -387,7 +387,7 @@ The observedProperty object provides the metadata for the specified query type.
 
 
 [[col-measurement_type]]
-==== Measurement Type object
+=== Measurement Type object
 The measurementType object provides basic information about how the parameter is calculated and over what time period
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Measurement Type object
