@@ -155,7 +155,7 @@ content:
 =================
 
 [[security]]
-=== Security
+=== Security considerations
 
 The <<OGC19-072,OGC API - Common - Part 1: Core>> Standard does not mandate any specific security controls. However, the Standard was constructed so that security controls can be added without impacting conformance.
 
