@@ -4,7 +4,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/instances_rc-md-success*
-^|Test Purpose |Validate that the instances of the Collection content complies with the required structure and contents.
+^|Test Purpose |Validate that the instances of the Collection content comply with the required structure and contents.
 ^|Requirement |<<_req_instances_rc-md-success,/req/instances/rc-md-success>>
 ^|Test Method |. Validate that all response documents comply with <<_req_core_rc-collection-info-links,/req/core/rc-collection-info-links>>
 . Validate the collections content for all supported media types using the resources and tests identified in <<collections-metadata-schema>>

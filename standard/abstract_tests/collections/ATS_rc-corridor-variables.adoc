@@ -4,7 +4,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/edr/rc-corridor-variables*
-^|Test Purpose |Validate variables property for a query data type in the data_queries section in the collection is correctly defined.
+^|Test Purpose |Validate that the `variables` property for a query data type in the data_queries section in the collection is correctly defined.
 ^|Requirement |<<req_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
 ^|Test Method a|. Verify that the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>> 
 

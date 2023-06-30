@@ -67,7 +67,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/corridor*
 ^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRING or MULTILINESTRING Well Known Text value.
 ^|Requirement |<<_req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter is a valid Well Known Text LineString or MultiLineString value
+^|Test Method |. Check coords query parameter is a valid Well Known Text LINESTRING or MULTILINESTRING value
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}
@@ -107,7 +107,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/corridor*
 ^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
 ^|Requirement |<<_req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LLINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate shall be a within the range of vertical levels advertised in the Collection metadata
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LLINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}
@@ -117,7 +117,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/corridor*
 ^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
 ^|Requirement |<<_req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate shall be a within the range of vertical levels advertised in the Collection metadata
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}
@@ -127,7 +127,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/corridor*
 ^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter contains invalid time coordinates
 ^|Requirement |<<_req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. If a time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata
+^|Test Method |. If time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}
