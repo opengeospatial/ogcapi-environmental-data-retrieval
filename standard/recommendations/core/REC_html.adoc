@@ -3,5 +3,5 @@
 ====
 *A:*
 
-To support browsing an API definition through a web browser and to enable search engines to crawl and index the dataset, implementations SHOULD consider to support an HTML encoding.
+To support browsing an API definition through a web browser and to enable search engines to crawl and index the dataset, implementations SHOULD consider supporting an HTML encoding.
 ====

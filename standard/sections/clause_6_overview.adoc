@@ -4,15 +4,15 @@
 
 === General
 
-The https://ogcapi.ogc.org/[OGC API] standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC standards extend API-Common with facilities specific to a resource type.
+The https://ogcapi.ogc.org/[OGC API] Standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC Standards extend API-Common with facilities specific to a resource type.
 
-This OGC API-EDR standard defines an API with the following goals:
+The https://ogcapi.ogc.org/edr[OGC API - Environmental Data Retrieval] Standard defines an API with the following goals:
 
 . To make it easier to access a wide range of data through a uniform, well-defined simple Web interface;
 . To allow clients to retrieve a subset of data created by the API in response to a standardized, coordinate orientated, query pattern;
 . To provide 'building blocks' allowing the construction of more complex applications.
 
-The EDR API can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the spatiotemporal data resource of a relatively persistent data store. The query and its response are transient resources, but if required could be made persistent for re-use.
+An EDR API implemented according to this standard can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the spatiotemporal data resource of a relatively persistent data store. The query and its response are transient resources, but if required could be made persistent for re-use.
 
 The functionality provided by the EDR query patterns could be realized through specific implementation of the SOS (and to some extent WCS) from the https://www.ogc.org/standards/common[OGC Web Services family of (XML-based) standards]. The OGC API-EDR introduces a streamlined JSON-based OGC API implementation of building blocks that could be used for many of the simple similar use cases addressed by SOS and WCS in the past.
 

@@ -124,7 +124,7 @@ Implementations shall also advertise conformance with this Requirements Class.
 
 Apply <<req_oas30_oas-impl,Requirement /req/oas30/oas-impl>> for OpenAPI 3.0 implementation.
 
-An example OpenAPI definition document is available at http://schemas.opengis.net/ogcapi/edr/1.0/openapi/EDR_OpenAPI.yaml
+An example OpenAPI definition document is available at http://schemas.opengis.net/ogcapi/edr/1.1/openapi/EDR_OpenAPI.yaml
 
 ==== Complete definition
 
@@ -147,7 +147,7 @@ description: An error occurred.
 content:
   application/json:
     schema:
-      $ref: http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/exception.yaml
+      $ref: http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/exception.yaml
   text/html:
     schema:
       type: string

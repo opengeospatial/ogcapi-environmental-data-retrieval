@@ -99,7 +99,7 @@ a| **_custom_dimension_name_**^1^
 
 * <<req_edr_custom-dimension-definition,definition>> 
 
-* <<req_edr_custom-dimension-response,rules>>     |String  |No|  The value range to return data for (available options defined in the values attribute of the custom dimension definition in the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `realisations=5` 
+* <<req_edr_custom-dimension-response,rules>>     |String  |No|  The value range to return data for (available options are defined in the values attribute of the custom dimension definition in the extent section in the <<collection_metadata_desc, collections>> metadata response) a| * `realisations=5` 
 * `realisations=1,9,15,25` 
 * `realisations=9/15`
 |====
