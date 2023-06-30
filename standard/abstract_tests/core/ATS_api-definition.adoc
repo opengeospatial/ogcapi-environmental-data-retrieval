@@ -5,7 +5,7 @@
 |===
 ^|*Abstract Test {ats-id}* |*/conf/core/api-definition*
 ^|Test Purpose |Validate that the API Definition document can be retrieved from the expected location.
-^|Requirement |<<_req_core_api-definition-op,/req/core/api-definition-op>>
+^|Requirement |<<req_core_api-definition-op,/req/core/api-definition-op>>
 ^|Test Purpose |Validate that the API Definition document can be retrieved from the expected location.
 ^|Test Method |. Construct a path for each API Definition link on the landing page
 . Issue an HTTP GET request on each path

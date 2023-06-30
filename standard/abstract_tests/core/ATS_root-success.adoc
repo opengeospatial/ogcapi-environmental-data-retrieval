@@ -5,7 +5,7 @@
 |===
 ^|*Abstract Test {ats-id}* |*/conf/core/root-success*
 ^|Test Purpose |Validate that the landing page complies with the required structure and contents.
-^|Requirement |<<_req_core_root-success,/req/core/root-success>>
+^|Requirement |<<req_core_root-success,/req/core/root-success>>
 ^|Test Method |Validate the landing page for all supported media types using the resources and tests identified in <<landing-page-schema>>
 
 For formats that require manual inspection, perform the following:
