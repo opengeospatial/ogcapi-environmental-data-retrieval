@@ -12,7 +12,7 @@ include::../examples/landing_page_JSON_1.adoc[]
 
 The API is described using the OpenAPI 3.0 specification, example responses for a server which supports all possible EDR query patterns can be found at:
 
-link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/EDR_OpenAPI.yaml[YAML OpenAPI document]
+link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/EDR_OpenAPI.yaml[YAML OpenAPI document]
 
 [[conformance-response-examples]]
 === Conformance Examples
