@@ -5,7 +5,7 @@
 
 *A:*
 
-Every Collection within a collections array MUST have an unique (within the array) `id` parameter.
+Every Collection within a collections array SHALL have an unique (within the array) `id` parameter.
 
 ---
 *B:*
@@ -25,17 +25,17 @@ Every Collection within a collections array SHOULD have a `Keywords` parameter c
 ---
 *E:*
 
-Every Collection within a collections array MUST have a `links` parameter which must comply with the requirement `/req/core/rc-collection-info-links`.
+Every Collection within a collections array SHALL have a `links` parameter which SHALL comply with the requirement `/req/core/rc-collection-info-links`.
 
 ---
 *F:*
 
-Every Collection within a collections array MUST have an `extent` parameter which must comply with the requirement `/req/core/rc-extent`.
+Every Collection within a collections array SHALL have an `extent` parameter which SHALL comply with the requirement `/req/core/rc-extent`.
 
 ---
 *G:*
 
-Every Collection within a collections array MUST have a `crs` parameter which must comply with the requirement `/req/edr/rc-crs`.
+Every Collection within a collections array SHALL have a `crs` parameter which SHALL comply with the requirement `/req/edr/rc-crs`.
 
 ---
 *H:*
@@ -45,17 +45,17 @@ Every Collection within a collections array MAY have a `distanceunits` parameter
 ---
 *I:*
 
-If the `links` parameter includes a link to a `Radius` query there MUST be a `distanceunits` parameter
+If the `links` parameter includes a link to a `Radius` query there SHALL be a `distanceunits` parameter
 
 ---
 *J:*
 
-Every Collection within a collections array MUST have an `f` parameter containing an array of values with describe the output formats supported by the collection.
+Every Collection within a collections array SHALL have an `f` parameter containing an array of values with describe the output formats supported by the collection.
 
 ---
 *K:*
 
-Every Collection within a collections array MUST have an `parameter_names` attribute containing a list of parameters must comply with the requirement `/req/edr/rc-parameters`.
+Every Collection within a collections array SHALL have an `parameter_names` attribute containing a list of parameters SHALL comply with the requirement `/req/edr/rc-parameters`.
 
 
 ====

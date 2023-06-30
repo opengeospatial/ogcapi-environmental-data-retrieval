@@ -5,11 +5,11 @@
 
 *A:*
 
-A `variables` property MUST  comply with the requirement `/req/edr/rc-variables-common`.
+A `variables` property SHALL comply with the requirement `/req/edr/rc-variables-common`.
 
 ---
 *B:*
 
-A `variables` property MUST include a `within_units` property which MUST be a string array
+A `variables` property SHALL include a `within_units` property which SHALL be a string array
 
 ====

@@ -40,7 +40,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
 ^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate must be a valid Epoch value (as known as UNIX time)
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate shall be a valid Epoch value (as known as UNIX time)
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}
@@ -73,7 +73,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
 ^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate must be a within the range of vertical levels advertised in the Collection metadata
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate shall be a within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}
@@ -83,7 +83,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/trajectory*
 ^|Test Purpose |Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
 ^|Requirement |<<_req_edr_rc-trajectory,/req/edr/rc-trajectory>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate must be a within the range of vertical levels advertised in the Collection metadata
+^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate shall be a within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
 |===
 {counter2:ats-id}

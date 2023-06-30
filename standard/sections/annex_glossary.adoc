@@ -23,7 +23,7 @@ NOTE: When no ambiguity is possible, the word `test` may be omitted. i.e. confor
 [[ctc-definition]]
 === Conformance Class; Conformance Test Class
 
-set of conformance test modules that must be applied to receive a single certificate of conformance (https://portal.ogc.org/files/?artifact_id=34762[OGC 08-131r3])
+set of conformance test modules that shall be applied to receive a single certificate of conformance (https://portal.ogc.org/files/?artifact_id=34762[OGC 08-131r3])
 
 NOTE: When no ambiguity is possible, the word _test_ may be left out, so conformance test class maybe called a conformance class.
 
@@ -57,7 +57,7 @@ expression in the content of a document conveying criteria to be fulfilled if co
 [[requirements-class-definition]]
 === Requirements Class
 
-aggregate of all requirement modules that must all be satisfied to satisfy a conformance test class (https://portal.ogc.org/files/?artifact_id=34762[OGC 08-131r3])
+aggregate of all requirement modules that shall all be satisfied to satisfy a conformance test class (https://portal.ogc.org/files/?artifact_id=34762[OGC 08-131r3])
 
 [[requirements-module-definition]]
 === Requirements Module

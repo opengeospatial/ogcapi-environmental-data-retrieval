@@ -20,7 +20,7 @@ The parameter `collectionId` is each `id` property in the feature collections re
 ---
 *D:*
 
-If a `locationId` is not specified a list of valid locationId's MUST be returned with a description of their geospatial extent.
+If a `locationId` is not specified a list of valid locationId's SHALL be returned with a description of their geospatial extent.
 
 ---
 *E:*

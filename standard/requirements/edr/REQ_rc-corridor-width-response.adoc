@@ -6,12 +6,12 @@
 
 *A:*
 
-The `corridor-width` information is the total width of the required corridor.
+The `corridor-width` information SHALL be the total width of the required corridor.
 
 ---
 *B:*
 
-The supported `corridor-width` width units will be supplied by the query metadata information.
+The supported `corridor-width` width units SHALL be supplied by the query metadata information.
 
 
 [source,java]
@@ -21,16 +21,16 @@ corridor-width = width
 ---
 *C:*
 
-If the width value is the total width of the corridor.
+If the width value SHALL be the total width of the corridor.
 
 ---
 *D:*
 
-The coordinates of the `coords` parameter define the centre point of the corridor.
+The coordinates of the `coords` parameter SHALL define the centre point of the corridor.
 
 ---
 *E:*
 
-If an unsupported units value is requested a `400` error should be returned.
+If an unsupported units value is requested a `400` error SHOULD be returned.
 
 ====

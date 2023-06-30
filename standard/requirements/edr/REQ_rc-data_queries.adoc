@@ -5,7 +5,7 @@
 
 *A:*
 
-A `data_queries` object MUST have a least one of the following query data types defined:
+A `data_queries` object SHALL have a least one of the following query data types defined:
 
 * position
 * radius
@@ -19,6 +19,6 @@ A `data_queries` object MUST have a least one of the following query data types 
 ---
 *B:*
 
-All query types defined in the `data_queries` object MUST comply with the requirement `/req/edr/rc-common-query-type`
+All query types defined in the `data_queries` object SHALL comply with the requirement `/req/edr/rc-common-query-type`
 
 ====

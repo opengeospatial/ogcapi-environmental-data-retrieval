@@ -5,7 +5,7 @@
 
 *A:*
 
-An items `data_queries` object `variables` property MUST include a `query_type` property the value of which MUST match the query type 
+An items `data_queries` object `variables` property SHALL include a `query_type` property the value of which SHALL match the query type 
 
 ---
 *B:*

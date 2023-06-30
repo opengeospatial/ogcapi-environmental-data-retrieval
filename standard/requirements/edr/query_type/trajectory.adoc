@@ -92,6 +92,6 @@ a| **f**
 * client request contains coords=LINESTRINGM(...) and a *datetime* query parameter 
 * client request contains coords=LINESTRINGZM(...) and *z* or *datetime* query parameters 
 
-#An error MUST be thrown by the server#
+#An error SHALL be thrown by the server#
 
 

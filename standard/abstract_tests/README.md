@@ -24,4 +24,4 @@ The test is expressed according to this pattern:
 * <<req_cc_req,Requirement /req/cc/req>>
 ````
 
-NOTE: for each test, there must be one or more requirements in the "requirements" folder.
+NOTE: for each test, there shall be one or more requirements in the "requirements" folder.

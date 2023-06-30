@@ -4,6 +4,6 @@
 ====
 *A:*
 
-If an implementation supports HTTP POST, it MUST be described by an OpenAPI document and it SHALL conform to https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.3.
+If an implementation supports HTTP POST, it SHALL be described by an OpenAPI document and it SHALL conform to https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.3.
 
 ====

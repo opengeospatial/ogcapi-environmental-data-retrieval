@@ -14,7 +14,7 @@ This example uses covjson-reader 0.7.2.
 
 ## Required and supported Conformance classes
 
-The API must support the [Core](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core), [Queries](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/queries] and [CoverageJSON](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/covjson) conformance classes.
+The API shall support the [Core](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core), [Queries](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/queries] and [CoverageJSON](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/covjson) conformance classes.
 
 leaflet-coverage does not support OGC API - EDR, so the coverage data for each collection has to be accessed directly as CoverageJSON.
 
