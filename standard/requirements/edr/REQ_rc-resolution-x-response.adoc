@@ -1,8 +1,10 @@
 [[req_edr_resolution-x-response]]
 ==== *Requirement /req/edr/resolution-x-response* Parameter resolution-x response
 
-[requirement,type="general",id="/req/edr/resolution-x-response", label="/req/edr/resolution-x-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/resolution-x-response
 
 *A:*
 

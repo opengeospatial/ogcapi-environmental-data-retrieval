@@ -1,7 +1,10 @@
 [[req_core_rc-bbox-response]]
 ==== *Requirement /req/core/rc-bbox-response* Parameter bbox response
-[requirement,type="general",id="/req/core/rc-bbox-response", label="/req/core/rc-bbox-response"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/rc-bbox-response
 
 *A:*
 

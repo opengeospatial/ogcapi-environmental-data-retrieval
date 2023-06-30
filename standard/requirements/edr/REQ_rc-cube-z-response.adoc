@@ -1,8 +1,10 @@
 [[req_edr_cube-z-response]]
 ==== *Requirement /req/edr/cube-z-response* Parameter z response for cube queries
 
-[requirement,type="general",id="/req/edr/cube-z-response", label="/req/edr/cube-z-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/cube-z-response
 
 *A:*
 

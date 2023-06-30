@@ -1,8 +1,10 @@
 [[req_oas30_completeness]]
 ==== *Requirement /req/oas30/completeness* OpenAPI 3.0 Completeness
 
-[requirement,type="general",id="/req/oas30/completeness", label="/req/oas30/completeness"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/oas30/completeness
 
 *A:*
 

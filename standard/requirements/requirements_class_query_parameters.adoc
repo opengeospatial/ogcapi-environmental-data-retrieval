@@ -1,195 +1,53 @@
 [[rc_query_parameters]]
 // *Requirements Class:* OGC API - Environmental Data Retrieval Query parameters
 
-[%unnumbered]
-[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/query_parameters",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core;http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections"]
-.OGC API - Environmental Data Retrieval Query parameters Requirements Class
+[requirements_class]
+.Query parameters
+
 ====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/query_parameters
+obligation:: requirement
+subject:: Web API
+inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
 
-// 1
-[requirement,type="general",label="/req/core/rc-bbox-definition"]
-======
-======
-
-// 2
-[requirement,type="general",label="/req/core/rc-bbox-response"]
-======
-======
-
-// 3
-[requirement,type="general",label="/req/edr/coords-definition"]
-======
-======
-
-// 4
-[requirement,type="general",label="/req/edr/point-coords-response"]
-======
-======
-
-// 5
-[requirement,type="general",label="/req/edr/polygon-coords-response"]
-======
-======
-
-// 6
-[requirement,type="general",label="/req/edr/linestring-coords-response"]
-======
-======
-
-// 7
-[requirement,type="general",label="/req/core/datetime-definition"]
-======
-======
-
-// 8
-[requirement,type="general",label="/req/core/datetime-response"]
-======
-======
-
-// 9
-[requirement,type="general",label="/req/edr/REQ_rc-parameter-name-definition"]
-======
-======
-
-// 10
-[requirement,type="general",label="/req/edr/parameter-name-response"]
-======
-======
-
-// 11
-[requirement,type="general",label="/req/edr/REQ_rc-crs-definition"]
-======
-======
-
-// 12
-[requirement,type="general",label="/req/edr/REQ_rc-crs-response"]
-======
-======
-
-// 13
-[requirement,type="general",label="/req/edr/rc-f-definition"]
-======
-======
-
-// 14
-[requirement,type="general",label="/req/edr/REQ_rc-f-response"]
-======
-======
-
-// 15
-[requirement,type="general",label="/req/edr/z-definition"]
-======
-======
-
-// 16
-[requirement,type="general",label="/req/edr/z-response"]
-======
-======
-
-// 17
-[requirement,type="general",label="/req/edr/within-definition"]
-======
-======
-
-// 18
-[requirement,type="general",label="/req/edr/REQ_rc-within-response"]
-======
-======
-
-// 19
-[requirement,type="general",label="/req/edr/within-units-definition"]
-======
-======
-
-// 20
-[requirement,type="general",label="/req/edr/REQ_rc-within-units-response"]
-======
-======
-
-// 21
-[requirement,type="general",label="/req/edr/resolution-x-definition"]
-======
-======
-
-// 22
-[requirement,type="general",label="/req/edr/resolution-x-response"]
-======
-======
-
-
-// 23
-[requirement,type="general",label="/req/edr/cube-z-response"]
-======
-======
-
-// 24
-[requirement,type="general",label="/req/edr/resolution-y-definition"]
-======
-======
-
-// 25
-[requirement,type="general",label="/req/edr/resolution-y-response"]
-======
-======
-
-// 26
-[requirement,type="general",label="/req/edr/resolution-z-definition"]
-======
-======
-
-// 27
-[requirement,type="general",label="/req/edr/resolution-z-response"]
-======
-======
-
-// 28
-[requirement,type="general",label="/req/edr/REQ_rc-corridor-height-definition"]
-======
-======
-
-// 29
-[requirement,type="general",label="/req/edr/REQ_rc-corridor-height-response"]
-======
-======
-
-// 30
-[requirement,type="general",label="/req/edr/REQ_rc-height-units-definition"]
-======
-======
-
-// 31
-[requirement,type="general",label="/req/edr/height-units-response"]
-======
-======
-
-// 32
-[requirement,type="general",label="/req/edr/corridor-width-definition"]
-======
-======
-
-// 33
-[requirement,type="general",label="/req/edr/REQ_rc-corridor-width-response"]
-======
-======
-
-// 34
-[requirement,type="general",label="/req/edr/REQ_rc-width-units-definition"]
-======
-======
-
-// 35
-[requirement,type="general",label="/req/edr/width-units-response"]
-======
-======
-
-// 36
-[requirement,type="general",label="/req/core/http"]
-======
-======
-
-// 37
-[requirement,type="general",label="/req/core/crs84"]
-======
-======
+requirement:: /req/core/rc-bbox-definition
+requirement:: /req/core/rc-bbox-response
+requirement:: /req/edr/coords-definition
+requirement:: /req/edr/point-coords-response
+requirement:: /req/edr/polygon-coords-response
+requirement:: /req/edr/linestring-coords-response
+requirement:: /req/core/datetime-definition
+requirement:: /req/core/datetime-response
+requirement:: /req/edr/REQ_rc-parameter-name-definition
+requirement:: /req/edr/parameter-name-response
+requirement:: /req/edr/REQ_rc-crs-definition
+requirement:: /req/edr/REQ_rc-crs-response
+requirement:: /req/edr/rc-f-definition
+requirement:: /req/edr/REQ_rc-f-response
+requirement:: /req/edr/z-definition
+requirement:: /req/edr/z-response
+requirement:: /req/edr/within-definition
+requirement:: /req/edr/REQ_rc-within-response
+requirement:: /req/edr/within-units-definition
+requirement:: /req/edr/REQ_rc-within-units-response
+requirement:: /req/edr/resolution-x-definition
+requirement:: /req/edr/resolution-x-response
+requirement:: /req/edr/cube-z-response
+requirement:: /req/edr/resolution-y-definition
+requirement:: /req/edr/resolution-y-response
+requirement:: /req/edr/resolution-z-definition
+requirement:: /req/edr/resolution-z-response
+requirement:: /req/edr/REQ_rc-corridor-height-definition
+requirement:: /req/edr/REQ_rc-corridor-height-response
+requirement:: /req/edr/REQ_rc-height-units-definition
+requirement:: /req/edr/height-units-response
+requirement:: /req/edr/corridor-width-definition
+requirement:: /req/edr/REQ_rc-corridor-width-response
+requirement:: /req/edr/REQ_rc-width-units-definition
+requirement:: /req/edr/width-units-response
+requirement:: /req/edr/custom-dimension-definition
+requirement:: /req/edr/custom-dimension-response
 
 ====

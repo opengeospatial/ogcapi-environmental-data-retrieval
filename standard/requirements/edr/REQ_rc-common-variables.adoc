@@ -1,7 +1,9 @@
 [[req_edr_rc-common-variables]]
 
-[requirement,type="general",id="/req/edr/rc-common-variables", label="/req/edr/rc-common-variables"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-common-variables
 
 *A:*
 

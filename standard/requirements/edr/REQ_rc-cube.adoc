@@ -1,7 +1,9 @@
 [[req_edr_rc-cube]]
 
-[requirement,type="general",id="/req/edr/rc-cube", label="/req/edr/rc-cube"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-cube
 
 *A:*
 

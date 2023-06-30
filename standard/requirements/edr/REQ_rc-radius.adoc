@@ -1,7 +1,9 @@
-[[req_edr_rc-position]]
+[[req_edr_rc-radius]]
 
-[requirement,type="general",id="/req/queries/position", label="/req/queries/position"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/queries/radius
 
 *A:*
 

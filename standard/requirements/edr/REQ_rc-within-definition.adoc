@@ -1,8 +1,10 @@
 [[req_edr_within-definition]]
 ==== *Requirement /req/edr/within-definition* Parameter within definition
 
-[requirement,type="general",id="/req/edr/within-definition", label="/req/edr/within-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/within-definition
 
 *A:*
 

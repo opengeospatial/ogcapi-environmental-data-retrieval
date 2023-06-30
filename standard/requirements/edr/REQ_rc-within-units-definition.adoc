@@ -1,8 +1,10 @@
 [[req_edr_within-units-definition]]
 ==== *Requirement /req/edr/within-units-definition* Parameter within-units definition
 
-[requirement,type="general",id="/req/edr/within-units-definition", label="/req/edr/within-units-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/within-units-definition
 
 *A:*
 

@@ -1,7 +1,9 @@
 [[req_core_api-definition-success]]
 
-[requirement,type="general",id="/req/core/api-definition-success", label="/req/core/api-definition-success"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/api-definition-success
 
 *A:*
 
@@ -17,9 +19,6 @@ The content of that response SHALL be an API Definition document.
 
 The API Definition document SHALL be consistent with the media type identified through HTTP content negotiation.
 
----
-*Note:*
-
-The `f` parameter SHOULD be used to satisfy this requirement.
-
 ====
+
+NOTE: The `f` parameter SHOULD be used to satisfy this requirement.

@@ -1,7 +1,10 @@
 [[req_html_content]]
 
-[requirement,type="general",id="/req/html/content", label="/req/html/content"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/html/content
+
 *A:* 
 
 Every `200`-response of the server with the media type `text/html` SHALL be a link:https://www.w3.org/TR/html5/[HTML 5 document] that includes the following information in the HTML body:

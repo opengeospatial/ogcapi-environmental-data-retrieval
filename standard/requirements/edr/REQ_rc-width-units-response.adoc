@@ -1,8 +1,10 @@
 [[req_edr_width_units-response]]
 ==== *Requirement /req/edr/width-units-response* Parameter width-units response
 
-[requirement,type="general",id="/req/edr/width-units-response", label="/req/edr/width-units-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/width-units-response
 
 *A:*
 

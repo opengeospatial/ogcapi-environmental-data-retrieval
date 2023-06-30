@@ -1,32 +1,22 @@
 [[rc_oas30]]
-[%unnumbered]
-[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/oas30",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core;http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30;OpenAPI Specification 3.0.3"]
+
+[requirements_class]
 .OpenAPI 3.0 Requirements Class
+
 ====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30
+obligation:: requirement
+subject:: Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core
+inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+inherit:: OpenAPI Specification 3.0.3
 
-[requirement,type="general",label="/req/oas30/oas-impl"]
-======
-======
-
-[requirement,type="general",label="/req/oas30/oas-definition-1"]
-======
-======
-
-[requirement,type="general",label="/req/oas30/oas-definition-2"]
-======
-======
-
-[requirement,type="general",label="/req/oas30/completeness"]
-======
-======
-
-[requirement,type="general",label="/req/oas30/exceptions-codes"]
-======
-======
-
-[requirement,type="general",label="/req/oas30/security"]
-======
-======
-
+requirement:: /req/oas30/oas-impl
+requirement:: /req/oas30/oas-definition-1
+requirement:: /req/oas30/oas-definition-2
+requirement:: /req/oas30/completeness
+requirement:: /req/oas30/exceptions-codes
+requirement:: /req/oas30/security
 
 ====

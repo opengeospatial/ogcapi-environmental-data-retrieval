@@ -1,22 +1,17 @@
 [[req_core_conformance]]
 ==== *Requirement /req/core/conformance* Core conformance classes
 
-[requirement,type="general",id="/req/core/conformance", label="/req/core/conformance"]
+[requirement]
 ====
-The list of Conformance Classes advertised by the API SHALL include:
+[%metadata]
+identifier:: /req/core/conformance
 
 *A:*
 
-http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+The list of Conformance Classes advertised by the API SHALL include:
 
----
-*B:*
-
-http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
-
----
-*C:*
-
-http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core
+* http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+* http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
+* http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
 
 ====

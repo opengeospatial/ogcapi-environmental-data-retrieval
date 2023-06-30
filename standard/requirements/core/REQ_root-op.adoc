@@ -1,9 +1,11 @@
 [[req_core_root-op]]
-[requirement,type="general",id="/req/core/root-op", label="/req/core/root-op"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/root-op
 
 *A:*
 
 The server SHALL support the HTTP GET operation at the path `/`.
-
 ====

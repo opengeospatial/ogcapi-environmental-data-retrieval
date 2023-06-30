@@ -1,7 +1,9 @@
 [[req_edr_rc-corridor]]
 
-[requirement,type="general",id="/req/edr/rc-corridor", label="/req/edr/rc-corridor"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-corridor
 
 *A:*
 

@@ -1,8 +1,10 @@
 [[req_edr_corridor-height-response]]
 ==== *Requirement /req/edr/REQ_rc-corridor-height-response* Parameter corridor-height response
 
-[requirement,type="general",id="/req/edr/REQ_rc-corridor-height-response", label="/req/edr/REQ_rc-corridor-height-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-corridor-height-response
 
 *A:*
 

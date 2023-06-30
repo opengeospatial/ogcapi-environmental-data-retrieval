@@ -1,7 +1,10 @@
 [[req_oas30_oas-definition-2]]
 ==== *Requirement /req/oas30/oas-definition-2* OpenAPI 3.0 conformance
-[requirement,type="general",id="/req/oas30/oas-definition-2", label="/req/oas30/oas-definition-2"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/oas30/oas-definition-2
 
 *A:*
 

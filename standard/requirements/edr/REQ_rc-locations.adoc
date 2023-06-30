@@ -1,7 +1,11 @@
 [[req_edr_rc-locations]]
 
 [requirement,type="general",id="/req/edr/rc-locations", label="/req/edr/rc-locations"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-locations
 
 *A:*
 

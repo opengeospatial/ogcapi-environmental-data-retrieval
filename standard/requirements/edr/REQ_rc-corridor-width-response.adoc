@@ -1,8 +1,10 @@
 [[req_edr_corridor-width-response]]
 ==== *Requirement /req/edr/REQ_rc-corridor-width-response* Parameter corridor-width response
 
-[requirement,type="general",id="/req/edr/REQ_rc-corridor-width-response", label="/req/edr/REQ_rc-corridor-width-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-corridor-width-response
 
 *A:*
 

@@ -1,8 +1,10 @@
 [[req_edr_coords-definition]]
 ==== *Requirement /req/edr/coords-definition* Parameter coords definition
 
-[requirement,type="general",id="/req/edr/coords-definition", label="/req/edr/coords-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/coords-definition
 
 *A:*
 

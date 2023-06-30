@@ -1,8 +1,11 @@
 [[req_core_crs]]
 ==== *Requirement /req/core/crs* CRS
 
-[requirement,type="general",id="/req/core/crs", label="/req/core/crs"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/crs
+
 
 *A:*
 

@@ -1,8 +1,10 @@
 [[req_edr_custom-dimension-response]]
 ==== *Requirement /req/edr/custom-dimension-response* Custom Parameter response
 
-[requirement,type="general",id="/req/edr/custom-dimension-response", label="/req/edr/custom-dimension-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/custom-dimension-response
 
 *A:*
 

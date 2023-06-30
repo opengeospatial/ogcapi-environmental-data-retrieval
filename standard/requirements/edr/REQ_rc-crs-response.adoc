@@ -1,8 +1,10 @@
 [[req_edr_crs-response]]
 ==== *Requirement /req/edr/REQ_rc-crs-response* Parameter crs response
 
-[requirement,type="general",id="/req/edr/REQ_rc-crs-response", label="/req/edr/REQ_rc-crs-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-crs-response
 
 *A:*
 

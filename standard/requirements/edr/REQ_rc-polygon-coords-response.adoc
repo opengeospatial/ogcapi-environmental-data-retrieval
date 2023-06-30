@@ -1,8 +1,10 @@
 [[req_edr_polygon-coords-response]]
 ==== *Requirement /req/edr/polygon-coords-response* Parameter coords response
 
-[requirement,type="general",id="/req/edr/polygon-coords-response", label="/req/edr/polygon-coords-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/polygon-coords-response
 
 *A:*
 

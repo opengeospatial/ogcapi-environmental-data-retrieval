@@ -1,50 +1,24 @@
 [[rc_core]]
 // *Requirements Class:* OGC API - Environmental Data Retrieval Core
 
-[%unnumbered]
-[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/core",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core;http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections"]
-.OGC API - Environmental Data Retrieval Core Requirements Class
+
+[requirements_class]
+.OGC API - Environmental Data Retrieval Core
+
 ====
-
-// 1
-[requirement,type="general",label="/req/core/root-op"]
-======
-======
-
-// 2
-[requirement,type="general",label="/req/core/root-success"]
-======
-======
-
-// 3
-[requirement,type="general",label="/req/core/api-definition-op"]
-======
-======
-
-// 4
-[requirement,type="general",label="/req/core/api-definition-success"]
-======
-======
-
-// 5
-[requirement,type="general",label="/req/core/conformance"]
-======
-======
-
-// 6
-[requirement,type="general",label="/req/core/conformance-success"]
-======
-======
-
-======
-
-// 7
-[requirement,type="general",label="/req/core/http"]
-======
-======
-
-// 8
-[requirement,type="general",label="/req/core/crs"]
-======
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core
+obligation:: requirement
+subject:: Web API
+inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
+requirement:: /req/core/root-op
+requirement:: /req/core/root-success
+requirement:: /req/core/api-definition-op
+requirement:: /req/core/api-definition-success
+requirement:: /req/core/conformance
+requirement:: /req/core/conformance-success
+requirement:: /req/core/http
+requirement:: /req/core/crs
 
 ====

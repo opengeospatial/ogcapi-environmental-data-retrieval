@@ -1,8 +1,11 @@
 [[req_edr-geojson_content]]
 ==== *Requirement /req/edr-geojson/content*
 
-[requirement,type="general",id="/req/edr-geojson/content", label="/req/edr-geojson/content"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr-geojson/content
+
 *A:*
 
 Every `200`-response with the media type `application/geo+json` SHALL be

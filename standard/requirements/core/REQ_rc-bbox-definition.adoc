@@ -1,7 +1,11 @@
 [[req_core_rc-bbox-definition]]
 ==== *Requirement /req/core/rc-bbox-definition* Parameter bbox definition
-[requirement,type="general",id="/req/core/rc-bbox-definition", label="/req/core/rc-bbox-definition"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/rc-bbox-definition
+
 
 *A:*
 

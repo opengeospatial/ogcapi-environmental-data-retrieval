@@ -1,54 +1,26 @@
 [[rc_queries]]
 // *Requirements Class:* Queries
 
-[%unnumbered]
-[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/queries",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/collections"]
-.Queries Requirements Class
+[requirements_class]
+.Queries
+
 ====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries
+obligation:: requirement
+subject:: Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections
 
-[requirement,type="general",label="/req/queries/position"]
-======
-======
-
-[requirement,type="general",label="/req/edr/rc-area"]
-======
-======
-
-[requirement,type="general",label="/req/edr/rc-cube"]
-======
-======
-
-[requirement,type="general",label="/req/edr/rc-trajectory"]
-======
-======
-
-[requirement,type="general",label="/req/edr/rc-corridor"]
-======
-======
-
-[requirement,type="general",label="/req/edr/rc-items"]
-======
-======
-
-[requirement,type="general",label="/req/edr/rc-locations"]
-======
-======
-
-[requirement,type="general",label="/req/instances/rc-md-op"]
-======
-======
-
-[requirement,type="general",label="/req/instances/rc-md-success"]
-======
-======
-
-[requirement,type="general",label="/req/instances/src-md-op"]
-======
-======
-
-[requirement,type="general",label="/req/instances/src-md-success"]
-======
-======
-
-
+requirement:: /req/queries/position
+requirement:: /req/edr/rc-area
+requirement:: /req/edr/rc-cube
+requirement:: /req/edr/rc-trajectory
+requirement:: /req/edr/rc-corridor
+requirement:: /req/queries/radius
+requirement:: /req/edr/rc-items
+requirement:: /req/edr/rc-locations
+requirement:: /req/instances/rc-md-op
+requirement:: /req/instances/rc-md-success
+requirement:: /req/instances/src-md-op
+requirement:: /req/instances/src-md-success
 ====

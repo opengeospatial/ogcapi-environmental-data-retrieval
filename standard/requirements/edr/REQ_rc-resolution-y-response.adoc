@@ -1,8 +1,10 @@
 [[req_edr_resolution-y-response]]
 ==== *Requirement /req/edr/resolution-y-response* Parameter resolution-y response
 
-[requirement,type="general",id="/req/edr/resolution-y-response", label="/req/edr/resolution-y-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/resolution-y-response
 
 *A:*
 

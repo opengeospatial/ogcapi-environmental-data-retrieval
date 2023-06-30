@@ -1,7 +1,10 @@
 [[req_collections_rc-md-success]]
 
-[requirement,type="general",id="/req/collections/rc-md-success", label="/req/collections/rc-md-success"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/collections/rc-md-success
+
 *A:*
 
 A successful execution of the operation SHALL be reported as a response with a HTTP status code `200`.

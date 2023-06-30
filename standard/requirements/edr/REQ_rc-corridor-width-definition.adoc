@@ -1,8 +1,10 @@
 [[req_edr_corridor-width-definition]]
 ==== *Requirement /req/edr/corridor-width-definition* Parameter corridor-width definition
 
-[requirement,type="general",id="/req/edr/corridor-width-definition", label="/req/edr/corridor-width-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/corridor-width-definition
 
 *A:*
 

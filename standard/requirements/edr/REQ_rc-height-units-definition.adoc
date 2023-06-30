@@ -1,8 +1,10 @@
 [[req_edr_height_units-definition]]
 ==== *Requirement /req/edr/REQ_rc-height-units-definition* Parameter height-units definition
 
-[requirement,type="general",id="/req/edr/REQ_rc-height-units-definition", label="/req/edr/REQ_rc-height-units-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-height-units-definition
 
 *A:*
 

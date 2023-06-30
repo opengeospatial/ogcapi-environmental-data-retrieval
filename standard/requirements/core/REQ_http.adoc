@@ -1,8 +1,10 @@
 [[req_core_http]]
 ==== *Requirement /req/core/http* HTTP
 
-[requirement,type="general",id="/req/core/http", label="/req/core/http"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/http
 
 *A:*
 
@@ -12,5 +14,4 @@ The API SHALL conform to <<rfc2616,HTTP 1.1>>.
 *B:*
 
 If the API supports HTTPS, then the API SHALL also conform to <<rfc2818,HTTP over TLS>>.
-
 ====

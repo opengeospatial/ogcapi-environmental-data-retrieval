@@ -1,7 +1,10 @@
 [[req_geojson_content]]
 
-[requirement,type="general",id="/req/geojson/content", label="/req/geojson/content"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/geojson/content
+
 *A:*
 
 Every `200`-response with the media type `application/geo+json` SHALL be

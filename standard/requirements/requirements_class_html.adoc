@@ -1,17 +1,17 @@
 [[rc_html]]
 // *Requirements Class:* HTML
 
-[%unnumbered]
-[requirement,type="class",label="http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/html",obligation="requirement",subject="Web API",inherit="http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core"]
-.HTML Requirements Class
+[requirements_class]
+.HTML
+
 ====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html
+obligation:: requirement
+subject:: Web API
+inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 
-[requirement,type="general",label="/req/html/content"]
-======
-======
-
-[requirement,type="general",label="/req/html/definition"]
-======
-======
+requirement:: /req/html/content
+requirement:: /req/html/definition
 
 ====
