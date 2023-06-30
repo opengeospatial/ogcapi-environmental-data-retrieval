@@ -8,7 +8,7 @@ identifier:: /req/edr/corridor-width-definition
 
 *A:*
 
-Each resource collection operation SHALL support a parameter `corridor-width`with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+Each resource collection operation SHALL support a parameter `corridor-width` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 
 [source,YAML]

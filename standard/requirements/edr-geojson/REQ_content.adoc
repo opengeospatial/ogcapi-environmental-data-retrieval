@@ -12,9 +12,9 @@ Every `200`-response with the media type `application/geo+json` SHALL be
 
 
 
-* a link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/edrFeatureCollectionGeoJSON.yaml[EDR GeoJSON FeatureCollection Object] for features, and
+* an link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/edrFeatureCollectionGeoJSON.yaml[EDR GeoJSON FeatureCollection Object] for features, and
 
-* a link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/featureGeoJSON.yaml[EDR GeoJSON Feature Object] for a single feature.
+* an link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/featureGeoJSON.yaml[EDR GeoJSON Feature Object] for a single feature.
 
 
 

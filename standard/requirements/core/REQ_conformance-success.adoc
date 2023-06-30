@@ -7,7 +7,7 @@ identifier:: /req/core/conformance-success
 
 *A:*
 
-A successful execution of the operation SHALL be reported as a response with a HTTP status code `200`.
+A successful execution of the operation SHALL be reported as a response with an HTTP status code `200`.
 
 ---
 *B:*

@@ -41,7 +41,7 @@ a| **parameter-name**
 
 * <<req_edr_parameters-definition,definition>> 
 
-* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names (available options are listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response) a| * `parameter-name=Visibility,Air%20Temperature``
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names (available options are listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response) a| * `parameter-name=Visibility,Air%20Temperature`
 a| **crs**
 
 * <<req_edr_crs-definition,definition>> 

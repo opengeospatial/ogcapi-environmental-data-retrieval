@@ -13,7 +13,7 @@ Each resource collection operation MAY support a parameter `within-units` with t
 ---
 *B:*
 
-A within-units value SHALL be one of the values defined in the instance metadata:
+A `within-units` value SHALL be one of the values defined in the instance metadata:
 
 [source,YAML]
 ----

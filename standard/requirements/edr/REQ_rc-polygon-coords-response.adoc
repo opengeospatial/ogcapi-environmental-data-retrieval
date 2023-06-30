@@ -13,7 +13,7 @@ Only those resources that are representative of the requested geometry that is d
 ---
 *B:*
 
-The coordinates SHALL consist of a Well Known Text (WKT) POLYGON or or (if supported by the collection) MULTIPOLYGON geometry string.
+The coordinates SHALL consist of a Well Known Text (WKT) POLYGON or (if supported by the collection) MULTIPOLYGON geometry string.
 
 ---
 *C:*

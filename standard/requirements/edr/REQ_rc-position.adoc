@@ -7,12 +7,12 @@ identifier:: /req/queries/position
 
 *A:*
 
-For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/position`.
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/position`.
 
 ---
 *B:*
 
-For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/position`.
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/position`.
 
 ---
 *C:*
