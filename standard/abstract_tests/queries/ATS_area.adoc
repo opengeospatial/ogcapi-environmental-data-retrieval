@@ -1,45 +1,50 @@
 [[ats_area]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/area*
-^|Test Purpose |Validate that an error is returned by an `Area` query if no query parameters are specified.
-^|Requirement |<<_req_edr_rc-area,/req/edr/rc-area>>
-^|Test Method |. No query parameters are specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/area*
-^|Test Purpose |Validate that an error is returned by an `Area` query when the coords query parameter is not specified.
-^|Requirement |<<_req_edr_rc-area,/req/edr/rc-area>>
-^|Test Method |. coords query parameter is not specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/area*
-^|Test Purpose |Validate that an error is returned by an `Area` query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.
-^|Requirement |<<_req_edr_rc-area,/req/edr/rc-area>>
-^|Test Method |. Check coords query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value
-. Validate that a document was returned with a status code 400.
-|===
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/area-no-query-params
+target:: /req/edr/rc-area
+test-purpose:: Validate that an error is returned by an `Area` query if no query parameters are specified.
+test-method::
+step::: No query parameters are specified
+step::: Validate that a document was returned with a status code 400.
+====
 
 
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/area-no-coords-param
+target:: /req/edr/rc-area
+test-purpose:: Validate that an error is returned by an `Area` query when the coords query parameter is not specified.
+test-method::
+step::: coords query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
 
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/area*
-^|Test Purpose |Validate that resources can be identified and extracted from a Collection with an `Area` query using  query parameters.
-^|Requirement |<<_req_edr_rc-area,/req/edr/rc-area>>
-^|Test Method |. Test with valid query parameters
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/area-coords-param-invalid
+target:: /req/edr/rc-area
+test-purpose:: Validate that an error is returned by an `Area` query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.
+test-method::
+step::: Check coords query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/area-valid-query-params
+target:: /req/edr/rc-area
+test-purpose:: Validate that resources can be identified and extracted from a Collection with an `Area` query using  query parameters.
+test-method::
++
+--
+. Test with valid query parameters
 . Validate that a document was returned with a status code 200.
 
 Repeat these tests using the following parameter tests:
@@ -66,38 +71,37 @@ Repeat these tests using the following parameter tests:
 
 Execute requests with combinations of the "coords","time","parameter-name","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
-|===
+--
+====
+
+include::../collections/area/ATS_rc-coords-definition.adoc[]
+
+include::../collections/area/ATS_rc-coords-response.adoc[]
+
+include::../collections/area/ATS_rc-z-definition.adoc[]
+
+include::../collections/area/ATS_rc-z-response.adoc[]
 
 
 
-include::../collections/ATS_rc-coords-definition.adoc[]
+include::../core/area/ATS_rc-time-definition.adoc[]
 
-include::../collections/ATS_rc-coords-response.adoc[]
-
-include::../collections/ATS_rc-z-definition.adoc[]
-
-include::../collections/ATS_rc-z-response.adoc[]
+include::../core/area/ATS_rc-time-response.adoc[]
 
 
 
-include::../core/ATS_rc-time-definition.adoc[]
+include::../collections/area/ATS_rc-parameter-name-definition.adoc[]
 
-include::../core/ATS_rc-time-response.adoc[]
-
-
-
-include::../collections/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/ATS_rc-parameter-name-response.adoc[]
+include::../collections/area/ATS_rc-parameter-name-response.adoc[]
 
 
 
-include::../collections/ATS_rc-crs-definition.adoc[]
+include::../collections/area/ATS_rc-crs-definition.adoc[]
 
-include::../collections/ATS_rc-crs-response.adoc[]
+include::../collections/area/ATS_rc-crs-response.adoc[]
 
 
 
-include::../collections/ATS_rc-f-definition.adoc[]
+include::../collections/area/ATS_rc-f-definition.adoc[]
 
-include::../collections/ATS_rc-f-response.adoc[]
+include::../collections/area/ATS_rc-f-response.adoc[]

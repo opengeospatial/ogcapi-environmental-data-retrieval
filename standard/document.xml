@@ -77,7 +77,7 @@
 <p>The OGC API-EDR standard extends the common query operations listed in <xref target="common-paths"/> by defining simple, coordinate-based, queries which are applicable to many spatio-temporal, including geospatial, resource types. Other OGC API Standards may define additional query capabilities specific to their resource type. EDR Query operations allow resources or values to be retrieved from the underlying spatio-temporal resource data store. The information returned is based upon the selection criteria (query string) provided by the client.</p>
 </abstract><status><stage>draft</stage></status><copyright><from>2023</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-</organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>property</keyword><keyword>geographic information</keyword><keyword>spatial data</keyword><keyword>spatial thing</keyword><keyword>spatio-temporal</keyword><keyword>dataset</keyword><keyword>distribution</keyword><keyword>API</keyword><keyword>JSON</keyword><keyword>geoJSON</keyword><keyword>coverageJSON</keyword><keyword>HTML</keyword><keyword>OpenAPI</keyword><keyword>AsyncAPI</keyword><keyword>REST</keyword><keyword>Common</keyword><keyword>position</keyword><keyword>area</keyword><keyword>trajectory</keyword><keyword>corridor</keyword><keyword>cube</keyword><keyword>time-series</keyword><keyword>radius</keyword><keyword>polygon</keyword><keyword>WKT</keyword><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><table id="_misccontainer_anchor_aliases"><tbody><tr><th>rc_core</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core</td></tr><tr><th>_bd3face2-ab92-44d8-b7b1-920945e5b0c2</th><td>/req/core/root-op</td></tr><tr><th>_9c668372-0eac-493f-aae3-fa8f32f9ee70</th><td>/req/core/root-success</td></tr><tr><th>_4fee4c89-33bd-4c6c-8e8f-190b21e89a80</th><td>/req/core/api-definition-op</td></tr><tr><th>_51096b3c-9454-4c43-8eca-9f47c1b74f82</th><td>/req/core/api-definition-success</td></tr><tr><th>_ca4fb1ed-f125-499d-bd16-e020e63f20dc</th><td>/req/core/conformance</td></tr><tr><th>_4455342d-22f2-4aaf-a0f4-e04af8a5dbf2</th><td>/req/core/conformance-success</td></tr><tr><th>_588dc17f-1475-44b9-8a13-715b714ea560</th><td>/req/core/http</td></tr><tr><th>_bb021245-1573-4e98-af23-587ed196c956</th><td>/req/core/crs</td></tr><tr><th>req_core_root-op</th><td>/req/core/root-op</td></tr><tr><th>req_core_root-success</th><td>/req/core/root-success</td></tr><tr><th>req_core_api-definition-op</th><td>/req/core/api-definition-op</td></tr><tr><th>req_core_api-definition-success</th><td>/req/core/api-definition-success</td></tr><tr><th>_f591a668-2562-4c8a-927c-56522bbfcca6</th><td>/req/core/conformance</td></tr><tr><th>req_core_conformance-success</th><td>/req/core/conformance-success</td></tr><tr><th>_3eac3783-dc67-457f-8a98-773ac0da41af</th><td>/req/core/http</td></tr><tr><th>_5d5a87e5-a484-4ae9-8870-1bbaadd521c0</th><td>/req/core/crs</td></tr><tr><th>rc_collections</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections</td></tr><tr><th>_1090750f-5dda-4970-8f89-72cac5d07260</th><td>/req/collections/rc-md-op</td></tr><tr><th>_30ab40a1-b2b9-4c62-84c4-0290690492e6</th><td>/req/collections/rc-md-success</td></tr><tr><th>_6e09218d-e270-4d03-8eec-f8e31e5b2000</th><td>/req/collections/src-md-op</td></tr><tr><th>_5f8a4f13-9f51-4835-8ecd-d390d21bca21</th><td>/req/collections/src-md-success</td></tr><tr><th>_afe7b555-3b55-4d7e-99ad-3ca95dd31151</th><td>/req/edr/rc-collection-info</td></tr><tr><th>_1d0dbd29-29ea-49d6-a977-41aac524066d</th><td>/req/core/rc-collection-info-links</td></tr><tr><th>_a741f420-df41-4ce1-8ddf-139eb7a29483</th><td>/req/edr/rc-data-queries</td></tr><tr><th>_432b02fb-fea0-4a35-bc4f-3d889f9102fe</th><td>/req/core/rc-extent</td></tr><tr><th>_2aa8e18d-26a5-4506-acc7-1905e5a00f30</th><td>/req/core/rc-md-query-links</td></tr><tr><th>_fc224922-1cd5-4bea-86b6-c6e275ac345f</th><td>/req/edr/rc-crs</td></tr><tr><th>_6c435cd1-f302-4384-bba5-d556a61b94c7</th><td>/req/edr/rc-parameters</td></tr><tr><th>req_collections_rc-md-op</th><td>/req/collections/rc-md-op</td></tr><tr><th>req_collections_rc-md-success</th><td>/req/collections/rc-md-success</td></tr><tr><th>req_collections_src-md-op</th><td>/req/collections/src-md-op</td></tr><tr><th>req_collections_src-md-success</th><td>/req/collections/src-md-success</td></tr><tr><th>req_edr_rc-collection-info</th><td>/req/edr/rc-collection-info</td></tr><tr><th>req_edr_rc-data-queries</th><td>/req/edr/rc-data-queries</td></tr><tr><th>req_edr_rc-common-variables</th><td>/req/edr/rc-common-variables</td></tr><tr><th>req_edr_rc-common-query-type</th><td>/req/edr/rc-common-query-type</td></tr><tr><th>req_edr_rc-radius-variables</th><td>/req/edr/rc-radius-variables</td></tr><tr><th>req_edr_rc-cube-variables</th><td>/req/edr/rc-cube-variables</td></tr><tr><th>req_edr_rc-corridor-variables</th><td>/req/edr/rc-corridor-variables</td></tr><tr><th>req_edr_rc-items-variables</th><td>/req/edr/rc-items-variables</td></tr><tr><th>req_core_rc-collection-info-links</th><td>/req/core/rc-collection-info-links</td></tr><tr><th>req_core_rc-extent</th><td>/req/core/rc-extent</td></tr><tr><th>req_core_rc-md-query-links</th><td>/req/core/rc-md-query-links</td></tr><tr><th>req_edr_rc-crs</th><td>/req/edr/rc-crs</td></tr><tr><th>req_edr_rc-parameters</th><td>/req/edr/rc-parameters</td></tr><tr><th>rc_queries</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</td></tr><tr><th>_c0020eea-f7b7-4db1-967a-e2dc37ec7be3</th><td>/req/queries/position</td></tr><tr><th>_d78433ab-ac2b-446d-a905-1b5597823fc1</th><td>/req/edr/rc-area</td></tr><tr><th>_87eb8b85-a3ef-4a3e-a016-9c4918961ec5</th><td>/req/edr/rc-cube</td></tr><tr><th>_d7529e20-e4a2-44bc-92d4-4e1fe671a357</th><td>/req/edr/rc-trajectory</td></tr><tr><th>_69c173a1-7d46-454b-81dd-8a0901215006</th><td>/req/edr/rc-corridor</td></tr><tr><th>_902c6f76-2067-4cf7-8f6d-2e37a70eef3f</th><td>/req/queries/radius</td></tr><tr><th>_eb1222dc-e50c-4915-8120-667b1c79cbc2</th><td>/req/edr/rc-items</td></tr><tr><th>_24a12080-785a-4f5a-b4e7-ec1c7ea377a5</th><td>/req/edr/rc-locations</td></tr><tr><th>_34d03894-703b-4b3a-9b0d-972a3dba0a91</th><td>/req/instances/rc-md-op</td></tr><tr><th>_a58bd166-847f-4b5c-b31a-90ffcc263503</th><td>/req/instances/rc-md-success</td></tr><tr><th>_2de5af32-80f5-4e9b-82a2-af2b0a5ccc4a</th><td>/req/instances/src-md-op</td></tr><tr><th>_4ed3cc10-c876-4a0e-8ba2-a4cb64212efd</th><td>/req/instances/src-md-success</td></tr><tr><th>req_edr_rc-position</th><td>/req/queries/position</td></tr><tr><th>req_edr_rc-area</th><td>/req/edr/rc-area</td></tr><tr><th>req_edr_rc-cube</th><td>/req/edr/rc-cube</td></tr><tr><th>req_edr_rc-trajectory</th><td>/req/edr/rc-trajectory</td></tr><tr><th>req_edr_rc-corridor</th><td>/req/edr/rc-corridor</td></tr><tr><th>req_edr_rc-radius</th><td>/req/queries/radius</td></tr><tr><th>req_core_rc-items</th><td>/req/edr/rc-items</td></tr><tr><th>/req/edr/rc-locations</th><td>/req/edr/rc-locations</td></tr><tr><th>req_instances_rc-md-op</th><td>/req/instances/rc-md-op</td></tr><tr><th>req_instances_rc-md-success</th><td>/req/instances/rc-md-success</td></tr><tr><th>req_instances_src-md-op</th><td>/req/instances/src-md-op</td></tr><tr><th>req_instances_src-md-success</th><td>/req/instances/src-md-success</td></tr><tr><th>rc_query_parameters</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/query_parameters</td></tr><tr><th>_10f27f4b-38c4-49cd-957b-cb2e84ac460f</th><td>/req/core/rc-bbox-definition</td></tr><tr><th>_56222272-2191-411b-aff8-e0b431184dc8</th><td>/req/core/rc-bbox-response</td></tr><tr><th>_59d1576a-7ccd-4767-83b5-0b68ca4ea005</th><td>/req/edr/coords-definition</td></tr><tr><th>_90dfaccf-f046-44d7-bb79-aa2332ad0fee</th><td>/req/edr/point-coords-response</td></tr><tr><th>_97d8d299-50cb-442b-a52f-22ef5ace4ab6</th><td>/req/edr/polygon-coords-response</td></tr><tr><th>_2978fd14-285d-41e5-9483-65108bbdbb61</th><td>/req/edr/linestring-coords-response</td></tr><tr><th>_2e180ad4-3ad4-41f2-8c71-dbfed4aec36c</th><td>/req/core/datetime-definition</td></tr><tr><th>_9471acef-948d-45b4-9d9f-07290d6317bd</th><td>/req/core/datetime-response</td></tr><tr><th>_7f547e13-5997-4149-b58c-fea70131501a</th><td>/req/edr/REQ_rc-parameter-name-definition</td></tr><tr><th>_80a85930-5e64-48ec-a6c2-5dcc0a127c65</th><td>/req/edr/parameter-name-response</td></tr><tr><th>_9d637c27-503d-4e7c-9179-cf0584a4f28e</th><td>/req/edr/REQ_rc-crs-definition</td></tr><tr><th>_061d132a-5a0c-4142-b93d-5bccade082e5</th><td>/req/edr/REQ_rc-crs-response</td></tr><tr><th>_e25aa0fb-3c97-4513-88d8-698b87bf1f5a</th><td>/req/edr/rc-f-definition</td></tr><tr><th>_9f089b68-b089-4f5c-ac15-5211c966977a</th><td>/req/edr/REQ_rc-f-response</td></tr><tr><th>_ebc745bb-8afd-491c-b519-9387e2e92db9</th><td>/req/edr/z-definition</td></tr><tr><th>_7adf2431-6c3b-4575-9ec2-86dc357cb09c</th><td>/req/edr/z-response</td></tr><tr><th>_59775c46-c09e-4213-8e73-8d18efe2f970</th><td>/req/edr/within-definition</td></tr><tr><th>_86b36a61-e055-4a8c-ad1d-c641a15b4214</th><td>/req/edr/REQ_rc-within-response</td></tr><tr><th>_8fe30d4e-d55a-4dc4-b7db-b86fa0f7fdf6</th><td>/req/edr/within-units-definition</td></tr><tr><th>_63f7ed8e-5305-43a8-8437-0902ad5ac705</th><td>/req/edr/REQ_rc-within-units-response</td></tr><tr><th>_9053789d-10b0-4d50-b7f2-0a68703e540c</th><td>/req/edr/resolution-x-definition</td></tr><tr><th>_59e04dc5-b3ea-4914-9ace-47af7ad1b9b4</th><td>/req/edr/resolution-x-response</td></tr><tr><th>_ea4db158-a393-40b6-92cf-e55efd0ab06a</th><td>/req/edr/cube-z-response</td></tr><tr><th>_99b511d9-5967-40f8-9041-1fe6f2420c14</th><td>/req/edr/resolution-y-definition</td></tr><tr><th>_eb6eb75b-ec2c-4234-a30c-3423a67ce06e</th><td>/req/edr/resolution-y-response</td></tr><tr><th>_e08dd7bb-d347-439e-b34f-454c0ebbddd9</th><td>/req/edr/resolution-z-definition</td></tr><tr><th>_8751bcf6-9f11-42df-9b1b-813e212df9c1</th><td>/req/edr/resolution-z-response</td></tr><tr><th>_1d7bb26e-e22c-4a38-bd39-054782c1f16b</th><td>/req/edr/REQ_rc-corridor-height-definition</td></tr><tr><th>_f8a26c7a-93f4-4d70-ad1d-7f76414d0622</th><td>/req/edr/REQ_rc-corridor-height-response</td></tr><tr><th>_8e57e1b0-af1e-4492-acce-128406da9abb</th><td>/req/edr/REQ_rc-height-units-definition</td></tr><tr><th>_86ae76a0-351e-40ac-bef6-1802c27b67d2</th><td>/req/edr/height-units-response</td></tr><tr><th>_1539d779-f017-4033-916a-7cc67f46e484</th><td>/req/edr/corridor-width-definition</td></tr><tr><th>_6107363b-ba38-4a6f-a2da-f9b1341f338d</th><td>/req/edr/REQ_rc-corridor-width-response</td></tr><tr><th>_4c874dce-1f40-4de2-adca-b5fb38dc7c98</th><td>/req/edr/REQ_rc-width-units-definition</td></tr><tr><th>_d765ee23-ae90-4e7d-8ff5-4f60f336b393</th><td>/req/edr/width-units-response</td></tr><tr><th>_5b95b5b3-6cf0-4cbc-bb72-227d6a596aea</th><td>/req/edr/custom-dimension-definition</td></tr><tr><th>_be5ca4f6-2de9-4980-9670-55030cae1856</th><td>/req/edr/custom-dimension-response</td></tr><tr><th>_4a0260e6-4312-426d-9c64-413f9e9bea7e</th><td>/req/core/rc-bbox-definition</td></tr><tr><th>_8c5d07ee-c752-4a99-a142-edbb3532756b</th><td>/req/core/rc-bbox-response</td></tr><tr><th>_e5a2052c-ffce-4105-b768-2661d2fc20cf</th><td>/req/edr/coords-definition</td></tr><tr><th>_3038f1d8-333a-4e53-8ef2-7d6ec0973320</th><td>/req/edr/point-coords-response</td></tr><tr><th>_1588ff59-753a-4377-80d8-0a32de3271d7</th><td>/req/edr/polygon-coords-response</td></tr><tr><th>_bc54f59c-e99a-438f-89d0-6677f52628ea</th><td>/req/edr/linestring-coords-response</td></tr><tr><th>_3267b799-2910-4448-9d2b-d6fe14dfed60</th><td>/req/core/datetime-definition</td></tr><tr><th>_0d882102-e080-4cf6-ab0d-d28bfc7f4917</th><td>/req/core/datetime-response</td></tr><tr><th>_922ab008-a4e9-4767-b1cc-eef4171a4b58</th><td>/req/edr/REQ_rc-parameter-name-definition</td></tr><tr><th>_ec080d4f-d27a-40af-ab59-d67e0ca2a367</th><td>/req/edr/parameter-name-response</td></tr><tr><th>_9f86c45a-da88-482d-ad5d-092a807d8888</th><td>/req/edr/REQ_rc-crs-definition</td></tr><tr><th>_7bf575ae-40f5-420f-85e1-7123c76c365d</th><td>/req/edr/REQ_rc-crs-response</td></tr><tr><th>_bc07274d-0fbb-4e66-a59d-71f4f4fd7b64</th><td>/req/edr/rc-f-definition</td></tr><tr><th>_44efcb36-5449-4ac9-b3fe-e0fd078bf86d</th><td>/req/edr/REQ_rc-f-response</td></tr><tr><th>_52d0ff49-d411-4d63-aa3d-4a693a0467c6</th><td>/req/edr/z-definition</td></tr><tr><th>_af0d8bca-26f1-46d1-b73c-93abf5d0f80d</th><td>/req/edr/z-response</td></tr><tr><th>_952b2d62-fddd-45c7-a795-537519d1c4e5</th><td>/req/edr/within-definition</td></tr><tr><th>_1f8b2283-575f-422e-9e87-b9d46f9e525b</th><td>/req/edr/REQ_rc-within-response</td></tr><tr><th>_7dacb416-5649-46a5-9e4a-835f17fa5458</th><td>/req/edr/within-units-definition</td></tr><tr><th>_feaa4a18-6ed0-478f-8eb4-79f62b14b5a8</th><td>/req/edr/REQ_rc-within-units-response</td></tr><tr><th>_6ac676b4-6aba-4106-88da-761d107a9083</th><td>/req/edr/resolution-x-definition</td></tr><tr><th>_587c7345-fd6d-42b7-8487-2cc9060f587e</th><td>/req/edr/resolution-x-response</td></tr><tr><th>_50f8e1da-4f51-495f-a006-9ec3fe02b0f6</th><td>/req/edr/cube-z-response</td></tr><tr><th>_d8ded4f8-8e92-4207-a2de-73975c03e891</th><td>/req/edr/resolution-y-definition</td></tr><tr><th>_64f4465f-426f-4cc0-93ad-513078532825</th><td>/req/edr/resolution-y-response</td></tr><tr><th>_e3db75f2-29ef-4c09-b8b6-e5ec8fbe4435</th><td>/req/edr/resolution-z-definition</td></tr><tr><th>_02773dcf-7de1-443c-8f5b-028bf309e0f5</th><td>/req/edr/resolution-z-response</td></tr><tr><th>_72fd0f19-2d8a-467b-a4c3-432086d78d24</th><td>/req/edr/REQ_rc-corridor-height-definition</td></tr><tr><th>_db61fb91-fb09-4475-b30e-017b4a96cbb0</th><td>/req/edr/REQ_rc-corridor-height-response</td></tr><tr><th>_7ef381d9-1108-4be7-8ba1-bc718ba7a39c</th><td>/req/edr/REQ_rc-height-units-definition</td></tr><tr><th>_b548a5d0-2a8a-4079-9aad-4ea81d3c552b</th><td>/req/edr/height-units-response</td></tr><tr><th>_3324dab1-34dd-4593-b470-def4279f3a36</th><td>/req/edr/corridor-width-definition</td></tr><tr><th>_1599f473-5e40-42b5-8b6c-a8383eb4e882</th><td>/req/edr/REQ_rc-corridor-width-response</td></tr><tr><th>_74c260f7-b82c-46b8-b49f-b610d170a684</th><td>/req/edr/REQ_rc-width-units-definition</td></tr><tr><th>_6024aa24-deeb-4b02-9825-c4e1d59c8e64</th><td>/req/edr/width-units-response</td></tr><tr><th>_81715a31-d022-4125-990c-ac87abf3f237</th><td>/req/edr/custom-dimension-definition</td></tr><tr><th>_03d31ba8-44c8-49b4-8771-1d9187d2b8d3</th><td>/req/edr/custom-dimension-response</td></tr><tr><th>rc_json</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/json</td></tr><tr><th>_2bebb811-fb6b-48cd-98b9-7c9c978b94ea</th><td>/req/json/content</td></tr><tr><th>_68e05d49-0b77-4eaa-8b43-116d6f374a61</th><td>/req/json/definition</td></tr><tr><th>req_json_content</th><td>/req/json/content</td></tr><tr><th>req_json_definition</th><td>/req/json/definition</td></tr><tr><th>rc_geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson</td></tr><tr><th>_b94f262d-da57-4ecb-a3b1-f07ea86ddf18</th><td>/req/geojson/content</td></tr><tr><th>_6fb589df-cda3-48dd-9e40-dbd5238a3662</th><td>/req/geojson/definition</td></tr><tr><th>req_geojson_content</th><td>/req/geojson/content</td></tr><tr><th>req_geojson_definition</th><td>/req/geojson/definition</td></tr><tr><th>rc_edr_geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/edr-geojson</td></tr><tr><th>_ebb62f3c-203b-4b7c-b6a2-973b181d9d82</th><td>/req/edr-geojson/content</td></tr><tr><th>_22ffd86a-0027-4551-aff5-00712ae3226e</th><td>/req/edr-geojson/definition</td></tr><tr><th>_840d985f-f932-40bb-a690-d588c932f296</th><td>/req/edr-geojson/content</td></tr><tr><th>req_edr-geojson_definition</th><td>/req/edr-geojson/definition</td></tr><tr><th>rc_covjson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/covjson</td></tr><tr><th>_4b19cb98-22f0-4f3a-bd27-df1bdfbf408d</th><td>/req/covjson/content</td></tr><tr><th>_23b1dedc-5ab6-485d-8d97-ba782a7df5fe</th><td>/req/covjson/definition</td></tr><tr><th>req_covjson_content</th><td>/req/covjson/content</td></tr><tr><th>req_covjson_definition</th><td>/req/covjson/definition</td></tr><tr><th>rc_html</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html</td></tr><tr><th>_b0cae784-1af4-4b6b-a093-5112cb0738b6</th><td>/req/html/content</td></tr><tr><th>_f3e86ce3-7550-4ff8-b6b8-97ce4159b18f</th><td>/req/html/definition</td></tr><tr><th>req_html_content</th><td>/req/html/content</td></tr><tr><th>req_html_definition</th><td>/req/html/definition</td></tr><tr><th>rc_oas30</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30</td></tr><tr><th>_b423b405-4ddb-427a-b22a-e4b8240bbe9d</th><td>/req/oas30/oas-impl</td></tr><tr><th>_ea59f358-775b-44a5-a378-df2f071fb722</th><td>/req/oas30/oas-definition-1</td></tr><tr><th>_c4456675-674c-4ae9-aac7-c072bfb70f5e</th><td>/req/oas30/oas-definition-2</td></tr><tr><th>_46cca1fd-340f-4752-b34c-d606e3d31d06</th><td>/req/oas30/completeness</td></tr><tr><th>_31a8e83b-f528-4a17-bc93-4e554bc1bdd9</th><td>/req/oas30/exceptions-codes</td></tr><tr><th>_40e77a5e-3807-4eaa-9dd9-c2a9f07e1817</th><td>/req/oas30/security</td></tr><tr><th>_40283628-c753-4b8d-b993-9c5b1dfad1e4</th><td>/req/oas30/oas-impl</td></tr><tr><th>_6679e386-7368-4a93-ba67-98d999aae780</th><td>/req/oas30/oas-definition-1</td></tr><tr><th>_541ec61b-ea51-4167-a85b-0c97096fc61e</th><td>/req/oas30/oas-definition-2</td></tr><tr><th>_cc803211-f27d-4163-b14a-082b3fdbe700</th><td>/req/oas30/completeness</td></tr><tr><th>_a240aa17-76c7-48ae-ab8b-38bbfd99f537</th><td>/req/oas30/exceptions-codes</td></tr><tr><th>_5f094542-dee5-43ca-8451-a3eb7dedf037</th><td>/req/oas30/security</td></tr><tr><th>ats_core</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</td></tr><tr><th>_8f6f7c57-a6d6-4ad0-947d-8a295696216f</th><td>/conf/core/http</td></tr><tr><th>_20dac2ed-9bbf-4a7c-8957-af331302426a</th><td>/conf/core/root-op</td></tr><tr><th>_726a8064-b80f-4660-b135-56d46a2c209d</th><td>/conf/core/root-success</td></tr><tr><th>_f552872b-cfe0-48ab-b7e5-fdad910dd29a</th><td>/conf/core/api-definition</td></tr><tr><th>_763cbf4f-4dc6-47d6-8f07-269a04677822</th><td>/conf/core/api-definition-success</td></tr><tr><th>_4882b538-11fa-4f96-be60-37c5914529eb</th><td>/conf/core/conformance</td></tr><tr><th>_7520edb5-5d1f-49c0-a03c-35043364766c</th><td>/conf/core/conformance-success</td></tr><tr><th>ats_core_http</th><td>/conf/core/http</td></tr><tr><th>ats_core_root-op</th><td>/conf/core/root-op</td></tr><tr><th>ats_core_root-success</th><td>/conf/core/root-success</td></tr><tr><th>ats_core_api_definition-op</th><td>/conf/core/api-definition</td></tr><tr><th>ats_core_api-definition-success</th><td>/conf/core/api-definition-success</td></tr><tr><th>ats_core_conformance-op</th><td>/conf/core/conformance</td></tr><tr><th>ats_core_conformance-success</th><td>/conf/core/conformance-success</td></tr><tr><th>ats_collections</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections</td></tr><tr><th>_c5611474-11d2-4653-8883-1cd36310198d</th><td>/conf/core/crs</td></tr><tr><th>_b0622daf-03c2-4690-b93e-c43c69fcc754</th><td>/conf/collections/rc-md-op</td></tr><tr><th>_be28fcb9-525d-494f-9f48-a3dba177470b</th><td>/conf/rc-md-success</td></tr><tr><th>_a1acddce-741d-4037-a829-8a350d2fe9e2</th><td>/conf/collections/src-md-op</td></tr><tr><th>_3c1df0b3-b19e-488c-b089-0a41abee5f5c</th><td>/conf/collections/src-md-success</td></tr><tr><th>_4912936e-dab7-4cf7-8251-65bd5ad3b48f</th><td>/conf/core/rc-extent</td></tr><tr><th>_f911fbca-f1a5-4059-a9ea-b9be0bee8c7c</th><td>/conf/edr/rc-collection-info</td></tr><tr><th>_b599417e-7b91-4aab-a897-7d4a12a56a9f</th><td>/conf/edr/rc-data-queries</td></tr><tr><th>_2a2fce01-9f46-4018-a7d4-e5896e0b96ad</th><td>/conf/edr/rc-common-query-type</td></tr><tr><th>_03e8b256-2442-4cdb-89d1-818b6515e377</th><td>/conf/edr/rc-common-variables</td></tr><tr><th>_6b311aaf-b87f-4c9f-b4a1-d394e6b245a3</th><td>/conf/edr/rc-radius-variables</td></tr><tr><th>_54dbef02-7ac6-4b1a-a1c8-5d96448513d2</th><td>/conf/edr/rc-cube-variables</td></tr><tr><th>_1f55ccd7-e2f4-49ab-a604-f6616a6db97f</th><td>/conf/edr/rc-corridor-variables</td></tr><tr><th>_d97a531a-3cf4-4f45-a1b2-34b2a7d9aca7</th><td>/conf/edr/rc-items-variables</td></tr><tr><th>_f53fb00b-f02c-4d25-ad12-7c79d4d536d2</th><td>/conf/edr/rc-md-query-links</td></tr><tr><th>_e337372b-7f3e-4e20-be17-3cea12fd8214</th><td>/conf/core/rc-collection-info-links</td></tr><tr><th>_7fcdc498-ee11-4e3e-af15-4fe87ea3943c</th><td>/conf/edr/rc-parameters</td></tr><tr><th>ats_core_crs</th><td>/conf/core/crs</td></tr><tr><th>ats_collections_rc-md-op</th><td>/conf/collections/rc-md-op</td></tr><tr><th>ats_collections_rc-md-success</th><td>/conf/rc-md-success</td></tr><tr><th>ats_collections_src-md-op</th><td>/conf/collections/src-md-op</td></tr><tr><th>ats_collections_src-md-success</th><td>/conf/collections/src-md-success</td></tr><tr><th>ats_core_rc-md-extent</th><td>/conf/core/rc-extent</td></tr><tr><th>ats_edr_rc-collection-info</th><td>/conf/edr/rc-collection-info</td></tr><tr><th>ats_edr_rc-data-queries</th><td>/conf/edr/rc-data-queries</td></tr><tr><th>ats_edr_rc-common-query-type</th><td>/conf/edr/rc-common-query-type</td></tr><tr><th>ats_edr_rc-common-variables</th><td>/conf/edr/rc-common-variables</td></tr><tr><th>ats_edr_rc-radius-variables</th><td>/conf/edr/rc-radius-variables</td></tr><tr><th>ats_edr_rc-cube-variables</th><td>/conf/edr/rc-cube-variables</td></tr><tr><th>ats_edr_rc-corridor-variables</th><td>/conf/edr/rc-corridor-variables</td></tr><tr><th>ats_edr_rc-items-variables</th><td>/conf/edr/rc-items-variables</td></tr><tr><th>ats_collections_rc-md-query-links</th><td>/conf/edr/rc-md-query-links</td></tr><tr><th>_0e25eaf3-868c-432e-bb35-afd3d1b0cfbb</th><td>/conf/core/rc-collection-info-links</td></tr><tr><th>ats_edr_rc-parameters</th><td>/conf/edr/rc-parameters</td></tr><tr><th>ats_json</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/json</td></tr><tr><th>_ad28f944-3246-47dc-9a58-6abb7bf2bcd9</th><td>/conf/json/definition</td></tr><tr><th>_1089744b-effd-4be9-8730-37d3281f7d64</th><td>/conf/json/content</td></tr><tr><th>ats_json_definition</th><td>/conf/json/definition</td></tr><tr><th>ats_json_content</th><td>/conf/json/content</td></tr><tr><th>ats_geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/geojson</td></tr><tr><th>_1f4db8bf-04be-4b16-b8dd-efa4114cb22c</th><td>/conf/geojson/definition</td></tr><tr><th>_1929f82d-badb-4466-aa97-009cb6c1e953</th><td>/conf/geojson/content</td></tr><tr><th>ats_geojson_definition</th><td>/conf/geojson/definition</td></tr><tr><th>ats_geojson_content</th><td>/conf/geojson/content</td></tr><tr><th>ats_edr-geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/edr-geojson</td></tr><tr><th>_7b7c9fba-a534-417b-8b6b-d0ca69a4b959</th><td>/conf/edr-geojson/content</td></tr><tr><th>_67eb15f9-db85-4748-8e8e-fb0e93046112</th><td>/conf/edr-geojson/definition</td></tr><tr><th>ats_edr-geojson_definition</th><td>/conf/edr-geojson/definition</td></tr><tr><th>ats_edr-geojson_content</th><td>/conf/edr-geojson/content</td></tr><tr><th>ats_covjson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/covjson</td></tr><tr><th>_045d2f9d-e733-416e-964e-8377e5b7a1cd</th><td>/conf/covjson/content</td></tr><tr><th>_f3f92d0d-a772-4c7c-9ddb-ee75e8e87af8</th><td>/conf/covjson/definition</td></tr><tr><th>ats_covjson_definition</th><td>/conf/covjson/definition</td></tr><tr><th>ats_covjson_content</th><td>/conf/covjson/content</td></tr><tr><th>ats_html</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/html</td></tr><tr><th>_f5e30d50-3236-4a03-b373-22536bd03cb2</th><td>/conf/html/content</td></tr><tr><th>_121fbadd-aac6-48d9-9ac7-27c000132374</th><td>/conf/html/definition</td></tr><tr><th>ats_html_definition</th><td>/conf/html/definition</td></tr><tr><th>ats_html_content</th><td>/conf/html/content</td></tr><tr><th>ats_oas3</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/oas30</td></tr><tr><th>_8a943b3c-efdb-498a-bd9d-810fccaa2836</th><td>/conf/oas30/completeness</td></tr><tr><th>_d83e0ee3-c731-44fa-9ca3-b7e14183baa7</th><td>/conf/oas30/exceptions-codes</td></tr><tr><th>_fff044da-3174-4621-bbfb-81f8d446b98f</th><td>/conf/oas30/oas-definition-1</td></tr><tr><th>_c5a6b1b6-34b1-4308-98f2-b51be81a942d</th><td>/conf/oas30/oas-definition-2</td></tr><tr><th>_5397a5dc-2264-49ae-a5da-96f4319d2dbf</th><td>/conf/oas30/oas-impl</td></tr><tr><th>_056f93f3-6851-47e0-88c1-7b68a5a2a7e2</th><td>/conf/oas30/security</td></tr><tr><th>ats_oas30_completeness</th><td>/conf/oas30/completeness</td></tr><tr><th>ats_oas30_exceptions-codes</th><td>/conf/oas30/exceptions-codes</td></tr><tr><th>ats_oas30_oas-definition-1</th><td>/conf/oas30/oas-definition-1</td></tr><tr><th>ats_oas30_oas-definition-2</th><td>/conf/oas30/oas-definition-2</td></tr><tr><th>ats_oas30_oas-impl</th><td>/conf/oas30/oas-impl</td></tr><tr><th>_8d53fdcd-90d6-4a37-9d87-8075673cca50</th><td>/conf/oas30/security</td></tr></tbody></table><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+</organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>property</keyword><keyword>geographic information</keyword><keyword>spatial data</keyword><keyword>spatial thing</keyword><keyword>spatio-temporal</keyword><keyword>dataset</keyword><keyword>distribution</keyword><keyword>API</keyword><keyword>JSON</keyword><keyword>geoJSON</keyword><keyword>coverageJSON</keyword><keyword>HTML</keyword><keyword>OpenAPI</keyword><keyword>AsyncAPI</keyword><keyword>REST</keyword><keyword>Common</keyword><keyword>position</keyword><keyword>area</keyword><keyword>trajectory</keyword><keyword>corridor</keyword><keyword>cube</keyword><keyword>time-series</keyword><keyword>radius</keyword><keyword>polygon</keyword><keyword>WKT</keyword><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><table id="_misccontainer_anchor_aliases"><tbody><tr><th>rc_core</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core</td></tr><tr><th>_d1813c55-aba2-4278-9dc4-9d92ec0d1c00</th><td>/req/core/root-op</td></tr><tr><th>_24f15df4-b382-4e7f-8a2a-992b222d8b30</th><td>/req/core/root-success</td></tr><tr><th>_e6563ed8-f825-4dbb-b308-e69b448666f5</th><td>/req/core/api-definition-op</td></tr><tr><th>_45f7d0cb-d43c-4e6d-a7ce-d2b04796e7f1</th><td>/req/core/api-definition-success</td></tr><tr><th>_9698b1c0-8449-4fd5-aaa5-24d8754bc105</th><td>/req/core/conformance</td></tr><tr><th>_34754414-3a94-47fc-b70e-d7a066a71a21</th><td>/req/core/conformance-success</td></tr><tr><th>_eb1c1810-61fe-4feb-a53d-7f45ee1ef41e</th><td>/req/core/http</td></tr><tr><th>_072a3296-e768-4ee1-be9e-04c104bb3c6a</th><td>/req/core/crs</td></tr><tr><th>req_core_root-op</th><td>/req/core/root-op</td></tr><tr><th>req_core_root-success</th><td>/req/core/root-success</td></tr><tr><th>req_core_api-definition-op</th><td>/req/core/api-definition-op</td></tr><tr><th>req_core_api-definition-success</th><td>/req/core/api-definition-success</td></tr><tr><th>_b983a8a9-25dd-4224-9138-96faf91a27da</th><td>/req/core/conformance</td></tr><tr><th>req_core_conformance-success</th><td>/req/core/conformance-success</td></tr><tr><th>_a5663f7a-267d-4296-a2c1-55bf7dd4d0c1</th><td>/req/core/http</td></tr><tr><th>_297fea7d-3793-4391-8d60-f09f79db9a52</th><td>/req/core/crs</td></tr><tr><th>rc_collections</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections</td></tr><tr><th>_57f91612-ffc5-4ee6-8cbf-3cd92dd6f978</th><td>/req/collections/rc-md-op</td></tr><tr><th>_7436e3b1-318c-40a5-845d-e902ebec8c5b</th><td>/req/collections/rc-md-success</td></tr><tr><th>_4d76c852-41f0-4457-a5c0-fea4851cce7d</th><td>/req/collections/src-md-op</td></tr><tr><th>_7a66e6da-6782-4ab0-a1db-38715322bd9a</th><td>/req/collections/src-md-success</td></tr><tr><th>_bfe9d6ea-3127-4bcb-8b8a-b4a22373717d</th><td>/req/edr/rc-collection-info</td></tr><tr><th>_4e07039c-2283-49ed-bc54-465bbace362a</th><td>/req/core/rc-collection-info-links</td></tr><tr><th>_17078a97-4b06-4b65-861d-52290c6ee868</th><td>/req/edr/rc-data-queries</td></tr><tr><th>_9658fb38-18f0-46af-9d04-a1b2e7d7bba5</th><td>/req/core/rc-extent</td></tr><tr><th>_695a6aaa-d1e6-4a23-b45c-0e9a99fbddf2</th><td>/req/core/rc-md-query-links</td></tr><tr><th>_e0de63d5-2f22-44dc-ab88-c172a152ce73</th><td>/req/edr/rc-crs</td></tr><tr><th>_507d7dde-db52-434a-82f2-a1d0c29fc74b</th><td>/req/edr/rc-parameters</td></tr><tr><th>req_collections_rc-md-op</th><td>/req/collections/rc-md-op</td></tr><tr><th>req_collections_rc-md-success</th><td>/req/collections/rc-md-success</td></tr><tr><th>req_collections_src-md-op</th><td>/req/collections/src-md-op</td></tr><tr><th>req_collections_src-md-success</th><td>/req/collections/src-md-success</td></tr><tr><th>req_edr_rc-collection-info</th><td>/req/edr/rc-collection-info</td></tr><tr><th>req_edr_rc-data-queries</th><td>/req/edr/rc-data-queries</td></tr><tr><th>req_edr_rc-common-variables</th><td>/req/edr/rc-common-variables</td></tr><tr><th>req_edr_rc-common-query-type</th><td>/req/edr/rc-common-query-type</td></tr><tr><th>req_edr_rc-radius-variables</th><td>/req/edr/rc-radius-variables</td></tr><tr><th>req_edr_rc-cube-variables</th><td>/req/edr/rc-cube-variables</td></tr><tr><th>req_edr_rc-corridor-variables</th><td>/req/edr/rc-corridor-variables</td></tr><tr><th>req_edr_rc-items-variables</th><td>/req/edr/rc-items-variables</td></tr><tr><th>req_core_rc-collection-info-links</th><td>/req/core/rc-collection-info-links</td></tr><tr><th>req_core_rc-extent</th><td>/req/core/rc-extent</td></tr><tr><th>req_core_rc-md-query-links</th><td>/req/core/rc-md-query-links</td></tr><tr><th>req_edr_rc-crs</th><td>/req/edr/rc-crs</td></tr><tr><th>req_edr_rc-parameters</th><td>/req/edr/rc-parameters</td></tr><tr><th>rc_queries</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</td></tr><tr><th>_d263a74e-88e7-4ecc-a1c9-e180ce07fe7d</th><td>/req/queries/position</td></tr><tr><th>_4713aca5-8d77-4b60-8d2f-fcae66a00c06</th><td>/req/edr/rc-area</td></tr><tr><th>_b7765dad-5608-410c-a411-0c17311eae7f</th><td>/req/edr/rc-cube</td></tr><tr><th>_149908b0-1e82-4404-bf43-d2f276fb01e9</th><td>/req/edr/rc-trajectory</td></tr><tr><th>_79e1fcb1-3960-4331-928b-35440e5deb87</th><td>/req/edr/rc-corridor</td></tr><tr><th>_9131b540-46d1-4d8b-bf67-d8fbab20a97d</th><td>/req/queries/radius</td></tr><tr><th>_d8214f37-8032-4d8d-aad0-6b008e0ddda7</th><td>/req/edr/rc-items</td></tr><tr><th>_6da9c32e-13c7-44d5-98e3-76e78ca3fd8f</th><td>/req/edr/rc-locations</td></tr><tr><th>_2108663b-c01b-4834-897e-2ab6f6e63a0d</th><td>/req/instances/rc-md-op</td></tr><tr><th>_7baea697-0a16-4b8b-bf25-5db2e0d6c1dd</th><td>/req/instances/rc-md-success</td></tr><tr><th>_8d11eb13-4eeb-46e4-8f19-ca60cad2009e</th><td>/req/instances/src-md-op</td></tr><tr><th>_7190719a-bd32-4e49-ad5f-c6b30926ebfb</th><td>/req/instances/src-md-success</td></tr><tr><th>req_edr_rc-position</th><td>/req/queries/position</td></tr><tr><th>req_edr_rc-area</th><td>/req/edr/rc-area</td></tr><tr><th>req_edr_rc-cube</th><td>/req/edr/rc-cube</td></tr><tr><th>req_edr_rc-trajectory</th><td>/req/edr/rc-trajectory</td></tr><tr><th>req_edr_rc-corridor</th><td>/req/edr/rc-corridor</td></tr><tr><th>req_edr_rc-radius</th><td>/req/queries/radius</td></tr><tr><th>req_core_rc-items</th><td>/req/edr/rc-items</td></tr><tr><th>/req/edr/rc-locations</th><td>/req/edr/rc-locations</td></tr><tr><th>req_instances_rc-md-op</th><td>/req/instances/rc-md-op</td></tr><tr><th>req_instances_rc-md-success</th><td>/req/instances/rc-md-success</td></tr><tr><th>req_instances_src-md-op</th><td>/req/instances/src-md-op</td></tr><tr><th>req_instances_src-md-success</th><td>/req/instances/src-md-success</td></tr><tr><th>rc_query_parameters</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/query_parameters</td></tr><tr><th>_aafcea6c-225d-4430-b451-8d9272c2d6ff</th><td>/req/core/rc-bbox-definition</td></tr><tr><th>_9e01d11a-cd80-4bab-ad13-84dff07ff004</th><td>/req/core/rc-bbox-response</td></tr><tr><th>_9500aef3-1367-4225-8cd5-6a4c90ee438c</th><td>/req/edr/coords-definition</td></tr><tr><th>_0db9a5f3-de0a-4bb3-b224-cb2acc454be6</th><td>/req/edr/point-coords-response</td></tr><tr><th>_0426a1b6-ed6f-4e32-bd15-8bcf9c61db92</th><td>/req/edr/polygon-coords-response</td></tr><tr><th>_470e93d7-e5fe-47e4-ae64-cf56ea371911</th><td>/req/edr/linestring-coords-response</td></tr><tr><th>_002b1781-9383-47a4-a4ef-3254836e4aff</th><td>/req/core/datetime-definition</td></tr><tr><th>_b0513d21-4866-4251-b32a-66eb702c268f</th><td>/req/core/datetime-response</td></tr><tr><th>_3a205012-277e-4dfa-b871-4bf88d6d4787</th><td>/req/edr/REQ_rc-parameter-name-definition</td></tr><tr><th>_c8ae86b7-f896-4c94-bb3a-8b9dfea63db4</th><td>/req/edr/parameter-name-response</td></tr><tr><th>_6da6aa99-ecc6-4c10-b21c-d43cb69ad425</th><td>/req/edr/REQ_rc-crs-definition</td></tr><tr><th>_4569fbe9-63e7-4b9b-9a63-e8c4b97873d1</th><td>/req/edr/REQ_rc-crs-response</td></tr><tr><th>_3693d184-6204-467b-8f3a-aa8c52ed0952</th><td>/req/edr/rc-f-definition</td></tr><tr><th>_70daf163-0037-4e73-882a-098a0e1ccdaf</th><td>/req/edr/REQ_rc-f-response</td></tr><tr><th>_9e4a066d-5f35-48a6-8c47-e8a82ec04ac1</th><td>/req/edr/z-definition</td></tr><tr><th>_1849bb91-a96e-4a35-b739-d45fc1db4394</th><td>/req/edr/z-response</td></tr><tr><th>_f6e1c34a-d744-4574-8dbf-0f68dfebe909</th><td>/req/edr/within-definition</td></tr><tr><th>_f23c49e0-008e-4879-8a85-1397ea747e06</th><td>/req/edr/REQ_rc-within-response</td></tr><tr><th>_dc8ef77c-d904-49c2-9017-608e85eba82b</th><td>/req/edr/within-units-definition</td></tr><tr><th>_cb91fae1-450e-4ecb-80e8-29036179099e</th><td>/req/edr/REQ_rc-within-units-response</td></tr><tr><th>_a0b82d0d-4c1d-49bd-b41b-acb6bc102ffd</th><td>/req/edr/resolution-x-definition</td></tr><tr><th>_66e9921a-edb9-4862-af09-d88b0ce48ec6</th><td>/req/edr/resolution-x-response</td></tr><tr><th>_a5c902ab-47f6-4465-af22-98247fabea4b</th><td>/req/edr/cube-z-response</td></tr><tr><th>_65b33d26-fc57-4691-ba27-197217413dd3</th><td>/req/edr/resolution-y-definition</td></tr><tr><th>_5c3ad5de-59e1-4c44-8de9-6ed907f67c5d</th><td>/req/edr/resolution-y-response</td></tr><tr><th>_4dbc3daa-76e3-4da5-9114-1911e873bfcc</th><td>/req/edr/resolution-z-definition</td></tr><tr><th>_9bced2c0-0b6f-4943-9efa-a303c162f221</th><td>/req/edr/resolution-z-response</td></tr><tr><th>_3a2f2e97-bf5b-41aa-8ede-9977a985ba65</th><td>/req/edr/REQ_rc-corridor-height-definition</td></tr><tr><th>_19fdb885-5383-4e32-9c5d-340edddad0d0</th><td>/req/edr/REQ_rc-corridor-height-response</td></tr><tr><th>_c75247a1-362b-4afe-aaf3-b105208f9b0a</th><td>/req/edr/REQ_rc-height-units-definition</td></tr><tr><th>_8e2b3f5d-5524-46ee-9459-f53974749454</th><td>/req/edr/height-units-response</td></tr><tr><th>_d43eed0c-0075-45a8-875b-e8876d842a2c</th><td>/req/edr/corridor-width-definition</td></tr><tr><th>_cce361fa-1117-4ae5-a688-b5148ac7a345</th><td>/req/edr/REQ_rc-corridor-width-response</td></tr><tr><th>_315ca5c6-3f9f-4064-8f75-671af83c3bb1</th><td>/req/edr/REQ_rc-width-units-definition</td></tr><tr><th>_f4f4bb27-c6af-4089-8ff0-a5b2a5aac3b7</th><td>/req/edr/width-units-response</td></tr><tr><th>_779f1bbc-d64b-4799-8cac-a760e509ac5a</th><td>/req/edr/custom-dimension-definition</td></tr><tr><th>_d6608e27-5897-4d6a-8359-7711b44d6fb9</th><td>/req/edr/custom-dimension-response</td></tr><tr><th>_808d3a5e-072b-40a4-b578-4a0fe25b2bd4</th><td>/req/core/rc-bbox-definition</td></tr><tr><th>_37965c5c-e120-40ca-8193-19b50955b898</th><td>/req/core/rc-bbox-response</td></tr><tr><th>_1f05a3d8-f694-44b4-a4ed-965a8e630891</th><td>/req/edr/coords-definition</td></tr><tr><th>_4ca9d5f0-fcc6-40db-b3ac-5c23e82c1823</th><td>/req/edr/point-coords-response</td></tr><tr><th>_f5149ec4-1170-446c-861d-8bd0546e6f92</th><td>/req/edr/polygon-coords-response</td></tr><tr><th>_5816c23a-1504-4ff8-8f42-7f2711a2e485</th><td>/req/edr/linestring-coords-response</td></tr><tr><th>_5688e8d6-a166-4ead-adbd-ffb1979bab47</th><td>/req/core/datetime-definition</td></tr><tr><th>_a0c8a005-2262-4b46-93d3-90623252c5e5</th><td>/req/core/datetime-response</td></tr><tr><th>_40381530-1ab0-412a-a067-85631a5d43f2</th><td>/req/edr/REQ_rc-parameter-name-definition</td></tr><tr><th>_7fe464f6-6e79-4f37-95d1-70cf3998826a</th><td>/req/edr/parameter-name-response</td></tr><tr><th>_775db1fa-de2c-4609-a232-c7707e5d546d</th><td>/req/edr/REQ_rc-crs-definition</td></tr><tr><th>_4404eb32-e43e-481a-84ba-b14446e22a3d</th><td>/req/edr/REQ_rc-crs-response</td></tr><tr><th>_d2fb1425-4902-4988-9abd-38eb8502a6de</th><td>/req/edr/rc-f-definition</td></tr><tr><th>_9e2c71a6-039e-47c8-810a-6b6d0e5014ea</th><td>/req/edr/REQ_rc-f-response</td></tr><tr><th>_68a3ced6-0b47-4924-ba4a-6548ae4bc5c8</th><td>/req/edr/z-definition</td></tr><tr><th>_c0666484-371e-4e86-ab3b-eb30482d7d4d</th><td>/req/edr/z-response</td></tr><tr><th>_52e4f1aa-f5e6-45e0-949d-7cef0b79c790</th><td>/req/edr/within-definition</td></tr><tr><th>_a30837cd-d794-4ca6-b99b-fd20466c2250</th><td>/req/edr/REQ_rc-within-response</td></tr><tr><th>_463877db-d79a-47ec-8805-7b58f995ab61</th><td>/req/edr/within-units-definition</td></tr><tr><th>_81fa1fef-6862-4c06-936c-aaff7c194631</th><td>/req/edr/REQ_rc-within-units-response</td></tr><tr><th>_737ffb4e-59d0-4f31-b22b-b7d5b320f864</th><td>/req/edr/resolution-x-definition</td></tr><tr><th>_afb83868-441b-4eaa-9cf1-9630268cb62a</th><td>/req/edr/resolution-x-response</td></tr><tr><th>_bbabe33a-bb9a-4272-a23e-330f372d015c</th><td>/req/edr/cube-z-response</td></tr><tr><th>_f73006d7-1abd-420d-a602-2ad412d947c6</th><td>/req/edr/resolution-y-definition</td></tr><tr><th>_8a94b097-9881-4ae2-9eb3-82734bfc177b</th><td>/req/edr/resolution-y-response</td></tr><tr><th>_4f322dbf-1410-443e-b6c9-ac3ed079a1a2</th><td>/req/edr/resolution-z-definition</td></tr><tr><th>_42b3612b-1a54-49ec-ba86-c8130bf5ca75</th><td>/req/edr/resolution-z-response</td></tr><tr><th>_fdad9612-400a-4234-bd16-87fc04f3fa9f</th><td>/req/edr/REQ_rc-corridor-height-definition</td></tr><tr><th>_1e244bdb-aa98-4e10-b540-7e2f2d29896c</th><td>/req/edr/REQ_rc-corridor-height-response</td></tr><tr><th>_8cc746a6-8198-475e-9f2e-bdbcb0ccbe2e</th><td>/req/edr/REQ_rc-height-units-definition</td></tr><tr><th>_5d8ca077-0e3f-48ae-9851-b890b7ebb736</th><td>/req/edr/height-units-response</td></tr><tr><th>_9357f841-af9c-458d-8a6a-c3540e3256a1</th><td>/req/edr/corridor-width-definition</td></tr><tr><th>_7864d627-4a56-42fd-966d-2384929365e8</th><td>/req/edr/REQ_rc-corridor-width-response</td></tr><tr><th>_f36c0704-0b23-448d-9280-a9579e64f4c5</th><td>/req/edr/REQ_rc-width-units-definition</td></tr><tr><th>_8d538f48-4979-45a7-bf3b-55c607cd685b</th><td>/req/edr/width-units-response</td></tr><tr><th>_e3260d4e-eae3-41da-8a38-584546035a69</th><td>/req/edr/custom-dimension-definition</td></tr><tr><th>_1690896c-9fcd-4604-9c6d-8d42a1a26b83</th><td>/req/edr/custom-dimension-response</td></tr><tr><th>rc_json</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/json</td></tr><tr><th>_651a06b7-f493-4d31-bf15-7e3512382327</th><td>/req/json/content</td></tr><tr><th>_8ccd8c67-4278-4cac-89c6-6f58b48f1063</th><td>/req/json/definition</td></tr><tr><th>req_json_content</th><td>/req/json/content</td></tr><tr><th>req_json_definition</th><td>/req/json/definition</td></tr><tr><th>rc_geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson</td></tr><tr><th>_5b71a3f1-97cd-48a0-931b-f7d2827b49f0</th><td>/req/geojson/content</td></tr><tr><th>_c2cca66b-04c4-480c-b60d-a46840750a4c</th><td>/req/geojson/definition</td></tr><tr><th>req_geojson_content</th><td>/req/geojson/content</td></tr><tr><th>req_geojson_definition</th><td>/req/geojson/definition</td></tr><tr><th>rc_edr_geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/edr-geojson</td></tr><tr><th>_3978fc88-d5e6-4415-a879-e4874a45e905</th><td>/req/edr-geojson/content</td></tr><tr><th>_2e43079d-d087-43c9-b142-066477f68d1c</th><td>/req/edr-geojson/definition</td></tr><tr><th>_dffd100f-23f8-44c4-bc62-aae76b90b469</th><td>/req/edr-geojson/content</td></tr><tr><th>req_edr-geojson_definition</th><td>/req/edr-geojson/definition</td></tr><tr><th>rc_covjson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/covjson</td></tr><tr><th>_6010e084-b3cc-4089-8656-059f1bc9f732</th><td>/req/covjson/content</td></tr><tr><th>_5f584962-512f-4619-95ba-e52f3aeca711</th><td>/req/covjson/definition</td></tr><tr><th>req_covjson_content</th><td>/req/covjson/content</td></tr><tr><th>req_covjson_definition</th><td>/req/covjson/definition</td></tr><tr><th>rc_html</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html</td></tr><tr><th>_0d0160c2-ee0f-49bd-9678-af85c4dfbb46</th><td>/req/html/content</td></tr><tr><th>_653c442a-618b-463f-898e-c651fda5ea68</th><td>/req/html/definition</td></tr><tr><th>req_html_content</th><td>/req/html/content</td></tr><tr><th>req_html_definition</th><td>/req/html/definition</td></tr><tr><th>rc_oas30</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30</td></tr><tr><th>_0967d786-b9d3-4778-83d6-6bd1ec3134a5</th><td>/req/oas30/oas-impl</td></tr><tr><th>_de364835-a269-4685-8536-50b26de56245</th><td>/req/oas30/oas-definition-1</td></tr><tr><th>_e356c3fa-f13b-440e-8725-6ab214d02452</th><td>/req/oas30/oas-definition-2</td></tr><tr><th>_33f390ca-a73f-46e3-a51e-5219e9a5224c</th><td>/req/oas30/completeness</td></tr><tr><th>_51c5c888-fde8-49bf-ab3b-92d1781db1a8</th><td>/req/oas30/exceptions-codes</td></tr><tr><th>_1dbac732-7f5c-482e-a68c-439f2305dc71</th><td>/req/oas30/security</td></tr><tr><th>_2d4ef30e-34cf-44d7-a25c-f955e870800b</th><td>/req/oas30/oas-impl</td></tr><tr><th>_a495b5c6-d340-47fa-9d47-c191250022be</th><td>/req/oas30/oas-definition-1</td></tr><tr><th>_9bc45c38-86e9-4cfe-b64e-ce99ae38c306</th><td>/req/oas30/oas-definition-2</td></tr><tr><th>_4cbe767c-6fe5-49f2-9a7d-8543c326f0d0</th><td>/req/oas30/completeness</td></tr><tr><th>_3da2b8c8-6ed2-45b9-9dfd-535dd7db0f2e</th><td>/req/oas30/exceptions-codes</td></tr><tr><th>_edb1277f-0f99-4fb2-a331-50dd5dd99dd0</th><td>/req/oas30/security</td></tr><tr><th>ats_core</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</td></tr><tr><th>_8eac6075-c2d8-47ee-a61c-97154224b5b5</th><td>/conf/core/http</td></tr><tr><th>_46ba1ffd-4826-4e55-aa88-8580078ad800</th><td>/conf/core/root-op</td></tr><tr><th>_19a4fec2-4b30-448f-8921-a0467c074faf</th><td>/conf/core/root-success</td></tr><tr><th>_27f3e25e-2dad-4bbf-a4c5-71adbec35c0b</th><td>/conf/core/api-definition</td></tr><tr><th>_609cf6db-5fa3-416b-af87-976407a503a7</th><td>/conf/core/api-definition-success</td></tr><tr><th>_cb5d8ce8-ee3d-4407-85c8-6902368505c1</th><td>/conf/core/conformance</td></tr><tr><th>_7b1161a3-b20d-4f99-a216-544004a7e81d</th><td>/conf/core/conformance-success</td></tr><tr><th>ats_core_http</th><td>/conf/core/http</td></tr><tr><th>ats_core_root-op</th><td>/conf/core/root-op</td></tr><tr><th>ats_core_root-success</th><td>/conf/core/root-success</td></tr><tr><th>ats_core_api_definition-op</th><td>/conf/core/api-definition</td></tr><tr><th>ats_core_api-definition-success</th><td>/conf/core/api-definition-success</td></tr><tr><th>ats_core_conformance-op</th><td>/conf/core/conformance</td></tr><tr><th>ats_core_conformance-success</th><td>/conf/core/conformance-success</td></tr><tr><th>ats_collections</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections</td></tr><tr><th>_46d83008-7cf8-4b53-a99f-112e3a77042f</th><td>/conf/core/crs</td></tr><tr><th>_4bb30660-a2a4-43ec-865e-bccb19e17d20</th><td>/conf/collections/rc-md-op</td></tr><tr><th>_83970861-e044-4f2f-a044-0a2864b08c93</th><td>/conf/rc-md-success</td></tr><tr><th>_8cec7695-113d-4d0d-8293-ca50a340488f</th><td>/conf/collections/src-md-op</td></tr><tr><th>_a827710c-9bfa-43df-a999-039bb7aa12b8</th><td>/conf/collections/src-md-success</td></tr><tr><th>_e2187f59-5282-4763-b720-105c81b41da1</th><td>/conf/core/rc-extent</td></tr><tr><th>_95fde862-d990-4776-a29c-4c3325a7fe5b</th><td>/conf/edr/rc-collection-info</td></tr><tr><th>_29c0d831-7e71-4644-91ff-51e5e789fa3b</th><td>/conf/edr/rc-data-queries</td></tr><tr><th>_33d9e098-15ca-425d-9089-44c91f899bba</th><td>/conf/edr/rc-common-query-type</td></tr><tr><th>_c1d65170-047f-443c-b354-ffe650d52077</th><td>/conf/edr/rc-common-variables</td></tr><tr><th>_68a96bd5-f2d2-4d62-858c-7db0fba8f670</th><td>/conf/edr/rc-radius-variables</td></tr><tr><th>_922ba051-73bd-47ab-b78a-6d426126f789</th><td>/conf/edr/rc-cube-variables</td></tr><tr><th>_7d018726-2712-4812-b163-48a7865ec38e</th><td>/conf/edr/rc-corridor-variables</td></tr><tr><th>_22deebd4-65d0-4ec0-afe3-5f636d5f8844</th><td>/conf/edr/rc-items-variables</td></tr><tr><th>_69b210c3-69f8-4461-9732-77beae253159</th><td>/conf/edr/rc-md-query-links</td></tr><tr><th>_09da015e-71cb-48af-8e82-82b55a3cbbe7</th><td>/conf/core/rc-collection-info-links</td></tr><tr><th>_22a8bdae-7534-4e93-8c78-8d940801b62d</th><td>/conf/edr/rc-parameters</td></tr><tr><th>ats_core_crs</th><td>/conf/core/crs</td></tr><tr><th>ats_collections_rc-md-op</th><td>/conf/collections/rc-md-op</td></tr><tr><th>ats_collections_rc-md-success</th><td>/conf/rc-md-success</td></tr><tr><th>ats_collections_src-md-op</th><td>/conf/collections/src-md-op</td></tr><tr><th>ats_collections_src-md-success</th><td>/conf/collections/src-md-success</td></tr><tr><th>ats_core_rc-md-extent</th><td>/conf/core/rc-extent</td></tr><tr><th>ats_edr_rc-collection-info</th><td>/conf/edr/rc-collection-info</td></tr><tr><th>ats_edr_rc-data-queries</th><td>/conf/edr/rc-data-queries</td></tr><tr><th>ats_edr_rc-common-query-type</th><td>/conf/edr/rc-common-query-type</td></tr><tr><th>ats_edr_rc-common-variables</th><td>/conf/edr/rc-common-variables</td></tr><tr><th>ats_edr_rc-radius-variables</th><td>/conf/edr/rc-radius-variables</td></tr><tr><th>ats_edr_rc-cube-variables</th><td>/conf/edr/rc-cube-variables</td></tr><tr><th>ats_edr_rc-corridor-variables</th><td>/conf/edr/rc-corridor-variables</td></tr><tr><th>ats_edr_rc-items-variables</th><td>/conf/edr/rc-items-variables</td></tr><tr><th>ats_collections_rc-md-query-links</th><td>/conf/edr/rc-md-query-links</td></tr><tr><th>_892b662e-404d-4131-a9f3-09f16748687d</th><td>/conf/core/rc-collection-info-links</td></tr><tr><th>ats_edr_rc-parameters</th><td>/conf/edr/rc-parameters</td></tr><tr><th>ats_json</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/json</td></tr><tr><th>_90da0ee8-5a04-4268-b679-d4e75bae1c0e</th><td>/conf/json/definition</td></tr><tr><th>_daf2d60e-e97f-4d96-af12-04ab1e52a394</th><td>/conf/json/content</td></tr><tr><th>ats_json_definition</th><td>/conf/json/definition</td></tr><tr><th>ats_json_content</th><td>/conf/json/content</td></tr><tr><th>ats_geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/geojson</td></tr><tr><th>_9d84ba43-3dab-491f-ba99-e28e6cee6369</th><td>/conf/geojson/definition</td></tr><tr><th>_8dcecde7-3027-4ebd-9050-1d1161d1008a</th><td>/conf/geojson/content</td></tr><tr><th>ats_geojson_definition</th><td>/conf/geojson/definition</td></tr><tr><th>ats_geojson_content</th><td>/conf/geojson/content</td></tr><tr><th>ats_edr-geojson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/edr-geojson</td></tr><tr><th>_9030b1de-eb66-4a13-b8c8-946c3aa306d5</th><td>/conf/edr-geojson/content</td></tr><tr><th>_d1812969-b695-4377-85d3-07794d3e566a</th><td>/conf/edr-geojson/definition</td></tr><tr><th>ats_edr-geojson_definition</th><td>/conf/edr-geojson/definition</td></tr><tr><th>ats_edr-geojson_content</th><td>/conf/edr-geojson/content</td></tr><tr><th>ats_covjson</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/covjson</td></tr><tr><th>_b59d135a-1cf5-4564-a07d-9b477d72cfad</th><td>/conf/covjson/content</td></tr><tr><th>_5c98b667-8013-49ae-b5f4-f504627acd59</th><td>/conf/covjson/definition</td></tr><tr><th>ats_covjson_definition</th><td>/conf/covjson/definition</td></tr><tr><th>ats_covjson_content</th><td>/conf/covjson/content</td></tr><tr><th>ats_html</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/html</td></tr><tr><th>_d96b40aa-5412-47cf-8e92-820988790e5a</th><td>/conf/html/content</td></tr><tr><th>_94acb685-a703-4d8b-9f60-22d7c7a46ad6</th><td>/conf/html/definition</td></tr><tr><th>ats_html_definition</th><td>/conf/html/definition</td></tr><tr><th>ats_html_content</th><td>/conf/html/content</td></tr><tr><th>ats_oas3</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/oas30</td></tr><tr><th>_4935b34b-1150-42af-bbeb-4d300f784089</th><td>/conf/oas30/completeness</td></tr><tr><th>_b64fe713-08ff-42b7-ab22-46b4f91c6d1a</th><td>/conf/oas30/exceptions-codes</td></tr><tr><th>_0b4f385e-6840-4d1f-8755-958d792e4143</th><td>/conf/oas30/oas-definition-1</td></tr><tr><th>_c35f1fd0-ed8a-4178-8589-36927549acce</th><td>/conf/oas30/oas-definition-2</td></tr><tr><th>_1afbf565-0f73-4d2c-9b42-d3c8802dc04f</th><td>/conf/oas30/oas-impl</td></tr><tr><th>_8ebfd5c9-b326-4a8c-8cdd-1cd7c807668e</th><td>/conf/oas30/security</td></tr><tr><th>ats_oas30_completeness</th><td>/conf/oas30/completeness</td></tr><tr><th>ats_oas30_exceptions-codes</th><td>/conf/oas30/exceptions-codes</td></tr><tr><th>ats_oas30_oas-definition-1</th><td>/conf/oas30/oas-definition-1</td></tr><tr><th>ats_oas30_oas-definition-2</th><td>/conf/oas30/oas-definition-2</td></tr><tr><th>ats_oas30_oas-impl</th><td>/conf/oas30/oas-impl</td></tr><tr><th>ats_oas30_security</th><td>/conf/oas30/security</td></tr><tr><th>ats_queries</th><td>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries</td></tr><tr><th>ats_position</th><td>/conf/position-no-query-params</td></tr><tr><th>_81ff5cf8-d6bb-45fe-a5d0-e6aa0f597603</th><td>/conf/position-no-coords-param</td></tr><tr><th>_0054281a-181d-43d2-a2b4-8bd01fc8afa5</th><td>/conf/position-coords-param-invalid</td></tr><tr><th>_e03db099-95ad-43e0-8aa8-9e5eab4aefcc</th><td>/conf/position-valid-query-params</td></tr><tr><th>ats_edr_rc-coords-definition-position</th><td>/conf/edr/rc-coords-definition-position</td></tr><tr><th>ats_edr_rc-coords-response-position</th><td>/conf/edr/rc-coords-response-position</td></tr><tr><th>ats_collections_rc-z-definition-position</th><td>/conf/edr/rc-z-definition-position</td></tr><tr><th>ats_collections_rc-z-response-position</th><td>/conf/edr/rc-z-response-position</td></tr><tr><th>ats_core_rc-time-definition-position</th><td>/conf/core/datetime-definition-position</td></tr><tr><th>ats_core_rc-time-response-position</th><td>/conf/core/datetime-response-position</td></tr><tr><th>ats_collections_rc-parameter-name-definition-position</th><td>/conf/collections/REQ_rc-parameter-name-definition-position</td></tr><tr><th>ats_collections_rc-parameter-name-response-position</th><td>/conf/edr/rc-parameter-name-response-position</td></tr><tr><th>ats_edr_rc-crs-definition-position</th><td>/conf/edr/REQ_rc-crs-definition-position</td></tr><tr><th>ats_edr_rc-crs-response-position</th><td>/conf/edr/REQ_rc-crs-response-position</td></tr><tr><th>ats_collections_rc-f-definition-position</th><td>/conf/edr/rc-f-definition-position</td></tr><tr><th>ats_collections_rc-f-response-position</th><td>/conf/collections/rc-f-response-position</td></tr><tr><th>ats_area</th><td>/conf/area-no-query-params</td></tr><tr><th>_8458acc5-6788-4bde-8d77-6f01bf3cb00b</th><td>/conf/area-no-coords-param</td></tr><tr><th>_a2a1cc15-c5fa-4e23-972c-0e8b705ef3a9</th><td>/conf/area-coords-param-invalid</td></tr><tr><th>_ec4f698a-8f56-4b82-a1bb-89336ae887c0</th><td>/conf/area-valid-query-params</td></tr><tr><th>ats_edr_rc-coords-definition-area</th><td>/conf/edr/rc-coords-definition-area</td></tr><tr><th>ats_edr_rc-coords-response-area</th><td>/conf/edr/rc-coords-response-area</td></tr><tr><th>ats_collections_rc-z-definition-area</th><td>/conf/edr/rc-z-definition-area</td></tr><tr><th>ats_collections_rc-z-response-area</th><td>/conf/edr/rc-z-response-area</td></tr><tr><th>ats_core_rc-time-definition-area</th><td>/conf/core/datetime-definition-area</td></tr><tr><th>ats_core_rc-time-response-area</th><td>/conf/core/datetime-response-area</td></tr><tr><th>ats_collections_rc-parameter-name-definition-area</th><td>/conf/collections/REQ_rc-parameter-name-definition-area</td></tr><tr><th>ats_collections_rc-parameter-name-response-area</th><td>/conf/edr/rc-parameter-name-response-area</td></tr><tr><th>ats_edr_rc-crs-definition-area</th><td>/conf/edr/REQ_rc-crs-definition-area</td></tr><tr><th>ats_edr_rc-crs-response-area</th><td>/conf/edr/REQ_rc-crs-response-area</td></tr><tr><th>ats_collections_rc-f-definition-area</th><td>/conf/edr/rc-f-definition-area</td></tr><tr><th>ats_collections_rc-f-response-area</th><td>/conf/collections/rc-f-response-area</td></tr></tbody></table><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
 <clause id="_copyright_notice" obligation="normative">
@@ -4534,7 +4534,7 @@ implementations of the EDR API. An ATS provides a basis for developing an Execut
 </table>
 
 <requirement id="ats_edr_rc-data-queries" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-data-queries</identifier><classification><tag>target</tag><value>/req/edr/rc-data-queries</value></classification><component class="test-purpose"><p id="_7b389398-4b2e-59c0-f710-6720fe480b72">Validate that the <tt>data_queries</tt> section in the collection is correctly defined.</p>
-</component><component class="test-method"><ol id="_307bd7f8-c9be-2d6b-9204-f0da58e9e2aa" type="arabic"><li><p id="_a99e4cef-cb25-9f8a-0af2-669d1910968b">Verify that at least one of the following data query types are defined in the data query section:</p>
+</component><component class="test-method"><ol id="_a86cd487-94cf-cebf-ba0c-a6f799ccd3f3" type="arabic"><li><p id="_a99e4cef-cb25-9f8a-0af2-669d1910968b">Verify that at least one of the following data query types are defined in the data query section:</p>
 <ul id="_270805f6-f5d0-eeed-5d0c-6d09a792dbd6"><li><p id="_ce797103-0999-edee-8a6a-c0a8de3c6984">position</p>
 </li>
 <li><p id="_f9bad6be-5011-6872-a70d-d1ef030bb70a">radius</p>
@@ -4553,7 +4553,7 @@ implementations of the EDR API. An ATS provides a basis for developing an Execut
 </li>
 </ul>
 </li>
-<li><p id="_740b9274-bf0d-6287-7ef1-eac286a5addc">verify that all query types defined comply with <xref target="ats_edr_rc-common-query-type">/req/edr/rc-common_query_type</xref></p>
+<li><p id="_62cfd746-cd8b-6fb7-a1ee-c23358da98f6">verify that all query types defined comply with <xref target="ats_edr_rc-common-query-type">/conf/edr/rc-common-query-type</xref></p>
 </li>
 </ol>
 </component>
@@ -4856,34 +4856,443 @@ test-method::Verify that every <tt>200</tt>-response of every operation of the A
 </component>
 </requirement>
 
-
-<table id="_4664068c-4c81-5a13-5977-6ca18eb697a2" width="90%"><colgroup><col width="25%"/><col width="75%"/></colgroup>
-<name>Abstract Test 2</name>
-<tbody><tr><td valign="middle" align="center"><strong>Abstract Test 2</strong></td>
-<td valign="middle" align="left"><p id="_b7112cdc-f9c8-0a14-14dc-27dc7ea47044"><strong>/conf/oas30/security</strong></p>
-</td>
-</tr><tr><td valign="middle" align="center">Test Purpose</td>
-<td valign="middle" align="left"><p id="_b9616d01-a298-6c8f-eefc-86bdc4924547">Verify that any authentication protocols implemented by the API are documented in the OpenAPI document.</p>
-</td>
-</tr><tr><td valign="middle" align="center">Requirement</td>
-<td valign="middle" align="left"><p id="_55fdcba8-728d-6c66-7e06-7f42fef21bd5"><xref target="req_oas30_security">/req/oas30/security</xref></p>
-</td>
-</tr><tr><td valign="middle" align="center">Test Method</td>
-<td valign="middle" align="left"><ol id="_bd451bfd-3958-00c1-1e74-3805b4170aa4" type="arabic"><li><p id="_a05deb79-372f-fcba-1a2f-ac8d1904c0ff">Identify all authentication protocols supported by the API.</p>
-</li>
-<li><p id="_6296c861-45ae-a0d4-3b61-a1aa7aa58677">Validate that each authentication protocol is described in the OpenAPI document by a Security Schema Object and its use specified by a Security Requirement Object.</p>
-</li>
-</ol>
-</td>
-</tr></tbody>
-</table>
-
-<requirement id="_91c2356e-2268-0b91-edff-2b02c1f0de3e" model="ogc" type="abstracttest"> <identifier>/conf/oas30/security</identifier><classification><tag>target</tag><value>/req/oas30/security</value></classification><component class="test-purpose"><p id="_8973b7b6-e951-e447-8e0b-548103880e42">Verify that any authentication protocols implemented by the API are documented in the OpenAPI document.</p>
+<requirement id="ats_oas30_security" model="ogc" type="abstracttest"> <identifier>/conf/oas30/security</identifier><classification><tag>target</tag><value>/req/oas30/security</value></classification><component class="test-purpose"><p id="_8973b7b6-e951-e447-8e0b-548103880e42">Verify that any authentication protocols implemented by the API are documented in the OpenAPI document.</p>
 </component><component class="test-method"><component class="step"><p id="_4d6fc225-874a-de58-462f-436ebf8d3e3a">Identify all authentication protocols supported by the API.</p>
 </component><component class="step"><p id="_d621dda1-c407-5de0-e158-3bcf121857bb">Validate that each authentication protocol is described in the OpenAPI document by a Security Schema Object and its use specified by a Security Requirement Object.</p>
 </component>
 </component>
 </requirement>
+</clause>
+
+<clause id="_conformance_class_queries" obligation="informative">
+<title>Conformance Class Queries</title>
+<requirement id="ats_queries" model="ogc" type="conformanceclass">
+<title>Queries</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries</identifier><subject><xref target="rc_queries">http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</xref></subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</inherit><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections</inherit><classification><tag>Target Type</tag><value>Web API</value></classification>
+
+</requirement>
+
+<clause id="_query_pattern_tests" obligation="informative">
+<title>Query Pattern Tests</title>
+<clause id="_position" obligation="informative">
+<title>Position</title>
+<requirement id="ats_position" model="ogc" type="abstracttest"> <identifier>/conf/position-no-query-params</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_8f2e0d47-99ae-b448-0783-8139d7160d56">Validate that an error is returned by a <tt>Position</tt> query if no query parameters are specified.</p>
+</component><component class="test-method"><component class="step"><p id="_de028e5f-4d81-70d4-768f-177e765fc2f1">No query parameters are specified</p>
+</component><component class="step"><p id="_6c8cf6b6-3f1e-d812-4b78-f58076d3ed95">Validate that a document was returned with a status code 400.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="_64ccebfa-e446-9781-4a92-fc5e3a0e7d7e" model="ogc" type="abstracttest"> <identifier>/conf/position-no-coords-param</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_4aa81be8-fe85-d351-bd52-0a0dedff895f">Validate that an error is returned by a <tt>Position</tt> query when the coords query parameter is not specified.</p>
+</component><component class="test-method"><component class="step"><p id="_52edb448-a82b-8c3e-dd33-4e28ad6cbb1d">coords query parameter is not specified</p>
+</component><component class="step"><p id="_5afb7a32-9f34-2ac4-a8b5-f113e942e2de">Validate that a document was returned with a status code 400.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="_e5b370c0-d4cf-6468-d923-a17f9809714e" model="ogc" type="abstracttest"> <identifier>/conf/position-coords-param-invalid</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_deb69542-0043-bda4-99f7-4eb93283219f">Validate that an error is returned by a <tt>Position</tt> query when the coords query parameter does not contain a valid POINT or MULTIPOINT Well Known Text value.</p>
+</component><component class="test-method"><component class="step"><p id="_ab13b5fa-8a5b-a7dc-07e4-9ea22db42d39">Check coords query parameter is a valid Well Known Text Point or MultiPoint value</p>
+</component><component class="step"><p id="_bdcd48af-a990-639a-6166-8931e649c640">Validate that a document was returned with a status code 400.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="_231af854-07d6-7267-f26e-15d8482741e9" model="ogc" type="abstracttest"> <identifier>/conf/position-valid-query-params</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_a611b740-4b2d-0a4e-e6c5-7057865ffea8">Validate that resources can be identified and extracted from a Collection with a <tt>Position</tt> query using  query parameters.</p>
+</component><component class="test-method"><ol id="_194ba39a-17c8-e088-66f7-d23f15bca0b9" type="arabic"><li><p id="_d3b7669e-7076-0101-4891-0546af700b56">Test with valid query parameters</p>
+</li>
+<li><p id="_50fa49b6-d9d0-994f-c881-16615a6eddc9">Validate that a document was returned with a status code 200.</p>
+</li>
+</ol>
+
+<p id="_dcd8ddc2-53a6-8a7e-ba2a-2538a8ca0229">Repeat these tests using the following parameter tests:</p>
+
+<p id="_bd98dce7-c7e3-61f3-4db7-5303f98203b4"><strong>Coordinates</strong></p>
+
+<ul id="_c7a57361-31a7-0129-f67c-c9fd82319b42"><li><p id="_130ed3e3-b0a8-2b29-fdff-22f7617404ac">Parameter <xref target="req_edr_coords-definition">/req/edr/coords-definition</xref></p>
+</li>
+<li><p id="_29b02d2a-bd0c-230c-c61e-590a26b50b83">Response <xref target="req_edr_point-coords-response">/req/edr/point-coords-response</xref></p>
+</li>
+</ul>
+
+<p id="_d5654d1e-b82f-7a89-a2e5-f2149e13b05c"><strong>VerticalLevel</strong></p>
+
+<ul id="_17c3c1e2-d4d2-73ac-6ca6-dd6888857cad"><li><p id="_4b1b48ee-139b-3db9-829e-3fd61ee21972">Parameter <xref target="req_edr_z-definition">/req/edr/z-definition</xref></p>
+</li>
+<li><p id="_3f9fbab6-08db-f514-8109-757d020b9032">Response <xref target="req_edr_z-response">/req/edr/z-response</xref></p>
+</li>
+</ul>
+
+<p id="_575ad0d8-63fa-6cdd-a39a-ec3fd74fb12f"><strong>Parameters</strong></p>
+
+<ul id="_8e8eb9ec-131b-b10a-6763-d9b73fc2b771"><li><p id="_c2f4a22c-2465-30d8-a5b3-5b26b8e5003e">Parameter <xref target="req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</xref></p>
+</li>
+<li><p id="_2ac73f9e-62ff-67e3-6d09-392d611fc54c">Response <xref target="req_edr_parameters-response">/req/edr/parameter-name-response</xref></p>
+</li>
+</ul>
+
+<p id="_e22976f8-09a3-1cdc-ac1b-eaa5f60f9dd9"><strong>DateTime</strong></p>
+
+<ul id="_010783d2-b034-8e80-a9fc-a287badca405"><li><p id="_d78e6126-d835-6c48-88e5-0859f6fd3823">Parameter <xref target="req_collections_rc-time-definition">/req/core/datetime-definition</xref></p>
+</li>
+<li><p id="_cb8e9b46-0c3e-3796-e981-c951c5c0b620">Response <xref target="req_core_rc-time-response">/req/core/datetime-response</xref></p>
+</li>
+</ul>
+
+<p id="_6f7ea432-08a9-ea74-5946-fc009090cdfe">Execute requests with combinations of the “coords”,”time”,”parameter-name”,”z”,”crs” and “f” query parameters
+and verify that only information that matches the selection criteria is returned.</p>
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-coords-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-definition-position</identifier><classification><tag>target</tag><value>/req/edr/coords-definition</value></classification><component class="test-purpose"><p id="_4245d8ce-e676-d651-30e6-be28e05d9319">Validate that the coords query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_0e1b6767-929c-3f7c-edc2-a21baf0834ba">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_b7bc1261-fe52-79f2-7b42-71aac07002bb" lang="YAML">name: coords
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+
+<p id="_e8ab71c0-af9c-7a08-d2b1-199321e35c5f">Use a coords value in all requests:</p>
+
+<ul id="_fdac44b6-0635-7bd1-e3b0-22907407eadf"><li><p id="_4501e7f1-3d56-4bc7-e90f-fed327e0da7b">A valid Well-Known Text (WKT) representation of geometry string</p>
+</li>
+</ul>
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-coords-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-response-position</identifier><classification><tag>target</tag><value>/req/edr/point-coords-response</value></classification><component class="test-purpose"><p id="_e622d949-f833-1c5d-a6b1-af949d624fd8">Validate that the <tt>coords</tt> query parameters are processed correctly.</p>
+</component><component class="test-method"><ol id="_a54fc67d-28b1-a551-d3fa-030be7445d0c" type="arabic"><li><p id="_e6c26035-823a-e45b-8f9a-951ab37c8a6d">Verify that only resources that have a spatial geometry that intersects the coordinates are returned as part of the result set.</p>
+</li>
+<li><p id="_82903f64-1e08-3c87-79b6-e12d6ba9aa55">Verify <tt>coords</tt> values are valid for the specified coordinate reference system</p>
+</li>
+<li><p id="_9d3c7fa3-238f-6843-280e-7945804d1cbc">Verify that the coordinate reference system of the geometries is valid for the parameter defined by <tt>crs</tt>. If the <tt>crs</tt> parameter is not defined the geometries shall be valid for WGS 84 longitude/latitude (<tt><link target="http://www.opengis.net/def/crs/OGC/1.3/CRS84"/></tt> or <tt><link target="http://www.opengis.net/def/crs/OGC/0/CRS84h"/></tt>).</p>
+</li>
+</ol>
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-z-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-definition-position</identifier><classification><tag>target</tag><value>/req/edr/rc-z-definition</value></classification><component class="test-purpose"><p id="_92b54b7b-07fa-cea7-0be0-12161502add1">Validate that the vertical level query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_416ccf1e-aca6-5de1-90ad-1b26da563d67">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_63458c13-809a-a12e-8e79-2b50933c4db9" lang="YAML">name: z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-z-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-response-position</identifier><classification><tag>target</tag><value>/req/edr/z-response</value></classification><component class="test-purpose"><p id="_a9619a54-acb7-a8ee-021a-3121c0157770">Validate that the vertical level query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_be06eaef-24fd-ce22-a5ca-1212743cc8d7">Verify that only resources that have a vertical geometry that intersects the vertical information in the <tt>z</tt> parameter were included in the result set</p>
+</component><component class="step"><p id="_ef6b71b3-f2bd-7aab-efe2-d958548d3fdb">Validate that the vertical level parameter complies with the syntax described in <xref target="req_edr_z-response">/req/edr/z-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_core_rc-time-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-definition-position</identifier><classification><tag>target</tag><value>/req/core/datetime-definition</value></classification><component class="test-purpose"><p id="_26ace468-e70d-d399-363b-740e4e657d38">Validate that the datetime query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_622788c6-4f03-f20c-9746-667fd8fbf835">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_c5503ac7-df0e-6724-9d71-fc051f01ecba" lang="YAML">name: datetime
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_core_rc-time-response-position" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-response-position</identifier><classification><tag>target</tag><value>/req/core/datetime-response</value></classification><component class="test-purpose"><p id="_05cd2760-c966-3902-958a-e02abbda63e3">Validate that the <tt>datetime</tt> query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_8ad4397c-f0a1-327d-fc3f-38e872a7c019">Verify that only resources that have a temporal geometry that intersects the temporal information in the <tt>datetime</tt> parameter were included in the result set.</p>
+</component><component class="step"><p id="_ca4a6908-ad06-e47b-f221-e341fc8eceb4">Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set.</p>
+</component><component class="step"><p id="_a7d9a956-7f5e-56a8-743d-0084eb52fff4">Validate that the <tt>datetime</tt> parameter complies with the syntax described in <xref target="req_core_rc-time-response">/req/core/datetime-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-parameter-name-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/collections/REQ_rc-parameter-name-definition-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-parameter-name-definition</value></classification><component class="test-purpose"><p id="_5cdfa998-f0b2-036e-b752-7b18f45a72c5">Validate that the parameter-name query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_e800dcf5-e2c1-fc9d-1928-eca8f24d35b5">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_de5f8678-1298-fe43-1b77-2b7fdb850ab0" lang="YAML">name: parameter-name
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-parameter-name-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-parameter-name-response-position</identifier><classification><tag>target</tag><value>/req/edr/parameter-name-response</value></classification><component class="test-purpose"><p id="_a76bcb1d-50ff-8eed-4ec0-512e082df250">Validate that the parameter-name query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_1b06966b-8eda-3669-f66e-152f5efab8a4">Verify that only resources for the requested parameters were included in the result set</p>
+</component><component class="step"><p id="_34810e02-bed3-aa73-1199-3d89e5b93693">Validate that the parameter-name parameter complies with the syntax described in <xref target="req_edr_parameters-response">/req/edr/parameter-name-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-crs-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-definition-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-definition</value></classification><component class="test-purpose"><p id="_23db0b75-6080-b8ac-73db-d2e43a56c146">Validate that the crs query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_1667b4c7-35d3-8691-7a42-0e5cf3a02dfc">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_d6cc47d7-b495-e32e-3944-b407c7077659" lang="YAML">name: crs
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-crs-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-response-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-response</value></classification><component class="test-purpose"><p id="_c5f1969a-bafb-a2a9-d6bc-00c836333dbf">Validate that the crs query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_da8ccce9-4fbe-1da0-15b7-ceb9959e1779">Verify that the geometry of the resources returned are valid for the requested coordinate reference system</p>
+</component><component class="step"><p id="_cbc6c6c2-9c46-74aa-b963-56f35b51d4b6">Verify that all crs values defined in the collections metadata are supported by the collection</p>
+</component><component class="step"><p id="_cffdc6d0-e1c8-875e-8849-533c23343768">Verify that all crs values not defined in the collections metadata will generate a HTTP <tt>400</tt> error</p>
+</component><component class="step"><p id="_1b3bdfbe-d1de-9ec0-b7d9-9df71fe6fe98">Validate that the crs parameter complies with the syntax described in <xref target="req_edr_crs-response">/req/edr/REQ_rc-crs-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-f-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-f-definition-position</identifier><classification><tag>target</tag><value>/req/edr/rc-f-definition</value></classification><component class="test-purpose"><p id="_b83019cf-441d-d339-6230-b0f89a7a17e4">Validate that the <tt>f</tt> query parameter is constructed correctly.</p>
+</component><component class="test-method"><p id="_e7db1144-306e-7718-a735-33ee1095fe51">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_f81d31d7-b4fe-f288-68d9-09d9757441d5" lang="YAML">name: f
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-f-response-position" model="ogc" type="abstracttest"> <identifier>/conf/collections/rc-f-response-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-f-response</value></classification><component class="test-purpose"><p id="_6d1c919b-5bf4-31c8-e958-f45547e4d021">Validate that the <tt>f</tt> query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_6e56e468-a36b-3555-e5f7-2f73d6879b5d">Verify that the response is returned in the requested data format</p>
+</component><component class="step"><p id="_70516e33-3111-e050-7796-1d6c9855949b">Verify that all output format values defined in the collections metadata are supported by the collection</p>
+</component><component class="step"><p id="_1dda4de7-94ac-23e3-ff1b-b843de15bc2f">Validate that the <tt>f</tt> parameter complies with the syntax described in <xref target="req_edr_f-response">/req/edr/REQ_rc-f-response</xref>.</p>
+</component>
+</component>
+</requirement>
+</clause>
+
+<clause id="_area" obligation="informative">
+<title>Area</title>
+<requirement id="ats_area" model="ogc" type="abstracttest"> <identifier>/conf/area-no-query-params</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_6f9208e4-73eb-46f8-0990-4a6c321c5b46">Validate that an error is returned by an <tt>Area</tt> query if no query parameters are specified.</p>
+</component><component class="test-method"><component class="step"><p id="_6bbaaec8-0fcd-bac0-734e-f7fbb0e9779f">No query parameters are specified</p>
+</component><component class="step"><p id="_56ee1dc1-ee76-209b-655c-92772885bf46">Validate that a document was returned with a status code 400.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="_eaa6bb9c-6679-7d73-7f40-148d1ca85c2c" model="ogc" type="abstracttest"> <identifier>/conf/area-no-coords-param</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_989be6be-6003-c095-46ff-7ef73474148c">Validate that an error is returned by an <tt>Area</tt> query when the coords query parameter is not specified.</p>
+</component><component class="test-method"><component class="step"><p id="_87669573-2d01-1a1c-d7ad-32215b8a4452">coords query parameter is not specified</p>
+</component><component class="step"><p id="_a7af8388-d64d-c1f3-972c-099e94ecd38f">Validate that a document was returned with a status code 400.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="_1cef093d-8e9e-6383-4d6f-dd37f179dd77" model="ogc" type="abstracttest"> <identifier>/conf/area-coords-param-invalid</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_bd31fae5-6fbc-8c0c-8c62-d81bb561c4f5">Validate that an error is returned by an <tt>Area</tt> query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.</p>
+</component><component class="test-method"><component class="step"><p id="_842f7ffe-df18-abea-95ce-952b7e2744ef">Check coords query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value</p>
+</component><component class="step"><p id="_0ebfa3bf-06c5-3ce4-2155-338a94cbfe69">Validate that a document was returned with a status code 400.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="_5ac98ac5-284e-b825-d27a-ff953697d357" model="ogc" type="abstracttest"> <identifier>/conf/area-valid-query-params</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_e99766ae-5abf-4c06-3902-59299d9d7da6">Validate that resources can be identified and extracted from a Collection with an <tt>Area</tt> query using  query parameters.</p>
+</component><component class="test-method"><ol id="_7821be95-f78c-c13e-86fb-16004f58f357" type="arabic"><li><p id="_a9eaacf3-11d8-edd2-63ad-2f998367dd0d">Test with valid query parameters</p>
+</li>
+<li><p id="_a9af8078-e85c-68e1-eef4-719bd6b898f6">Validate that a document was returned with a status code 200.</p>
+</li>
+</ol>
+
+<p id="_92a98e9b-dd9b-c4ca-9e6f-7b35116908db">Repeat these tests using the following parameter tests:</p>
+
+<p id="_8f9da628-8417-8182-93fa-d77a95ccf4d3"><strong>Coordinates</strong></p>
+
+<ul id="_d217463a-8402-c5f3-9fab-271f602a9fac"><li><p id="_87c0f5d5-effa-400d-2ed0-6015c1bf41f1">Parameter <xref target="req_edr_coords-definition">/req/edr/coords-definition</xref></p>
+</li>
+<li><p id="_6f7e6610-87c3-a4bb-ef84-8c1269a29549">Response <xref target="req_edr_coords-response">/req/edr/coords-response</xref></p>
+</li>
+</ul>
+
+<p id="_0b7a0399-7a99-824d-6571-79289a81f268"><strong>VerticalLevel</strong></p>
+
+<ul id="_d4e439aa-ff15-e131-afc0-c92db1adf73e"><li><p id="_94adbc13-207d-ff18-863e-ab6941249eb9">Parameter <xref target="req_edr_z-definition">/req/edr/z-definition</xref></p>
+</li>
+<li><p id="_de519c60-641f-9cab-cd08-f79866d30782">Response <xref target="req_edr_z-response">/req/edr/z-response</xref></p>
+</li>
+</ul>
+
+<p id="_6879b040-41fa-c54f-8660-2f3875af38e1"><strong>Parameters</strong></p>
+
+<ul id="_c0ba3908-069c-aaf1-cd5a-66242c91c8da"><li><p id="_0b5a211e-8441-fab9-10e0-a9c8c01964e4">Parameter <xref target="req_edr_parameters-definition">/req/edr/REQ_rc-parameter-name-definition</xref></p>
+</li>
+<li><p id="_daaf6f77-0be2-c2a2-02a2-ab8b4bf5a581">Response <xref target="req_edr_parameters-response">/req/edr/parameter-name-response</xref></p>
+</li>
+</ul>
+
+<p id="_58f150c6-2e77-e82e-c245-d9d23761cfe3"><strong>DateTime</strong></p>
+
+<ul id="_bd2d3293-faab-5d31-e280-c8e047fe080c"><li><p id="_5774f077-8b75-15d3-72e3-287a489668b2">Parameter <xref target="req_collections_rc-time-definition">/req/core/datetime-definition</xref></p>
+</li>
+<li><p id="_817ba7e3-56f7-e007-3503-251daa66ec32">Response <xref target="req_core_rc-time-response">/req/core/datetime-response</xref></p>
+</li>
+</ul>
+
+<p id="_35f24899-9494-65ac-d853-16d5352345dd">Execute requests with combinations of the “coords”,”time”,”parameter-name”,”z”,”crs” and “f” query parameters
+and verify that only information that matches the selection criteria is returned.</p>
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-coords-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-definition-area</identifier><classification><tag>target</tag><value>/req/edr/coords-definition</value></classification><component class="test-purpose"><p id="_1644451b-14f5-1137-f6b7-2f32a454e424">Validate that the coords query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_fa58f85b-bf13-4ac1-ba60-d6743649969e">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_0bf652c7-e4ac-720b-1503-0f9e0df59d2f" lang="YAML">name: coords
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+
+<p id="_9444bfc4-0431-2e7b-1b05-73c6eaac6c0a">Use a coords value in all requests:</p>
+
+<ul id="_fc2df53e-bba2-50ce-7a27-f1a1955ad757"><li><p id="_a81c9d51-0acb-2197-0f97-dba122b2c442">A valid Well-Known Text (WKT) representation of geometry string</p>
+</li>
+</ul>
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-coords-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-response-area</identifier><classification><tag>target</tag><value>/req/edr/polygon-coords-response</value></classification><component class="test-purpose"><p id="_f422a5ea-e45e-1a4a-9f5a-d3485570cb6a">Validate that the <tt>coords</tt> query parameters are processed correctly.</p>
+</component><component class="test-method"><ol id="_b10e792d-0fea-efd1-7e66-ec7b49df4d66" type="arabic"><li><p id="_307d3ebe-19c5-e247-03a6-ed04c52336cc">Verify that only resources that have a spatial geometry that intersects the coordinates are returned as part of the result set.</p>
+</li>
+<li><p id="_31d1d183-dc7f-b7cd-c14e-d95c231a5a85">Verify <tt>coords</tt> values are valid for the specified coordinate reference system</p>
+</li>
+<li><p id="_2e953b57-319f-3677-d297-9154b82e5208">Verify that the coordinate reference system of the geometries is valid for the parameter defined by <tt>crs</tt>. If the <tt>crs</tt> parameter is not defined the geometries shall be valid for WGS 84 longitude/latitude (<tt><link target="http://www.opengis.net/def/crs/OGC/1.3/CRS84"/></tt> or <tt><link target="http://www.opengis.net/def/crs/OGC/0/CRS84h"/></tt>).</p>
+</li>
+</ol>
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-z-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-definition-area</identifier><classification><tag>target</tag><value>/req/edr/rc-z-definition</value></classification><component class="test-purpose"><p id="_80689314-87ff-9e2f-f309-79c5a579ba52">Validate that the vertical level query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_303d69dd-612f-7f66-735b-7ded7b2bcc7f">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_17f24f04-e288-a91c-000f-91ac737307d0" lang="YAML">name: z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-z-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-response-area</identifier><classification><tag>target</tag><value>/req/edr/z-response</value></classification><component class="test-purpose"><p id="_996aef62-d38f-30e7-3827-aea336621d63">Validate that the vertical level query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_5c3cc3a5-b211-4572-35bc-7c28b964166b">Verify that only resources that have a vertical geometry that intersects the vertical information in the <tt>z</tt> parameter were included in the result set</p>
+</component><component class="step"><p id="_6242af42-ebc0-a5f5-2cea-016e373614d0">Validate that the vertical level parameter complies with the syntax described in <xref target="req_edr_z-response">/req/edr/z-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_core_rc-time-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-definition-area</identifier><classification><tag>target</tag><value>/req/core/datetime-definition</value></classification><component class="test-purpose"><p id="_e38ab98c-93c5-e13f-f8b7-264da406a3de">Validate that the datetime query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_83b662a3-8f2f-66a8-1208-483056f55d30">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_e33da924-f26d-aed3-8df6-ae407ee7c8fb" lang="YAML">name: datetime
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_core_rc-time-response-area" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-response-area</identifier><classification><tag>target</tag><value>/req/core/datetime-response</value></classification><component class="test-purpose"><p id="_d952b8af-15c1-1d3d-3e99-de8d4ab775e1">Validate that the <tt>datetime</tt> query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_5b2c8507-8df4-21ef-5ce9-cf4140f7b397">Verify that only resources that have a temporal geometry that intersects the temporal information in the <tt>datetime</tt> parameter were included in the result set.</p>
+</component><component class="step"><p id="_97a5cb80-efb2-1409-bb87-40f60055966a">Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set.</p>
+</component><component class="step"><p id="_6a271615-2a12-dc43-f78d-86e3f412bbc3">Validate that the <tt>datetime</tt> parameter complies with the syntax described in <xref target="req_core_rc-time-response">/req/core/datetime-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-parameter-name-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/collections/REQ_rc-parameter-name-definition-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-parameter-name-definition</value></classification><component class="test-purpose"><p id="_49613fad-7d5e-a6e1-035d-0d65d0f9f35e">Validate that the parameter-name query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_30d7cd7e-9483-8743-0096-c2cd5a66ab9f">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_4ca9a81f-cee0-0f95-4bce-374bc1fe1391" lang="YAML">name: parameter-name
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-parameter-name-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-parameter-name-response-area</identifier><classification><tag>target</tag><value>/req/edr/parameter-name-response</value></classification><component class="test-purpose"><p id="_49329ee3-5bde-44c6-9d1d-b0e3f93d103a">Validate that the parameter-name query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_daaf4203-237d-4996-66a5-6e82e87e3796">Verify that only resources for the requested parameters were included in the result set</p>
+</component><component class="step"><p id="_d77a8eea-0e5c-219c-ee04-797ce238c205">Validate that the parameter-name parameter complies with the syntax described in <xref target="req_edr_parameters-response">/req/edr/parameter-name-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-crs-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-definition-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-definition</value></classification><component class="test-purpose"><p id="_3b70d153-9e6a-fd2d-10e5-bcbc85340ba4">Validate that the crs query parameters are constructed correctly.</p>
+</component><component class="test-method"><p id="_2a3fe313-063f-e9b2-9988-f2a28de50405">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_cf2d6064-fb4c-ad41-c649-9c667f7221d1" lang="YAML">name: crs
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_edr_rc-crs-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-response-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-response</value></classification><component class="test-purpose"><p id="_d4734010-6121-86d2-4186-b38003da5ce1">Validate that the crs query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_e2ec3630-0421-ab7b-cb2f-60fc983d3ac4">Verify that the geometry of the resources returned are valid for the requested coordinate reference system</p>
+</component><component class="step"><p id="_088d695a-817f-7619-345e-4e4f58bd6a89">Verify that all crs values defined in the collections metadata are supported by the collection</p>
+</component><component class="step"><p id="_81854401-08bb-657e-0add-dfb1e2e3417b">Verify that all crs values not defined in the collections metadata will generate a HTTP <tt>400</tt> error</p>
+</component><component class="step"><p id="_c6a04641-f172-aa7d-c792-69d3515e32a9">Validate that the crs parameter complies with the syntax described in <xref target="req_edr_crs-response">/req/edr/REQ_rc-crs-response</xref>.</p>
+</component>
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-f-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-f-definition-area</identifier><classification><tag>target</tag><value>/req/edr/rc-f-definition</value></classification><component class="test-purpose"><p id="_cafd99f0-e4ed-9106-124e-190af1a69a02">Validate that the <tt>f</tt> query parameter is constructed correctly.</p>
+</component><component class="test-method"><p id="_4daaa36e-ceac-732a-76e8-2dfffe7ac181">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+
+<sourcecode id="_0c6d3af9-5eca-007a-9b6d-92f325e36edb" lang="YAML">name: f
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false</sourcecode>
+
+</component>
+</requirement>
+
+<requirement id="ats_collections_rc-f-response-area" model="ogc" type="abstracttest"> <identifier>/conf/collections/rc-f-response-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-f-response</value></classification><component class="test-purpose"><p id="_47c38eb9-c557-3614-36cb-d2498ae4228b">Validate that the <tt>f</tt> query parameters are processed correctly.</p>
+</component><component class="test-method"><component class="step"><p id="_259a5e38-161a-48d7-8995-45aae9ef9b27">Verify that the response is returned in the requested data format</p>
+</component><component class="step"><p id="_3e2e05c1-9f79-e0a1-df44-d70003f39f11">Verify that all output format values defined in the collections metadata are supported by the collection</p>
+</component><component class="step"><p id="_df8510fd-c3ef-af61-71a6-7a837cca5e7d">Validate that the <tt>f</tt> parameter complies with the syntax described in <xref target="req_edr_f-response">/req/edr/REQ_rc-f-response</xref>.</p>
+</component>
+</component>
+</requirement>
+</clause>
+</clause>
 </clause>
 </annex><annex id="collection_metadata_desc" obligation="informative">
 <title>Collection Response Metadata (Informative)</title>

@@ -14,41 +14,43 @@
 (XML Line 001162): Crossreference target req_edr_coords-response is undefined
 	<xref target="req_edr_coords-response">rules</xref>
 (XML Line 002039): normalised identifier in <recommendation id="_rec_core_edr-geojson" model="ogc" type="general"/> from /rec/core/edr-geojson
-	<recommendation id="_rec_core_edr-geojson" model="ogc" type="general"> <description><p id="_3f88ce00-ca3f-451c-8441-9e4475b8c96f"><strong>A:</strong></p><p id="_2a04e69f-3a10-454a-a783-6bdd383ba853">If a collection using other EDR queries uses the <xref target="rc_items-section"><tt>items</tt></xref> query, implementations SHOULD consider support for the <link target="http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edrFeatureCollectionGeoJSON.yaml">EDR GeoJSON Schema</link> as an encoding.</p></description>
+	<recommendation id="_rec_core_edr-geojson" model="ogc" type="general"> <description><p id="_6fad7149-9b0b-4dfa-be8a-fbdfe2209682"><strong>A:</strong></p><p id="_459f3777-9ad6-44ab-bd00-e225311e1053">If a collection using other EDR queries uses the <xref target="rc_items-section"><tt>items</tt></xref> query, implementations SHOULD consider support for the <link target="http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/edrFeatureCollectionGeoJSON.yaml">EDR GeoJSON Schema</link> as an encoding.</p></description>
 	</recommendation>
 (XML Line 002113): Crossreference target req_edr_rc-limit-definition is undefined
 	<xref target="req_edr_rc-limit-definition">definition</xref>
 (XML Line 002115): Crossreference target req_edr_rc-limit-response is undefined
 	<xref target="req_edr_rc-limit-response">rules</xref>
 (XML Line 002516): normalised identifier in <recommendation id="_rec_core_etag" model="ogc" type="general"/> from /rec/core/etag
-	<recommendation id="_rec_core_etag" model="ogc" type="general"> <description><p id="_37a92ec4-20c7-4200-9062-e1cfa81a6410"><strong>A:</strong></p><p id="_1a9ed0b0-d900-40ad-b32e-027e2441305f">The service SHOULD support entity tags and the associated headers as specified by HTTP/1.1.</p></description>
+	<recommendation id="_rec_core_etag" model="ogc" type="general"> <description><p id="_ba9440ad-3d5d-4427-a7fa-f70c22d38c1c"><strong>A:</strong></p><p id="_0b88f02e-6db1-428b-9161-b950eee524b5">The service SHOULD support entity tags and the associated headers as specified by HTTP/1.1.</p></description>
 	</recommendation>
 (XML Line 002526): normalised identifier in <recommendation id="_rec_core_cross-origin" model="ogc" type="general"/> from /rec/core/cross-origin
-	<recommendation id="_rec_core_cross-origin" model="ogc" type="general"> <description><p id="_29400506-98fc-4f3d-b41d-010d0191693d"><strong>A:</strong></p><p id="_cb3b3ee6-1b59-456c-b3b9-f25f62516198">If the server is intended to be accessed from the browser, cross-origin requests SHOULD be supported. Note that support can also be added in a proxy layer on top of the server.</p></description>
+	<recommendation id="_rec_core_cross-origin" model="ogc" type="general"> <description><p id="_46af26ce-cc7d-4451-8646-89713c7c9a6c"><strong>A:</strong></p><p id="_54c23294-94f8-41d7-b523-ffc460678e4f">If the server is intended to be accessed from the browser, cross-origin requests SHOULD be supported. Note that support can also be added in a proxy layer on top of the server.</p></description>
 	</recommendation>
 (XML Line 002560): normalised identifier in <recommendation id="_rec_core_html" model="ogc" type="general"/> from /rec/core/html
-	<recommendation id="_rec_core_html" model="ogc" type="general"> <description><p id="_55d1fdce-b593-4e83-b1e7-5c5c5dc47345"><strong>A:</strong></p><p id="_96aa6597-3557-4917-be6e-bed0d151cc50">To support browsing an API definition through a web browser and to enable search engines to crawl and index the dataset, implementations SHOULD consider supporting an HTML encoding.</p></description>
+	<recommendation id="_rec_core_html" model="ogc" type="general"> <description><p id="_dddb17ce-5bc4-4de1-a847-f69db0b26192"><strong>A:</strong></p><p id="_51016ae1-2df1-4704-b9b2-5635fb224fe9">To support browsing an API definition through a web browser and to enable search engines to crawl and index the dataset, implementations SHOULD consider supporting an HTML encoding.</p></description>
 	</recommendation>
 (XML Line 002567): normalised identifier in <recommendation id="_rec_core_geojson" model="ogc" type="general"/> from /rec/core/geojson
-	<recommendation id="_rec_core_geojson" model="ogc" type="general"> <description><p id="_02b3f23c-d755-4e6b-ba08-15561ae75b33"><strong>A:</strong></p><p id="_d35eb101-6f29-4fdf-903b-73248477253b">If the resource can be represented for the intended use in GeoJSON, implementations SHOULD consider supporting GeoJSON as an encoding.</p></description>
+	<recommendation id="_rec_core_geojson" model="ogc" type="general"> <description><p id="_b854a9b0-41f2-480a-ac86-a307c146d3f2"><strong>A:</strong></p><p id="_71aeab88-9926-4c45-a616-a4bbb41fac3e">If the resource can be represented for the intended use in GeoJSON, implementations SHOULD consider supporting GeoJSON as an encoding.</p></description>
 	</recommendation>
 (XML Line 002574): normalised identifier in <recommendation id="_rec_core_covjson" model="ogc" type="general"/> from /rec/core/covjson
-	<recommendation id="_rec_core_covjson" model="ogc" type="general"> <description><p id="_1337e77a-ef70-4eb5-892c-9efd3250df9e"><strong>A:</strong></p><p id="_f188f7d3-b9c1-4560-8c68-08bf109731b6">If the resource can be represented for the intended use in CoverageJSON, implementations SHOULD consider to support CoverageJSON as an encoding.</p></description>
+	<recommendation id="_rec_core_covjson" model="ogc" type="general"> <description><p id="_8992dd80-8bcc-4fe6-80b4-f1ab3402ad71"><strong>A:</strong></p><p id="_4c9f860d-e533-4ce8-ada7-b55c17759c51">If the resource can be represented for the intended use in CoverageJSON, implementations SHOULD consider to support CoverageJSON as an encoding.</p></description>
 	</recommendation>
 (XML Line 002599): normalised identifier in <recommendation id="_rec_core_link-header" model="ogc" type="general"/> from /rec/core/link-header
-	<recommendation id="_rec_core_link-header" model="ogc" type="general"> <description><p id="_9291edd3-e6a5-4eec-9ba8-aaed34c0d1d9"><strong>A:</strong></p><p id="_e1c6edfa-a549-4bc3-8a91-5bf3dd9eef2e">Links included in the payloads of responses SHOULD also be included as <tt>Link</tt> headers in the HTTP response according to <eref type="inline" bibitemid="rfc8288" citeas="rfc8288">RFC 8288, Clause 3</eref>.</p></description>
+	<recommendation id="_rec_core_link-header" model="ogc" type="general"> <description><p id="_366f4f42-9a5e-486a-aa15-ab5877039ea3"><strong>A:</strong></p><p id="_0b687b30-d263-4745-8a5b-d5216a0c3b40">Links included in the payloads of responses SHOULD also be included as <tt>Link</tt> headers in the HTTP response according to <eref type="inline" bibitemid="rfc8288" citeas="rfc8288">RFC 8288, Clause 3</eref>.</p></description>
 	
 	<hr/>
-	<description><p id="_63484e5f-efbf-4330-90b5-99f134374a7e"><strong>B:</strong></p><p id="_7db19d9d-a2c2-4486-a3b5-b4bc573454f5">This recommendation does not apply, if there are a large number of links included in a response or a link is not known when the HTTP headers of the response are created.</p></description>
+	<description><p id="_e77cffd2-6f7b-4622-b567-226ad0296a64"><strong>B:</strong></p><p id="_dd0c4480-38b6-4241-a110-f2614a19134f">This recommendation does not apply, if there are a large number of links included in a response or a link is not known when the HTTP headers of the response are created.</p></description>
 	</recommendation>
 (XML Line 003878): normalised identifier in <requirement id="_req_edr_rc-locations" model="ogc" type="general"/> from /req/edr/rc-locations
 	<requirement id="_req_edr_rc-locations" model="ogc" type="general">  <identifier>/req/edr/rc-locations</identifier>
 	
-	<description><p id="_d1ac66d5-838e-4976-ae6b-683ce2ee63ec"><strong>A:</strong></p><p id="_ee81c702-0251-4e23-8b66-2fc17e1f4d49">For every collection identified in the collections response (path <tt>/collections</tt>), the server MAY support the HTTP GET operation at the path <tt>/collections/{collectionId}/locations</tt>.</p></description>
+	<description><p id="_309b844a-cb1f-4f92-95b3-840425f68ab2"><strong>A:</strong></p><p id="_752bd87e-43b9-4d9f-a0da-f8d4dbf1a89b">For every collection identified in the collections response (path <tt>/collections</tt>), the server MAY support the HTTP GET operation at the path <tt>/collections/{collectionId}/locations</tt>.</p></description>
 	
 	<hr/>
 (XML Line 005584): Crossreference target OpenAPI is undefined
 	<xref target="OpenAPI">OpenAPI Specification, version 3.0</xref>
+(XML Line 007517): Crossreference target req_edr_coords-response is undefined
+	<xref target="req_edr_coords-response">/req/edr/coords-response</xref>
 
 
 == Metanorma XML Style Warning
@@ -185,7 +187,13 @@
 	<requirement id="ats_html" model="ogc" type="conformanceclass">
 	<title>HTML</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/html</identifier><subject><xref target="rc_html">http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html</xref></subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</inherit><inherit>http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html</inherit><classification><tag>Target Type</tag><value>Web API</value></classification><requirement id="_8a97ec5d-69c1-dbcb-8248-9ee871a154aa" model="ogc" type="verification"> <identifier>/conf/html/content</identifier></requirement><requirement id="_96bf78d2-34ba-ed5d-2a2d-1453cd119e3d" model="ogc" type="verification"> <identifier>/conf/html/definition</identifier></requirement>
 	
-(XML Line 007019): Hanging paragraph in clause
+(XML Line 006996): Hanging paragraph in clause
+	<clause id="_conformance_class_queries" obligation="informative">
+	<title>Conformance Class Queries</title>
+	<requirement id="ats_queries" model="ogc" type="conformanceclass">
+	<title>Queries</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries</identifier><subject><xref target="rc_queries">http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</xref></subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</inherit><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections</inherit><classification><tag>Target Type</tag><value>Web API</value></classification>
+	
+(XML Line 007843): Hanging paragraph in clause
 	<annex id="collection_metadata_desc" obligation="informative">
 	<title>Collection Response Metadata (Informative)</title>
 	<p id="_b291adb7-5e3a-f435-7059-aa6d4f167f11">This Annex contains a more-easily human-readable view of the content in the OpenAPI definitions.</p>
@@ -285,18 +293,6 @@
 	<title>Queries</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</identifier><subject>Web API</subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections</inherit><requirement id="_797e1dfc-06a7-291b-e8eb-b414dddc4df4" model="ogc" type="general"> <identifier>/req/queries/position</identifier></requirement><requirement id="_fc67f787-7510-3a69-8fd8-7aec10175f59" model="ogc" type="general"> <identifier>/req/edr/rc-area</identifier></requirement><requirement id="_08858339-ebef-c79c-4bb6-18b1e85fde10" model="ogc" type="general"> <identifier>/req/edr/rc-cube</identifier></requirement><requirement id="_cc809ce7-361e-2b1e-5c6c-436f7c82901e" model="ogc" type="general"> <identifier>/req/edr/rc-trajectory</identifier></requirement><requirement id="_a0ce0c04-9e58-b40e-5411-0d63f6f507a6" model="ogc" type="general"> <identifier>/req/edr/rc-corridor</identifier></requirement><requirement id="_918f589a-716a-bf17-0ef1-f6da5d588309" model="ogc" type="general"> <identifier>/req/queries/radius</identifier></requirement><requirement id="_279381fc-6101-320a-3c41-5f25c0b832fd" model="ogc" type="general"> <identifier>/req/edr/rc-items</identifier></requirement><requirement id="_bd5b5d1d-72e6-f832-14a7-e1944927de38" model="ogc" type="general"> <identifier>/req/edr/rc-locations</identifier></requirement><requirement id="_b08b09ee-b4c1-d11f-0bbd-f1ef040323ce" model="ogc" type="general"> <identifier>/req/instances/rc-md-op</identifier></requirement><requirement id="_405996db-d1be-e8cf-300f-4465441e72dd" model="ogc" type="general"> <identifier>/req/instances/rc-md-success</identifier></requirement><requirement id="_b141da40-8272-81a6-75bf-02ea403c9397" model="ogc" type="general"> <identifier>/req/instances/src-md-op</identifier></requirement><requirement id="_7f40eb5b-3c12-0eda-144c-4f96ba6b204f" model="ogc" type="general"> <identifier>/req/instances/src-md-success</identifier></requirement>
 	
 	</requirement>
-(XML Line 003432): Requirement /req/queries/position has no corresponding Conformance test
-	<requirement id="req_edr_rc-position" model="ogc">  <identifier>/req/queries/position</identifier>
-	
-	<description><p id="_41adf45e-5b1c-5da2-e9ce-60572c83f2dc"><strong>A:</strong></p><p id="_cdcd8bc6-b7e8-4c95-ed63-317e76d46a6e">For every collection identified in the collections response (path <tt>/collections</tt>), the server MAY support the HTTP GET operation at the path <tt>/collections/{collectionId}/position</tt>.</p></description>
-	
-	<hr/>
-(XML Line 003490): Requirement /req/edr/rc-area has no corresponding Conformance test
-	<requirement id="req_edr_rc-area" model="ogc">  <identifier>/req/edr/rc-area</identifier>
-	
-	<description><p id="_804395fd-44b8-6cad-eeea-0b75777cd32b"><strong>A:</strong></p><p id="_b2492f5d-e412-7638-6924-9410127bb323">For every collection identified in the collections response (path <tt>/collections</tt>), the server MAY support the HTTP GET operation at the path <tt>/collections/{collectionId}/area</tt>.</p></description>
-	
-	<hr/>
 (XML Line 003548): Requirement /req/edr/rc-cube has no corresponding Conformance test
 	<requirement id="req_edr_rc-cube" model="ogc">  <identifier>/req/edr/rc-cube</identifier>
 	
@@ -382,76 +378,10 @@
 	<description><p id="_da06654e-46a5-d6ef-51c0-82a7179c7edc"><strong>A:</strong></p><p id="_4fb67da5-3adf-ac28-1d94-3caba24a4a5b">Only features that have a spatial geometry that intersects the bounding box SHALL be part of the result set, if the <tt>bbox</tt> parameter is provided.</p></description>
 	
 	<hr/>
-(XML Line 004215): Requirement /req/edr/coords-definition has no corresponding Conformance test
-	<requirement id="_8251806a-0c87-9244-b428-7ee0e40f95e0" model="ogc">  <identifier>/req/edr/coords-definition</identifier>
-	
-	<description><p id="_c4328185-46d5-bb68-d2b3-f92aca2133de"><strong>A:</strong></p><p id="_a61121d4-d501-dbb9-a994-df7dd15b7144">Each geometry based resource (Position, Radius, Area, Trajectory, Corridor) collection operation SHALL support a parameter <tt>coords</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><sourcecode id="_9525a351-e191-c173-5583-7dd8a8dae255" lang="YAML">name: coords
-	in: query
-	required: true
-(XML Line 004242): Requirement /req/edr/point-coords-response has no corresponding Conformance test
-	<requirement id="_a568edb9-ff3d-6ab0-186d-709b4687a111" model="ogc">  <identifier>/req/edr/point-coords-response</identifier>
-	
-	<description><p id="_776c1510-18ff-5514-c3ce-54aa1836f547"><strong>A:</strong></p><p id="_f56bb421-bf68-eb12-3668-e17380706632">Only those resources that are representative of the requested geometry that is defined by the <tt>coords</tt> parameter SHALL be part of the result set.</p></description>
-	
-	<hr/>
-(XML Line 004274): Requirement /req/edr/polygon-coords-response has no corresponding Conformance test
-	<requirement id="_d1114da6-c571-b2db-b57f-426265d1102c" model="ogc">  <identifier>/req/edr/polygon-coords-response</identifier>
-	
-	<description><p id="_f3e99372-6a99-5ea3-2e3b-34208d58ae14"><strong>A:</strong></p><p id="_de91d5df-b549-ff38-ba61-5b0ecdbe2701">Only those resources that are representative of the requested geometry that is defined by the <tt>coords</tt> parameter SHALL be part of the result set.</p></description>
-	
-	<hr/>
 (XML Line 004306): Requirement /req/edr/linestring-coords-response has no corresponding Conformance test
 	<requirement id="_2108e9df-b052-5091-ac1b-8118df073ea8" model="ogc">  <identifier>/req/edr/linestring-coords-response</identifier>
 	
 	<description><p id="_fa5a1025-26a0-3729-5b68-81dfcb08ffb3"><strong>A:</strong></p><p id="_032b344e-d428-d7ef-dbe3-18f9101a0fc0">Only those resources that are representative of the requested geometry that is defined by the <tt>coords</tt> parameter SHALL be part of the result set.</p></description>
-	
-	<hr/>
-(XML Line 004338): Requirement /req/core/datetime-definition has no corresponding Conformance test
-	<requirement id="_56ad99ae-32ba-18f3-2af5-60b586d1c420" model="ogc">  <identifier>/req/core/datetime-definition</identifier>
-	
-	<description><p id="_4d3035f0-2a31-026b-2801-e28c4347a14e"><strong>A:</strong></p><p id="_b17c9143-e120-bb1f-e14a-23cd46b5c139">The <tt>datetime</tt> parameter SHALL have the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><sourcecode id="_bbf8db00-01dd-9196-652b-62f30566982a" lang="YAML">name: datetime
-	in: query
-	required: false
-(XML Line 004360): Requirement /req/core/datetime-response has no corresponding Conformance test
-	<requirement id="_edb86827-1625-8d24-0e11-def16d2f01d5" model="ogc">  <identifier>/req/core/datetime-response</identifier>
-	
-	<description><p id="_a1939c53-860d-184f-c5d6-bf0f2baa2056"><strong>A:</strong></p><p id="_59cff66f-5182-e0b2-50c6-d3e40a6cc844">If the <tt>datetime</tt> parameter is provided, only resources that have a temporal geometry that intersects the temporal information in the <tt>datetime</tt> parameter SHALL be part of the result set.</p></description>
-	
-	<hr/>
-(XML Line 004405): Requirement /req/edr/REQ_rc-parameter-name-definition has no corresponding Conformance test
-	<requirement id="_c91962c9-9dc9-02e2-98bf-23bc1276ed40" model="ogc">  <identifier>/req/edr/REQ_rc-parameter-name-definition</identifier>
-	
-	<description><p id="_45c20347-0c1a-d09c-8163-e245ae2abe41"><strong>A:</strong></p><p id="_434a3511-9c5c-11d3-502a-a160d9f11900">Each resource collection operation SHALL support a parameter <tt>parameter-name</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><sourcecode id="_a02526d1-b0ae-ad42-a219-91be6253082a" lang="YAML">name: parameter-name
-	in: query
-	required: false
-(XML Line 004429): Requirement /req/edr/parameter-name-response has no corresponding Conformance test
-	<requirement id="_c92fd369-ae29-b583-793b-76178efc2d7a" model="ogc">  <identifier>/req/edr/parameter-name-response</identifier>
-	
-	<description><p id="_b5470fc1-0890-b461-40b0-8837d558dce2"><strong>A:</strong></p><p id="_02c656ef-f4b7-6d28-33f7-d32625ead84c">If the <tt>parameter-name</tt> parameter is provided, only those parameters named SHALL be returned.  If the <tt>parameter-name</tt> parameter is not specified all parameters in the collection SHALL be returned.</p></description>
-	
-	<hr/>
-(XML Line 004447): Requirement /req/edr/REQ_rc-crs-definition has no corresponding Conformance test
-	<requirement id="_3df44d7f-0639-725f-a713-7b21014bf71e" model="ogc">  <identifier>/req/edr/REQ_rc-crs-definition</identifier>
-	
-	<description><p id="_05ebdfe7-558b-65cc-0f23-1f58b8d8d374"><strong>A:</strong></p><p id="_5f4cb8b1-f4ab-21a8-e55b-65a1c6635021">Each resource collection operation SHALL support a parameter <tt>crs</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><sourcecode id="_7193e792-46a0-b5c6-f6b9-f2fefc8c6f04" lang="YAML">name: crs
-	in: query
-	required: false
-(XML Line 004469): Requirement /req/edr/REQ_rc-crs-response has no corresponding Conformance test
-	<requirement id="_f3d1beb6-c295-5d03-1ed5-7178b3ad95da" model="ogc">  <identifier>/req/edr/REQ_rc-crs-response</identifier>
-	
-	<description><p id="_6a72494e-53de-1b8c-1d1c-9d3d1f92732a"><strong>A:</strong></p><p id="_149d4114-e939-c8a4-b12c-cc779a479da4">If the <tt>crs</tt> parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the <tt>crs</tt> parameter is not specified the data will be returned in its native projection.</p></description>
-	
-	<hr/>
-(XML Line 004492): Requirement /req/edr/rc-f-definition has no corresponding Conformance test
-	<requirement id="_d00abe7f-1670-25b7-2126-3ac8f03f4370" model="ogc">  <identifier>/req/edr/rc-f-definition</identifier>
-	
-	<description><p id="_59ef5c47-6bc8-4465-3c09-94330aa18615"><strong>A:</strong></p><p id="_b14d18f2-6d04-8462-5364-5ae77c801b49">Each resource collection operation SHALL support a parameter <tt>f</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><sourcecode id="_3d6c0a8e-9867-9e74-7789-0a2b82cca5b7" lang="YAML">name: f
-	in: query
-	required: false
-(XML Line 004514): Requirement /req/edr/REQ_rc-f-response has no corresponding Conformance test
-	<requirement id="_243a02ab-d4dd-efe0-3631-78045e126283" model="ogc">  <identifier>/req/edr/REQ_rc-f-response</identifier>
-	
-	<description><p id="_c3d6670c-298f-1638-968c-0e9a8d8af0c6"><strong>A:</strong></p><p id="_e89f9b26-7758-2be4-7253-f388714455ec">If the <tt>f</tt> parameter is provided, the returned information should be transformed to the defined data format.</p></description>
 	
 	<hr/>
 (XML Line 004542): Requirement /req/edr/z-definition has no corresponding Conformance test
@@ -460,12 +390,6 @@
 	<description><p id="_882a34b6-9cc8-131e-7e4d-b6ceef793ae3"><strong>A:</strong></p><p id="_cbf80d4b-7298-c093-82a9-1128833237fb">Each resource collection operation MAY support a parameter <tt>z</tt> with the following characteristics (using an OpenAPI Specification 3.0 fragment):</p><sourcecode id="_33ef195f-1dc3-17b3-42b7-2610a4bf433e" lang="YAML">name: z
 	in: query
 	required: false
-(XML Line 004564): Requirement /req/edr/z-response has no corresponding Conformance test
-	<requirement id="_cea3861b-12f6-48e7-aa2b-bc5d921ef53a" model="ogc">  <identifier>/req/edr/z-response</identifier>
-	
-	<description><p id="_64544829-e639-9c58-b461-f5446574525b"><strong>A:</strong></p><p id="_05c014b7-76ff-2c78-4710-6ca05ddccbf1">If the <tt>z</tt> parameter is provided, only resources that have a vertical geometry that intersects the vertical information in the <tt>z</tt> parameter SHALL be part of the result set.</p></description>
-	
-	<hr/>
 (XML Line 004616): Requirement /req/edr/within-definition has no corresponding Conformance test
 	<requirement id="_c6ee4ceb-5fc9-04b8-1028-0ae297fb99bf" model="ogc">  <identifier>/req/edr/within-definition</identifier>
 	
@@ -721,6 +645,220 @@
 	<title>OpenAPI 3.0</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/oas30</identifier><subject><xref target="rc_oas30">http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30</xref></subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</inherit><inherit>http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30</inherit><classification><tag>Target Type</tag><value>Web API</value></classification><requirement id="_c04aa617-357f-1f87-0741-a4b515cbdf0a" model="ogc" type="verification"> <identifier>/conf/oas30/completeness</identifier></requirement><requirement id="_7a0d626b-f479-a541-ba78-683813c49eda" model="ogc" type="verification"> <identifier>/conf/oas30/exceptions-codes</identifier></requirement><requirement id="_12c490dc-44b2-27bc-2f14-ccf2d546f8fa" model="ogc" type="verification"> <identifier>/conf/oas30/oas-definition-1</identifier></requirement><requirement id="_09034cc0-d3aa-926a-d09d-d8b09125adcd" model="ogc" type="verification"> <identifier>/conf/oas30/oas-definition-2</identifier></requirement><requirement id="_b60c600c-3291-635f-a361-8e31038b85e8" model="ogc" type="verification"> <identifier>/conf/oas30/oas-impl</identifier></requirement><requirement id="_6db055c1-bc8a-1aea-bf92-f938c6a0e89c" model="ogc" type="verification"> <identifier>/conf/oas30/security</identifier></requirement>
 	
 	</requirement>
+(XML Line 006998): Conformance class http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries has no corresponding Requirement class
+	<requirement id="ats_queries" model="ogc" type="conformanceclass">
+	<title>Queries</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries</identifier><subject><xref target="rc_queries">http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</xref></subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</inherit><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections</inherit><classification><tag>Target Type</tag><value>Web API</value></classification>
+	
+	</requirement>
+(XML Line 006998): Conformance class http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries has no corresponding Conformance test
+	<requirement id="ats_queries" model="ogc" type="conformanceclass">
+	<title>Queries</title><identifier>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries</identifier><subject><xref target="rc_queries">http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries</xref></subject><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core</inherit><inherit>http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections</inherit><classification><tag>Target Type</tag><value>Web API</value></classification>
+	
+	</requirement>
+(XML Line 007022): Conformance test /conf/position-no-query-params has no corresponding Conformance class
+	<requirement id="ats_position" model="ogc" type="abstracttest"> <identifier>/conf/position-no-query-params</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_8f2e0d47-99ae-b448-0783-8139d7160d56">Validate that an error is returned by a <tt>Position</tt> query if no query parameters are specified.</p>
+	</component><component class="test-method"><component class="step"><p id="_de028e5f-4d81-70d4-768f-177e765fc2f1">No query parameters are specified</p>
+	</component><component class="step"><p id="_6c8cf6b6-3f1e-d812-4b78-f58076d3ed95">Validate that a document was returned with a status code 400.</p>
+	</component>
+	</component>
+(XML Line 007043): Conformance test /conf/position-no-coords-param has no corresponding Conformance class
+	<requirement id="_64ccebfa-e446-9781-4a92-fc5e3a0e7d7e" model="ogc" type="abstracttest"> <identifier>/conf/position-no-coords-param</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_4aa81be8-fe85-d351-bd52-0a0dedff895f">Validate that an error is returned by a <tt>Position</tt> query when the coords query parameter is not specified.</p>
+	</component><component class="test-method"><component class="step"><p id="_52edb448-a82b-8c3e-dd33-4e28ad6cbb1d">coords query parameter is not specified</p>
+	</component><component class="step"><p id="_5afb7a32-9f34-2ac4-a8b5-f113e942e2de">Validate that a document was returned with a status code 400.</p>
+	</component>
+	</component>
+(XML Line 007064): Conformance test /conf/position-coords-param-invalid has no corresponding Conformance class
+	<requirement id="_e5b370c0-d4cf-6468-d923-a17f9809714e" model="ogc" type="abstracttest"> <identifier>/conf/position-coords-param-invalid</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_deb69542-0043-bda4-99f7-4eb93283219f">Validate that an error is returned by a <tt>Position</tt> query when the coords query parameter does not contain a valid POINT or MULTIPOINT Well Known Text value.</p>
+	</component><component class="test-method"><component class="step"><p id="_ab13b5fa-8a5b-a7dc-07e4-9ea22db42d39">Check coords query parameter is a valid Well Known Text Point or MultiPoint value</p>
+	</component><component class="step"><p id="_bdcd48af-a990-639a-6166-8931e649c640">Validate that a document was returned with a status code 400.</p>
+	</component>
+	</component>
+(XML Line 007085): Conformance test /conf/position-valid-query-params has no corresponding Conformance class
+	<requirement id="_231af854-07d6-7267-f26e-15d8482741e9" model="ogc" type="abstracttest"> <identifier>/conf/position-valid-query-params</identifier><classification><tag>target</tag><value>/req/queries/position</value></classification><component class="test-purpose"><p id="_a611b740-4b2d-0a4e-e6c5-7057865ffea8">Validate that resources can be identified and extracted from a Collection with a <tt>Position</tt> query using  query parameters.</p>
+	</component><component class="test-method"><ol id="_194ba39a-17c8-e088-66f7-d23f15bca0b9" type="arabic"><li><p id="_d3b7669e-7076-0101-4891-0546af700b56">Test with valid query parameters</p>
+	</li>
+	<li><p id="_50fa49b6-d9d0-994f-c881-16615a6eddc9">Validate that a document was returned with a status code 200.</p>
+	</li>
+(XML Line 007141): Conformance test /conf/edr/rc-coords-definition-position has no corresponding Conformance class
+	<requirement id="ats_edr_rc-coords-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-definition-position</identifier><classification><tag>target</tag><value>/req/edr/coords-definition</value></classification><component class="test-purpose"><p id="_4245d8ce-e676-d651-30e6-be28e05d9319">Validate that the coords query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_0e1b6767-929c-3f7c-edc2-a21baf0834ba">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_b7bc1261-fe52-79f2-7b42-71aac07002bb" lang="YAML">name: coords
+	in: query
+(XML Line 007171): Conformance test /conf/edr/rc-coords-response-position has no corresponding Conformance class
+	<requirement id="ats_edr_rc-coords-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-response-position</identifier><classification><tag>target</tag><value>/req/edr/point-coords-response</value></classification><component class="test-purpose"><p id="_e622d949-f833-1c5d-a6b1-af949d624fd8">Validate that the <tt>coords</tt> query parameters are processed correctly.</p>
+	</component><component class="test-method"><ol id="_a54fc67d-28b1-a551-d3fa-030be7445d0c" type="arabic"><li><p id="_e6c26035-823a-e45b-8f9a-951ab37c8a6d">Verify that only resources that have a spatial geometry that intersects the coordinates are returned as part of the result set.</p>
+	</li>
+	<li><p id="_82903f64-1e08-3c87-79b6-e12d6ba9aa55">Verify <tt>coords</tt> values are valid for the specified coordinate reference system</p>
+	</li>
+(XML Line 007192): Conformance test /conf/edr/rc-z-definition-position has no corresponding Requirement
+	<requirement id="ats_collections_rc-z-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-definition-position</identifier><classification><tag>target</tag><value>/req/edr/rc-z-definition</value></classification><component class="test-purpose"><p id="_92b54b7b-07fa-cea7-0be0-12161502add1">Validate that the vertical level query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_416ccf1e-aca6-5de1-90ad-1b26da563d67">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_63458c13-809a-a12e-8e79-2b50933c4db9" lang="YAML">name: z
+	in: query
+(XML Line 007192): Conformance test /conf/edr/rc-z-definition-position has no corresponding Conformance class
+	<requirement id="ats_collections_rc-z-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-definition-position</identifier><classification><tag>target</tag><value>/req/edr/rc-z-definition</value></classification><component class="test-purpose"><p id="_92b54b7b-07fa-cea7-0be0-12161502add1">Validate that the vertical level query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_416ccf1e-aca6-5de1-90ad-1b26da563d67">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_63458c13-809a-a12e-8e79-2b50933c4db9" lang="YAML">name: z
+	in: query
+(XML Line 007216): Conformance test /conf/edr/rc-z-response-position has no corresponding Conformance class
+	<requirement id="ats_collections_rc-z-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-response-position</identifier><classification><tag>target</tag><value>/req/edr/z-response</value></classification><component class="test-purpose"><p id="_a9619a54-acb7-a8ee-021a-3121c0157770">Validate that the vertical level query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_be06eaef-24fd-ce22-a5ca-1212743cc8d7">Verify that only resources that have a vertical geometry that intersects the vertical information in the <tt>z</tt> parameter were included in the result set</p>
+	</component><component class="step"><p id="_ef6b71b3-f2bd-7aab-efe2-d958548d3fdb">Validate that the vertical level parameter complies with the syntax described in <xref target="req_edr_z-response">/req/edr/z-response</xref>.</p>
+	</component>
+	</component>
+(XML Line 007237): Conformance test /conf/core/datetime-definition-position has no corresponding Conformance class
+	<requirement id="ats_core_rc-time-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-definition-position</identifier><classification><tag>target</tag><value>/req/core/datetime-definition</value></classification><component class="test-purpose"><p id="_26ace468-e70d-d399-363b-740e4e657d38">Validate that the datetime query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_622788c6-4f03-f20c-9746-667fd8fbf835">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_c5503ac7-df0e-6724-9d71-fc051f01ecba" lang="YAML">name: datetime
+	in: query
+(XML Line 007261): Conformance test /conf/core/datetime-response-position has no corresponding Conformance class
+	<requirement id="ats_core_rc-time-response-position" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-response-position</identifier><classification><tag>target</tag><value>/req/core/datetime-response</value></classification><component class="test-purpose"><p id="_05cd2760-c966-3902-958a-e02abbda63e3">Validate that the <tt>datetime</tt> query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_8ad4397c-f0a1-327d-fc3f-38e872a7c019">Verify that only resources that have a temporal geometry that intersects the temporal information in the <tt>datetime</tt> parameter were included in the result set.</p>
+	</component><component class="step"><p id="_ca4a6908-ad06-e47b-f221-e341fc8eceb4">Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set.</p>
+	</component><component class="step"><p id="_a7d9a956-7f5e-56a8-743d-0084eb52fff4">Validate that the <tt>datetime</tt> parameter complies with the syntax described in <xref target="req_core_rc-time-response">/req/core/datetime-response</xref>.</p>
+	</component>
+(XML Line 007285): Conformance test /conf/collections/REQ_rc-parameter-name-definition-position has no corresponding Conformance class
+	<requirement id="ats_collections_rc-parameter-name-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/collections/REQ_rc-parameter-name-definition-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-parameter-name-definition</value></classification><component class="test-purpose"><p id="_5cdfa998-f0b2-036e-b752-7b18f45a72c5">Validate that the parameter-name query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_e800dcf5-e2c1-fc9d-1928-eca8f24d35b5">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_de5f8678-1298-fe43-1b77-2b7fdb850ab0" lang="YAML">name: parameter-name
+	in: query
+(XML Line 007309): Conformance test /conf/edr/rc-parameter-name-response-position has no corresponding Conformance class
+	<requirement id="ats_collections_rc-parameter-name-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-parameter-name-response-position</identifier><classification><tag>target</tag><value>/req/edr/parameter-name-response</value></classification><component class="test-purpose"><p id="_a76bcb1d-50ff-8eed-4ec0-512e082df250">Validate that the parameter-name query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_1b06966b-8eda-3669-f66e-152f5efab8a4">Verify that only resources for the requested parameters were included in the result set</p>
+	</component><component class="step"><p id="_34810e02-bed3-aa73-1199-3d89e5b93693">Validate that the parameter-name parameter complies with the syntax described in <xref target="req_edr_parameters-response">/req/edr/parameter-name-response</xref>.</p>
+	</component>
+	</component>
+(XML Line 007330): Conformance test /conf/edr/REQ_rc-crs-definition-position has no corresponding Conformance class
+	<requirement id="ats_edr_rc-crs-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-definition-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-definition</value></classification><component class="test-purpose"><p id="_23db0b75-6080-b8ac-73db-d2e43a56c146">Validate that the crs query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_1667b4c7-35d3-8691-7a42-0e5cf3a02dfc">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_d6cc47d7-b495-e32e-3944-b407c7077659" lang="YAML">name: crs
+	in: query
+(XML Line 007354): Conformance test /conf/edr/REQ_rc-crs-response-position has no corresponding Conformance class
+	<requirement id="ats_edr_rc-crs-response-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-response-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-response</value></classification><component class="test-purpose"><p id="_c5f1969a-bafb-a2a9-d6bc-00c836333dbf">Validate that the crs query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_da8ccce9-4fbe-1da0-15b7-ceb9959e1779">Verify that the geometry of the resources returned are valid for the requested coordinate reference system</p>
+	</component><component class="step"><p id="_cbc6c6c2-9c46-74aa-b963-56f35b51d4b6">Verify that all crs values defined in the collections metadata are supported by the collection</p>
+	</component><component class="step"><p id="_cffdc6d0-e1c8-875e-8849-533c23343768">Verify that all crs values not defined in the collections metadata will generate a HTTP <tt>400</tt> error</p>
+	</component><component class="step"><p id="_1b3bdfbe-d1de-9ec0-b7d9-9df71fe6fe98">Validate that the crs parameter complies with the syntax described in <xref target="req_edr_crs-response">/req/edr/REQ_rc-crs-response</xref>.</p>
+(XML Line 007381): Conformance test /conf/edr/rc-f-definition-position has no corresponding Conformance class
+	<requirement id="ats_collections_rc-f-definition-position" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-f-definition-position</identifier><classification><tag>target</tag><value>/req/edr/rc-f-definition</value></classification><component class="test-purpose"><p id="_b83019cf-441d-d339-6230-b0f89a7a17e4">Validate that the <tt>f</tt> query parameter is constructed correctly.</p>
+	</component><component class="test-method"><p id="_e7db1144-306e-7718-a735-33ee1095fe51">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_f81d31d7-b4fe-f288-68d9-09d9757441d5" lang="YAML">name: f
+	in: query
+(XML Line 007405): Conformance test /conf/collections/rc-f-response-position has no corresponding Conformance class
+	<requirement id="ats_collections_rc-f-response-position" model="ogc" type="abstracttest"> <identifier>/conf/collections/rc-f-response-position</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-f-response</value></classification><component class="test-purpose"><p id="_6d1c919b-5bf4-31c8-e958-f45547e4d021">Validate that the <tt>f</tt> query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_6e56e468-a36b-3555-e5f7-2f73d6879b5d">Verify that the response is returned in the requested data format</p>
+	</component><component class="step"><p id="_70516e33-3111-e050-7796-1d6c9855949b">Verify that all output format values defined in the collections metadata are supported by the collection</p>
+	</component><component class="step"><p id="_1dda4de7-94ac-23e3-ff1b-b843de15bc2f">Validate that the <tt>f</tt> parameter complies with the syntax described in <xref target="req_edr_f-response">/req/edr/REQ_rc-f-response</xref>.</p>
+	</component>
+(XML Line 007432): Conformance test /conf/area-no-query-params has no corresponding Conformance class
+	<requirement id="ats_area" model="ogc" type="abstracttest"> <identifier>/conf/area-no-query-params</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_6f9208e4-73eb-46f8-0990-4a6c321c5b46">Validate that an error is returned by an <tt>Area</tt> query if no query parameters are specified.</p>
+	</component><component class="test-method"><component class="step"><p id="_6bbaaec8-0fcd-bac0-734e-f7fbb0e9779f">No query parameters are specified</p>
+	</component><component class="step"><p id="_56ee1dc1-ee76-209b-655c-92772885bf46">Validate that a document was returned with a status code 400.</p>
+	</component>
+	</component>
+(XML Line 007453): Conformance test /conf/area-no-coords-param has no corresponding Conformance class
+	<requirement id="_eaa6bb9c-6679-7d73-7f40-148d1ca85c2c" model="ogc" type="abstracttest"> <identifier>/conf/area-no-coords-param</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_989be6be-6003-c095-46ff-7ef73474148c">Validate that an error is returned by an <tt>Area</tt> query when the coords query parameter is not specified.</p>
+	</component><component class="test-method"><component class="step"><p id="_87669573-2d01-1a1c-d7ad-32215b8a4452">coords query parameter is not specified</p>
+	</component><component class="step"><p id="_a7af8388-d64d-c1f3-972c-099e94ecd38f">Validate that a document was returned with a status code 400.</p>
+	</component>
+	</component>
+(XML Line 007474): Conformance test /conf/area-coords-param-invalid has no corresponding Conformance class
+	<requirement id="_1cef093d-8e9e-6383-4d6f-dd37f179dd77" model="ogc" type="abstracttest"> <identifier>/conf/area-coords-param-invalid</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_bd31fae5-6fbc-8c0c-8c62-d81bb561c4f5">Validate that an error is returned by an <tt>Area</tt> query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.</p>
+	</component><component class="test-method"><component class="step"><p id="_842f7ffe-df18-abea-95ce-952b7e2744ef">Check coords query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value</p>
+	</component><component class="step"><p id="_0ebfa3bf-06c5-3ce4-2155-338a94cbfe69">Validate that a document was returned with a status code 400.</p>
+	</component>
+	</component>
+(XML Line 007495): Conformance test /conf/area-valid-query-params has no corresponding Conformance class
+	<requirement id="_5ac98ac5-284e-b825-d27a-ff953697d357" model="ogc" type="abstracttest"> <identifier>/conf/area-valid-query-params</identifier><classification><tag>target</tag><value>/req/edr/rc-area</value></classification><component class="test-purpose"><p id="_e99766ae-5abf-4c06-3902-59299d9d7da6">Validate that resources can be identified and extracted from a Collection with an <tt>Area</tt> query using  query parameters.</p>
+	</component><component class="test-method"><ol id="_7821be95-f78c-c13e-86fb-16004f58f357" type="arabic"><li><p id="_a9eaacf3-11d8-edd2-63ad-2f998367dd0d">Test with valid query parameters</p>
+	</li>
+	<li><p id="_a9af8078-e85c-68e1-eef4-719bd6b898f6">Validate that a document was returned with a status code 200.</p>
+	</li>
+(XML Line 007551): Conformance test /conf/edr/rc-coords-definition-area has no corresponding Conformance class
+	<requirement id="ats_edr_rc-coords-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-definition-area</identifier><classification><tag>target</tag><value>/req/edr/coords-definition</value></classification><component class="test-purpose"><p id="_1644451b-14f5-1137-f6b7-2f32a454e424">Validate that the coords query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_fa58f85b-bf13-4ac1-ba60-d6743649969e">Verify that the <tt>coords</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_0bf652c7-e4ac-720b-1503-0f9e0df59d2f" lang="YAML">name: coords
+	in: query
+(XML Line 007581): Conformance test /conf/edr/rc-coords-response-area has no corresponding Conformance class
+	<requirement id="ats_edr_rc-coords-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-coords-response-area</identifier><classification><tag>target</tag><value>/req/edr/polygon-coords-response</value></classification><component class="test-purpose"><p id="_f422a5ea-e45e-1a4a-9f5a-d3485570cb6a">Validate that the <tt>coords</tt> query parameters are processed correctly.</p>
+	</component><component class="test-method"><ol id="_b10e792d-0fea-efd1-7e66-ec7b49df4d66" type="arabic"><li><p id="_307d3ebe-19c5-e247-03a6-ed04c52336cc">Verify that only resources that have a spatial geometry that intersects the coordinates are returned as part of the result set.</p>
+	</li>
+	<li><p id="_31d1d183-dc7f-b7cd-c14e-d95c231a5a85">Verify <tt>coords</tt> values are valid for the specified coordinate reference system</p>
+	</li>
+(XML Line 007602): Conformance test /conf/edr/rc-z-definition-area has no corresponding Requirement
+	<requirement id="ats_collections_rc-z-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-definition-area</identifier><classification><tag>target</tag><value>/req/edr/rc-z-definition</value></classification><component class="test-purpose"><p id="_80689314-87ff-9e2f-f309-79c5a579ba52">Validate that the vertical level query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_303d69dd-612f-7f66-735b-7ded7b2bcc7f">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_17f24f04-e288-a91c-000f-91ac737307d0" lang="YAML">name: z
+	in: query
+(XML Line 007602): Conformance test /conf/edr/rc-z-definition-area has no corresponding Conformance class
+	<requirement id="ats_collections_rc-z-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-definition-area</identifier><classification><tag>target</tag><value>/req/edr/rc-z-definition</value></classification><component class="test-purpose"><p id="_80689314-87ff-9e2f-f309-79c5a579ba52">Validate that the vertical level query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_303d69dd-612f-7f66-735b-7ded7b2bcc7f">Verify that the <tt>z</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_17f24f04-e288-a91c-000f-91ac737307d0" lang="YAML">name: z
+	in: query
+(XML Line 007626): Conformance test /conf/edr/rc-z-response-area has no corresponding Conformance class
+	<requirement id="ats_collections_rc-z-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-z-response-area</identifier><classification><tag>target</tag><value>/req/edr/z-response</value></classification><component class="test-purpose"><p id="_996aef62-d38f-30e7-3827-aea336621d63">Validate that the vertical level query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_5c3cc3a5-b211-4572-35bc-7c28b964166b">Verify that only resources that have a vertical geometry that intersects the vertical information in the <tt>z</tt> parameter were included in the result set</p>
+	</component><component class="step"><p id="_6242af42-ebc0-a5f5-2cea-016e373614d0">Validate that the vertical level parameter complies with the syntax described in <xref target="req_edr_z-response">/req/edr/z-response</xref>.</p>
+	</component>
+	</component>
+(XML Line 007647): Conformance test /conf/core/datetime-definition-area has no corresponding Conformance class
+	<requirement id="ats_core_rc-time-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-definition-area</identifier><classification><tag>target</tag><value>/req/core/datetime-definition</value></classification><component class="test-purpose"><p id="_e38ab98c-93c5-e13f-f8b7-264da406a3de">Validate that the datetime query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_83b662a3-8f2f-66a8-1208-483056f55d30">Verify that the <tt>datetime</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_e33da924-f26d-aed3-8df6-ae407ee7c8fb" lang="YAML">name: datetime
+	in: query
+(XML Line 007671): Conformance test /conf/core/datetime-response-area has no corresponding Conformance class
+	<requirement id="ats_core_rc-time-response-area" model="ogc" type="abstracttest"> <identifier>/conf/core/datetime-response-area</identifier><classification><tag>target</tag><value>/req/core/datetime-response</value></classification><component class="test-purpose"><p id="_d952b8af-15c1-1d3d-3e99-de8d4ab775e1">Validate that the <tt>datetime</tt> query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_5b2c8507-8df4-21ef-5ce9-cf4140f7b397">Verify that only resources that have a temporal geometry that intersects the temporal information in the <tt>datetime</tt> parameter were included in the result set.</p>
+	</component><component class="step"><p id="_97a5cb80-efb2-1409-bb87-40f60055966a">Verify that all resources in the collection that are not associated with a temporal geometry are included in the result set.</p>
+	</component><component class="step"><p id="_6a271615-2a12-dc43-f78d-86e3f412bbc3">Validate that the <tt>datetime</tt> parameter complies with the syntax described in <xref target="req_core_rc-time-response">/req/core/datetime-response</xref>.</p>
+	</component>
+(XML Line 007695): Conformance test /conf/collections/REQ_rc-parameter-name-definition-area has no corresponding Conformance class
+	<requirement id="ats_collections_rc-parameter-name-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/collections/REQ_rc-parameter-name-definition-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-parameter-name-definition</value></classification><component class="test-purpose"><p id="_49613fad-7d5e-a6e1-035d-0d65d0f9f35e">Validate that the parameter-name query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_30d7cd7e-9483-8743-0096-c2cd5a66ab9f">Verify that the <tt>parameter-name</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_4ca9a81f-cee0-0f95-4bce-374bc1fe1391" lang="YAML">name: parameter-name
+	in: query
+(XML Line 007719): Conformance test /conf/edr/rc-parameter-name-response-area has no corresponding Conformance class
+	<requirement id="ats_collections_rc-parameter-name-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-parameter-name-response-area</identifier><classification><tag>target</tag><value>/req/edr/parameter-name-response</value></classification><component class="test-purpose"><p id="_49329ee3-5bde-44c6-9d1d-b0e3f93d103a">Validate that the parameter-name query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_daaf4203-237d-4996-66a5-6e82e87e3796">Verify that only resources for the requested parameters were included in the result set</p>
+	</component><component class="step"><p id="_d77a8eea-0e5c-219c-ee04-797ce238c205">Validate that the parameter-name parameter complies with the syntax described in <xref target="req_edr_parameters-response">/req/edr/parameter-name-response</xref>.</p>
+	</component>
+	</component>
+(XML Line 007740): Conformance test /conf/edr/REQ_rc-crs-definition-area has no corresponding Conformance class
+	<requirement id="ats_edr_rc-crs-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-definition-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-definition</value></classification><component class="test-purpose"><p id="_3b70d153-9e6a-fd2d-10e5-bcbc85340ba4">Validate that the crs query parameters are constructed correctly.</p>
+	</component><component class="test-method"><p id="_2a3fe313-063f-e9b2-9988-f2a28de50405">Verify that the <tt>crs</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_cf2d6064-fb4c-ad41-c649-9c667f7221d1" lang="YAML">name: crs
+	in: query
+(XML Line 007764): Conformance test /conf/edr/REQ_rc-crs-response-area has no corresponding Conformance class
+	<requirement id="ats_edr_rc-crs-response-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/REQ_rc-crs-response-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-crs-response</value></classification><component class="test-purpose"><p id="_d4734010-6121-86d2-4186-b38003da5ce1">Validate that the crs query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_e2ec3630-0421-ab7b-cb2f-60fc983d3ac4">Verify that the geometry of the resources returned are valid for the requested coordinate reference system</p>
+	</component><component class="step"><p id="_088d695a-817f-7619-345e-4e4f58bd6a89">Verify that all crs values defined in the collections metadata are supported by the collection</p>
+	</component><component class="step"><p id="_81854401-08bb-657e-0add-dfb1e2e3417b">Verify that all crs values not defined in the collections metadata will generate a HTTP <tt>400</tt> error</p>
+	</component><component class="step"><p id="_c6a04641-f172-aa7d-c792-69d3515e32a9">Validate that the crs parameter complies with the syntax described in <xref target="req_edr_crs-response">/req/edr/REQ_rc-crs-response</xref>.</p>
+(XML Line 007791): Conformance test /conf/edr/rc-f-definition-area has no corresponding Conformance class
+	<requirement id="ats_collections_rc-f-definition-area" model="ogc" type="abstracttest"> <identifier>/conf/edr/rc-f-definition-area</identifier><classification><tag>target</tag><value>/req/edr/rc-f-definition</value></classification><component class="test-purpose"><p id="_cafd99f0-e4ed-9106-124e-190af1a69a02">Validate that the <tt>f</tt> query parameter is constructed correctly.</p>
+	</component><component class="test-method"><p id="_4daaa36e-ceac-732a-76e8-2dfffe7ac181">Verify that the <tt>f</tt> query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):</p>
+	
+	<sourcecode id="_0c6d3af9-5eca-007a-9b6d-92f325e36edb" lang="YAML">name: f
+	in: query
+(XML Line 007815): Conformance test /conf/collections/rc-f-response-area has no corresponding Conformance class
+	<requirement id="ats_collections_rc-f-response-area" model="ogc" type="abstracttest"> <identifier>/conf/collections/rc-f-response-area</identifier><classification><tag>target</tag><value>/req/edr/REQ_rc-f-response</value></classification><component class="test-purpose"><p id="_47c38eb9-c557-3614-36cb-d2498ae4228b">Validate that the <tt>f</tt> query parameters are processed correctly.</p>
+	</component><component class="test-method"><component class="step"><p id="_259a5e38-161a-48d7-8995-45aae9ef9b27">Verify that the response is returned in the requested data format</p>
+	</component><component class="step"><p id="_3e2e05c1-9f79-e0a1-df44-d70003f39f11">Verify that all output format values defined in the collections metadata are supported by the collection</p>
+	</component><component class="step"><p id="_df8510fd-c3ef-af61-71a6-7a837cca5e7d">Validate that the <tt>f</tt> parameter complies with the syntax described in <xref target="req_edr_f-response">/req/edr/REQ_rc-f-response</xref>.</p>
+	</component>
 
 
 == Metanorma XML Syntax
