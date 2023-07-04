@@ -1,4 +1,10 @@
-[[ats_collections_src-md-success]]{counter2:ats-id}
+[[ats_collections_src-md-success]]
+
+// The following paragraph was only added because the compiler was otherwise failing to render the anchor above.
+
+The purpose of the following test is to validate that the Collection content complies with the required structure and contents.
+
+{counter2:ats-id}
 [width="90%",cols="2,6a"]
 .Abstract Test {ats-id}
 |===
