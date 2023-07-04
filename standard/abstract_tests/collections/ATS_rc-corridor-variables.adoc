@@ -1,15 +1,14 @@
-[[ats_edr_rc-corridor-variables]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-corridor-variables*
-^|Test Purpose |Validate that the `variables` property for a query data type in the data_queries section in the collection is correctly defined.
-^|Requirement |<<req_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
-^|Test Method a|. Verify that the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>> 
-
-. Verify that the `variables` property has a `height_units` property
-. Verify that the `height_units` property is a string array
-. Verify that the `variables` property has a `width_units` property
-. Verify that the `width_units` property is a string array
-
-|===
+[[ats_edr_rc-corridor-variables]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-corridor-variables
+target:: /req/edr/rc-corridor-variables
+test-purpose:: Validate that the `variables` property for a query data type in the data_queries section in the collection is correctly defined.
+test-method::
+step::: Verify that the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>> 
+step::: Verify that the `variables` property has a `height_units` property
+step::: Verify that the `height_units` property is a string array
+step::: Verify that the `variables` property has a `width_units` property
+step::: Verify that the `width_units` property is a string array
+====

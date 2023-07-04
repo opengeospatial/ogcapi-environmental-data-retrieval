@@ -1,13 +1,15 @@
 [[ats_covjson]]
-[cols="1,4",width="90%"]
-.Conformance Class "CoverageJSON"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/covjson
-|Target type |Web API
-|Requirements Class |<<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/covjson>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
-|===
+[conformance_class]
+.CoverageJSON
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/covjson
+subject:: <<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/covjson>>
+classification:: Target Type:Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+conformance-test:: /conf/covjson/content
+conformance-test:: /conf/covjson/definition
+====
 
 ==== CoverageJSON Definition
 

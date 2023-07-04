@@ -1,14 +1,14 @@
-[[ats_edr_rc-common-variables]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-common-variables*
-^|Test Purpose |Validate `variables` property for a query data type in the `data_queries` section in the collection is correctly defined.
-^|Requirement |<<req_edr_rc-common-variables,/req/edr/rc-common-variables>>
-^|Test Method a|. Verify that the `variables` object has a `query_type` property
-. Verify that the value of the `query_type` property matches the name of the data query type
-. If the `variables` object has an `output_formats` property verify that it is an array of strings
-. If the `variables` object has a `default_output_format` property verify that the value is in either the `output_formats` property of the `variables` object or the `output_formats` property of the parent collection.
-. If the `variables` object has a `crs_details` property verify that it is an array of crs objects, and each member object of the array has `crs_details` and `wkt` properties.
-
-|===
+[[ats_edr_rc-common-variables]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-common-variables
+target:: /req/edr/rc-common-variables
+test-purpose:: Validate `variables` property for a query data type in the `data_queries` section in the collection is correctly defined.
+test-method::
+step::: Verify that the `variables` object has a `query_type` property
+step::: Verify that the value of the `query_type` property matches the name of the data query type
+step::: If the `variables` object has an `output_formats` property verify that it is an array of strings
+step::: If the `variables` object has a `default_output_format` property verify that the value is in either the `output_formats` property of the `variables` object or the `output_formats` property of the parent collection.
+step::: If the `variables` object has a `crs_details` property verify that it is an array of crs objects, and each member object of the array has `crs_details` and `wkt` properties.
+====

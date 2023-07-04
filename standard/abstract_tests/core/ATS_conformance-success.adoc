@@ -1,11 +1,12 @@
-[[ats_core_conformance-success]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/core/conformance-success*
-^|Test Purpose |Validate that the Conformance Declaration response complies with the required structure and contents.
-^|Requirement |<<req_core_conformance-success,/req/core/conformance-success>>
-^|Test Method |. Validate the response document against OpenAPI 3.0 schema link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/confClasses.yaml[confClasses.yaml]
-. Validate that the document includes the conformance class "http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core"
-. Validate that the document lists all OGC API conformance classes that the API implements.
-|===
+[[ats_core_conformance-success]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/conformance-success
+target:: /req/core/conformance-success
+test-purpose:: Validate that the Conformance Declaration response complies with the required structure and contents.
+test-method::
+step::: Validate the response document against OpenAPI 3.0 schema link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/confClasses.yaml[confClasses.yaml]
+step::: Validate that the document includes the conformance class "http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core"
+step::: Validate that the document lists all OGC API conformance classes that the API implements.
+====

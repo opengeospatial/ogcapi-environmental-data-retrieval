@@ -1,13 +1,20 @@
 [[ats_core]]
-[cols="1,4",width="90%"]
-.Conformance Class "Core"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
-|Target type |Web API
-|Requirements Class |<<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core>>
-|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core[http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core]
-|===
+[conformance_class]
+.Core
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+subject:: <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core>>
+inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+classification:: Target Type:Web API
+conformance-test:: /conf/core/http
+conformance-test:: /conf/core/root-op
+conformance-test:: /conf/core/root-success
+conformance-test:: /conf/core/api-definition
+conformance-test:: /conf/core/api-definition-success
+conformance-test:: /conf/core/conformance
+conformance-test:: /conf/core/conformance-success
+====
 
 ==== General Tests
 

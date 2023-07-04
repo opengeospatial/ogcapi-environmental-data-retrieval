@@ -1,13 +1,32 @@
 [[ats_collections]]
-[cols="1,4",width="90%"]
-.Conformance Class "Collections"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
-|Target type |Web API
-|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections>>
-|Dependency |http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections[http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections]
-|===
+[conformance_class]
+.Collections
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
+subject:: <<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections>>
+inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
+classification:: Target Type:Web API
+conformance-test:: /conf/core/crs
+conformance-test:: /conf/collections/rc-md-op
+conformance-test:: /conf/rc-md-success
+conformance-test:: /conf/collections/src-md-op
+conformance-test:: /conf/collections/src-md-success
+conformance-test:: /conf/core/rc-extent
+conformance-test:: /conf/edr/rc-collection-info
+conformance-test:: /conf/edr/rc-data-queries
+conformance-test:: /conf/edr/rc-common-query-type
+conformance-test:: /conf/edr/rc-common-variables
+conformance-test:: /conf/edr/rc-radius-variables
+conformance-test:: /conf/edr/rc-cube-variables
+conformance-test:: /conf/edr/rc-corridor-variables
+conformance-test:: /conf/edr/rc-items-variables
+conformance-test:: /conf/edr/rc-md-query-links
+conformance-test:: /conf/core/rc-collection-info-links
+conformance-test:: /conf/edr/rc-parameters
+
+====
+
 
 ==== General Tests
 

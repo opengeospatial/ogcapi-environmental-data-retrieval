@@ -1,13 +1,12 @@
-[[ats_edr_rc-cube-variables]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-cube-variables*
-^|Test Purpose |Validate `variables` property for a query data type in the `data_queries` section in the collection is correctly defined.
-^|Requirement |<<req_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
-^|Test Method a|. Verify that the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
-
-. Verify that the `variables` property has a `height_units` property
-. Verify that the `height_units` property is a string array
-
-|===
+[[ats_edr_rc-cube-variables]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-cube-variables
+target:: /req/edr/rc-cube-variables
+test-purpose:: Validate `variables` property for a query data type in the `data_queries` section in the collection is correctly defined.
+test-method::
+step::: Verify that the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+step::: Verify that the `variables` property has a `height_units` property
+step::: Verify that the `height_units` property is a string array
+====

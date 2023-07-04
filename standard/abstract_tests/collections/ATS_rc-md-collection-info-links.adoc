@@ -1,11 +1,12 @@
-[[ats_collections_rc-collection-info-links]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/core/rc-collection-info-links*
-^|Test Purpose |Validate that each Collection metadata entry in the Collections Metadata document includes all required links.
-^|Requirement |<<_req_core_rc-collection-info-links,/req/core/rc-collection-info-links>>
-^|Test Method |. Verify that each Collection item in the Collections Metadata document includes a `link` property for each supported encoding.
-. Verify that the `links` properties of the collection includes an item for each supported encoding with a link to the features resource (relation: `items`).
-. Verify that all links include the `rel` and `type` link parameters.
-|===
+[[ats_collections_rc-collection-info-links]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-collection-info-links
+target:: /req/core/rc-collection-info-links
+test-purpose:: Validate that each Collection metadata entry in the Collections Metadata document includes all required links.
+test-method::
+step::: Verify that each Collection item in the Collections Metadata document includes a `link` property for each supported encoding.
+step::: Verify that the `links` properties of the collection includes an item for each supported encoding with a link to the features resource (relation: `items`).
+step::: Verify that all links include the `rel` and `type` link parameters.
+====

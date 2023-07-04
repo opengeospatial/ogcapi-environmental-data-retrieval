@@ -1,12 +1,12 @@
 [[ats_covjson_definition]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/covjson/definition*
-^|Test Purpose |Verify support for CoverageJSON
-^|Requirement |<<_req_covjson_definition,/req/covjson/definition>>
-^|Test Method|. A resource is requested with response media type of `application/prs.coverage+json`
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/covjson/definition
+target:: /req/covjson/definition
+test-purpose:: Verify support for CoverageJSON
+test-method::
+. A resource is requested with response media type of `application/prs.coverage+json`
 . All `200`-responses SHALL support the following media types:
    - `application/prs.coverage+json` for resources
-|===
+====

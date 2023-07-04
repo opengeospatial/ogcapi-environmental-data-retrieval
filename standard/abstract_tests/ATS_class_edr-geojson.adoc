@@ -1,13 +1,15 @@
 [[ats_edr-geojson]]
-[cols="1,4",width="90%"]
-.Conformance Class "EDR GeoJSON"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/edr-geojson
-|Target type |Web API
-|Requirements Class |<<rc_edr_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/edr-geojson>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
-|===
+[conformance_class]
+.EDR GeoJSON
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/edr-geojson
+subject:: <<rc_edr_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/edr-geojson>>
+classification:: Target Type:Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+conformance-test:: /conf/edr-geojson/content
+conformance-test:: /conf/edr-geojson/definition
+====
 
 ==== EDR GeoJSON Definition
 

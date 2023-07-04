@@ -1,10 +1,11 @@
-[[ats_core_http]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/core/http*
-^|Test Purpose |Validate that the resource paths advertised through the API conform with HTTP 1.1 and, where appropriate, TLS.
-^|Requirement |<<req_core_http,/req/core/http>>
-^|Test Method |. All compliance tests shall be configured to use the HTTP 1.1 protocol exclusively.
-. For APIs which support HTTPS, all compliance tests shall be configured to use <<rfc2818,HTTP over TLS>> (RFC 2818) with their HTTP 1.1 protocol.
-|===
+[[ats_core_http]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/http
+target:: /req/core/http
+test-purpose:: Validate that the resource paths advertised through the API conform with HTTP 1.1 and, where appropriate, TLS.
+test-method::
+step::: All compliance tests shall be configured to use the HTTP 1.1 protocol exclusively.
+step::: For APIs which support HTTPS, all compliance tests shall be configured to use <<rfc2818,HTTP over TLS>> (RFC 2818) with their HTTP 1.1 protocol.
+====

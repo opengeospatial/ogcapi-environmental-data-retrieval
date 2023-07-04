@@ -1,11 +1,12 @@
-[[ats_edr_rc-crs]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-crs*
-^|Test Purpose |Validate that each collection provided by the server is described in the Collections Metadata.
-^|Requirement |<<req_edr_rc-crs,/req/edr/rc-crs>>
-^|Test Method |. Verify that the crs property in the collection Metadata is valid.
-. Verify that each crs entry includes a unique (to the collection) `name` property.
-. Verify that each crs entry includes a valid Well Known Text definition for the `wkt` property.
-|===
+[[ats_edr_rc-crs]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-crs
+target:: /req/edr/rc-crs
+test-purpose:: Validate that each collection provided by the server is described in the Collections Metadata.
+test-method::
+step::: Verify that the crs property in the collection Metadata is valid.
+step::: Verify that each crs entry includes a unique (to the collection) `name` property.
+step::: Verify that each crs entry includes a valid Well Known Text definition for the `wkt` property.
+====
