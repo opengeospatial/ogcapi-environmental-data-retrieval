@@ -124,6 +124,14 @@ include::../requirements/edr/REQ_rc-corridor.adoc[]
 
 :sectnums:
 
+==== Requirements for Radius Queries
+
+:sectnums:
+
+include::../requirements/edr/REQ_rc-radius.adoc[]
+
+:sectnums:
+
 ==== Requirements for Items Queries
 
 :sectnums:

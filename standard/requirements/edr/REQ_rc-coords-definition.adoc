@@ -1,8 +1,10 @@
 [[req_edr_coords-definition]]
 ==== *Requirement /req/edr/coords-definition* Parameter coords definition
 
-[requirement,type="general",id="/req/edr/coords-definition", label="/req/edr/coords-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/coords-definition
 
 *A:*
 
@@ -22,7 +24,7 @@ explode: false
 ---
 *B:*
 
-The `coords` string value will be a Well Known Text of representation geometry as defined in link:http://www.opengeospatial.org/standards/sfa[Simple Feature Access - Part 1: Common Architecture].  The representation type will depend on the queryType of the API
+The `coords` string value will be a Well Known Text representation of geometry as defined in link:http://www.opengeospatial.org/standards/sfa[Simple Feature Access - Part 1: Common Architecture].  The representation type will depend on the queryType of the API
 
 
 ====

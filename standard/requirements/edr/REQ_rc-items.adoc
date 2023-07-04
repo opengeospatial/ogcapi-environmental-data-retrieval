@@ -1,7 +1,9 @@
 [[req_core_rc-items]]
 
-[requirement,type="general",id="/req/edr/rc-items", label="/req/edr/rc-items"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-items
 
 *A:*
 

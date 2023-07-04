@@ -1,7 +1,10 @@
 [[req_core_rc-time-response]]
 ==== *Requirement /req/core/datetime-response* datetime response
-[requirement,type="general",id="/req/core/datetime-response", label="/req/core/datetime-response"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/datetime-response
 
 *A:*
 

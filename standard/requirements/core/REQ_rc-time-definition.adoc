@@ -1,7 +1,10 @@
 [[req_collections_rc-time-definition]]
 ==== *Requirement /req/core/datetime-definition* datetime definition
-[requirement,type="general",id="/req/core/datetime-definition", label="/req/core/datetime-definition"]
+
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/datetime-definition
 
 *A:*
 

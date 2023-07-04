@@ -1,7 +1,10 @@
 [[req_edr-geojson_definition]]
 
-[requirement,type="general",id="/req/edr-geojson/definition", label="/req/edr-geojson/definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr-geojson/definition
+
 *A:* 
 
 `200`-responses of the server SHALL support the following media types:

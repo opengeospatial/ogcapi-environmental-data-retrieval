@@ -26,7 +26,7 @@
 ^|*Abstract Test {ats-id}* |*/conf/area*
 ^|Test Purpose |Validate that an error is returned by an `Area` query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.
 ^|Requirement |<<_req_edr_rc-area,/req/edr/rc-area>>
-^|Test Method |. Check coords query parameter is a valid Well Known Text Polygon or MultiPolygon value
+^|Test Method |. Check coords query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value
 . Validate that a document was returned with a status code 400.
 |===
 

@@ -1,8 +1,10 @@
 [[req_edr_polygon-coords-response]]
 ==== *Requirement /req/edr/polygon-coords-response* Parameter coords response
 
-[requirement,type="general",id="/req/edr/polygon-coords-response", label="/req/edr/polygon-coords-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/polygon-coords-response
 
 *A:*
 
@@ -11,7 +13,7 @@ Only those resources that are representative of the requested geometry that is d
 ---
 *B:*
 
-The coordinates SHALL consist of a Well Known Text (WKT) POLYGON or or (if supported by the collection) MULTIPOLYGON geometry string.
+The coordinates SHALL consist of a Well Known Text (WKT) POLYGON or (if supported by the collection) MULTIPOLYGON geometry string.
 
 ---
 *C:*

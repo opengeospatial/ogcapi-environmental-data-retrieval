@@ -23,9 +23,9 @@ region specified with a geographic envelope that may have a vertical extent
 [[corridor-definition]]
 === corridor
 
-two parameter set of points around a trajectory
+two-parameter set of points around a trajectory
 
-(Note: generalised from the ISO definition of a trajectory)
+(Note: generalized from the ISO definition of a trajectory)
 
 [[cube-definition]]
 === cube
@@ -66,6 +66,6 @@ data associated with a position in space-time
 [[trajectory-definition]]
 === trajectory
 
-path of a moving point described by a one parameter set of points
+path of a moving point described by a one-parameter set of points
 
 (Source: https://www.iso.org/standard/41445.html[ISO 19141:2008])

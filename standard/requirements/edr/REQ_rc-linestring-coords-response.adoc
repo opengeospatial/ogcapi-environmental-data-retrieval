@@ -1,8 +1,10 @@
 [[req_edr_linestring-coords-response]]
 ==== *Requirement /req/edr/linestring-coords-response* Parameter coords response
 
-[requirement,type="general",id="/req/edr/linestring-coords-response", label="/req/edr/linestring-coords-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/linestring-coords-response
 
 *A:*
 

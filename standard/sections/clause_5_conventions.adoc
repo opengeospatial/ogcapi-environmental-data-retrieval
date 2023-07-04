@@ -19,7 +19,7 @@ Implementation of the URI Templates is recommended in that they provide a common
 
 === Link relations
 
-To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the http://www.opengis.net/def/rel[OGC Link Relation Registry]. These are denoted below with [OGC].
+To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the http://www.opengis.net/def/rel[OGC Link Relation Type Register]. These are denoted below with [OGC].
 
 The following link-relations are in common use by OGC <<webapi-definition,Web API>> Standards.
 
@@ -96,7 +96,7 @@ For simplicity, this Standard generally refers to the HTTP protocol. This is not
 
 So that developers can more easily learn how to use the API, good documentation is essential for any API. In the best case, documentation would be available both in HTML for human consumption and in a machine-readable format that can be best processed by software for run-time binding.
 
-This Standard specifies requirements and recommendations for implementation APIs that share spatiotemporal resources and want to follow a standard way of doing so. In general, APIs will go beyond the requirements and recommendations stated in this standard. They will support additional operations, parameters, etc. that are specific to the API or the software tool used to implement the API.
+This OGC Standard specifies requirements and recommendations for implementation APIs that share spatiotemporal resources and want to follow a standard way of doing so. In general, APIs will go beyond the requirements and recommendations stated in this standard. They will support additional operations, parameters, etc. that are specific to the API or the software tool used to implement the API.
 
 ==== Role of OpenAPI
 

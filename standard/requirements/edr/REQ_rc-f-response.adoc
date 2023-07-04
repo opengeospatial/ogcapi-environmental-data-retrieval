@@ -1,8 +1,10 @@
 [[req_edr_f-response]]
 ==== *Requirement /req/edr/REQ_rc-f-response* Parameter `f` response
 
-[requirement,type="general",id="/req/edr/REQ_rc-f-response", label="/req/edr/REQ_rc-f-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-f-response
 
 *A:*
 

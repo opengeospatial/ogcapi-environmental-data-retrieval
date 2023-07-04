@@ -3,10 +3,10 @@
 .Conformance Class "GeoJSON"
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/geojson
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/geojson
 |Target type |Web API
-|Requirements Class |<<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/geojson>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core>>
+|Requirements Class |<<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson>>
+|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
 |===
 
 ==== GeoJSON Definition

@@ -1,8 +1,10 @@
 [[req_edr_corridor-width-response]]
 ==== *Requirement /req/edr/REQ_rc-corridor-width-response* Parameter corridor-width response
 
-[requirement,type="general",id="/req/edr/REQ_rc-corridor-width-response", label="/req/edr/REQ_rc-corridor-width-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-corridor-width-response
 
 *A:*
 
@@ -26,11 +28,11 @@ If the width value SHALL be the total width of the corridor.
 ---
 *D:*
 
-The coordinates of the `coords` parameter SHALL define the centre point of the corridor.
+The coordinates of the `coords` parameter SHALL define the center point of the corridor.
 
 ---
 *E:*
 
-If an unsupported units value is requested a `400` error SHOULD be returned.
+If an unsupported units value is requested, an HTTP `400` error SHOULD be returned.
 
 ====

@@ -1,17 +1,19 @@
 [[req_edr_rc-area]]
 
-[requirement,type="general",id="/req/edr/rc-area", label="/req/edr/rc-area"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-area
 
 *A:*
 
-For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/area`.
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/area`.
 
 ---
 
 *B:*
 
-For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/area`.
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/area`.
 
 ---
 
@@ -37,7 +39,7 @@ An `area` GET or POST operation MAY include a `z` query parameter
 ---
 *G:*
 
-An `area` GET or POSToperation SHOULD include a `parameter-name` query parameter
+An `area` GET or POST operation SHOULD include a `parameter-name` query parameter
 
 ---
 *H:*

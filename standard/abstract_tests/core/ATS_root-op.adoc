@@ -1,11 +1,10 @@
-[[ats_core_root-op]]
-{counter2:ats-id}
+[[ats_core_root-op]]{counter2:ats-id}
 [width="90%",cols="2,6a"]
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/core/root-op*
 ^|Test Purpose |Validate that a landing page can be retrieved from the expected location.
-^|Requirement |<<_req_core_root-op,/req/core/root-op>>
+^|Requirement |<<req_core_root-op,/req/core/root-op>>
 ^|Test Method |. Issue an HTTP GET request to the URL {root}/
 . Validate that a document was returned with a status code 200
 . Validate the contents of the returned document using test <<ats_core_root-success,/conf/core/root-success>>.

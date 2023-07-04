@@ -1,7 +1,10 @@
 [[req_collections_rc-md-op]]
 
-[requirement,type="general",id="/req/collections/rc-md-op", label="/req/collections/rc-md-op"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/collections/rc-md-op
+
 *A:* 
 
 The API SHALL support the HTTP GET operation at the path `/collections`.

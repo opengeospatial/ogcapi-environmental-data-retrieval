@@ -1,8 +1,10 @@
 [[req_edr_within-units-definition]]
 ==== *Requirement /req/edr/within-units-definition* Parameter within-units definition
 
-[requirement,type="general",id="/req/edr/within-units-definition", label="/req/edr/within-units-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/within-units-definition
 
 *A:*
 
@@ -11,7 +13,7 @@ Each resource collection operation MAY support a parameter `within-units` with t
 ---
 *B:*
 
-A within-units value SHALL be one of the values defined in the instance metadata:
+A `within-units` value SHALL be one of the values defined in the instance metadata:
 
 [source,YAML]
 ----

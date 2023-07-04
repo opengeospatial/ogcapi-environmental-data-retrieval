@@ -1,7 +1,9 @@
 [[req_edr_rc-crs]]
 
-[requirement,type="general",id="/req/edr/rc-crs", label="/req/edr/rc-crs"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-crs
 
 *A:*
 

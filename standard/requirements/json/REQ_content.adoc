@@ -1,7 +1,10 @@
 [[req_json_content]]
 
-[requirement,type="general",id="/req/json/content", label="/req/json/content"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/json/content
+
 *A:*
 
 Every `200`-response with the media type `application/json` SHALL be a payload encoded according to the https://tools.ietf.org/html/rfc8259[JSON Interchange Format].

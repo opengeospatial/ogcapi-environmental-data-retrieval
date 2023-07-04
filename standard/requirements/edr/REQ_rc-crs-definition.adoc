@@ -1,8 +1,10 @@
 [[req_edr_crs-definition]]
 ==== *Requirement /req/edr/REQ_rc-crs-definition* Parameter crs definition
 
-[requirement,type="general",id="/req/edr/REQ_rc-crs-definition", label="/req/edr/REQ_rc-crs-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-crs-definition
 
 *A:*
 

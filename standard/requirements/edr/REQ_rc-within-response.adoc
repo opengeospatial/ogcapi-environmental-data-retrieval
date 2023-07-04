@@ -1,8 +1,10 @@
 [[req_edr_within-response]]
 ==== *Requirement /req/edr/REQ_rc-within-response* Parameter within response
 
-[requirement,type="general",id="/req/edr/REQ_rc-within-response", label="/req/edr/REQ_rc-within-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-within-response
 
 *A:*
 

@@ -43,7 +43,7 @@ The resources returned from each node in these templates are described in <<quer
 |/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {queryType} associated with the `{collectionId}` <<collection-definition,collection>>.
 |===
 
-The OGC API — Common specification does not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
+The OGC API — Common standard does not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
 
 [[query-resources-section]]
 === Query Resources

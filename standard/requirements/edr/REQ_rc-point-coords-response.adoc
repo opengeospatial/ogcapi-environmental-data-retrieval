@@ -1,8 +1,10 @@
 [[req_edr_point-coords-response]]
 ==== *Requirement /req/edr/point-coords-response* Parameter coords response
 
-[requirement,type="general",id="/req/edr/coords-response", label="/req/edr/point-coords-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/point-coords-response
 
 *A:*
 

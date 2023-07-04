@@ -1,7 +1,9 @@
 [[req_edr_rc-radius-variables]]
 
-[requirement,type="general",id="/req/edr/rc-radius-variables", label="/req/edr/rc-radius-variables"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-radius-variables
 
 *A:*
 

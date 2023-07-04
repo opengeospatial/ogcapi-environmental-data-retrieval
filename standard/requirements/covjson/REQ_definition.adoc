@@ -1,7 +1,10 @@
 [[req_covjson_definition]]
 
-[requirement,type="general",id="/req/covjson/definition", label="/req/covjson/definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/covjson/definition
+
 *A:* 
 
 `200`-responses of the server SHALL support the following media types:

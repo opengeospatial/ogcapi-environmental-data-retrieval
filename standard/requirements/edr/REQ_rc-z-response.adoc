@@ -1,8 +1,10 @@
 [[req_edr_z-response]]
 ==== *Requirement /req/edr/z-response* Parameter z response
 
-[requirement,type="general",id="/req/edr/z-response", label="/req/edr/z-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/z-response
 
 *A:*
 

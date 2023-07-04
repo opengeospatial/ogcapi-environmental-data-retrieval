@@ -1,0 +1,38 @@
+<bibdata type="standard" schema-version="v1.2.3">
+  <fetched>2023-07-04</fetched>
+  <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>
+  <title type="title-main" format="text/plain" language="en" script="Latn">Common</title>
+  <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Core</title>
+  <title type="main" format="text/plain" language="en" script="Latn">OGC API - Common - Part 1: Core</title>
+  <uri type="obp">https://docs.ogc.org/is/19-072/19-072.html</uri>
+  <docidentifier type="OGC" primary="true">19-072</docidentifier>
+  <date type="published">
+    <on>2023-03-28</on>
+  </date>
+  <contributor>
+    <role type="author"/>
+    <person>
+      <name>
+        <completename>Charles Heazel</completename>
+      </name>
+    </person>
+  </contributor>
+  <contributor>
+    <role type="publisher"/>
+    <organization>
+      <name>Open Geospatial Consortium</name>
+    </organization>
+  </contributor>
+  <language>en</language>
+  <script>Latn</script>
+  <abstract format="text/plain" language="en" script="Latn">The OGC has extended its suite of Standards to include Resource Oriented Architectures and Web APIs. In the course of developing these Standards, some practices proved to be common across multiple OGC Web API Standards. These common practices are documented in the OGC API — Common Standard. The OGC API - Common Standard is a multi-part standard that specifies reusable building-blocks that can be used in the construction of OGC API Standards. This document presents Part 1, the Core, of the OGC API – Common Standard. Standards developers will use these building-blocks in the construction of other OGC Standards that relate to Web APIs. The result is a modular suite of coherent API standards which can be adapted by a system designer for the unique requirements of their system.
+
+The purpose of the OGC API — Common — Part 1: Core Standard (API-Core) is to define those fundamental building blocks and requirements which are applicable to all OGC Web API Standards.</abstract>
+  <ext schema-version="v1.0.1">
+    <doctype>standard</doctype>
+    <subdoctype>implementation</subdoctype>
+    <editorialgroup>
+      <committee>technical</committee>
+    </editorialgroup>
+  </ext>
+</bibdata>

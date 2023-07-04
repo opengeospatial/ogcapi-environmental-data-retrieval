@@ -3,10 +3,10 @@
 .Conformance Class "Instances"
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/instances
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/instances
 |Target type |Web API
-|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/instances>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/core>>
+|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/instances>>
+|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
 |===
 
 ==== General Tests

@@ -1,8 +1,10 @@
 [[req_edr_f-definition]]
 ==== *Requirement /req/edr/rc-f-definition* Parameter `f` definition
 
-[requirement,type="general",id="/req/edr/rc-f-definition", label="/req/edr/rc-f-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-f-definition
 
 *A:*
 

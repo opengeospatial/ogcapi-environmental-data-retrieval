@@ -1,8 +1,10 @@
 [[req_oas30_security]]
 ==== *Requirement /req/oas30/security* OpenAPI 3.0 Security
 
-[requirement,type="general",id="/req/oas30/security", label="/req/oas30/security"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/oas30/security
 
 *A:*
 

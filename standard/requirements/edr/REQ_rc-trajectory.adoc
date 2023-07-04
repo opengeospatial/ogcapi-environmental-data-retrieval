@@ -1,7 +1,9 @@
 [[req_edr_rc-trajectory]]
 
-[requirement,type="general",id="/req/edr/rc-trajectory", label="/req/edr/rc-trajectory"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-trajectory
 
 *A:*
 

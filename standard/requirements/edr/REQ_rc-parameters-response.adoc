@@ -1,8 +1,10 @@
 [[req_edr_parameters-response]]
 ==== *Requirement /req/edr/parameter-name-response* Parameter parameter-name response
 
-[requirement,type="general",id="/req/edr/parameter-name-response", label="/req/edr/parameter-name-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/parameter-name-response
 
 *A:*
 

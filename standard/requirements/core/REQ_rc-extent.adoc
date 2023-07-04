@@ -1,7 +1,9 @@
 [[req_core_rc-extent]]
 
-[requirement,type="general",id="/req/core/rc-extent", label="/req/core/rc-extent"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/core/rc-extent
 
 *A:*
 

@@ -1,8 +1,10 @@
 [[req_edr_width_units-definition]]
 ==== *Requirement /req/edr/REQ_rc-width-units-definition* Parameter width-units definition
 
-[requirement,type="general",id="/req/edr/REQ_rc-width-units-definition", label="/req/edr/REQ_rc-width-units-definition"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-width-units-definition
 
 *A:*
 

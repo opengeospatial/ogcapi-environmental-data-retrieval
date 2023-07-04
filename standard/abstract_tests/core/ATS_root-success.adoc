@@ -1,11 +1,10 @@
-[[ats_core_root-success]]
-{counter2:ats-id}
+[[ats_core_root-success]]{counter2:ats-id}
 [width="90%",cols="2,6a"]
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/core/root-success*
 ^|Test Purpose |Validate that the landing page complies with the required structure and contents.
-^|Requirement |<<_req_core_root-success,/req/core/root-success>>
+^|Requirement |<<req_core_root-success,/req/core/root-success>>
 ^|Test Method |Validate the landing page for all supported media types using the resources and tests identified in <<landing-page-schema>>
 
 For formats that require manual inspection, perform the following:
@@ -24,6 +23,6 @@ The landing page may be retrieved in a number of different formats. The followin
 [width="90%",cols="3",options="header"]
 |===
 |Format |Schema Document |Test ID
-|HTML |link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/landingPage.yaml[landingPage.yaml]|<<ats_html_content,/conf/html/content>>
-|JSON |link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/landingPage.yaml[landingPage.yaml] |<<ats_geojson_content,/conf/geojson/content>>
+|HTML |link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/landingPage.yaml[landingPage.yaml]|<<ats_html_content,/conf/html/content>>
+|JSON |link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/landingPage.yaml[landingPage.yaml] |<<ats_geojson_content,/conf/geojson/content>>
 |===

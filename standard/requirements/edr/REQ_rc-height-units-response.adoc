@@ -1,8 +1,10 @@
 [[req_edr_height_units-response]]
 ==== *Requirement /req/edr/height-units-response* Parameter height-units response
 
-[requirement,type="general",id="/req/edr/height-units-response", label="/req/edr/height-units-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/height-units-response
 
 *A:*
 
@@ -17,6 +19,6 @@ height-units = units
 ---
 *B:*
 
-If an unsupported units value is requested a `400` error should be returned.
+If an unsupported units value is requested, an HTTP `400` error should be returned.
 
 ====

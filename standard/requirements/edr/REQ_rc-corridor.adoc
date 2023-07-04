@@ -1,7 +1,9 @@
 [[req_edr_rc-corridor]]
 
-[requirement,type="general",id="/req/edr/rc-corridor", label="/req/edr/rc-corridor"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/rc-corridor
 
 *A:*
 
@@ -25,7 +27,7 @@ A `corridor` GET operation SHALL include a `coords` query parameter
 ---
 *E:*
 
-If the `coords` query parameter is not specified a HTTP `400` error should be generated
+If the `coords` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *F:*
@@ -35,7 +37,7 @@ A `corridor` GET operation SHALL include a `corridor-width` query parameter
 ---
 *G:*
 
-If the `corridor-width` query parameter is not specified a HTTP `400` error should be generated
+If the `corridor-width` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *H:*
@@ -45,7 +47,7 @@ A `corridor` GET operation MUST include a `corridor-height` query parameter
 ---
 *I:*
 
-If the `corridor-height` query parameter is not specified a HTTP `400` error should be generated
+If the `corridor-height` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *J:*
@@ -55,7 +57,7 @@ A `corridor` GET operation MUST include a `width-units` query parameter
 ---
 *K:*
 
-If the `width-units` query parameter is not specified a HTTP `400` error should be generated
+If the `width-units` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *L:*
@@ -70,7 +72,7 @@ A `corridor` GET operation MUST include a `height-units` query parameter
 ---
 *N:*
 
-If the `height-units` query parameter is not specified a HTTP `400` error should be generated
+If the `height-units` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *O:*

@@ -4,7 +4,7 @@
 
 === Introduction
 
-This Annex outlines the relationships, in terms of underlying conceptual models, overlaps, gaps, and target use cases and technologies, with other OGC standards.
+This Annex outlines the relationships, in terms of underlying conceptual models, overlaps, gaps, and target use cases and technologies, with other OGC Standards.
 
 :sectnums!:
 
@@ -26,7 +26,7 @@ The EDR API is consistent with the http://docs.opengeospatial.org/is/17-089r1/17
 The EDR API, with only a single form of spatiotemporal query, allows the retrieval of data from other data stores adhering to data models that are not coverages, such as features or observations.
 
 === Relationship between OGC API-EDR and the OGC MetOcean Application profile of Web Coverage Service (WCS) 2.1
-The OGC API-EDR has developed out of the experiences of creating http://docs.ogc.org/is/15-045r7/15-045r7.html[Part 0], http://docs.ogc.org/is/15-108r3/15-108r3.html[Part 1] and http://docs.ogc.org/is/17-086r3/17-086r3.html[Part 2] of the WCS 2.1 Met Ocean Application Profile, *ostensibly* for similar use cases, but for differing technology bases.
+The OGC API-EDR standard was developed out of the experiences of creating http://docs.ogc.org/is/15-045r7/15-045r7.html[Part 0], http://docs.ogc.org/is/15-108r3/15-108r3.html[Part 1] and http://docs.ogc.org/is/17-086r3/17-086r3.html[Part 2] of the WCS 2.1 Met Ocean Application Profile, *ostensibly* for similar use cases, but for differing technology bases.
 
 The primary messaging mechanism of the EDR API is JSON, including CoverageJSON, over HTTP(S). Implementations of the EDR API are described using the OpenAPI V3.0 specification. The target users are web-developers and end-users who are not geospatial experts. The target data resources are any data described as spatiotemporal, accessible by coordinates, not just meteorological or oceanographic.
 
@@ -41,7 +41,7 @@ Therefore, although the SensorThings API had overlaps with SOS within Web use ca
 
 SensorThings API follows OData’s specification for requesting entities. That means the entity control information, resource path usages, query options, the relevant JSON encodings, and batch-processing request follow OData 4.0. In contrast, the EDR API makes use of the OpenAPI V3.0 specification for describing resource paths, query options, JSON schema, and other aspects.
 
-Further, the EDR API allows for retrieval of coverage data and HTML responses – both of which are not supported by the SensorThings API. Therefore, developers that are interested in IoT devices and OData, and do not have a need for HTML previews of content are advised to make use of the SensorThings API instead. Similarly developers that are interested in XML-encoded observations and sensor model descriptions are advised to make use of the SOS.
+Further, the EDR API allows for retrieval of coverage data and HTML responses – both of which are not supported by the SensorThings API. Therefore, developers that are interested in IoT devices and OData, and do not have a need for HTML previews of content are advised to make use of the SensorThings API instead. Similarly, developers that are interested in XML-encoded observations and sensor model descriptions are advised to make use of the SOS.
 
 Similarly, an EDR or SensorThings API interface could be deployed on the same data set, so that users and developers that do not need the full details of observational, feature or coverage conceptual models and associated metadata could use the EDR API to hide the extra complexity, while users that do need all the details can use the SensorThings API to retrieve those.
 

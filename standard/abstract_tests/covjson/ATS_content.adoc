@@ -7,6 +7,6 @@
 ^|Test Purpose |Verify the content of a CoverageJSON document given an input document and schema.
 ^|Requirement |<<_req_covjson_content,/req/covjson/content>>
 ^|Test Method |. Validate that the document is a CoverageJSON document.
-. Validate the document against the link:http://schemas.opengis.net/ogcapi/edr/1.0/openapi/schemas/coverageJSON.yaml[coverageJSON.yaml] schema using a JSON Schema validator.
+. Validate the document against the link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/coverageJSON.yaml[coverageJSON.yaml] schema using a JSON Schema validator.
 
 |===

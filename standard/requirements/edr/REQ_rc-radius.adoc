@@ -1,16 +1,18 @@
-[[req_edr_rc-position]]
+[[req_edr_rc-radius]]
 
-[requirement,type="general",id="/req/queries/position", label="/req/queries/position"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/queries/radius
 
 *A:*
 
-For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/radius`.
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/radius`.
 
 ---
 *B:*
 
-For every collection identified in the feature collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/radius`.
+For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/radius`.
 
 ---
 *C:*
@@ -25,7 +27,7 @@ A `radius` GET or POST operation SHALL include a `coords` query parameter
 ---
 *E:*
 
-If the `coords` query parameter is not specified a HTTP `400` error should be generated
+If the `coords` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *F:*
@@ -35,7 +37,7 @@ A `radius` GET or POST operation SHALL include a `within` query parameter
 ---
 *G:*
 
-If the `within` query parameter is not specified a HTTP `400` error should be generated
+If the `within` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *H:*
@@ -45,7 +47,7 @@ A `radius` GET or POST operation MUST include a `within-units` query parameter
 ---
 *I:*
 
-If the `within-units` query parameter is not specified a HTTP `400` error should be generated
+If the `within-units` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 

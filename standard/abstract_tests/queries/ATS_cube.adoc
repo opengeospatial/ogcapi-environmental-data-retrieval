@@ -5,7 +5,7 @@
 |===
 ^|*Abstract Test {ats-id}* |*/conf/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query if no query parameters are specified.
-^|Requirement |<<_req_edr_rc-cube,/req/edr/rc-cube>>
+^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
 ^|Test Method |. No query parameters are specified
 . Validate that a document was returned with a status code 400.
 |===
@@ -15,7 +15,7 @@
 |===
 ^|*Abstract Test {ats-id}* |*/conf/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query when the `bbox` query parameter is not specified.
-^|Requirement |<<_req_edr_rc-cube,/req/edr/rc-cube>>
+^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
 ^|Test Method |. bbox query parameter is not specified
 . Validate that a document was returned with a status code 400.
 |===
@@ -25,7 +25,7 @@
 |===
 ^|*Abstract Test {ats-id}* |*/conf/cube*
 ^|Test Purpose |Validate that an error is returned by a `Cube` query when the `bbox` query parameter does not contain a valid bbox value.
-^|Requirement |<<_req_edr_rc-cube,/req/edr/rc-cube>>
+^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
 ^|Test Method |. Check bbox query parameter is valid
 . Validate that a document was returned with a status code 400.
 |===
@@ -35,7 +35,7 @@
 |===
 ^|*Abstract Test {ats-id}* |*/conf/cube*
 ^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Cube` query using  query parameters.
-^|Requirement |<<_req_edr_rc-cube,/req/edr/rc-cube>>
+^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
 ^|Test Method |. Test with valid query parameters
 . Validate that a document was returned with a status code 200.
 

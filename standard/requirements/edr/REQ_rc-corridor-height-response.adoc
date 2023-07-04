@@ -1,8 +1,10 @@
 [[req_edr_corridor-height-response]]
 ==== *Requirement /req/edr/REQ_rc-corridor-height-response* Parameter corridor-height response
 
-[requirement,type="general",id="/req/edr/REQ_rc-corridor-height-response", label="/req/edr/REQ_rc-corridor-height-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/REQ_rc-corridor-height-response
 
 *A:*
 
@@ -17,16 +19,16 @@ corridor-height = height
 ---
 *B:*
 
-The height of corridor parameter is the total height of the required corridor.
+The height of the corridor parameter is the total height of the required corridor.
 
 ---
 *C:*
 
-The coordinates of the `coords` parameter define the centre point of the corridor.
+The coordinates of the `coords` parameter define the center point of the corridor.
 
 ---
 *D:*
 
-If an unsupported units value is requested a `400` error should be returned.
+If an unsupported units value is requested, an HTTP `400` error should be returned.
 
 ====

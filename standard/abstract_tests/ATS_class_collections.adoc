@@ -3,9 +3,9 @@
 .Conformance Class "Collections"
 |===
 2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/collections
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
 |Target type |Web API
-|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.0/req/collections>>
+|Requirements Class |<<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections>>
 |Dependency |http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections[http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections]
 |===
 

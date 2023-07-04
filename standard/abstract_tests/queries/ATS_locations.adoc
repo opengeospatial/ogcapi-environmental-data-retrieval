@@ -4,7 +4,7 @@
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/locations*
-^|Test Purpose |Validate that a list of valid locations are returned by a `Locations` query if no query parameters are specified.
+^|Test Purpose |Validate that a list of valid locations is returned by a `Locations` query if no query parameters are specified.
 ^|Requirement |<<_req_edr_rc-locations,/req/edr/rc-locations>>
 ^|Test Method |. No query parameters are specified
 . Validate that a GeoJSON document was returned with a status code 200 containing at least a list of features one for each location supported by the collection.

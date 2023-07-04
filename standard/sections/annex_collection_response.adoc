@@ -4,9 +4,12 @@
 
 This Annex contains a more-easily human-readable view of the content in the OpenAPI definitions.
 
-The collection response structure provides the details which describe the information available and the query capabilities supported by the collections served by the API. Collection objects describe both collections and instances of a collection.
+The collection response structure provides the details which describe the information available and the query capabilities supported by the collections served by the API. 
 
 === EDR Collection Object Structure
+
+Collection objects describe both collections and instances of a collection.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .EDR Collection Object Structure
 |==========================
@@ -47,7 +50,8 @@ OGC Web API Standards use <<rfc8288,RFC 8288 (Web Linking)>>  to express relatio
 
 [[col-variables]]
 === Variables Object
-The variables object provides fields to describe information that only applies to the owning link
+The variables object provides fields to describe information that only applies to the owning link.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Variables Object
 |==========================
@@ -68,7 +72,8 @@ The variables object provides fields to describe information that only applies t
 
 [[col-crs_details]]
 === CRS Details Object
-A crs details object describes a coordinate system
+A `crs details` object describes a coordinate system.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .CRS Details Object
 |==========================
@@ -77,7 +82,7 @@ A crs details object describes a coordinate system
 |**wkt**     |String|**Yes**| Well Known Text description of the coordinate reference system
 |==========================
 
-A simple link example
+A simple link example is shown below.
 
 [source,json]
 ----
@@ -89,7 +94,7 @@ A simple link example
 }
 ----
 
-A more complex link example supporting a templated `href` as the `coords` parameter is mandatory
+A more complex link example supporting a templated `href` with a mandatory `coords` parameter  is shown below. 
 
 [source,json]
 ----
@@ -116,7 +121,8 @@ A more complex link example supporting a templated `href` as the `coords` parame
 
 [[col-extent]]
 === Extent Object
-The extent object describes the spatio-temporal area covered by the information available in the collection
+The extent object describes the spatio-temporal area covered by the information available in the collection.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Extent Object
 |==========================
@@ -128,7 +134,8 @@ The extent object describes the spatio-temporal area covered by the information 
 
 [[col-spatial]]
 === Spatial Object
-The spatial object describes the spatial area covered by the information available in the collection
+The spatial object describes the spatial area covered by the information available in the collection.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Spatial Object
 |==========================
@@ -145,20 +152,22 @@ The spatial object describes the spatial area covered by the information availab
 
 [[col-temporal]]
 === Temporal Object
-The temporal object describes the time period covered by the information available in the collection
+The temporal object describes the time period covered by the information available in the collection.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Temporal Object
 |==========================
 |Field Name|Type|Required|Description
-|**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601)
-|**values**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the array can either be a single time, an ISO8601 time interval or an ISO8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
+|**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO 8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601)
+|**values**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the array can either be a single time, an ISO 8601 time interval or an ISO 8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
 |**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
 
 [[col-vertical]]
 === Vertical Object
-The vertical object describes the vertical extent of information available in the collection
+The vertical object describes the vertical extent of information available in the collection.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Vertical Object
 |==========================
@@ -168,7 +177,8 @@ The vertical object describes the vertical extent of information available in th
 |**vrs**     |String|**Yes**|  Follows the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
-A simple extent object example for collection with no vertical or temporal dimensions
+A simple extent object example for collection with no vertical or temporal dimensions is shown below.
+
 [source,json]
 ----
 "extent": {
@@ -191,7 +201,7 @@ A simple extent object example for collection with no vertical or temporal dimen
 }
 ----
 
-This more complex extent object example is a collection with vertical and temporal dimensions
+Below is a more complex extent object example for a collection with vertical and temporal dimensions.
 
 [source,json]
 ----
@@ -228,6 +238,7 @@ This more complex extent object example is a collection with vertical and tempor
 [[col-data_queries]]
 === Data Queries Object
 The data queries object provides the extra metadata required for the queries supported by the collection.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Data Queries Object
 |==========================
@@ -247,6 +258,7 @@ The data queries object provides the extra metadata required for the queries sup
 [[col-edr_query]]
 === EDR Query Object
 The EDR query object provides the metadata for the specified query type.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .EDR Query Object
 |==========================
@@ -254,7 +266,7 @@ The EDR query object provides the metadata for the specified query type.
 |**link**  | <<col-links,Link>> object|**Yes**| Array of height values supported by the collection.
 |==========================
 
-A data query object example for a collection that supports Position and Radius queries
+A data query object example for a collection that supports Position and Radius queries is shown below.
 
 [source,json]
 ----
@@ -351,6 +363,7 @@ a set of key-value pairs, where the key is the name of the parameter and the val
 [[col-unit]]
 === Unit Object
 The unit object provides the information to describe the units of measure of the parameter values.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Unit Object
 |==========================
@@ -362,6 +375,7 @@ The unit object provides the information to describe the units of measure of the
 [[col-symbol]]
 === Symbol Object
 The symbol object provides the information to describe the symbols which represent the unit of a value.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Symbol Object
 |==========================
@@ -376,6 +390,7 @@ The symbol object provides the information to describe the symbols which represe
 [[col-observed_property]]
 === Observed Property Object
 The observedProperty object provides the metadata for the specified query type.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Observed Property Object
 |==========================
@@ -388,13 +403,14 @@ The observedProperty object provides the metadata for the specified query type.
 
 [[col-measurement_type]]
 === Measurement Type object
-The measurementType object provides basic information about how the parameter is calculated and over what time period
+The measurementType object provides basic information about how the parameter is calculated and over what time period.
+
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Measurement Type object
 |==========================
 |Field Name|Type|Required|Description
 |**method**  | String |**Yes**| Calculation method e.g. Mean, Sum, Max, etc.
-|**duration**  | String |**Yes** a| Duration of calculation. For time durations, this follows the https://en.wikipedia.org/wiki/ISO_8601#Durations[ISO8601 Duration standard].
+|**duration**  | String |**Yes** a| Duration of calculation. For time durations, this follows the https://en.wikipedia.org/wiki/ISO_8601#Durations[ISO 8601 Duration standard].
 
 *  **A negative sign before a duration value (i.e. -PT10M) infers that the time start starts at the specified duration before the time value assigned to the parameter value**.
 
@@ -402,7 +418,8 @@ The measurementType object provides basic information about how the parameter is
 
 |==========================
 
-Parameter names example
+A Parameter names example is shown below.
+
 [source,json]
 ----
 

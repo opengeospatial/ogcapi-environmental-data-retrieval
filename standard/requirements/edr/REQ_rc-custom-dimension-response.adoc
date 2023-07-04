@@ -1,17 +1,19 @@
 [[req_edr_custom-dimension-response]]
 ==== *Requirement /req/edr/custom-dimension-response* Custom Parameter response
 
-[requirement,type="general",id="/req/edr/custom-dimension-response", label="/req/edr/custom-dimension-response"]
+[requirement]
 ====
+[%metadata]
+identifier:: /req/edr/custom-dimension-response
 
 *A:*
 
-If a the custom parameter is provided, only resources that have values that are valid for the range defined in the custom query parameter SHALL be part of the result set.
+If a custom parameter is provided, only resources that have values that are valid for the range defined in the custom query parameter SHALL be part of the result set.
 
 ---
 *B:*
 
-The custom query parameter can be defined as a value range by specifying a min-value and max-value seperated by a forward slash "/"
+The custom query parameter can be defined as a value range by specifying a min-value and max-value separated by a forward slash "/"
 
 ---
 *C:*
