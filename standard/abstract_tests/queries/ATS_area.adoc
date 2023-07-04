@@ -2,7 +2,7 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area-no-query-params
+identifier:: /conf/area/no-query-params
 target:: /req/edr/rc-area
 test-purpose:: Validate that an error is returned by an `Area` query if no query parameters are specified.
 test-method::
@@ -14,7 +14,7 @@ step::: Validate that a document was returned with a status code 400.
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area-no-coords-param
+identifier:: /conf/area/no-coords-param
 target:: /req/edr/rc-area
 test-purpose:: Validate that an error is returned by an `Area` query when the coords query parameter is not specified.
 test-method::
@@ -26,7 +26,7 @@ step::: Validate that a document was returned with a status code 400.
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area-coords-param-invalid
+identifier:: /conf/area/coords-param-invalid
 target:: /req/edr/rc-area
 test-purpose:: Validate that an error is returned by an `Area` query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.
 test-method::
@@ -38,7 +38,7 @@ step::: Validate that a document was returned with a status code 400.
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area-valid-query-params
+identifier:: /conf/area/valid-query-params
 target:: /req/edr/rc-area
 test-purpose:: Validate that resources can be identified and extracted from a Collection with an `Area` query using  query parameters.
 test-method::

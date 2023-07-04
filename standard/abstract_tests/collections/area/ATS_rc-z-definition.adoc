@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /conf/edr/rc-z-definition-area
-target:: /req/edr/rc-z-definition
+target:: /req/edr/z-definition
 test-purpose:: Validate that the vertical level query parameters are constructed correctly.
 test-method::
 +
