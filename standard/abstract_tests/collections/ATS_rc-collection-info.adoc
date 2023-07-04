@@ -9,7 +9,7 @@
 . Verify that each collection entry includes an identifier.
 . Verify that each collection entry includes links in accordance with <<ats_core_rc-collection-info-links,/conf/core/rc-collection-info-links>>.
 . Verify that each collection entry includes an `extent` property in accordance with <<ats_core_rc-md-extent,/conf/core/rc-extent>>
-. Verify that the collection entry includes a `data_queries` property in accordance with <<ats_edr_rc-data-queries,/req/edr/rc-data-queries>>
+. Verify that the collection entry includes a `data_queries` property in accordance with <<req_edr_rc-data-queries,/req/edr/rc-data-queries>>
 . Verify that if the collection `data_queries` entry includes a `crs` property, the property complies with <<req_edr_rc-crs,/conf/edr/rc-crs>>
 . Verify that each collection entry includes a `parameter_names` property, and the property complies with <<ats_edr_rc-parameters,/req/edr/rc-parameters>>
 . Validate each collection entry for all supported media types using the resources and tests identified in <<collection-entry-schema>>
