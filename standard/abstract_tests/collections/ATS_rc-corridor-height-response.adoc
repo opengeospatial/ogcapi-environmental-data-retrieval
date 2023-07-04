@@ -1,10 +1,11 @@
-[[ats_collections_rc-corridor-height-response]]{counter2:ats-id}
+//[[ats_collections_rc-corridor-height-response]]
+{counter2:ats-id}
 [width="90%",cols="2,6a"]
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/collections/REQ_rc-corridor-height-response*
 ^|Test Purpose |Validate that the `corridor-height` query parameters are processed correctly.
-^|Requirement |<<req_collections_rc-corridor-height-response,/req/edr/REQ_rc-corridor-height-response>>
+^|Requirement |<<req_edr_corridor-height-response,/req/edr/REQ_rc-corridor-height-response>>
 ^|Test Method |. Verify that a `400` error will be generated if corridor-height is not specified
-. Validate that the `corridor-height` parameter complies with the syntax described in <<req_collections_rc-corridor-height-response,/req/edr/REQ_rc-corridor-height-response>>.
+. Validate that the `corridor-height` parameter complies with the syntax described in <<req_edr_corridor-height-response,/req/edr/REQ_rc-corridor-height-response>>.
 |===

@@ -1,11 +1,11 @@
-<bibdata type="standard">
-  <fetched>2021-05-17</fetched>
+<bibdata type="standard" schema-version="v1.2.3">
+  <fetched>2023-07-04</fetched>
   <title type="title-intro" format="text/plain" language="en" script="Latn">OpenGIS Implementation Specification for Geographic information</title>
   <title type="title-main" format="text/plain" language="en" script="Latn">Simple feature access</title>
   <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Common architecture</title>
   <title type="main" format="text/plain" language="en" script="Latn">OpenGIS Implementation Specification for Geographic information - Simple feature access - Part 1: Common architecture</title>
   <uri type="obp">https://portal.ogc.org/files/?artifact_id=25355</uri>
-  <docidentifier type="OGC">06-103r4</docidentifier>
+  <docidentifier type="OGC" primary="true">06-103r4</docidentifier>
   <date type="published">
     <on>2011-05-28</on>
   </date>
@@ -27,9 +27,9 @@
   <language>en</language>
   <script>Latn</script>
   <abstract format="text/plain" language="en" script="Latn">The OpenGIS® Simple Features Interface Standard (SFS) provides a well-defined and common way for applications to store and access feature data in relational or object-relational databases, so that the data can be used to support other applications through a common feature model, data store and information access interface. OpenGIS Simple Features are geospatial features described using vector data elements such as points, lines and polygons.  </abstract>
-  <ext>
+  <ext schema-version="v1.0.1">
     <doctype>standard</doctype>
-    <docsubtype>implementation</docsubtype>
+    <subdoctype>implementation</subdoctype>
     <editorialgroup>
       <committee>technical</committee>
     </editorialgroup>

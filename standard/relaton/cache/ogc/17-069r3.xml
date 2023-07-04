@@ -1,11 +1,11 @@
-<bibdata type="standard">
-  <fetched>2021-05-17</fetched>
+<bibdata type="standard" schema-version="v1.2.3">
+  <fetched>2023-07-04</fetched>
   <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>
   <title type="title-main" format="text/plain" language="en" script="Latn">Features</title>
   <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Core</title>
   <title type="main" format="text/plain" language="en" script="Latn">OGC API - Features - Part 1: Core</title>
-  <uri type="obp">http://docs.opengeospatial.org/is/17-069r3/17-069r3.html</uri>
-  <docidentifier type="OGC">17-069r3</docidentifier>
+  <uri type="obp">https://docs.ogc.org/is/17-069r3/17-069r3.html</uri>
+  <docidentifier type="OGC" primary="true">17-069r3</docidentifier>
   <date type="published">
     <on>2019-10-07</on>
   </date>
@@ -42,12 +42,12 @@
   <edition>3</edition>
   <language>en</language>
   <script>Latn</script>
-  <abstract format="text/plain" language="en" script="Latn">OGC API standards define modular API building blocks to spatially enable Web APIs in a consistent way. The OpenAPI specification is used to define the API building blocks.&#13;
-&#13;
+  <abstract format="text/plain" language="en" script="Latn">OGC API standards define modular API building blocks to spatially enable Web APIs in a consistent way. The OpenAPI specification is used to define the API building blocks.
+
 The OGC API family of standards is organized by resource type. This standard specifies the fundamental API building blocks for interacting with features. The spatial data community uses the term 'feature' for things in the real world that are of interest.</abstract>
-  <ext>
+  <ext schema-version="v1.0.1">
     <doctype>standard</doctype>
-    <docsubtype>implementation</docsubtype>
+    <subdoctype>implementation</subdoctype>
     <editorialgroup>
       <committee>technical</committee>
     </editorialgroup>

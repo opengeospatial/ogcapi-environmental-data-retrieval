@@ -1,10 +1,11 @@
-[[ats_collections_rc-corridor-height-definition]]{counter2:ats-id}
+//[[ats_collections_rc-corridor-height-definition]]
+{counter2:ats-id}
 [width="90%",cols="2,6a"]
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/edr/REQ_rc-corridor-height-definition*
 ^|Test Purpose |Validate that the `corridor-height` query parameter is constructed correctly.
-^|Requirement |<<req_collections_rc-corridor-height-definition,/req/edr/REQ_rc-corridor-height-definition>>
+^|Requirement |<<req_edr_corridor-height-definition,/req/edr/REQ_rc-corridor-height-definition>>
 ^|Test Method |Verify that the `corridor-height` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]

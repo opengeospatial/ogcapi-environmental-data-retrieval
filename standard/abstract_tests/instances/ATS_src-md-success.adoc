@@ -1,10 +1,15 @@
 [[ats_instances_src-md-success]]
+
+// The following paragraph was only added because the compiler was otherwise failing to render the anchor above.
+
+The purpose of the following test is to validate that the Collection Instance content complies with the required structure and contents.
+
 {counter2:ats-id}
 [width="90%",cols="2,6a"]
 .Abstract Test {ats-id}
 |===
 ^|*Abstract Test {ats-id}* |*/conf/instances/src-md-success*
 ^|Test Purpose |Validate that the Collection Instance content complies with the required structure and contents.
-^|Requirement |<<_req_collections_src-md-success,/req/collections/src-md-success>>
+^|Requirement |<<req_instances_src-md-success,/req/instances/src-md-success>>
 ^|Test Method |Verify that the content of the response is consistent with the content for this Resource Collection in the `/collections` response. That is, the values for `id`, `title`, `description` and `extent` are identical.
 |===
