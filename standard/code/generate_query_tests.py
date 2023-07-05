@@ -22,6 +22,9 @@ def generate(infile_path,outfile_path,querytype):
                 elif querytype == "area":
                     fout.write(line.replace("/req/edr/coords-response","/req/edr/polygon-coords-response"))            
                     print(line.replace("/req/edr/coords-response","/req/edr/polygon-coords-response").replace("\n",""))
+                elif querytype == "cube":
+                    fout.write(line.replace("/req/edr/coords-response","/req/edr/polygon-coords-response"))            
+                    print(line.replace("/req/edr/coords-response","/req/edr/polygon-coords-response").replace("\n",""))
                 else:
                     fout.write(line)            
                     print(line.replace("\n",""))
@@ -65,4 +68,17 @@ generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/cor
 generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/position/ATS_rc-f-definition.adoc','position')
 generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/position/ATS_rc-f-response.adoc','position')
 
-#cube - NEXT
+#cube
+
+generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/cube/ATS_rc-coords-definition.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/cube/ATS_rc-coords-response.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/cube/ATS_rc-z-definition.adoc','cube')
+# See ATS_cube.adoc, we do not modify ATS_rc-cube-z-response.adoc. So there is no call to generate the associated file.
+generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/cube/ATS_rc-parameter-name-definition.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-response.adoc','./abstract_tests/collections/cube/ATS_rc-parameter-name-response.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_tests/collections/cube/ATS_rc-crs-definition.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/cube/ATS_rc-crs-response.adoc','cube')
+generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/core/cube/ATS_rc-time-definition.adoc','cube')
+generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/cube/ATS_rc-time-response.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/cube/ATS_rc-f-definition.adoc','cube')
+generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/cube/ATS_rc-f-response.adoc','cube')

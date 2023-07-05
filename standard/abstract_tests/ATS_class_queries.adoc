@@ -21,3 +21,8 @@ include::queries/ATS_position.adoc[]
 ===== Area
 
 include::queries/ATS_area.adoc[]
+
+===== Cube
+
+include::queries/ATS_cube.adoc[]
+
