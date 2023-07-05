@@ -1,12 +1,15 @@
-//[[ats_instances_rc-md-op]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/instances/rc-md-op*
-^|Test Purpose |Validate that information about the instances of a Collection can be retrieved from the expected location.
-^|Requirement |<<req_instances_rc-md-op,/req/instances/rc-md-op>>
-^|Test Method |. Issue an HTTP GET request to the URL {root}/collections/{collectionId}/instances
-. Validate that a document was returned with a status code 200
-. Validate the contents of the returned document using test <<ats_instances_rc-md-success,/conf/instances/rc-md-success>>.
-|===
+[[ats_instances_rc-md-op]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/instances/rc-md-op
+target:: /req/instances/rc-md-op
+test-purpose:: Validate that information about the instances of a Collection can be retrieved from the expected location.
+test-method::
++
+--
+step::: Issue an HTTP GET request to the URL {root}/collections/{collectionId}/instances
+step::: Validate that a document was returned with a status code 200
+step::: Validate the contents of the returned document using test <<ats_instances_rc-md-success,/conf/instances/rc-md-success>>.
+--
+====
