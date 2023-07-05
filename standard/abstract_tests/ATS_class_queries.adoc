@@ -8,6 +8,39 @@ subject:: <<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries>
 classification:: Target Type:Web API
 inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
 inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
+conformance-test:: /conf/position/no-query-params
+conformance-test:: /conf/position/no-coords-param
+conformance-test:: /conf/position/coords-param-invalid
+conformance-test:: /conf/position/valid-query-params
+conformance-test:: /conf/edr/rc-coords-definition-position
+conformance-test:: /conf/edr/rc-coords-response-position
+conformance-test:: /conf/edr/rc-z-definition-position
+conformance-test:: /conf/edr/rc-z-response-position
+conformance-test:: /conf/core/datetime-definition-position
+conformance-test:: /conf/core/datetime-response-position
+conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-position
+conformance-test:: /conf/edr/rc-parameter-name-response-position
+conformance-test:: /conf/edr/REQ_rc-crs-definition-position
+conformance-test:: /conf/edr/REQ_rc-crs-response-position
+conformance-test:: /conf/edr/rc-f-definition-position
+conformance-test:: /conf/collections/rc-f-response-position
+conformance-test:: /conf/area/no-query-params
+conformance-test:: /conf/area/no-coords-param
+conformance-test:: /conf/area/coords-param-invalid
+conformance-test:: /conf/area/valid-query-params
+conformance-test:: /conf/edr/rc-coords-definition-area
+conformance-test:: /conf/edr/rc-coords-response-area
+conformance-test:: /conf/edr/rc-z-definition-area
+conformance-test:: /conf/edr/rc-z-response-area
+conformance-test:: /conf/core/datetime-definition-area
+conformance-test:: /conf/core/datetime-response-area
+conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-area
+conformance-test:: /conf/edr/rc-parameter-name-response-area
+conformance-test:: /conf/edr/REQ_rc-crs-definition-area
+conformance-test:: /conf/edr/REQ_rc-crs-response-area
+conformance-test:: /conf/edr/rc-f-definition-area
+conformance-test:: /conf/collections/rc-f-response-area
+
 ====
 
 ==== Query Pattern Tests
