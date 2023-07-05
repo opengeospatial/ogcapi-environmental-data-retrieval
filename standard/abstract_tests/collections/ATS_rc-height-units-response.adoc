@@ -1,11 +1,14 @@
-//[[ats_collections_rc-height-units-response]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/collections/rc-height-units-response*
-^|Test Purpose |Validate that the `height-units` query parameters are processed correctly.
-^|Requirement |<<req_edr_height_units-response,/req/edr/height-units-response>>
-^|Test Method |. Verify that height units not listed in the metadata will generate an error message
-. Validate that the `height-units` parameter complies with the syntax described in <<req_edr_height_units-response,/req/edr/height-units-response>>.
-|===
+[[ats_collections_rc-height-units-response]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/collections/rc-height-units-response
+target:: /req/edr/height-units-response
+test-purpose:: Validate that the `height-units` query parameters are processed correctly.
+test-method::
++
+--
+step::: Verify that height units not listed in the metadata will generate an error message
+step::: Validate that the `height-units` parameter complies with the syntax described in <<req_edr_height_units-response,/req/edr/height-units-response>>.
+--
+====

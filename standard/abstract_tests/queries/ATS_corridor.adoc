@@ -215,9 +215,9 @@ and verify that only information that matches the selection criteria is returned
 ====
 
 
-include::../collections/ATS_rc-coords-definition.adoc[]
+include::../collections/corridor/ATS_rc-coords-definition.adoc[]
 
-include::../collections/ATS_rc-coords-response.adoc[]
+include::../collections/corridor/ATS_rc-coords-response.adoc[]
 
 include::../collections/ATS_rc-corridor-width-definition.adoc[]
 
@@ -235,14 +235,14 @@ include::../collections/ATS_rc-height-units-definition.adoc[]
 
 include::../collections/ATS_rc-height-units-response.adoc[]
 
-include::../collections/ATS_rc-parameter-name-definition.adoc[]
+include::../collections/corridor/ATS_rc-parameter-name-definition.adoc[]
 
-include::../collections/ATS_rc-parameter-name-response.adoc[]
+include::../collections/corridor/ATS_rc-parameter-name-response.adoc[]
 
-include::../collections/ATS_rc-crs-definition.adoc[]
+include::../collections/corridor/ATS_rc-crs-definition.adoc[]
 
-include::../collections/ATS_rc-crs-response.adoc[]
+include::../collections/corridor/ATS_rc-crs-response.adoc[]
 
-include::../collections/ATS_rc-f-definition.adoc[]
+include::../collections/corridor/ATS_rc-f-definition.adoc[]
 
-include::../collections/ATS_rc-f-response.adoc[]
+include::../collections/corridor/ATS_rc-f-response.adoc[]

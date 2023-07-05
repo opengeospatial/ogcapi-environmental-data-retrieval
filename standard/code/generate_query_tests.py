@@ -94,3 +94,14 @@ generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_t
 generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-crs-response.adoc','trajectory')
 generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-f-definition.adoc','trajectory')
 generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-f-response.adoc','trajectory')
+
+#corridor
+
+generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-coords-definition.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/corridor/ATS_rc-coords-response.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-parameter-name-definition.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-response.adoc','./abstract_tests/collections/corridor/ATS_rc-parameter-name-response.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-crs-definition.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/corridor/ATS_rc-crs-response.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-f-definition.adoc','corridor')
+generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/corridor/ATS_rc-f-response.adoc','corridor')
