@@ -44,8 +44,6 @@ conformance-test:: /conf/cube/no-query-params
 conformance-test:: /conf/cube/no-bbox-param
 conformance-test:: /conf/cube/bbox-param-invalid
 conformance-test:: /conf/cube/valid-query-params
-conformance-test:: /conf/edr/rc-coords-definition-cube
-conformance-test:: /conf/edr/rc-coords-response-cube
 conformance-test:: /conf/edr/rc-z-definition-cube
 conformance-test:: /conf/edr/rc-z-response-cube
 conformance-test:: /conf/core/datetime-definition-cube
