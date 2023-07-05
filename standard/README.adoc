@@ -16,7 +16,7 @@ Run the python script to generate abstract tests that are shared by multiple que
 
 Compile the document using docker.
 
-`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/mn  metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf document.adoc`.
+`docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/metanorma  metanorma compile --agree-to-terms -t ogc -x xml,html,doc,pdf document.adoc`.
 
 
 Note that the document was compiled using version 1.2.9.2 of the metanorma/mn docker image.
