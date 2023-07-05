@@ -26,3 +26,11 @@ include::queries/ATS_area.adoc[]
 
 include::queries/ATS_cube.adoc[]
 
+===== Trajectory
+
+include::queries/ATS_trajectory.adoc[]
+
+
+//===== Corridor
+
+//include::queries/ATS_corridor.adoc[]

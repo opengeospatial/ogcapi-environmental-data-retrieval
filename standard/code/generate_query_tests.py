@@ -82,3 +82,15 @@ generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/c
 generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/cube/ATS_rc-time-response.adoc','cube')
 generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/cube/ATS_rc-f-definition.adoc','cube')
 generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/cube/ATS_rc-f-response.adoc','cube')
+
+
+#trajectory
+
+generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-coords-definition.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-coords-response.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-parameter-name-definition.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-parameter-name-response.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-crs-definition.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-crs-response.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-f-definition.adoc','trajectory')
+generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-f-response.adoc','trajectory')
