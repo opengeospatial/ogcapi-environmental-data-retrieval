@@ -105,3 +105,14 @@ generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_t
 generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/corridor/ATS_rc-crs-response.adoc','corridor')
 generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-f-definition.adoc','corridor')
 generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/corridor/ATS_rc-f-response.adoc','corridor')
+
+#locations
+
+generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/core/locations/ATS_rc-time-definition.adoc','locations')
+generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/locations/ATS_rc-time-response.adoc','locations')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/locations/ATS_rc-parameter-name-definition.adoc','locations')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-response.adoc','./abstract_tests/collections/locations/ATS_rc-parameter-name-response.adoc','locations')
+generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_tests/collections/locations/ATS_rc-crs-definition.adoc','locations')
+generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/locations/ATS_rc-crs-response.adoc','locations')
+generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/locations/ATS_rc-f-definition.adoc','locations')
+generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/locations/ATS_rc-f-response.adoc','locations')
