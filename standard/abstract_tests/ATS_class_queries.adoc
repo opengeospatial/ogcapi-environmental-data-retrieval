@@ -1,14 +1,14 @@
 [[ats_queries]]
-[cols="1,4",width="90%"]
-.Conformance Class "Queries"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries
-|Target type |Web API
-|Requirements Class |<<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
-|Dependency |<<ats_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections>>
-|===
+[conformance_class]
+.Queries
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries
+subject:: <<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries>>
+classification:: Target Type:Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
+====
 
 ==== Query Pattern Tests
 

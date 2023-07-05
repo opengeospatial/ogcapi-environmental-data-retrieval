@@ -1,12 +1,12 @@
 [[ats_geojson_content]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/geojson/content*
-^|Test Purpose |Verify the content of a GeoJSON document given an input document and schema.
-^|Requirement |<<_req_geojson_content,/req/geojson/content>>
-^|Test Method |. Validate that the document is a GeoJSON document.
-. Validate the document against the schema using a JSON Schema validator.
-. Validate the document against the schema using a GeoJSON Schema validator.
-|===
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/geojson/content
+target:: /req/geojson/content
+test-purpose:: Verify the content of a GeoJSON document given an input document and schema.
+test-method::
+step::: Validate that the document is a GeoJSON document.
+step::: Validate the document against the schema using a JSON Schema validator.
+step::: Validate the document against the schema using a GeoJSON Schema validator.
+====

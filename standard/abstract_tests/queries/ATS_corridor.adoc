@@ -1,163 +1,186 @@
 [[ats_corridor]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query if no query parameters are specified.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. No query parameters are specified
-. Validate that a document was returned with a status code 400.
-|===
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/no-query-params
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query if no query parameters are specified.
+test-method::
+step::: No query parameters are specified
+step::: Validate that a document was returned with a status code 400.
+====
 
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter is not specified.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. coords query parameter is not specified
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/no-coords-param
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter is not specified.
+test-method::
+step::: coords query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/corridor-width-param-missing
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `corridor-width` query parameter is not specified.
+test-method::
+step::: corridor-width query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/corridor-height-param-missing
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `corridor-height` query parameter is not specified.
+test-method::
+step::: corridor-height query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/width-units-param-missing
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `width-units` query parameter is not specified.
+test-method::
+step::: width-units query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/height-units-param-missing
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `height-units` query parameter is not specified.
+test-method::
+step::: height-units query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-invalid-linestring
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRING or MULTILINESTRING Well Known Text value.
+test-method::
+step::: Check coords query parameter is a valid Well Known Text LINESTRING or MULTILINESTRING value
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-invalid-linestringm
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
+test-method::
+step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate shall be a valid Epoch value (as known as UNIX time)
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-separate-z-linestringz
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z` query parameter is specified
+test-method::
+step::: Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-separate-z-linestringzm
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `coords` query parameter is a valid LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z` query parameter is specified
+test-method::
+step::: Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-invalid-linestringzm
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
+test-method::
+. Check coords query parameter with time parameter is a valid Well Known Text LLINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `corridor-width` query parameter is not specified.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. corridor-width query parameter is not specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `corridor-height` query parameter is not specified.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. corridor-height query parameter is not specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `width-units` query parameter is not specified.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. width-units query parameter is not specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `height-units` query parameter is not specified.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. height-units query parameter is not specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRING or MULTILINESTRING Well Known Text value.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter is a valid Well Known Text LINESTRING or MULTILINESTRING value
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate shall be a valid Epoch value (as known as UNIX time)
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z` query parameter is specified
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter is a valid LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z` query parameter is specified
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LLINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `coords` query parameter contains invalid time coordinates
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. If time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `width-units` query parameter contains invalid units
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Specify a width-units value  that is not listed in the collection response
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that an error is returned by a `corridor` query when the `height-units` query parameter contains invalid units
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Specify a height-units value  that is not listed in the collection response
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/corridor*
-^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `corridor` query using  query parameters.
-^|Requirement |<<req_edr_rc-corridor,/req/edr/rc-corridor>>
-^|Test Method |. Test with valid query parameters
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-invalid-linestringz
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
+test-method::
+step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/coords-param-invalid-time
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `coords` query parameter contains invalid time coordinates
+test-method::
+step::: If time values are specified in the `coords` query parameter check that they are within the range of time values defined in the Collection metadata
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/width-units-param-invalid
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `width-units` query parameter contains invalid units
+test-method::
+step::: Specify a width-units value  that is not listed in the collection response
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/height-units-param-invalid
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that an error is returned by a `corridor` query when the `height-units` query parameter contains invalid units
+test-method::
+step::: Specify a height-units value  that is not listed in the collection response
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/corridor/valid-query-params
+target:: /req/edr/rc-corridor
+test-purpose:: Validate that resources can be identified and extracted from a Collection with a `corridor` query using  query parameters.
+test-method::
++
+--
+. Test with valid query parameters
 . Validate that a document was returned with a status code 200.
 
 
@@ -188,11 +211,13 @@ Repeat these tests using the following parameter tests:
 
 Execute requests with combinations of the "coords", "parameter-name","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
-|===
+--
+====
 
-include::../collections/ATS_rc-coords-definition.adoc[]
 
-include::../collections/ATS_rc-coords-response.adoc[]
+include::../collections/corridor/ATS_rc-coords-definition.adoc[]
+
+include::../collections/corridor/ATS_rc-coords-response.adoc[]
 
 include::../collections/ATS_rc-corridor-width-definition.adoc[]
 
@@ -210,14 +235,14 @@ include::../collections/ATS_rc-height-units-definition.adoc[]
 
 include::../collections/ATS_rc-height-units-response.adoc[]
 
-include::../collections/ATS_rc-parameter-name-definition.adoc[]
+include::../collections/corridor/ATS_rc-parameter-name-definition.adoc[]
 
-include::../collections/ATS_rc-parameter-name-response.adoc[]
+include::../collections/corridor/ATS_rc-parameter-name-response.adoc[]
 
-include::../collections/ATS_rc-crs-definition.adoc[]
+include::../collections/corridor/ATS_rc-crs-definition.adoc[]
 
-include::../collections/ATS_rc-crs-response.adoc[]
+include::../collections/corridor/ATS_rc-crs-response.adoc[]
 
-include::../collections/ATS_rc-f-definition.adoc[]
+include::../collections/corridor/ATS_rc-f-definition.adoc[]
 
-include::../collections/ATS_rc-f-response.adoc[]
+include::../collections/corridor/ATS_rc-f-response.adoc[]

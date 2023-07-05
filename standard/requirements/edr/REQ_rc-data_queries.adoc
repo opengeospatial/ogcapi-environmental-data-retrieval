@@ -21,6 +21,6 @@ A `data_queries` object SHALL have a least one of the following query data types
 ---
 *B:*
 
-All query types defined in the `data_queries` object SHALL comply with the requirement `/req/edr/rc-common-query-type`
+All query types defined in the `data_queries` object SHALL comply with the requirement <<req_edr_rc-common-query-type,/req/edr/rc-common-query-type>>
 
 ====

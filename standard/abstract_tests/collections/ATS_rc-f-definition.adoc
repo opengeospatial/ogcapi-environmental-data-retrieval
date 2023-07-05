@@ -1,12 +1,15 @@
-//[[ats_collections_rc-f-definition]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-f-definition*
-^|Test Purpose |Validate that the `f` query parameter is constructed correctly.
-^|Requirement |<<req_edr_f-definition,/req/edr/rc-f-definition>>
-^|Test Method |Verify that the `f` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+//Source file - EDIT and RUN Python Script
+[[ats_collections_rc-f-definition-asciidochandle]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-f-definition-asciidochandle
+target:: /req/edr/rc-f-definition
+test-purpose:: Validate that the `f` query parameter is constructed correctly.
+test-method::
++
+--
+Verify that the `f` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
@@ -18,6 +21,5 @@ schema:
 style: form
 explode: false
 ----
-|===
-
-
+--
+====

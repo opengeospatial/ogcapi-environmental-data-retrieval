@@ -1,14 +1,16 @@
 [[ats_html]]
-[cols="1,4",width="90%"]
-.Conformance Class "HTML"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/html
-|Target type |Web API
-|Requirements Class |<<rc_html,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
-|Dependency |http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html[http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html]
-|===
+[conformance_class]
+.HTML
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/html
+subject:: <<rc_html,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html>>
+classification:: Target Type:Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
+conformance-test:: /conf/html/content
+conformance-test:: /conf/html/definition
+====
 
 ==== HTML Definition
 

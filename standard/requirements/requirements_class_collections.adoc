@@ -22,6 +22,7 @@ requirement:: /req/collections/src-md-op
 requirement:: /req/collections/src-md-success
 requirement:: /req/edr/rc-collection-info
 requirement:: /req/core/rc-collection-info-links
+requirement:: /req/edr/rc-data-queries
 requirement:: /req/core/rc-extent
 requirement:: /req/core/rc-md-query-links
 requirement:: /req/edr/rc-crs

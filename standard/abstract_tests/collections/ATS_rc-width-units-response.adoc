@@ -1,11 +1,14 @@
-//[[ats_collections_rc-width-units-response]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/collections/REQ_rc-width-units-response*
-^|Test Purpose |Validate that the `width-units` query parameters are processed correctly.
-^|Requirement |<<req_edr_width_units-response,/req/edr/width-units-response>>
-^|Test Method |. Verify that units not listed in the metadata will generate an error message
-. Validate that the `width-units` parameter complies with the syntax described in <<req_edr_width_units-response,/req/edr/width-units-response>>.
-|===
+[[ats_collections_rc-width-units-response]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/collections/REQ_rc-width-units-response
+target:: /req/edr/width-units-response
+test-purpose:: Validate that the `width-units` query parameters are processed correctly.
+test-method::
++
+--
+step::: Verify that units not listed in the metadata will generate an error message
+step::: Validate that the `width-units` parameter complies with the syntax described in <<req_edr_width_units-response,/req/edr/width-units-response>>.
+--
+====

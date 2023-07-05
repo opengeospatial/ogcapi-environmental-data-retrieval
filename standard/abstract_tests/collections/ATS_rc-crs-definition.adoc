@@ -1,12 +1,15 @@
-//[[ats_edr_rc-crs-definition]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/REQ_rc-crs-definition*
-^|Test Purpose |Validate that the crs query parameters are constructed correctly.
-^|Requirement |<<req_edr_crs-definition,/req/edr/REQ_rc-crs-definition>>
-^|Test Method |Verify that the `crs` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+//Source file - EDIT and RUN Python Script
+[[ats_edr_rc-crs-definition-asciidochandle]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/REQ_rc-crs-definition-asciidochandle
+target:: /req/edr/REQ_rc-crs-definition
+test-purpose:: Validate that the crs query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `crs` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
@@ -18,4 +21,5 @@ schema:
 style: form
 explode: false
 ----
-|===
+--
+====

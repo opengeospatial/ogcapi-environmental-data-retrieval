@@ -1,10 +1,9 @@
 [[ats_html_definition]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/html/definition*
-^|Test Purpose |Verify support for HTML
-^|Requirement |<<_req_html_definition,/req/html/definition>>
-^|Test Method |Verify that every `200`-response of every operation of the API where HTML was requested is of media type `text/html`
-|===
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/html/definition
+target:: /req/html/definition
+test-purpose:: Verify support for HTML
+test-method::Verify that every `200`-response of every operation of the API where HTML was requested is of media type `text/html`
+====

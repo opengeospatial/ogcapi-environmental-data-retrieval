@@ -1,12 +1,14 @@
-//[[ats_collections_rc-width-units-definition]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/REQ_rc-width-units-definition*
-^|Test Purpose |Validate that the `width-units` query parameter is constructed correctly.
-^|Requirement |<<req_edr_width_units-definition,/req/edr/REQ_rc-width-units-definition>>
-^|Test Method |Verify that the `width-units` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+[[ats_collections_rc-width-units-definition]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/REQ_rc-width-units-definition
+target:: /req/edr/REQ_rc-width-units-definition
+test-purpose:: Validate that the `width-units` query parameter is constructed correctly.
+test-method::
++
+--
+Verify that the `width-units` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
@@ -18,4 +20,5 @@ schema:
 style: form
 explode: false
 ----
-|===
+--
+====

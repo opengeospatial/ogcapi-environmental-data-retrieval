@@ -1,13 +1,16 @@
 [[ats_geojson]]
-[cols="1,4",width="90%"]
-.Conformance Class "GeoJSON"
-|===
-2+|*Conformance Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/geojson
-|Target type |Web API
-|Requirements Class |<<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson>>
-|Dependency |<<ats_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core>>
-|===
+[conformance_class]
+.GeoJSON
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/geojson
+subject:: <<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson>>
+classification:: Target Type:Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+conformance-test:: /conf/geojson/definition
+conformance-test:: /conf/geojson/content
+====
+
 
 ==== GeoJSON Definition
 

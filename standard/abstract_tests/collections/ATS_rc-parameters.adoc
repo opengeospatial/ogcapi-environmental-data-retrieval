@@ -1,14 +1,15 @@
-[[ats_edr_rc-parameters]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-parameters*
-^|Test Purpose |Validate that each parameter in a collection is correctly defined.
-^|Requirement |<<_req_edr_rc-parameters,/req/edr/rc-parameters>>
-^|Test Method |. Verify that all parameters listed in a `collection` have the required properties.
-. Verify that each parameter property has a unique name (in the collection).
-. Verify that each parameter property has a `type` property.
-. Verify that each parameter property has an `observedProperty` property.
-. Verify that the `observedProperty` property has a `label` property with correctly defined i18n compliant values.
-. Verify that the `observedProperty` property has an `id` property.
-|===
+[[ats_edr_rc-parameters]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-parameters
+target:: /req/edr/rc-parameters
+test-purpose:: Validate that each parameter in a collection is correctly defined.
+test-method::
+step::: Verify that all parameters listed in a `collection` have the required properties.
+step::: Verify that each parameter property has a unique name (in the collection).
+step::: Verify that each parameter property has a `type` property.
+step::: Verify that each parameter property has an `observedProperty` property.
+step::: Verify that the `observedProperty` property has a `label` property with correctly defined i18n compliant values.
+step::: Verify that the `observedProperty` property has an `id` property.
+====

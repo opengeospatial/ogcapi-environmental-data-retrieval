@@ -1,11 +1,12 @@
-//[[ats_collections_rc-parameter-name-response]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-parameter-name-response*
-^|Test Purpose |Validate that the parameter-name query parameters are processed correctly.
-^|Requirement |<<req_edr_parameters-response,/req/edr/parameter-name-response>>
-^|Test Method |. Verify that only resources for the requested parameters were included in the result set
-. Validate that the parameter-name parameter complies with the syntax described in <<req_edr_parameters-response,/req/edr/parameter-name-response>>.
-|===
+//Source file - EDIT and RUN Python Script
+[[ats_collections_rc-parameter-name-response-asciidochandle]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-parameter-name-response-asciidochandle
+target:: /req/edr/parameter-name-response
+test-purpose:: Validate that the parameter-name query parameters are processed correctly.
+test-method::
+step::: Verify that only resources for the requested parameters were included in the result set
+step::: Validate that the parameter-name parameter complies with the syntax described in <<req_edr_parameters-response,/req/edr/parameter-name-response>>.
+====

@@ -1,42 +1,48 @@
 [[ats_cube]]
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that an error is returned by a `Cube` query if no query parameters are specified.
-^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. No query parameters are specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that an error is returned by a `Cube` query when the `bbox` query parameter is not specified.
-^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. bbox query parameter is not specified
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that an error is returned by a `Cube` query when the `bbox` query parameter does not contain a valid bbox value.
-^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. Check bbox query parameter is valid
-. Validate that a document was returned with a status code 400.
-|===
-{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/cube*
-^|Test Purpose |Validate that resources can be identified and extracted from a Collection with a `Cube` query using  query parameters.
-^|Requirement |<<req_edr_rc-cube,/req/edr/rc-cube>>
-^|Test Method |. Test with valid query parameters
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cube/no-query-params
+target:: /req/edr/rc-cube
+test-purpose:: Validate that an error is returned by a `Cube` query if no query parameters are specified.
+test-method::
+step::: No query parameters are specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cube/no-bbox-param
+target:: /req/edr/rc-cube
+test-purpose:: Validate that an error is returned by a `Cube` query when the `bbox` query parameter is not specified.
+test-method::
+step::: bbox query parameter is not specified
+step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cube/bbox-param-invalid
+target:: /req/edr/rc-cube
+test-purpose:: Validate that an error is returned by a `Cube` query when the `bbox` query parameter does not contain a valid bbox value.
+test-method::
+step::: Check bbox query parameter is valid
+step::: Validate that a document was returned with a status code 400.
+====
+
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/cube/valid-query-params
+target:: /req/edr/rc-cube
+test-purpose:: Validate that resources can be identified and extracted from a Collection with a `Cube` query using  query parameters.
+test-method::
++
+--
+. Test with valid query parameters
 . Validate that a document was returned with a status code 200.
 
 Repeat these tests using the following parameter tests:
@@ -64,28 +70,33 @@ Repeat these tests using the following parameter tests:
 
 Execute requests with combinations of the "bbox","time","parameter-name","z","crs" and "f" query parameters
 and verify that only information that matches the selection criteria is returned.
-|===
+--
+====
 
-include::../collections/ATS_rc-coords-definition.adoc[]
+include::../collections/cube/ATS_rc-coords-definition.adoc[]
 
-include::../collections/ATS_rc-coords-response.adoc[]
+include::../collections/cube/ATS_rc-coords-response.adoc[]
 
-include::../collections/ATS_rc-z-definition.adoc[]
+include::../collections/cube/ATS_rc-z-definition.adoc[]
+
+// Note that ATS_rc-cube-z-response.adoc is intentionally placed in the collections folder
 
 include::../collections/ATS_rc-cube-z-response.adoc[]
 
-include::../core/ATS_rc-time-definition.adoc[]
+// End of note
 
-include::../core/ATS_rc-time-response.adoc[]
+include::../core/cube/ATS_rc-time-definition.adoc[]
 
-include::../collections/ATS_rc-parameter-name-definition.adoc[]
+include::../core/cube/ATS_rc-time-response.adoc[]
 
-include::../collections/ATS_rc-parameter-name-response.adoc[]
+include::../collections/cube/ATS_rc-parameter-name-definition.adoc[]
 
-include::../collections/ATS_rc-crs-definition.adoc[]
+include::../collections/cube/ATS_rc-parameter-name-response.adoc[]
 
-include::../collections/ATS_rc-crs-response.adoc[]
+include::../collections/cube/ATS_rc-crs-definition.adoc[]
 
-include::../collections/ATS_rc-f-definition.adoc[]
+include::../collections/cube/ATS_rc-crs-response.adoc[]
 
-include::../collections/ATS_rc-f-response.adoc[]
+include::../collections/cube/ATS_rc-f-definition.adoc[]
+
+include::../collections/cube/ATS_rc-f-response.adoc[]
