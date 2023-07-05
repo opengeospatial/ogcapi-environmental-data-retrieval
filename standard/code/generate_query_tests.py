@@ -70,10 +70,14 @@ generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests
 
 #cube
 
-generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/cube/ATS_rc-coords-definition.adoc','cube')
-generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/cube/ATS_rc-coords-response.adoc','cube')
-generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/cube/ATS_rc-z-definition.adoc','cube')
+# The coords param tests have been commented out because they are not supported by the Cube query.
+# See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/423#issuecomment-1553144063
+#generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/cube/ATS_rc-coords-definition.adoc','cube')
+#generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/cube/ATS_rc-coords-response.adoc','cube')
+
 # See ATS_cube.adoc, we do not modify ATS_rc-cube-z-response.adoc. So there is no call to generate the associated file.
+generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/cube/ATS_rc-z-definition.adoc','cube')
+
 generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/cube/ATS_rc-parameter-name-definition.adoc','cube')
 generate('./abstract_tests/collections/ATS_rc-parameter-name-response.adoc','./abstract_tests/collections/cube/ATS_rc-parameter-name-response.adoc','cube')
 generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_tests/collections/cube/ATS_rc-crs-definition.adoc','cube')
