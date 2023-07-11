@@ -2,10 +2,7 @@ openapi: 3.0.3
 info:
   title: OGC API - Environmental Data Retrieval Standard
   description: Example of OGC API - Environmental Data Retrieval Standard OpenAPI document
-  version: 1.0.1
-  contact:
-    name: Tom Kralidis
-    email: tomkralidis@gmail.com
+  version: 1.1.0
   license:
     name: OGC License
     url: 'https://www.ogc.org/legal'
