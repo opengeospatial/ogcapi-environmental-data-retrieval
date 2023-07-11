@@ -43,7 +43,7 @@ post:
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
   requestBody:
-    - $ref: ../../request-bodies/corridor.yaml
+    $ref: ../../request-bodies/corridor.yaml
   responses:
     200:
       $ref: ../../responses/queries/200.yaml
@@ -59,4 +59,3 @@ post:
       $ref: ../../responses/queries/413.yaml
     default:
       $ref: ../../responses/core/exception.yaml
-      
