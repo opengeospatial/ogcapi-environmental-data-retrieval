@@ -128,7 +128,9 @@ conformance-test:: /conf/collections/rc-f-response-locations
 
 include::queries/ATS_position.adoc[]
 
+===== Radius
 
+include::queries/ATS_radius.adoc[]
 
 ===== Area
 

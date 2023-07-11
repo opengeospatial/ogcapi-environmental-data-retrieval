@@ -13,6 +13,9 @@ def generate(infile_path,outfile_path,querytype):
                 if querytype == "position":
                     fout.write(line.replace("/req/edr/coords-response","/req/edr/point-coords-response"))            
                     print(line.replace("/req/edr/coords-response","/req/edr/point-coords-response").replace("\n",""))
+                elif querytype == "radius":
+                    fout.write(line.replace("/req/edr/coords-response","/req/edr/point-coords-response"))            
+                    print(line.replace("/req/edr/coords-response","/req/edr/point-coords-response").replace("\n",""))
                 elif querytype == "trajectory":
                     fout.write(line.replace("/req/edr/coords-response","/req/edr/linestring-coords-response"))            
                     print(line.replace("/req/edr/coords-response","/req/edr/linestring-coords-response").replace("\n",""))
@@ -67,6 +70,22 @@ generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/c
 generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/position/ATS_rc-time-response.adoc','position')
 generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/position/ATS_rc-f-definition.adoc','position')
 generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/position/ATS_rc-f-response.adoc','position')
+
+#radius
+
+generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/radius/ATS_rc-coords-definition.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/radius/ATS_rc-coords-response.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/radius/ATS_rc-z-definition.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/radius/ATS_rc-z-response.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/radius/ATS_rc-parameter-name-definition.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-parameter-name-response.adoc','./abstract_tests/collections/radius/ATS_rc-parameter-name-response.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-crs-definition.adoc','./abstract_tests/collections/radius/ATS_rc-crs-definition.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/radius/ATS_rc-crs-response.adoc','radius')
+generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/core/radius/ATS_rc-time-definition.adoc','radius')
+generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/radius/ATS_rc-time-response.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/radius/ATS_rc-f-definition.adoc','radius')
+generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/radius/ATS_rc-f-response.adoc','radius')
+
 
 #cube
 
