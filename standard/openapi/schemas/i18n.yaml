@@ -1,5 +1,4 @@
 type: object
-description: Object representing an internationalised string. TODO test that the
-  keys are valid language identifiers
+description: Object representing an internationalised string.
 additionalProperties:
   type: string
