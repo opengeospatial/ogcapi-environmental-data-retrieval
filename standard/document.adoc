@@ -5,8 +5,8 @@
 :status: draft
 :committee: technical
 :draft: 3.0
-:external-id: http://www.opengis.net/doc/IS/ogcapi-edr-1/1.1
-:docnumber: 19-086r6
+:external-id: http://www.opengis.net/doc/IS/ogcapi-edr-1/1.2
+:docnumber: 19-086r7
 :received-date: 2022-07-26
 :issued-date: 2022-09-30
 :published-date: 2023-03-30
@@ -27,7 +27,7 @@
 :pdf-uri: ./document.pdf
 :xml-uri: ./document.xml
 :doc-uri: ./document.doc
-:edition: 1.1
+:edition: 1.2
 
 ////
 Make sure to complete each included document
