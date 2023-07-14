@@ -104,7 +104,7 @@ a| **corridor-height**
 
 * <<req_edr_corridor-height-definition,definition>> 
 
-* <<req_edr_corridor-height-response,rules>> |String  |*Yes*| The height value represents the whole height of the corridor where the trajectory supplied in the coords query parameter is the centre point of the corridor
+* <<req_edr_corridor-height-response,rules>> |String  |*Yes*| The height value represents the whole height of the corridor where the trajectory supplied in the coords query parameter is the center point of the corridor
  a| * `corridor-height=100`
 a| **height-units**
 

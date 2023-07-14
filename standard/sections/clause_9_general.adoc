@@ -157,11 +157,11 @@ content:
 [[security]]
 === Security considerations
 
-The <<OGC19-072,OGC API - Common - Part 1: Core>> Standard does not mandate any specific security controls. However, the Standard was constructed so that security controls can be added without impacting conformance.
+The http://www.opengis.net/doc/IS/ogcapi-edr-1/1.1[OGC API - EDR] Standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>>. The <<OGC19-072,OGC API - Common - Part 1: Core>> Standard does not mandate any specific security controls. However, the Standard was constructed so that security controls can be added without impacting conformance.
 
 Apply <<req_oas30_security,Requirement /req/oas30/security>> for OpenAPI 3.0 Security support.
 
-The OpenAPI specification currently supports the following link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#security-scheme-object[security schemes]:
+The OpenAPI specification, which is used by the http://www.opengis.net/doc/IS/ogcapi-edr-1/1.1[OGC API - EDR] Standard, currently supports the following link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#security-scheme-object[security schemes]:
 
 * HTTP authentication,
 * an API key (either as a header or as a query parameter),
