@@ -50,7 +50,7 @@ The OGC API — Common standard does not define any information resource typ
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
-[width="90%",cols="2,1,4",options="header"]
+[width="90%",cols=",,",options="header"]
 |===
 ^|**Path Template** ^|**Query Type** ^|**Description**
 |/collections/{collectionId}/position | Position | Return data for the requested <<position-definition,position>>
