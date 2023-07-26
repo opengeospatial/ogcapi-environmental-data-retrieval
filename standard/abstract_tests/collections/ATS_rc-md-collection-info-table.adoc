@@ -3,6 +3,6 @@
 [width="90%",cols="3",options="header"]
 |===
 |Format |Schema Document |Test ID
-|HTML |link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/collections/collections.yaml[collection.yaml]|<<ats_html_content,/conf/html/content>>
-|JSON |link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/collections/collections.yaml[collection.yaml] |<<ats_json_content,/conf/json/content>>
+|HTML |link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/collections/collection.yaml[collection.yaml]|<<ats_html_content,/conf/html/content>>
+|JSON |link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/collections/collection.yaml[collection.yaml] |<<ats_json_content,/conf/json/content>>
 |===
