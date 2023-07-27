@@ -13,7 +13,7 @@ A successful execution of the operation SHALL be reported as a response with a H
 
 *B:*
 
-The content of that response SHALL be based upon the JSON schema link:http://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/instances.yaml[instances.yaml].
+The content of that response SHALL be based upon the JSON schema link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/queries/instances.yaml[instances.yaml].
 
 ---
 
