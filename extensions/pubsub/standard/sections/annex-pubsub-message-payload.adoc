@@ -1,0 +1,33 @@
+[appendix,obligation="informative"]
+
+== Pub/Sub Message Payload Examples (Informative)
+
+[[message-payload-examples]]
+
+=== Pub/Sub Message Payload Example
+
+The WMO WIS2 standard notification message format ensures that the WIS2 ecosystem (data publisher, data user, and global services) is a robust, effective, and unified exchange platform for weather, climate, and water data. The message provides notification metadata about the availability of a new data granule. The message is encoded using a GeoJSON baseline, and provides detailed information on the data notification (associated datetime of the granule, publishing datetime, integrity), as well as access to the data via a link object or inline content (useful for encoding small messages). Geometry is required (given GeoJSON requirements), however can be expressed with a null value when generating the geometry in the message is not possible, practical or timely for data publishers. To support extensibility, additional properties are also valid (given the default definition in JSON Schema).
+
+Using a GeoJSON baseline as the message payload allows for broad interoperability given the large ecosystem of tooling (decoders, encoders) supporting the same approach. An example web application demonstrating the ease of integration can be found at https://kralidis.ca/tmp/wis2-data-notifications.html.
+
+An example WIS2 Notification Message can be found below, extending the OGC API - Pub/Sub Notification Message Requirements with domain specific properties as required:
+
+====
+[source,json]
+----
+include::../../examples/json/pubsub-message-payload.json[]
+----
+====
+
+== Pub/Sub Message Payload Schema (Normative)
+
+[[message-payload-schema]]
+
+=== Pub/Sub Message Payload Schema
+
+====
+[source,yaml]
+----
+include::../../openapi/schemas/pubsub-message-payload-schema.yaml[]
+----
+====

@@ -1,0 +1,10 @@
+[[req_pubsub_channels]]
+
+[requirement,type="general",id="/req/pubsub/channels", label="/req/pubsub/channels"]
+====
+
+*A:*
+
+Channel (topic/destination/node depending on protocol) identifiers SHALL be based on the same naming hierarchy as the OGC API endpoints which are generating the events that users subscribe to.
+
+====

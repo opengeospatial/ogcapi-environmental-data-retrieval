@@ -1,0 +1,7 @@
+== Scope
+[NOTE]
+====
+This Discussion Paper provides insight into the ongoing work within the OGC MetOcean Domain Working Group (MetOceanDWG) and related activities (World Meteorological Organization Information System version 2 [WIS2])) regarding Publish-Subscribe architecture. This paper makes a case for a Publish-Subscribe standard in the OGC API ecosystem.
+
+One of the cases we would like to make in the OGC API - EDR Pub/Sub work is the broader appeal for the larger set of OGC API’s. The basis for this is our choice for the Pub/Sub channel structure to match the OGC API “collections” structure. The overall benefit is that the building blocks of the RESTful API endpoint structure would be crosswalked as Pub/Sub channels with the only difference in syntax being dot notation for channels rather than “/” notation. This allows for a parallel access pattern between the RESTful API and Pub/Sub access.
+====

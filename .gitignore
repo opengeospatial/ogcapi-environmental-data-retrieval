@@ -4,3 +4,14 @@ candidate-standard/openapi/view_api.html
 19-086.html
 19-086.pdf
 ._19-086.pdf
+
+# document build artifacts
+document.err
+document.doc
+document.html
+document.pdf
+document.xml
+document.presentation.xml
+
+iev/
+relaton/

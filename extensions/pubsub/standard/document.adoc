@@ -1,0 +1,68 @@
+= OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow
+:doctype: standard
+:encoding: utf-8
+:lang: en
+:status: draft
+:committee: technical
+:draft: 1.0
+:external-id: http://www.opengis.net/doc/standard/ogcapi-environmental-data-retrieval-2/1.0
+:docnumber: YY-999
+:received-date: 2023-08-28
+:issued-date: 2023-08-28
+:published-date: 2023-08-28
+:fullname: Tom Kralidis
+:role: editor
+:fullname_2: Mark Burgoyne
+:fullname_3: Steve Olson
+:fullname_4: Shane Mill
+:docsubtype: Interface
+:keywords: OGC API, Pub/Sub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
+:submitting-organizations: Meteorological Service of Canada; UK Met Office; US National Weather Service;
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf
+:local-cache-only:
+:data-uri-image:
+:pdf-uri: ./document.pdf
+:xml-uri: ./document.xml
+:doc-uri: ./document.doc
+:edition: 1.0
+
+////
+Make sure to complete each included document
+////
+include::sections/clause_0_front_material.adoc[]
+
+include::sections/clause_1_scope.adoc[]
+
+include::sections/clause_2_conformance.adoc[]
+
+include::sections/clause_3_references.adoc[]
+
+include::sections/clause_4_terms_and_definitions.adoc[]
+
+include::sections/clause_5_conventions.adoc[]
+
+include::sections/clause_6_informative_text.adoc[]
+
+include::sections/clause_7_pubsub.adoc[]
+
+include::sections/clause_8_pubsub-message-payload.adoc[]
+
+
+////
+add or remove annexes after "A" as necessary
+////
+include::sections/annex-a.adoc[]
+
+include::sections/annex-pubsub.adoc[]
+
+include::sections/annex-pubsub-message-payload.adoc[]
+
+
+////
+Revision History should be the last annex before the Bibliography
+Bibliography should be the last annex
+////
+include::sections/annex-history.adoc[]
+
+include::sections/annex-bibliography.adoc[]

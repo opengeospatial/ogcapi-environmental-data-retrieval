@@ -1,0 +1,40 @@
+$schema: 'https://json-schema.org/draft/2020-12/schema'
+$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
+title: OGC API - Pub/Sub message payload definition
+description: OGC API - Pub/Sub message payload definition
+
+required:
+  - id
+  - type
+  - geometry
+  - properties
+
+properties:
+  id:
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml#/properties/id'
+  type:
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml#/properties/type'
+  geometry:
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml#/properties/geometry'
+  properties:
+    type: object
+    required:
+      - pubtime
+    properties:
+      pubtime:
+        type: string
+        format: date-time
+        description: |
+          Identifies the date/time of when the file was posted/published, in RFC3339 format.
+          The publication date/time is critical for subscribers to prevent message loss by knowing
+          their lag (how far behind the publisher they are).
+      operation:
+        type: string
+        description: the event associated with the lifecycle of a resource.
+        enum:
+          - create
+          - update
+          - delete
+        default: create
+  links:
+    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/link.yaml'
