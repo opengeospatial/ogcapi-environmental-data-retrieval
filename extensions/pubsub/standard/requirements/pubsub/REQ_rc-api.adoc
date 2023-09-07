@@ -1,0 +1,16 @@
+[[req_pubsub_api]]
+
+[requirement,type="general",id="/req/pubsub/api", label="/req/pubsub/api"]
+====
+
+*A:*
+
+An OGC API landing page SHALL provide a link reference to the description of its Publish-Subscribe capabilities using a link relation of `+service-desc+`.
+
+---
+
+*B:*
+
+An OGC API SHALL provide the description of its Publish-Subscribe capabilities using AsyncAPI to describe supported protocols, channels and message payload descriptions.
+
+====
