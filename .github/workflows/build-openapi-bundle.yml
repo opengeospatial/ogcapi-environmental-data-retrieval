@@ -22,7 +22,7 @@ jobs:
         fetch-depth: 0
     - name: Generate OpenAPI bundle
       run: |
-        cd standard/openapi
+        cd core/standard/openapi
         swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
     - name: Commit changes
       uses: EndBug/add-and-commit@v9
@@ -31,6 +31,6 @@ jobs:
         author_email: tomkralidis@gmail.com
         message: 'Updating OpenAPI bundle'
         add: '*.json'
-        cwd: './standard/openapi/'
+        cwd: './core/standard/openapi/'
         push: origin master --force
 
