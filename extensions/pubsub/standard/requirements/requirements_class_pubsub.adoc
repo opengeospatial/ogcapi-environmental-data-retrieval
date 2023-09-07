@@ -1,0 +1,8 @@
+[[rc_pubsub]]
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class*
+2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/pubsub
+|Target type |Web API
+|Dependency |Core
+|===

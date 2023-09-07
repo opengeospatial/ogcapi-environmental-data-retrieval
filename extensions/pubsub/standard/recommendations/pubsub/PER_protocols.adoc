@@ -1,0 +1,10 @@
+[[per_pubsub_protocols]]
+[permission,type="general",id="/per/pubsub/protocols", label="/per/pubsub/protocols"]
+====
+
+*A:*
+
+A Publish-Subscribe MAY use the message queueing protocol of their choice/requirements.
+
+
+====
