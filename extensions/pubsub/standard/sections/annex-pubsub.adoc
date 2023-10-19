@@ -54,6 +54,33 @@ Breaking down into the components:
     ** `description`: string describing the host
     ** `security`: reference to supported authentication types
 
+====
+----
+servers:
+    mqtt:
+        url: example.org
+        protocol: mqtt
+        protocolVersion: 3.1.1
+        description: MQTT endpoint
+        variables:
+            port:
+                enum:
+                    - 1883
+                default: 1883
+    amqp:
+        url: example.org
+        protocol: amqp
+        protocolVersion: 1.0.0
+        description: AMQP endpoint
+        variables:
+            port:
+                enum:
+                    - 5672
+                default: 5672
+----
+====
+
+Different Pub/Sub protocols are supported as additional server objects, and can be defined accordingly.
 
 ====
 [source,yaml]
