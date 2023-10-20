@@ -58,7 +58,7 @@ The variables object provides fields to describe information that only applies t
 |Field Name|Type|Required|Description
 |title  | String |No| A short text label for the query
 |description |String|No|  A description of the query
-|query_type  | String |No| One of: `position`, `radius`, `area`, `cube`, `trajectory`, `corridor`, `items`, `locations`, `instances`
+|query_type  | String |Yes| One of: `position`, `radius`, `area`, `cube`, `trajectory`, `corridor`, `items`, `locations`, `instances`
 |coords |String|No|  An example of valid `coords` query parameter values
 |within_units |String Array|No|  A list of the valid `within` units for radius queries
 |width_units |String Array|No|  A list of the valid `width` units
@@ -249,8 +249,8 @@ The data queries object provides the extra metadata required for the queries sup
 |cube  |<<col-edr_query,EDRQuery>> object|No| Cube query metadata
 |trajectory  |<<col-edr_query,EDRQuery>> object|No| Trajectory query metadata
 |corridor  |<<col-edr_query,EDRQuery>> object|No| Corridor query metadata
-|item  |<<col-edr_query,EDRQuery>> object|No| Item query metadata
-|location  |<<col-edr_query,EDRQuery>> object|No| Location query metadata
+|items  |<<col-edr_query,EDRQuery>> object|No| Item query metadata
+|locations  |<<col-edr_query,EDRQuery>> object|No| Location query metadata
 |==========================
 
 
