@@ -1,0 +1,86 @@
+[[req_edr_rc-collection-info-links]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/rc-collection-info-links
+
+*A:*
+
+Every `link` property SHALL have a `href` property.
+
+---
+*B:*
+
+Every `link` property SHALL have a `rel` property which is the relation type string.
+
+---
+*C:*
+
+Every `link` property MAY have a `type` property which is the mime type of the information returned from the link.
+
+---
+*D:*
+
+Every `link` property MAY have a `hreflang` property which is string used to specify the language and geographical targeting of information accessed by the URL. Can be defined by using a value from either languages ISO 639-1 or countries ISO 3166-1 .
+
+---
+*E:*
+
+Every `link` property MAY have a `title` property which is a short string describing the url defined in the `href` property.
+
+---
+*F:*
+
+Every `link` property MAY have a `length` property.
+
+---
+*G:*
+
+Every `link` property MAY have a `templated` property a Boolean value which if True the URL includes templated values for mandatory Query parameters.
+
+---
+*H:*
+
+If the `link` property is a property of `position data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*I:*
+
+If the `link` property is a property of `radius data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-radius-variables`.
+
+---
+*J:*
+
+If the `link` property is a property of `area data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*K:*
+
+If the `link` property is a property of `cube data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*L:*
+
+If the `link` property is a property of `trajectory data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*M:*
+
+If the `link` property is a property of `corridor data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-corridor-variables`.
+
+---
+*N:*
+
+If the `link` property is a property of `location data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*O:*
+
+If the `link` property is a property of `location data_queries` object it shall have a `variables` property which SHALL comply with the requirement `/req/edr/rc-items-variables`.
+
+
+
+
+
+
