@@ -1,0 +1,18 @@
+[[pubsub-channels-section]]
+== Requirements Class Publish-Subscribe (Pub/Sub) Channels
+
+=== Overview
+
+include::../requirements/requirements_class_pubsub-channels.adoc[]
+
+==== Channels
+
+The OGC API endpoint hierarchy can be used in parallel as a channel description when the data publisher wishes to provide Pub/Sub capability for OGC API resources normally available in the same way. Below are examples of OGC endpoints normally available via HTTP, and how they can be re-used as topics for Pub/Sub workflow:
+
+- ``/collections``: notifies Subscribers whenever there is a change to the ``/collections`` OGC API endpoint (for example, addition of a new collection). The message payload would be collection metadata as defined by OGC API - Common, or a message referencing same
+- ``/collections/{collectionId}``: notifies Subscribers whenever there is an update to a single collection (for example, spatial or temporal extents, new items, etc.). The message payload would be defined by the resource model of the given collection (items, etc.), or a message reference same
+
+Using the OGC API endpoint hierarchy provides the key benefit that OGC API users do not need to learn a different, additional approach or hierarchy for Pub/Sub (same content, additional interface).
+
+include::../recommendations/pubsub-channels/REC_message-payloads.adoc[]
+include::../requirements/pubsub-channels/REQ_rc-channels.adoc[]

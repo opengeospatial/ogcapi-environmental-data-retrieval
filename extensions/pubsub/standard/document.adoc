@@ -46,7 +46,9 @@ include::sections/clause_6_informative_text.adoc[]
 
 include::sections/clause_7_pubsub.adoc[]
 
-include::sections/clause_8_pubsub-message-payload.adoc[]
+include::sections/clause_8_pubsub-channels.adoc[]
+
+include::sections/clause_9_pubsub-message-payload.adoc[]
 
 
 ////

@@ -1,9 +1,0 @@
-[[rec_pubsub_message-payloads]]
-[recommendation,type="general",id="/rec/pubsub/message-payloads", label="/rec/pubsub/message-payloads"]
-====
-
-*A:*
-
-A Publish-Subscribe server's message payload SHOULD be machine readable to enable automated workflow.
-
-====
