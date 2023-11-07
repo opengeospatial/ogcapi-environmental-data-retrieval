@@ -37,7 +37,7 @@ post:
   description: Return the data values for the data area defined by the query parameters
   operationId: PostDataForArea
   parameters:
-    $ref: ../../parameters/collections/collectionId.yaml  
+    - $ref: ../../parameters/collections/collectionId.yaml  
   requestBody:
     - $ref: ../../request-bodies/area.yaml  
   responses:
