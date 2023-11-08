@@ -9,7 +9,7 @@
         "1":  {
                 "OGC_doc_number": "23-057",
                 "urn":"http://www.opengis.net/doc/IS/ogcapi-edr-2/1.0",
-                "title":"OGC API - Environmental Data Retrieval",
+                "title":"OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow",
                 "version":"1.0.0",
                 "path":"extensions/pubsub/standard/document.adoc"
         }        
