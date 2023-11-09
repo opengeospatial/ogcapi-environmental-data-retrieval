@@ -15,12 +15,22 @@ step::: Validate that a GeoJSON document was returned with a status code 200 con
 [%metadata]
 identifier:: /conf/locations/location-identifier-invalid
 target:: /req/edr/rc-locations
-test-purpose:: Validate that an error is returned by a `Locations` query when the locationId is invalid.
+test-purpose:: Validate that a error is returned by a `Locations` query when the locationId is invalid.
 test-method::
 step::: Check that invalid `locationId` values return an error message
 step::: Validate that a document was returned with a status code 404.
 ====
 
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/locations/locations-nodata
+target:: /req/edr/rc-locations
+test-purpose:: Validate that a HTTP 204 is returned by a `Locations` query when there is no data available for requested locations.
+test-method::
+step::: Check that a HTTP 204 message is return when no data is available
+step::: Validate that a document was returned with a status code 204.
+====
 
 [abstract_test]
 ====
@@ -72,3 +82,4 @@ include::../collections/locations/ATS_rc-crs-response.adoc[]
 include::../collections/locations/ATS_rc-f-definition.adoc[]
 
 include::../collections/locations/ATS_rc-f-response.adoc[]
+
