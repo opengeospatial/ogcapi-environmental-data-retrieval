@@ -19,5 +19,7 @@ content:
             crs:
                 type: string
             f:
-                type: string
+                type: strin
+            limit:
+                type: number  
                 
