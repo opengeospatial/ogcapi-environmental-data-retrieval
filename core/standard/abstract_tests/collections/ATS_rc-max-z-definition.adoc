@@ -1,20 +1,24 @@
-[[ats_edr_rc-max-z-definition]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-max-z-definition*
-^|Test Purpose |Validate that the minimum vertical level query parameters are constructed correctly.
-^|Requirement |<<req_edr_max-z-definition,/req/edr/max-z-definition>>
-^|Test Method |Verify that the `max-z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+[[ats_collections_rc-resolution-z-definition]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-resolution-z-definition
+target:: /req/edr/resolution-z-definition
+test-purpose:: Validate that the `resolution-z` query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `resolution-z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
 
 [source,YAML]
 ----
-name: max-z
+name: resolution-z
 in: query
-required: true
+required: false
 schema:
   type: string
 style: form
 explode: false
 ----
-|===
+--
+====
