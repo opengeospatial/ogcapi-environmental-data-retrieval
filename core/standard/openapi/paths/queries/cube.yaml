@@ -11,6 +11,9 @@ get:
     - $ref: ../../parameters/core/cube-z.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/core/parameter-name.yaml
+    - $ref: ../../parameters/core/resolution-x.yaml
+    - $ref: ../../parameters/core/resolution-y.yaml
+    - $ref: ../../parameters/core/resolution-z.yaml       
     - $ref: ../../parameters/core/crs.yaml
     - $ref: ../../parameters/core/f.yaml
   responses:
