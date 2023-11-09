@@ -12,4 +12,6 @@ step::: Verify that each parameter property has a `type` property.
 step::: Verify that each parameter property has an `observedProperty` property.
 step::: Verify that the `observedProperty` property has a `label` property with correctly defined i18n compliant values.
 step::: Verify that the `observedProperty` property has an `id` property.
+step::: Verify that in a `/collections/` request parameter propreties DO NOT have a `dataMask` attribute.
+step::: Verify that IF the parameter propreties in a `/collections/{collectionId}` response have a `dataMask` attribute, the mask values provide an accurate representation of data availability.
 ====
