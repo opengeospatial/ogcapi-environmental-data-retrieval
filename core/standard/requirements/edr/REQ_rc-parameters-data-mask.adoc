@@ -1,0 +1,48 @@
+
+[[req_edr_rc-parameters-with-data-mask]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/rc-parameters-with-data-mask
+
+*A:*
+
+A parameter object MAY have any number of members (name/value pairs).
+
+---
+*B:*
+
+A parameter object SHALL have a member with the name "type" and the value "Parameter".
+
+---
+*C:*
+
+A parameter object MAY have a member with the name "id" where the value SHALL be a string and SHOULD be a common identifier.
+
+---
+*D:*
+
+A parameter object MAY have a member with the name "label" where the value SHALL be a string that is the name of the parameter and which SHOULD be short. Note that this SHOULD be left out if it would be identical to the "label" of the "observedProperty" member.
+
+---
+*E:*
+
+A parameter object MAY have a member with the name "description" where the value SHALL be a string which is a, perhaps lengthy, textual description of the parameter.
+
+---
+*F:*
+
+A parameter object SHALL have a member with the name "observedProperty" where the value is an object which SHALL have the members "label" and "id" and which MAY have the members "description". The value of "label" SHALL be a string which is the name of the observed property and which SHOULD be short. The value of "id" SHALL be a string and SHOULD be a common identifier. If given, the value of "description" SHALL be a string with a textual description of the observed property. 
+
+---
+*G:*
+
+A parameter object MAY have a member with the name "unit" where the value is an object which SHALL have either or both the members "label" or/and “symbol”, and which MAY have the member "id". If given, the value of "symbol" SHALL either be a string of the symbolic notation of the unit, or an object with the members "value" and "type" where "value" is the symbolic unit notation and "type" references the unit serialization scheme that is used. "type" SHALL HAVE the value "http://www.opengis.net/def/uom/UCUM/” if UCUM is used, or a custom value as recommended in section “Extensions”. If given, the value of "label" SHALL be a string of the name of the unit and SHOULD be short. If given, the value of "id" SHALL be a string and SHOULD be a common identifier. It is RECOMMENDED to reference a unit serialization scheme to allow automatic unit conversion.
+
+---
+*H:*
+
+A parameter object MAY have a member with the name "dataMask" where the value is an object which SHALL have the members "order" and “mask”. The value of "order" SHALL either be an array of strings such that each string is the name of the cooresponding dimension. Within the mask arrays the elements are provide such that the last name in the "order" array varies fastest.
+
+====
