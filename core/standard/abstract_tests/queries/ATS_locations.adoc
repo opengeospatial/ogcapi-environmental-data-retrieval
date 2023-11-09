@@ -26,9 +26,9 @@ step::: Validate that a document was returned with a status code 404.
 [%metadata]
 identifier:: /conf/locations/locations-nodata
 target:: /req/edr/rc-locations
-test-purpose:: Validate that a HTTP 204 is returned by a `Locations` query when there is no data available for requested locations.
+test-purpose:: Validate that an HTTP 204 message is returned by a `Locations` query when there is no data available for the requested locations.
 test-method::
-step::: Check that a HTTP 204 message is return when no data is available
+step::: Check that an HTTP 204 message is returned when no data is available
 step::: Validate that a document was returned with a status code 204.
 ====
 
