@@ -263,7 +263,7 @@ The EDR query object provides the metadata for the specified query type.
 .EDR Query Object
 |==========================
 |Field Name|Type|Required|Description
-|**link**  | <<col-links,Link>> object|**Yes**| Array of height values supported by the collection.
+|**link**  | <<col-links,Link>> object|**Yes**| Link to the data query.
 |==========================
 
 A data query object example for a collection that supports Position and Radius queries is shown below.
@@ -356,6 +356,7 @@ a set of key-value pairs, where the key is the name of the parameter and the val
 |**observedProperty** |<<col-observed_property,observedProperty>> object|**Yes**|  A formal definition of the parameter
 |extent |<<col-extent,Extent>> object|No|  Information on the spatio-temporal extent of the parameter values (if different from other parameters in the collection)
 |measurementType |<<col-measurement_type,measurementType>> object|No| Information on how the value was derived
+|dataMask |<<col-dataMask,DataMask>> object|No| Optional object for describing where data value availablity (1) and where its not (0).
 
 |==========================
 
@@ -417,6 +418,19 @@ The measurementType object provides basic information about how the parameter is
 * So if the measurement had a time value of **2020-04-05T14:30Z** and a measurementType duration of **-PT10M** the value is representative of the period **2020-04-05T14:20Z/2020-04-05T14:30Z**; if the measurement had a time value of **2020-04-05T14:30Z** and a measurementType duration of **PT10M** the value is representative of the period **2020-04-05T14:30Z/2020-04-05T14:40Z**
 
 |==========================
+
+[[col-dataMask]]
+=== DataMask Object
+The dataMask object provides the information to discover data value availabilty. 
+
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Unit Object
+|==========================
+|Field Name|Type|Required|Description
+|**order**  | String|**Yes**| Array of dimension names in the order of the values in the mask array
+|**mask**  | Array |**Yes**| Array of values indicating if the data is available (1) or missing (0)
+|==========================
+
 
 A Parameter names example is shown below.
 
@@ -480,7 +494,6 @@ A Parameter names example is shown below.
             "method": "instantaneous",
             "period": "PT0S"
         }
-    }
     }
 }
 
