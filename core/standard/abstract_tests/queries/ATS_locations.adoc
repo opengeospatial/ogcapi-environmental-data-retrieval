@@ -15,7 +15,7 @@ step::: Validate that a GeoJSON document was returned with a status code 200 con
 [%metadata]
 identifier:: /conf/locations/location-identifier-invalid
 target:: /req/edr/rc-locations
-test-purpose:: Validate that a error is returned by a `Locations` query when the locationId is invalid.
+test-purpose:: Validate that an error is returned by a `Locations` query when the locationId is invalid.
 test-method::
 step::: Check that invalid `locationId` values return an error message
 step::: Validate that a document was returned with a status code 404.
