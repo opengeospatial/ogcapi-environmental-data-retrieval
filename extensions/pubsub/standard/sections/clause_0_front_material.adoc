@@ -2,7 +2,7 @@
 
 [NOTE]
 ====
-This document provides an overview of Publish-Subscribe patterns specific to event driven data workflows, as well as options for realizing Publish-Subscribe workflow in OGC APIs. The document builds on the OGC Publish-Subscribe White Paper (OGC document 20-081), as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs (OGC document 23-013), and provides a baseline for Pub/Sub within the OGC API ecosystem.
+This specification provides an overview of Publish-Subscribe patterns specific to event driven data workflows, as well as options for realizing Publish-Subscribe workflow in OGC APIs. The document builds on the OGC Publish-Subscribe White Paper (OGC document 20-081), as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs (OGC document 23-013), and provides a baseline for Pub/Sub within the OGC API ecosystem.
 ====
 
 ////
@@ -30,7 +30,7 @@ Attention is drawn to the possibility that some of the elements of this document
 [abstract]
 == Abstract
 
-OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. This paper provides recommendations on applying Publish-Subscribe architectural patterns to OGC APIs.
+OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. This specification provides recommendations on applying Publish-Subscribe architectural patterns to OGC APIs.
 
 == Keywords
 
