@@ -1,6 +1,6 @@
 name: locationId
 in: path
 required: true
-description: Comma delimeted list of location idenitifiers (i.e. EGLL or EGLL,YBBN,CYOW or London,Brisbane)
+description: Comma delimeted list of location identifiers (i.e. EGLL or EGLL,YBBN,CYOW or London,Brisbane)
 schema:
     type: string
