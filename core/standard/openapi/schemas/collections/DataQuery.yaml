@@ -1,5 +1,5 @@
 description: Property to contain any extra metadata information that is specific
-  to an individual data queries
+  to an individual data query
 type: object
 required:
   - title
