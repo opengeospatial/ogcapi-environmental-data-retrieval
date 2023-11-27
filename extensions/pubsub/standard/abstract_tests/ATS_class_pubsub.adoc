@@ -1,0 +1,11 @@
+[[ats_pubsub]]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/pubsub
+subject:: Requirements Class "pubsub"
+classification:: Target Type:Pub/Sub
+====
+
+==== API
+
+include::./pubsub/ATS_test_api.adoc[]

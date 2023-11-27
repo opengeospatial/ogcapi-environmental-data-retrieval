@@ -1,0 +1,8 @@
+[[rc_pubsub-channel]]
+[cols="1,4",width="90%"]
+|===
+2+|*Requirements Class*
+2+|http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-channels
+|Target type |Pub/Sub
+|Dependency |pubsub
+|===

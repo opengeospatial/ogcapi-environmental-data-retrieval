@@ -1,0 +1,10 @@
+[[per_pubsub-message-payload_operation]]
+
+[permission,type="general",id="/per/pubsub-message-payload/operation", label="/per/pubsub-message-payload/operation"]
+====
+
+*A:*
+
+An OGC API Pub/Sub Notification Message MAY provide the `+properties.operation+` property to indicate if a resource has been inserted.
+
+====

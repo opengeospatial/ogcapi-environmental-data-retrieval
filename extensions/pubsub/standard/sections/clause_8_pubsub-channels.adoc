@@ -3,7 +3,7 @@
 
 === Overview
 
-include::../requirements/requirements_class_pubsub-channels.adoc[]
+include::../requirements/requirements_class_pubsub_channels.adoc[]
 
 ==== Channels
 
@@ -14,5 +14,5 @@ The OGC API endpoint hierarchy can be used in parallel as a channel description 
 
 Using the OGC API endpoint hierarchy provides the key benefit that OGC API users do not need to learn a different, additional approach or hierarchy for Pub/Sub (same content, additional interface).
 
-include::../recommendations/pubsub-channels/REC_message-payloads.adoc[]
 include::../requirements/pubsub-channels/REQ_rc-channels.adoc[]
+include::../recommendations/pubsub-channels/REC_message-payloads.adoc[]

@@ -1,0 +1,23 @@
+[[ats_pubsub-message-payload]]
+====
+[%metadata]
+label:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/pubsub-message-payload
+subject:: Requirements Class "pubsub-message-payload"
+classification:: Target Type:Pub/Sub
+====
+
+==== GeoJSON
+
+include::./ATS_test_geojson.adoc[]
+
+==== `+id+`
+
+include::./pubsub-message-payload/ATS_test_id.adoc[]
+
+==== `+properties.operation+`
+
+include::./pubsub-message-payload/ATS_test_id.adoc[]
+
+==== `+properties.pubtime+`
+
+include::./pubsub-message-payload/ATS_test_pubtime.adoc[]

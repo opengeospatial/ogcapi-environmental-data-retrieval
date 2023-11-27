@@ -1,0 +1,32 @@
+[[ats_pubsub-channels_channels]]
+[abstract_test]
+====
+[%metadata]
+label:: /conf/pubsub-channels/channels
+subject:: /conf/pubsub-channels/channels
+test-purpose:: Validate that an EDR service provides AsyncAPI capabilities.
+
+[.component,class=test method]
+=====
+[.component,class=step]
+--
+Construct a path for the API landing page
+--
+
+[.component,class=step]
+--
+Issue a HTTP GET request on that path
+--
+
+[.component,class=step]
+--
+Inspect all `+link+` objects in the response
+--
+
+[.component,class=step]
+--
+Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
+--
+
+=====
+====
