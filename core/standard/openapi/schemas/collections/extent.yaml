@@ -78,13 +78,13 @@ properties:
             - items:
                 type: number
               minItems: 4
-              maxItems: 4                
-              type: array  
+              maxItems: 4
+              type: array
             - items:
                 type: number
               minItems: 6
               maxItems: 6
-              type: array  
+              type: array
         example:
           - -180
           - -90
