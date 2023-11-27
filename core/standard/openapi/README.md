@@ -1,7 +1,7 @@
 # OpenAPI definitions
 
 This example API definition can be used to provide an OpenAPI 3.0 definition for an implementation of _OGC API - Environmental Data Retrieval_.
-The API definition can be visualized with [SwaggerUI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/standard/openapi/ogcapi-environmental-data-retrieval-1.bundled.json).
+The API definition can be visualized with [SwaggerUI](https://petstore.swagger.io/?url=https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/core/standard/openapi/ogcapi-environmental-data-retrieval-1.bundled.json).
 
 The list of supported paths should be adjusted in `ogcapi-environmental-data-retrieval-1.yaml`.
 
