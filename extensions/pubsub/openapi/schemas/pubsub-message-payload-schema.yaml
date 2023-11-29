@@ -1,5 +1,5 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema'
-$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
+$id: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/extensions/pubsub/openapi/schemas/pubsub-message-payload-schema.yaml'
 title: OGC API - Pub/Sub message payload definition
 description: OGC API - Pub/Sub message payload definition
 

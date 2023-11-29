@@ -50,7 +50,7 @@ providing awareness of how far behind the publisher they may be).
 }
 ----
 
-include::../requirements/pubsub-message-payload/REQ_pubtime.adoc[]
+include::../requirements/pubsub-message-payload/REQ_rc-pubtime.adoc[]
 
 ===== operation
 
@@ -67,4 +67,5 @@ is ``create``.
 }
 ----
 
-include::../requirements/pubsub-message-payload/REQ_operation.adoc[]
+include::../requirements/pubsub-message-payload/REQ_rc-operation.adoc[]
+include::../recommendations/pubsub-message-payload/PER_rc-operation.adoc[]

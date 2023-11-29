@@ -2,8 +2,8 @@
 [cols="1,4",width="90%"]
 |===
 2+|*Requirements Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/pubsub-message-payload
-|Target type |Web API
+2+|http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-message-payload
+|Target type |Pub/Sub
 |Dependency |Core
 |Dependency |<<rfc8259,IETF RFC 8259: The JavaScript Object Notation (JSON) Data Interchange Format>>
 |Dependency |<<json-schema, JSON Schema>>
