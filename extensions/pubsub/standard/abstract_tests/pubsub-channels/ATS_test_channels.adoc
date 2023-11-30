@@ -55,7 +55,7 @@ Issue a HTTP GET request on that path
 
 [.component,class=step]
 --
-In the matching channel object from the previous two staps, test that the channel name has an equivalent path in the OpenAPI document
+In the matching channel object from the previous two steps, test that the channel name has an equivalent path in the OpenAPI document
 --
 
 
