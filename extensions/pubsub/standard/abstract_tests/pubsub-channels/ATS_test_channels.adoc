@@ -28,5 +28,37 @@ Inspect all `+link+` objects in the response
 Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
 --
 
+[.component,class=step]
+--
+Issue a HTTP GET request on that path
+--
+
+[.component,class=step]
+--
+Ensure that at least one exists with `+rel=service-desc+` that corresponds to an OpenAPI 3 description
+--
+
+[.component,class=step]
+--
+Issue a HTTP GET request on that path
+--
+
+[.component,class=step]
+--
+In the AsyncAPI response, for each channel object, look for an `+x-ogc-api-link+, noting the `+href+` property
+--
+
+[.component,class=step]
+--
+Issue a HTTP GET request on that path
+--
+
+[.component,class=step]
+--
+In the matching channel object from the previous two staps, test that the channel name has an equivalent path in the OpenAPI document
+--
+
+
+
 =====
 ====
