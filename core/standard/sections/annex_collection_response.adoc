@@ -368,9 +368,11 @@ The unit object provides the information to describe the units of measure of the
 .Unit Object
 |==========================
 |Field Name|Type|Required|Description
-|**label**  | String|**Yes**| Name of the unit
-|**symbol**  | <<col-symbol,symbol>> object|**Yes**| Information to describe the symbols used to represent the unit
+|**label**  | String|**No^1^**| Name of the unit
+|**symbol**  | <<col-symbol,symbol>> object|**No^1^**| Information to describe the symbols used to represent the unit
 |==========================
+
+^1^ Either one of label or symbol or both attributes MUST be present in a unit object
 
 [[col-symbol]]
 === Symbol Object
@@ -380,8 +382,6 @@ The symbol object provides the information to describe the symbols which represe
 .Symbol Object
 |==========================
 |Field Name|Type|Required|Description
-|title  | String|No| Symbol name
-|description |String  |No| A text description of the symbol
 |value |String  |No| A Unicode representation for the symbol
 |type |String  |No| A URI to a registry entry providing more detailed information about the unit (i.e. https://www.qudt.org/[QUDT] is one example of a registry that provide links for many common units)
 |==========================
