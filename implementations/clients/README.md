@@ -8,6 +8,8 @@ We welcome pull requests to update this page to add or update an entry for a cli
 
 ## Native APIs / Libraries
 
+- [OWSLib](owslib.md)
+
 ## JavaScript APIs
 
 - [covjson-reader](covjson-reader.md)
