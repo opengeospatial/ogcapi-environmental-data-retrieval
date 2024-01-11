@@ -53,7 +53,7 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
 
 The links array could also provide references to the Pub/Sub capabilities available on the service. A *collection* link could reference a collection update notification channel.
 
-NOTE:  In the OGC API Suite of Standards, a collection is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
+NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
 
 .OGC API Pub/Sub link example to new collection notifications
 [source,json]
