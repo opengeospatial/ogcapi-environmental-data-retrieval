@@ -31,7 +31,7 @@ include::../recommendations/pubsub/REC_message-payloads.adoc[]
 
 ==== AsyncAPI
 
-Based on research and testing, the Pub/Sub White Paper recommended the use of AsyncAPI. AsyncAPI provides an event-driven equivalent of what is provided by OpenAPI for OGC API Standards (description of protocols, channels, parameters, models, etc.). An implementation of the OGC API landing page requirements class can provide a link to an AsyncAPI document as follows:
+Based on research and testing, the Pub/Sub White Paper recommended the use of AsyncAPI. AsyncAPI provides an event-driven equivalent of what is provided by OpenAPI for OGC API Standards (description of protocols, channels, parameters, models, etc.). An implementation of the https://ogcapi.ogc.org/common/overview.html[OGC API landing page requirements class] can provide a link to an AsyncAPI document as follows:
 
 [source,json]
 ----
