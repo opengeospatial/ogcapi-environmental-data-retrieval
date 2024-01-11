@@ -5,6 +5,6 @@
 
 *A:*
 
-An OGC API Pub/Sub notification message SHALL provide an `+id+` property as a GUID.
+A Pub/Sub notification message SHALL provide an `+id+` property as a GUID.
 
 ====
