@@ -5,27 +5,27 @@
 
 include::../requirements/requirements_class_pubsub.adoc[]
 
-Event-driven workflows provide publish-subscribe based capabilities as part of information systems and architectures. The publish-subscribe model also provides efficiencies in providing data "as it happens", thereby preventing potential clients from continuous polling to check on the availability of new data/resources.
+Event-driven workflows provide Publish-Subscribe based capabilities as part of information systems and architectures. The Publish-Subscribe model also provides efficiencies in providing data "as it happens", thereby preventing potential clients from continuous polling to check on the availability of new data or resources.
 
-The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The publish-subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: traffic conditions, weather or hazard warnings, and real-time sensor data).
+The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The Publish-Subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: traffic conditions, weather or hazard warnings, and real-time sensor data).
 
-Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-046] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the  EDR - Part 2: Publish-Subscribe Standard discusses approaches for integrating publish-subscribe architecture into the OGC API suite of Standards.
+Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-046] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the  EDR - Part 2: Publish-Subscribe Standard discusses approaches for integrating Publish-Subscribe architecture into the OGC API suite of Standards.
 
 include::../recommendations/pubsub/PER_protocols.adoc[]
 
 === OGC API Considerations
 
-The OGC API building block approach would typically be used for shared components in API implementations in support of a polling workflow. Using HTTP, this means that the client initiates and invokes requests and receives responses from the server.  A key concept of the OGC API building blocks afchitecture is the endpoint hierarchy, which can be applied for Pub/Sub workflow as follows:
+The OGC API building block approach would typically be used for shared components in API implementations in support of a polling workflow. Using HTTP, this means that the client initiates and invokes requests and receives responses from the server.  A key concept of the OGC API building blocks architecture is the endpoint hierarchy, which can be applied for Pub/Sub workflow as follows:
 
 * Data producers: Messages are published to a broker, applied to a given channel (example: ``collections/mycollection``).
 * Broker provisioning: Published messages are sent to subscribers.
-* Subscribers and data consumers: Messages are received by users subscribed to one or more channels (explicitly or using wildcards/filtering).
+* Subscribers and data consumers: Messages are received by users subscribed to one or more channels (explicitly or using wildcards or filtering).
 
 The above workflow requires adherence to a hierarchy of channels, auto-discovery of channels, as well as processing of generic messages for broad interoperability by all components.
 
 ==== Message payloads
 
-For smaller payload workflow, implementations of OGC API Standards can additionally provide a channel for notification metadata in order to receive a smaller message payload, which a user can process to determine whether to further interact with the reference data granule or resource.
+For smaller payload workflow, implementations of OGC API Standards can additionally provide a channel for notification metadata in order to receive a smaller message payload, which a user can process to determine whether to further interact with the referenced data granule or resource.
 
 include::../recommendations/pubsub/REC_message-payloads.adoc[]
 
