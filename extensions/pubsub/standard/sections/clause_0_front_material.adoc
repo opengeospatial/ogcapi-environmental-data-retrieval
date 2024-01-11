@@ -1,6 +1,5 @@
 .Preface
 
-[NOTE]
 ====
 The Environmental Data Retrieval - Part 2 Standard  provides:
 
@@ -45,7 +44,6 @@ OGC APIs provide Web based capabilities which are typically based on polling for
 
 == Preface
 
-[NOTE]
 ====
 Implementations of OGC API Standards provide Web based capabilities that are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. The following requirements and recommendations apply to Publish-Subscribe architectural patterns applicable to various OGC API Standards and their implementations.
 
@@ -79,9 +77,9 @@ All questions regarding this submission should be directed to the editor or the 
 |*Name* |*Affiliation*
 
 |Tom Kralidis |Meteorological Service of Canada
-|Steve Olson |NOAA/NWS
 |Chris Little|UK Met Office
 |Mark Burgoyne|UK Met Office
+|Steve Olson |NOAA/NWS
 |Shane Mill |NOAA/NWS
 
 |===
