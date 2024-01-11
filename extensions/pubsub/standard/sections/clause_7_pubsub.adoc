@@ -19,9 +19,9 @@ include::../recommendations/pubsub/PER_protocols.adoc[]
 
 The OGC API building block approach would typically be used for shared components in API implementations in support of a polling workflow. Using HTTP, this means that the client initiates and invokes requests and receives responses from the server.  A key concept of the OGC API building blocks afchitecture is the endpoint hierarchy, which can be applied for Pub/Sub workflow as follows:
 
-* Data producers: Messages are published to a broker, applied to a given channel (example: ``collections/mycollection``)
-* Broker provisioning: Published messages are sent to subscribers
-* Subscribers and data consumers: Messages are received by users subscribed to one or more channels (explicitly or using wildcards/filtering)
+* Data producers: Messages are published to a broker, applied to a given channel (example: ``collections/mycollection``).
+* Broker provisioning: Published messages are sent to subscribers.
+* Subscribers and data consumers: Messages are received by users subscribed to one or more channels (explicitly or using wildcards/filtering).
 
 The above workflow requires adherence to a hierarchy of channels, auto-discovery of channels, as well as processing of generic messages for broad interoperability by all components.
 
