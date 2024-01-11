@@ -4,7 +4,7 @@ This Standard defines Publish-Subscribe patterns specific to event driven data w
 Requirements for two standardization target types are considered:
 
 * API integration
-* PubSub channels, and
+* Pub/Sub channels, and
 * Message payload
 
 Conformance with this Standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
