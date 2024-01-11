@@ -5,6 +5,6 @@
 
 *A:*
 
-An OGC API Pub/Sub notification message encoding SHALL be compliant to IETF RFC7946 GeoJSON.
+A Pub/Sub notification message encoding SHALL be compliant to IETF RFC7946 GeoJSON.
 
 ====
