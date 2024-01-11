@@ -12,7 +12,7 @@ The OGC API endpoint hierarchy can be used in parallel as a channel description 
 - ``/collections``: Notifies Subscribers whenever there is a change to the ``/collections`` endpoint (for example, addition of a new collection). The message payload would be collection metadata as defined in the OGC API - Common Standard, or a message referencing same.
 - ``/collections/{collectionId}``: Notifies Subscribers whenever there is an update to a single collection (for example, spatial or temporal extents, new items, etc.). The message payload would be defined by the resource model of the given collection (items, etc.), or a message reference same
 
-Using the OGC API endpoint hierarchy provides the key benefit that users implementing OGC API Standards do not need to learn a different, additional approach or hierarchy for Pub/Sub (same content, additional interface).
+Using the OGC API endpoint hierarchy provides the key benefit that developers implementing OGC API Standards do not need to learn a different, additional approach or hierarchy for Pub/Sub (same content, additional interface).
 
 include::../requirements/pubsub-channels/REQ_rc-channels.adoc[]
 include::../recommendations/pubsub-channels/REC_message-payloads.adoc[]
