@@ -7,7 +7,7 @@ include::../requirements/requirements_class_pubsub_message_payload.adoc[]
 
 A key component of Pub/Sub workflows is the message payload. Once a client subscribes to one or more
 channels from a given Pub/Sub server, notifications messages are sent using a given
-representation or encoding. Notification messages can be put forth using any encoding that is deemed
+representation or encoding. Notification messages can be issued using any encoding that is deemed
 suitable by a given publisher.
 
 While the Publish-Subscribe (Pub/Sub) Requirements Class recommends a machine-readable message payload,
