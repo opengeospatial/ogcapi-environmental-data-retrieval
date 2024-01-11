@@ -11,6 +11,6 @@ A landing page SHALL provide a link reference to the description of its Publish-
 
 *B:*
 
-An API SHALL provide the description of its Publish-Subscribe capabilities using AsyncAPI to describe supported protocols, channels and message payload descriptions.
+An API SHALL provide the description of its Publish-Subscribe capabilities using AsyncAPI to describe supported protocols, channels, and message payload descriptions.
 
 ====
