@@ -5,18 +5,18 @@
 
 include::../requirements/requirements_class_pubsub_message_payload.adoc[]
 
-A key component of Pub/Sub workflows is message payload. Once a client subscribes to one or more
-channels from a given Pub/Sub server, notifications messages are sent accordingly using a given
+A key component of Pub/Sub workflows is the message payload. Once a client subscribes to one or more
+channels from a given Pub/Sub server, notifications messages are sent using a given
 representation or encoding. Notification messages can be put forth using any encoding that is deemed
 suitable by a given publisher.
 
-While the Publish-Subscribe (Pub/Sub) Requirements Class recommended a machine readable message payload,
-this Requirements Class provides further requirements for interoperability of message payloads as part of
-an OGC API ecosystem.
+While the Publish-Subscribe (Pub/Sub) Requirements Class recommends a machine-readable message payload,
+the Message Payload Requirements Class provides further requirements for interoperability of message payloads as part of
+an OGC API implementation ecosystem.
 
 ==== GeoJSON compliance
 
-_GeoJSON_ provides a compact and machine readable encoding as a baseline for message notification.
+_GeoJSON_ can provide a compact and machine readable encoding as a baseline for message notification.
 
 include::../requirements/pubsub-message-payload/REQ_rc-geojson.adoc[]
 include::../recommendations/pubsub-message-payload/REC_links.adoc[]
@@ -36,9 +36,7 @@ include::../requirements/pubsub-message-payload/REQ_rc-id.adoc[]
 
 ===== pubtime
 
-The ``pubtime`` property identifies the date/time of when the message was posted/published, in RFC3339 format, in
-the UTC timezone (``Z``). The publication date/time is critical for subscribers to prevent message loss in
-providing awareness of how far behind the publisher they may be).
+The ``pubtime`` property identifies the date/time of when the message was posted/published. `datetime` is published as specified in RFC3339 Clause 5.6 in the UTC timezone (``Z``). The publication date/time is critical for subscribers to prevent message loss in providing awareness of how far behind the publisher they may be.
 
 .Example pubtime property
 [source,json]
@@ -55,8 +53,7 @@ include::../requirements/pubsub-message-payload/REQ_rc-pubtime.adoc[]
 ===== operation
 
 The ``operation`` property indicates the stage of the lifecycle for the resource described in the notification,
-and can be used to notify users that a resource has been updated or deleted. The default value if not specified
-is ``create``.
+and can be used to notify users that a resource has been updated or deleted. If not specified, the default value is ``create``.
 
 [source,json]
 ----
