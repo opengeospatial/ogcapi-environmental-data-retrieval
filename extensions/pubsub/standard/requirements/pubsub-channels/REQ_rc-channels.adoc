@@ -5,6 +5,6 @@
 
 *A:*
 
-Channels (topic/destination/node depending on protocol) which have equivalent OGC API functionality SHALL be expressed within an AsyncAPI channel with an ``x-ogc-api-link`` object.
+Channels (topic/destination/node depending on protocol) that have equivalent API endpoint functionality SHALL be expressed within an AsyncAPI channel with an ``x-ogc-api-link`` object.
 
 ====

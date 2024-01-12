@@ -4,6 +4,6 @@
 
 *A:*
 
-An OGC API Pub/Sub notification message encoding describing data in a CRS other than WGS84 SHOULD use OGC Features and Geometries JSON.
+A Pub/Sub notification message encoding describing data in a CRS other than WGS84 SHOULD use OGC Features and Geometries JSON.
 
 ====

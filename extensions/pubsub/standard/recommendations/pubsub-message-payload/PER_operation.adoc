@@ -5,6 +5,6 @@
 
 *A:*
 
-An OGC API Pub/Sub Notification Message MAY provide the `+properties.operation+` property to indicate if a resource has been inserted.
+A Pub/Sub Notification Message MAY provide the `+properties.operation+` property to indicate if a resource has been inserted.
 
 ====
