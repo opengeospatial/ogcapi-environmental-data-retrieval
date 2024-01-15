@@ -10,34 +10,57 @@ info:
 
 servers:
     mqtt_prod:
-        url: example.org
+        host: example.org
         protocol: mqtt
         description: MQTT endpoint
         security:
             - user-password: []
+
 defaultContentType: application/json
 
 channels:
-    collections:
-        subscribe:
-            message:
-                $ref: '#/components/messages/collection_msg'
-    collections/wthr_stn:
-        subscribe:
-            message:
-                $ref: '#/components/messages/collection_msg'
-    collections/stream_gage:
-        subscribe:
-            message:
-                $ref: '#/components/messages/collection_msg'
-    collections/wthr_stn/items:
-        subscribe:
-            message:
-                $ref: '#/components/messages/wthr_stn_msg'
-    collections/stream_gage/items:
-        subscribe:
-            message:
-                $ref: '#/components/messages/stream_gage_msg'        
+    notify-collections:
+        address: collections
+        messages:
+            $ref: '#/components/messages/collection_msg'
+    notify-collections-wthr-stn:
+        address: collections/wthr_st:
+        messages:
+            $ref: '#/components/messages/collection_msg'
+    notify-collections-stream-gage:
+        address: collections/stream_gage:
+        messages:
+            $ref: '#/components/messages/collection_msg'
+    notify-collections-wthr_stn-items:
+        address: collections/wthr_stn/items:
+        messages:
+            $ref: '#/components/messages/wthr_stn_msg'
+    notify-collections-stream_gage-items:
+        address: collections/stream_gage/items:
+        messages:
+            $ref: '#/components/messages/stream_gage_msg'        
+
+operations:
+    notify-collections:
+        action: receive
+        channel:
+            $ref: '#/channels/notify-collections'
+    notify-collections-wthr-stn:
+        action: receive
+        channel:
+            $ref: '#/channels/notify-collections-wthr-stn'
+    notify-collections-stream-gage:
+        action: receive
+        channel:
+            $ref: '#/channels/notify-collections-stream_gage'
+    notify-collections-wthr_stn-items:
+        action: receive
+        channel:
+            $ref: '#/channels/notify-collections-wthr_stn-items'
+    notify-collections-stream_gage-items:
+        action: receive
+        channel:
+            $ref: '#/channels/notify-collections-stream_gage-items'
 
 components:
     messages:
