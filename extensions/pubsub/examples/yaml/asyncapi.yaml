@@ -1,4 +1,4 @@
-asyncapi: '2.5.0'
+asyncapi: '3.0.0'
 info:
     title: AsyncAPI demo
     version: '0.0.1'
