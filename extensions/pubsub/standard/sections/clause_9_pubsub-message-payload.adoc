@@ -19,7 +19,6 @@ an OGC API implementation ecosystem.
 _GeoJSON_ can provide a compact and machine readable encoding as a baseline for message notification.
 
 include::../requirements/pubsub-message-payload/REQ_rc-geojson.adoc[]
-include::../recommendations/pubsub-message-payload/REC_links.adoc[]
 
 ==== Identifier
 

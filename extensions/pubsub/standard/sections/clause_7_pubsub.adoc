@@ -23,12 +23,6 @@ The OGC API building block approach would typically be used for shared component
 
 The above workflow requires adherence to a hierarchy of channels, auto-discovery of channels, as well as processing of generic messages for broad interoperability by all components.
 
-==== Message payloads
-
-For smaller payload workflow, implementations of OGC API Standards can additionally provide a channel for notification metadata in order to receive a smaller message payload, which a user can process to determine whether to further interact with the referenced data granule or resource.
-
-include::../recommendations/pubsub/REC_message-payloads.adoc[]
-
 ==== AsyncAPI
 
 Based on research and testing, the Pub/Sub White Paper recommended the use of AsyncAPI. AsyncAPI provides an event-driven equivalent of what is provided by OpenAPI for OGC API Standards (description of protocols, channels, parameters, models, etc.). An implementation of the https://ogcapi.ogc.org/common/overview.html[OGC API landing page requirements class] can provide a link to an AsyncAPI document as follows:
