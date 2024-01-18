@@ -15,7 +15,7 @@ include::../recommendations/pubsub/PER_protocols.adoc[]
 
 === OGC API Considerations
 
-The OGC API building block approach would typically be used for shared components in API implementations in support of a polling workflow. Using HTTP, this means that the client initiates and invokes requests and receives responses from the server.  A key concept of the OGC API building blocks architecture is the service endpoint of the URL path specifying a resource and anysimialr sub-resources, which can be applied for Pub/Sub workflow as follows:
+The OGC API building block approach would typically be used for shared components in API implementations in support of a polling workflow. Using HTTP, this means that the client initiates and invokes requests and receives responses from the server.  A key concept of the OGC API building blocks architecture is the service endpoint of the URL path specifying a resource and any similar sub-resources, which can be applied for Pub/Sub workflow as follows:
 
 * Data producers: Messages are published to a broker, applied to a given channel (example: ``collections/mycollection``).
 * Broker provisioning: Published messages are sent to subscribers.
