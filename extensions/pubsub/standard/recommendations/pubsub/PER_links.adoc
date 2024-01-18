@@ -5,7 +5,7 @@
 
 *A:*
 
-A collection endpoint MAY provide a link reference to a Publish-Subscribe server from an OGC API implementation endpoint when Publish-Subscribe capabilities exist related to the collection endpoint.
+A `collection` resource MAY provide a link reference to a Publish-Subscribe server from an OGC API implementation endpoint when Publish-Subscribe capabilities exist related to the `collection` service endpoint.
 
 *B:*
 

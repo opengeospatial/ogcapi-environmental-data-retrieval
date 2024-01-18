@@ -1,7 +1,7 @@
 == Scope
 
 ====
-The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflows Standard defines building blocks that can be assembled to implement Publish-Subscribe workflows (discovery, topic structure, encoding) as part of OGC API - Environmental Data Retrieval - Part 1: Core.
+The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflows Standard defines building blocks that can be assembled to implement Publish-Subscribe workflows (discovery, topic structure, encoding) as part of OGC API - Environmental Data Retrieval - Part 1: Core. A topic structure is the structured information that a publisher makes available to allow subscribers to choose information of interest to them. 
 
 This Standard defines a discovery capability that contains a topic structure in support of binding to notifications for data access and retrieval.
 
