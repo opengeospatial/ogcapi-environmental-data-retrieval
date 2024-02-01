@@ -35,7 +35,7 @@ Attention is drawn to the possibility that some of the elements of this document
 [abstract]
 == Abstract
 
-OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow provides recommendations on applying Publish-Subscribe architectural patterns to implementations of one or more OGC APIs.
+OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features, records, items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for the delivery of data updates or notifications of updates. The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow provides recommendations on applying Publish-Subscribe architectural patterns to implementations of one or more OGC APIs.
 
 == Keywords
 
