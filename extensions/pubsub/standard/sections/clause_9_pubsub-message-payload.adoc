@@ -14,11 +14,17 @@ While the Publish-Subscribe (Pub/Sub) Requirements Class recommends a machine-re
 the Message Payload Requirements Class provides further requirements for interoperability of message payloads as part of
 an OGC API implementation ecosystem.
 
-==== GeoJSON compliance
+==== JSON, GeoJSON and FG-JSON
 
-_GeoJSON_ can provide a compact and machine readable encoding as a baseline for message notification.
+_JSON_ is a widely used, flexible, relatively compact, format that is both machine readable and amenable to human inspection.  A restricted profile of _JSON_, _GeoJSON_, can be used for geospatial data to improve interoperability, but it specifies that geospatial coordinate data must only use the _WGS84_ coordinate reference system. _GeoJSON_ is defined in the standard IETF RFC7946.
+
+If _GeoJSON_ is used as a payload for message notification, then
 
 include::../requirements/pubsub-message-payload/REQ_rc-geojson.adoc[]
+
+If a Coordinate Reference System other than _WGS84_ is used, then the _OGC Features and Geometry JSON_ extension to _GeoJSON_ should be used. 
+
+include::../recommendations/pubsub-message-payload/REC_crs.adoc[]
 
 ==== Identifier
 
