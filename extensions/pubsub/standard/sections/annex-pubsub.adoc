@@ -5,7 +5,7 @@
 [[async-examples]]
 === Pub/Sub API Description Example
 
-The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specification] and an example response can be found below:
+The API is described using the https://www.asyncapi.com/[AysncAPI 3.0.0 specification] and an example response can be found below:
 
 ====
 [source,yaml]
