@@ -12,6 +12,8 @@ The OGC API service endpoint specified by a URL path of resources and sub-resour
 - ``/collections``: Notifies Subscribers whenever there is a change to the ``/collections`` resource (for example, addition of a new collection). The message payload would be collection metadata as defined in the https://docs.ogc.org/DRAFTS/20-024.html#collection-description[OGC API - Common Standard], or a message referencing the collection metadata.
 - ``/collections/{collectionId}``: Notifies Subscribers whenever there is an update to a single `collection` resource (for example, spatial or temporal extents, new items, etc.). The message payload would be defined by the resource model of the given collection (items, etc.), or a message referencing the resource model of the collection.
 
+For example, users could use a subscription to metadata records, which are usually small conpared to the source data, and are therefore more transportable. This informs and notifies the user of changes prior to requesting the possibly large source data, especially when bandwidth is at a premium.
+
 Using the OGC API service endpoints of the URL path of resource and sub-resources provides the key benefit that developers implementing OGC API Standards do not need to learn a different, additional approach or resource path for Pub/Sub (same content, additional interface).
 
 include::../requirements/pubsub-channels/REQ_rc-channels.adoc[]
