@@ -1,4 +1,8 @@
 [obligation=informative]
 == Overview
 
-Implementations of OGC API Standards provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data resource updates. The following requirements and recommendations apply to Publish-Subscribe architectural patterns for use with implementations of OGC API Standards.
+Implementations of OGC API Standards provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data resource updates.
+
+The following requirements and recommendations apply to Publish-Subscribe architectural patterns for use with implementations of OGC API Standards.
+
+The Publish-Subcribe architecture assumes reasonable connectivity or favourable DDIL conditions. DDIL refers to Denied, Disrupted, Intermittent, and Limited communications. 
