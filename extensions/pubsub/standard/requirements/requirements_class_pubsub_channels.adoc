@@ -3,7 +3,7 @@
 .Requirements Class 'Publish-Subscribe (Pub/Sub) Channels'
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-channels
+identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-channels
 subject:: Pub/Sub
 requirement:: /req/pubsub-channels/channels
 ====
