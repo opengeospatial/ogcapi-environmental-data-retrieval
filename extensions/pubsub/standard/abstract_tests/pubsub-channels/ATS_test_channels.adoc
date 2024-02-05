@@ -10,7 +10,7 @@ test-method::
 1. Construct a path for the API landing page
 2. Issue a HTTP GET request on that path
 3. Inspect all `+link+` objects in the response
-4. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
+4. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 3.0 description
 5. Issue a HTTP GET request on that path
 6. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an OpenAPI 3 description
 7. Issue a HTTP GET request on that path
