@@ -1,42 +1,18 @@
-[[ats_pubsub-message-payload_geojson]]
 [abstract_test]
 ====
 [%metadata]
-label:: /conf/pubsub-message-payload/geojson
-subject:: /conf/pubsub-message-payload/geojson
+identifier:: /conf/pubsub-message-payload/geojson
+target:: /req/pubsub-message-payload/geojson
 test-purpose:: Validate that a notification message is a valid GeoJSON document.
-
-[.component,class=test method]
-=====
-[.component,class=step]
---
-Construct a path for the API landing page
+test-method::
++
 --
 
-[.component,class=step]
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Find a link that contains `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
+5. Using the server endpoint, subscribe to a given topic.
+6. Upon receiving a message against the selected topic, validate that the message is GeoJSON compliant.
 --
-Issue a HTTP GET request on that path
---
-
-[.component,class=step]
---
-Inspect all `+link+` objects in the response
---
-
-[.component,class=step]
---
-Find a link that contains `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
---
-
-[.component,class=step]
---
-Using the server endpoint, subscribe to a given topic.
---
-
-[.component,class=step]
---
-Upon receiving a message against the selected topic, validate that the message is GeoJSON compliant.
---
-
-=====
 ====

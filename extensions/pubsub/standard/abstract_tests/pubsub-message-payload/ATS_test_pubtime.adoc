@@ -1,42 +1,17 @@
-[[ats_pubsub-message-pubtime]]
 [abstract_test]
 ====
 [%metadata]
-label:: /conf/pubsub-message-payload/pubtime
-subject:: /conf/pubsub-message-payload/pubtime
+identifier:: /conf/pubsub-message-payload/pubtime
+target:: /req/pubsub-message-payload/pubtime
 test-purpose:: Validate that a notification message provides a `properties.pubtime` property.
-
-[.component,class=test method]
-=====
-[.component,class=step]
+test-method::
++
 --
-Construct a path for the API landing page
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Find a link that contains `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
+5. Using the server endpoint, subscribe to a given topic.
+6. Upon receiving a message against the selected topic, ensure that the message has a `properties.pubtime` property whose value a valid RFC3339 datetime.
 --
-
-[.component,class=step]
---
-Issue a HTTP GET request on that path
---
-
-[.component,class=step]
---
-Inspect all `+link+` objects in the response
---
-
-[.component,class=step]
---
-Find a link that contains `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
---
-
-[.component,class=step]
---
-Using the server endpoint, subscribe to a given topic.
---
-
-[.component,class=step]
---
-Upon receiving a message against the selected topic, ensure that the message has a `properties.pubtime` property whose value a valid RFC3339 datetime.
---
-
-=====
 ====

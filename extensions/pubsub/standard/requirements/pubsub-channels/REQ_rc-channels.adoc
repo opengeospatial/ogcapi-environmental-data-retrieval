@@ -1,10 +1,7 @@
 [[req_pubsub-channels_channels]]
-
-[requirement,type="general",id="/req/pubsub-channels/channels", label="/req/pubsub-channels/channels"]
+[requirement]
 ====
-
-*A:*
-
-Channels (topic/destination/node depending on protocol) that have equivalent API endpoint functionality SHALL be expressed within an AsyncAPI channel with an ``x-ogc-api-link`` object.
-
+[%metadata]
+identifier:: /req/pubsub-channels/channels
+part:: Channels (topic/destination/node depending on protocol) that have equivalent API endpoint functionality SHALL be expressed within an AsyncAPI channel with an ``x-ogc-api-link`` object.
 ====

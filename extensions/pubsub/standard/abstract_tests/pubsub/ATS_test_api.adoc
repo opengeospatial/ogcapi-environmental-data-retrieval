@@ -1,32 +1,15 @@
-[[ats_pubsub_api]]
 [abstract_test]
 ====
 [%metadata]
-label:: /conf/pubsub/api
-subject:: /conf/pubsub/api
+identifier:: /conf/pubsub/api
+target:: /req/pubsub/api
 test-purpose:: Validate that an EDR service provides AsyncAPI capabilities.
-
-[.component,class=test method]
-=====
-[.component,class=step]
+test-method::
++
 --
-Construct a path for the API landing page
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
 --
-
-[.component,class=step]
---
-Issue a HTTP GET request on that path
---
-
-[.component,class=step]
---
-Inspect all `+link+` objects in the response
---
-
-[.component,class=step]
---
-Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 2.0 description
---
-
-=====
 ====

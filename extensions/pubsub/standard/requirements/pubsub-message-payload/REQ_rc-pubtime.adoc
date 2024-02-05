@@ -1,10 +1,7 @@
 [[req_pubsub-message-payload_pubtime]]
-
-[requirement,type="general",id="/req/pubsub-message-payload/pubtime", label="/req/pubsub-message-payload/pubtime"]
+[requirement]
 ====
-
-*A:*
-
-A Pub/Sub notification message SHALL provide a `+properties.pubtime+` property in RFC3339 format.
-
+[%metadata]
+identifier:: /req/pubsub-message-payload/pubtime
+part:: A Pub/Sub notification message SHALL provide a `+properties.pubtime+` property in RFC3339 format.
 ====
