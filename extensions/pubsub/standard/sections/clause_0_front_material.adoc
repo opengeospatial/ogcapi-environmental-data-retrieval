@@ -1,6 +1,5 @@
 .Preface
 
-====
 The Environmental Data Retrieval - Part 2 Standard  provides:
 
 1. Requirements for Publish-Subscribe patterns specific to event driven data workflows and 
@@ -8,7 +7,6 @@ The Environmental Data Retrieval - Part 2 Standard  provides:
 2. Options for realizing Publish-Subscribe workflow in OGC APIs. 
 
 The Standard is based on the OGC Publish-Subscribe White Paper https://portal.ogc.org/files/?artifact_id=94904&version=1[OGC 20-081], as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs https://docs.ogc.org/dp/23-013.html[OGC 23-013]. The goal of this Standard is to provide a baseline for Pub/Sub within the OGC API ecosystem.
-====
 
 ////
 *OGC Declaration*

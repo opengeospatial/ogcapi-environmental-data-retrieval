@@ -1,10 +1,7 @@
 [[per_pubsub_protocols]]
-[permission,type="general",id="/per/pubsub/protocols", label="/per/pubsub/protocols"]
+[permission]
 ====
-
-*A:*
-
-A Publish-Subscribe MAY use the message queueing protocol of their choice and/or based on application requirements.
-
-
+[%metadata]
+identifier:: /per/pubsub/protocols
+part:: A Publish-Subscribe MAY use the message queueing protocol of their choice and/or based on application requirements.
 ====

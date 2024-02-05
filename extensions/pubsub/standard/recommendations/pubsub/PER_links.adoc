@@ -1,14 +1,8 @@
 [[per_pubsub_links]]
-
-[permission,type="general",id="/per/pubsub/links", label="/per/pubsub/links"]
+[permission]
 ====
-
-*A:*
-
-A `collection` resource MAY provide a link reference to a Publish-Subscribe server from an OGC API implementation endpoint when Publish-Subscribe capabilities exist related to the `collection` service endpoint.
-
-*B:*
-
-A Publish-Subscribe collection link reference MAY provide the `+channel+` property to allow for granular subscription.
-
+[%metadata]
+identifier:: /per/pubsub/links
+part:: A `collection` resource MAY provide a link reference to a Publish-Subscribe server from an OGC API implementation endpoint when Publish-Subscribe capabilities exist related to the `collection` service endpoint.
+part:: A Publish-Subscribe collection link reference MAY provide the `+channel+` property to allow for granular subscription.
 ====

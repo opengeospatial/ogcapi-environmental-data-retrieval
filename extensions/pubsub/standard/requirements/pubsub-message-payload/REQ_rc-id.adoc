@@ -1,10 +1,7 @@
 [[req_pubsub-message-payload_id]]
-
-[requirement,type="general",id="/req/pubsub-message-payload/id", label="/req/pubsub-message-payload/id"]
+[requirement]
 ====
-
-*A:*
-
-A Pub/Sub notification message SHALL provide an `+id+` property as a GUID.
-
+[%metadata]
+identifier:: /req/pubsub-message-payload/id
+part:: A Pub/Sub notification message SHALL provide an `+id+` property as a GUID.
 ====

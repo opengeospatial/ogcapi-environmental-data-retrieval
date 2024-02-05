@@ -1,11 +1,8 @@
-[[ats_pubsub-message-channels]]
+[conformance_class]
 ====
 [%metadata]
-label:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/pubsub-message-channels
-subject:: Requirements Class "pubsub-message-channels"
+identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-message-channels
+target:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-message-channels
 classification:: Target Type:Pub/Sub
-====
-
-==== Channels
-
-include::./pubsub-channels/ATS_test_channels.adoc[]
+abstract-test:: /conf/pubsub-channels/channels
+===

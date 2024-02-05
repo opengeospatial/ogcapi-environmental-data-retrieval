@@ -1,8 +1,9 @@
-[[rc_pubsub-channel]]
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class*
-2+|http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-channels
-|Target type |Pub/Sub
-|Dependency |pubsub
-|===
+[[rc_pubsub-channels]]
+[requirements_class]
+.Requirements Class 'Publish-Subscribe (Pub/Sub) Channels'
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-channels
+subject:: Pub/Sub
+requirement:: /req/pubsub-channels/channels
+====

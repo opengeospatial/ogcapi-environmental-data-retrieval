@@ -1,9 +1,7 @@
 [[rec_pubsub-channels-message-payloads]]
-[recommendation,type="general",id="/rec/pubsub-channels/message-payloads", label="/rec/pubsub-channels/message-payloads"]
+[recommendation]
 ====
-
-*A:*
-
-A Publish-Subscribe server's message payload SHOULD be machine readable to enable automated workflow.
-
+[%metadata]
+identifier:: /rec/pubsub-channels/message-payloads
+part:: A Publish-Subscribe server's message payload SHOULD be machine readable to enable automated workflow.
 ====
