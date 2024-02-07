@@ -1,6 +1,6 @@
 description: Data ranges required to construct valid queries for the choosen data collection
 content:
-  application/prs.coverage+json:
+  application/vnd.cov+json:
     schema:
       $ref: ../../schemas/covjson/coverageJSON.yaml
   application/geo+json:
