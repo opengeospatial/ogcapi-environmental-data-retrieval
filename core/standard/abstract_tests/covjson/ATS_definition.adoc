@@ -8,5 +8,5 @@ test-purpose:: Verify support for CoverageJSON
 test-method::
 . A resource is requested with response media type of `application/vnd.cov+json`
 . All `200`-responses SHALL support the following media types:
-   - `application/prs.coverage+json` for resources
+   - `application/vnd.cov+json` for resources
 ====
