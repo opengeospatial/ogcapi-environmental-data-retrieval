@@ -126,7 +126,6 @@ properties:
           maxItems: 2
           items:
             type: string
-            format: date-time
             nullable: true
           example:
             - ["2020-11-12T12:15Z","2020-11-12T12:15Z"]
@@ -148,7 +147,6 @@ properties:
         items:
           type: string
           minItems: 1
-          format: date-time
           nullable: true
           example:
             - ["2020-11-12T12:15Z"]
