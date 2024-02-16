@@ -169,7 +169,7 @@ Different Pub/Sub protocols are supported as additional server objects, and can 
 ----
 ====
 
-* The `operations` section lists the required operations and their send and receive capabiliites.
+* The `operations` section lists the required operations and their send and receive capabilities.
 
 ====
 [source,yaml]
