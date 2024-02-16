@@ -15,11 +15,10 @@ An example WIS2 Notification Message can be found below, extending the OGC API -
 ====
 [source,json]
 ----
-include::https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/extensions/pubsub/examples/json/pubsub-message-payload.json[]
+include::../../examples/json/pubsub-message-payload.json[]
 ----
 ====
 
-== Pub/Sub Message Payload Schema (Normative)
 
 [[message-payload-schema]]
 
@@ -28,6 +27,6 @@ include::https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-d
 ====
 [source,yaml]
 ----
-include::https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/extensions/pubsub/openapi/schemas/pubsub-message-payload-schema.yaml[]
+include::../../openapi/schemas/pubsub-message-payload-schema.yaml[]
 ----
 ====

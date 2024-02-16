@@ -15,4 +15,11 @@ This repository contains the content for an OGC standard.
 
 == Building
 
-Run `make`.
+Build the document from the folder above.
+
+```
+cd /GitHub/ogcapi-environmental-data-retrieval/extensions/pubsub
+
+docker run -v "$(pwd)":/metanorma -v ${HOME}/.fontist/fonts/:/config/fonts  metanorma/metanorma  metanorma compile --agree-to-terms -t ogc -x html,pdf standard/document.adoc
+
+```
