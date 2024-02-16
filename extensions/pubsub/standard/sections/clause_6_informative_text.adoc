@@ -6,3 +6,6 @@ Implementations of OGC API Standards provide Web based capabilities which are ty
 The following requirements and recommendations apply to Publish-Subscribe architectural patterns for use with implementations of OGC API Standards.
 
 The Publish-Subscribe architecture assumes reasonable connectivity or favourable DDIL conditions. DDIL refers to Denied, Disrupted, Intermittent, or Limited communications.
+
+.Example of Publish-Subscribe workflow using OGC APIs
+image::images/example-pubsub-workflow-ogcapi.png[Example of Publish-Subscribe workflow using OGC APIs]
