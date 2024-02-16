@@ -1,8 +1,8 @@
 = OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow
 :doctype: standard
 :encoding: utf-8
-:lang: en
-:status: draft
+:language: en
+:status: public-rfc
 :committee: technical
 :draft: 1.0
 :external-id: http://www.opengis.net/doc/IS/ogcapi-edr-2/1.0
@@ -16,7 +16,7 @@
 :fullname_3: Mark Burgoyne
 :fullname_4: Steve Olson
 :fullname_5: Shane Mill
-:docsubtype: Interface
+:docsubtype: extension
 :keywords: OGC API, Pub/Sub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
 :submitting-organizations: Meteorological Service of Canada; UK Met Office; US National Weather Service;
 :mn-document-class: ogc

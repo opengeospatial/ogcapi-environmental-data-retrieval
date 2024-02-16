@@ -5,6 +5,7 @@
 
 include::../requirements/requirements_class_pubsub.adoc[]
 
+
 Event-driven workflows provide Publish-Subscribe based capabilities as part of information systems and architectures. The Publish-Subscribe model also provides efficiencies in providing data "as it happens", thereby preventing potential clients from continuous polling to check on the availability of new data or resources.
 
 The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The Publish-Subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: traffic conditions, weather or hazard warnings, and real-time sensor data).
