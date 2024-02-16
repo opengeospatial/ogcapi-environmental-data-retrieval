@@ -1,5 +1,4 @@
-.Preface
-
+== Preface
 The Environmental Data Retrieval - Part 2 Standard  provides:
 
 1. Requirements for Publish-Subscribe patterns specific to event driven data workflows and 
@@ -42,7 +41,6 @@ OGC APIs provide Web based capabilities which are typically based on polling for
 
 == Preface
 
-====
 Implementations of OGC API Standards provide Web based capabilities that are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. The following requirements and recommendations apply to Publish-Subscribe architectural patterns applicable to various OGC API Standards and their implementations.
 
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
