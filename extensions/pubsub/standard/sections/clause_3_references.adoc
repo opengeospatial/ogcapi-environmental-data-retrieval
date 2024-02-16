@@ -5,17 +5,15 @@ The following normative documents contain provisions that, through reference in 
 
 * [[[AMQP10,AMQP v1.0]]], _Advanced Message Queueing Protocol (AMQP) v1.0)_ https://www.oasis-open.org/standard/amqp
 
-* [[[MQTT311,MQTT v3.1.1]]], _MQTT Version 3.1.1 Plus Errata 01_ https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html
-
 * [[[MQTT50,MQTT v5.0]]], _MQTT Version 5.0_ https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
 
-* [[[AsyncAPI250,AsyncAPI 2.5.0]]], _AsyncAPI Specification_ https://www.asyncapi.com/docs/reference/specification/v2.5.0
+* [[[AsyncAPI300,AsyncAPI 3.0.0]]], _AsyncAPI Specification_ https://www.asyncapi.com/docs/reference/specification/v3.0.0
 
-* [[[WIS2Guide,WMO WIS2 Guide]]], _Draft guidance on technical specifications of WIS 2.0_ https://wmo-im.github.io/wis2-guide
+* [[[WIS2Guide,WMO WIS2 Guide]]], _DRAFT WMO guidance on technical specifications of WIS 2.0_ https://wmo-im.github.io/wis2-guide
 
-* [[[WMO-WNM,WNM]]], _DRAFT WMO WIS2 Notification Message_ https://github.com/wmo-im/wis2-notification-message
+* [[[WMO-WNM,WMO WNM]]], _DRAFT WMO WIS2 Notification Message_ https://github.com/wmo-im/wis2-notification-message
 
-* [[[WMO-TOPICS,WMO-TOPICS]]], _DRAFT WMO WIS2 Topic Hierarchy_ https://github.com/wmo-im/wis2-topic-hierarchy
+* [[[WMO-TOPICS,WMO TOPICS]]], _DRAFT WMO WIS2 Topic Hierarchy_ https://github.com/wmo-im/wis2-topic-hierarchy
 
 * [[[WebSockets,WebSockets]]], _WebSockets_ https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
 
@@ -23,12 +21,10 @@ The following normative documents contain provisions that, through reference in 
 
 * [[[OGC19-086r5,OGC 19-086r5]]], _OGC API - Environmental Data Retrieval Standard_ (2022)
 
-* [[[OGC06-121r9,OGC 06-121r9]]], _OGC Web Services Common Standard_ (2010)
-
 * [[[OGC17-069r4,OGC 17-069r4]]], _OGC API - Features - Part 1: Core corrigendum_ (2022)
 
 * [[[OGC20-004,OGC 20-004]]], _DRAFT OGC API - Records - Part 1: Core_ (2020)
 
-* [[[OGC21-045,OGC 21-045]]], _DRAFT OGC Feature and Geometriews JSON - Part 1: Core_ (2021)
+* [[[OGC21-045,OGC 21-045]]], _DRAFT OGC Features and Geometries JSON - Part 1: Core_ (2021)
 
 * [[[RFC7946,RFC 7946]]], _GeoJSON_, https://www.rfc-editor.org/rfc/rfc7946

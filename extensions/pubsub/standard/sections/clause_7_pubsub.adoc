@@ -28,6 +28,7 @@ The above workflow requires adherence to a structure of information channels, au
 
 Based on research and testing, the Pub/Sub White Paper recommended the use of AsyncAPI. AsyncAPI provides an event-driven equivalent of what is provided by OpenAPI for OGC API Standards (description of protocols, channels, parameters, models, etc.). An implementation of the https://ogcapi.ogc.org/common/overview.html[OGC API landing page requirements class] can provide a link to an AsyncAPI document as follows:
 
+.OGC API landing page example link to an AsyncAPI document
 [source,json]
 ----
 {
@@ -62,11 +63,13 @@ NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.h
 }
 ----
 
+==== Providing Pub/Sub links to collection item notifications
+
 An *items* link could reference a data payload channel:
 
-.OGC API Pub/Sub link examples to collection item notifications
-
 An OGC API - Features example
+
+.OGC API - Features example linking to a data payload channel
 [source,json]
 ----
 {
@@ -79,6 +82,8 @@ An OGC API - Features example
 ----
 
 An OGC API - EDR example
+
+.OGC API - EDR example linking to a data payload channel
 [source,json]
 ----
 {
