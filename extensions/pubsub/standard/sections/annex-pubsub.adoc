@@ -10,7 +10,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 3.0.0 specific
 ====
 [source,yaml]
 ----
-include::https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/extensions/pubsub/examples/yaml/asyncapi.yaml[]
+include::../../examples/yaml/asyncapi.yaml[]
 ----
 ====
 
@@ -57,6 +57,7 @@ Breaking down into the components:
     ** `security`: reference to supported authentication types
 
 ====
+[source,yaml]
 ----
 servers:
     mqtt:
@@ -142,8 +143,8 @@ Different Pub/Sub protocols are supported as additional server objects, and can 
 ** `collections/stream_gage/items`
 
 ====
-----
 [source,yaml]
+----
     operations:
         notify-collections:
             action: receive
