@@ -10,7 +10,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 3.0.0 specific
 ====
 [source,yaml]
 ----
-include::../../examples/yaml/asyncapi.yaml[]
+include::https://raw.githubusercontent.com/opengeospatial/ogcapi-environmental-data-retrieval/master/extensions/pubsub/examples/yaml/asyncapi.yaml[]
 ----
 ====
 
@@ -30,6 +30,7 @@ Breaking down into the components:
             email: you@example.org
 ----
 ====
+
 * The `asyncapi` field indicates you use the AsyncAPI version 3.0.0.
 * The `info` field holds information about the API, such as its name, version, description, and license.
 
@@ -40,13 +41,14 @@ Breaking down into the components:
         mqtt_prod:
             host: example.org
             protocol: mqtt
-            protocolVersion: 3.1.1
+            protocolVersion: 5.0
             description: MQTT endpoint
             security:
                 - user-password: []
 
 ----
 ====
+
 * Each `server` object provides the following fields:
     ** `host`: the server hostname and port
     ** `protocol`: Pub/Sub protocol supported by the server 
@@ -60,7 +62,7 @@ servers:
     mqtt:
         host: example.org
         protocol: mqtt
-        protocolVersion: 3.1.1
+        protocolVersion: 5.0
         description: MQTT endpoint
         variables:
             port:

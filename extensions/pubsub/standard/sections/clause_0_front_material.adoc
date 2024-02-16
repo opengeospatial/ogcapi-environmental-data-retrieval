@@ -63,10 +63,6 @@ Independent of any authentication type VRRP includes a mechanism (setting TTL=25
 NOTE: The security measures discussed in the following sections only provide various kinds of authentication. No confidentiality is provided at all. This should be explicitly described as outside the scope....”
 ////
 
-== Submitting organizations
-
-// Submitting organizations inserted here by Metanorma
-
 == Submitters
 
 All questions regarding this submission should be directed to the editor or the submitters:
@@ -81,11 +77,3 @@ All questions regarding this submission should be directed to the editor or the 
 |Shane Mill |NOAA/NWS
 
 |===
-
-== Contributors
-
-//This clause is optional.
-
-Additional contributors to this Standard include the following:
-
-Individual name(s), Organization
