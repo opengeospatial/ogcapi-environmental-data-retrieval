@@ -20,15 +20,15 @@ required: false
 schema:
   oneOf:
     - items:
-        minItems: 4
-        maxItems: 4
         type: number
-      type: array  
+      type: array
+      minItems: 4
+      maxItems: 4
     - items:
-        minItems: 6
-        maxItems: 6
         type: number
       type: array  
+      minItems: 6
+      maxItems: 6
 style: form
 explode: false
 ----

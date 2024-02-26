@@ -12,7 +12,7 @@ This document outlines EDR API support of the design principles of the [OGC Web 
   - provide query types as convenience / shortcuts to common subsetting patterns
 - [x]  Principle #3 - Use Well-Known Resource Types
   - provides a resource agnostic and inclusive API
-  - CoverageJSON resource type is `application/prs.coverage+json`. Another type may be registered with IANA if appropriate
+  - CoverageJSON resource type is `application/vnd.cov+json`. Another type may be registered with IANA if appropriate
 - [x]  Principle #4 – Construct consistent URIs
   - adopts collection of resources principle
     - `/collections/{collectionId}/items`

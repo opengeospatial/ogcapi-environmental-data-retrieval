@@ -10,5 +10,5 @@ step::: Verify that the `variables` object has a `query_type` property
 step::: Verify that the value of the `query_type` property matches the name of the data query type
 step::: If the `variables` object has an `output_formats` property verify that it is an array of strings
 step::: If the `variables` object has a `default_output_format` property verify that the value is in either the `output_formats` property of the `variables` object or the `output_formats` property of the parent collection.
-step::: If the `variables` object has a `crs_details` property verify that it is an array of crs objects, and each member object of the array has `crs_details` and `wkt` properties.
+step::: If the `variables` object has a `crs_details` property verify that it is an array of crs objects, and each member object of the array has `crs` and `wkt` properties.
 ====

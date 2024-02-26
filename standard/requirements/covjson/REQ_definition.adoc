@@ -11,7 +11,7 @@ identifier:: /req/covjson/definition
 
 
 
-* `application/prs.coverage+json` for resources that include data content, and
+* `application/vnd.cov+json` for resources that include data content, and
 
 * `application/json` for all other resources.
 

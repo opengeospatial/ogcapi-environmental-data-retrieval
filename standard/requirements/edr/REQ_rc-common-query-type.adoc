@@ -22,7 +22,7 @@ A `link` property SHALL include a `rel` property
 ---
 *D:*
 
-A `link` property SHALL include a `variables` property
+A `link` property of a `<<col-data_queries,data_queries>>` object SHALL include a `variables` property 
 
 ---
 *E:*

@@ -4,19 +4,19 @@ Having multiple versions or instances of the same <<collection-definition,collec
 
 A unique identifier for the instance of the <<collection-definition,collection>> is specified as:
 
-/collections/{collectionId}/instance/{instanceId}
+/collections/{collectionId}/instances/{instanceId}
 
 .Return the Raw data instance metadata (instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>>
 =================
 
-/collections/metar/instance/raw
+/collections/metar/instances/raw
 
 =================
 
 .Return the Level 1 Quality controlled data instance (instanceId = qc_lvl_1) metadata for the Metar (collectionId = metar) <<collection-definition,collection>>
 =================
 
-/collections/metar/instance/qc_lvl_1
+/collections/metar/instances/qc_lvl_1
 
 =================
 
@@ -26,7 +26,7 @@ A unique identifier for the instance of the <<collection-definition,collection>>
 
 The queryType options are exactly the same as those available for <<collection-definition,collections>> that do not have multiple instances and support the same query parameters and functionality.  See <<query-resource-table>> for the  mappings of the query types. The queryType structure is:
 
-/collections/{collectionId}/instance/{instanceId}/{queryType}
+/collections/{collectionId}/instances/{instanceId}/{queryType}
 
 See <<query-resources-section>> for details of the query parameters supported by the queryTypes.
 
@@ -34,7 +34,7 @@ See <<query-resources-section>> for details of the query parameters supported by
 .A position query on a Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>>
 =================
 
-/collections/metar/instance/raw/position
+/collections/metar/instances/raw/position
 
 
 =================
@@ -43,7 +43,7 @@ See <<query-resources-section>> for details of the query parameters supported by
 .A trajectory query on a Raw data instance(instanceId = raw) for the Metar ((collectionId = metar) <<collection-definition,collection>>
 =================
 
-/collections/metar/instance/raw/trajectory
+/collections/metar/instances/raw/trajectory
 
 
 =================

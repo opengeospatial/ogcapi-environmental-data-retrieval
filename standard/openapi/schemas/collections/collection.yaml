@@ -106,6 +106,11 @@ properties:
         properties:
           link:
             $ref: itemsLink.yaml
+      instances:
+        type: object
+        properties:
+          link:
+            $ref: instancesLink.yaml            
   crs:
     description: list of the coordinate reference systems the collection results can support
     type: array
