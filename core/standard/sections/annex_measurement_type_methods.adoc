@@ -1,0 +1,93 @@
+[appendix,obligation="informative"]
+
+[[measurementType_methods_desc]]
+== Parameter measurementType Methods (Informative)
+
+The parameter-names object provides information about the data parameters supported by the collection, each `parameter-names`` object has an optional `measurementType` attribute which provides basic information about how the parameter is calculated and over what time period. The table below provides a list of recommended definitions for the `method` property of the `measurementType` attribute.
+
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Recommended method values 
+|==========================
+|Method | Description
+|instantaneous | The data values are representative of points in space or time
+|sum   | The data values are representative of a sum or accumulation
+|maximum   | Maximum
+|median     | Median
+|mid_range | Average of maximum and minimum
+|minimum     | Minimum
+|mean     | Mean (average value)
+|mode  | Mode (most common value)
+|range    | Absolute difference between maximum and minimum
+|root_mean_square  | Root mean square (RMS)
+|standard_deviation  | Standard deviation
+|==========================
+
+
+In the example below the data in the collection consists of:
+
+Air temperature values which represent an instantaneous value for the validity time
+Wind Speed and Wind direction values which represent a average value over the 10 minute period upto the validity time.
+
+[source,json]
+----
+
+"parameter_names": {
+    "air_temperature": {
+        "type": "Parameter",
+        "description": "Air temperature measured at screen level",
+        "unit": {
+        "label": "K",
+        "symbol": {
+            "value": "K",
+            "type": "http://qudt.org/vocab/unit/K"
+        }
+        },
+        "observedProperty": {
+        "id": "http://codes.wmo.int/bufr4/b/12/004",
+        "label": "Air Temperature"
+        },
+        "measurementType": {
+        "method": "instantaneous",
+        "period": "PT0S"
+        }
+    },
+    "wind_speed": {
+        "type": "Parameter",
+        "description": "10m wind speed value",
+        "unit": {
+        "label": "m/s",
+        "symbol": {
+            "value": "m%20s",
+            "type": "http://qudt.org/vocab/unit/M-PER-SEC.html"
+        }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/bufr4/b/11/012",
+            "label": "10m Wind Speed"
+        },
+        "measurementType": {
+            "method": "mean",
+            "period": "-PT10M/PT0M"
+        }
+    },
+    "wind_direction": {
+        "type": "Parameter",
+        "description": "10m wind direction value",
+        "unit": {
+        "label": "",
+        "symbol": {
+            "value": "deg",
+            "type": "https://qudt.org/vocab/unit/DEG.html"
+        }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/bufr4/b/11/011",
+            "label": "10m wind direction"
+        },
+        "measurementType": {
+            "method": "mean",
+            "period": "-PT10M/PT0M"
+        }
+    }
+}
+----
