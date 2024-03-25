@@ -1,0 +1,56 @@
+allOf:
+  - $ref: parameterNames.yaml
+properties:
+  dataMask:
+    type: object
+    description: Optional object for describing where data is available (1) and where its not (0).
+    required:
+      - order
+      - mask
+    properties:
+      order:
+        description: The order of the axes as they appear in the mask
+        type: array
+        items:
+          type: string
+      mask:
+        description: A multidimensional array describing where data is available (1) and where its not (0).
+        type: array
+        items:
+          type: array
+          items:
+            type: integer
+            minimum: 0
+            maximum: 1    
+example:
+  type: Parameter
+  id: mslp
+  description: Air pressure at sea level
+  unit:
+    label: Pascals
+    symbol:
+      value: "Pa"
+      type: https://qudt.org/vocab/unit/PA
+  observedProperty:
+    id: http://codes.wmo.int/grib2/codeflag/4.2/_0-3-1
+    label: MSL Pressure
+  measurementType:
+    method: instantaneous
+    period: PT0M
+  dataMask:
+    order: ["temporal","vertical"]
+    mask: [
+      [1,1,1,1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1,1,1,1],
+      [1,1,0,0,0,0,1,1,1,1],
+      [1,1,1,1,1,1,1,1,1,1],
+      [1,1,1,1,1,0,0,0,0,1],
+      [1,1,1,1,1,1,1,1,1,1],
+      [1,1,0,1,1,0,1,1,1,1],
+      [1,1,1,1,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1,0,1,1],
+      [1,1,1,0,1,1,1,1,1,1],
+      [1,1,1,1,1,1,1,1,1,1],
+      [1,1,1,1,1,0,0,0,1,1],
+      [1,1,1,1,1,1,1,1,1,1]    
+    ]
