@@ -1,0 +1,7 @@
+[[rec_pubsub-message-payload-id]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/pubsub-message-payload/id
+part:: A Pub/Sub notification message `+id+` property SHOULD use a UUID.
+====
