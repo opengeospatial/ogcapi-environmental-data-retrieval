@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /req/pubsub-channels/channels
-part:: Channels (topic/destination/node depending on protocol) that have equivalent API endpoint functionality SHALL be expressed within an AsyncAPI channel with an ``x-ogc-api-link`` object.
+part:: Channels (topic/destination/node depending on protocol) that communicate changes to resources in an OGC Web API SHALL be expressed within an AsyncAPI channel with an ``x-ogc-api-link`` object.
 ====
