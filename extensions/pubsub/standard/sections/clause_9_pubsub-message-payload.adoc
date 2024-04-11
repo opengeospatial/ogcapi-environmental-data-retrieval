@@ -59,9 +59,29 @@ include::../requirements/pubsub-message-payload/REQ_rc-pubtime.adoc[]
 ===== operation
 
 The ``operation`` property indicates the stage of the lifecycle for the resource described in the notification,
-and can be used to notify users that a resource has been updated or deleted. If not specified, the default value is ``create``.
+and can be used to notify users that a resource has been created, updated or deleted. If not specified, the default value is ``create``.
 
-.Example operation property
+.Example operation property for a creation
+[source,json]
+----
+"properties": {
+  ...
+  "operation": "create",
+  ...
+}
+----
+
+.Example operation property for an update
+[source,json]
+----
+"properties": {
+  ...
+  "operation": "update",
+  ...
+}
+----
+
+.Example operation property for a deletion
 [source,json]
 ----
 "properties": {

@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /per/pubsub-message-payload/operation
-part:: *A:* A Pub/Sub Notification Message MAY provide the `+properties.operation+` property to indicate if a resource has been inserted.
+part:: *A:* A Pub/Sub Notification Message MAY provide the `+properties.operation+` property to indicate if a resource has been created.
 ====
