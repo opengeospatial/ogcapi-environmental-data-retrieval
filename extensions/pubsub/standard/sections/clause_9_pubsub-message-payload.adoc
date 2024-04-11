@@ -38,7 +38,7 @@ It remains the same throughout the lifetime of the message.
 ----
 
 include::../requirements/pubsub-message-payload/REQ_rc-id.adoc[]
-include::../recommendations/pubsub-message-payload/REC_rc-id.adoc[]
+include::../recommendations/pubsub-message-payload/REC_id.adoc[]
 
 ===== pubtime
 
