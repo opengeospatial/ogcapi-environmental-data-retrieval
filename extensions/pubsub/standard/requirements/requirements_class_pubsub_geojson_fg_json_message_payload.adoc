@@ -5,6 +5,7 @@
 [%metadata]
 identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-geojson-fg-json-message-payload
 subject:: Pub/Sub
+inherit:: /req/pubsub
 requirement:: /req/pubsub-geojson-fg-json-message-payload/geojson
 requirement:: /req/pubsub-geojson-fg-json-message-payload/id
 requirement:: /req/pubsub-geojson-fg-json-message-payload/operation
