@@ -1,0 +1,7 @@
+[[rec_pubsub-geojson-fg-json-message-payload-resource_id]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/pubsub-geojson-fg-json-message-payload/resource_id
+part:: A Pub/Sub notification message `+properties.resource_id+` property SHOULD be used to identify a resource that may have multiple message notifications on its state or lifecycle over time.
+====
