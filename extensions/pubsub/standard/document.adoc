@@ -49,7 +49,7 @@ include::sections/clause_7_pubsub.adoc[]
 
 include::sections/clause_8_pubsub-channels.adoc[]
 
-include::sections/clause_9_pubsub-message-payload.adoc[]
+include::sections/clause_9_pubsub-geojson-fg-json-message-payload.adoc[]
 
 
 ////
@@ -59,7 +59,7 @@ include::sections/annex-a.adoc[]
 
 include::sections/annex-pubsub.adoc[]
 
-include::sections/annex-pubsub-message-payload.adoc[]
+include::sections/annex-pubsub-geojson-fg-json-message-payload.adoc[]
 
 include::sections/annex-use-cases.adoc[]
 

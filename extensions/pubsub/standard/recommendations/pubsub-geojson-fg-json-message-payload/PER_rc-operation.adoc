@@ -1,7 +1,7 @@
-[[per_pubsub-message-payload_operation]]
+[[per_pubsub-geojson-fg-json-message-payload_operation]]
 [permission]
 ====
 [%metadata]
-identifier:: /per/pubsub-message-payload/operation
+identifier:: /per/pubsub-geojson-fg-json-message-payload/operation
 part:: *A:* A Pub/Sub Notification Message MAY provide the `+properties.operation+` property to indicate if a resource has been created.
 ====

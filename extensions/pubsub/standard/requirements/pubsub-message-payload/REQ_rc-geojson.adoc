@@ -1,7 +1,0 @@
-[[req_pubsub-message-payload_geojson]]
-[requirement]
-====
-[%metadata]
-identifier:: /req/pubsub-message-payload/geojson
-part:: A Pub/Sub notification message encoding SHALL be compliant to IETF RFC7946 GeoJSON.
-====

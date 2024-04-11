@@ -1,9 +1,9 @@
-[[pubsub-message-payload-section]]
-== Requirements Class Publish-Subscribe (Pub/Sub) Message Payloads
+[[pubsub-geojson-fg-json-message-payload-section]]
+== Requirements Class Publish-Subscribe (Pub/Sub) GeoJSON/FG-JSON Message Payloads
 
 === Overview
 
-include::../requirements/requirements_class_pubsub_message_payload.adoc[]
+include::../requirements/requirements_class_pubsub_geojson_fg_json_message_payload.adoc[]
 
 A key component of Pub/Sub workflows is the message payload. Once a client subscribes to one or more
 channels from a given Pub/Sub server, notifications messages are sent using a given
@@ -20,11 +20,11 @@ _JSON_ is a widely used, flexible, relatively compact, format that is both machi
 
 If _GeoJSON_ is used as a payload for message notification, then
 
-include::../requirements/pubsub-message-payload/REQ_rc-geojson.adoc[]
+include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-geojson.adoc[]
 
 If a Coordinate Reference System other than _WGS84_ is used, then the _OGC Features and Geometry JSON_ extension to _GeoJSON_ should be used. 
 
-include::../recommendations/pubsub-message-payload/REC_crs.adoc[]
+include::../recommendations/pubsub-geojson-fg-json-message-payload/REC_crs.adoc[]
 
 ==== Identifier
 
@@ -38,8 +38,8 @@ It remains the same throughout the lifetime of the message.  Note that multiple 
 "id": "31e9d66a-cd83-4174-9429-b932f1abe1be"
 ----
 
-include::../requirements/pubsub-message-payload/REQ_rc-id.adoc[]
-include::../recommendations/pubsub-message-payload/REC_id.adoc[]
+include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-id.adoc[]
+include::../recommendations/pubsub-geojson-fg-json-message-payload/REC_id.adoc[]
 
 ===== pubtime
 
@@ -55,7 +55,7 @@ The ``pubtime`` property identifies the date/time of when the message was posted
 }
 ----
 
-include::../requirements/pubsub-message-payload/REQ_rc-pubtime.adoc[]
+include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-pubtime.adoc[]
 
 ===== operation
 
@@ -92,6 +92,6 @@ and can be used to notify users that a resource has been created, updated or del
 }
 ----
 
-include::../requirements/pubsub-message-payload/REQ_rc-operation.adoc[]
+include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-operation.adoc[]
 
-include::../recommendations/pubsub-message-payload/PER_rc-operation.adoc[]
+include::../recommendations/pubsub-geojson-fg-json-message-payload/PER_rc-operation.adoc[]

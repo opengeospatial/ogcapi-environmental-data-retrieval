@@ -1,8 +1,8 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/pubsub-message-payload/pubtime
-target:: /req/pubsub-message-payload/pubtime
+identifier:: /conf/pubsub-geojson-fg-json-message-payload/pubtime
+target:: /req/pubsub-geojson-fg-json-message-payload/pubtime
 test-purpose:: Validate that a notification message provides a `properties.pubtime` property.
 test-method::
 +

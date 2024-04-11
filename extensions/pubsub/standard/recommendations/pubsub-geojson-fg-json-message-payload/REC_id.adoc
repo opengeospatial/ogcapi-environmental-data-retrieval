@@ -1,7 +1,7 @@
-[[rec_pubsub-message-payload-id]]
+[[rec_pubsub-geojson-fg-json-message-payload-id]]
 [recommendation]
 ====
 [%metadata]
-identifier:: /rec/pubsub-message-payload/id
+identifier:: /rec/pubsub-geojson-fg-json-message-payload/id
 part:: A Pub/Sub notification message `+id+` property SHOULD use a UUID.
 ====

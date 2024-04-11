@@ -1,0 +1,10 @@
+[conformance_class]
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-geojson-fg-json-message-payload
+target:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-geojson-fg-json-message-payload
+abstract-test:: /conf/pubsub-geojson-fg-json-message-payload/geojson
+abstract-test:: /conf/pubsub-geojson-fg-json-message-payload/id
+abstract-test:: /conf/pubsub-geojson-fg-json-message-payload/operation
+abstract-test:: /conf/pubsub-geojson-fg-json-message-payload/pubtime
+====
