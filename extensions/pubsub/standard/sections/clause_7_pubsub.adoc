@@ -39,6 +39,8 @@ Based on research and testing, the Pub/Sub White Paper recommended the use of As
 }
 ----
 
+NOTE: the media type for an AsyncAPI document may change in the future as decided by the AsyncAPI community.
+
 include::../requirements/pubsub/REQ_rc-api.adoc[]
 
 ==== Providing notification metadata as an OGC API endpoint
