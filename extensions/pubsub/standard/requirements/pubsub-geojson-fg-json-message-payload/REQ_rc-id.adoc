@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /req/pubsub-geojson-fg-json-message-payload/id
-part:: A Pub/Sub notification message SHALL provide an `+id+` property as a unique identifier for the message.
+part:: A Pub/Sub notification message SHALL provide an `+id+` property as a globally unique identifier for the message.
 ====
