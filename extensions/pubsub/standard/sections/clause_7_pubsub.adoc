@@ -53,6 +53,8 @@ The links array could also provide references to the Pub/Sub capabilities availa
 
 NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
 
+A link object can contain a `channel` property which provides the relevant channel or topic that a client can subscribe to after connecting to a Pub/Sub endpoint.  The value and syntax of the `channel` property is bound to the Pub/Sub protocol identified in the `type` property.
+
 .OGC API Pub/Sub link example to new collection notifications
 [source,json]
 ----
@@ -79,7 +81,7 @@ An OGC API - Features example
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
-    "channel": "collections/{collectionId}"
+    "channel": "collections/surface-weather-observations"
 }
 ----
 
@@ -93,7 +95,7 @@ An OGC API - EDR example
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
-    "channel": "collections/{collectionId}/items"
+    "channel": "collections/surface-weather-observations/items"
 }
 ----
 
