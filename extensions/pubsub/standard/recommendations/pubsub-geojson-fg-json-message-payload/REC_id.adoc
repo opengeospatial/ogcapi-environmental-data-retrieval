@@ -3,5 +3,6 @@
 ====
 [%metadata]
 identifier:: /rec/pubsub-geojson-fg-json-message-payload/id
-part:: A Pub/Sub notification message `+id+` property SHOULD use a UUID.
+part:: For messsage payloads that provide notification metadata about a resource publication, a Pub/Sub notification message `+id+` property SHOULD use a UUID.
+part:: For messsage payloads that provide updated representations of a given resource (such as a Feature or Collection), a Pub/Sub notification message `+id+` property SHOULD use the identifier of the given resource.
 ====
