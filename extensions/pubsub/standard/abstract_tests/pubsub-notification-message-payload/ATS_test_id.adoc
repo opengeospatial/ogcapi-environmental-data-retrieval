@@ -1,8 +1,8 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/pubsub-geojson-fg-json-message-payload/id
-target:: /req/pubsub-geojson-fg-json-message-payload/id
+identifier:: /conf/pubsub-notification-message-payload/id
+target:: /req/pubsub-notification-message-payload/id
 test-purpose:: Validate that a notification message provides an `id` property that is a UUID.
 test-method::
 +

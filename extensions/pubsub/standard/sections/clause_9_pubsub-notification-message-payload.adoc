@@ -1,9 +1,9 @@
-[[pubsub-geojson-fg-json-message-payload-section]]
-== Requirements Class Publish-Subscribe (Pub/Sub) GeoJSON/FG-JSON Message Payloads
+[[pubsub-notification-message-payload-section]]
+== Requirements Class Publish-Subscribe (Pub/Sub) Notificaiton Message Payloads
 
 === Overview
 
-include::../requirements/requirements_class_pubsub_geojson_fg_json_message_payload.adoc[]
+include::../requirements/requirements_class_pubsub_notification_message_payload.adoc[]
 
 A key component of Pub/Sub workflows is the message payload. Once a client subscribes to one or more
 channels from a given Pub/Sub server, notifications messages are sent using a given
@@ -14,17 +14,11 @@ While the Publish-Subscribe (Pub/Sub) Requirements Class recommends a machine-re
 the Message Payload Requirements Class provides further requirements for interoperability of message payloads as part of
 an OGC API implementation ecosystem.
 
-==== JSON, GeoJSON and FG-JSON
+==== GeoJSON
 
-_JSON_ is a widely used, flexible, relatively compact, format that is both machine readable and amenable to human inspection.  A restricted profile of _JSON_, _GeoJSON_, can be used for geospatial data to improve interoperability, but it specifies that geospatial coordinate data must only use the _WGS84_ coordinate reference system. _GeoJSON_ is defined in the standard IETF RFC7946.
+_GeoJSON_ can be used for geospatial data to improve interoperability, but it specifies that geospatial coordinate data must only use the _WGS84_ coordinate reference system. _GeoJSON_ is defined in the standard IETF RFC7946.
 
-If _GeoJSON_ is used as a payload for message notification, then
-
-include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-geojson.adoc[]
-
-If a Coordinate Reference System other than _WGS84_ is used, then the _OGC Features and Geometry JSON_ extension to _GeoJSON_ should be used. 
-
-include::../recommendations/pubsub-geojson-fg-json-message-payload/REC_crs.adoc[]
+include::../requirements/pubsub-notification-message-payload/REQ_rc-geojson.adoc[]
 
 ==== Identifier
 
@@ -38,9 +32,9 @@ It remains the same throughout the lifetime of the message.  The identifier is v
 "id": "31e9d66a-cd83-4174-9429-b932f1abe1be"
 ----
 
-include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-id.adoc[]
-include::../recommendations/pubsub-geojson-fg-json-message-payload/REC_id.adoc[]
-include::../recommendations/pubsub-geojson-fg-json-message-payload/REC_resource_id.adoc[]
+include::../requirements/pubsub-notification-message-payload/REQ_rc-id.adoc[]
+include::../recommendations/pubsub-notification-message-payload/REC_id.adoc[]
+include::../recommendations/pubsub-notification-message-payload/REC_resource_id.adoc[]
 
 ===== pubtime
 
@@ -56,7 +50,7 @@ The ``pubtime`` property identifies the date/time of when the message was posted
 }
 ----
 
-include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-pubtime.adoc[]
+include::../requirements/pubsub-notification-message-payload/REQ_rc-pubtime.adoc[]
 
 ===== operation
 
@@ -93,6 +87,6 @@ and can be used to notify users that a resource has been created, updated or del
 }
 ----
 
-include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-operation.adoc[]
+include::../requirements/pubsub-notification-message-payload/REQ_rc-operation.adoc[]
 
-include::../recommendations/pubsub-geojson-fg-json-message-payload/PER_rc-operation.adoc[]
+include::../recommendations/pubsub-notification-message-payload/PER_rc-operation.adoc[]

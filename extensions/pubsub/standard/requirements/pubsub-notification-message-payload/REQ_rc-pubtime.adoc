@@ -1,7 +1,7 @@
-[[req_pubsub-geojson-fg-json-message-payload_pubtime]]
+[[req_pubsub-notification-message-payload_pubtime]]
 [requirement]
 ====
 [%metadata]
-identifier:: /req/pubsub-geojson-fg-json-message-payload/pubtime
+identifier:: /req/pubsub-notification-message-payload/pubtime
 part:: A Pub/Sub notification message SHALL provide a `+properties.pubtime+` property in RFC3339 format.
 ====

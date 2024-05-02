@@ -45,7 +45,7 @@ include::../requirements/pubsub/REQ_rc-api.adoc[]
 
 ==== Providing notification metadata as an OGC API endpoint
 
-For Brokers providing notification metadata (as opposed to actual data payloads), an implementation of OGC API Building Blocks can, in parallel, readily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an implementation of OGC API Standard(s) provides the additional benefit of querying for past messages over time in case of a lost connection.  See <<pubsub-geojson-fg-json-message-payload-section>> for more information.
+For Brokers providing notification metadata (as opposed to actual data payloads), an implementation of OGC API Building Blocks can, in parallel, readily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an implementation of OGC API Standard(s) provides the additional benefit of querying for past messages over time in case of a lost connection.  See <<pubsub-notification-message-payload-section>> for more information.
 
 ==== Providing Pub/Sub links to collection updates
 

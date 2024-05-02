@@ -1,8 +1,8 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/pubsub-geojson-fg-json-message-payload/geojson
-target:: /req/pubsub-geojson-fg-json-message-payload/geojson
+identifier:: /conf/pubsub-notification-message-payload/geojson
+target:: /req/pubsub-notification-message-payload/geojson
 test-purpose:: Validate that a notification message is a valid GeoJSON document.
 test-method::
 +

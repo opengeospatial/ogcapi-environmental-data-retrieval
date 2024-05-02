@@ -1,8 +1,8 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/pubsub-geojson-fg-json-message-payload/operation
-target:: /req/pubsub-geojson-fg-json-message-payload/operation
+identifier:: /conf/pubsub-notification-message-payload/operation
+target:: /req/pubsub-notification-message-payload/operation
 test-purpose:: Validate that a notification message provides a `properties.operation` property.
 test-method::
 +
