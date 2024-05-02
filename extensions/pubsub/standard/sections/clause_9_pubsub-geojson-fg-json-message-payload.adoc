@@ -61,7 +61,7 @@ include::../requirements/pubsub-geojson-fg-json-message-payload/REQ_rc-pubtime.a
 ===== operation
 
 The ``operation`` property indicates the stage of the lifecycle for the resource described in the notification,
-and can be used to notify users that a resource has been created, updated or deleted. If not specified, the default value is ``create``.
+and can be used to notify users that a resource has been created, updated or deleted. If not specified, the default value is ``create``.  Other allowed values are ``update`` and ``delete``.
 
 .Example operation property for a creation
 [source,json]
