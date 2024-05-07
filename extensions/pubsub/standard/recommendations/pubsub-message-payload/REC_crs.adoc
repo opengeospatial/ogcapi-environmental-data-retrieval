@@ -1,7 +1,0 @@
-[[rec_pubsub-message-payload-crs]]
-[recommendation]
-====
-[%metadata]
-identifier:: /rec/pubsub-message-payload/crs
-part:: A Pub/Sub notification message encoding describing data in a CRS other than WGS84 SHOULD use OGC Features and Geometries JSON.
-====

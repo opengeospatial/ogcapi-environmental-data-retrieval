@@ -1,7 +1,0 @@
-[[req_pubsub-message-payload_id]]
-[requirement]
-====
-[%metadata]
-identifier:: /req/pubsub-message-payload/id
-part:: A Pub/Sub notification message SHALL provide an `+id+` property as a UUID.
-====

@@ -39,17 +39,21 @@ Based on research and testing, the Pub/Sub White Paper recommended the use of As
 }
 ----
 
+NOTE: the media type for an AsyncAPI document may change in the future as decided by the AsyncAPI community.
+
 include::../requirements/pubsub/REQ_rc-api.adoc[]
 
 ==== Providing notification metadata as an OGC API endpoint
 
-For Brokers providing notification metadata (as opposed to actual data payloads), an implementation of OGC API Building Blocks can, in parallel, readily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an implementation of OGC API Standard(s) provides the additional benefit of querying for past messages over time in case of a lost connection.
+For Brokers providing notification metadata (as opposed to actual data payloads), an implementation of OGC API Building Blocks can, in parallel, readily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an implementation of OGC API Standard(s) provides the additional benefit of querying for past messages over time in case of a lost connection.  See <<pubsub-notification-message-payload-section>> for more information.
 
 ==== Providing Pub/Sub links to collection updates
 
 The links array could also provide references to the Pub/Sub capabilities available on the service. A *collection* link could reference a collection update notification channel.
 
 NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
+
+A link object can contain a `channel` property which provides the relevant channel or topic that a client can subscribe to after connecting to a Pub/Sub endpoint.  The value and syntax of the `channel` property is bound to the Pub/Sub protocol identified in the `type` property.
 
 .OGC API Pub/Sub link example to new collection notifications
 [source,json]
@@ -77,7 +81,7 @@ An OGC API - Features example
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
-    "channel": "collections/{collectionId}"
+    "channel": "collections/surface-weather-observations"
 }
 ----
 
@@ -91,7 +95,7 @@ An OGC API - EDR example
     "type": "application/json",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
-    "channel": "collections/{collectionId}/items"
+    "channel": "collections/surface-weather-observations/items"
 }
 ----
 

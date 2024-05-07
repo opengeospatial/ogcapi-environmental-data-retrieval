@@ -15,12 +15,12 @@ include::../abstract_tests/pubsub-channels/ATS_test_channels.adoc[]
 
 === Conformance Class Publish-Subscribe (Pub/Sub) Message Payloads
 
-include::../abstract_tests/ATS_class_pubsub_message_payload.adoc[]
+include::../abstract_tests/ATS_class_pubsub_notification_message_payload.adoc[]
 
-include::../abstract_tests/pubsub-message-payload/ATS_test_geojson.adoc[]
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_geojson.adoc[]
 
-include::../abstract_tests/pubsub-message-payload/ATS_test_id.adoc[]
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_id.adoc[]
 
-include::../abstract_tests/pubsub-message-payload/ATS_test_operation.adoc[]
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_operation.adoc[]
 
-include::../abstract_tests/pubsub-message-payload/ATS_test_pubtime.adoc[]
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_pubtime.adoc[]

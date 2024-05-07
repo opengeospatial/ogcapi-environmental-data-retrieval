@@ -21,6 +21,11 @@ properties:
     required:
       - pubtime
     properties:
+      resource_id:
+        type: string
+        description: |
+          Identifies a resource identifier that may have multiple message notifications on
+          its state or lifecycle over time.
       pubtime:
         type: string
         format: date-time

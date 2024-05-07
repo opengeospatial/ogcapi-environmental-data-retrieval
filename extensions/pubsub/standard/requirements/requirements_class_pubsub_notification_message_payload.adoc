@@ -1,0 +1,13 @@
+[[rc_pubsub-notification-message-payload]]
+[requirements_class]
+.Requirements Class 'Publish-Subscribe (Pub/Sub) Notification Message Payloads'
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-notification-message-payload
+subject:: Pub/Sub
+inherit:: /req/pubsub
+requirement:: /req/pubsub-notification-message-payload/geojson
+requirement:: /req/pubsub-notification-message-payload/id
+requirement:: /req/pubsub-notification-message-payload/operation
+requirement:: /req/pubsub-notification-message-payload/pubtime
+====

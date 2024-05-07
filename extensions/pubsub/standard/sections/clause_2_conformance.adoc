@@ -5,7 +5,7 @@ Requirements for two standardization target types are considered:
 
 * API integration
 * Pub/Sub channels, and
-* Message payload
+* Notification message payloads
 
 Conformance with this Standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
 
@@ -13,4 +13,4 @@ In order to conform to this Standard, a software implementation shall choose to 
 
 * Any one of the conformance levels specified in Annex A (normative).
 
-All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
+All requirements classes and conformance classes described in this document are owned by the standard(s) identified.

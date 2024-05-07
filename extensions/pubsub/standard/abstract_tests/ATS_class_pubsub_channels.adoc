@@ -3,5 +3,6 @@
 [%metadata]
 identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-message-channels
 target:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-message-channels
+dependency:: /conf/pubsub
 abstract-test:: /conf/pubsub-channels/channels
 ====

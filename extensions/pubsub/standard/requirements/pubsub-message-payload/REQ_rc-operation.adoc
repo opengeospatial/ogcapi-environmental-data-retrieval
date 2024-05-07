@@ -1,7 +1,0 @@
-[[req_pubsub-message-payload_operation]]
-[requirement]
-====
-[%metadata]
-identifier:: /req/pubsub-message-payload/operation
-part:: A Pub/Sub Notification Message SHALL provide the `+properties.operation+` property to indicate if a resource has been updated or deleted.
-====
