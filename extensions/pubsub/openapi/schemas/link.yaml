@@ -4,7 +4,7 @@ title: OGC API - Pub/Sub message payload link definition
 description: OGC API - Pub/Sub message payload link definition
 
 allOf:
-  - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/19-072/openapi/schemas/link.yaml'
+  - $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-common/v1.0-tc-vote/19-072/openapi/schemas/link.yaml'
   - properties:
       channel:
         type: string
