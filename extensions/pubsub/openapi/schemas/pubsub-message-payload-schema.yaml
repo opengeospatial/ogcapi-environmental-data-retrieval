@@ -21,7 +21,7 @@ properties:
     required:
       - pubtime
     properties:
-      resource_id:
+      resourceId:
         type: string
         description: |
           Identifies a resource identifier that may have multiple message notifications on
