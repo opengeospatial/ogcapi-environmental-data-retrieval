@@ -9,7 +9,7 @@ get:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml
     - $ref: ../../parameters/core/bbox.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/v1.0-tc-vote/collections/openapi/parameters/datetime.yaml
   responses:
     200:
       $ref: ../../responses/queries/items.yaml
