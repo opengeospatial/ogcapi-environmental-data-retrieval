@@ -23,16 +23,13 @@ The following https://www.iana.org/assignments/link-relations/link-relations.xht
 
 * **collection**: The target IRI points to a resource which represents the collection resource for the context IRI.
 
+* **hub**: Refers to a hub that enables registration for notification of updates to the context.
+
 * **item**: Refers to a resource that is a member of the collection represented by this context.
 
 * **service-desc**: Identifies service description for this context that is primarily intended for consumption by machines.  API definitions are considered service descriptions.
 
-In addition, the following link relation types are used for which no applicable registered link relation type could be identified.
-
-* **items**: Refers to a resource that comprises members of the collection represented by this context.
-* **http://www.opengis.net/def/rel/ogc/1.0/pubsub**: Refers to a resource that publishes notifications about changes to the current context.
-
-Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an enclosure link could reference a bulk download of a collection. Or a related link on a record could reference a related record.
+Each resource representation includes an array of links. Implementations are free to add additional links for all resources provided by the API. For example, an **enclosure** link could reference a bulk download of a collection. Or a **related** link on a feature could reference a related feature.
 
 === Examples
 
