@@ -9,7 +9,7 @@ get:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/core/bbox.yaml
     - $ref: ../../parameters/core/cube-z.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/v1.0-tc-vote/collections/openapi/parameters/datetime.yaml
+    - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/core/parameter-name.yaml
     - $ref: ../../parameters/core/crs.yaml
     - $ref: ../../parameters/core/f.yaml
