@@ -11,7 +11,7 @@ representation or encoding. Notification messages can be issued using any encodi
 suitable by a given publisher.
 
 While the Publish-Subscribe (Pub/Sub) Requirements Class recommends a machine-readable message payload,
-the Message Payload Requirements Class provides further requirements for interoperability of message payloads as part of
+the Notification Message Payload Requirements Class provides further requirements for interoperability of message payloads as part of
 an OGC API implementation ecosystem.
 
 ==== GeoJSON
@@ -34,7 +34,7 @@ It remains the same throughout the lifetime of the message.  The identifier is v
 
 include::../requirements/pubsub-notification-message-payload/REQ_rc-id.adoc[]
 include::../recommendations/pubsub-notification-message-payload/REC_id.adoc[]
-include::../recommendations/pubsub-notification-message-payload/REC_resource_id.adoc[]
+include::../recommendations/pubsub-notification-message-payload/REC_resourceid.adoc[]
 
 ===== pubtime
 
@@ -88,5 +88,3 @@ and can be used to notify users that a resource has been created, updated or del
 ----
 
 include::../requirements/pubsub-notification-message-payload/REQ_rc-operation.adoc[]
-
-include::../recommendations/pubsub-notification-message-payload/PER_rc-operation.adoc[]

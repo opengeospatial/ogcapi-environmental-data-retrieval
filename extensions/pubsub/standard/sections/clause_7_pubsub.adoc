@@ -53,14 +53,13 @@ The links array could also provide references to the Pub/Sub capabilities availa
 
 NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
 
-A link object can contain a `channel` property which provides the relevant channel or topic that a client can subscribe to after connecting to a Pub/Sub endpoint.  The value and syntax of the `channel` property is bound to the Pub/Sub protocol identified in the `type` property.
+Communicating event driven workflow from a link object is made via the `+http://www.opengis.net/def/rel/ogc/1.0/pubsub+` link relation.  This link relation communicates that the link represents a Publish-Subscribe workflow defined by a Pub/Sub protocol in the `href` property as well as a `channel` property.  The `channel` property provides the relevant addressable topic that a client can subscribe to after connecting to a Pub/Sub endpoint.  The value and syntax of the `channel` property is bound to the Pub/Sub protocol identified in the `href` property.
 
-.OGC API Pub/Sub link example to new collection notifications
+.Example of OGC API Pub/Sub link to new collection notifications
 [source,json]
 ----
 {
-    "rel": "collection",
-    "type": "application/json",
+    "rel": "http://www.opengis.net/def/rel/ogc/1.0/pubsub",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
     "channel": "collections"
@@ -73,12 +72,11 @@ An *items* link could reference a data payload channel:
 
 An OGC API - Features example
 
-.OGC API - Features example linking to a data payload channel
+.Example of OGC API - Features linking to a data payload channel
 [source,json]
 ----
 {
-    "rel": "items",
-    "type": "application/json",
+    "rel": "http://www.opengis.net/def/rel/ogc/1.0/pubsub",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
     "channel": "collections/surface-weather-observations"
@@ -87,12 +85,11 @@ An OGC API - Features example
 
 An OGC API - EDR example
 
-.OGC API - EDR example linking to a data payload channel
+.Example of OGC API - EDR linking to a data payload channel
 [source,json]
 ----
 {
-    "rel": "items",
-    "type": "application/json",
+    "rel": "http://www.opengis.net/def/rel/ogc/1.0/pubsub",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
     "channel": "collections/surface-weather-observations/items"
