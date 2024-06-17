@@ -31,7 +31,7 @@ Breaking down into the components:
 ----
 ====
 
-* The `asyncapi` field indicates you use the AsyncAPI version 3.0.0.
+* The `asyncapi` field indicates you use the AsyncAPI version 3.0.
 * The `info` field holds information about the API, such as its name, version, description, and license.
 
 ====
@@ -91,42 +91,22 @@ Different Pub/Sub protocols are supported as additional server objects, and can 
     channels:
         notify-collections:
             address: collections
-            x-ogc-api-link:
-                rel: data
-                type: application/json
-                href: https://example.org/collections
             message:
                 $ref: '#/components/messages/collection_msg'
         notify-collections/wthr_stn:
             address: collections/wthr_stn
-            x-ogc-api-link:
-                rel: collection
-                type: application/json
-                href: https://example.org/collections/wthr_stn
             messages:
                 $ref: '#/components/messages/collection_msg'
         notify-collections-stream_gage:
             address: collections/stream_gage
-            x-ogc-api-link:
-                rel: collection
-                type: application/json
-                href: https://example.org/collections/stream_gage
             messages:
                 $ref: '#/components/messages/collection_msg'
         notify-collections-wthr_stn-items:
             address: collections/wthr_stn/items
-            x-ogc-api-link:
-                rel: items
-                type: application/json
-                href: https://example.org/collections/stream_gage/items
             messages:
                 $ref: '#/components/messages/wthr_stn_msg'
         collections-stream_gage-items:
             address: collections/stream_gage/items
-            x-ogc-api-link:
-                rel: items
-                type: application/json
-                href: https://example.org/collections/stream_gage/items
             messages:
                 $ref: '#/components/messages/stream_gage_msg'  
 ----
@@ -141,8 +121,6 @@ Different Pub/Sub protocols are supported as additional server objects, and can 
 ** `collections/stream_gage`
 ** `collections/wthr_stn/items`
 ** `collections/stream_gage/items`
-
-The use of `x-ogc-api-link` demonstrates the capability to cross reference an AsyncAPI to an OGC API resource.
 
 ====
 [source,yaml]

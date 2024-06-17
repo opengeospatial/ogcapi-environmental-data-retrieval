@@ -7,12 +7,6 @@ include::../abstract_tests/ATS_class_pubsub.adoc[]
 
 include::../abstract_tests//pubsub/ATS_test_api.adoc[]
 
-=== Conformance Class Publish-Subscribe (Pub/Sub) Channels
-
-include::../abstract_tests/ATS_class_pubsub_channels.adoc[]
-
-include::../abstract_tests/pubsub-channels/ATS_test_channels.adoc[]
-
 === Conformance Class Publish-Subscribe (Pub/Sub) Message Payloads
 
 include::../abstract_tests/ATS_class_pubsub_notification_message_payload.adoc[]

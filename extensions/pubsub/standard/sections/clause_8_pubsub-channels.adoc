@@ -16,7 +16,3 @@ The OGC API service endpoint specified by a URL path of resources and sub-resour
 For example, users could use a subscription to metadata records, which are usually small compared to the source data, and are therefore more transportable. This informs and notifies the user of changes prior to requesting the possibly large source data, especially when bandwidth is at a premium.
 
 Using the OGC API service endpoints of the URL path of resource and sub-resources provides the key benefit that developers implementing OGC API Standards do not need to learn a different, additional approach or resource path for Pub/Sub (same content, additional interface).
-
-While AsyncAPI does not have native OpenAPI integration, in order to cross-reference a given AsyncAPI channel against its associated OGC API resource, the `+x-ogc-api-link+` object can be used.  The structure of this object is defined in OGC API - Common - Part 1: Core, Section 6.3.
-
-include::../requirements/pubsub-channels/REQ_rc-channels.adoc[]
