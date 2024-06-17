@@ -10,7 +10,7 @@ get:
     - $ref: ../../parameters/queries/instanceId.yaml
     - $ref: ../../parameters/core/radiusCoords.yaml
     - $ref: ../../parameters/core/z.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/v1.0-tc-vote/collections/openapi/parameters/datetime.yaml
+    - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/core/within.yaml
     - $ref: ../../parameters/core/within-units.yaml
     - $ref: ../../parameters/core/parameter-name.yaml
