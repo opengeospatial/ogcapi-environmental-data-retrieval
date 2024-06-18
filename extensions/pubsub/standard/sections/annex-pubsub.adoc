@@ -10,7 +10,7 @@ The API is described using the https://www.asyncapi.com/[AysncAPI 3.0.0 specific
 ====
 [source,yaml]
 ----
-include::../../examples/yaml/asyncapi.yaml[]
+include::../examples/yaml/asyncapi.yaml[]
 ----
 ====
 
