@@ -1,0 +1,17 @@
+[[conf_pubsub_api]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/pubsub/api
+target:: /req/pubsub/api
+test-purpose:: Validate that an EDR service provides AsyncAPI capabilities.
+test-method::
++
+--
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Ensure that at least one exists with `+rel=service-desc+` that corresponds to an AsyncAPI 3.0 description
+--
+====

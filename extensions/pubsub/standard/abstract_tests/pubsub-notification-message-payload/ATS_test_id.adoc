@@ -1,0 +1,18 @@
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/pubsub-notification-message-payload/id
+target:: /req/pubsub-notification-message-payload/id
+test-purpose:: Validate that a notification message provides an `id` property that is a UUID.
+test-method::
++
+--
+1. Construct a path for the API landing page
+2. Issue a HTTP GET request on that path
+3. Inspect all `+link+` objects in the response
+4. Find a link that contains `+rel=service-desc+` that corresponds to an AsyncAPI 3.0 description
+5. Using the server endpoint, subscribe to a given topic.
+6. Upon receiving a message against the selected topic, ensure that the message has an `id` property.
+7. Ensure that the `id` property is a valid UUID.
+--
+====

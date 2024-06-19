@@ -1,0 +1,7 @@
+[[rec_pubsub-notification-message-payload-resourceid]]
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/pubsub-notification-message-payload/resourceid
+part:: A Pub/Sub notification message `+properties.resourceId+` property SHOULD be used to identify a resource that may have multiple message notifications on its state or lifecycle over time.
+====

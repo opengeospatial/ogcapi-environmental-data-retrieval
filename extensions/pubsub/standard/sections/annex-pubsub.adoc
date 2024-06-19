@@ -1,11 +1,11 @@
-[appendix]
+[appendix,obligation="informative"]
 
-== Examples (Informative)
+== Examples
 
 [[async-examples]]
 === Pub/Sub API Description Example
 
-The API is described using the https://www.asyncapi.com/[AysncAPI 2.5.0 specification] and an example response can be found below:
+The API is described using the https://www.asyncapi.com/[AysncAPI 3.0.0 specification] and an example response can be found below:
 
 ====
 [source,yaml]
@@ -19,7 +19,7 @@ Breaking down into the components:
 ==== 
 [source,yaml]
 ----
-    asyncapi: '2.5.0'
+    asyncapi: '3.0.0'
     info:
         title: AsyncAPI demo
         version: '0.0.1'
@@ -30,7 +30,8 @@ Breaking down into the components:
             email: you@example.org
 ----
 ====
-* The `asyncapi` field indicates you use the AsyncAPI version 2.5.0.
+
+* The `asyncapi` field indicates you use the AsyncAPI version 3.0.
 * The `info` field holds information about the API, such as its name, version, description, and license.
 
 ====
@@ -38,29 +39,31 @@ Breaking down into the components:
 ----
     servers:
         mqtt_prod:
-            url: example.org
+            host: example.org
             protocol: mqtt
-            protocolVersion: 3.1.1
+            protocolVersion: 5.0
             description: MQTT endpoint
             security:
                 - user-password: []
 
 ----
 ====
+
 * Each `server` object provides the following fields:
-    ** `url`: URL of the target broker (this may be relative to the API document)
+    ** `host`: the server hostname and port
     ** `protocol`: Pub/Sub protocol supported by the server 
     ** `protocolVersion`: version of the Pub/Sub protocol supported by the server 
     ** `description`: string describing the host
     ** `security`: reference to supported authentication types
 
 ====
+[source,yaml]
 ----
 servers:
     mqtt:
-        url: example.org
+        host: example.org
         protocol: mqtt
-        protocolVersion: 3.1.1
+        protocolVersion: 5.0
         description: MQTT endpoint
         variables:
             port:
@@ -68,7 +71,7 @@ servers:
                     - 1883
                 default: 1883
     amqp:
-        url: example.org
+        host: example.org
         protocol: amqp
         protocolVersion: 1.0.0
         description: AMQP endpoint
@@ -86,26 +89,26 @@ Different Pub/Sub protocols are supported as additional server objects, and can 
 [source,yaml]
 ----
     channels:
-        collections:
-            subscribe:
-                message:
-                    $ref: '#/components/messages/collection_msg'
-        collections/wthr_stn:
-            subscribe:
-                message:
-                    $ref: '#/components/messages/collection_msg'
-        collections/stream_gage:
-            subscribe:
-                message:
-                    $ref: '#/components/messages/collection_msg'
-        collections/wthr_stn/items:
-            subscribe:
-                message:
-                    $ref: '#/components/messages/wthr_stn_msg'
-        collections/stream_gage/items:
-            subscribe:
-                message:
-                    $ref: '#/components/messages/stream_gage_msg'  
+        notify-collections:
+            address: collections
+            message:
+                $ref: '#/components/messages/collection_msg'
+        notify-collections/wthr_stn:
+            address: collections/wthr_stn
+            messages:
+                $ref: '#/components/messages/collection_msg'
+        notify-collections-stream_gage:
+            address: collections/stream_gage
+            messages:
+                $ref: '#/components/messages/collection_msg'
+        notify-collections-wthr_stn-items:
+            address: collections/wthr_stn/items
+            messages:
+                $ref: '#/components/messages/wthr_stn_msg'
+        collections-stream_gage-items:
+            address: collections/stream_gage/items
+            messages:
+                $ref: '#/components/messages/stream_gage_msg'  
 ----
 ====
 
@@ -118,6 +121,35 @@ Different Pub/Sub protocols are supported as additional server objects, and can 
 ** `collections/stream_gage`
 ** `collections/wthr_stn/items`
 ** `collections/stream_gage/items`
+
+====
+[source,yaml]
+----
+    operations:
+        notify-collections:
+            action: receive
+            channel:
+                $ref: '#/channels/notify-collections'
+        notify-collections-wthr-stn:
+            action: receive
+            channel:
+                $ref: '#/channels/notify-collections-wthr-stn'
+        notify-collections-stream-gage:
+            action: receive
+            channel:
+                $ref: '#/channels/notify-collections-stream_gage'
+        notify-collections-wthr_stn-items:
+            action: receive
+            channel:
+                $ref: '#/channels/notify-collections-wthr_stn-items'
+        notify-collections-stream_gage-items:
+            action: receive
+            channel:
+                $ref: '#/channels/notify-collections-stream_gage-items'
+----
+====
+
+* The `operations` section lists the required operations and their send and receive capabilities.
 
 ====
 [source,yaml]

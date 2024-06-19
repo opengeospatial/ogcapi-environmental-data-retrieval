@@ -1,8 +1,9 @@
 [[rc_pubsub]]
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class*
-2+|http://www.opengis.net/spec/ogcapi-edr-1/1.0/conf/pubsub
-|Target type |Web API
-|Dependency |Core
-|===
+[requirements_class]
+.Requirements Class 'Publish-Subscribe (Pub/Sub)'
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub
+subject:: Pub/Sub
+requirement:: /req/pubsub/api
+====

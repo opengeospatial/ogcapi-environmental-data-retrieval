@@ -1,21 +1,22 @@
-= OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow
+= OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow
 :doctype: standard
 :encoding: utf-8
-:lang: en
-:status: draft
+:language: en
+:status: public-rfc
 :committee: technical
 :draft: 1.0
 :external-id: http://www.opengis.net/doc/IS/ogcapi-edr-2/1.0
-:docnumber: 23-057
-:received-date: 2023-08-28
-:issued-date: 2023-08-28
-:published-date: 2023-08-28
+:docnumber: 23-057r1
+:received-date: 2024-02-16
+:issued-date: 2024-05-07
+:published-date: 2024-05-07
 :fullname: Tom Kralidis
 :role: editor
-:fullname_2: Mark Burgoyne
-:fullname_3: Steve Olson
-:fullname_4: Shane Mill
-:docsubtype: Interface
+:fullname_2: Chris Little
+:fullname_3: Mark Burgoyne
+:fullname_4: Steve Olson
+:fullname_5: Shane Mill
+:docsubtype: extension
 :keywords: OGC API, Pub/Sub, Publish, Subscribe, Publish-Subscribe, Event driven architecture, Asynchronous, OGC document, OGC
 :submitting-organizations: Meteorological Service of Canada; UK Met Office; US National Weather Service;
 :mn-document-class: ogc
@@ -48,7 +49,7 @@ include::sections/clause_7_pubsub.adoc[]
 
 include::sections/clause_8_pubsub-channels.adoc[]
 
-include::sections/clause_9_pubsub-message-payload.adoc[]
+include::sections/clause_9_pubsub-notification-message-payload.adoc[]
 
 
 ////
@@ -58,7 +59,9 @@ include::sections/annex-a.adoc[]
 
 include::sections/annex-pubsub.adoc[]
 
-include::sections/annex-pubsub-message-payload.adoc[]
+include::sections/annex-pubsub-notification-message-payload.adoc[]
+
+include::sections/annex-use-cases.adoc[]
 
 
 ////

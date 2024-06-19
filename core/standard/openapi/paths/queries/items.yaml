@@ -8,8 +8,7 @@ get:
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/core/bbox.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
-    - $ref: ../../parameters/core/limit.yaml
+    - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
   responses:
     200:
       $ref: ../../responses/queries/items.yaml

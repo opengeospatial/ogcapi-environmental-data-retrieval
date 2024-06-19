@@ -3,32 +3,19 @@
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-[NOTE]
-====
-Insert References here. If there are no references, leave this section empty.
-
-References are to follow the Springer LNCS style, with the exception that optional information may be appended to references: DOIs are added after the date and web resource references may include an access date at the end of the reference in parentheses. See examples from Springer and OGC below.
-====
-
 * [[[AMQP10,AMQP v1.0]]], _Advanced Message Queueing Protocol (AMQP) v1.0)_ https://www.oasis-open.org/standard/amqp
-
-* [[[MQTT311,MQTT v3.1.1]]], _MQTT Version 3.1.1 Plus Errata 01_ https://docs.oasis-open.org/mqtt/mqtt/v3.1.1/mqtt-v3.1.1.html
 
 * [[[MQTT50,MQTT v5.0]]], _MQTT Version 5.0_ https://docs.oasis-open.org/mqtt/mqtt/v5.0/mqtt-v5.0.html
 
-* [[[AsyncAPI250,AsyncAPI 2.5.0]]], _AsyncAPI Specification_ https://www.asyncapi.com/docs/reference/specification/v2.5.0
+* [[[AsyncAPI300,AsyncAPI 3.0.0]]], _AsyncAPI Specification_ https://www.asyncapi.com/docs/reference/specification/v3.0.0
 
-* [[[WIS2Guide,WMO WIS2 Guide]]], _Draft guidance on technical specifications of WIS 2.0_ https://wmo-im.github.io/wis2-guide
+* [[[WIS2Guide,WMO WIS2 Guide]]], _DRAFT WMO guidance on technical specifications of WIS 2.0_ https://wmo-im.github.io/wis2-guide
 
-* [[[WMO-WNM,WNM]]], _DRAFT WMO WIS2 Notification Message_ https://github.com/wmo-im/wis2-notification-message
+* [[[WMO-WNM,WMO WNM]]], _DRAFT WMO WIS2 Notification Message_ https://github.com/wmo-im/wis2-notification-message
 
-* [[[WMO-TOPICS,WMO-TOPICS]]], _DRAFT WMO WIS2 Topic Hierarchy_ https://github.com/wmo-im/wis2-topic-hierarchy
+* [[[WMO-TOPICS,WMO TOPICS]]], _DRAFT WMO WIS2 Topic Hierarchy_ https://github.com/wmo-im/wis2-topic-hierarchy
 
 * [[[WebSockets,WebSockets]]], _WebSockets_ https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API
-
-* [[[OGC13-131r1,OGC 13-131r1]]], _OGC Publish/Subscribe Interface Standard 1.0 - Core_ (2020)
-
-* [[[OGC20-046,OGC 20-046]]], _OGC Publish-Subscribe White Paper_ (2020)
 
 * [[[IANALinkRelations,IANA Link Relations]]], _IANA Link Relations_ https://www.iana.org/assignments/link-relations/link-relations.xhtml
 

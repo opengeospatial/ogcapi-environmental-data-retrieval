@@ -74,19 +74,24 @@ The EDR API can be considered a 'Sampling API'. EDR queries create discrete samp
 
 ### Standard and Draft Specifications
 
-The standard is in the V1.0.1 Branch.
+The standard is in the V1.1 Branch.
 
-The Master Branch is the latest draft of the standard, currently V1.1.0, and is built daily (based on the configuration contained in this [GitHub Action](https://github.com/opengeospatial/ogcna-auto-review/blob/main/.github/workflows/generate_19-086r6.yml) file):
+The Master Branch is the latest draft of the standard, currently V1.2.0, and is built daily (based on the configuration contained in this [GitHub Action](https://github.com/opengeospatial/ogcna-auto-review/blob/main/.github/workflows/generate_19-086r6.yml) file):
 
 * [OGC API - Environmental Data Retrieval Standard, Version 1.0.0](https://docs.ogc.org/is/19-086r4/19-086r4.html)
 * [OGC API - Environmental Data Retrieval Standard, with Corrigendum, Version 1.0.1](https://docs.ogc.org/is/19-086r5/19-086r5.html)
+* [OGC API - Environmental Data Retrieval Standard, Version 1.1.0](https://opengeospatial.github.io/ogcna-auto-review/19-086r6.html)
 * DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
-* DRAFT [OGC API - Environmental Data Retrieval Standard, Version 1.1.0](https://opengeospatial.github.io/ogcna-auto-review/19-086r6.html)
+
+Version 1.2 will be re-labelled as OGC API - Environmental Data Retrieval, Part 1: Core.
+
+A Part 2: Publish-Subscribe is being developed using AsyncAPI as well as OpenAPI to support an asynchronous "publish and subscribe" model for data and notifications. The intent is that will also be applicable to, and usable by, other OGC APIs:
+* DRAFT [OGC API-Environmental Data Retrieval Standard, Part 2: Publish-Subscribe](https://docs.ogc.org/DRAFTS/23-057.html)
 
 ### Conformance Test Suite
 
-An OGC API-EDR conformance test suite is being developed so that implementations can be formally certified as conforming to the standard, if so desired.
-
+An OGC API-EDR conformance test suite has been developed so that implementations can be formally certified as conforming to the standard, if so desired.
+ 
 The [Executable Test Suite (ETS) of OGC API - EDR](https://cite.ogc.org/teamengine/) is available on the OGC Validator.
 
 Implementations that pass the conformance tests can be submitted for Compliance certification, by following the steps to [Get Certified](https://www.ogc.org/compliance/getCertified).

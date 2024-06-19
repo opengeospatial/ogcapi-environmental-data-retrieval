@@ -1,41 +1,34 @@
 [[pubsub-section]]
 == Requirements Class Publish-Subscribe (Pub/Sub)
 
-OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. The following requirements and recommendations apply to Publish-Subscribe architectural patterns to OGC APIs.
-
 === Overview
 
 include::../requirements/requirements_class_pubsub.adoc[]
 
-Event-driven workflows provide publish-subscribe based capabilities as part of information systems and architectures. The publish-subscribe model also provides efficiencies in providing data "as it happens", thereby alleviating potential clients from continuous polling to check on the availability of new data/resources.
 
-The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The publish-subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: weather or hazard warnings, sensor data).
+Event-driven workflows provide Publish-Subscribe based capabilities as part of information systems and architectures. The Publish-Subscribe model also provides efficiencies in providing data "as it happens", thereby preventing potential clients from continuously polling to check on the availability of new data or resources.
 
-Building on the OGC Publish-Subscribe Interface Standard, as well as the recommendations put forward in the OGC Pub/Sub White Paper (OGC 20-046) produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs (OGC 23-013) this paper discusses approaches for integrating publish-subscribe architecture into the OGC API suite of standards.
+The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The Publish-Subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: traffic conditions, weather or hazard warnings, and real-time sensor data).
+
+Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-046] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the  EDR - Part 2: Publish-Subscribe Standard discusses approaches for integrating Publish-Subscribe architecture into the OGC API suite of Standards.
 
 include::../recommendations/pubsub/PER_protocols.adoc[]
 
 === OGC API Considerations
 
-The OGC API building block approach is typically implemented for shared components of APIs in support of polling workflow.  This means the client initiates and invokes requests and receives responses  from the server, using HTTP.  A key concept of the OGC API building blocks is the endpoint hierarchy, which can be applied for Pub/Sub workflow as follows:
+The OGC API building block approach would typically be used for shared components in API implementations in support of a polling workflow. Using HTTP, this means that the client initiates and invokes requests and receives responses from the server.  A key concept of the OGC API building blocks architecture is the service endpoint of the URL path specifying a resource and any similar sub-resources, which can be applied for Pub/Sub workflow as follows:
 
-* data producers: messages are published to a broker, applied to a given channel (example: ``collections/mycollection``)
-* broker provisioning: published messages are sent to subscribers
-* subscribers and data consumers: messages are received by users subscribed to one or more channels (explicitly or using wildcards/filtering)
+* Data producers: Messages are published to a broker, applied to a given channel (example: ``collections/mycollection``).
+* Broker provisioning: Published messages are sent to subscribers.
+* Subscribers and data consumers: Messages are received by users subscribed to one or more channels (explicitly or using wildcards or filtering).
 
-The above workflow requires adherence to a hierarchy of channels, autodiscovery of channels, as well as processing of generic messages for broad interoperabilty by all components.
-
-==== Message payloads
-
-For smaller payload workflow, OGC APIs can additionally provide a channel for notification metadata in order to receive a smaller message payload, which a user can process to determine whether to further interact with the reference data granule or resource.
-
-include::../recommendations/pubsub/REC_message-payloads.adoc[]
+The above workflow requires adherence to a structure of information channels, auto-discovery of those channels, as well as processing of generic messages for broad interoperability by all components.
 
 ==== AsyncAPI
 
-Following the recommendations of the Pub/Sub White Paper, AsyncAPI provides an event-driven equivalent of what is provided by OpenAPI for OGC APIs (description of protocols, channels, parameters, models, etc.). An OGC API landing page can provide a link to an AsyncAPI document as follows:
+Based on research and testing, the Pub/Sub White Paper recommended the use of AsyncAPI. AsyncAPI provides an event-driven equivalent of what is provided by OpenAPI for OGC API Standards (description of protocols, channels, parameters, models, etc.). An implementation of the https://ogcapi.ogc.org/common/overview.html[OGC API landing page requirements class] can provide a link to an AsyncAPI document as follows:
 
-.OGC API landing page AsyncAPI link example
+.OGC API landing page example link to an AsyncAPI document
 [source,json]
 ----
 {
@@ -46,53 +39,60 @@ Following the recommendations of the Pub/Sub White Paper, AsyncAPI provides an e
 }
 ----
 
+NOTE: the media type for an AsyncAPI document may change in the future as decided by the AsyncAPI community.
+
 include::../requirements/pubsub/REQ_rc-api.adoc[]
 
 ==== Providing notification metadata as an OGC API endpoint
 
-For Brokers providing notification metadata (as opposed to actual data payloads), an OGC API can, in parallel, easily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an OGC API provides the additional benefit of querying for past messages over time in case of a lost connection.
+For Brokers providing notification metadata (as opposed to actual data payloads), an implementation of OGC API Building Blocks can, in parallel, readily provide GeoJSON-based notification messages via an OGC API - Features endpoint. Providing message payloads via an implementation of OGC API Standard(s) provides the additional benefit of querying for past messages over time in case of a lost connection.  See <<pubsub-notification-message-payload-section>> for more information.
 
 ==== Providing Pub/Sub links to collection updates
 
-The links array could also provide references to the Pub/Sub capabilities available on the service; a *collection* link could reference a collection update notification channel:
+The links array could also provide references to the Pub/Sub capabilities available on the service. A *collection* link could reference a collection update notification channel.
 
-.OGC API Pub/Sub link example to new collection notifications
+NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
+
+Communicating event driven workflow from a link object is made via the `+hub+` link relation.  This link relation communicates that the link represents a Publish-Subscribe workflow defined by a Pub/Sub protocol in the `href` property as well as a `channel` property.  The `channel` property provides the relevant addressable topic that a client can subscribe to after connecting to a Pub/Sub endpoint.  The value and syntax of the `channel` property is bound to the Pub/Sub protocol identified in the `href` property.
+
+.Example of OGC API Pub/Sub link to new collection notifications
 [source,json]
 ----
 {
-    "rel": "collection",
-    "type": "application/json",
+    "rel": "hub",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
     "channel": "collections"
 }
 ----
 
+==== Providing Pub/Sub links to collection item notifications
+
 An *items* link could reference a data payload channel:
 
-.OGC API Pub/Sub link example to collection item notifications
+An OGC API - Features example
 
-OGC API - Features example
+.Example of OGC API - Features linking to a data payload channel
 [source,json]
 ----
 {
-    "rel": "items",
-    "type": "application/json",
+    "rel": "hub",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
-    "channel": "collections/{collectionId}"
+    "channel": "collections/surface-weather-observations"
 }
 ----
 
-OGC API - EDR example
+An OGC API - EDR example
+
+.Example of OGC API - EDR linking to a data payload channel
 [source,json]
 ----
 {
-    "rel": "items",
-    "type": "application/json",
+    "rel": "hub",
     "title": "Data notifications",
     "href": "mqtt://example.org:8883",
-    "channel": "collections/{collectionId}/items"
+    "channel": "collections/surface-weather-observations/items"
 }
 ----
 

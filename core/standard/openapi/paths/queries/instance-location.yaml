@@ -9,7 +9,7 @@ get:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml
     - $ref: ../../parameters/queries/locationId.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/core/crs.yaml
     - $ref: ../../parameters/core/f.yaml
     - $ref: ../../parameters/core/limit.yaml      

@@ -9,7 +9,7 @@ get:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/core/areaCoords.yaml
     - $ref: ../../parameters/core/z.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/core/parameter-name.yaml
     - $ref: ../../parameters/core/crs.yaml
     - $ref: ../../parameters/core/resolution-x.yaml
@@ -40,7 +40,7 @@ post:
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml  
   requestBody:
-    - $ref: ../../request-bodies/area.yaml  
+    $ref: ../../request-bodies/area.yaml  
   responses:
     200:
       $ref: ../../responses/queries/200.yaml

@@ -8,8 +8,8 @@ This implementation uses a variety of open source software such as Flask, Gunico
 
 ## Demo deployment
 
-- Landing page: https://data-api.mdl.nws.noaa.gov/EDR-API
-- OpenAPI document (Swagger): https://data-api.mdl.nws.noaa.gov/EDR-API/api?f=html
+- Landing page: https://data-api.mdl.nws.noaa.gov/EDR-API *This is not publicly available.*
+- OpenAPI document (Swagger): https://data-api.mdl.nws.noaa.gov/EDR-API/api?f=html *This is not publicly available.*
 
 
 Sample requests:

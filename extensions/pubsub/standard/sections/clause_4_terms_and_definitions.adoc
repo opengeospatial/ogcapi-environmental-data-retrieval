@@ -1,27 +1,33 @@
-== Terms and definitions
+== Terms, definitions and abbreviated terms
+
+=== Terms and definitions
 
 This document uses the terms defined in Sub-clause 5.3 of <<OGC06-121r9>>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "`shall`" (not "`must`") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
 For the purposes of this document, the following additional terms and definitions apply.
 
-=== Broker
-
+==== Broker
 Intermediary between Subscribers and other Publishers which have been previously registered with the Broker. The Broker is not the original producer of Messages, but acts as an intermediary, (re-)publishing messages received from other Publishers and decoupling them from their Subscribers.
 
-=== Subscriber
+==== Collection
+A geospatial resource that may be available as one or more sub-resource distributions that conform to one or more OGC API standards. (OGC 20-024)
 
+==== Dataset
+A collection of data, published or curated by a single agent, and available for access or download in one or more representations. (DCAT)
+
+==== Distribution
+A specific representation of a dataset. A dataset might be available in multiple serializations that may differ in various ways, including natural language, media-type or format, schematic organization, temporal and spatial resolution, level of detail or profiles (which might specify any or all of the above). (DCAT)
+
+==== Subscriber
 An entity that creates a subscription to a Publisher.
 
-=== Message
-
+==== Message
 A container within which data (such as JSON, XML, binary data, or other content) is transported. Messages may include additional information beyond data, including headers or other metadata used for routing or security purposes.
 
-=== Channel
-
+==== Channel
 A term (string) used to filter messages from a Broker.
 
 === Abbreviated terms
-
 AMQP::
   Advanced Message Queuing Protocol
 AMQPS::

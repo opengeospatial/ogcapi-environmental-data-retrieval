@@ -1,0 +1,15 @@
+[appendix,obligation="informative"]
+== Use cases 
+
+=== Earth System Prediction model run and data granules notification
+
+A given numerical weather prediction system produces a weather forecast as part of a model run.  A model run typically has associated forecast hours.  Each forecast hour makes available one or many weather elements at different pressure levels of the atmosphere.
+
+For example, Canada's Global Deterministic Prediction System (GDPS) produces two model runs per day, providing forecast of numerous weather elements for 33 pressure levels, at a resolution of 15 kilometres.footnote:[https://eccc-msc.github.io/open-data/msc-data/nwp_gdps/readme_gdps_en].
+
+A Pub/Sub workflow can be applied to an NWP system where:
+
+- notifications are sent as individual weather elements (data granules) become available
+- notifications are sent once the model run generation is complete, or "fully qualified"
+
+As a result, Pub/Sub would eliminate the need for continuous polling while a model run is in progress.

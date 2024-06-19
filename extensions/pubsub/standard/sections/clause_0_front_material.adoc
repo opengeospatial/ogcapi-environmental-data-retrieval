@@ -1,9 +1,11 @@
-.Preface
+== Preface
+The Environmental Data Retrieval - Part 2 Standard  provides:
 
-[NOTE]
-====
-This document provides an overview of Publish-Subscribe patterns specific to event driven data workflows, as well as options for realizing Publish-Subscribe workflow in OGC APIs. The document builds on the OGC Publish-Subscribe White Paper (OGC document 20-081), as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs (OGC document 23-013), and provides a baseline for Pub/Sub within the OGC API ecosystem.
-====
+1. Requirements for Publish-Subscribe patterns specific to event driven data workflows and 
+
+2. Options for realizing Publish-Subscribe workflow in OGC APIs. 
+
+The Standard is based on the OGC Publish-Subscribe White Paper https://portal.ogc.org/files/?artifact_id=94904&version=1[OGC 20-081], as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs https://docs.ogc.org/dp/23-013.html[OGC 23-013]. The goal of this Standard is to provide a basis for Publish-Subscribe implementation patterns within the OGC API ecosystem.
 
 ////
 *OGC Declaration*
@@ -30,23 +32,11 @@ Attention is drawn to the possibility that some of the elements of this document
 [abstract]
 == Abstract
 
-OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. This paper provides recommendations on applying Publish-Subscribe architectural patterns to OGC APIs.
+OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features, records, items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a timely, efficient and low latency approach for the delivery of data updates or notifications of updates. The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow provides recommendations on applying Publish-Subscribe architectural patterns to implementations of one or more OGC APIs.
 
 == Keywords
 
 //Keywords inserted here by Metanorma
-
-
-== Preface
-
-[NOTE]
-====
-OGC APIs provide Web based capabilities which are typically based on polling for collection resource updates (new features/records items, coverages, maps, etc.). Depending on a collection’s temporal resolution or frequency of updates, an event-driven / Publish-Subscribe architecture provides a time, efficient and low latency approach for delivery of data updates. The following requirements and recommendations apply to Publish-Subscribe architectural patterns to OGC APIs.
-
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
-
-Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
-====
 
 == Security considerations
 
@@ -61,10 +51,6 @@ Independent of any authentication type VRRP includes a mechanism (setting TTL=25
 NOTE: The security measures discussed in the following sections only provide various kinds of authentication. No confidentiality is provided at all. This should be explicitly described as outside the scope....”
 ////
 
-== Submitting organizations
-
-// Submitting organizations inserted here by Metanorma
-
 == Submitters
 
 All questions regarding this submission should be directed to the editor or the submitters:
@@ -73,17 +59,13 @@ All questions regarding this submission should be directed to the editor or the 
 |*Name* |*Affiliation*
 
 |Tom Kralidis |Meteorological Service of Canada
-|Steve Olson |NOAA/NWS
 |Chris Little|UK Met Office
 |Mark Burgoyne|UK Met Office
+|Steve Olson |NOAA/NWS
 |Shane Mill |NOAA/NWS
 
 |===
 
-== Contributors
+== Acknowledgements
 
-//This clause is optional.
-
-Additional contributors to this Standard include the following:
-
-Individual name(s), Organization
+Thanks to the members of the Meteorology and Oceanography Domain Working Group of the OGC as well as Clemens Portele and all contributors of change requests and comments.

@@ -1,9 +1,20 @@
-[appendix]
-== Conformance Class Abstract Test Suite (Normative)
+[appendix,obligation="normative"]
+== Conformance Class Abstract Test Suite
 
-[NOTE]
-Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+=== Conformance Class Publish-Subscribe (Pub/Sub)
 
-=== Conformance Class A
+include::../abstract_tests/ATS_class_pubsub.adoc[]
 
-include::../abstract_tests/ATS_class_example1.adoc[]
+include::../abstract_tests//pubsub/ATS_test_api.adoc[]
+
+=== Conformance Class Publish-Subscribe (Pub/Sub) Message Payloads
+
+include::../abstract_tests/ATS_class_pubsub_notification_message_payload.adoc[]
+
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_geojson.adoc[]
+
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_id.adoc[]
+
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_operation.adoc[]
+
+include::../abstract_tests/pubsub-notification-message-payload/ATS_test_pubtime.adoc[]
