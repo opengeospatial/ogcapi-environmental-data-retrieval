@@ -30,4 +30,11 @@ IF `resolution-y` is not specified, data should be returned for just the locatio
 ----
 resolution-y = number of intervals
 ----
+
+*E:*
+
+If the specified `resolution-y` value is invalid the API SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-y` values. 
+
+---
+
 ====

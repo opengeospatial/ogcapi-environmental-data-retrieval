@@ -1,11 +1,14 @@
-[[ats_collections_rc-resolution-y-definition]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-resolution-y-definition*
-^|Test Purpose |Validate that the `resolution-y` query parameters are constructed correctly.
-^|Requirement |<<req_collections_rc-resolution-y-definition,/req/edr/resolution-y-definition>>
-^|Test Method |Verify that the `resolution-y` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+[[ats_collections_rc-resolution-y-definition]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-resolution-y-definition
+target:: /req/edr/resolution-y-definition
+test-purpose:: Validate that the `resolution-y` query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `resolution-y` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
 
 [source,YAML]
 ----
@@ -17,4 +20,5 @@ schema:
 style: form
 explode: false
 ----
-|===
+--
+====
