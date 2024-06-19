@@ -4,8 +4,8 @@ on:
   push:
     branches:
       - master
-    #paths:
-    #  - 'standard/openapi/**.yaml'
+    paths:
+      - 'core/standard/openapi/**.yaml'
 
 jobs:
   build-openapi-bundle:
@@ -29,6 +29,10 @@ jobs:
         git config --global user.email "tomkralidis@gmail.com"
         git config --global user.name "Tom Kralidis"
         mv -f /tmp/ogcapi-environmental-data-retrieval-1.bundled.json .
-        git add .
-        git commit -am "Updating OpenAPI build"
-        git push
+        if [[ `git status --porcelain` ]]; then
+          git add .
+          git commit -am "Updating OpenAPI build"
+          git push
+        else
+          echo "No changes to push"
+        fi
