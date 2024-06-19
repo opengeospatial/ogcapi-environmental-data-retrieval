@@ -19,7 +19,7 @@ For simplicity, this document in general only refers to the HTTP protocol. This 
 
 To express relationships between resources, https://www.rfc-editor.org/rfc/rfc8288.html[RFC 8288 (Web Linking)] is used.
 
-The following https://www.iana.org/assignments/link-relations/link-relations.xhtml[registered link relation types \[IANA\]] are used in this document.
+The following https://www.iana.org/assignments/link-relations/link-relations.xhtml[registered link relation types [IANA]] are used in this document.
 
 * **collection**: The target IRI points to a resource which represents the collection resource for the context IRI.
 
