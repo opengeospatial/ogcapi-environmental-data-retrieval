@@ -24,7 +24,7 @@ jobs:
       run: |
         cd core/standard/openapi
         swagger-cli bundle -o /tmp/ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
-    - name: Commit changes
+    - name: Commit changes and push
       run: |
         git config --global user.email "tomkralidis@gmail.com"
         git config --global user.name "Tom Kralidis"
