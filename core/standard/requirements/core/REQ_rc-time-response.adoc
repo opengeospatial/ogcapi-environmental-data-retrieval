@@ -31,8 +31,9 @@ The temporal information is either a date-time or a time interval. The parameter
 interval-closed     = date-time "/" date-time
 interval-open-start = "../" date-time
 interval-open-end   = date-time "/.."
-interval            = interval-closed / interval-open-start / interval-open-end
-datetime            = date-time / interval
+repeating interval  = R[number of repetitions] / date-time / interval
+datetime            = date-time
+list of datetimes   = date-time, date-time, date-time
 ----
 ---
 *E:*
