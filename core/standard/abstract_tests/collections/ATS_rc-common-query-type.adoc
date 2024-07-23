@@ -10,9 +10,9 @@ step::: Verify that the data queries object has a `link` property
 step::: Verify that the `link` property has a `href` property
 step::: Verify that the `link` property has a `rel` property
 step::: Verify that the `link` property has a `variables` property
-step::: Verify that if the `data_queries` object is of type `position`,`area`,`trajectory` or `locations` the property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>> 
-step::: Verify that if the `data_queries` object is of type `radius`the property complies with <<ats_edr_rc-radius-variables,/req/edr/rc-radius-variables>>
-step::: Verify that if the `data_queries` object is of type `cube`the property complies with <<ats_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
-step::: Verify that if the `data_queries` object is of type `corridor`the property complies with <<ats_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
-step::: Verify that if the `data_queries` object is of type `items`the property complies with <<ats_edr_rc-items-variables,/req/edr/rc-items-variables>>
+step::: Verify that if the `data_queries` object is of type `position`, `area`, `trajectory` or `locations` the property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+step::: Verify that if the `data_queries` object is of type `radius` the property complies with <<ats_edr_rc-radius-variables,/req/edr/rc-radius-variables>>
+step::: Verify that if the `data_queries` object is of type `cube` the property complies with <<ats_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
+step::: Verify that if the `data_queries` object is of type `corridor` the property complies with <<ats_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
+step::: Verify that if the `data_queries` object is of type `items` the property complies with <<ats_edr_rc-items-variables,/req/edr/rc-items-variables>>
 ====
