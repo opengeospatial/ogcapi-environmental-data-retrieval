@@ -37,7 +37,7 @@ Every Collection within a collections array SHALL have an `extent` parameter whi
 ---
 *G:*
 
-Every Collection within a collections array SHALL have an `data_queries` parameter which SHALL comply with the requirement `/req/edr/rc-data-queries`.
+Every Collection within a collections array SHALL have a `data_queries` parameter which SHALL comply with the requirement `/req/edr/rc-data-queries`.
 
 ---
 *H:*
