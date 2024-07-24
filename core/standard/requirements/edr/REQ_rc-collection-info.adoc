@@ -37,25 +37,30 @@ Every Collection within a collections array SHALL have an `extent` parameter whi
 ---
 *G:*
 
-Every Collection within a collections array SHALL have a `crs` parameter which SHALL comply with the requirement `/req/edr/rc-crs`.
+Every Collection within a collections array SHALL have an `data_queries` parameter which SHALL comply with the requirement `/req/edr/rc-data-queries`.
 
 ---
 *H:*
 
-Every Collection within a collections array MAY have a `distanceunits` parameter containing an array of supported distance units.
+Every Collection within a collections array SHALL have a `crs` parameter which SHALL comply with the requirement `/req/edr/rc-crs`.
 
 ---
 *I:*
 
-If the `links` parameter includes a link to a `Radius` query there SHALL be a `distanceunits` parameter.
+Every Collection within a collections array MAY have a `distanceunits` parameter containing an array of supported distance units.
 
 ---
 *J:*
 
-Every Collection within a collections array SHALL have an `output_formats` parameter containing an array of values which describe the output formats supported by the collection.
+If the `links` parameter includes a link to a `Radius` query there SHALL be a `distanceunits` parameter.
 
 ---
 *K:*
+
+Every Collection within a collections array SHALL have an `output_formats` parameter containing an array of values which describe the output formats supported by the collection.
+
+---
+*L:*
 
 Every Collection within a collections array SHALL have a `parameter_names` attribute containing a list of parameters that SHALL comply with the requirement `/req/edr/rc-parameters`.
 

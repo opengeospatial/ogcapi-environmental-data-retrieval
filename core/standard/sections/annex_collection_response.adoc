@@ -20,7 +20,7 @@ Collection objects describe both collections and instances of a collection.
 |description |String  |No| A text description of the information provided by the collection
 |keywords     |String Array  |No| Array of words and phrases that define the information that the collection provides
 |**extent**     |<<col-extent,extent>> object|**Yes**| Object describing the spatio-temporal extent of the information provided by the collection
-|data_queries  |<<col-data_queries,data_queries>> object|No| Object providing query specific information
+|data_queries  |<<col-data_queries,data_queries>> object|**Yes**| Object providing query specific information
 |crs     |String Array|No| Array of coordinate reference system names, which define the output coordinate systems supported by the collection
 |output_formats  |String Array|No| Array of data format names, which define the data formats to which information in the collection can be output
 |**parameter_names**  |<<col-parameter_names,parameter_names>> object|**Yes**| Describes the data values available in the collection
