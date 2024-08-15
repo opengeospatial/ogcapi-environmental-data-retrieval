@@ -14,7 +14,7 @@ servers:
         protocol: mqtt
         description: MQTT endpoint
         security:
-            - user-password: []
+            - type: userPassword
 
 defaultContentType: application/json
 
@@ -22,23 +22,38 @@ channels:
     notify-collections:
         address: collections
         messages:
-            $ref: '#/components/messages/collection_msg'
+            collection_msg:
+                description: collection updated notification
+                payload:
+                    $ref: '#/components/schemas/collection_msg'
     notify-collections-wthr-stn:
         address: collections/wthr_st
         messages:
-            $ref: '#/components/messages/collection_msg'
+            collection_msg:
+                description: collection updated notification
+                payload:
+                    $ref: '#/components/schemas/collection_msg'
     notify-collections-stream-gage:
         address: collections/stream_gage
         messages:
-            $ref: '#/components/messages/collection_msg'
+            collection_msg:
+                description: collection updated notification
+                payload:
+                    $ref: '#/components/schemas/collection_msg'
     notify-collections-wthr_stn-items:
         address: collections/wthr_stn/items
         messages:
-            $ref: '#/components/messages/wthr_stn_msg'
+            wthr_stn_msg:
+                description: An observation formatted as GeoJSON             
+                payload:
+                    $ref: '#/components/schemas/wthr_stn_msg'
     notify-collections-stream_gage-items:
         address: collections/stream_gage/items
         messages:
-            $ref: '#/components/messages/stream_gage_msg'        
+            stream_gage_msg:
+                description: Monitoring station data formatted as GeoJSON
+                payload:
+                    $ref: '#/components/schemas/stream_gage_msg'        
 
 operations:
     notify-collections:
@@ -52,7 +67,7 @@ operations:
     notify-collections-stream-gage:
         action: receive
         channel:
-            $ref: '#/channels/notify-collections-stream_gage'
+            $ref: '#/channels/notify-collections-stream-gage'
     notify-collections-wthr_stn-items:
         action: receive
         channel:
@@ -63,124 +78,115 @@ operations:
             $ref: '#/channels/notify-collections-stream_gage-items'
 
 components:
-    messages:
+    schemas:
         collection_msg:
-            description: collection updated notification
-            payload:
-                type: object
-                required:
-                    - id
-                    - href         
-                properties:
-                    id:
-                        type: string
-                        description: collection name
-                    time:
-                        type: string
-                        format: date-time
-                        description: time collection changed 
-                    href:
-                        type: string
-                        format: uri
-                        description: URL of the changed collection               
+            type: object
+            required:
+                - id
+                - href         
+            properties:
+                id:
+                    type: string
+                    description: collection name
+                time:
+                    type: string
+                    format: date-time
+                    description: time collection changed 
+                href:
+                    type: string
+                    format: uri
+                    description: URL of the changed collection               
         wthr_stn_msg:
-            description: An observation formatted as GeoJSON
-            payload:
-                type: object
-                additionalProperties: false
-                properties:
-                    id:
-                        type: string
-                    type:
-                        type: string
-                    geometry:
-                        type: object
-                        properties:
-                            type: 
-                                type: string
-                            coordinates:
-                                type: array
-                                items:
-                                    type: number
-                                    format: float
+            type: object
+            additionalProperties: false
+            properties:
+                id:
+                    type: string
+                type:
+                    type: string
+                geometry:
+                    type: object
                     properties:
-                        type: object
-                        properties:
-                            time:
-                                type: string
-                                format: date-time
-                            id:
-                                type: string
-                            wind_direction:
+                        type: 
+                            type: string
+                        coordinates:
+                            type: array
+                            items:
                                 type: number
                                 format: float
-                            wind_speed:
-                                type: number
-                                format: float
-                            wind_gust:
-                                type: number
-                                format: float
-                            visibility:
-                                type: number
-                                format: float
-                            air_temperature:
-                                type: number
-                                format: float
-                            dew_point:
-                                type: number
-                                format: float
-                            mean_sea_level_pressure:
-                                type: number
-                                format: float
+                properties:
+                    type: object
+                    properties:
+                        time:
+                            type: string
+                            format: date-time
+                        id:
+                            type: string
+                        wind_direction:
+                            type: number
+                            format: float
+                        wind_speed:
+                            type: number
+                            format: float
+                        wind_gust:
+                            type: number
+                            format: float
+                        visibility:
+                            type: number
+                            format: float
+                        air_temperature:
+                            type: number
+                            format: float
+                        dew_point:
+                            type: number
+                            format: float
+                        mean_sea_level_pressure:
+                            type: number
+                            format: float
         stream_gage_msg:
-            description: Monitoring station data formatted as GeoJSON
-            payload:
-                type: object
-                additionalProperties: false
-                properties:
-                    id:
-                        type: string
-                    type:
-                        type: string
-                    geometry:
-                        type: object
-                        properties:
-                            type: 
-                                type: string
-                            coordinates:
-                                type: array
-                                items:
-                                    type: number
-                                    format: float
-                    links:
-                        type: array
-                        items: 
-                            type: object
-                            properties:
-                                rel:
-                                    type: string
-                                type:
-                                   type: string
-                                title:
-                                   type: string
-                                href:
-                                   type: string
-                                format: uri
+            type: object
+            additionalProperties: false
+            properties:
+                id:
+                    type: string
+                type:
+                    type: string
+                geometry:
+                    type: object
                     properties:
+                        type: 
+                            type: string
+                        coordinates:
+                            type: array
+                            items:
+                                type: number
+                                format: float
+                links:
+                    type: array
+                    items: 
                         type: object
                         properties:
-                            datetime:
+                            rel:
                                 type: string
-                                format: date-time
-                            label:
+                            type:
+                               type: string
+                            title:
+                               type: string
+                            href:
+                               type: string
+                               format: uri
+                properties:
+                    type: object
+                    properties:
+                        datetime:
+                            type: string
+                            format: date-time
+                        label:
+                            type: string
+                        parametername:
+                            type: array
+                            items: 
                                 type: string
-                            parametername:
-                                type: array
-                                items: 
-                                    type: string
-                            edrqueryendpoint:
-                                type: string
-                                format: uri
-    securitySchemes:
-        user-password:
-            type: userPassword
+                        edrqueryendpoint:
+                            type: string
+                            format: uri
