@@ -24,19 +24,19 @@ channels:
         messages:
             $ref: '#/components/messages/collection_msg'
     notify-collections-wthr-stn:
-        address: collections/wthr_st:
+        address: collections/wthr_st
         messages:
             $ref: '#/components/messages/collection_msg'
     notify-collections-stream-gage:
-        address: collections/stream_gage:
+        address: collections/stream_gage
         messages:
             $ref: '#/components/messages/collection_msg'
     notify-collections-wthr_stn-items:
-        address: collections/wthr_stn/items:
+        address: collections/wthr_stn/items
         messages:
             $ref: '#/components/messages/wthr_stn_msg'
     notify-collections-stream_gage-items:
-        address: collections/stream_gage/items:
+        address: collections/stream_gage/items
         messages:
             $ref: '#/components/messages/stream_gage_msg'        
 
@@ -101,8 +101,8 @@ components:
                             coordinates:
                                 type: array
                                 items:
-                                type: number
-                                format: float
+                                    type: number
+                                    format: float
                     properties:
                         type: object
                         properties:
@@ -150,10 +150,10 @@ components:
                             coordinates:
                                 type: array
                                 items:
-                                type: number
-                                format: float
-                links:
-                    type: array
+                                    type: number
+                                    format: float
+                    links:
+                        type: array
                         items: 
                             type: object
                             properties:
@@ -164,23 +164,23 @@ components:
                                 title:
                                    type: string
                                 href:
-                                    type: string
+                                   type: string
                                 format: uri
-                properties:
-                    type: object
                     properties:
-                        datetime:
-                            type: string
-                            format: date-time
-                        label:
-                            type: string
-                        parametername:
-                            type: array
-                            items: 
+                        type: object
+                        properties:
+                            datetime:
                                 type: string
-                        edrqueryendpoint:
-                            type: string
-                            format: uri
+                                format: date-time
+                            label:
+                                type: string
+                            parametername:
+                                type: array
+                                items: 
+                                    type: string
+                            edrqueryendpoint:
+                                type: string
+                                format: uri
     securitySchemes:
         user-password:
             type: userPassword
