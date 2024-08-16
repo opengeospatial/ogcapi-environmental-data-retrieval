@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /req/pubsub-notification-message-payload/geojson
-part:: A Pub/Sub notification message encoding SHALL be compliant to IETF RFC7946 GeoJSON.
+part:: A Pub/Sub notification message encoding SHALL be compliant to IETF RFC 7946 GeoJSON.
 ====

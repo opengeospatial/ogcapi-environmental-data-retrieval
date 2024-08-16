@@ -5,7 +5,7 @@
 [%metadata]
 identifier:: /conf/pubsub/api
 target:: /req/pubsub/api
-test-purpose:: Validate that an EDR service provides AsyncAPI capabilities.
+test-purpose:: Validate that an implementation of OGC API - EDR provides AsyncAPI capabilities.
 test-method::
 +
 --

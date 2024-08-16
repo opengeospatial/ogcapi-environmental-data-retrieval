@@ -10,7 +10,7 @@ Event-driven workflows provide Publish-Subscribe based capabilities as part of i
 
 The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The Publish-Subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: traffic conditions, weather or hazard warnings, and real-time sensor data).
 
-Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-046] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the  EDR - Part 2: Publish-Subscribe Standard discusses approaches for integrating Publish-Subscribe architecture into the OGC API suite of Standards.
+Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-081] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the http://www.opengis.net/doc/IS/ogcapi-edr-2/1.0[OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard] discusses approaches for integrating Publish-Subscribe architecture into the OGC API suite of Standards.
 
 include::../recommendations/pubsub/PER_protocols.adoc[]
 
@@ -51,7 +51,7 @@ For Brokers providing notification metadata (as opposed to actual data payloads)
 
 The links array could also provide references to the Pub/Sub capabilities available on the service. A *collection* link could reference a collection update notification channel.
 
-NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API-Common: Part 2]
+NOTE:  In the OGC API Suite of Standards, a https://docs.ogc.org/DRAFTS/20-024.html#collection-description[collection] is a geospatial https://docs.ogc.org/DRAFTS/20-024.html#resource-definition[resource] (such as a dataset) that may be available as one or more sub-resource https://docs.ogc.org/DRAFTS/20-024.html#distribution-definition[distributions] that conform to one or more OGC API standards. See the https://docs.ogc.org/DRAFTS/20-024.html#rc-collections-section[OGC API - Common - Part 2: Geospatial Data candidate Standard].
 
 Communicating event driven workflow from a link object is made via the `+hub+` link relation.  This link relation communicates that the link represents a Publish-Subscribe workflow defined by a Pub/Sub protocol in the `href` property as well as a `channel` property.  The `channel` property provides the relevant addressable topic that a client can subscribe to after connecting to a Pub/Sub endpoint.  The value and syntax of the `channel` property is bound to the Pub/Sub protocol identified in the `href` property.
 
