@@ -11,11 +11,11 @@ required:
 
 properties:
   id:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml#/properties/id'
+    $ref: 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureGeoJSON.yaml#/properties/id'
   type:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml#/properties/type'
+    $ref: 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureGeoJSON.yaml#/properties/type'
   geometry:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/featureGeoJSON.yaml#/properties/geometry'
+    $ref: 'https://schemas.opengis.net/ogcapi/features/part1/1.0/openapi/schemas/featureGeoJSON.yaml#/properties/geometry'
   properties:
     type: object
     required:
@@ -42,4 +42,6 @@ properties:
           - delete
         default: create
   links:
-    $ref: 'https://raw.githubusercontent.com/opengeospatial/ogcapi-features/master/core/openapi/schemas/link.yaml'
+    type: array
+    items:
+      $ref: 'https://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/link.yaml'
