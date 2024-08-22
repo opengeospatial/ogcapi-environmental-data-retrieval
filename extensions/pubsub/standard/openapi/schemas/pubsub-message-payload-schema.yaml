@@ -30,7 +30,7 @@ properties:
         type: string
         format: date-time
         description: |
-          Identifies the date/time of when the file was posted/published, in RFC3339 format.
+          Identifies the date/time of when the file was posted/published, in RFC 3339 format.
           The publication date/time is critical for subscribers to prevent message loss by knowing
           their lag (how far behind the publisher they are).
       operation:

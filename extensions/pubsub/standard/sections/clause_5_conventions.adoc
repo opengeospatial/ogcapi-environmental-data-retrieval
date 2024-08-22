@@ -1,12 +1,12 @@
 == Conventions
 
-This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
+This section provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.
 
 === Identifiers
 
 The normative provisions in this standard are denoted by the URI:
 
-`+http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0+`
+`+http://www.opengis.net/spec/ogcapi-edr-2/1.0+`
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
@@ -37,4 +37,4 @@ Most of the examples provided in this Standard are encoded in JSON. JSON was cho
 
 === Schemas
 
-AsyncAPI 2.0 Schema objects are used throughout this Standard to define the structure of resources. These schema are typically represented using YAML encoding. This convention is for the ease of the user. It does not prohibit the use of another schema language or encoding. Nor does it indicate that AsyncAPI 2.0 Schema objects are required. Implementations should use a schema language and encoding appropriate for the format of the resource.  Note that for property values in JSON for which `null` is not explicitly supported/required, server implementations are recommended to drop the property (as opposed to specifying the property with a value of `null`).
+AsyncAPI 3.0 Schema objects are used throughout this Standard to define the structure of resources. These schemas are typically represented using YAML encoding. This convention is for the ease of the user. It does not prohibit the use of another schema language or encoding. Nor does it indicate that AsyncAPI 3.0 Schema objects are required. Implementations should use a schema language and encoding appropriate for the format of the resource.  Note that for property values in JSON for which `null` is not explicitly supported/required, server implementations are recommended to drop the property (as opposed to specifying the property with a value of `null`).

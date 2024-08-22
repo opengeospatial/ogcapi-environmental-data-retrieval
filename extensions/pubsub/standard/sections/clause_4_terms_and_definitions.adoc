@@ -2,15 +2,11 @@
 
 === Terms and definitions
 
-This document uses the terms defined in Sub-clause 5.3 of <<OGC06-121r9>>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "`shall`" (not "`must`") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
-
-For the purposes of this document, the following additional terms and definitions apply.
-
 ==== Broker
 Intermediary between Subscribers and other Publishers which have been previously registered with the Broker. The Broker is not the original producer of Messages, but acts as an intermediary, (re-)publishing messages received from other Publishers and decoupling them from their Subscribers.
 
 ==== Collection
-A geospatial resource that may be available as one or more sub-resource distributions that conform to one or more OGC API standards. (OGC 20-024)
+A geospatial resource that may be available as one or more sub-resource distributions that conform to one or more OGC API Standards. (OGC 20-024)
 
 ==== Dataset
 A collection of data, published or curated by a single agent, and available for access or download in one or more representations. (DCAT)
@@ -36,8 +32,6 @@ API::
   Application Programming Interface
 CORS::
   Cross-Origin Resource Sharing
-GeoJSON::
-   Geospatial JavaScript Object Notation (JSON)
 HTTP::
   Hypertext Transfer Protocol
 HTTPS::

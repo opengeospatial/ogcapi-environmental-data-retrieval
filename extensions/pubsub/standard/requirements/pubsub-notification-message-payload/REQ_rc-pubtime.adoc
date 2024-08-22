@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /req/pubsub-notification-message-payload/pubtime
-part:: A Pub/Sub notification message SHALL provide a `+properties.pubtime+` property in RFC3339 format.
+part:: A Pub/Sub notification message SHALL provide a `+properties.pubtime+` property in RFC 3339 format.
 ====

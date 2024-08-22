@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /per/pubsub/protocols
-part:: A Publish-Subscribe MAY use the message queueing protocol of their choice and/or based on application requirements.
+part:: An implementation of the Publish-Subscribe workflows described in this Standard MAY use the message queueing protocol of their choice and/or based on application requirements.
 ====

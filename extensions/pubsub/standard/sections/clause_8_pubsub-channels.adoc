@@ -9,7 +9,7 @@
 
 The OGC API service endpoint specified by a URL path of resources and sub-resources can be used in parallel as a channel description when the data publisher wishes to provide Pub/Sub capability for resources normally available via an OGC API implementations instance in the same way. Below are examples of service endpoints or resources normally available via HTTP, and how they can be re-used as topics for Pub/Sub workflow:
 
-- ``/collections``: Notifies Subscribers whenever there is a change to the ``/collections`` resource (for example, addition of a new collection). The message payload would be collection metadata as defined in the https://docs.ogc.org/DRAFTS/20-024.html#collection-description[OGC API - Common Standard], or a message referencing the collection metadata.
+- ``/collections``: Notifies Subscribers whenever there is a change to the ``/collections`` resource (for example, addition of a new collection). The message payload would be collection metadata as defined in the https://docs.ogc.org/DRAFTS/20-024.html#collection-description[OGC API - Common - Part 2: Geospatial Data candidate Standard], or a message referencing the collection metadata.
 
 - ``/collections/{collectionId}``: Notifies Subscribers whenever there is an update to a single `collection` resource (for example, spatial or temporal extents, new items, etc.). The message payload would be defined by either the resource model of the given collection (items, etc.), or a notification message of metadata referencing the collection with the relevant change.
 

@@ -3,5 +3,5 @@
 ====
 [%metadata]
 identifier:: /rec/pubsub-notification-message-payload/id
-part:: For messsage payloads that provide notification metadata about a resource publication, a Pub/Sub notification message `+id+` property SHOULD use a UUID.
+part:: For message payloads that provide notification metadata about a resource publication, a Pub/Sub notification message `+id+` property SHOULD use a UUID.
 ====
