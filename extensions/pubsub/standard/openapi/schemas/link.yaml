@@ -1,5 +1,5 @@
 $schema: 'https://json-schema.org/draft/2020-12/schema'
-$id: 'https://raw.githubusercontent.com/wmo-im/wcmp2/main/schema/wcmpRecordGeoJSON.yaml'
+$id: 'https://schemas.opengis.net/ogcapi/edr/part2/1.0/openapi/schemas/link.yaml'
 title: OGC API - Pub/Sub message payload link definition
 description: OGC API - Pub/Sub message payload link definition
 
