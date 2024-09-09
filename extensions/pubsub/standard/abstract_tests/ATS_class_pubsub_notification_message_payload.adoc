@@ -1,8 +1,8 @@
 [conformance_class]
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub-notification-message-payload
-target:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub-notification-message-payload
+identifier:: http://www.opengis.net/spec/ogcapi-edr-2/1.0/conf/pubsub-notification-message-payload
+target:: http://www.opengis.net/spec/ogcapi-edr-2/1.0/req/pubsub-notification-message-payload
 abstract-test:: /conf/pubsub-notification-message-payload/geojson
 abstract-test:: /conf/pubsub-notification-message-payload/id
 abstract-test:: /conf/pubsub-notification-message-payload/operation
