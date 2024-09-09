@@ -3,7 +3,7 @@
 .Requirements Class 'Publish-Subscribe (Pub/Sub)'
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub
+identifier:: http://www.opengis.net/spec/ogcapi-edr-2/1.0/req/pubsub
 subject:: Pub/Sub
 requirement:: /req/pubsub/api
 ====

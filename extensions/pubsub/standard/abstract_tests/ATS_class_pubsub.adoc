@@ -1,8 +1,8 @@
 [conformance_class]
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/conf/pubsub
-target:: http://www.opengis.net/spec/ogcapi-environmental-data-retrieval-2/1.0/req/pubsub
+identifier:: http://www.opengis.net/spec/ogcapi-edr-2/1.0/conf/pubsub
+target:: http://www.opengis.net/spec/ogcapi-edr-2/1.0/req/pubsub
 classification:: Target Type:Pub/Sub
 abstract-test:: /conf/pubsub/api
 ====
