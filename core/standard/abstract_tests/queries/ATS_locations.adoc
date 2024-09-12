@@ -21,6 +21,16 @@ step::: Check that invalid `locationId` values return an error message
 step::: Validate that a document was returned with a status code 404.
 ====
 
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/locations/locations-nodata
+target:: /req/edr/rc-locations
+test-purpose:: Validate that an HTTP 204 message is returned by a `Locations` query when there is no data available for the requested locations.
+test-method::
+step::: Check that an HTTP 204 message is returned when no data for the requested location identifier(s) is available
+step::: Validate that a document was returned with a status code 204.
+====
 
 [abstract_test]
 ====

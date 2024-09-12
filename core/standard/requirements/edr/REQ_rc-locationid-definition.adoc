@@ -1,0 +1,23 @@
+[[req_edr_locationid-definition]]
+==== *Requirement /req/edr/REQ_rc-locationid-definition* Parameter locationId definition
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/REQ_rc-locationid-definition
+*A:* 
+The `locationId` value SHALL be a comma delimited string list of locations that data is being requested for. 
+---
+*B:*
+Each resource locations operation SHALL support a parameter `locationId` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+[source,YAML]
+----
+name: locationId
+in: path
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+====

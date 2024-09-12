@@ -272,6 +272,11 @@ include::../requirements/edr/REQ_rc-custom-dimension-definition.adoc[]
 
 include::../requirements/edr/REQ_rc-custom-dimension-response.adoc[]
 
+
+include::../requirements/edr/REQ_rc-locationid-definition.adoc[]
+
+include::../requirements/edr/REQ_rc-locationid-response.adoc[]
+
 :sectnums: 
 
 
