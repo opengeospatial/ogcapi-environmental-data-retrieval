@@ -105,6 +105,64 @@ Two common approaches are:
 * An additional query parameter (for example, `accept` or `f`) that overrides the Accept header of the HTTP request.
 =========================================================
 
+[[limit-parameter]]
+=== Support for limit query parameter
+
+An EDR server MAY provide support for a `limit` query parameter when the requested output format can support data paging.
+**Note**: If either the server or the requested data format do not support paging responses the `limit` query parameter value will be ignored.
+
+If the `limit` query parameter is supported the following applies: 
+
+The number of features returned depends on the server and the parameter `limit.`
+
+* The client can request a limit it is interested in.
+
+* The server likely has a default value for the limit, and a maximum limit.
+
+* If the server has any more results available than it returns (the number it returns is less than or equal to the requested/default/maximum limit) then the server will include a link to the next set of results.
+
+So (using the default/maximum values of 10/10000 from the OpenAPI fragment in requirement `/req/core/fc-limit-definition`):
+
+* Asking for 10 will return 0 to 10 (as requested) and if there are more, a `next` link;
+
+* Asking without a limit will return 0 to 10 (default) and if there are more, a `next` link;
+
+* Asking for 50000 will return up to 10000 (server-limited) and if there are more, a `next` link;
+
+* Following the next link from the previous response will return up to 10000 additional features and if there are more, a `next` link.
+
+include::../recomendations/core/REC_rc-next-1.adoc[]
+
+include::../recomendations/core/REC_rc-next-2.adoc[]
+
+include::../recomendations/core/REC_rc-next-3.adoc[]
+
+This document does not mandate any specific implementation approach for the `next` links.
+
+An implementation could use opaque links that are managed by the server. It is up to the server to determine how long these links can be de-referenced. Clients have to be prepared to receive a 404 response.
+
+Another implementation approach is to use an implementation-specific parameter that specifies the index within the result set from which the server begins presenting results in the response, like the `startIndex` parameter that was used in <<WFS20,WFS 2.0>> (and which could be added again in additional parts of the OGC API Features series).
+
+The API will return no `next` link, if it has returned all selected features, and the server knows that. However, the server can not be aware that it has already returned all selected features. For example, if the request states `limit=10` and the query to the backend datastore returns 10 features, the server may not know, if there are more features or not (in most cases there will be more features), unless the total number of matches is also computed, which can be too costly. The server will then add the next link, and if there are no more features, dereferencing the next link will return an empty feature collection and no next link. This behavior is consistent with the statements above.
+
+Clients cannot assume that paging is safe against changes to dataset while a client iterates through `next` links. If a server provides opaque links these could be safe and maintain the dataset state during the original request. Using a parameter for the start index, however, will not be safe.
+
+Additional requirements classes for safe paging or an index parameter can be added in extensions to this specification.
+
+include::../recomendations/core/PER_rc-prev.adoc[]
+
+Providing `prev` links supports navigating back and forth between pages, but depending on the implementation approach it can be too complex to implement.
+
+include::../requirements/core/REQ_rc-rel-type.adoc[]
+
+include::../requirements/core/REQ_rc-numberMatched.adoc[]
+
+include::../requirements/core/REQ_rc-numberReturned.adoc[]
+
+include::../recomendations/core/REC_rc-extent.adoc[]
+
+NOTE: The representation of the links and the other properties in the payload depends on the encoding of the feature collection
+
 === Link Headers
 
 include::../recommendations/core/REC_link-header.adoc[]
