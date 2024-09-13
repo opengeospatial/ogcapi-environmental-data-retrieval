@@ -277,6 +277,9 @@ include::../requirements/edr/REQ_rc-locationid-definition.adoc[]
 
 include::../requirements/edr/REQ_rc-locationid-response.adoc[]
 
+include::../requirements/core/REQ_rc-limit-definition.adoc[]
+
+
 :sectnums: 
 
 
