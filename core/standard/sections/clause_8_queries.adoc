@@ -48,6 +48,9 @@ The OGC API — Common standard does not define any information resource typ
 [[query-resources-section]]
 === Query Resources
 
+**The following tables define the query parameters for each of the EDR query types, the query types support a mix of optional and required query parameters. Where necessary an EDR implementation can use its OpenAPI document response (i.e. `/api`) to override the default for query parameters from optional to required or only advertise the query parameters that are supported by the API (ALL EDR implementations MUST implement query parameters that are required by the EDR standard).  The OpenAPI document for an EDR service SHALL be the definitive reference of whether a query parameter is required in any request to the EDR server.**
+
+
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
 .Query Types
 [width="90%",cols=",,",options="header"]
