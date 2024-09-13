@@ -1,10 +1,13 @@
-[[ats_collections_rc-resolution-y-response]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-resolution-y-response*
-^|Test Purpose |Validate that the `resolution-y` query parameters are processed correctly.
-^|Requirement |<<req_collections_rc-resolution-y-response,/req/edr/resolution-y-response>>
-^|Test Method |. Verify that the data returned by the query contains the same number of values on the y axis as that requested in the `resolution-y` parameter
-. Validate that the `resolution-y` parameter complies with the syntax described in <<req_collections_rc-resolution-y-response,/req/edr/resolution-y-response>>.
-|===
+[[ats_collections_rc-resolution-y-response]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-resolution-y-response
+target:: /req/edr/resolution-y-response
+test-purpose:: Validate that the resolution-y query parameters are processed correctly.
+test-method::
+step::: Validate that the `resolution-y` parameter complies with the syntax described in <<req_collections_rc-resolution-y-response,/req/edr/resolution-y-response>>.
+step:::  Verify that the data returned by the query contains the same number of values on the y axis as 
+that requested in the `resolution-y` parameter.
+step:::  Verify that a HTTP 400 error is returned when an invalid `resolution-y` parameter is requested.
+====

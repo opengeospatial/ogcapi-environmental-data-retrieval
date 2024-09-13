@@ -235,6 +235,14 @@ include::../collections/ATS_rc-height-units-definition.adoc[]
 
 include::../collections/ATS_rc-height-units-response.adoc[]
 
+include::../collections/ATS_rc-resolution-x-definition.adoc[]
+
+include::../collections/ATS_rc-resolution-x-response.adoc[]
+
+include::../collections/ATS_rc-resolution-y-definition.adoc[]
+
+include::../collections/ATS_rc-resolution-y-response.adoc[]
+
 include::../collections/corridor/ATS_rc-parameter-name-definition.adoc[]
 
 include::../collections/corridor/ATS_rc-parameter-name-response.adoc[]

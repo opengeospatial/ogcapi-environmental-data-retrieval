@@ -1,67 +1,39 @@
-[[req_edr_rc-cube]]
+[[req_edr_resolution-z-response]]
+==== *Requirement /req/edr/resolution-z-response* Parameter resolution-z response
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/edr/rc-cube
+identifier:: /req/edr/resolution-z-response
 
 *A:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/cube`.
+If the `resolution-z` parameter is provided, it denotes the number of positions to retrieve data for, over the depth of the corridor path including its minimum and maximum width coordinates.
+
+.interpolated corridor example
+image::images/REQ_rc-resolution-z-a.png[interpolated corridor example]
 
 ---
 *B:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/cube`.
+A `resolution-z` value of 0 SHALL return all available data at the stored vertical resolution between (and including) the minimum and maximum coordinates of the defined corridor.
+
+.native resolution corridor example
+image::images/REQ_rc-resolution-z-b.png[native resolution corridor example]
 
 ---
 *C:*
 
-The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
+If `resolution-z` is not specified the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.
 
----
+
+[source,txt]
+----
+resolution-z = number of intervals + 1
+----
 *D:*
 
-A `cube` GET or POST operation SHALL include a `bbox` query parameter
+If the specified `resolution-z` value is invalid the API SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-z` values. 
 
 ---
-*E:*
-
-A `bbox` query parameter SHOULD only consist of four values, any vertical values defined by `bbox` will be overridden by the values assigned to the `z` query parameter
-
----
-*F:*
-
-If the `bbox` query parameter is not specified a HTTP `400` error should be generated
-
----
-*G:*
-
-A `cube` GET or POST operation SHALL include a `z` query parameter
-
----
-*H:*
-
-If the `z` query parameter is not specified a HTTP `400` error should be generated
-
----
-*I:*
-
-A `cube` GET or POST operation SHOULD include a `parameter-name` query parameter
-
----
-*J:*
-
-A `cube` GET or POST operation MAY include a `datetime` query parameter
-
----
-*K:*
-
-A `cube` GET or POST operation SHOULD include a `crs` query parameter
-
----
-*L:*
-
-A `cube` GET or POST operation SHOULD include an `f` query parameter
-
 ====

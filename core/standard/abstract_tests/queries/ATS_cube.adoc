@@ -73,12 +73,6 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-// The coords param tests have been commented out because they are not supported by the Cube query.
-// See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/423#issuecomment-1553144063
-
-//include::../collections/cube/ATS_rc-coords-definition.adoc[]
-
-//include::../collections/cube/ATS_rc-coords-response.adoc[]
 
 include::../collections/cube/ATS_rc-z-definition.adoc[]
 
@@ -95,6 +89,18 @@ include::../core/cube/ATS_rc-time-response.adoc[]
 include::../collections/cube/ATS_rc-parameter-name-definition.adoc[]
 
 include::../collections/cube/ATS_rc-parameter-name-response.adoc[]
+
+include::../collections/ATS_rc-resolution-x-definition.adoc[]
+
+include::../collections/ATS_rc-resolution-x-response.adoc[]
+
+include::../collections/ATS_rc-resolution-y-definition.adoc[]
+
+include::../collections/ATS_rc-resolution-y-response.adoc[]
+
+include::../collections/ATS_rc-resolution-z-definition.adoc[]
+
+include::../collections/ATS_rc-resolution-z-response.adoc[]
 
 include::../collections/cube/ATS_rc-crs-definition.adoc[]
 
