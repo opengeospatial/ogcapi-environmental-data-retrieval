@@ -249,7 +249,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -268,7 +268,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -287,7 +287,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -306,7 +306,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -325,7 +325,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -344,7 +344,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Feels like temperature": {
@@ -363,7 +363,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "UV index": {
@@ -382,7 +382,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Probabilty of precipitation": {
@@ -401,7 +401,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -420,7 +420,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }
@@ -616,7 +616,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -635,7 +635,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -654,7 +654,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -673,7 +673,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -692,7 +692,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -711,7 +711,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Feels like temperature": {
@@ -730,7 +730,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "UV index": {
@@ -749,7 +749,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Probabilty of precipitation": {
@@ -768,7 +768,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -787,7 +787,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }
@@ -983,7 +983,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -1002,7 +1002,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -1021,7 +1021,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -1040,7 +1040,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -1059,7 +1059,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -1078,7 +1078,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Feels like temperature": {
@@ -1097,7 +1097,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "UV index": {
@@ -1116,7 +1116,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Probabilty of precipitation": {
@@ -1135,7 +1135,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -1154,7 +1154,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }
@@ -1349,7 +1349,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -1368,7 +1368,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -1387,7 +1387,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -1406,7 +1406,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -1425,7 +1425,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -1444,7 +1444,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Feels like temperature": {
@@ -1463,7 +1463,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "UV index": {
@@ -1482,7 +1482,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Probabilty of precipitation": {
@@ -1501,7 +1501,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -1520,7 +1520,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }

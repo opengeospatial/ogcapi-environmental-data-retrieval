@@ -47,7 +47,7 @@ Wind Speed and Wind direction values which represent a average value over the 10
         },
         "measurementType": {
         "method": "instantaneous",
-        "period": "PT0S"
+        "duration": "PT0S"
         }
     },
     "wind_speed": {
@@ -66,7 +66,7 @@ Wind Speed and Wind direction values which represent a average value over the 10
         },
         "measurementType": {
             "method": "mean",
-            "period": "-PT10M/PT0M"
+            "duration": "-PT10M"
         }
     },
     "wind_direction": {
@@ -85,7 +85,7 @@ Wind Speed and Wind direction values which represent a average value over the 10
         },
         "measurementType": {
             "method": "mean",
-            "period": "-PT10M/PT0M"
+            "duration": "-PT10M"
         }
     }
 }

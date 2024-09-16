@@ -232,7 +232,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -251,7 +251,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -270,7 +270,7 @@
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -289,7 +289,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -308,7 +308,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -327,7 +327,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Dew point": {
@@ -346,7 +346,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Pressure": {
@@ -365,7 +365,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Pressure Tendancy": {
@@ -384,7 +384,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -403,7 +403,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }
@@ -511,7 +511,7 @@
                                             },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -530,7 +530,7 @@
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -549,7 +549,7 @@
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -568,7 +568,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -587,7 +587,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -606,7 +606,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Feels like temperature": {
@@ -625,7 +625,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "UV index": {
@@ -644,7 +644,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Probabilty of precipitation": {
@@ -663,7 +663,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -682,7 +682,7 @@
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }
