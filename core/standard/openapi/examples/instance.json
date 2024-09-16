@@ -102,7 +102,6 @@
                         "variables": {
                             "title": "Position query",
                             "description": "Position query",
-                            "query_type": "position",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -129,7 +128,6 @@
                         "variables": {
                             "title": "Radius query",
                             "description": "Radius query",
-                            "query_type": "radius",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -161,7 +159,6 @@
                         "variables": {
                             "title": "Area query",
                             "description": "Area query",
-                            "query_type": "area",
                             "coords": {
                                 "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                             },
@@ -189,7 +186,6 @@
                         "variables": {
                             "title": "Locations query",
                             "description": "Locations query",
-                            "query_type": "location",
                             "output_formats": [
                                 "CoverageJSON",
                                 "GeoJSON"
@@ -466,7 +462,6 @@
                         "variables": {
                             "title": "Position query",
                             "description": "Position query",
-                            "query_type": "position",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -493,7 +488,6 @@
                         "variables": {
                             "title": "Radius query",
                             "description": "Radius query",
-                            "query_type": "radius",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -526,7 +520,6 @@
                         "variables": {
                             "title": "Area query",
                             "description": "Area query",
-                            "query_type": "area",
                             "coords": {
                                 "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                             },
@@ -554,7 +547,6 @@
                         "variables": {
                             "title": "Locations query",
                             "description": "Locations query",
-                            "query_type": "location",
                             "output_formats": [
                                 "CoverageJSON",
                                 "GeoJSON"
@@ -831,7 +823,6 @@
                         "variables": {
                             "title": "Position query",
                             "description": "Position query",
-                            "query_type": "position",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -858,7 +849,6 @@
                         "variables": {
                             "title": "Radius query",
                             "description": "Radius query",
-                            "query_type": "radius",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -891,7 +881,6 @@
                         "variables": {
                             "title": "Area query",
                             "description": "Area query",
-                            "query_type": "area",
                             "coords": {
                                 "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                             },
@@ -919,7 +908,6 @@
                         "variables": {
                             "title": "Locations query",
                             "description": "Locations query",
-                            "query_type": "location",
                             "output_formats": [
                                 "CoverageJSON",
                                 "GeoJSON"
@@ -1196,7 +1184,6 @@
                         "variables": {
                             "title": "Position query",
                             "description": "Position query",
-                            "query_type": "position",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -1223,7 +1210,6 @@
                         "variables": {
                             "title": "Radius query",
                             "description": "Radius query",
-                            "query_type": "radius",
                             "coords": {
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -1255,7 +1241,6 @@
                         "variables": {
                             "title": "Area query",
                             "description": "Area query",
-                            "query_type": "area",
                             "coords": {
                                 "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                             },
@@ -1283,7 +1268,6 @@
                         "variables": {
                             "title": "Locations query",
                             "description": "Locations query",
-                            "query_type": "location",
                             "output_formats": [
                                 "CoverageJSON",
                                 "GeoJSON"

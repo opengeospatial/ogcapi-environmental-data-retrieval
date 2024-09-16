@@ -1,7 +1,8 @@
 allOf:
   - $ref: DataQuery.yaml
 required:
-  - query_type  
+  - width_units  
+  - height_units  
 properties:
   query_type:
     description: Type of EDR query
