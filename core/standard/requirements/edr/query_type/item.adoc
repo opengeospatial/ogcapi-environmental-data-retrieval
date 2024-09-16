@@ -8,12 +8,16 @@ A service can define a custom GeoJSON schema in the OpenAPI definition for the s
 
 include::../../../recommendations/core/REC_edr-geojson.adoc[]
 
-===== Parameter itemId
-
 If an itemId is not specified, the query will return a list of the available
 itemId's. This behavior is specified in <<OGC17-069r3,OGC API - Features>>.
 All other parameters for use with the Items query are defined by
 OGC API - Features.
+
+[cols="2,1,1,2,3"]
+|====
+|Path Parameter| Type | Required|Description|Examples
+a| **itemId**| String|No| Identifier for the required item.  a| * 
+|====
 
 
 The filter constraints are defined by the following query parameters:
