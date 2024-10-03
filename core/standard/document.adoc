@@ -61,6 +61,8 @@ include::sections/annex_ats.adoc[]
 
 include::sections/annex_collection_response.adoc[]
 
+include::sections/annex_measurement_type_methods.adoc[]
+
 include::sections/annex_examples.adoc[]
 
 include::sections/annex_relationship.adoc[]

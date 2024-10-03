@@ -101,7 +101,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Position query",
                             "description": "Position query",
-                            "query_type": "position",
                             "coords" :{
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -129,7 +128,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Radius query",
                             "description": "Radius query",
-                            "query_type": "radius",
                             "coords" :{
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -161,7 +159,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Area query",
                             "description": "Area query",
-                            "query_type": "area",
                             "coords" :{
                                 "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                             },
@@ -190,7 +187,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Location query",
                             "description": "Location query",
-                            "query_type": "locations",
                             "output_formats": [
                                 "CoverageJSON",
                                 "GeoJSON",
@@ -233,7 +229,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -252,7 +248,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -271,7 +267,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -290,7 +286,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -309,7 +305,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -328,7 +324,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Dew point": {
@@ -347,7 +343,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Pressure": {
@@ -366,7 +362,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Pressure Tendancy": {
@@ -385,7 +381,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -404,7 +400,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }
@@ -480,7 +476,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Position query",
                             "description": "Position query",
-                            "query_type": "position",
                             "coords" :{
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -507,7 +502,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Radius query",
                             "description": "Radius query",
-                            "query_type": "radius",
                             "coords" :{
                                 "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
                             },
@@ -538,7 +532,6 @@ There are also links to the license information for the observation and forecast
                         "variables": {
                             "title": "Area query",
                             "description": "Area query",
-                            "query_type": "area",
                             "coords" :{
                                 "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
                             },
@@ -594,7 +587,7 @@ There are also links to the license information for the observation and forecast
                                             },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Speed": {
@@ -613,7 +606,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "mean",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Wind Gust": {
@@ -632,7 +625,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "maximum",
-                        "period": "-PT10M/PT0M"
+                        "duration": "-PT10M"
                     }
                 },
                 "Air Temperature": {
@@ -651,7 +644,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Weather": {
@@ -670,7 +663,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Relative Humidity": {
@@ -689,7 +682,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Feels like temperature": {
@@ -708,7 +701,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "UV index": {
@@ -727,7 +720,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Probability of precipitation": {
@@ -746,7 +739,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 },
                 "Visibility": {
@@ -765,7 +758,7 @@ There are also links to the license information for the observation and forecast
                     },
                     "measurementType": {
                         "method": "instantaneous",
-                        "period": "PT0M"
+                        "duration": "PT0M"
                     }
                 }
             }

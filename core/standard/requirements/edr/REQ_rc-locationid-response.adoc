@@ -1,0 +1,13 @@
+[[req_edr_locationid-response]]
+==== *Requirement /req/edr/REQ_rc-locationid-response* Parameter locationid response
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/REQ_rc-locationid-response
+*A:*
+If the `locationId` parameter is provided only data for locations matching the requested identifers should be returned.
+---
+*B:*
+If there is no data available for the requested location identifiers a HTTP 204 response should be returned 
+====

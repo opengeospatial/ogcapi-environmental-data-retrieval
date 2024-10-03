@@ -16,6 +16,7 @@ get:
     - $ref: ../../parameters/core/resolution-y.yaml
     - $ref: ../../parameters/core/crs.yaml
     - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/core/limit.yaml    
   responses:
     200:
       $ref: ../../responses/queries/200.yaml
@@ -56,5 +57,5 @@ post:
     413:
       $ref: ../../responses/queries/413.yaml
     default:
-      $ref: ../../responses/core/exception.yaml     
+      $ref: ../../responses/core/exception.yaml
       

@@ -9,6 +9,7 @@ get:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/core/bbox.yaml
     - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
+    - $ref: ../../parameters/core/limit.yaml
   responses:
     200:
       $ref: ../../responses/queries/items.yaml

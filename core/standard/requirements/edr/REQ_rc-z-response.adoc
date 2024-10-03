@@ -37,6 +37,8 @@ If the `z` parameter is not provided, the server SHOULD return data at all avail
 ----
 single-level  = level
 interval-closed  = min-level "/" max-level
+interval-open-start = "../" level
+interval-open-end   = level "/.."
 level-list  = level1 "," level2 "," level3
 repeating-interval = "R"number of intervals "/" min-level "/" height to increment by
 
@@ -50,6 +52,12 @@ z=850
 
 All data between levels 100 and 550
 z=100/550
+
+All data between the minimum level and 850
+z=../850
+
+All data between the 500 and the maximum level
+z=500/..
 
 Data at levels 10,80,100
 z=10,80,200

@@ -1,0 +1,6 @@
+[[per_core_rc-limit-response-2]]
+[width="90%",cols="2,6a"]
+|===
+^|*Permission {counter:per-id}* |*/per/core/rc-limit-response-2* 
+^|A |The server MAY return less features than requested (but not more).
+|===

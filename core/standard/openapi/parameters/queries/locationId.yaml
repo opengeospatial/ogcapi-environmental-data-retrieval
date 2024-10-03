@@ -1,6 +1,6 @@
-name: locId
+name: locationId
 in: path
 required: true
-description: Retreive data for the location defined by locId (i.e. London_Heathrow, EGLL, 03772 etc)
+description: Comma delimited list of location identifiers (i.e. EGLL or EGLL,YBBN,CYOW or London,Brisbane)
 schema:
     type: string

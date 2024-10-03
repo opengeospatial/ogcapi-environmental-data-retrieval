@@ -14,6 +14,7 @@ get:
     - $ref: ../../parameters/core/parameter-name.yaml
     - $ref: ../../parameters/core/crs.yaml
     - $ref: ../../parameters/core/f.yaml
+    - $ref: ../../parameters/core/limit.yaml
   responses:
     200:
       $ref: ../../responses/queries/200.yaml

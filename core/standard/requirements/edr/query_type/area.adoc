@@ -44,6 +44,11 @@ a| **f**
 * `f=netCDF4`
 * `f=CoverageJSON`
 * `f=CSV`
+a| **limit**
+* <<req_edr_rc-limit-definition,definition>> 
+* <<req_edr_rc-limit-response,rules>>  |String|No|The limit parameter may be used to control the subset of the selected features that should be returned in the response, the page size.
+Each page may include information about the number of selected and returned features (numberMatched and numberReturned) as well as links to support paging (link relation next). 
+**This value will be ignored if the requested format or the server does not support paging** a| * `limit=100`
 |====
 
 #If a client request has a *coords* value which includes a height value and defines a *z* query parameter the *z* query parameter will be the requested height value.#
