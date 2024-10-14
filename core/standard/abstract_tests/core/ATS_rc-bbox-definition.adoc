@@ -1,11 +1,14 @@
-[[ats_core_bbox-definition]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/core/rc-bbox-definition*
-^|Test Purpose |Validate that the bounding box query parameters are constructed correctly.
-^|Requirement |<<req_core_rc-bbox-definition,/req/core/rc-bbox-definition>>
-^|Test Method |Verify that the `bbox` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+[[ats_core_bbox-definition]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-bbox-definition
+target:: /req/core/rc-bbox-definition
+test-purpose:: Validate that the bounding box query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `bbox` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
 
 [source,YAML]
 ----
@@ -34,5 +37,5 @@ Use a bounding box with four numbers in all requests:
 * Lower left corner, WGS 84 latitude
 * Upper right corner, WGS 84 longitude
 * Upper right corner, WGS 84 latitude
-
-|===
+--
+====

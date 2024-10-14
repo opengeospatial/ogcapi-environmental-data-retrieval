@@ -1,8 +1,8 @@
-[[ats_collections_rc-resolution-z-definition]]
+[[ats_core_rc-resolution-z-definition-cube]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-resolution-z-definition
+identifier:: /conf/core/rc-resolution-z-definition-cube
 target:: /req/edr/resolution-z-definition
 test-purpose:: Validate that the `resolution-z` query parameters are constructed correctly.
 test-method::

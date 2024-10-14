@@ -41,7 +41,7 @@ include::../recommendations/core/PER_additional-status-codes.adoc[]
 [[web-caching]]
 === Web Caching
 
-Entity tags are a mechanism for web cache validation and for supporting conditional requests to reduce network traffic. Entity tags are specified by <<rfc2616,HTTP/1.1 (RFC 2616)>>.
+Entity tags are a mechanism for web cache validation and for supporting conditional requests to reduce network traffic. Entity tags are specified by <<RFC2616,HTTP/1.1 (RFC 2616)>>.
 
 include::../recommendations/core/REC_etag.adoc[]
 
@@ -131,17 +131,17 @@ So (using the default/maximum values of 10/10000 from the OpenAPI fragment in re
 
 * Following the next link from the previous response will return up to 10000 additional features and if there are more, a `next` link.
 
-include::../recomendations/core/REC_rc-next-1.adoc[]
+include::../recommendations/core/REC_rc-next-1.adoc[]
 
-include::../recomendations/core/REC_rc-next-2.adoc[]
+include::../recommendations/core/REC_rc-next-2.adoc[]
 
-include::../recomendations/core/REC_rc-next-3.adoc[]
+include::../recommendations/core//REC_rc-next-3.adoc[]
 
 This document does not mandate any specific implementation approach for the `next` links.
 
 An implementation could use opaque links that are managed by the server. It is up to the server to determine how long these links can be de-referenced. Clients have to be prepared to receive a 404 response.
 
-Another implementation approach is to use an implementation-specific parameter that specifies the index within the result set from which the server begins presenting results in the response, like the `startIndex` parameter that was used in <<WFS20,WFS 2.0>> (and which could be added again in additional parts of the OGC API Features series).
+Another implementation approach is to use an implementation-specific parameter that specifies the index within the result set from which the server begins presenting results in the response.
 
 The API will return no `next` link, if it has returned all selected features, and the server knows that. However, the server can not be aware that it has already returned all selected features. For example, if the request states `limit=10` and the query to the backend datastore returns 10 features, the server may not know, if there are more features or not (in most cases there will be more features), unless the total number of matches is also computed, which can be too costly. The server will then add the next link, and if there are no more features, dereferencing the next link will return an empty feature collection and no next link. This behavior is consistent with the statements above.
 
@@ -149,17 +149,15 @@ Clients cannot assume that paging is safe against changes to dataset while a cli
 
 Additional requirements classes for safe paging or an index parameter can be added in extensions to this specification.
 
-include::../recomendations/core/PER_rc-prev.adoc[]
+include::../recommendations/core/PER_rc-prev.adoc[]
 
 Providing `prev` links supports navigating back and forth between pages, but depending on the implementation approach it can be too complex to implement.
-
-include::../requirements/core/REQ_rc-rel-type.adoc[]
 
 include::../requirements/core/REQ_rc-numberMatched.adoc[]
 
 include::../requirements/core/REQ_rc-numberReturned.adoc[]
 
-include::../recomendations/core/REC_rc-extent.adoc[]
+include::../recommendations/core/REC_rc-extent.adoc[]
 
 NOTE: The representation of the links and the other properties in the payload depends on the encoding of the feature collection
 

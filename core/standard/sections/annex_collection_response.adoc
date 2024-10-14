@@ -30,7 +30,7 @@ Collection objects describe both collections and instances of a collection.
 
 [[col-links]]
 === Link Object
-OGC Web API Standards use <<rfc8288,RFC 8288 (Web Linking)>>  to express relationships between resources.  The "link" elements provide a convention for associating resources related to the collection.
+OGC Web API Standards use <<RFC8288,RFC 8288 (Web Linking)>>  to express relationships between resources.  The "link" elements provide a convention for associating resources related to the collection.
 
 [width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
 .Link Object

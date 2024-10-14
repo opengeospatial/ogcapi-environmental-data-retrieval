@@ -1,6 +1,7 @@
 [[rec_core_rc-next-2]]
-[width="90%",cols="2,6a"]
-|===
-^|*Recommendation {counter:rec-id}* |*/rec/core/rc-next-2* 
-^|A |Dereferencing a `next` link SHOULD return additional features from the set of selected features that have not yet been returned.
-|===
+[recommendation,type="general",id="/rec/core/rc-next-2", label="/rec/core/rc-next-2"]
+====
+*A:*
+
+Dereferencing a `next` link SHOULD return additional features from the set of selected features that have not yet been returned.
+====

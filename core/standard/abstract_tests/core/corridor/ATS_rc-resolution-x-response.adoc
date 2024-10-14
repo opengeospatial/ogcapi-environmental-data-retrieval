@@ -1,0 +1,13 @@
+[[ats_collections_rc-resolution-x-response-corridor]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-resolution-x-response-corridor
+target:: /req/edr/resolution-x-response
+test-purpose:: Validate that the resolution-x query parameters are processed correctly.
+test-method::
+step::: Validate that the `resolution-x` parameter complies with the syntax described in <<req_edr_resolution-x-response,/req/edr/resolution-x-response>>.
+step:::  Verify that the data returned by the query contains the same number of values on the x axis as 
+that requested in the `resolution-x` parameter.
+step:::  Verify that a HTTP 400 error is returned when an invalid `resolution-x` parameter is requested.
+====

@@ -1,0 +1,27 @@
+[[req_edr_rc-bbox-definition-cube]]
+==== *Requirement /req/edr/rc-bbox-definition-cube* Parameter bbox definition
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/rc-bbox-definition-cube
+
+
+*A:*
+
+The operation SHALL support a parameter `bbox` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+
+
+[source,YAML]
+----
+name: bbox
+in: query
+required: false
+schema:
+    type: number
+    minItems: 4
+    maxItems: 4
+style: form
+explode: false
+----
+====

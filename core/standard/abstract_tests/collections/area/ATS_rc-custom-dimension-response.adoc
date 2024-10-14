@@ -1,0 +1,14 @@
+[[ats_collections_rc-custom-dimension-response-area]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-custom-dimension-response-area
+target:: /req/edr/custom-dimension-response
+test-purpose:: Validate that the <<rc_custom-dimensions-section,custom dimension>> parameters query parameters are processed correctly.
+test-method::
+step::: Verify that only resources that have a values that are valid for the range information in any <<rc_custom-dimensions-section,custom dimension>> parameters are included in the result set.
+step:::Validate that the values specified comply with the syntax described in <<req_edr_custom-dimension-response,/req/edr/custom-dimension-response>>.
+step::: Validate that if <<rc_custom-dimensions-section,custom dimension>> are defined in the <<collection_metadata_desc, collections>> response but no query parameters for the <<rc_custom-dimensions-section,custom dimensions>> are specified in the query all valid values are returned with no subsetting by the <<rc_custom-dimensions-section,custom dimension>>.
+====
+

@@ -1,0 +1,10 @@
+[[ats_core_rc-numberMatched]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-numberMatched
+target:: /req/core/rc-numberMatched
+test-purpose:: Validate the numberMatched parameter returned with a Features response
+test-method::
+step::: When a property `numberMatched` is included in the response, validate that the value of the `numberMatched` parameter is identical to the number of features in the feature collections that match the selection parameters like bbox, datetime or additional filter parameters.
+====

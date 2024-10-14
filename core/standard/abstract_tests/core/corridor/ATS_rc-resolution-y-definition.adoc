@@ -1,8 +1,8 @@
-[[ats_collections_rc-resolution-y-definition]]
+[[ats_collections_rc-resolution-y-definition-corridor]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-resolution-y-definition
+identifier:: /conf/edr/rc-resolution-y-definition-corridor
 target:: /req/edr/resolution-y-definition
 test-purpose:: Validate that the `resolution-y` query parameters are constructed correctly.
 test-method::

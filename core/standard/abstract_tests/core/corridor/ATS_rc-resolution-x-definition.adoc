@@ -1,8 +1,8 @@
-[[ats_collections_rc-resolution-x-definition]]
+[[ats_collections_rc-resolution-x-definition-corridor]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-resolution-x-definition
+identifier:: /conf/edr/rc-resolution-x-definition-corridor
 target:: /req/edr/resolution-x-definition
 test-purpose:: Validate that the `resolution-x` query parameters are constructed correctly.
 test-method::

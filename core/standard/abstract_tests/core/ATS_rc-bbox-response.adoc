@@ -1,13 +1,14 @@
-[[ats_core_rc-bbox-response]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/core/rc-bbox-response*
-^|Test Purpose |Validate that the bounding box query parameters are processed correctly.
-^|Requirement |<<req_core_rc-bbox-response,/req/core/rc-bbox-response>>
-^|Test Method |. Verify that only resources that have a spatial geometry that intersects the bounding box are returned as part of the result set.
-. Verify that the `bbox` parameter matched all resources in the collection that were not associated with a spatial geometry (this is only applicable for datasets that include resources without a spatial geometry).
-. Verify that the coordinate reference system of the geometries matches the coordinate reference system defined by the `crs` query parameter.
-. If no `crs` query parameter is specified in the the request, verify that the coordinate reference system of the geometries matches the default specified for the query.
-. If a default `crs` **is not** defined **and** the parameter `crs` **is not** specified in the the request verify that the coordinate reference system of the geometries is in the CRS defined by the spatial element of the extent section in the collection response.
-|===
+[[ats_core_rc-bbox-response]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-bbox-response
+target:: /req/core/rc-bbox-response
+test-purpose:: Validate that the bounding box query parameters are processed correctly.
+test-method::
+step::: Verify that only resources that have a spatial geometry that intersects the bounding box are returned as part of the result set.
+step::: Verify that the `bbox` parameter matched all resources in the collection that were not associated with a spatial geometry (this is only applicable for datasets that include resources without a spatial geometry).
+step::: Verify that the coordinate reference system of the geometries matches the coordinate reference system defined by the `crs` query parameter.
+step::: If no `crs` query parameter is specified in the the request, verify that the coordinate reference system of the geometries matches the default specified for the query.
+step::: If a default `crs` **is not** defined **and** the parameter `crs` **is not** specified in the the request verify that the coordinate reference system of the geometries is in the CRS defined by the spatial element of the extent section in the collection response.
+====

@@ -1,12 +1,12 @@
-[[ats_collections_rc-resolution-z-response]]
+[[ats_core_rc-resolution-z-response-cube]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-resolution-z-response
+identifier:: /conf/core/rc-resolution-z-response-cube
 target:: /req/edr/resolution-z-response
 test-purpose:: Validate that the resolution-z query parameters are processed correctly.
 test-method::
-step::: Validate that the `resolution-z` parameter complies with the syntax described in <<req_collections_rc-resolution-z-response,/req/edr/resolution-z-response>>.
+step::: Validate that the `resolution-z` parameter complies with the syntax described in <<req_edr_resolution-z-response,/req/edr/resolution-z-response>>.
 step:::  Verify that the data returned by the query contains the same number of values on the z axis as 
 that requested in the `resolution-z` parameter.
 step:::  Verify that a HTTP 400 error is returned when an invalid `resolution-z` parameter is requested.

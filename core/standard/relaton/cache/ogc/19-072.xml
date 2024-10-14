@@ -1,9 +1,10 @@
-<bibdata type="standard" schema-version="v1.2.3">
-  <fetched>2023-07-04</fetched>
+<bibdata type="standard" schema-version="v1.2.9">
+  <fetched>2024-10-08</fetched>
   <title type="title-intro" format="text/plain" language="en" script="Latn">OGC API</title>
   <title type="title-main" format="text/plain" language="en" script="Latn">Common</title>
   <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Core</title>
   <title type="main" format="text/plain" language="en" script="Latn">OGC API - Common - Part 1: Core</title>
+  <uri type="src">http://www.opengis.net/doc/is/ogcapi-common-1/1.0.0</uri>
   <uri type="obp">https://docs.ogc.org/is/19-072/19-072.html</uri>
   <docidentifier type="OGC" primary="true">19-072</docidentifier>
   <date type="published">

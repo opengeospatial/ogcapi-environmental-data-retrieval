@@ -3,7 +3,7 @@
 ====
 *A:*
 
-Links included in the payloads of responses SHOULD also be included as `Link` headers in the HTTP response according to <<rfc8288,RFC 8288, Clause 3>>.
+Links included in the payloads of responses SHOULD also be included as `Link` headers in the HTTP response according to <<RFC8288,RFC 8288, Clause 3>>.
 
 ---
 *B:*

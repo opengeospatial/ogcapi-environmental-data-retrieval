@@ -1,11 +1,14 @@
-[[ats_collections_rc-custom-dimension-definition]]{counter2:ats-id}
-[width="90%",cols="2,6a"]
-.Abstract Test {ats-id}
-|===
-^|*Abstract Test {ats-id}* |*/conf/edr/rc-custom-dimension-definition*
-^|Test Purpose |Validate that any custom query parameters are constructed correctly.
-^|Requirement |<<req_edr_custom-dimension-definition,/req/edr/rc-custom-dimension-definition>>
-^|Test Method |Verify that any <<rc_custom-dimensions-section,custom dimension>> query parameters comply with the following definition (using an OpenAPI Specification 3.0 fragment):
+[[ats_collections_rc-custom-dimension-definition-asciidochandle]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-custom-dimension-definition-asciidochandle
+target:: /req/edr/rc-custom-dimension-definition
+test-purpose:: Validate that any custom query parameters are constructed correctly.
+test-method::
++
+--
+Verify that any <<rc_custom-dimensions-section,custom dimension>> query parameters comply with the following definition (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
@@ -16,4 +19,5 @@ schema:
 style: form
 explode: false
 ----
-|===
+--
+====

@@ -1,0 +1,23 @@
+[[ats_collections_rc-custom-dimension-definition-position]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-custom-dimension-definition-position
+target:: /req/edr/rc-custom-dimension-definition
+test-purpose:: Validate that any custom query parameters are constructed correctly.
+test-method::
++
+--
+Verify that any <<rc_custom-dimensions-section,custom dimension>> query parameters comply with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+--
+====

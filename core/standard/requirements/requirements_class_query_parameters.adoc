@@ -14,6 +14,8 @@ inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
 
 requirement:: /req/core/rc-bbox-definition
 requirement:: /req/core/rc-bbox-response
+requirement:: /req/edr/rc-bbox-definition-cube
+requirement:: /req/edr/rc-bbox-response-cube
 requirement:: /req/edr/coords-definition
 requirement:: /req/edr/point-coords-response
 requirement:: /req/edr/polygon-coords-response
@@ -47,7 +49,7 @@ requirement:: /req/edr/corridor-width-definition
 requirement:: /req/edr/REQ_rc-corridor-width-response
 requirement:: /req/edr/REQ_rc-width-units-definition
 requirement:: /req/edr/width-units-response
-requirement:: /req/edr/custom-dimension-definition
+requirement:: /req/edr/rc-custom-dimension-definition
 requirement:: /req/edr/custom-dimension-response
 
 ====

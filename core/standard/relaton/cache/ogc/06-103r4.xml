@@ -1,9 +1,10 @@
-<bibdata type="standard" schema-version="v1.2.3">
-  <fetched>2023-07-04</fetched>
+<bibdata type="standard" schema-version="v1.2.9">
+  <fetched>2024-10-08</fetched>
   <title type="title-intro" format="text/plain" language="en" script="Latn">OpenGIS Implementation Specification for Geographic information</title>
   <title type="title-main" format="text/plain" language="en" script="Latn">Simple feature access</title>
   <title type="title-part" format="text/plain" language="en" script="Latn">Part 1: Common architecture</title>
   <title type="main" format="text/plain" language="en" script="Latn">OpenGIS Implementation Specification for Geographic information - Simple feature access - Part 1: Common architecture</title>
+  <uri type="src">http://www.opengis.net/doc/is/sfa/1.2.1</uri>
   <uri type="obp">https://portal.ogc.org/files/?artifact_id=25355</uri>
   <docidentifier type="OGC" primary="true">06-103r4</docidentifier>
   <date type="published">

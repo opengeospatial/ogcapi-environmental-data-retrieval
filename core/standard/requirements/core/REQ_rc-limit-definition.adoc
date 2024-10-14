@@ -1,8 +1,14 @@
 [[req_core_rc-limit-definition]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/core/rc-limit-definition*
-^|A |The operation SHALL support a parameter `limit` based upon the following OpenAPI 3.0 fragment:
+==== *Requirement /req/core/rc-limit-definition* limit definition
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/rc-limit-definition
+
+*A:*
+
+The operation SHALL support a parameter `limit` based upon the following OpenAPI 3.0 fragment:
 
 [source,YAML]
 ----
@@ -17,4 +23,4 @@ schema:
 style: form
 explode: false
 ----
-|===
+====

@@ -24,6 +24,7 @@ conformance-test:: /conf/edr/rc-items-variables
 conformance-test:: /conf/edr/rc-md-query-links
 conformance-test:: /conf/core/rc-collection-info-links
 conformance-test:: /conf/edr/rc-parameters
+conformance-test:: /conf/edr/rc-crs
 
 ====
 
@@ -86,6 +87,8 @@ include::collections/ATS_rc-corridor-variables.adoc[]
 include::collections/ATS_rc-items-variables.adoc[]
 
 include::collections/ATS_rc-md-query-links.adoc[]
+
+include::collections/ATS_rc-crs.adoc[]
 
 ===== Collection Links
 

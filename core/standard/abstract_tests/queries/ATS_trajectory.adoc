@@ -127,6 +127,11 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_edr_z-definition,/req/edr/z-definition>>
 * Response <<req_edr_z-response,/req/edr/z-response>>
 
+*Custom dimensions*
+
+* Parameter <<req_edr_custom-dimension-definition,req/edr/rc-custom-dimension-definition>>
+* Response <<req_edr_custom-dimension-response,/req/edr/custom-dimension-response>>
+
 *Parameters*
 
 * Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
@@ -148,7 +153,9 @@ include::../collections/trajectory/ATS_rc-coords-definition.adoc[]
 
 include::../collections/trajectory/ATS_rc-coords-response.adoc[]
 
+include::../collections/trajectory/ATS_rc-custom-dimension-definition.adoc[]
 
+include::../collections/trajectory/ATS_rc-custom-dimension-response.adoc[]
 
 include::../collections/trajectory/ATS_rc-parameter-name-definition.adoc[]
 

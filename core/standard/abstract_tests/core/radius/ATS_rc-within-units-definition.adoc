@@ -1,0 +1,25 @@
+[[ats_collections_rc-within-units-definition]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/REQ_rc-within-units-definition
+target:: /req/edr/within-units-definition
+test-purpose:: Validate that the `within-units` query parameter is constructed correctly.
+test-method::
++
+--
+Verify that the `within-units` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: within-units
+in: query
+required: true
+schema:
+  type: string
+style: form
+explode: false
+----
+--
+====
+
