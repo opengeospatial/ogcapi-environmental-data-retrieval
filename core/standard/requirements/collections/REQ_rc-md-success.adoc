@@ -13,6 +13,6 @@ A successful execution of the operation SHALL be reported as a response with an 
 
 *B:*
 
-The content of that response SHALL be based upon the schema link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/collections/collections.yaml[collections.yaml].
+The content of that response SHALL be based upon the schema link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/collections/collections.yaml[collections.yaml].
 
 ====

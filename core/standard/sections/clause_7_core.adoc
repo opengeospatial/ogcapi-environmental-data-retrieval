@@ -3,8 +3,8 @@
 
 The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of OGC API-EDR shall first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
 
-* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
-* Collections, <<OGC20-024,http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections>>
+* Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+* Collections, <<OGC20-024,https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections>>
 
 [[rc_core-section]]
 === Overview
@@ -27,14 +27,14 @@ The following four sections explain aspects of the `Core`, `Collections` and `Qu
 [width="90%",cols="2,4,4",options="header"]
 |====
 ^|*API-EDR Section* ^|*API-EDR Requirements Class* ^|*API-Common Requirements Class*
-|<<landing-page,API Landing Page>>| <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|<<api-definition,API Definition>>| <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|<<conformance-classes,Declaration of Conformance Classes>>| <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-|<<rc_collection-section,Collections>>| <<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections>> | http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
-|<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| <<rc_oas30,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
-|<<rc_geojson,GeoJSON>>| <<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
-|<<rc_covjson,CoverageJSON>>| <<rc_covjson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/covjson>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
-|<<rc_html,HTML>>| <<rc_html,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html>> | http://www.opengis.net/spec/ogcapi-common-1/1.0/req/html
+|<<landing-page,API Landing Page>>| <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+|<<api-definition,API Definition>>| <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+|<<conformance-classes,Declaration of Conformance Classes>>| <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+|<<rc_collection-section,Collections>>| <<rc_collections,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections>> | https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
+|<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| <<rc_oas30,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas30>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+|<<rc_geojson,GeoJSON>>| <<rc_geojson,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/geojson>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+|<<rc_covjson,CoverageJSON>>| <<rc_covjson,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/covjson>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+|<<rc_html,HTML>>| <<rc_html,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/html>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/html
 |====
 
 [[api-platform-section]]
@@ -49,7 +49,7 @@ The landing page provides links that support exploration of the resources offere
 
 .Dependencies
 
-* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+* Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
 
 ===== Operation
 
@@ -81,7 +81,7 @@ include::../examples/json/landingPage_example.json[]
 
 ===== Error Handling
 
-The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
+The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
 
 [[api-definition]]
 ==== API definition
@@ -92,7 +92,7 @@ Support for an API definition is specified in the following Requirements Class o
 
 .Dependencies
 
-* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+* Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
 
 ===== Operation
 
@@ -109,7 +109,7 @@ A successful response to the API Definition request is a resource which document
 
 ===== Error Handling
 
-The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
+The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
 
 [[conformance-classes]]
 ==== Declaration of conformance classes
@@ -120,7 +120,7 @@ Support for the declaration of conformance classes is specified in the following
 
 .Dependencies
 
-* Core, <<OGC19-072,http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
+* Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
 
 ===== Operation
 

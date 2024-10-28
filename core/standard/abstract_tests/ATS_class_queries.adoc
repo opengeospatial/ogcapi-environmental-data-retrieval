@@ -3,11 +3,11 @@
 .Queries
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/queries
-subject:: <<rc_queries,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries>>
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/queries
+subject:: <<rc_queries,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/queries>>
 classification:: Target Type:Web API
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/collections
 conformance-test:: /conf/position/no-query-params
 conformance-test:: /conf/position/no-coords-param
 conformance-test:: /conf/position/coords-param-invalid

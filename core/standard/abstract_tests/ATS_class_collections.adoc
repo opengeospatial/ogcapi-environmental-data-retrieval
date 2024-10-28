@@ -3,9 +3,9 @@
 .Collections
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/collections
-subject:: <<rc_collections,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections>>
-inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/collections
+subject:: <<rc_collections,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections>>
+inherit:: https://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
 classification:: Target Type:Web API
 conformance-test:: /conf/core/crs
 conformance-test:: /conf/collections/rc-md-op

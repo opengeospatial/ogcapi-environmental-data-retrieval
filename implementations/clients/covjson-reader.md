@@ -14,7 +14,7 @@ This example uses covjson-reader 0.7.2.
 
 ## Required and supported Conformance classes
 
-The API shall support the [Core](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core), [Queries](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/queries] and [CoverageJSON](http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/covjson) conformance classes.
+The API shall support the [Core](https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core), [Queries](https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/queries] and [CoverageJSON](https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/covjson) conformance classes.
 
 covjson-reader does not support OGC API - EDR, so the coverage data for each collection has to be accessed directly as CoverageJSON.
 
@@ -26,7 +26,7 @@ Here is an example using sample data from the CoverageJSON cookbook:
 
 ```javascript
 var map = L.map('map', { center: [10, 0], zoom: 2 })
-L.tileLayer('http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png').addTo(map)
 
 var layers = L.control.layers(null, null, {collapsed: false}).addTo(map)
 
@@ -50,4 +50,4 @@ map.on('click', function (e) {
 })
 ```
 
-Open the complete HTML document in [Codepen](http://codepen.io/letmaik/pen/OXgPXQ)
+Open the complete HTML document in [Codepen](https://codepen.io/letmaik/pen/OXgPXQ)

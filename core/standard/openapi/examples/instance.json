@@ -202,7 +202,7 @@
                 }
             },
             "crs": [
-                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+                "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -221,7 +221,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-0",
                         "label": "Wind Direction"
                     },
                     "measurementType": {
@@ -240,7 +240,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Speed"
                     },
                     "measurementType": {
@@ -259,7 +259,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Gust"
                     },
                     "measurementType": {
@@ -278,7 +278,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Air Temperature"
                     },
                     "measurementType": {
@@ -297,7 +297,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+                        "id": "https://codes.wmo.int//wmdr/ObservedVariableAtmosphere/_266",
                         "label": "Weather"
                     },
                     "measurementType": {
@@ -316,7 +316,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Relative Humidity"
                     },
                     "measurementType": {
@@ -335,7 +335,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Feels like temperature"
                     },
                     "measurementType": {
@@ -354,7 +354,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-4-51",
                         "label": "UV index"
                     },
                     "measurementType": {
@@ -373,7 +373,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
@@ -392,7 +392,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_horizontalVisibility",
                         "label": "Visibility"
                     },
                     "measurementType": {
@@ -563,7 +563,7 @@
                 }
             },
             "crs": [
-                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+                "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -582,7 +582,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-0",
                         "label": "Wind Direction"
                     },
                     "measurementType": {
@@ -601,7 +601,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Speed"
                     },
                     "measurementType": {
@@ -620,7 +620,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Gust"
                     },
                     "measurementType": {
@@ -639,7 +639,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Air Temperature"
                     },
                     "measurementType": {
@@ -658,7 +658,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+                        "id": "https://codes.wmo.int//wmdr/ObservedVariableAtmosphere/_266",
                         "label": "Weather"
                     },
                     "measurementType": {
@@ -677,7 +677,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Relative Humidity"
                     },
                     "measurementType": {
@@ -696,7 +696,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Feels like temperature"
                     },
                     "measurementType": {
@@ -715,7 +715,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-4-51",
                         "label": "UV index"
                     },
                     "measurementType": {
@@ -734,7 +734,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
@@ -753,7 +753,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_horizontalVisibility",
                         "label": "Visibility"
                     },
                     "measurementType": {
@@ -924,7 +924,7 @@
                 }
             },
             "crs": [
-                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+                "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -943,7 +943,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-0",
                         "label": "Wind Direction"
                     },
                     "measurementType": {
@@ -962,7 +962,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Speed"
                     },
                     "measurementType": {
@@ -981,7 +981,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Gust"
                     },
                     "measurementType": {
@@ -1000,7 +1000,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Air Temperature"
                     },
                     "measurementType": {
@@ -1019,7 +1019,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+                        "id": "https://codes.wmo.int//wmdr/ObservedVariableAtmosphere/_266",
                         "label": "Weather"
                     },
                     "measurementType": {
@@ -1038,7 +1038,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Relative Humidity"
                     },
                     "measurementType": {
@@ -1057,7 +1057,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Feels like temperature"
                     },
                     "measurementType": {
@@ -1076,7 +1076,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-4-51",
                         "label": "UV index"
                     },
                     "measurementType": {
@@ -1095,7 +1095,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
@@ -1114,7 +1114,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_horizontalVisibility",
                         "label": "Visibility"
                     },
                     "measurementType": {
@@ -1284,7 +1284,7 @@
                 }
             },
             "crs": [
-                "http://www.opengis.net/def/crs/OGC/1.3/CRS84"
+                "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
             ],
             "output_formats": [
                 "GeoJSON",
@@ -1303,7 +1303,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-0",
                         "label": "Wind Direction"
                     },
                     "measurementType": {
@@ -1322,7 +1322,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Speed"
                     },
                     "measurementType": {
@@ -1341,7 +1341,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-1",
                         "label": "Wind Gust"
                     },
                     "measurementType": {
@@ -1360,7 +1360,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Air Temperature"
                     },
                     "measurementType": {
@@ -1379,7 +1379,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+                        "id": "https://codes.wmo.int//wmdr/ObservedVariableAtmosphere/_266",
                         "label": "Weather"
                     },
                     "measurementType": {
@@ -1398,7 +1398,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Relative Humidity"
                     },
                     "measurementType": {
@@ -1417,7 +1417,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_airTemperature",
                         "label": "Feels like temperature"
                     },
                     "measurementType": {
@@ -1436,7 +1436,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-4-51",
                         "label": "UV index"
                     },
                     "measurementType": {
@@ -1455,7 +1455,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-1-1",
                         "label": "Probabilty of precipitation"
                     },
                     "measurementType": {
@@ -1474,7 +1474,7 @@
                         }
                     },
                     "observedProperty": {
-                        "id": "http://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+                        "id": "https://codes.wmo.int//common/quantity-kind/_horizontalVisibility",
                         "label": "Visibility"
                     },
                     "measurementType": {

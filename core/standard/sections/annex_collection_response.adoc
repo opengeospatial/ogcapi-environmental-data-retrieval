@@ -37,7 +37,7 @@ OGC Web API Standards use <<RFC8288,RFC 8288 (Web Linking)>>  to express relatio
 |==========================
 |Field Name|Type|Required|Description
 |**href**     |String|**Yes**| URL being referenced
-|**rel**     |String  |**Yes**| Relation type of the URL. A list of valid relation types can be found at http://www.opengis.net/def/rel
+|**rel**     |String  |**Yes**| Relation type of the URL. A list of valid relation types can be found at https://www.opengis.net/def/rel
 |type     |String  |No| Type of information being returned by the URL
 |hreflang |String  |No| Attribute used to specify the language and geographical targeting of information accessed by the URL. Can be defined by using a value from either https://en.wikipedia.org/wiki/ISO_639-1[languages ISO 639-1] or https://en.wikipedia.org/wiki/ISO_3166-1[countries ISO 3166-1]
 |title     |String|No|  A short text label to describe the URL
@@ -147,7 +147,7 @@ The spatial object describes the spatial area covered by the information availab
             * Lower left corner, coordinate axis 2
             * Upper right corner, coordinate axis 1
             * Upper right corner, coordinate axis 2
-|**crs**     |String|**Yes**| This can either be a http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text definition] of the CRS or follow a convention of http://www.opengis.net/def/crs/{authority}/{version}/{code} where the token **{authority}** is a placeholder for a code the designates to authority responsible for the definition of this CRS. Typical values include "EPSG" and "OGC". The token **{version}** is a placeholder for the specific version of the coordinate reference system definition or 0 for the latest version or if the version is unknown. The token **{code}** is a placeholder for the authority’s code for the CRS.
+|**crs**     |String|**Yes**| This can either be a https://docs.ogc.org/is/18-010r7/18-010r7.html[Well Known Text definition] of the CRS or follow a convention of https://www.opengis.net/def/crs/{authority}/{version}/{code} where the token **{authority}** is a placeholder for a code the designates to authority responsible for the definition of this CRS. Typical values include "EPSG" and "OGC". The token **{version}** is a placeholder for the specific version of the coordinate reference system definition or 0 for the latest version or if the version is unknown. The token **{code}** is a placeholder for the authority’s code for the CRS.
 |==========================
 
 
@@ -161,7 +161,7 @@ The temporal object describes the time period covered by the information availab
 |Field Name|Type|Required|Description
 |**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO 8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601)
 |**values**  | ISO 8601 Date Array|**No**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the array can either be a single time, an ISO 8601 time interval or an ISO 8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
-|**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
+|**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the https://docs.ogc.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
 
@@ -175,7 +175,7 @@ The vertical object describes the vertical extent of information available in th
 |Field Name|Type|Required|Description
 |**interval**  | String Array|**Yes**| Array of level values array, each Level value Array should contain two values first being the minimum vertical level and second the maximum vertical level for information in the collection
 |**values**  | String Array|**No**| Array of height values supported by the collection.
-|**vrs**     |String|**Yes**|  Follows the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
+|**vrs**     |String|**Yes**|  Follows the conventions defined by the https://docs.ogc.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
 
@@ -476,11 +476,11 @@ A Parameter names example is shown below.
         "label": "K",
         "symbol": {
             "value": "K",
-            "type": "http://qudt.org/vocab/unit/K"
+            "type": "https://qudt.org/vocab/unit/K"
         }
         },
         "observedProperty": {
-        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-0-0",
+        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-0-0",
         "label": "Temperature_altitude_above_msl"
         },
         "measurementType": {
@@ -495,11 +495,11 @@ A Parameter names example is shown below.
         "label": "m/s",
         "symbol": {
             "value": "m%20s",
-            "type": "http://qudt.org/vocab/unit/M-PER-SEC.html"
+            "type": "https://qudt.org/vocab/unit/M-PER-SEC.html"
         }
         },
         "observedProperty": {
-            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2",
+            "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-2",
             "label": "u-component_of_wind_altitude_above_msl"
         },
         "measurementType": {
@@ -514,11 +514,11 @@ A Parameter names example is shown below.
         "label": "m/s",
         "symbol": {
             "value": "m%20s",
-            "type": "http://qudt.org/vocab/unit/M-PER-SEC.html"
+            "type": "https://qudt.org/vocab/unit/M-PER-SEC.html"
         }
         },
         "observedProperty": {
-            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3",
+            "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-3",
             "label": "v-component_of_wind_altitude_above_msl"
         },
         "measurementType": {

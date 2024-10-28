@@ -4,7 +4,7 @@ This page shows how to connect with [OWSLib](https://geopython.github.io/OWSLib)
 
 ## Links
 
-- [OWSLib OGC API - Environmental Data Retrieval documentation](http://geopython.github.io/OWSLib/#ogc-api-environmental-data-retrieval-1-0)
+- [OWSLib OGC API - Environmental Data Retrieval documentation](https://geopython.github.io/OWSLib/#ogc-api-environmental-data-retrieval-1-0)
 
 ## Software version
 
@@ -14,12 +14,12 @@ This description uses the latest OWSLib release.
 
 The API must support the following conformance classes:
 
-- [Core](http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core)
-- [Queries](http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries)
-- [JSON](http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/json) conformance classes.
-- [GeoJSON](http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson) conformance classes.
-- [EDR GeoJSON](http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/edr-geojson) conformance classes.
-- [OpenAPI 3.0](http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30) conformance classes.
+- [Core](https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core)
+- [Queries](https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/queries)
+- [JSON](https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/json) conformance classes.
+- [GeoJSON](https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/geojson) conformance classes.
+- [EDR GeoJSON](https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/edr-geojson) conformance classes.
+- [OpenAPI 3.0](https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas30) conformance classes.
 
 ## Examples
 

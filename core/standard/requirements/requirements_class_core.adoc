@@ -7,11 +7,11 @@
 
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core
 obligation:: requirement
 subject:: Web API
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
-inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+inherit:: https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
 requirement:: /req/core/root-op
 requirement:: /req/core/root-success
 requirement:: /req/core/api-definition-op

@@ -29,6 +29,6 @@ The landing page may be retrieved in a number of different formats. The followin
 [width="90%",cols="3",options="header"]
 |===
 |Format |Schema Document |Test ID
-|HTML |link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[landingPage.yaml]|<<ats_html_content,/conf/html/content>>
-|JSON |link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[landingPage.yaml] |<<ats_geojson_content,/conf/geojson/content>>
+|HTML |link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/core/landingPage.yaml[landingPage.yaml]|<<ats_html_content,/conf/html/content>>
+|JSON |link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/core/landingPage.yaml[landingPage.yaml] |<<ats_geojson_content,/conf/geojson/content>>
 |===
