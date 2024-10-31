@@ -80,6 +80,11 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_edr_z-definition,/req/edr/z-definition>>
 * Response <<req_edr_z-response,/req/edr/z-response>>
 
+*Custom dimensions*
+
+* Parameter <<req_edr_custom-dimension-definition,req/edr/rc-custom-dimension-definition>>
+* Response <<req_edr_custom-dimension-response,/req/edr/custom-dimension-response>>
+
 *Parameters*
 
 * Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
@@ -105,6 +110,9 @@ include::../collections/radius/ATS_rc-z-definition.adoc[]
 
 include::../collections/radius/ATS_rc-z-response.adoc[]
 
+include::../collections/radius/ATS_rc-custom-dimension-definition.adoc[]
+
+include::../collections/radius/ATS_rc-custom-dimension-response.adoc[]
 
 include::../core/radius/ATS_rc-time-definition.adoc[]
 
@@ -116,6 +124,13 @@ include::../collections/radius/ATS_rc-parameter-name-definition.adoc[]
 
 include::../collections/radius/ATS_rc-parameter-name-response.adoc[]
 
+include::../core/radius/ATS_rc-within-definition.adoc[]
+
+include::../core/radius/ATS_rc-within-response.adoc[]
+
+include::../core/radius/ATS_rc-within-units-definition.adoc[]
+
+include::../core/radius/ATS_rc-within-units-response.adoc[]
 
 
 include::../collections/radius/ATS_rc-crs-definition.adoc[]
@@ -127,3 +142,8 @@ include::../collections/radius/ATS_rc-crs-response.adoc[]
 include::../collections/radius/ATS_rc-f-definition.adoc[]
 
 include::../collections/radius/ATS_rc-f-response.adoc[]
+
+
+include::../collections/radius/ATS_rc-limit-definition.adoc[]
+
+include::../collections/radius/ATS_rc-limit-response.adoc[]

@@ -8,10 +8,10 @@ identifier:: /req/core/http
 
 *A:*
 
-The API SHALL conform to <<rfc2616,HTTP 1.1>>.
+The API SHALL conform to <<RFC2616,HTTP 1.1>>.
 
 ---
 *B:*
 
-If the API supports HTTPS, then the API SHALL also conform to <<rfc2818,HTTP over TLS>>.
+If the API supports HTTPS, then the API SHALL also conform to <<RFC2818,HTTP over TLS>>.
 ====

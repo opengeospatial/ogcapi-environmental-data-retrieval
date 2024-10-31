@@ -1,0 +1,25 @@
+[[ats_core_rc-limit-definition-locations]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-limit-definition-locations
+target:: /req/edr/rc-limit-definition
+test-purpose:: Validate that the limit query parameters are defined correctly.
+test-method::
++
+--
+Verify that the `limit` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+
+[source,YAML]
+----
+name: limit
+in: query
+required: false
+schema:
+  type: integer
+style: form
+explode: false
+----
+Note that the API can define values for "minimum", "maximum" and "default".
+--
+====

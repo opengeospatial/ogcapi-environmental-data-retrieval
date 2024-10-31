@@ -64,9 +64,9 @@ paths:
     $ref: paths/queries/instance-corridor.yaml
   /collections/{collectionId}/locations:
     $ref: paths/queries/locations.yaml
-  /collections/{collectionId}/locations/{locId}:
+  /collections/{collectionId}/locations/{locationId}:
     $ref: paths/queries/location.yaml
   /collections/{collectionId}/instances/{instanceId}/locations:
     $ref: paths/queries/instance-locations.yaml
-  /collections/{collectionId}/instances/{instanceId}/locations/{locId}:
+  /collections/{collectionId}/instances/{instanceId}/locations/{locationId}:
     $ref: paths/queries/instance-location.yaml

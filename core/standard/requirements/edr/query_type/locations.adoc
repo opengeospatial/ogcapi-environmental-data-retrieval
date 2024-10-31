@@ -5,11 +5,17 @@ The filter constraints are defined by the following query parameters:
 .locations query structure
 [cols="2,1,1,2,3"]
 |====
-|Query Parameter| Type | Required|Description|Examples
-a| **locationId**| String|No| A unique identifier for the required location, such as a http://en.wikipedia.org/wiki/Geohash[GeoHash], a World Meteorological Organization (WMO) station identifier or place name.  a| * `EGLL`
+|Path Parameter| Type | Required|Description|Examples
+a| **locationId**| String|No| Unique identifier(s) for the required location(s), such as a http://en.wikipedia.org/wiki/Geohash[GeoHash], a World Meteorological Organization (WMO) station identifier or place name.  a| * `EGLL`
 * `Ottawa`
 * `limit.broom.flip`
 * `gbsvn`
+* `London,Paris,Washington`
+|====
+
+[cols="2,1,1,2,3"]
+|====
+|Query Parameter| Type | Required|Description|Examples
 a| **datetime**
 
 * <<req_collections_rc-time-definition,definition>> 
@@ -36,6 +42,13 @@ a| **f**
 * `f=netCDF4`
 * `f=CoverageJSON`
 * `f=CSV`
+a| **limit**
+
+* <<req_edr_rc-limit-definition,definition>> 
+
+* <<req_edr_rc-limit-response,rules>>  |String|No|The limit parameter may be used to control the subset of the selected features that should be returned in the response, the page size.
+Each page may include information about the number of selected and returned features (numberMatched and numberReturned) as well as links to support paging (link relation next). 
+**This value will be ignored if the requested format or the server does not support paging** a| * `limit=100`
 |====
 
 

@@ -108,3 +108,7 @@ include::../collections/position/ATS_rc-crs-response.adoc[]
 include::../collections/position/ATS_rc-f-definition.adoc[]
 
 include::../collections/position/ATS_rc-f-response.adoc[]
+
+include::../collections/position/ATS_rc-limit-definition.adoc[]
+
+include::../collections/position/ATS_rc-limit-response.adoc[]

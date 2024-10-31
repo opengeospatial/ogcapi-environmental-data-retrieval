@@ -1,0 +1,14 @@
+[[ats_collections_rc-within-response]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/collections/REQ_rc-within-response
+target:: /req/edr/REQ_rc-within-response
+test-purpose:: Validate that the `within` query parameters are processed correctly.
+test-method::
++
+--
+step::: Verify that if the `within-units` is not specified with the `within` parameter a `400` error message will be generated
+step::: Validate that the `within` parameter complies with the syntax described in <<req_collections_rc-within-response,/req/edr/REQ_rc-within-response>>.
+--
+====

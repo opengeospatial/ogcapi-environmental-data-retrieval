@@ -1,0 +1,12 @@
+[[ats_collections_rc-locationid-response]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-locationid-response
+target:: /req/edr/REQ_rc-locationid-response
+test-purpose:: Validate that the locationid parameter is processed correctly.
+test-method::
+step::: Verify that only resources for the requested location identifers are returned
+step::: Validate that the locationid complies with the syntax described in <<req_edr_locationid-response,/req/edr/REQ_rc-locationid-response>>.
+step::: Validate that a HTTP 204 response is returned when there is no data available for the requested identifiers
+====

@@ -1,0 +1,37 @@
+[[ats_core_rc-items]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-items
+target:: /req/edr/rc-items
+test-purpose:: Validate that resources can be identified and extracted from a Collection using query parameters.
+test-method:: 
++
+--
+For every resource collection identified in Collections, issue an HTTP GET request to the URL `/collections/{collectionId}/items` where `{collectionId}` is the `id` property for a Collection described in the Collections content.
+. Validate that a document was returned with a status code 200.
+
+Repeat these tests using the following parameter tests:
+
+*bbox*
+
+* Parameter <<req_core_rc-bbox-definition,/req/core/rc-bbox-definition>>
+* Response <<req_core_rc-bbox-response,/req/core/rc-bbox-response>>
+
+*DateTime*
+
+* Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
+* Response <<req_core_rc-time-response,/req/core/datetime-response>>
+
+Execute requests with combinations of the "bbox" and "time" query parameters
+and verify that only information that matches the selection criteria is returned.
+--
+====
+
+include::../core/ATS_rc-bbox-definition.adoc[]
+
+include::../core/ATS_rc-bbox-response.adoc[]
+
+include::../core/items/ATS_rc-time-definition.adoc[]
+
+include::../core/items/ATS_rc-time-response.adoc[]

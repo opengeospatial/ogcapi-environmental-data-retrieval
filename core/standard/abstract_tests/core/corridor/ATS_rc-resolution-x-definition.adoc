@@ -1,0 +1,24 @@
+[[ats_collections_rc-resolution-x-definition-corridor]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-resolution-x-definition-corridor
+target:: /req/edr/resolution-x-definition
+test-purpose:: Validate that the `resolution-x` query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `resolution-x` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
+
+[source,YAML]
+----
+name: resolution-x
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+--
+====

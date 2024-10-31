@@ -1,0 +1,27 @@
+[[ats_core_bbox-definition-cube]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-bbox-definition-cube
+target:: /req/edr/rc-bbox-definition-cube
+test-purpose:: Validate that the bounding box query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `bbox` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
+
+[source,YAML]
+----
+name: bbox
+in: query
+required: false
+schema:
+    type: number
+    minItems: 4
+    maxItems: 4
+
+style: form
+explode: false
+----
+--
+====

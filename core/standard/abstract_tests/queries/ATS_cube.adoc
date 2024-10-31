@@ -49,13 +49,18 @@ Repeat these tests using the following parameter tests:
 
 *bbox*
 
-* Parameter <<req_core_rc-bbox-definition,/req/core/rc-bbox-definition>>
-* Response <<req_core_rc-bbox-response,/req/core/rc-bbox-response>>
+* Parameter <<req_edr_rc-bbox-definition-cube,/req/edr/rc-bbox-definition-cube>>
+* Response <<req_edr_rc-bbox-response-cube,/req/edr/rc-bbox-response-cube>>
 
 *VerticalLevel*
 
 * Parameter <<req_edr_z-definition,/req/edr/z-definition>>
 * Response <<req_edr_cube-z-response,/req/edr/cube-z-response>>
+
+*Custom dimensions*
+
+* Parameter <<req_edr_custom-dimension-definition,req/edr/rc-custom-dimension-definition>>
+* Response <<req_edr_custom-dimension-response,/req/edr/custom-dimension-response>>
 
 *Parameters*
 
@@ -73,28 +78,39 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-// The coords param tests have been commented out because they are not supported by the Cube query.
-// See https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/423#issuecomment-1553144063
-
-//include::../collections/cube/ATS_rc-coords-definition.adoc[]
-
-//include::../collections/cube/ATS_rc-coords-response.adoc[]
 
 include::../collections/cube/ATS_rc-z-definition.adoc[]
 
-// Note that ATS_rc-cube-z-response.adoc is intentionally placed in the collections folder
+include::../collections/cube/ATS_rc-z-response.adoc[]
 
-include::../collections/ATS_rc-cube-z-response.adoc[]
+include::../collections/cube/ATS_rc-custom-dimension-definition.adoc[]
 
-// End of note
+include::../collections/cube/ATS_rc-custom-dimension-response.adoc[]
+
+include::../core/cube/ATS_rc-bbox-definition.adoc[]
+
+include::../core/cube/ATS_rc-bbox-response.adoc[]
 
 include::../core/cube/ATS_rc-time-definition.adoc[]
 
 include::../core/cube/ATS_rc-time-response.adoc[]
+ATS_rc-cube-z-response.adoc
 
 include::../collections/cube/ATS_rc-parameter-name-definition.adoc[]
 
 include::../collections/cube/ATS_rc-parameter-name-response.adoc[]
+
+include::../core/cube/ATS_rc-resolution-x-definition.adoc[]
+
+include::../core/cube/ATS_rc-resolution-x-response.adoc[]
+
+include::../core/cube/ATS_rc-resolution-y-definition.adoc[]
+
+include::../core/cube/ATS_rc-resolution-y-response.adoc[]
+
+include::../core/cube/ATS_rc-resolution-z-definition.adoc[]
+
+include::../core/cube/ATS_rc-resolution-z-response.adoc[]
 
 include::../collections/cube/ATS_rc-crs-definition.adoc[]
 

@@ -1,0 +1,26 @@
+[[req_core_rc-limit-definition]]
+==== *Requirement /req/core/rc-limit-definition* limit definition
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/rc-limit-definition
+
+*A:*
+
+The operation SHALL support a parameter `limit` based upon the following OpenAPI 3.0 fragment:
+
+[source,YAML]
+----
+name: limit
+in: query
+required: false
+schema:
+  type: integer
+  minimum: 1
+  maximum: 10000
+  default: 100
+style: form
+explode: false
+----
+====

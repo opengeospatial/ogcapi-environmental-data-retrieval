@@ -18,26 +18,6 @@ The coordinates SHALL consist of a Well Known Text (WKT) geometry string.
 ---
 *C:*
 
-[[req_edr_coords-response]]
-==== *Requirement /req/edr/coords-response* Parameter coords response
-
-[requirement]
-====
-[%metadata]
-identifier:: /req/edr/coords-response
-
-*A:*
-
-Only those resources that have a spatial geometry that intersects the area defined by the `coords` parameter SHALL be part of the result set.
-
----
-*B:*
-
-The coordinates SHALL consist of a Well Known Text (WKT) geometry string.
-
----
-*C:*
-
 If a coordinate reference system  **is not** specified in a parameter `crs`, the crs SHALL be value defined in the spatial element of the extent section in the collection response.
 
  

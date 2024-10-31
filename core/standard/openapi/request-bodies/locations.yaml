@@ -7,4 +7,6 @@ content:
           type: string
         datetime:
           type: string  
+        limit:
+            type: number
           

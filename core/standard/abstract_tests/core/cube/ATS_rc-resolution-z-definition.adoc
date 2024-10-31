@@ -1,0 +1,24 @@
+[[ats_core_rc-resolution-z-definition-cube]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-resolution-z-definition-cube
+target:: /req/edr/resolution-z-definition
+test-purpose:: Validate that the `resolution-z` query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `resolution-z` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
+
+[source,YAML]
+----
+name: resolution-z
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+--
+====

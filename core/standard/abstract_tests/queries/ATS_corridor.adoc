@@ -197,6 +197,11 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_edr_z-definition,/req/edr/z-definition>>
 * Response <<req_edr_z-response,/req/edr/z-response>>
 
+*Custom dimensions*
+
+* Parameter <<req_edr_custom-dimension-definition,req/edr/rc-custom-dimension-definition>>
+* Response <<req_edr_custom-dimension-response,/req/edr/custom-dimension-response>>
+
 *Parameters*
 
 * Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
@@ -234,6 +239,18 @@ include::../collections/ATS_rc-width-units-response.adoc[]
 include::../collections/ATS_rc-height-units-definition.adoc[]
 
 include::../collections/ATS_rc-height-units-response.adoc[]
+
+include::../core/corridor/ATS_rc-resolution-x-definition.adoc[]
+
+include::../core/corridor/ATS_rc-resolution-x-response.adoc[]
+
+include::../core/corridor/ATS_rc-resolution-y-definition.adoc[]
+
+include::../core/corridor/ATS_rc-resolution-y-response.adoc[]
+
+include::../collections/corridor/ATS_rc-custom-dimension-definition.adoc[]
+
+include::../collections/corridor/ATS_rc-custom-dimension-response.adoc[]
 
 include::../collections/corridor/ATS_rc-parameter-name-definition.adoc[]
 

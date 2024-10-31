@@ -1,8 +1,13 @@
 [[req_edr_rc-limit-definition]]
-[width="90%",cols="2,6a"]
-|===
-^|*Requirement {counter:req-id}* |*/req/edr/rc-limit-definition*
-^|A |The operation SHALL support a parameter `limit` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
+==== *Requirement /req/edr/rc-limit-definition* Parameter limit definition
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/rc-limit-definition
+
+*A:*
+The operation SHALL support a parameter `limit` with the following characteristics (using an OpenAPI Specification 3.0 fragment):
 
 [source,YAML]
 ----
@@ -17,4 +22,5 @@ schema:
 style: form
 explode: false
 ----
-|===
+
+====

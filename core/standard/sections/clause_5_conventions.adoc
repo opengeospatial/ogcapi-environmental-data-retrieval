@@ -3,7 +3,7 @@
 
 === Identifiers
 
-The https://www.w3.org/TR/webarch/[Architecture of the World Wide Web] establishes the Uniform Resource Identifier (URI) as the single global identification system for the Web. Therefore, URIs or <<rfc6570,URI Templates>> are used in OGC <<webapi-definition,Web API>> standards to identify key entities in those standards.
+The https://www.w3.org/TR/webarch/[Architecture of the World Wide Web] establishes the Uniform Resource Identifier (URI) as the single global identification system for the Web. Therefore, URIs or <<RFC 6570,URI Templates>> are used in OGC <<webapi-definition,Web API>> standards to identify key entities in those standards.
 
 The normative provisions in this standard are denoted by the URI:
 
@@ -11,7 +11,7 @@ http://www.opengis.net/spec/ogcapi-edr-1/1.1
 
 All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
 
-A key requirement of <<webapi-definition,Web API>> standards is the unambiguous identification of the resources they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <<rfc6570,URI Templates>> to identify resource categories. These resource categories are instantiated in the implementation of the standard.
+A key requirement of <<webapi-definition,Web API>> standards is the unambiguous identification of the resources they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <<RFC6570,URI Templates>> to identify resource categories. These resource categories are instantiated in the implementation of the standard.
 
 The scope of each URI Template is specified in the standard. In some cases, API implementations are required to implement the template as a path in their API. In most cases they are optional.
 
@@ -19,7 +19,7 @@ Implementation of the URI Templates is recommended in that they provide a common
 
 === Link relations
 
-To express relationships between resources, <<rfc8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the http://www.opengis.net/def/rel[OGC Link Relation Type Register]. These are denoted below with [OGC].
+To express relationships between resources, <<RFC8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the http://www.opengis.net/def/rel[OGC Link Relation Type Register]. These are denoted below with [OGC].
 
 The following link-relations are in common use by OGC <<webapi-definition,Web API>> Standards.
 
@@ -87,7 +87,7 @@ JSON Schema is used throughout this standard to define the structure of resource
 
 === Use of HTTPS
 
-For simplicity, this Standard generally refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and is simply a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <<rfc2818,HTTPS>>, not <<rfc2616,HTTP>>.
+For simplicity, this Standard generally refers to the HTTP protocol. This is not meant to exclude the use of HTTPS and is simply a shorthand notation for "HTTP or HTTPS". In fact, most servers are expected to use <<RFC2818,HTTPS>>, not <<RFC2616,HTTP>>.
 
 [[requirements-class-openapi_3_0-clause]]
 === API definition

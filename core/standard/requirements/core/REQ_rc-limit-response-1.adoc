@@ -1,0 +1,28 @@
+[[req_core_rc-limit-response-1]]
+==== *Requirement /req/core/rc-limit-response-1* limit response-1
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/datetime-response
+
+*A:*
+
+The response SHALL not contain more features than specified by the optional `limit` parameter. 
+
+---
+*B:*
+
+If the API definition specifies a maximum value for `limit` parameter, the response SHALL not contain more features than this maximum value.
+
+---
+*C:*
+
+If the value of the `limit` parameter is larger than the maximum value, this SHALL NOT result in an error (instead use the maximum as the parameter value).
+
+---
+*D:*
+
+Only items are counted that are on the first level of the collection. Any nested objects contained within the explicitly requested items  SHALL not be counted.
+
+====

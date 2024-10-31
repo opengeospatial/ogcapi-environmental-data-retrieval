@@ -1,0 +1,11 @@
+[[ats_core_rc-numberReturned]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-numberReturned
+target:: /req/core/rc-numberMatched
+test-purpose:: Validate the numberReturned parameter returned with a Features response
+test-method:: 
+step::: When a property `numberReturned` is included in the response, validate that the `numberReturned` value is identical to the number of features in the 
+response.
+====

@@ -1,0 +1,16 @@
+[[req_core_rc-numberReturned]]
+==== *Requirement /req/core/rc-numberReturned* number returned
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/rc-numberReturned
+
+*A:*
+
+If a property `numberReturned` is included in the response, the value SHALL be identical to the number of features in the response.
+
+*A:*
+
+A server MAY omit this information in a response, if the information about the number of features in the response is not known or difficult to compute.
+====

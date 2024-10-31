@@ -1,7 +1,8 @@
-<bibdata type="standard" schema-version="v1.2.3">
-  <fetched>2023-07-04</fetched>
+<bibdata type="standard" schema-version="v1.2.9">
+  <fetched>2024-10-08</fetched>
   <title type="title-main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
   <title type="main" format="text/plain" language="en" script="Latn">Geographic information — Well-known text representation of coordinate reference systems</title>
+  <uri type="src">http://www.opengis.net/doc/is/wkt-crs/2.0.6</uri>
   <uri type="obp">https://docs.ogc.org/is/18-010r7/18-010r7.html</uri>
   <docidentifier type="OGC" primary="true">18-010r7</docidentifier>
   <date type="published">

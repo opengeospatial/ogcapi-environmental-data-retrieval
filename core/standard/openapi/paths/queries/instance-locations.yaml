@@ -4,12 +4,13 @@ get:
     - Instance data queries
   summary: List available location identifers for the instance
   description: List the locations available for the instance of the collection
-  operationId: ListDataInstanceLocations
+  operationId: GetListDataInstanceLocations
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml
     - $ref: ../../parameters/core/bbox.yaml
     - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
+    - $ref: ../../parameters/core/limit.yaml  
   responses:
     200:
       $ref: ../../responses/queries/items.yaml
@@ -30,7 +31,7 @@ post:
     - Instance data queries
   summary: List available location identifers for the instance
   description: List the locations available for the instance of the collection
-  operationId: ListDataInstanceLocations
+  operationId: PostListDataInstanceLocations
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml    

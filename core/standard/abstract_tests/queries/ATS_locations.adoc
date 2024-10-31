@@ -21,6 +21,16 @@ step::: Check that invalid `locationId` values return an error message
 step::: Validate that a document was returned with a status code 404.
 ====
 
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/locations/locations-nodata
+target:: /req/edr/rc-locations
+test-purpose:: Validate that an HTTP 204 message is returned by a `Locations` query when there is no data available for the requested locations.
+test-method::
+step::: Check that an HTTP 204 message is returned when no data for the requested location identifier(s) is available
+step::: Validate that a document was returned with a status code 204.
+====
 
 [abstract_test]
 ====
@@ -41,6 +51,11 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_edr_parameters-definition,/req/edr/REQ_rc-parameter-name-definition>>
 * Response <<req_edr_parameters-response,/req/edr/parameter-name-response>>
 
+*Custom dimensions*
+
+* Parameter <<req_edr_custom-dimension-definition,req/edr/rc-custom-dimension-definition>>
+* Response <<req_edr_custom-dimension-response,/req/edr/custom-dimension-response>>
+
 *DateTime*
 
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
@@ -51,11 +66,14 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
+
 include::../core/locations/ATS_rc-time-definition.adoc[]
 
 include::../core/locations/ATS_rc-time-response.adoc[]
 
+include::../collections/locations/ATS_rc-custom-dimension-definition.adoc[]
 
+include::../collections/locations/ATS_rc-custom-dimension-response.adoc[]
 
 include::../collections/locations/ATS_rc-parameter-name-definition.adoc[]
 
@@ -72,3 +90,11 @@ include::../collections/locations/ATS_rc-crs-response.adoc[]
 include::../collections/locations/ATS_rc-f-definition.adoc[]
 
 include::../collections/locations/ATS_rc-f-response.adoc[]
+
+include::../collections/locations/ATS_rc-limit-definition.adoc[]
+
+include::../collections/locations/ATS_rc-limit-response.adoc[]
+
+include::../collections/locations/ATS_rc-locationid-definition.adoc[]
+
+include::../collections/locations/ATS_rc-locationid-response.adoc[]

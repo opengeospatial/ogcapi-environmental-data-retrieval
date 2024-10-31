@@ -7,5 +7,5 @@ target:: /req/core/http
 test-purpose:: Validate that the resource paths advertised through the API conform with HTTP 1.1 and, where appropriate, TLS.
 test-method::
 step::: All compliance tests shall be configured to use the HTTP 1.1 protocol exclusively.
-step::: For APIs which support HTTPS, all compliance tests shall be configured to use <<rfc2818,HTTP over TLS>> (RFC 2818) with their HTTP 1.1 protocol.
+step::: For APIs which support HTTPS, all compliance tests shall be configured to use <<RFC2818,HTTP over TLS>> (RFC 2818) with their HTTP 1.1 protocol.
 ====

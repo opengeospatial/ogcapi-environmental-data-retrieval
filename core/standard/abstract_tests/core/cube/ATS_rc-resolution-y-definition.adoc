@@ -1,0 +1,24 @@
+[[ats_core_rc-resolution-y-definition-cube]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/rc-resolution-y-definition-cube
+target:: /req/edr/resolution-y-definition
+test-purpose:: Validate that the `resolution-y` query parameters are constructed correctly.
+test-method::
++
+--
+Verify that the `resolution-y` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment).
+
+[source,YAML]
+----
+name: resolution-y
+in: query
+required: false
+schema:
+  type: string
+style: form
+explode: false
+----
+--
+====
