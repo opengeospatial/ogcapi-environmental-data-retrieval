@@ -42,7 +42,7 @@ Wind Speed and Wind direction values which represent a average value over the 10
         }
         },
         "observedProperty": {
-        "id": "https://codes.wmo.int//bufr4/b/12/004",
+        "id": "https://codes.wmo.int/bufr4/b/12/004",
         "label": "Air Temperature"
         },
         "measurementType": {
@@ -61,7 +61,7 @@ Wind Speed and Wind direction values which represent a average value over the 10
         }
         },
         "observedProperty": {
-            "id": "https://codes.wmo.int//bufr4/b/11/012",
+            "id": "https://codes.wmo.int/bufr4/b/11/012",
             "label": "10m Wind Speed"
         },
         "measurementType": {
@@ -80,7 +80,7 @@ Wind Speed and Wind direction values which represent a average value over the 10
         }
         },
         "observedProperty": {
-            "id": "https://codes.wmo.int//bufr4/b/11/011",
+            "id": "https://codes.wmo.int/bufr4/b/11/011",
             "label": "10m wind direction"
         },
         "measurementType": {

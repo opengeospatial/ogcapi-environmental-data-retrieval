@@ -480,7 +480,7 @@ A Parameter names example is shown below.
         }
         },
         "observedProperty": {
-        "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-0-0",
+        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-0-0",
         "label": "Temperature_altitude_above_msl"
         },
         "measurementType": {
@@ -499,7 +499,7 @@ A Parameter names example is shown below.
         }
         },
         "observedProperty": {
-            "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-2",
+            "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-2-2",
             "label": "u-component_of_wind_altitude_above_msl"
         },
         "measurementType": {
@@ -518,7 +518,7 @@ A Parameter names example is shown below.
         }
         },
         "observedProperty": {
-            "id": "https://codes.wmo.int//grib2/codeflag/4.2/_0-2-3",
+            "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-2-3",
             "label": "v-component_of_wind_altitude_above_msl"
         },
         "measurementType": {
