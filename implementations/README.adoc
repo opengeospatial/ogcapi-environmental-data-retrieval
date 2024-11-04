@@ -16,7 +16,7 @@ Two types of software packages are distinguished:
 
 If you have a server or client implementation of OGC API - EDR, we welcome a pull request to update this page to add or update an entry for the product. You may add a link to a sub-page with more details in the link:servers[servers] and link:clients[clients] folders of this repository and you may add a link to the associated entry in the OGC Product Database. Please include a contact email address so that we may later contact you in case of page updates or questions.
 
-If you have a server product, please consider to https://www.ogc.org/resource/products/registration[register it in the OGC Product Database] and https://cite.opengeospatial.org/teamengine/[test it for compliance], too.
+If you have a server product, please consider to https://www.ogc.org/resource/products/registration[register it in the OGC Product Database] and https://cite.ogc.org/teamengine/[test it for compliance], too.
 
 ## Servers
 
