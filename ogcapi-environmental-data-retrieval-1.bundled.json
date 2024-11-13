@@ -654,7 +654,7 @@
                           ],
                           "properties": {
                             "interval": {
-                              "description": "In the Core only a single time interval is supported. Extensions may support\nmultiple intervals. If multiple intervals are provided, the union of the\nintervals describes the vertical extent.",
+                              "description": "If multiple intervals are provided, the union of the intervals describes the vertical extent.",
                               "type": "array",
                               "minItems": 1,
                               "items": {
@@ -705,6 +705,77 @@
                             "name": {
                               "description": "Name of the vertical coordinate reference system",
                               "type": "string"
+                            }
+                          }
+                        },
+                        "custom": {
+                          "description": "The custom extents available in the collection.",
+                          "type": "array",
+                          "items": {
+                            "description": "custom dimension defintion",
+                            "type": "object",
+                            "required": [
+                              "id",
+                              "interval",
+                              "reference"
+                            ],
+                            "properties": {
+                              "id": {
+                                "description": "The name of the custom dimension.",
+                                "type": "string",
+                                "example": [
+                                  [
+                                    "members"
+                                  ]
+                                ]
+                              },
+                              "interval": {
+                                "description": "If multiple intervals are provided, the union of the intervals describes the custom extent.",
+                                "type": "array",
+                                "minItems": 1,
+                                "items": {
+                                  "description": "minimum and maximum vakues of the custom interval.",
+                                  "type": "array",
+                                  "minItems": 1,
+                                  "items": {
+                                    "type": "string",
+                                    "nullable": true
+                                  },
+                                  "example": [
+                                    [
+                                      "0",
+                                      "50"
+                                    ]
+                                  ]
+                                }
+                              },
+                              "values": {
+                                "description": "values that  data in the collection is available at \nthese can be defined as follows:\nmin level / max level (e.g. \"2/100\") or \nas number of repetitions / start level / interval (e.g.\"R5/100/50\") \nor a list of custom dimension values (e.g. \"25\",50,\"75\"}\nThe value `null` is supported and indicates an open custom interval.",
+                                "type": "array",
+                                "minItems": 1,
+                                "items": {
+                                  "type": "string",
+                                  "nullable": true,
+                                  "example": [
+                                    [
+                                      "25/75"
+                                    ],
+                                    [
+                                      "R20/0/5"
+                                    ],
+                                    [
+                                      "25",
+                                      "50",
+                                      "75"
+                                    ]
+                                  ]
+                                }
+                              },
+                              "reference": {
+                                "description": "URI to a definition or description of the custom dimension",
+                                "type": "string",
+                                "example": "https://en.wikipedia.org/wiki/Percentile"
+                              }
                             }
                           }
                         }
@@ -878,9 +949,6 @@
                                       }
                                     }
                                   ],
-                                  "required": [
-                                    "query_type"
-                                  ],
                                   "properties": {
                                     "query_type": {
                                       "description": "Type of EDR query",
@@ -917,7 +985,7 @@
                                     }
                                   ],
                                   "required": [
-                                    "query_type"
+                                    "height_units"
                                   ],
                                   "properties": {
                                     "query_type": {
@@ -1001,7 +1069,8 @@
                                     }
                                   ],
                                   "required": [
-                                    "query_type"
+                                    "width_units",
+                                    "height_units"
                                   ],
                                   "properties": {
                                     "query_type": {
@@ -1059,9 +1128,6 @@
                                     {
                                       "$ref": "#/paths/~1collections/get/responses/200/content/application~1json/schema/properties/collections/items/properties/data_queries/properties/area/properties/link/properties/variables/allOf/0"
                                     }
-                                  ],
-                                  "required": [
-                                    "query_type"
                                   ],
                                   "properties": {
                                     "query_type": {
@@ -1480,6 +1546,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -1548,6 +1617,9 @@
                   },
                   "f": {
                     "type": "string"
+                  },
+                  "limit": {
+                    "type": "number"
                   }
                 }
               }
@@ -1634,6 +1706,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -1710,6 +1785,9 @@
                   },
                   "f": {
                     "type": "string"
+                  },
+                  "limit": {
+                    "type": "number"
                   }
                 }
               }
@@ -1821,6 +1899,16 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "description": "Defines the maximum number of features to return in a request",
+            "required": false,
+            "example": 10,
+            "schema": {
+              "type": "number"
+            }
           }
         ],
         "responses": {
@@ -2877,6 +2965,9 @@
                   },
                   "f": {
                     "type": "string"
+                  },
+                  "limit": {
+                    "type": "number"
                   }
                 }
               }
@@ -2921,7 +3012,32 @@
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D/get/parameters/0"
           },
           {
-            "$ref": "#/paths/~1collections/get/parameters/0"
+            "name": "bbox",
+            "in": "query",
+            "description": "Only features that have a geometry that intersects the bounding box are selected.\nThe bounding box is provided as four numbers:\n* Lower left corner, coordinate axis 1\n* Lower left corner, coordinate axis 2\n* Upper right corner, coordinate axis 1\n* Upper right corner, coordinate axis 2\n\nFor WGS 84 longitude/latitude the values are in most cases the sequence of\nminimum longitude, minimum latitude, maximum longitude and maximum latitude.\nHowever, in cases where the box spans the antimeridian the first value\n(west-most box edge) is larger than the third value (east-most box edge).\nIf a feature has multiple spatial geometry properties, it is the decision of the\nserver whether only a single spatial geometry property is used to determine\nthe extent or all relevant geometries.",
+            "required": true,
+            "schema": {
+              "oneOf": [
+                {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array",
+                  "minItems": 4,
+                  "maxItems": 4
+                },
+                {
+                  "items": {
+                    "type": "number"
+                  },
+                  "type": "array",
+                  "minItems": 6,
+                  "maxItems": 6
+                }
+              ]
+            },
+            "style": "form",
+            "explode": false
           },
           {
             "name": "z",
@@ -2937,6 +3053,23 @@
           },
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/4"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/6"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/7"
+          },
+          {
+            "name": "resolution-z",
+            "in": "query",
+            "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the z-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the z-axis\n  \n  i.e. resolution-z=10 \n  \nwould retrieve 10 values along the z-axis from the minimum z coordinate to maximum z  coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).\n",
+            "required": false,
+            "schema": {
+              "items": {
+                "type": "string"
+              }
+            }
           },
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/5"
@@ -3386,6 +3519,9 @@
           },
           {
             "$ref": "#/paths/~1collections/get/parameters/1"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -3680,6 +3816,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -3756,7 +3895,7 @@
         ],
         "summary": "Query end point to return data within defined radius of a point for an instance {instanceId} of collection {collectionId}",
         "description": "Query end point to return all data within a defined radius of the defined point location queries",
-        "operationId": "PostInstanceDataForRadius",
+        "operationId": "GetInstanceDataForRadius",
         "parameters": [
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D/get/parameters/0"
@@ -3787,6 +3926,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -3900,6 +4042,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -3995,6 +4140,15 @@
           },
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/4"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/6"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/7"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1cube/get/parameters/7"
           },
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/5"
@@ -4214,15 +4368,7 @@
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/6"
           },
           {
-            "name": "resolution-z",
-            "in": "query",
-            "description": "Defined it the user requires data at a different resolution from the native resolution of the data along the z-axis\n\nIf this is a single value it denotes the number of intervals to retrieve data for along the z-axis\n  \n  i.e. resolution-z=10 \n  \nwould retrieve 10 values along the z-axis from the minimum z coordinate to maximum z  coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).\n",
-            "required": false,
-            "schema": {
-              "items": {
-                "type": "string"
-              }
-            }
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1cube/get/parameters/7"
           },
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/5"
@@ -4315,6 +4461,9 @@
           },
           {
             "$ref": "#/paths/~1collections/get/parameters/1"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -4364,6 +4513,9 @@
                   },
                   "datetime": {
                     "type": "string"
+                  },
+                  "limit": {
+                    "type": "number"
                   }
                 }
               }
@@ -4395,7 +4547,7 @@
         }
       }
     },
-    "/collections/{collectionId}/locations/{locId}": {
+    "/collections/{collectionId}/locations/{locationId}": {
       "get": {
         "tags": [
           "Collection data queries"
@@ -4408,10 +4560,10 @@
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D/get/parameters/0"
           },
           {
-            "name": "locId",
+            "name": "locationId",
             "in": "path",
             "required": true,
-            "description": "Retreive data for the location defined by locId (i.e. London_Heathrow, EGLL, 03772 etc)",
+            "description": "Comma delimited list of location identifiers (i.e. EGLL or EGLL,YBBN,CYOW or London,Brisbane)",
             "schema": {
               "type": "string"
             }
@@ -4427,6 +4579,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -4465,7 +4620,7 @@
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D/get/parameters/0"
           },
           {
-            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocId%7D/get/parameters/1"
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocationId%7D/get/parameters/1"
           }
         ],
         "requestBody": {
@@ -4488,6 +4643,9 @@
                   },
                   "f": {
                     "type": "string"
+                  },
+                  "limit": {
+                    "type": "number"
                   }
                 }
               }
@@ -4526,7 +4684,7 @@
         ],
         "summary": "List available location identifers for the instance",
         "description": "List the locations available for the instance of the collection",
-        "operationId": "ListDataInstanceLocations",
+        "operationId": "GetListDataInstanceLocations",
         "parameters": [
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D/get/parameters/0"
@@ -4539,6 +4697,9 @@
           },
           {
             "$ref": "#/paths/~1collections/get/parameters/1"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -4571,7 +4732,7 @@
         ],
         "summary": "List available location identifers for the instance",
         "description": "List the locations available for the instance of the collection",
-        "operationId": "ListDataInstanceLocations",
+        "operationId": "PostListDataInstanceLocations",
         "parameters": [
           {
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D/get/parameters/0"
@@ -4608,7 +4769,7 @@
         }
       }
     },
-    "/collections/{collectionId}/instances/{instanceId}/locations/{locId}": {
+    "/collections/{collectionId}/instances/{instanceId}/locations/{locationId}": {
       "get": {
         "tags": [
           "Instance data queries"
@@ -4624,7 +4785,7 @@
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1instances~1%7BinstanceId%7D~1area/get/parameters/1"
           },
           {
-            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocId%7D/get/parameters/1"
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocationId%7D/get/parameters/1"
           },
           {
             "$ref": "#/paths/~1collections/get/parameters/1"
@@ -4634,6 +4795,9 @@
           },
           {
             "$ref": "#/paths/~1/get/parameters/0"
+          },
+          {
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1area/get/parameters/9"
           }
         ],
         "responses": {
@@ -4675,11 +4839,11 @@
             "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1instances~1%7BinstanceId%7D~1area/get/parameters/1"
           },
           {
-            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocId%7D/get/parameters/1"
+            "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocationId%7D/get/parameters/1"
           }
         ],
         "requestBody": {
-          "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocId%7D/post/requestBody"
+          "$ref": "#/paths/~1collections~1%7BcollectionId%7D~1locations~1%7BlocationId%7D/post/requestBody"
         },
         "responses": {
           "200": {
