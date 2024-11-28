@@ -2,7 +2,7 @@ type: object
 title: EDR GeoJSON Properties 
 description: Properties to describe existing EDR features -- may be real-world or virtual sampling features.
 example:
-- datetime: 2018-02-12T00:00:00Z/2018-03-18T12:31:12Z
+  datetime: 2018-02-12T00:00:00Z/2018-03-18T12:31:12Z
   label: Monitoring site name
   parameter-name:
     - velocity

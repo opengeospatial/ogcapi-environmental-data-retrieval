@@ -86,10 +86,7 @@ properties:
               maxItems: 6
               type: array
         example:
-          - -180
-          - -90
-          - 180
-          - 90
+          - [-180, -90, 180, 90]
       crs:
         description: >-
           Coordinate reference system of the coordinates in the spatial extent
@@ -127,12 +124,12 @@ properties:
           items:
             type: string
             nullable: true
-          example:
-            - ["2020-11-12T12:15Z","2020-11-12T12:15Z"]
-            - ["2020-11-12T12:15Z","2020-11-12T12:45Z"]
-            - ["2022-01-14T09:00Z","2022-01-15T09:00Z"]
-            - ["2022-01-14T09:00Z","2022-01-14T21:00Z"]
-            - ["2022-01-14T09:00Z","2022-01-16T09:00Z"]
+        example:
+          - ["2020-11-12T12:15Z","2020-11-12T12:15Z"]
+          - ["2020-11-12T12:15Z","2020-11-12T12:45Z"]
+          - ["2022-01-14T09:00Z","2022-01-15T09:00Z"]
+          - ["2022-01-14T09:00Z","2022-01-14T21:00Z"]
+          - ["2022-01-14T09:00Z","2022-01-16T09:00Z"]
 
       values:
         description: |-
@@ -146,14 +143,8 @@ properties:
         minItems: 1
         items:
           type: string
-          minItems: 1
           nullable: true
-          example:
-            - ["2020-11-12T12:15Z"]
-            - ["2020-11-12T12:15Z","2020-11-12T12:30Z","2020-11-12T12:45Z"]
-            - ["R12/2022-01-14T09:00Z/2022-01-15T09:00Z"]
-            - ["R12/2022-01-14T09:00Z/PT1H"]
-            - ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
+        example: ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
 
       trs:
         description: >-
@@ -195,8 +186,8 @@ properties:
           items:
             type: string
             nullable: true
-          example:
-            - ["2","100"]
+        example:
+          - ["2","100"]
       values:
         description: |-
           Vertical level intervals that data in the collection is available at 
@@ -210,10 +201,7 @@ properties:
         items:
           type: string
           nullable: true
-          example:
-            - ["2/100"]
-            - ["R20/1000/-50"]
-            - ["2","10","80", "100"]
+        example: ["2","10","80", "100"]
       vrs:
         description: |-
           Coordinate reference system of the coordinates in the vertical extent
@@ -239,8 +227,7 @@ properties:
           description: >-
              The name of the custom dimension.
           type: string
-          example:
-            - ["members"]      
+          example: "members"
         interval:
           description: >-
              If multiple intervals are provided, the union of the intervals describes the custom extent.
@@ -254,8 +241,8 @@ properties:
             items:
               type: string
               nullable: true
-            example:
-              - ["0","50"]
+          example:
+            - ["0","50"]
         values:
           description: |-
             values that  data in the collection is available at 
@@ -269,10 +256,7 @@ properties:
           items:
             type: string
             nullable: true
-            example:
-              - ["25/75"]
-              - ["R20/0/5"]
-              - ["25","50","75"]
+          example: ["25","50","75"]
         reference:
           description: |-
             URI to a definition or description of the custom dimension
