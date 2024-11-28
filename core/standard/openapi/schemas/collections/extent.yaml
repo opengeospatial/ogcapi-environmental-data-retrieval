@@ -86,7 +86,7 @@ properties:
               maxItems: 6
               type: array
         example:
-          - [-180, -90, 180, 90]
+          - [[-180, -90, 180, 90]]
       crs:
         description: >-
           Coordinate reference system of the coordinates in the spatial extent
@@ -125,11 +125,11 @@ properties:
             type: string
             nullable: true
         example:
-          - ["2020-11-12T12:15Z","2020-11-12T12:15Z"]
-          - ["2020-11-12T12:15Z","2020-11-12T12:45Z"]
-          - ["2022-01-14T09:00Z","2022-01-15T09:00Z"]
-          - ["2022-01-14T09:00Z","2022-01-14T21:00Z"]
-          - ["2022-01-14T09:00Z","2022-01-16T09:00Z"]
+          - [["2020-11-12T12:15Z","2020-11-12T12:15Z"]]
+          - [["2020-11-12T12:15Z","2020-11-12T12:45Z"]]
+          - [["2022-01-14T09:00Z","2022-01-15T09:00Z"]]
+          - [["2022-01-14T09:00Z","2022-01-14T21:00Z"]]
+          - [["2022-01-14T09:00Z","2022-01-16T09:00Z"]]
 
       values:
         description: |-
@@ -187,7 +187,7 @@ properties:
             type: string
             nullable: true
         example:
-          - ["2","100"]
+          - [["2","100"]]
       values:
         description: |-
           Vertical level intervals that data in the collection is available at 
@@ -242,7 +242,7 @@ properties:
               type: string
               nullable: true
           example:
-            - ["0","50"]
+            - [["0","50"]]
         values:
           description: |-
             values that  data in the collection is available at 
