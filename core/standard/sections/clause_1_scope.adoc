@@ -1,8 +1,8 @@
 == Scope
 
-This specification identifies resources, captures compliance classes, and specifies requirements which are applicable to OGC Environmental Data Retrieval APIs.
+This Standard identifies resources, captures compliance classes, and specifies requirements which are applicable to OGC Environmental Data Retrieval APIs.
 
-This specification addresses two fundamental operations: discovery and query.
+This Standard addresses two fundamental operations: discovery and query.
 
 Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about a distribution of a resource. This includes the API definition of the server as well as metadata about the spatio-temporal data resources provided by the server.
 
