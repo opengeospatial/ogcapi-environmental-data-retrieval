@@ -10,7 +10,7 @@ Event-driven workflows provide Publish-Subscribe based capabilities as part of i
 
 The Open Geospatial Consortium (OGC) has conducted significant work on event-based models and architectures. The Publish-Subscribe model results in less network traffic and more timely responses to manage event-based models such as urgent, temporally unpredictable data (examples include, but are not limited to: traffic conditions, weather or hazard warnings, and real-time sensor data).
 
-Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-081] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the http://www.opengis.net/doc/IS/ogcapi-edr-2/1.0[OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard] discusses approaches for integrating Publish-Subscribe architecture into the OGC API suite of Standards.
+Building on the OGC Publish-Subscribe Interface Standard https://docs.ogc.org/is/13-131r1/13-131r1.html[OGC 13-131r1], as well as the recommendations put forward in the OGC Pub/Sub White Paper [OGC 20-081] produced as part of OGC Testbed 12, as well as the Discussion paper for Publish-Subscribe workflow in OGC APIs [OGC 23-013], the https://www.opengis.net/doc/IS/ogcapi-edr-2/1.0[OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard] discusses approaches for integrating Publish-Subscribe architecture into the OGC API suite of Standards.
 
 include::../recommendations/pubsub/PER_protocols.adoc[]
 

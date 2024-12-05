@@ -6,7 +6,7 @@ The filter constraints are defined by the following query parameters:
 [cols="2,1,1,2,3"]
 |====
 |Path Parameter| Type | Required|Description|Examples
-a| **locationId**| String|No| Unique identifier(s) for the required location(s), such as a http://en.wikipedia.org/wiki/Geohash[GeoHash], a World Meteorological Organization (WMO) station identifier or place name.  a| * `EGLL`
+a| **locationId**| String|No| Unique identifier(s) for the required location(s), such as a https://en.wikipedia.org/wiki/Geohash[GeoHash], a World Meteorological Organization (WMO) station identifier or place name.  a| * `EGLL`
 * `Ottawa`
 * `limit.broom.flip`
 * `gbsvn`

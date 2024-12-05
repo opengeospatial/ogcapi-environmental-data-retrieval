@@ -5,11 +5,11 @@
 
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas30
 obligation:: requirement
 subject:: Web API
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
 inherit:: OpenAPI Specification 3.0.3
 
 requirement:: /req/oas30/oas-impl

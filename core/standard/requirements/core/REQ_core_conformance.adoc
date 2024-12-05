@@ -10,8 +10,8 @@ identifier:: /req/core/conformance
 
 The list of Conformance Classes advertised by the API SHALL include:
 
-* http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
-* http://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
-* http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+* https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+* https://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
+* https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
 
 ====

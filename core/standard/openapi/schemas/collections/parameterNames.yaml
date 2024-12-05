@@ -62,7 +62,7 @@ example:
     label: Ratio
     symbol:
       value: "1"
-      type: http://www.opengis.net/def/uom/UCUM/
+      type: https://www.opengis.net/def/uom/UCUM/
   observedProperty:
-    id: http://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
+    id: https://vocab.nerc.ac.uk/standard_name/sea_ice_area_fraction/
     label: Sea Ice Concentration

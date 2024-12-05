@@ -6,11 +6,11 @@
 
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections
 obligation:: requirement
 subject:: Web API
-inherit:: http://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
+inherit:: https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 inherit:: ISO 19107
 inherit:: ISO 19108
 inherit:: ISO 19111

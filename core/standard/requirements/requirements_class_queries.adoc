@@ -6,10 +6,10 @@
 
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/queries
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/queries
 obligation:: requirement
 subject:: Web API
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/collections
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections
 
 requirement:: /req/queries/position
 requirement:: /req/edr/rc-area

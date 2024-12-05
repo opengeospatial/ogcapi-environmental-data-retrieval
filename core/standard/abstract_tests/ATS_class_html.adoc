@@ -3,11 +3,11 @@
 .HTML
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/html
-subject:: <<rc_html,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/html>>
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/html
+subject:: <<rc_html,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/html>>
 classification:: Target Type:Web API
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/html
 conformance-test:: /conf/html/content
 conformance-test:: /conf/html/definition
 ====

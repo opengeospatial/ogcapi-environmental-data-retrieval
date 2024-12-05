@@ -3,11 +3,11 @@
 .OpenAPI 3.0
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/oas30
-subject:: <<rc_oas30,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/oas30>>
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/oas30
+subject:: <<rc_oas30,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas30>>
 classification:: Target Type:Web API
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30
 conformance-test:: /conf/oas30/completeness
 conformance-test:: /conf/oas30/exceptions-codes
 conformance-test:: /conf/oas30/oas-definition-1

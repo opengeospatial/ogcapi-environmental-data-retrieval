@@ -1,10 +1,10 @@
 # OGC API - Environmental Data Retrieval
 
-[<img src="http://www.opengeospatial.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png" width="200"/>](https://www.opengeospatial.org)
+[<img src="https://www.ogc.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png" width="200"/>](https://www.ogc.org/)
 
-This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.opengeospatial.org/projects/groups/edr-apiswg).
+This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.ogc.org/projects/groups/edr-apiswg).
 
-The **[OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr/)** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable API building blocks.
+The **[OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr/)** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](https://www.openapis.org/) is used to define the reusable API building blocks.
 
 ### EDR API Collections
 As with other OGC APIs that include a `/collections` end point, EDR supports distribution of _collections_ of geospatial data in particular ways. An EDR collection can contain virtually any data about the natural or built environment that needs to be _sampled_ using a spatio-temporal query pattern. The following is a list of examples that illustrate what this environmental data sampling paradigm might entail.
@@ -149,7 +149,7 @@ The Working Group is now developing a backwards-compatible V1.1 and future enhan
 
 ### Best Practice
 
-* [OGC API - Environmental Data Retrieval Best Practice](http://docs.opengeospatial.org/DRAFTS/20-065.html) - No Content yet
+* [OGC API - Environmental Data Retrieval Best Practice](https://docs.ogc.org/DRAFTS/20-065.html) - No Content yet
 
 ### Contributing
 

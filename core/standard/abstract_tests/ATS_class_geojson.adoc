@@ -3,10 +3,10 @@
 .GeoJSON
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/geojson
-subject:: <<rc_geojson,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/geojson>>
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/geojson
+subject:: <<rc_geojson,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/geojson>>
 classification:: Target Type:Web API
-inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
 conformance-test:: /conf/geojson/definition
 conformance-test:: /conf/geojson/content
 ====

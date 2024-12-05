@@ -2,14 +2,14 @@ asyncapi: '3.0.0'
 info:
     title: 'Example API conforming to version 1.0.0 of the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard'
     version: 1.0.0
-    description: "AsyncAPI description of an example API conforming to version 1.0.0 of the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard. \n\n Copyright (c) 2024 Open Geospatial Consortium. To obtain additional rights of use, visit http://www.ogc.org/legal/ \n\n The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard provides recommendations on applying Publish-Subscribe architectural patterns to implementations of one or more OGC API Standards."
+    description: "AsyncAPI description of an example API conforming to version 1.0.0 of the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard. \n\n Copyright (c) 2024 Open Geospatial Consortium. To obtain additional rights of use, visit https://www.ogc.org/legal/ \n\n The OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe Workflow Standard provides recommendations on applying Publish-Subscribe architectural patterns to implementations of one or more OGC API Standards."
     contact:
         name: Open Geospatial Consortium (OGC)
         url: https://www.ogc.org/contacts
         email: standards-team@ogc.org
     license:
         name: OGC license
-        url: http://www.ogc.org/legal/
+        url: https://www.ogc.org/legal/
 
 servers:
     mqtt_prod:

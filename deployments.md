@@ -9,7 +9,7 @@ Modern web browsers can, of course, act as clients.
 To help promote OGC API standards and their implementations, implementers of OGC API standards are encouraged to register their implementations on the Programmable Web API Directory (https://www.programmableweb.com/add/api), in addition to registering at the OGC Compliance Database (https://www.ogc.org/resource/products/registration). 
 
 These are the implementations that were used for the development of the standard:
-1. [UK Met Office](http://labs.metoffice.gov.uk/edr/)              
+1. [UK Met Office](https://labs.metoffice.gov.uk/edr/)              
      [Further details](#uk-met-office) 
 1. [US NWS](https://data-api.mdl.nws.noaa.gov/EDR-API)       
      [Further details](#us-national-weather-service)
@@ -40,20 +40,20 @@ family of standards, including EDR.
 
 ### UK Met Office
 Servers:
-- [Example Server](http://labs.metoffice.gov.uk/edr/) developed by Mark Burgoyne.
+- [Example Server](https://labs.metoffice.gov.uk/edr/) developed by Mark Burgoyne.
 
 Clients:
-- [Example Client](http://labs.metoffice.gov.uk/edr/static/html/query.html)
+- [Example Client](https://labs.metoffice.gov.uk/edr/static/html/query.html)
 
 Server description: implemented using python supports point, radius, area, trajectory and location queries
 
 Client description:
 
 #### Sample requests
-- position: `http://labs.metoffice.gov.uk/edr/collections/terrain_tiles/position?coords=POINT(101.896366 45.209662)&parameter-name=Height&crs=CRS84&f=CoverageJSON`
-- area: http://labs.metoffice.gov.uk/edr/collections/global_pop_density/area?coords=POLYGON((-3.652394 51.373721,-3.511786 50.264415,-1.973894 50.499557,-2.114501 51.73946,-3.652394 51.373721))&parameter-name=Pop_Density&crs=CRS84&f=CoverageJSON
-- radius:  http://labs.metoffice.gov.uk/edr/collections/global_pop_density/radius?coords=POINT(-0.104939 51.513418)&within=30&within-units=km&parameter-name=Pop_Density&crs=CRS84&f=CoverageJSON
-- trajectory: `http://labs.metoffice.gov.uk/edr/collections/terrain_tiles/trajectory?coords=LINESTRING(-3.519 50.737,-3.511 50.745,-3.504 50.753,-3.496 50.762,-3.489 50.77,-3.481 50.778,-3.473 50.786,-3.466 50.795,-3.458 50.803,-3.451 50.811,-3.443 50.819,-3.435 50.828,-3.428 50.836,-3.42 50.844,-3.412 50.853,-3.403 50.857,-3.392 50.859,-3.381 50.861,-3.37 50.863,-3.359 50.865,-3.348 50.867,-3.336 50.869,-3.325 50.871,-3.314 50.873,-3.303 50.875,-3.292 50.877,-3.281 50.879,-3.27 50.881,-3.259 50.883,-3.248 50.885,-3.237 50.887,-3.226 50.889,-3.215 50.89,-3.204 50.892,-3.192 50.894,-3.181 50.896,-3.17 50.898,-3.159 50.9,-3.148 50.902,-3.137 50.904,-3.126 50.906,-3.115 50.908,-3.104 50.91,-3.093 50.912,-3.082 50.914,-3.071 50.916,-3.06 50.918,-3.049 50.92,-3.048 50.931,-3.046 50.943,-3.045 50.954,-3.043 50.965,-3.042 50.976,-3.041 50.987,-3.039 50.998,-3.038 51.009,-3.036 51.021,-3.035 51.032,-3.034 51.043,-3.032 51.054,-3.031 51.065,-3.029 51.076,-3.028 51.088,-3.027 51.099,-3.025 51.11,-3.024 51.121,-3.022 51.132,-3.021 51.143,-3.02 51.155,-3.018 51.165,-3.007 51.165,-2.995 51.165,-2.984 51.165,-2.973 51.165,-2.962 51.165,-2.95 51.164,-2.939 51.164,-2.928 51.164,-2.917 51.164,-2.906 51.164,-2.894 51.164,-2.883 51.163,-2.872 51.163,-2.861 51.163,-2.849 51.163,-2.838 51.163)&parameter-name=Height&crs=CRS84&f=CoverageJSON`
+- position: `https://labs.metoffice.gov.uk/edr/collections/terrain_tiles/position?coords=POINT(101.896366 45.209662)&parameter-name=Height&crs=CRS84&f=CoverageJSON`
+- area: https://labs.metoffice.gov.uk/edr/collections/global_pop_density/area?coords=POLYGON((-3.652394 51.373721,-3.511786 50.264415,-1.973894 50.499557,-2.114501 51.73946,-3.652394 51.373721))&parameter-name=Pop_Density&crs=CRS84&f=CoverageJSON
+- radius:  https://labs.metoffice.gov.uk/edr/collections/global_pop_density/radius?coords=POINT(-0.104939 51.513418)&within=30&within-units=km&parameter-name=Pop_Density&crs=CRS84&f=CoverageJSON
+- trajectory: `https://labs.metoffice.gov.uk/edr/collections/terrain_tiles/trajectory?coords=LINESTRING(-3.519 50.737,-3.511 50.745,-3.504 50.753,-3.496 50.762,-3.489 50.77,-3.481 50.778,-3.473 50.786,-3.466 50.795,-3.458 50.803,-3.451 50.811,-3.443 50.819,-3.435 50.828,-3.428 50.836,-3.42 50.844,-3.412 50.853,-3.403 50.857,-3.392 50.859,-3.381 50.861,-3.37 50.863,-3.359 50.865,-3.348 50.867,-3.336 50.869,-3.325 50.871,-3.314 50.873,-3.303 50.875,-3.292 50.877,-3.281 50.879,-3.27 50.881,-3.259 50.883,-3.248 50.885,-3.237 50.887,-3.226 50.889,-3.215 50.89,-3.204 50.892,-3.192 50.894,-3.181 50.896,-3.17 50.898,-3.159 50.9,-3.148 50.902,-3.137 50.904,-3.126 50.906,-3.115 50.908,-3.104 50.91,-3.093 50.912,-3.082 50.914,-3.071 50.916,-3.06 50.918,-3.049 50.92,-3.048 50.931,-3.046 50.943,-3.045 50.954,-3.043 50.965,-3.042 50.976,-3.041 50.987,-3.039 50.998,-3.038 51.009,-3.036 51.021,-3.035 51.032,-3.034 51.043,-3.032 51.054,-3.031 51.065,-3.029 51.076,-3.028 51.088,-3.027 51.099,-3.025 51.11,-3.024 51.121,-3.022 51.132,-3.021 51.143,-3.02 51.155,-3.018 51.165,-3.007 51.165,-2.995 51.165,-2.984 51.165,-2.973 51.165,-2.962 51.165,-2.95 51.164,-2.939 51.164,-2.928 51.164,-2.917 51.164,-2.906 51.164,-2.894 51.164,-2.883 51.163,-2.872 51.163,-2.861 51.163,-2.849 51.163,-2.838 51.163)&parameter-name=Height&crs=CRS84&f=CoverageJSON`
 
 #### Sample workflows
 - sample URLs

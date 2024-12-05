@@ -7,7 +7,7 @@ The https://www.w3.org/TR/webarch/[Architecture of the World Wide Web] establish
 
 The normative provisions in this standard are denoted by the URI:
 
-http://www.opengis.net/spec/ogcapi-edr-1/1.1
+https://www.opengis.net/spec/ogcapi-edr-1/1.1
 
 All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
 
@@ -19,7 +19,7 @@ Implementation of the URI Templates is recommended in that they provide a common
 
 === Link relations
 
-To express relationships between resources, <<RFC8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the http://www.opengis.net/def/rel[OGC Link Relation Type Register]. These are denoted below with [OGC].
+To express relationships between resources, <<RFC8288,RFC 8288 (Web Linking)>> and <<link-relations,registered link relation types>> are used wherever possible and denoted below with [IANA]. Additional link relation types are registered with the https://www.opengis.net/def/rel[OGC Link Relation Type Register]. These are denoted below with [OGC].
 
 The following link-relations are in common use by OGC <<webapi-definition,Web API>> Standards.
 
@@ -60,13 +60,13 @@ JSON media types that would typically be used in an OGC API that supports JSON a
 
 * `application/vnd.cov+json` for resources that include coverage content encoded according to CoverageJSON
 * `application/geo+json` for feature <<collection-definition,collections>> and features
-* `application/json` for all other resource representations, as well as coverage content encoded according to the http://docs.opengeospatial.org/is/09-146r8/09-146r8.html[Coverage Implementation Schema (CIS)]
+* `application/json` for all other resource representations, as well as coverage content encoded according to the https://docs.ogc.org/is/09-146r8/09-146r8.html[Coverage Implementation Schema (CIS)]
 
 XML media types that would typically occur in an OGC API that supports XML are:
 
 * `application/gml+xml;version=3.2` for any https://portal.ogc.org/files/?artifact_id=74183&version=2[Geography Markup Language (GML) 3.2] feature <<collection-definition,collections>> and features
-* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 0 profile
-* `application/gml+xml;version=3.2;profile=http://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile
+* `application/gml+xml;version=3.2;profile=https://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 0 profile
+* `application/gml+xml;version=3.2;profile=https://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile
 * `application/xml` for all other resources
 
 The typical HTML media type for all "web pages" in an OGC API would be `text/html`.

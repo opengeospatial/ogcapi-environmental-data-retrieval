@@ -6,10 +6,10 @@
 
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/json
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/json
 obligation:: requirement
 subject:: Web API
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
 
 requirement:: /req/json/content
 requirement:: /req/json/definition

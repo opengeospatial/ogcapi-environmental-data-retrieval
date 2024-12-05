@@ -12,6 +12,6 @@ A successful execution of the operation SHALL be reported as a response with an 
 ---
 *B:*
 
-The content of that response SHALL be based upon the schema link:https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/confClasses.yaml[confClasses.yaml] and list all OGC API conformance classes that the API conforms to.
+The content of that response SHALL be based upon the schema link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/core/confClasses.yaml[confClasses.yaml] and list all OGC API conformance classes that the API conforms to.
 
 ====

@@ -3,9 +3,9 @@
 .Core
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.1/conf/core
-subject:: <<rc_core,http://www.opengis.net/spec/ogcapi-edr-1/1.1/req/core>>
-inherit:: http://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
+subject:: <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>>
+inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
 classification:: Target Type:Web API
 conformance-test:: /conf/core/http
 conformance-test:: /conf/core/root-op

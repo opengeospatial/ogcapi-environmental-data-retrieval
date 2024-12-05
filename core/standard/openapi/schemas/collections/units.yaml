@@ -31,7 +31,7 @@ properties:
       - type: string
     example:
       value: hPa
-      type: http://www.opengis.net/def/uom/UCUM/
+      type: https://www.opengis.net/def/uom/UCUM/
   id:
     type: string
 example:
@@ -39,4 +39,4 @@ example:
     en: Kelvin
   symbol:
     value: K
-    type: http://www.opengis.net/def/uom/UCUM/
+    type: https://www.opengis.net/def/uom/UCUM/

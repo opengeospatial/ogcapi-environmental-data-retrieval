@@ -1,7 +1,7 @@
 # OGC API - Environmental Data Retrieval
 
 [OGC API standards](https://ogcapi.ogc.org/) define modular API building blocks to spatially enable Web APIs
-in a consistent way. [OpenAPI](http://openapis.org) is used to define the reusable
+in a consistent way. [OpenAPI](https://www.openapis.org/) is used to define the reusable
 API building blocks with responses in JSON and HTML.
 
 The OGC API family of standards is organized by resource type. The draft OGC API - Environmental Data Retrieval standard defines an Environmental Data Retrieval (EDR) API with two goals:
