@@ -1,0 +1,6 @@
+name: instanceId
+in: path
+description: Identifier (id) of a specific instance of a collection
+required: true
+schema:
+    type: string

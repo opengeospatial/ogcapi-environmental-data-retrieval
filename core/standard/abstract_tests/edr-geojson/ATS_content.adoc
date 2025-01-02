@@ -8,7 +8,7 @@ test-purpose:: Verify the content of an EDR GeoJSON document given an input docu
 test-method::
 . Validate that the document is an EDR GeoJSON document.
 . Validate the document against one of the EDR GeoJSON schemas:
-    * FeatureCollection: link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml[edrFeatureCollectionGeoJSON.yaml] 
-    * Feature: link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/geojson/featureGeoJSON.yaml[featureGeoJSON.yaml] 
-    * GeometryCollection: link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/geojson/geometrycollectionGeoJSON.yaml[geometrycollectionGeoJSON.yaml] using a JSON Schema validator.
+    * FeatureCollection: link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/oas31/schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml[edrFeatureCollectionGeoJSON.yaml] 
+    * Feature: link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/oas31/schemas/geojson/featureGeoJSON.yaml[featureGeoJSON.yaml] 
+    * GeometryCollection: link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/oas31/schemas/geojson/geometrycollectionGeoJSON.yaml[geometrycollectionGeoJSON.yaml] using a JSON Schema validator.
 ====

@@ -1,0 +1,46 @@
+name: coords
+in: query
+description: |-
+    Only data that has a geometry that intersects the area defined by the linestring
+    are selected. 
+
+    The trajectory is defined using a Well Known Text string following 
+
+    A 2D trajectory, on the surface of earth with no time or height dimensions: 
+        coords=LINESTRING(-2.87 51.14 , -2.98 51.36,-3.15 51.03 ,-3.48 50.74 ,-3.36 50.9 )
+
+    A 2D trajectory, on the surface of earth with all for the same time and no height dimension, time value defined in ISO8601 format by the `datetime` query parameter : 
+        coords=LINESTRING(-2.87 51.14 , -2.98 51.36 ,-3.15 51.03 ,-3.48 50.74 ,-3.36 50.9 )&time=2018-02-12T23:00:00Z 
+        
+    A 2D trajectory, on the surface of earth with no time value but at a fixed height level, height defined in the collection height units by the `z` query parameter : 
+        coords=LINESTRING(-2.87 51.14 , -2.98 51.36 ,-3.15 51.03 ,-3.48 50.74 ,-3.36 50.9 )&z=850 
+
+    A 2D trajectory, on the surface of earth with all for the same time and at a fixed height level, time value defined in ISO8601 format by the `datetime` query parameter and height defined in the collection height units by the `z` query parameter : 
+        coords=LINESTRING(-2.87 51.14 , -2.98 51.36 ,-3.15 51.03 ,-3.48 50.74 ,-3.36 50.9 )&time=2018-02-12T23:00:00Z&z=850 
+
+    A 3D trajectory, on the surface of the earth but over a time range with no height values:
+    coords=LINESTRINGM(-2.87 51.14  1560507000,-2.98 51.36  1560507600,-3.15 51.03  1560508200,-3.48 50.74  1560508500,-3.36 50.9  1560510240)
+
+    A 3D trajectory, on the surface of the earth but over a time range with a fixed height value, height defined in the collection height units by the `z` query parameter : 
+    coords=LINESTRINGM(-2.87 51.14  1560507000,-2.98 51.36  1560507600,-3.15 51.03  1560508200,-3.48 50.74  1560508500,-3.36 50.9  1560510240)&z=200
+
+
+    A 3D trajectory, through a 3D volume with height or depth, but no defined time:
+    coords=LINESTRINGZ(-2.87 51.14  0.1,-2.98 51.36  0.2,-3.15 51.03  0.3,-3.48 50.74  0.4,-3.36 50.9  0.5)
+
+    A 3D trajectory, through a 3D volume with height or depth, but a fixed time time value defined in ISO8601 format by the `datetime` query parameter:
+    coords=LINESTRINGZ(-2.87 51.14  0.1,-2.98 51.36  0.2,-3.15 51.03  0.3,-3.48 50.74  0.4,-3.36 50.9  0.5)&time=2018-02-12T23:00:00Z
+
+    A 4D trajectory, through a 3D volume but over a time range:
+    coords=LINESTRINGZM(-2.87 51.14 0.1 1560507000,-2.98 51.36 0.2 1560507600,-3.15 51.03 0.3 1560508200, -3.48 50.74 0.4 1560508500, -3.36 50.9 0.5 1560510240)
+    (using either the `time` or `z` parameters with a 4D trajectory wil generate an error response)
+
+    where Z in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.  
+    `If the specified CRS does not define the height units, the heights units will default to metres above mean sea level`
+
+    and the M in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+    https://en.wikipedia.org/wiki/Unix_time
+
+required: true
+schema:
+    type: string

@@ -1,0 +1,13 @@
+description: Validates any axis with primitive values
+allOf:
+  - $ref: valuesAxisBase.yaml
+  - description: This redundant branch exists to fail early with succinct errors
+    properties:
+      values:
+        items:
+          oneOf:
+            - type: number
+            - type: string
+  - oneOf:
+      - $ref: numericValuesAxis.yaml
+      - $ref: stringValuesAxis.yaml

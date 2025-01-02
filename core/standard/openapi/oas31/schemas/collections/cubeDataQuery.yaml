@@ -1,0 +1,20 @@
+allOf:
+  - $ref: DataQuery.yaml
+required:
+  - height_units
+properties:
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: 
+      - cube
+    examples: 
+      - cube 
+  height_units:
+    description: list of z distance units vertical values can be specified in
+    type: array
+    items: 
+      type: string
+    examples:
+      - m
+      - hPa

@@ -1,0 +1,29 @@
+content:
+  application/json:
+    schema:
+        type: object
+        required:
+            - coords
+        properties:
+            coords:
+                description: Well Known Text Polygon definition
+                type: string
+            z:
+                type: string
+            datetime:
+                type: string        
+            parameter-name:
+                type: array
+                items:
+                    type: string
+            crs:
+                type: string
+            resolution-x:
+                type: string
+            resolution-y:
+                type: string
+            f:
+                type: string
+            limit:
+                type: number                
+                

@@ -67,7 +67,7 @@ A successful response to the `Landing Page` operation is defined in OGC APIâ€‰â€
 .Landing Page Response Schema
 [source,yaml]
 ----
-include::../openapi/schemas/core/landingPage.yaml[]
+include::../openapi/oas31/schemas/core/landingPage.yaml[]
 ----
 
 The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
@@ -165,7 +165,7 @@ Apply Requirement <<req_core_conformance,/req/core/conformance>> on declaration 
 .Conformance Response Schema
 [source,yaml]
 ----
-include::../openapi/schemas/core/confClasses.yaml[]
+include::../openapi/oas31/schemas/core/confClasses.yaml[]
 ----
 
 The following JSON fragment is an example of a response to an OGC API-EDR conformance operation.

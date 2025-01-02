@@ -1,0 +1,13 @@
+description: "Reference System Connection object: connects coordinates to reference systems"
+type: object
+properties:
+  coordinates:
+    type: array
+    items:
+      type: string
+    minItems: 1
+  system:
+    $ref: referenceSystem.yaml
+required:
+  - coordinates
+  - system

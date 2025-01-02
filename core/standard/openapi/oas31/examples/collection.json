@@ -1,0 +1,691 @@
+{
+    "links": [
+        {
+            "href": "https://example.org/edr/collections/?f=json",
+            "hreflang": "en",
+            "rel": "self",
+            "type": "application/json"
+        },
+        {
+            "href": "https://example.org/edr/collections/f=html",
+            "hreflang": "en",
+            "rel": "alternate",
+            "type": "text/html"
+        },
+        {
+            "href": "https://example.org/edr/collections/f=xml",
+            "hreflang": "en",
+            "rel": "alternate",
+            "type": "application/xml"
+        }
+    ],
+    "collections": [
+        {
+            "id": "hrly_obs",
+            "title": "Hourly Site Specific observations",
+            "description": "Observation data for UK observing sites",
+            "keywords": [
+                "Wind Direction",
+                "Wind Speed",
+                "Wind Gust",
+                "Air Temperature",
+                "Weather",
+                "Relative Humidity",
+                "Dew point",
+                "Pressure",
+                "Pressure Tendancy",
+                "Visibility"
+            ],
+            "links": [
+                {
+                    "href": "https://example.org/uk-hourly-site-specific-observations",
+                    "hreflang": "en",
+                    "rel": "service-doc",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/terms-and-conditions---datapoint#datalicence",
+                    "hreflang": "en",
+                    "rel": "license",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/data/datapoint/terms-and-conditions---datapoint#termsofservice",
+                    "hreflang": "en",
+                    "rel": "restrictions",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/edr/collections/hrly_obs?f=json",
+                    "hreflang": "en",
+                    "rel": "collection",
+                    "type": "application/json"
+                },
+                {
+                    "href": "https://example.org/edr/collections/hrly_obs?f=html",
+                    "hreflang": "en",
+                    "rel": "alternate",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/edr/collections/hrly_obs?f=xml",
+                    "hreflang": "en",
+                    "rel": "alternate",
+                    "type": "application/xml"
+                }                
+            ],
+            "extent": {
+                "spatial": {
+                    "bbox": [[
+                        -15.0,
+                        48.0,
+                        5.0,
+                        62.0
+                    ]],
+                    "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                },
+                "temporal": {
+                    "interval": [
+                        ["2020-04-19T11:00:00Z","2020-06-30T09:00:00Z"]
+                    ],
+                    "values": [
+                        "2020-04-19T11:00:00Z/2020-06-30T09:00:00Z"
+                    ],
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
+                }
+            },
+            "data_queries" : {
+                "position": {
+                    "link": {
+                        "href": "https://example.org/edr/collections/hrly_obs/position?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Position query",
+                            "description": "Position query",
+                            "coords" :{
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "IWXXM",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }                    
+                },
+                "radius": {
+                    "link": {
+                        "href": "https://example.org/edr/collections/hrly_obs/radius?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Radius query",
+                            "description": "Radius query",
+                            "coords" :{
+                                "description": "Well Known Text POINT value i.e. POINT(-120, 55)"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "GeoJSON",
+                            "within_units": [
+                                "km",
+                                "miles"
+                            ],
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }                  
+                },
+                "area": {
+                    "link":                 {
+                        "href": "https://example.org/edr/collections/hrly_obs/area?coords={coords}",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": true,
+                        "variables": {
+                            "title": "Area query",
+                            "description": "Area query",
+                            "coords" :{
+                                "description": "Well Known Text POLYGON value i.e. POLYGON((-79 40,-79 38,-75 38,-75 41,-79 40))"
+                            },
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "BUFR",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }
+                },
+                "locations": {
+                    "link": {
+                        "href": "https://example.org/edr/collections/hrly_obs/locations",
+                        "hreflang": "en",
+                        "rel": "data",
+                        "templated": false,
+                        "variables": {
+                            "title": "Location query",
+                            "description": "Location query",
+                            "output_formats": [
+                                "CoverageJSON",
+                                "GeoJSON",
+                                "BUFR",
+                                "IWXXM"
+                            ],
+                            "default_output_format": "CoverageJSON",
+                            "crs_details": [
+                                {
+                                    "crs": "CRS84",
+                                    "wkt": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                                }
+                            ]    
+                        }
+                    }                    
+                }
+            },
+            "crs": [
+                "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
+            ],
+            "output_formats": [
+                "CoverageJSON",
+                "GeoJSON",
+                "IWXXM"
+            ],
+            "parameter_names": {
+                "Wind Direction": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "degree true",
+                        "symbol": {
+                            "value": "°",
+                            "type": "https://example.org/edr/metadata/units/degree"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_windDirection",
+                        "label":  "Wind Direction"
+                    },
+                    "measurementType": {
+                        "method": "mean",
+                        "duration": "-PT10M"
+                    }
+                },
+                "Wind Speed": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "mph",
+                        "symbol": {
+                            "value": "mph",
+                            "type": "https://example.org/edr/metadata/units/mph"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_windSpeed",
+                        "label": "Wind Speed"
+                    },
+                    "measurementType": {
+                        "method": "mean",
+                        "duration": "-PT10M"
+                    }
+                },
+                "Wind Gust": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "mph",
+                        "symbol": {
+                            "value": "mph",
+                            "type": "https://example.org/edr/metadata/units/mph"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_maximumWindGustSpeed",
+                        "label": "Wind Gust"
+                    },
+                    "measurementType": {
+                        "method": "maximum",
+                        "duration": "-PT10M"
+                    }
+                },
+                "Air Temperature": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label":  "degC",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "https://example.org/edr/metadata/units/degC"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "label": "Air Temperature"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Weather": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "weather",
+                        "symbol": {
+                            "value": "",
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_weather"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+                        "label": "Weather"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Relative Humidity": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "percent",
+                        "symbol": {
+                            "value": "%",
+                            "type": "https://example.org/edr/metadata/units/percent"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/bufr4/b/13/_009",
+                        "label": "Relative Humidity"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Dew point": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "degC",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "https://example.org/edr/metadata/units/degC"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_dewPointTemperature",
+                        "label": "Dew point"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Pressure": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "hPa",
+                        "symbol": {
+                            "value": "hPa",
+                            "type": "https://example.org/edr/metadata/units/hPa"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/bufr4/b/10/_051",
+                        "label": "Pressure"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Pressure Tendancy": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "tendency",
+                        "symbol": {
+                            "value": "",
+                            "type": "https://example.org/edr/metadata/units/hPa"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_pressureTendency",
+                        "label": "Pressure Tendancy"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Visibility": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "m",
+                        "symbol": {
+                            "value": "m",
+                            "type": "https://example.org/edr/metadata/units/m"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+                        "label": "Visibility"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                }
+            }
+        },
+        {
+            "id": "UK 3 hourly forecast",
+            "title": "UK 3 Hourly Site Specific Forecast",
+            "description": "Five day site specific forecast for 6000 UK locations",
+            "keywords": [
+                "Wind Direction",
+                "Wind Speed",
+                "Wind Gust",
+                "Air Temperature",
+                "Weather",
+                "Relative Humidity",
+                "Feels like temperature",
+                "UV index",
+                "Probabilty of precipitation",
+                "Visibility"
+            ],
+            "links": [
+                {
+                    "href": "https://example.org/uk-3-hourly-site-specific-forecast",
+                    "hreflang": "en",
+                    "rel": "service-doc",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/terms-and-conditions---datapoint#datalicence",
+                    "hreflang": "en",
+                    "rel": "licence",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/terms-and-conditions---datapoint#termsofservice",
+                    "hreflang": "en",
+                    "rel": "restrictions",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/edr/collections/3_hrly_fcst?f=json",
+                    "hreflang": "en",
+                    "rel": "collection",
+                    "type": "application/json"
+                },
+                {
+                    "href": "https://example.org/edr/collections/3_hrly_fcst?f=html",
+                    "hreflang": "en",
+                    "rel": "alternate",
+                    "type": "text/html"
+                },
+                {
+                    "href": "https://example.org/edr/collections/3_hrly_fcst?f=xml",
+                    "hreflang": "en",
+                    "rel": "alternate",
+                    "type": "application/xml"
+                },                
+                {
+                    "href": "https://example.org/edr/collections/3_hrly_fcst/instances?f=json",
+                    "hreflang": "en",
+                    "rel": "collection"
+                }
+            ],
+            "extent": {
+                "spatial": {
+                    "bbox": [[
+                        -15.0,
+                        48.0,
+                        5.0,
+                        62.0
+                    ]],
+                    "crs": "GEOGCS[\"WGS 84\",DATUM[\"WGS_1984\",SPHEROID[\"WGS 84\",6378137,298.257223563,AUTHORITY[\"EPSG\",\"7030\"]],AUTHORITY[\"EPSG\",\"6326\"]],PRIMEM[\"Greenwich\",0,AUTHORITY[\"EPSG\",\"8901\"]],UNIT[\"degree\",0.01745329251994328,AUTHORITY[\"EPSG\",\"9122\"]],AUTHORITY[\"EPSG\",\"4326\"]]"
+                },
+                "temporal": {
+                    "interval": [
+                        ["2020-04-19T11:00:00Z","2020-06-30T09:00:00Z"]
+                    ],
+                    "values": [
+                        "2020-04-19T11:00:00Z/2020-06-30T09:00:00Z"
+                    ],
+                    "trs": "TIMECRS[\"DateTime\",TDATUM[\"Gregorian Calendar\"],CS[TemporalDateTime,1],AXIS[\"Time (T)\",future]]"
+                }
+            },
+            "crs": [
+                "https://www.opengis.net/def/crs/OGC/1.3/CRS84"
+           ],
+            "output_formats": [
+                "CoverageJSON",
+                "GeoJSON"
+            ],
+            "parameter_names": {
+                "Wind Direction": {
+                    "type": "Parameter",
+                    "description": "Direction wind is from",
+                    "unit": {
+                        "label": "degree true",
+                        "symbol": {
+                            "value": "°",
+                            "type": "https://example.org/edr/metadata/units/degree"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-2-0",
+                        "label": "Wind Direction"
+                                            },
+                    "measurementType": {
+                        "method": "mean",
+                        "duration": "-PT10M"
+                    }
+                },
+                "Wind Speed": {
+                    "type": "Parameter",
+                    "description":"Average wind speed",
+                    "unit": {
+                        "label": "mph",
+                        "symbol": {
+                            "value": "mph",
+                            "type": "https://example.org/edr/metadata/units/mph"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "label":  "Wind Speed"
+                    },
+                    "measurementType": {
+                        "method": "mean",
+                        "duration": "-PT10M"
+                    }
+                },
+                "Wind Gust": {
+                    "type": "Parameter",
+                    "description":  "Wind gusts are a rapid increase in strength of the wind relative to the wind speed.",
+                    "unit": {
+                        "label": "mph",
+                        "symbol": {
+                            "value": "mph",
+                            "type": "https://example.org/edr/metadata/units/mph"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-2-1",
+                        "label": "Wind Gust"
+                    },
+                    "measurementType": {
+                        "method": "maximum",
+                        "duration": "-PT10M"
+                    }
+                },
+                "Air Temperature": {
+                    "type": "Parameter",
+                    "description":  "2m air temperature in the shade and out of the wind",
+                    "unit": {
+                        "label":  "degC",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "https://example.org/edr/metadata/units/degC"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "label": "Air Temperature"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Weather": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label":  "weather",
+                        "symbol": {
+                            "value": "",
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_weather"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/wmdr/ObservedVariableAtmosphere/_266",
+                        "label": "Weather"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Relative Humidity": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "percent",
+                        "symbol": {
+                            "value": "%",
+                            "type": "https://example.org/edr/metadata/units/percent"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "label":  "Relative Humidity"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Feels like temperature": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "degC",
+                        "symbol": {
+                            "value": "°C",
+                            "type": "https://example.org/edr/metadata/units/degC"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_airTemperature",
+                        "label": "Feels like temperature"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "UV index": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label":  "UV_index",
+                        "symbol": {
+                            "value": "",
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_uv"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-4-51",
+                        "label": "UV index"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Probabilty of precipitation": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "percent",
+                        "symbol": {
+                            "value": "%",
+                            "type": "https://example.org/edr/metadata/units/percent"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/grib2/codeflag/4.2/_0-1-1",
+                        "label": "Probabilty of precipitation"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                },
+                "Visibility": {
+                    "type": "Parameter",
+                    "description": "",
+                    "unit": {
+                        "label": "quality",
+                        "symbol": {
+                            "value": "",
+                            "type": "https://example.org/edr/metadata/lookup/mo_dp_visibility"
+                        }
+                    },
+                    "observedProperty": {
+                        "id": "https://codes.wmo.int/common/quantity-kind/_horizontalVisibility",
+                        "label":  "Visibility"
+                    },
+                    "measurementType": {
+                        "method": "instantaneous",
+                        "duration": "PT0M"
+                    }
+                }
+            }
+        }
+    ]
+}    

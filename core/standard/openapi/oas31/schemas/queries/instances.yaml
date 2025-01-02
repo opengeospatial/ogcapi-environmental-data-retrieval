@@ -1,0 +1,26 @@
+type: object
+required:
+  - links
+  - instances
+properties:
+  links:
+    type: array
+    items:
+      $ref: ../core/link.yaml
+    examples:
+      - href: https://example.org/edr/collections/the_collection_id/instances
+        hreflang: en
+        rel: self
+        type: application/json
+      - href: https://example.org/edr/collections/the_collection_id/instances?f=html
+        hreflang: en
+        rel: alternate
+        type: text/html
+      - href: https://example.org/edr/collections/the_collection_id/instances?f=xml
+        hreflang: en
+        rel: alternate
+        type: application/xml
+  instances:
+    type: array
+    items:
+      $ref: ../collections/collection.yaml

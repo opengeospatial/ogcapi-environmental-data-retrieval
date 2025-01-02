@@ -1,0 +1,6 @@
+description: Validates any values-based axis
+oneOf:
+  - $ref: valuesAxisBase.yaml
+  - $ref: primitiveValuesAxis.yaml
+  - $ref: tupleValuesAxis.yaml
+  - $ref: polygonValuesAxis.yaml

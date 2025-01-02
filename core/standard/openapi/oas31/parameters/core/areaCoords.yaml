@@ -1,0 +1,25 @@
+name: coords
+in: query
+description: |-
+    Only data that has a geometry that intersects the area defined by the polygon
+    are selected. 
+
+    The polygon is defined using a Well Known Text string following 
+
+    coords=POLYGON((x y,x1 y1,x2 y2,...,xn yn x y))
+
+    which are values in the coordinate system defined by the crs query parameter 
+    (if crs is not defined the values will be assumed to be WGS84 longitude/latitude coordinates).  
+
+    For instance a polygon that roughly describes an area that contains 
+    South West England in WGS84 would look like: 
+
+    coords=POLYGON((-6.1 50.3,-4.35 51.4,-2.6 51.6,-2.8 50.6,-5.3 49.9,-6.1,50.3))
+
+    see https://portal.ogc.org/files/?artifact_id=25355 and 
+    https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+    The coords parameter will only support 2D POLYGON definitions
+required: true
+schema:
+    type: string

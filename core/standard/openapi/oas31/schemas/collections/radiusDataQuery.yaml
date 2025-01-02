@@ -1,0 +1,18 @@
+allOf:
+  - $ref: DataQuery.yaml
+properties:
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: 
+      - radius
+    examples: 
+      - radius
+  within_units:
+    description: list of distance units radius values can be specified in
+    type: array
+    items: 
+      type: string
+    examples:
+      - km
+      - miles

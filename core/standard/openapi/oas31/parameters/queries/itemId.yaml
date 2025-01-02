@@ -1,0 +1,6 @@
+name: itemId
+in: path
+required: true
+description: 'Retrieve data from the collection using a unique identifier.'
+schema:
+  type: string

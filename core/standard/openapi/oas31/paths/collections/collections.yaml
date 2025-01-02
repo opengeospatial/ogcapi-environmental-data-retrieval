@@ -1,0 +1,15 @@
+# Collections
+get:
+  tags:
+    - Capabilities
+  summary: List the avialable collections from the service
+  operationId: listCollections
+  parameters:
+    - $ref: ../../parameters/core/bbox.yaml
+    - $ref: https://beta.schemas.opengis.net/ogcapi/common/part2/0.1/collections/openapi/parameters/datetime.yaml
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    200:
+      $ref: ../../responses/collections/collections.yaml
+    default:
+      $ref: ../../responses/core/exception.yaml

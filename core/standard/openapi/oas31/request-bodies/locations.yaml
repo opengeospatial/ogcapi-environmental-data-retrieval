@@ -1,0 +1,12 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        bbox:
+          type: string
+        datetime:
+          type: string  
+        limit:
+            type: number
+          
