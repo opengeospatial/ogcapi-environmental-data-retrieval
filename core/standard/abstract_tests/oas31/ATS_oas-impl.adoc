@@ -1,0 +1,11 @@
+[[ats_oas31_oas-impl]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/oas31/oas-impl
+target:: /req/oas/oas-impl
+test-purpose:: Verify that all capabilities specified in the OpenAPI definition are implemented by the API.
+test-method::
+step::: Construct a path from each URL template including all server URL options and all enumerated path parameters.
+step::: For each path defined in the OpenAPI document, validate that the path performs in accordance with the API definition and the API-Features standard.
+====

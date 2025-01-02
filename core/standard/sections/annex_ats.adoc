@@ -43,6 +43,10 @@ include::../abstract_tests/ATS_class_html.adoc[]
 
 include::../abstract_tests/ATS_class_oas30.adoc[]
 
+=== Conformance Class OpenAPI 3.1
+
+include::../abstract_tests/ATS_class_oas31.adoc[]
+
 === Conformance Class Queries
 
 include::../abstract_tests/ATS_class_queries.adoc[]

@@ -9,7 +9,7 @@ test-purpose:: Validate that the `f` query parameter is constructed correctly.
 test-method::
 +
 --
-Verify that the `f` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+Verify that the `f` query parameter complies with the following definition (using an OpenAPI Specification 3.1 fragment):
 
 [source,YAML]
 ----

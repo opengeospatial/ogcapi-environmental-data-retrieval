@@ -3,7 +3,7 @@
 ====
 [%metadata]
 identifier:: /conf/oas30/exceptions-codes
-target:: /req/oas30/exceptions-codes
+target:: /req/oas/exceptions-codes
 test-purpose:: Verify that the OpenAPI document fully describes potential exception codes.
-test-method:: Verify that for each operation, the OpenAPI document describes all link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.0.md#httpCodes[HTTP Status Codes] that may be generated.
+test-method:: Verify that for each operation, the OpenAPI document describes all link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#httpCodes[HTTP Status Codes] that may be generated.
 ====

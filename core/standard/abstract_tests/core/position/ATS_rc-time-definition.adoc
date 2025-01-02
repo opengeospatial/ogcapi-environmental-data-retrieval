@@ -9,7 +9,7 @@ test-purpose:: Validate that the datetime query parameters are constructed corre
 test-method::
 +
 --
-Verify that the `datetime` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+Verify that the `datetime` query parameter complies with the following definition (using an OpenAPI Specification 3.1 fragment):
 
 [source,YAML]
 ----

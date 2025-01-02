@@ -366,24 +366,28 @@ include::../requirements/html/REQ_definition.adoc[]
 
 :sectnums:
 
-=== Requirements Class "OpenAPI 3.0" in Detail
+=== Requirements Class "OpenAPI" in Detail
 
 :sectnums!:
+
+==== *Requirements Class:* OpenAPI
+
+include::../requirements/oas/REQ_oas-impl.adoc[]
+
+include::../requirements/oas/oas-definition.adoc[]
+
+include::../requirements/oas/REQ_completeness.adoc[]
+
+include::../requirements/oas/REQ_exception-codes.adoc[]
+
+include::../requirements/oas/REQ_security.adoc[]
 
 ==== *Requirements Class:* OpenAPI 3.0
 
 include::../requirements/requirements_class_oas30.adoc[]
 
-include::../requirements/oas30/REQ_oas-impl.adoc[]
+==== *Requirements Class:* OpenAPI 3.1
 
-include::../requirements/oas30/oas-definition-1.adoc[]
-
-include::../requirements/oas30/oas-definition-2.adoc[]
-
-include::../requirements/oas30/REQ_completeness.adoc[]
-
-include::../requirements/oas30/REQ_exception-codes.adoc[]
-
-include::../requirements/oas30/REQ_security.adoc[]
+include::../requirements/requirements_class_oas31.adoc[]
 
 :sectnums:

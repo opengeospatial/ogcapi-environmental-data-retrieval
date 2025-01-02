@@ -1,4 +1,4 @@
-[[ats_oas3]]
+[[ats_oas30]]
 [conformance_class]
 .OpenAPI 3.0
 ====
@@ -8,12 +8,11 @@ subject:: <<rc_oas30,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas30>>
 classification:: Target Type:Web API
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
 inherit:: https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/oas30
-conformance-test:: /conf/oas30/completeness
-conformance-test:: /conf/oas30/exceptions-codes
-conformance-test:: /conf/oas30/oas-definition-1
-conformance-test:: /conf/oas30/oas-definition-2
-conformance-test:: /conf/oas30/oas-impl
-conformance-test:: /conf/oas30/security
+conformance-test:: /conf/oas/completeness
+conformance-test:: /conf/oas/exceptions-codes
+conformance-test:: /conf/oas/oas-definition
+conformance-test:: /conf/oas/oas-impl
+conformance-test:: /conf/oas/security
 ====
 
 include::oas30/ATS_completeness.adoc[]

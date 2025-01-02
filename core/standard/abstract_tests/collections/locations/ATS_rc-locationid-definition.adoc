@@ -8,7 +8,7 @@ test-purpose:: Validate that the locationid parameter is constructed correctly.
 test-method::
 +
 --
-Verify that the `locationId` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+Verify that the `locationId` query parameter complies with the following definition (using an OpenAPI Specification 3.1 fragment):
 
 [source,YAML]
 ----

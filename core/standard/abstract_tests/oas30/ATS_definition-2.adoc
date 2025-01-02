@@ -3,7 +3,7 @@
 ====
 [%metadata]
 identifier:: /conf/oas30/oas-definition-2
-target:: /req/oas30/oas-definition-2
+target:: /req/oas30/oas-definition
 test-purpose:: Verify that the OpenAPI document is valid JSON.
 test-method:: Verify that the JSON representation conforms to the <<openapi,OpenAPI Specification, version 3.0>>.
 ====
