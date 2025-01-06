@@ -19,12 +19,6 @@ include::../requirements/core/REQ_root-op.adoc[]
 
 include::../requirements/core/REQ_root-success.adoc[]
 
-
-
-include::../requirements/core/REQ_rc-api-definition-op.adoc[]
-
-include::../requirements/core/REQ_rc-api-definition-success.adoc[]
-
 include::../requirements/core/REQ_core_conformance.adoc[]
 
 include::../requirements/core/REQ_conformance-success.adoc[]
@@ -363,31 +357,5 @@ include::../requirements/requirements_class_html.adoc[]
 include::../requirements/html/REQ_content.adoc[]
 
 include::../requirements/html/REQ_definition.adoc[]
-
-:sectnums:
-
-=== Requirements Class "OpenAPI" in Detail
-
-:sectnums!:
-
-==== *Requirements Class:* OpenAPI
-
-include::../requirements/oas/REQ_oas-impl.adoc[]
-
-include::../requirements/oas/oas-definition.adoc[]
-
-include::../requirements/oas/REQ_completeness.adoc[]
-
-include::../requirements/oas/REQ_exception-codes.adoc[]
-
-include::../requirements/oas/REQ_security.adoc[]
-
-==== *Requirements Class:* OpenAPI 3.0
-
-include::../requirements/requirements_class_oas30.adoc[]
-
-==== *Requirements Class:* OpenAPI 3.1
-
-include::../requirements/requirements_class_oas31.adoc[]
 
 :sectnums:

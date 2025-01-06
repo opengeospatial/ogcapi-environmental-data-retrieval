@@ -7,11 +7,12 @@ identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/oas31
 subject:: <<rc_oas31,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas31>>
 classification:: Target Type:Web API
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
-conformance-test:: /conf/oas/completeness
-conformance-test:: /conf/oas/exceptions-codes
-conformance-test:: /conf/oas/oas-definition
-conformance-test:: /conf/oas/oas-impl
-conformance-test:: /conf/oas/security
+conformance-test:: /conf/oas31/completeness
+conformance-test:: /conf/oas31/exceptions-codes
+conformance-test:: /conf/oas31/oas-definition-1
+conformance-test:: /conf/oas31/oas-definition-2
+conformance-test:: /conf/oas31/oas-impl
+conformance-test:: /conf/oas31/security
 ====
 
 include::oas31/ATS_completeness.adoc[]

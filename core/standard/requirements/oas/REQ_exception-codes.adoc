@@ -1,10 +1,10 @@
-[[req_oas30_exceptions-codes]]
-==== *Requirement /req/oas30/exceptions-codes* OpenAPI 3.0 Exception codes
+[[req_oas_exceptions-codes]]
+==== *Requirement /req/oas/exceptions-codes* OpenAPI Exception codes
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/oas30/exceptions-codes
+identifier:: /req/oas/exceptions-codes
 
 *A:*
 

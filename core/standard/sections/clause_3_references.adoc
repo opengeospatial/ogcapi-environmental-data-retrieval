@@ -3,8 +3,8 @@
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-* [[[OpenAPI30,OpenAPI30]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.0** [online]. 2020 [viewed 2024-11-04]. The latest patch version at the time of publication of this standard was 3.0.4, available at http://spec.openapis.org/oas/v3.0.4
-* [[[OpenAPI31,OpenAPI31]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.1** [online]. 2021 [viewed 2024-11-04]. The latest patch version at the time of publication of this standard was 3.1.1, available at http://spec.openapis.org/oas/v3.1.1
+* [[[OpenAPI30,nofetch(OpenAPI30)]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.0** [online]. 2020 [viewed 2024-11-04]. The latest patch version at the time of publication of this standard was 3.0.4, available at http://spec.openapis.org/oas/v3.0.4
+* [[[OpenAPI31,nofetch(OpenAPI31)]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.1** [online]. 2021 [viewed 2024-11-04]. The latest patch version at the time of publication of this standard was 3.1.1, available at http://spec.openapis.org/oas/v3.1.1
 * [[[RFC2616,RFC 2616]]] Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, HTTP/1.1, https://tools.ietf.org/rfc/rfc2616.txt[https://tools.ietf.org/rfc/rfc2616.txt]
 * [[[RFC2818,RFC 2818]]] Rescorla, E.: IETF RFC 2818, HTTP Over TLS, https://tools.ietf.org/rfc/rfc2818.txt[https://tools.ietf.org/rfc/rfc2818.txt]
 * [[[RFC3339,RFC 3339]]] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, https://tools.ietf.org/rfc/rfc3339.txt[https://tools.ietf.org/rfc/rfc3339.txt]
@@ -13,8 +13,8 @@ The following normative documents contain provisions that, through reference in 
 * [[[RFC8288,RFC 8288]]] Nottingham, M.: IETF RFC 8288, Web Linking, https://tools.ietf.org/rfc/rfc8288.txt[https://tools.ietf.org/rfc/rfc8288.txt]
 * [[[RFC6570,RFC 6570]]] Gregorio, J., Fielding, R., Hadley, M., Nottingham, M., Orchard, D.: IETF RFC 6570, URI Template, https://datatracker.ietf.org/doc/html/rfc6570[https://datatracker.ietf.org/doc/html/rfc6570]
 * [[[post,HTTP POST]]] Fielding, R., Reschke, J.: IETF RFC 7231, Hypertext Transfer Protocol (HTTP/1.1): Semantics and Content, https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.3[https://datatracker.ietf.org/doc/html/rfc7231#section-4.3.3]
-* [[[html5,html5]]] W3C: HTML5, W3C Recommendation, https://www.w3.org/TR/html5/[https://www.w3.org/TR/html5/]
-* [[[schema_org,schema_org]]]Schema.org: https://schema.org/docs/schemas.html[https://schema.org/docs/schemas.html]
+* [[[html5,nofetch(html5)]]] W3C: HTML5, W3C Recommendation, https://www.w3.org/TR/html5/[https://www.w3.org/TR/html5/]
+* [[[schema_org,nofetch(schema_org)]]]Schema.org: https://schema.org/docs/schemas.html[https://schema.org/docs/schemas.html]
 * [[[OGC21-069r2,OGC 21-069r2]]] Little, C., Blower, J., Riechert, M., Kralidis, T., Davies, E., Olson, S., McGibbney, L.: OGC CoverageJSON Community Standard, https://docs.ogc.org/cs/21-069r2/21-069r2.html[https://docs.ogc.org/cs/21-069r2/21-069r2.html]
 * [[[RFC2413,RFC 2413]]] Weibel, S., Kunze, J., Lagoze, C., Wolf, M.: IETF RFC 2413, Dublin Core Metadata for Resource Discovery, https://tools.ietf.org/rfc/rfc2413.txt[https://tools.ietf.org/rfc/rfc2413.txt]
 * [[[OGC06-103r4,OGC 06-103r4]]] Herring, J.: Simple Feature Access - Part 1: Common Architecture, https://portal.ogc.org/files/?artifact_id=25355[https://portal.ogc.org/files/?artifact_id=25355]

@@ -90,17 +90,17 @@ The requirements for handling unsuccessful requests are provided in Recommendati
 
 Every OGC Web API is expected to provide a definition that describes the capabilities of the server and which can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
 
-include::requirements/core/REQ_api-definition-op.adoc[]
+include::../requirements/core/REQ_rc-api-definition-op.adoc[]
 
-include::recomendations/core/PER_api-definition-uri.adoc[]
+include::../recommendations/core/PER_api-definition-uri.adoc[]
 
 Note that multiple API definition formats can be supported.
 
 ==== Response
 
-include::requirements/core/REQ_api-definition-success.adoc[]
+include::../requirements/core/REQ_rc-api-definition-success.adoc[]
 
-include::recomendations/core/REC_api-definition-oas.adoc[]
+include::../recommendations/core/REC_api-definition-oas.adoc[]
 
 If the server hosts the API definition under the base path of the API (for example, at path `/api`), there is no need to include the path of the API definition in the API definition itself.
 

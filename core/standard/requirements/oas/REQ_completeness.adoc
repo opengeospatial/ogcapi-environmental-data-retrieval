@@ -1,14 +1,14 @@
-[[req_oas30_completeness]]
-==== *Requirement /req/oas30/completeness* OpenAPI 3.0 Completeness
+[[req_oas_completeness]]
+==== *Requirement /req/oas/completeness* OpenAPI Completeness
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/oas30/completeness
+identifier:: /req/oas/completeness
 
 *A:*
 
-The OpenAPI definition SHALL specify for each operation all link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#httpCodes[HTTP Status Codes] and link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.0.4.md#responseObject[Response Objects] that the  API uses in responses.
+The OpenAPI definition SHALL specify for each operation all HTTP Status Codes and Response Objects that the server uses in responses. This includes the successful execution of an operation as well as all error situations that originate from the server.
 
 ---
 *B:*

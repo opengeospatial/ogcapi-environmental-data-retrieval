@@ -1,11 +1,11 @@
-[[req_oas30_oas-impl]]
-==== *Requirement /req/oas30/oas-impl* OpenAPI 3.0 implementation
+[[req_oas_oas-impl]]
+==== *Requirement /req/oas/oas-impl* OpenAPI implementation
 
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/oas30/oas-impl
+identifier:: /req/oas/oas-impl
 
 *A:*
 

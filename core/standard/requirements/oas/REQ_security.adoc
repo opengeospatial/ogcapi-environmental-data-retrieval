@@ -1,10 +1,10 @@
-[[req_oas30_security]]
-==== *Requirement /req/oas30/security* OpenAPI 3.0 Security
+[[req_oas_security]]
+==== *Requirement /req/oas/security* OpenAPI Security
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/oas30/security
+identifier:: /req/oas/security
 
 *A:*
 

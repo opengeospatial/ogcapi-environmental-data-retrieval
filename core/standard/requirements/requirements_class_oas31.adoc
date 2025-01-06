@@ -1,9 +1,13 @@
 [[rc_oas31]]
-[cols="1,4",width="90%"]
-|===
-2+|*Requirements Class*
-2+|http://www.opengis.net/spec/ogcapi-features-1/1.1/req/oas31
-|Target type |Web API
-|Dependency |<<rc_oas,Requirements Class "OpenAPI Specification">>
-|Dependency |<<OpenAPI31,OpenAPI Specification 3.1>>
-|===
+[requirements_class]
+.OAS31
+
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas31
+obligation:: requirement
+subject:: Web API
+inherit:: http://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas
+inherit:: http://spec.openapis.org/oas/v3.1.1
+
+====

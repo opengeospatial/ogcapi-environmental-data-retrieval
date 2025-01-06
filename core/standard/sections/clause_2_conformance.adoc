@@ -38,9 +38,9 @@ None of these encodings are mandatory. An implementation of the EDR API may deci
 
 The _Core_ does not mandate any encoding or format for the formal definition of the API either. The recommended option is the OpenAPI specification and three requirements classes have been specified for OpenAPI:
 
-* <<rc_oas,OpenAPI Specification>>, one Requirements Class
-* <rc_oas30-section,Chapter 9>> and <<rc_oas30, Annex A>> in more detail.
-* <<rc_oas31-section,Chapter 9>> and <<rc_oas31, Annex A>> in more detail.
+* <<rc_oas,OpenAPI Specification>> (depends on _Core_),
+* <<rc_oas30,OpenAPI Specification 3.0>> (depends on _OpenAPI Specification_).
+* <<rc_oas31,OpenAPI Specification 3.1>> (depends on _OpenAPI Specification_).
 
 The _Core_ requirements class can also decide to use other API definition representations in addition or instead of an OpenAPI 3.x definition. Examples for alternative API definitions: OpenAPI 2.0 (Swagger), future versions of the OpenAPI specification, an OWS Common 2.0 capabilities document or WSDL.
 
