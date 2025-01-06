@@ -3,6 +3,8 @@ in: query
 description: Defines the maximum number of features to return in a request
 required: false
 examples: 
-    - 10
+  limitval:
+    summary: number of features to return
+    value: 10
 schema:
     type: number

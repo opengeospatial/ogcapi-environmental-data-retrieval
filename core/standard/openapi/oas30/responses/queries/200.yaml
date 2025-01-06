@@ -2,7 +2,7 @@ description: Data ranges required to construct valid queries for the choosen dat
 content:
   application/vnd.cov+json:
     schema:
-      $ref: https://covjson.org/schema/dev/coveragejson.json
+      $ref: ../../schemas/covjson/coverageJSON.yaml
   application/geo+json:
     schema:
       $ref: ../../schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml

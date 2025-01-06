@@ -9,8 +9,7 @@ properties:
   description:
     type: string
     examples: 
-      - Access to Meteorological data via a Web API that conforms to the OGC
-      API Environmental Data Retrieval specification.
+      - Access to Meteorological data via a Web API that conforms to the OGC API Environmental Data Retrieval specification.
   links:
     type: array
     items:

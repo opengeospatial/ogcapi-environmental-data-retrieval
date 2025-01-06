@@ -55,7 +55,7 @@ properties:
           duration value.  If the method value is instantaneous this value is
           not required.
         examples: 
-          -PT10M
+          - PT10M
 examples:
   - type: Parameter
     id: sea_ice

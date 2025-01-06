@@ -211,10 +211,10 @@ properties:
             type: 
               - string
               - "null"
-          examples:
-            - ["2/100"]
-            - ["R20/1000/-50"]
-            - ["2","10","80", "100"]
+            examples:
+              - ["2/100"]
+              - ["R20/1000/-50"]
+              - ["2","10","80", "100"]
       vrs:
         description: |-
           Coordinate reference system of the coordinates in the vertical extent

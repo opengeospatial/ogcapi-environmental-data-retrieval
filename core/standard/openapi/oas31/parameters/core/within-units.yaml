@@ -3,6 +3,8 @@ in: query
 description: Distance units for the within parameter
 required: true
 example: 
-    - KM
+  unittype:
+    summary: distance measurement units
+    value: km
 schema:
     type: string

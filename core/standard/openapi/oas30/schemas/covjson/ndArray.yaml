@@ -32,17 +32,17 @@ oneOf:
       values:
         items:
           type: number
-        nullable: true
+          nullable: true
   - properties:
       values:
         items:
           type: integer
-        nullable: true
+          nullable: true
   - properties:
       values:
         items:
           type: string
-        nullable: true
+          nullable: true
   - properties:
       shape:
         minItems: 1
