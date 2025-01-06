@@ -1,4 +1,0 @@
-description: Validates any axis
-oneOf:
-  - $ref: valuesAxis.yaml
-  - $ref: numericRegularlySpacedAxis.yaml
