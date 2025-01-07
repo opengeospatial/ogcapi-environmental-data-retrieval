@@ -3,8 +3,8 @@
 
 The following normative documents contain provisions that, through reference in this text, constitute provisions of this document. For dated references, subsequent amendments to, or revisions of, any of these publications do not apply. For undated references, the latest edition of the normative document referred to applies.
 
-* [[[OpenAPI30,nofetch(OpenAPI30)]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.0** [online]. 2020 [viewed 2024-11-04]. The latest patch version at the time of publication of this standard was 3.0.4, available at https://spec.openapis.org/oas/v3.0.4
-* [[[OpenAPI31,nofetch(OpenAPI31)]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.1** [online]. 2021 [viewed 2024-11-04]. The latest patch version at the time of publication of this standard was 3.1.1, available at https://spec.openapis.org/oas/v3.1.1
+* [[[OpenAPI30,nofetch(OpenAPI30)]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.0** [online]. 2020 [viewed 2025-01-03]. The latest patch version at the time of publication of this standard was 3.0.4, available at https://spec.openapis.org/oas/v3.0.4
+* [[[OpenAPI31,nofetch(OpenAPI31)]]] OpenAPI Initiative (OAI). **OpenAPI Specification 3.1** [online]. 2021 [viewed 2025-01-03]. The latest patch version at the time of publication of this standard was 3.1.1, available at https://spec.openapis.org/oas/v3.1.1
 * [[[RFC2616,RFC 2616]]] Fielding, R., Gettys, J., Mogul, J., Frystyk, H., Masinter, L., Leach, P., Berners-Lee, T.: IETF RFC 2616, HTTP/1.1, https://tools.ietf.org/rfc/rfc2616.txt[https://tools.ietf.org/rfc/rfc2616.txt]
 * [[[RFC2818,RFC 2818]]] Rescorla, E.: IETF RFC 2818, HTTP Over TLS, https://tools.ietf.org/rfc/rfc2818.txt[https://tools.ietf.org/rfc/rfc2818.txt]
 * [[[RFC3339,RFC 3339]]] Klyne, G., Newman, C.: IETF RFC 3339, Date and Time on the Internet: Timestamps, https://tools.ietf.org/rfc/rfc3339.txt[https://tools.ietf.org/rfc/rfc3339.txt]
