@@ -4,7 +4,7 @@
 
 ====
 [%metadata]
-identifier:: http://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas
 obligation:: requirement
 subject:: Web API
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core
