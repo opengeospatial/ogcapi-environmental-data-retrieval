@@ -29,5 +29,6 @@ jobs:
         redocly bundle -o ogcapi-environmental-data-retrieval-1-oas30.bundled.json ogcapi-environmental-data-retrieval-1-oas30.yaml
     - name: Generate OpenAPI 3.1 bundle
       run: |
+        cd core/standard/openapi       
         redocly bundle -o ogcapi-environmental-data-retrieval-1-oas31.bundled.json ogcapi-environmental-data-retrieval-1-oas31.yaml
 
