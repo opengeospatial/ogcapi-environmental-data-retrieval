@@ -1,7 +1,7 @@
 [[dependencies-overview]]
 == Dependencies on Core and Collections Requirements Classes of OGC API - Common
 
-The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of OGC API-EDR shall first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
+The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of OGC API-EDR SHALL first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
 
 * Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
 * Collections, <<OGC20-024,https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections>>

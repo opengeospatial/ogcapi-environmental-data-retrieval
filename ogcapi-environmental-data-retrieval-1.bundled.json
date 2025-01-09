@@ -2711,7 +2711,7 @@
                             "type": "string"
                           },
                           "type": {
-                            "description": "Type of the parameter object, shall be \"Parameter\"",
+                            "description": "Type of the parameter object, SHALL be \"Parameter\"",
                             "type": "string",
                             "enum": [
                               "Parameter"

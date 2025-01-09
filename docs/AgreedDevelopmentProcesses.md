@@ -38,4 +38,4 @@ A. Issues that affect multiple draft OGC API specifications should be checked ag
 
       Comments:	Any additional information not covered by the categories above.
 
-B. There is an OGC-wide proposed policy on “Naming of OGC API Standards, Repositories & Specification Elements" [OGC 20-059r4](https://portal.ogc.org/files/?artifact_id=94196&version=1) that we shall try to follow.
+B. There is an OGC-wide proposed policy on “Naming of OGC API Standards, Repositories & Specification Elements" [OGC 20-059r4](https://portal.ogc.org/files/?artifact_id=94196&version=1) that we SHALL try to follow.

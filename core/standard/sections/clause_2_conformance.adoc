@@ -1,6 +1,6 @@
 == Conformance
 
-Conformance with this standard shall be checked using the tests specified in <<ATS>> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the https://portal.ogc.org/files/?artifact_id=55234[OGC Compliance Testing Policies and Procedures] and the https://www.ogc.org/compliance[OGC Compliance Testing] web site.
+Conformance with this standard SHALL be checked using the tests specified in <<ATS>> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the https://portal.ogc.org/files/?artifact_id=55234[OGC Compliance Testing Policies and Procedures] and the https://www.ogc.org/compliance[OGC Compliance Testing] web site.
 
 The one Standardization Target for this standard is <<webapi-definition,Web APIs>>.
 

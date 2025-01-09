@@ -85,7 +85,7 @@ identifier:: /conf/corridor/coords-param-invalid-linestringm
 target:: /req/edr/rc-corridor
 test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
 test-method::
-step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate shall be a valid Epoch value (as known as UNIX time)
+step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate SHALL be a valid Epoch value (as known as UNIX time)
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -119,7 +119,7 @@ identifier:: /conf/corridor/coords-param-invalid-linestringzm
 target:: /req/edr/rc-corridor
 test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
 test-method::
-. Check coords query parameter with time parameter is a valid Well Known Text LLINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
+. Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
 . Validate that a document was returned with a status code 400.
 ====
 
@@ -131,7 +131,7 @@ identifier:: /conf/corridor/coords-param-invalid-linestringz
 target:: /req/edr/rc-corridor
 test-purpose:: Validate that an error is returned by a `corridor` query when the coords query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
 test-method::
-step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate shall be within the range of vertical levels advertised in the Collection metadata
+step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
 step::: Validate that a document was returned with a status code 400.
 ====
 

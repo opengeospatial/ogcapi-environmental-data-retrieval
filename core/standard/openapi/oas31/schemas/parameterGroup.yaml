@@ -2,7 +2,7 @@ type: object
 description: Represents logical groups of parameters
 properties:
   type:
-    description: Type of the parameter group object, shall be "ParameterGroup"
+    description: Type of the parameter group object, SHALL be "ParameterGroup"
     type: string
     enum: 
       - ParameterGroup
