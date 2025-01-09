@@ -41,7 +41,7 @@ All questions regarding this submission should be directed to the editor or the 
 [abstract]
 == Abstract
 
-The OGC API - Environmental Data Retrieval (EDR) standard provides a family of lightweight query interfaces to access spatiotemporal data resources by requesting data at a *Position*, within an *Radius*, *Area* or *Cube*, along a *Trajectory* or through a *Corridor*, from a predefined *Location* or as an existing data *Item*. A spatio-temporal data resource is a collection of spatio-temporal data that can be sampled using the EDR query pattern geometries. These patterns are described in the section describing the <<rc_core-section,Core Requirements Class>>.
+The OGC API - Environmental Data Retrieval (EDR) standard provides a family of lightweight query interfaces to access spatio-temporal data resources by requesting data at a *Position*, within an *Radius*, *Area* or *Cube*, along a *Trajectory* or through a *Corridor*, from a predefined *Location* or as an existing data *Item*. A spatio-temporal data resource is a collection of spatio-temporal data that can be sampled using the EDR query pattern geometries. These patterns are described in the section describing the <<rc_core-section,Core Requirements Class>>.
 
 The goals of the EDR Application Programming Interface (API) that is specified by this standard are to:
 

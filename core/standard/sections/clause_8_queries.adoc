@@ -2,21 +2,21 @@
 [[environmental-resource-section]]
 == Query, Spatiotemporal and Information Resources
 
-Query resources are spatiotemporal queries which support operation of the API for the access and use of the spatiotemporal data resources. The OGC API-EDR standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
+Query resources are spatio-temporal queries which support operation of the API for the access and use of the spatio-temporal data resources. The OGC API-EDR standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
 
 [[rc_collection-section]]
-A spatiotemporal data resource is a <<collection-definition,collection>> of spatiotemporal data that can be sampled using the OGC API-EDR query patterns.
+A spatio-temporal data resource is a <<collection-definition,collection>> of spatio-temporal data that can be sampled using the OGC API-EDR query patterns.
 
 This clause specifies the "Collections" Requirements Class. The detailed specification of the Requirements Class is in <<rc_collections, Annex A.3.1>>.
 
-Query resources related to spatiotemporal data resources (<<collection-definition,collections>> of spatiotemporal data) can be exposed using the path templates:
+Query resources related to spatio-temporal data resources (<<collection-definition,collections>> of spatio-temporal data) can be exposed using the path templates:
 
 * `/collections/{collectionId}/{queryType}`
 * `/collections/{collectionId}/instances/{instanceId}/{queryType}`
 
 Where
 
-`{collectionId}` = a unique identifier for a <<collection-definition,collection>> of spatiotemporal data.
+`{collectionId}` = a unique identifier for a <<collection-definition,collection>> of spatio-temporal data.
 
 `{instanceId}` = a text string identifying the version or <<instance-definition,instance>> of the chosen <<collection-definition,collection>>.
 

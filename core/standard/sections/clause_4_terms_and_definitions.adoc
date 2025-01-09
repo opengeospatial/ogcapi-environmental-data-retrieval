@@ -58,8 +58,8 @@ data type that describes a point or geometry potentially occupied by an object o
 
 region specified with a geographic position and radial distance
 
-[[spatiotemporal-data-definition]]
-=== spatiotemporal data
+[[spatio-temporal-data-definition]]
+=== spatio-temporal data
 
 data associated with a position in space-time
 

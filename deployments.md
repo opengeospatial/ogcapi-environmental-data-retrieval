@@ -35,7 +35,7 @@ and the British Oceanographic Data Centre (BODC) and others, are currently waiti
 
 The [pygeoapi](https://pygeoapi.io) project implements the current EDR candidate standard. pygeoapi
 is a free and open source OGC API server implementation written in Python, which supports a robust
-plugin mechanism, allowing for flexible integration of spatiotemporal data into the OGC API
+plugin mechanism, allowing for flexible integration of spatio-temporal data into the OGC API
 family of standards, including EDR.
 
 ### UK Met Office
