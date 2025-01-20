@@ -1,0 +1,28 @@
+type: object
+description: Represents metadata about the values of the coverage
+properties:
+  id:
+    type: string
+  type:
+    description: Type of the parameter object, SHALL be "Parameter"
+    type: string
+    enum: 
+      - Parameter
+  description:
+    $ref: ../i18n.yaml
+  observedProperty:
+    $ref: observedProperty.yaml
+  unit:
+    $ref: unit.yaml
+  categoryEncoding:
+    type: object
+    description: Maps IDs of categories in the observedProperty to range values
+    additionalProperties:
+      oneOf:
+        - type: integer
+        - type: array
+          items:
+            type: integer
+required:
+  - type
+  - observedProperty

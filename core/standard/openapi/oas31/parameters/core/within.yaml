@@ -1,0 +1,10 @@
+name: within
+in: query
+description: Defines radius of area around defined coordinates to include in the data selection
+required: true
+examples: 
+  radiusval:
+    summary: radius to return data within
+    value: 10
+schema:
+    type: number

@@ -8,7 +8,7 @@ test-purpose:: Validate that the `width-units` query parameter is constructed co
 test-method::
 +
 --
-Verify that the `width-units` query parameter complies with the following definition (using an OpenAPI Specification 3.0 fragment):
+Verify that the `width-units` query parameter complies with the following definition (using an OpenAPI Specification 3.1 fragment):
 
 [source,YAML]
 ----

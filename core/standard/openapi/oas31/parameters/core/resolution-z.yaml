@@ -1,0 +1,14 @@
+name: resolution-z
+in: query
+description: |+
+  Defined it the user requires data at a different resolution from the native resolution of the data along the z-axis
+
+  If this is a single value it denotes the number of intervals to retrieve data for along the z-axis
+    
+    i.e. resolution-z=10 
+    
+  would retrieve 10 values along the z-axis from the minimum z coordinate to maximum z  coordinate (i.e. a value at both the minimum z and maximum z coordinates and 8 values between).
+required: false
+schema:
+    items:
+      type: string

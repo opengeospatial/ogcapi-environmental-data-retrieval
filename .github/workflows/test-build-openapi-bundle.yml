@@ -15,7 +15,7 @@ jobs:
     - name: Setup npm
       uses: actions/setup-node@v4
     - name: Install dependencies
-      run: npm install -g @apidevtools/swagger-cli
+      run: npm install @redocly/cli -g
     - name: Checkout
       uses: actions/checkout@master
       with:
@@ -23,8 +23,12 @@ jobs:
         ref: ${{ github.event.pull_request.head.ref }}
       #with:
       #  fetch-depth: 0
-    - name: Generate OpenAPI bundle
+    - name: Generate OpenAPI 3.0 bundle
       run: |
         cd core/standard/openapi
-        swagger-cli bundle -o ogcapi-environmental-data-retrieval-1.bundled.json ogcapi-environmental-data-retrieval-1.yaml
+        redocly bundle -o ogcapi-environmental-data-retrieval-1-oas30.bundled.json ogcapi-environmental-data-retrieval-1-oas30.yaml
+    - name: Generate OpenAPI 3.1 bundle
+      run: |
+        cd core/standard/openapi       
+        redocly bundle -o ogcapi-environmental-data-retrieval-1-oas31.bundled.json ogcapi-environmental-data-retrieval-1-oas31.yaml
 

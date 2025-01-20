@@ -1,0 +1,4 @@
+type: object
+description: Object representing an internationalised string.
+additionalProperties:
+  type: string

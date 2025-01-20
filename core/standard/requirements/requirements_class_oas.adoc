@@ -1,0 +1,18 @@
+[[rc_oas]]
+[requirements_class]
+.OAS
+
+====
+[%metadata]
+identifier:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas
+obligation:: requirement
+subject:: Web API
+inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core
+
+requirement:: /req/oas/completeness
+requirement:: /req/oas/exceptions-codes
+requirement:: /req/oas/oas-definition
+requirement:: /req/oas/oas-impl
+requirement:: /req/oas/security
+
+====

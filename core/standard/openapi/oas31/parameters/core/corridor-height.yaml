@@ -1,0 +1,20 @@
+name: corridor-height
+in: query
+description: |+
+    height of the corridor
+
+    The height value represents the whole height of the corridor where
+    the trajectory supplied in the `coords` query parameter is the centre
+    point of the corridor
+
+    `corridor-height={height}`
+
+    e.g.  corridor-height=100
+
+    Would be a request for a corridor 100 units high with the coords parameter values being the centre point of the requested corridor, 
+    the request would be for data values 50 units either side of the trajectory coordinates defined in the coords parameter. 
+
+    The height units supported by the collection will be provided in the API metadata responses
+required: true
+schema:
+    type: string 

@@ -1,0 +1,21 @@
+description: Property to contain any extra metadata information that is specific
+  to an individual data queries
+type: object
+properties:
+  title:
+    description: title of the query
+    type: string
+    examples: 
+      - Items query
+  description:
+    description: description of the query
+    type: string
+    examples: 
+      - Query to return data for a defined well known text point
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: 
+      - items
+    examples: 
+      - items

@@ -1,0 +1,20 @@
+name: corridor-width
+in: query
+description: |+
+    width of the corridor
+
+    The width value represents the whole width of the corridor where
+    the trajectory supplied in the `coords` query parameter is the centre
+    point of the corridor
+
+    `corridor-width={width}`
+
+    e.g.  corridor-width=100
+
+    Would be a request for a corridor 100 units wide with the coords parameter values being the centre point of the requested corridor, 
+    the request would be for data values 50 units either side of the trajectory coordinates defined in the coords parameter. 
+
+    The width units supported by the collection will be provided in the API metadata responses
+required: true 
+schema:
+    type: string

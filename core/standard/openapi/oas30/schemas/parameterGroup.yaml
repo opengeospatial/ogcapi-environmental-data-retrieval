@@ -1,0 +1,30 @@
+type: object
+description: Represents logical groups of parameters
+properties:
+  type:
+    description: Type of the parameter group object, SHALL be "ParameterGroup"
+    type: string
+    enum: 
+      - ParameterGroup
+  id:
+    type: string
+  label:
+    $ref: i18n.yaml
+  description:
+    $ref: i18n.yaml
+  observedProperty:
+    $ref: observedProperty.yaml
+  members:
+    type: array
+    items:
+      type: string
+    minItems: 1
+    uniqueItems: true
+required:
+  - type
+  - members
+anyOf:
+  - required:
+      - label
+  - required:
+      - observedProperty

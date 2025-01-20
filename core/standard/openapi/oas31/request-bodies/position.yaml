@@ -1,0 +1,25 @@
+content:
+  application/json:
+    schema:
+        type: object
+        required:
+            - coords
+        properties:
+            coords:
+                description: Well Known Text Point definition
+                type: string
+            z:
+                type: string
+            datetime:
+                type: string        
+            parameter-name:
+                type: array
+                items:
+                    type: string
+            crs:
+                type: string
+            f:
+                type: string
+            limit:
+                type: number
+                

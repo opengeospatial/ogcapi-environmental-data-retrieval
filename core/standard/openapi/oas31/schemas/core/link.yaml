@@ -1,0 +1,31 @@
+type: object
+required:
+  - href
+  - rel
+properties:
+  href:
+    type: string
+    examples: 
+      - https://example.com/collections/monitoringsites/locations/1234
+  rel:
+    type: string
+    examples: 
+      - alternate
+  type:
+    type: string
+    examples: 
+      - application/geo+json
+  hreflang:
+    type: string
+    examples: 
+      - en
+  title:
+    type: string
+    examples: 
+      - Monitoring site name
+  length:
+    type: integer
+  templated:
+    description: defines if the link href value is a template with values requiring replacement 
+    type: boolean
+    

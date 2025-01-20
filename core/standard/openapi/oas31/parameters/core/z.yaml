@@ -1,0 +1,39 @@
+name: z
+in: query
+description: |+
+    Define the vertical level to return data from 
+    i.e. z=level
+
+    for instance if the 850hPa pressure level is being queried
+
+    z=850
+
+    or a range to return data for all levels between and including 2 defined levels
+    i.e. z=minimum value/maximum value
+
+    for instance if all values between and including 10m and 100m
+
+    z=10/100
+
+    finally a list of height values can be specified
+    i.e. z=value1,value2,value3
+
+    for instance if values at 2m, 10m and 80m are required
+
+    z=2,10,80
+
+    An Arithmetic sequence using Recurring height intervals, the difference is the number of recurrences is defined at the start 
+    and the amount to increment the height by is defined at the end
+
+    i.e. z=Rn/min height/height interval
+
+    so if the request was for 20 height levels 50m apart starting at 100m:
+
+    z=R20/100/50
+
+    When not specified data from all available heights SHOULD be returned
+required: false
+schema:
+  type: string
+style: form
+explode: false

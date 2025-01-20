@@ -1,0 +1,32 @@
+type: object
+required:
+  - type
+  - features
+properties:
+  type:
+    type: string
+    enum:
+      - FeatureCollection
+  features:
+    type: array
+    items:
+      $ref: ../geojson/featureGeoJSON.yaml
+  parameters:
+    description: list of the data parameters available in the collection
+    type: array
+    items:
+      $ref: parameter.yaml      
+  links:
+    type: array
+    items:
+      $ref: ../../schemas/core/link.yaml
+  timeStamp:
+      description: This property indicates the time and date when the response was generated.
+      type: string
+      format: date-time
+      examples: 
+        - '2017-08-17T08:05:32Z'
+  numberMatched:
+    $ref: ../../schemas/numberMatched.yaml
+  numberReturned:
+    $ref: ../../schemas/numberReturned.yaml

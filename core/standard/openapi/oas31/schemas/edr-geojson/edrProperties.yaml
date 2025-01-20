@@ -1,0 +1,49 @@
+type: object
+title: EDR GeoJSON Properties 
+description: Properties to describe existing EDR features -- may be real-world or virtual sampling features.
+examples:
+  - datetime: 2018-02-12T00:00:00Z/2018-03-18T12:31:12Z
+    label: Monitoring site name
+    parameter-name:
+      - velocity
+      - temperature
+    edrqueryendpoint: "https://example.org/api/collections/collection/locations/location_123"
+required:
+  - datetime
+  - parameter-name
+  - label
+  - edrqueryendpoint
+properties:
+  datetime:
+      type: string
+      title: Date/time Domain
+      description: Either a date-time or a period string that adheres to RFC 3339. Indicates the time instant or period for which data are available from the EDR feature.
+      default: ''
+      examples:
+        - 2018-02-12T00:00:00Z/2018-03-18T12:31:12Z
+  parameter-name:
+      type: array
+      title: Available Parameters
+      description: Unique IDs of available parameters, this is the value used for querying the data and corresponds to an ID in the parameter metadata of the collection.
+      items:
+          type: string
+          title: Parameter ID list
+          description: Each entry should contain one parameter ID that can be used to query against the feature.
+          default: ''
+          examples:
+            - velocity
+            - temperature
+  label:
+      type: string
+      title: Label
+      description: A label such as a site name or other text to use on a link.
+      default: ''
+      examples:
+        - Site A
+  edrqueryendpoint:
+      type: string
+      title: EDR Query Endpoint
+      description: A URI identifying the query end point. May identify a specific location.
+      default: ''
+      examples:
+        - "https://example.org/api/collections/collection/locations/location_123d}"

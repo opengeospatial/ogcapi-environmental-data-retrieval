@@ -1,0 +1,10 @@
+name: within-units
+in: query
+description: Distance units for the within parameter
+required: true
+example: 
+  unittype:
+    summary: distance measurement units
+    value: km
+schema:
+    type: string

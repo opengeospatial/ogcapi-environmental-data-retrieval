@@ -1,0 +1,19 @@
+content:
+  application/json:
+    schema:
+      type: object
+      properties:
+        datetime:
+          type: string        
+        parameter-name:
+          type: array
+          items:
+            type: string
+        crs:
+          type: string
+        f:
+          type: string
+        limit:
+            type: number
+
+          

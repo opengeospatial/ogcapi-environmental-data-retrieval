@@ -5,7 +5,7 @@
 *OGC Declaration*
 ////
 
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium SHALL not be held responsible for identifying any or all such patent rights.
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
 
@@ -20,7 +20,7 @@ International Standards are drafted in accordance with the rules given in the IS
 
 The main task of technical committees is to prepare International Standards. Draft International Standards adopted by the technical committees are circulated to the member bodies for voting. Publication as an International Standard requires approval by at least 75 % of the member bodies casting a vote.
 
-Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO shall not be held responsible for identifying any or all such patent rights.
+Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. ISO SHALL not be held responsible for identifying any or all such patent rights.
 ////
 
 
@@ -41,7 +41,7 @@ All questions regarding this submission should be directed to the editor or the 
 [abstract]
 == Abstract
 
-The OGC API - Environmental Data Retrieval (EDR) standard provides a family of lightweight query interfaces to access spatiotemporal data resources by requesting data at a *Position*, within an *Radius*, *Area* or *Cube*, along a *Trajectory* or through a *Corridor*, from a predefined *Location* or as an existing data *Item*. A spatio-temporal data resource is a collection of spatio-temporal data that can be sampled using the EDR query pattern geometries. These patterns are described in the section describing the <<rc_core-section,Core Requirements Class>>.
+The OGC API - Environmental Data Retrieval (EDR) standard provides a family of lightweight query interfaces to access spatio-temporal data resources by requesting data at a *Position*, within an *Radius*, *Area* or *Cube*, along a *Trajectory* or through a *Corridor*, from a predefined *Location* or as an existing data *Item*. A spatio-temporal data resource is a collection of spatio-temporal data that can be sampled using the EDR query pattern geometries. These patterns are described in the section describing the <<rc_core-section,Core Requirements Class>>.
 
 The goals of the EDR Application Programming Interface (API) that is specified by this standard are to:
 
@@ -50,7 +50,7 @@ The goals of the EDR Application Programming Interface (API) that is specified b
 
 A major use case for the EDR API is to retrieve small subsets from large collections of environmental data, such as weather forecasts, though many other types of data can be accessed. The important aspect is that the requested data can be unambiguously specified by spatio-temporal coordinates.
 
-The EDR API query patterns - <<position-definition,Position>>, <<radius-definition,radius>>, <<area-definition,Area>>, <<cube-definition,Cube>>, <<trajectory-definition,Trajectory>>, <<corridor-definition,Corridor>> or <<location-definition, Location>>  - can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the https://www.ogc.org/standards/sos[Sensor Observation Service (SOS)] standard. A typical data resource accessed by an EDR API instance is a multidimensional dataset that could be accessed via an implementation of the http://www.ogc.org/standards/wcs[Web Coverage Service (WCS)] standard. In contrast to SOS and WCS, the EDR API is fully consistent with the patterns of the https://ogcapi.ogc.org/[OGC API] family of standards and aims to provide a single set of simple-to-use query patterns. Use cases for EDR range from real or virtual time-series observation retrievals, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but instead provide useful building blocks to enable the composition of APIs that satisfy a wide range of geospatial data use cases. By defining a small set of query patterns (and no requirement to implement all of them), the EDR API should help to simplify the design of systems (as they can be performance tuned for the supported queries) making it easier to build robust and scalable infrastructures.
+The EDR API query patterns - <<position-definition,Position>>, <<radius-definition,radius>>, <<area-definition,Area>>, <<cube-definition,Cube>>, <<trajectory-definition,Trajectory>>, <<corridor-definition,Corridor>> or <<location-definition, Location>>  - can be thought of as discrete sampling geometries, conceptually consistent with the feature of interest in the https://www.ogc.org/standards/sos[Sensor Observation Service (SOS)] standard. A typical data resource accessed by an EDR API instance is a multidimensional dataset that could be accessed via an implementation of the https://www.ogc.org/standards/wcs[Web Coverage Service (WCS)] standard. In contrast to SOS and WCS, the EDR API is fully consistent with the patterns of the https://ogcapi.ogc.org/[OGC API] family of standards and aims to provide a single set of simple-to-use query patterns. Use cases for EDR range from real or virtual time-series observation retrievals, to sub-setting 4-dimensional data cubes along user-supplied sampling geometries. These query patterns do not attempt to satisfy the full scope of either SOS or WCS, but instead provide useful building blocks to enable the composition of APIs that satisfy a wide range of geospatial data use cases. By defining a small set of query patterns (and no requirement to implement all of them), the EDR API should help to simplify the design of systems (as they can be performance tuned for the supported queries) making it easier to build robust and scalable infrastructures.
 
 The EDR API *Item* query pattern provides a way of discovering and retrieving existing data objects available from the service. 
 

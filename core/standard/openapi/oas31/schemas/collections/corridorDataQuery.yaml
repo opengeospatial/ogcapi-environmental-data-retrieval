@@ -1,0 +1,29 @@
+allOf:
+  - $ref: DataQuery.yaml
+required:
+  - width_units  
+  - height_units  
+properties:
+  query_type:
+    description: Type of EDR query
+    type: string
+    enum: 
+      - corridor
+    examples: 
+      - corridor
+  width_units:
+    description: list of width distance units distance values can be specified in
+    type: array
+    items: 
+      type: string
+    examples:
+      - km
+      - miles
+  height_units:
+    description: list of height distance units distance values can be specified in
+    type: array
+    items: 
+      type: string
+    examples:
+      - m
+      - hPa

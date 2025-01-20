@@ -1,0 +1,13 @@
+[[req_oas_security]]
+==== *Requirement /req/oas/security* OpenAPI Security
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/oas/security
+
+*A:*
+
+For cases, where the operations of the API are access-controlled, the security scheme(s) and requirements SHALL be documented in the OpenAPI definition.
+
+====

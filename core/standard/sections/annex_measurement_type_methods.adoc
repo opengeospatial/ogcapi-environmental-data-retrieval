@@ -5,7 +5,7 @@
 
 The parameter-names object provides information about the data parameters supported by the collection, each `parameter-names`` object has an optional `measurementType` attribute which provides basic information about how the parameter is calculated and over what time period. The table below provides a list of recommended definitions for the `method` property of the `measurementType` attribute.
 
-[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+[width="100%",cols="30%,70%",frame="topbot",options="header"]
 .Recommended method values 
 |==========================
 |Method | Description

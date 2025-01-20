@@ -1,0 +1,12 @@
+# Conformance
+get:
+  tags:
+    - Capabilities
+  summary: Information about standards that this API conforms to
+  description: List all requirements classes specified in a standard that the server conforms to
+  operationId: getRequirementsClasses
+  parameters:
+    - $ref: ../../parameters/core/f.yaml
+  responses:
+    '200':
+      $ref: ../../responses/core/conformance.yaml

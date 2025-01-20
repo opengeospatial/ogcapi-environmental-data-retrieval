@@ -1,0 +1,282 @@
+description: >-
+  The extent of the information in the collection. In the Core only spatial and
+  temporal
+
+  extents are specified. Extensions may add additional members to represent other
+
+  extents, for example, thermal or pressure ranges.
+type: object
+properties:
+  spatial:
+    description: The spatial extent of the information in the collection.
+    type: object
+    required:
+      - bbox
+      - crs
+    properties:
+      bbox:
+        description: >-
+          One or more bounding boxes that describe the spatial extent of the
+          dataset.
+
+          In the Core only a single bounding box is supported. Extensions may support
+
+          additional areas. If multiple areas are provided, the union of the bounding
+
+          boxes describes the spatial extent.
+        type: array
+        minItems: 1
+        items:
+          description: >-
+            Each bounding box is provided as four or six numbers, depending on
+
+            whether the coordinate reference system includes a vertical axis
+
+            (height or depth):
+
+
+            * Lower left corner, coordinate axis 1
+
+            * Lower left corner, coordinate axis 2
+
+            * Minimum value, coordinate axis 3 (optional)
+
+            * Upper right corner, coordinate axis 1
+
+            * Upper right corner, coordinate axis 2
+
+            * Maximum value, coordinate axis 3 (optional)
+
+
+            The coordinate reference system of the values is WGS 84 longitude/latitude
+
+            (https://www.opengis.net/def/crs/OGC/1.3/CRS84) unless a different coordinate
+
+            reference system is specified in `crs`.
+
+
+            For WGS 84 longitude/latitude the values are in most cases the sequence of
+
+            minimum longitude, minimum latitude, maximum longitude and maximum latitude.
+
+            However, in cases where the box spans the antimeridian the first value
+
+            (west-most box edge) is larger than the third value (east-most box edge).
+
+
+            If the vertical axis is included, the third and the sixth number are
+
+            the bottom and the top of the 3-dimensional bounding box.
+
+
+            If a feature has multiple spatial geometry properties, it is the decision of the
+
+            server whether only a single spatial geometry property is used to determine
+
+            the extent or all relevant geometries.
+          oneOf:
+            - items:
+                type: number
+              minItems: 4
+              maxItems: 4
+              type: array
+            - items:
+                type: number
+              minItems: 6
+              maxItems: 6
+              type: array
+        examples: 
+          - [[-180, -90, 180, 90]]
+
+      crs:
+        description: >-
+          Coordinate reference system of the coordinates in the spatial extent
+
+          (property `bbox`). The default reference system is WGS 84 longitude/latitude.
+
+          In the Core this is the only supported coordinate reference system.
+
+          Extensions may support additional coordinate reference systems 
+        type: string
+        default: GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS
+          84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.01745329251994328,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]
+      name:
+        description: Name of the vertical coordinate reference system
+        type: string
+  temporal:
+    description: The temporal extent of the information in the collection.
+    type: object
+    required:
+      - interval
+      - trs
+    properties:
+      interval:
+        description: RFC3339 compliant Date and Time
+        type: array
+        minItems: 1
+        items:
+          description: |-
+            Begin and end times of the time interval. The timestamps are in the
+            temporal coordinate reference system specified in `trs`. By default
+            this is the Gregorian calendar.
+          type: array
+          minItems: 2
+          maxItems: 2
+          items:
+            type: 
+              - string
+              - "null"
+          examples:
+            - [["2020-11-12T12:15Z","2020-11-12T12:15Z"]]
+            - [["2020-11-12T12:15Z","2020-11-12T12:45Z"]]
+            - [["2022-01-14T09:00Z","2022-01-15T09:00Z"]]
+            - [["2022-01-14T09:00Z","2022-01-14T21:00Z"]]
+            - [["2022-01-14T09:00Z","2022-01-16T09:00Z"]]
+      values:
+        description: |-
+            Provides information about the time intervals available in the collection 
+            as ISO8601 compliant dates, either as a time range specified 
+            as start time / end time  (e.g. 2017-11-14T09:00Z/2017-11-14T21:00Z)  or
+            as number of repetitions / start time / interval (e.g. R4/2017-11-14T21:00Z/PT3H) 
+            or a list of time values (e.g.
+            2017-11-14T09:00Z,2017-11-14T12:00Z,2017-11-14T15:00Z,2017-11-14T18:00Z,2017-11-14T21:00Z)
+        type: array
+        minItems: 1
+        items:
+          type: 
+            - string
+            - "null"
+          minItems: 1
+          examples:
+            - ["2020-11-12T12:15Z"]
+            - ["2020-11-12T12:15Z","2020-11-12T12:30Z","2020-11-12T12:45Z"]
+            - ["R12/2022-01-14T09:00Z/2022-01-15T09:00Z"]
+            - ["R12/2022-01-14T09:00Z/PT1H"]
+            - ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
+      trs:
+        description: >-
+          Coordinate reference system of the coordinates in the temporal extent
+
+          (property `interval`). The default reference system is the Gregorian calendar.
+
+          In the Core this is the only supported temporal coordinate reference system.
+
+          Extensions may support additional temporal coordinate reference systems 
+        type: string
+        examples: 
+          - TIMECRS["DateTime",TDATUM["Gregorian Calendar"],CS[TemporalDateTime,1],AXIS["Time (T)",future]]
+        default: https://www.opengis.net/def/uom/ISO-8601/0/Gregorian
+      name:
+        description: Name of the temporal coordinate reference system
+        type: string
+  vertical:
+    description: The vertical extent of the information in the collection.
+    type: object
+    required:
+      - interval
+      - vrs
+    properties:
+      interval:
+        description: >-
+          If multiple intervals are provided, the union of the intervals describes the vertical extent.
+        type: array
+        minItems: 1
+        items:
+          description: >-
+            minimum and maximum heights of the vertical interval. The values are
+            in the
+
+            vertical coordinate reference system specified in `vrs`. By default
+
+            this is the vertical coordinate reference system of the source information.
+          type: array
+          minItems: 1
+          items:
+            type: 
+              - string
+              - "null"
+          examples: 
+            - [["2","100"]]
+      values:
+        description: |-
+          Vertical level intervals that data in the collection is available at 
+          these can be defined as follows:
+          min level / max level (e.g. "2/100") or 
+          as number of repetitions / start level / interval (e.g."R5/100/50") 
+          or a list of vertical levels (e.g. "2",10,"80","100"}
+          The value `null` is supported and indicates an open vertical interval.
+        type: array
+        minItems: 1
+        items:
+            type: 
+              - string
+              - "null"
+            examples:
+              - ["2/100"]
+              - ["R20/1000/-50"]
+              - ["2","10","80", "100"]
+      vrs:
+        description: |-
+          Coordinate reference system of the coordinates in the vertical extent
+          (property `interval`). 
+        type: string
+        example: VERTCS["WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]],AXIS["Up",UP]
+        default: VERTCS["WGS_1984",DATUM["D_WGS_1984",SPHEROID["WGS_1984",6378137.0,298.257223563]],PARAMETER["Vertical_Shift",0.0],PARAMETER["Direction",1.0],UNIT["Meter",1.0]],AXIS["Up",UP]
+      name:
+        description: Name of the vertical coordinate reference system
+        type: string
+  custom:
+    description: The custom extents available in the collection.
+    type: array
+    items:
+      description: custom dimension defintion
+      type: object
+      required:
+        - id
+        - interval
+        - reference
+      properties:
+        id:
+          description: >-
+             The name of the custom dimension.
+          type: string
+          example: "members"
+        interval:
+          description: >-
+             If multiple intervals are provided, the union of the intervals describes the custom extent.
+          type: array
+          minItems: 1
+          items:
+            description: >-
+              minimum and maximum vakues of the custom interval.
+            type: array
+            minItems: 1
+            items:
+              type: 
+                - string
+                - "null"
+            examples: 
+              - [["0","50"]]
+        values:
+          description: |-
+            values that  data in the collection is available at 
+            these can be defined as follows:
+            min level / max level (e.g. "2/100") or 
+            as number of repetitions / start level / interval (e.g."R5/100/50") 
+            or a list of custom dimension values (e.g. "25",50,"75"}
+            The value `null` is supported and indicates an open custom interval.
+          type: array
+          minItems: 1
+          items:
+            type: 
+              - string
+              - "null"
+            examples: 
+              - ["25/75"]
+              - ["R20/0/5"]
+              - ["25","50","75"]
+        reference:
+          description: |-
+            URI to a definition or description of the custom dimension
+          type: string
+          example: https://en.wikipedia.org/wiki/Percentile

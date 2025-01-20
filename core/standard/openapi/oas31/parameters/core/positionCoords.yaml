@@ -1,0 +1,23 @@
+name: coords
+in: query
+description: |+
+    location(s) to return data for, the coordinates are defined by a Well Known Text
+    (wkt) string. to retrieve a single location :
+
+    POINT(x y) i.e. POINT(0 51.48) for Greenwich, London
+
+    And for a list of locations
+
+    MULTIPOINT((x y),(x1 y1),(x2 y2),(x3 y3))
+
+    i.e.
+    MULTIPOINT((38.9 -77),(48.85 2.35),(39.92 116.38),(-35.29 149.1),(51.5 -0.1))
+
+    see https://portal.ogc.org/files/?artifact_id=25355 and 
+    https://en.wikipedia.org/wiki/Well-known_text_representation_of_geometry
+
+    the coordinate values will depend on the CRS parameter, if this is not defined
+    the values will be assumed to WGS84 values (i.e x=longitude and y=latitude)
+required: true
+schema:
+  type: string

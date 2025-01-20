@@ -1,6 +1,6 @@
 == Conformance
 
-Conformance with this standard shall be checked using the tests specified in <<ATS>> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the https://portal.ogc.org/files/?artifact_id=55234[OGC Compliance Testing Policies and Procedures] and the https://www.ogc.org/compliance[OGC Compliance Testing] web site.
+Conformance with this standard SHALL be checked using the tests specified in <<ATS>> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the https://portal.ogc.org/files/?artifact_id=55234[OGC Compliance Testing Policies and Procedures] and the https://www.ogc.org/compliance[OGC Compliance Testing] web site.
 
 The one Standardization Target for this standard is <<webapi-definition,Web APIs>>.
 
@@ -36,11 +36,13 @@ The Requirements Classes are specified in <<rc_encoding-section,Chapter 9>> and 
 
 None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability, so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatio-temporal data.
 
-* <<rc_oas30-section,OpenAPI 3.0>>, one Requirements Class
+The _Core_ does not mandate any encoding or format for the formal definition of the API either. The recommended option is the OpenAPI specification and three requirements classes have been specified for OpenAPI:
 
-The <<OGC19-072,OGC API - Common - Part 1: Core>> Standard does not mandate any encoding or format for the formal definition of the API. However, the preferred option is the OpenAPI 3.0 specification. Therefore, the EDR APIs are defined using OpenAPI 3.0.
+* <<rc_oas,OpenAPI Specification>> (depends on _Core_),
+* <<rc_oas30,OpenAPI Specification 3.0>> (depends on _OpenAPI Specification_).
+* <<rc_oas31,OpenAPI Specification 3.1>> (depends on _OpenAPI Specification_).
 
-The OpenAPI 3.0 Requirements Class is specified in <<rc_oas30-section,Chapter 9>> and <<rc_oas30, Annex A>> in more detail.
+The _Core_ requirements class can also decide to use other API definition representations in addition or instead of an OpenAPI 3.x definition. Examples for alternative API definitions: OpenAPI 2.0 (Swagger), future versions of the OpenAPI specification, an OWS Common 2.0 capabilities document or WSDL.
 
 * <<query-resources-section,Queries>>, one Requirements Class
 ** <<rc_position-section,Position>>

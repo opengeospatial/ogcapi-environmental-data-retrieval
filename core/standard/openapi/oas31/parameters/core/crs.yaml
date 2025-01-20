@@ -1,0 +1,10 @@
+name: crs
+in: query
+description: identifier (id) of the coordinate system to return data in list of valid crs identifiers for the chosen collection are defined in the metadata responses.  If not supplied the coordinate reference system will default to WGS84.
+required: false
+examples: 
+  native:
+    summary: name of the native resolution
+    value: native
+schema:
+  type: string

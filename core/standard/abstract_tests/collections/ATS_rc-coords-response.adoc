@@ -11,6 +11,6 @@ test-method::
 --
 . Verify that only resources that have a spatial geometry that intersects the coordinates are returned as part of the result set.
 . Verify `coords` values are valid for the specified coordinate reference system
-. Verify that the coordinate reference system of the geometries is valid for the parameter defined by `crs`. If the `crs` parameter is not defined the geometries shall be valid for the coordinate reference system defined by the spatial element of the extent section in the collection response.
+. Verify that the coordinate reference system of the geometries is valid for the parameter defined by `crs`. If the `crs` parameter is not defined the geometries SHALL be valid for the coordinate reference system defined by the spatial element of the extent section in the collection response.
 --
 ====

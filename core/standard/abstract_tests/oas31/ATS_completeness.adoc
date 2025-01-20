@@ -1,0 +1,10 @@
+[[ats_oas31_completeness]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/oas31/completeness
+target:: /req/oas/completeness
+test-purpose:: Verify the completeness of an OpenAPI document.
+test-method::
+Verify that for each operation, the OpenAPI document describes all link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.1.1.md#httpCodes[HTTP Status Codes] and link:https://github.com/OAI/OpenAPI-Specification/blob/master/versions/3.1.1.md#responseObject[Response Objects] that the API uses in responses.
+====

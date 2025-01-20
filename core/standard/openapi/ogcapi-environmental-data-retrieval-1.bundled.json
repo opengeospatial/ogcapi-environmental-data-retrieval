@@ -2735,7 +2735,7 @@
                             "type": "string"
                           },
                           "type": {
-                            "description": "Type of the parameter object, shall be \"Parameter\"",
+                            "description": "Type of the parameter object, SHALL be \"Parameter\"",
                             "type": "string",
                             "enum": [
                               "Parameter"
@@ -2878,7 +2878,7 @@
                     },
                     "numberReturned": {
                       "type": "integer",
-                      "description": "The number of features in the feature collection.\n\nA server may omit this information in a response, if the information\nabout the number of features is not known or difficult to compute.\n\nIf the value is provided, the value shall be identical to the number\nof items in the \"features\" array.",
+                      "description": "The number of features in the feature collection.\n\nA server may omit this information in a response, if the information\nabout the number of features is not known or difficult to compute.\n\nIf the value is provided, the value SHALL be identical to the number\nof items in the \"features\" array.",
                       "minimum": 0,
                       "example": 10
                     }

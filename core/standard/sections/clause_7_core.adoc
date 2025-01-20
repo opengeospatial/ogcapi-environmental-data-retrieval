@@ -1,7 +1,7 @@
 [[dependencies-overview]]
 == Dependencies on Core and Collections Requirements Classes of OGC API - Common
 
-The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of OGC API-EDR shall first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
+The OGC API-EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of OGC API-EDR SHALL first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
 
 * Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
 * Collections, <<OGC20-024,https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections>>
@@ -67,7 +67,7 @@ A successful response to the `Landing Page` operation is defined in OGC APIâ€‰â€
 .Landing Page Response Schema
 [source,yaml]
 ----
-include::../openapi/schemas/core/landingPage.yaml[]
+include::../openapi/oas31/schemas/core/landingPage.yaml[]
 ----
 
 The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
@@ -84,6 +84,30 @@ include::../examples/json/landingPage_example.json[]
 The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
 
 [[api-definition]]
+=== API definition
+
+==== Operation
+
+Every OGC Web API is expected to provide a definition that describes the capabilities of the server and which can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
+
+include::../requirements/core/REQ_rc-api-definition-op.adoc[]
+
+include::../recommendations/core/PER_api-definition-uri.adoc[]
+
+Note that multiple API definition formats can be supported.
+
+==== Response
+
+include::../requirements/core/REQ_rc-api-definition-success.adoc[]
+
+include::../recommendations/core/REC_api-definition-oas.adoc[]
+
+If the server hosts the API definition under the base path of the API (for example, at path `/api`), there is no need to include the path of the API definition in the API definition itself.
+
+The idea is that any OGC API Features implementation can be used by developers that are familiar with the API definition language(s) supported by the server. For example, if an OpenAPI definition is used, it is possible to create a working client using the OpenAPI definition. The developer may need to learn a little bit about geometry data types, etc., but it is not necessary to read this standard to access the data via the API.
+
+In case the API definition is based on OpenAPI 3.1, consider the <<two_appraoches_oas,two approaches>> discussed in OpenAPI requirements class.
+
 ==== API definition
 
 Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
@@ -141,7 +165,7 @@ Apply Requirement <<req_core_conformance,/req/core/conformance>> on declaration 
 .Conformance Response Schema
 [source,yaml]
 ----
-include::../openapi/schemas/core/confClasses.yaml[]
+include::../openapi/oas31/schemas/core/confClasses.yaml[]
 ----
 
 The following JSON fragment is an example of a response to an OGC API-EDR conformance operation.

@@ -1,0 +1,10 @@
+name: limit
+in: query
+description: Defines the maximum number of features to return in a request
+required: false
+examples: 
+  limitval:
+    summary: number of features to return
+    value: 10
+schema:
+    type: number

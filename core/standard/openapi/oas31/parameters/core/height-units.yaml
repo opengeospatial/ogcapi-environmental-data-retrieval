@@ -1,0 +1,8 @@
+name: height-units
+in: query
+description: Distance units for the corridor-height parameter
+required: true
+examples: 
+    - KM
+schema:
+    type: string

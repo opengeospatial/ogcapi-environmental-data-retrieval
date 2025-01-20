@@ -1,0 +1,8 @@
+name: width-units
+in: query
+description: Distance units for the corridor-width parameter
+required: true
+example: 
+    - KM
+schema:
+    type: string

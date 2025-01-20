@@ -3,7 +3,7 @@
 ====
 [%metadata]
 identifier:: /conf/oas30/security
-target:: /req/oas30/security
+target:: /req/oas/security
 test-purpose:: Verify that any authentication protocols implemented by the API are documented in the OpenAPI document.
 test-method::
 step::: Identify all authentication protocols supported by the API.

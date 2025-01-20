@@ -1,0 +1,21 @@
+description: Property to contain any extra metadata information that is specific
+  to an individual data queries
+type: object
+properties:
+  title:
+    description: title of the query
+    type: string
+    examples: 
+      - Instances query
+  description:
+    description: description of the query
+    type: string
+    examples: 
+      - Instances of collection each representing different versions
+  query_type:
+    description: Instances of collection
+    type: string
+    enum: 
+      - instances
+    examples: 
+      - instances
