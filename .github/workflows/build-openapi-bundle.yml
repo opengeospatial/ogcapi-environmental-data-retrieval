@@ -27,7 +27,7 @@ jobs:
     - name: Generate OpenAPI 3.1 bundle
       run: |
         cd core/standard/openapi
-        redocly bundle -o /tmp/ogcapi-environmental-data-retrieval-1.bundled-oas31.json ogcapi-environmental-data-retrieval-1-oas31.yaml
+        redocly bundle -o /tmp/ogcapi-environmental-data-retrieval-1-oas31.bundled.json ogcapi-environmental-data-retrieval-1-oas31.yaml
     - name: Commit changes and push
       run: |
         git config --global user.email "tomkralidis@gmail.com"
