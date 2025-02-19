@@ -10,9 +10,9 @@ This OGC API - EDR Standard identifies a set of Conformance Classes. The <<ctc-d
 
 === Mandatory Requirements Classes
 
-The mandatory requirements classes of OGC API-EDR include:
+The mandatory requirements classes of OGC API - EDR include:
 
-* <<rc_core,Requirements Class "OGC API — Environmental Data Retrieval Core">>: This requirements class inherits from the _Core Requirements Class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> which specifies the minimal useful service interface for an OGC API. The requirements specified in the <<rc_core,Requirements Class "OGC API — Environmental Data Retrieval Core">> are mandatory for all implementations of the EDR API. The requirements are specified in <<rc_core-section,Chapter 7>> and in <<rc_core, Annex A.2>> in more detail.
+* <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">>: This requirements class inherits from the _Core Requirements Class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> which specifies the minimal useful service interface for an OGC API. The requirements specified in the <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">> are mandatory for all implementations of the EDR API. The requirements are specified in <<rc_core-section,Chapter 7>> and in <<rc_core, Annex A.2>> in more detail.
 
 * <<rc_collections,Requirements Class "Collections">>: This requirements class inherits from the _Collections Requirements Class_ of <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>> which extends the _Core Requirements class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
