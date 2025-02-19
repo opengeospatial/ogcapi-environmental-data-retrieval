@@ -4,8 +4,8 @@ This Standard identifies resources, captures compliance classes, and specifies r
 
 This Standard addresses two fundamental operations: discovery and query.
 
-Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about a distribution of a resource. This includes the API definition of the server as well as metadata about the spatio-temporal data resources provided by the server.
+Discovery operations allow the API to be interrogated to determine its capabilities and retrieve information (metadata) about a distribution of a resource. This includes the API definition of the server as well as metadata about the spatiotemporal data resources provided by the server.
 
-A spatio-temporal data resource is a **<<collection-definition,collection>>** of spatio-temporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.
+A spatio-temporal data resource is a **<<collection-definition,collection>>** of spatiotemporal data that can be sampled using OGC-API Environmental Data Retrieval query patterns.
 
-Query operations allow other data resources, such as environmental ones, to be sampled from the underlying spatio-temporal data resource, or data store, based upon EDR query geometry and other selection criteria, defined by this Standard and selected by the client.
+Query operations allow other data resources, such as environmental ones, to be sampled from the underlying spatiotemporal data resource, or data store, based upon EDR query geometry and other selection criteria, defined by this Standard and selected by the client.
