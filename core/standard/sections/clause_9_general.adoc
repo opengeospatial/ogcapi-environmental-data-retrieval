@@ -60,7 +60,7 @@ Two common mechanisms to support cross-origin requests are:
 [[asynchronous_queries]]
 === Asynchronous queries
 
-Responding to queries synchronously is not always be possible. The EDR API standard does not specify how to handle asynchronous requests. Different services may propose different best practices.
+Responding to queries synchronously is not always be possible. The EDR API Standard does not specify how to handle asynchronous requests. Different services may propose different best practices.
 
 For example, if the query requires handling requests asynchronously, one option of many, is that the system could respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
 
@@ -75,7 +75,7 @@ For the reasons discussed in the Best Practices, EDR APIs SHOULD support WGS84 l
 [[rc_encoding-section]]
 === Encodings
 
-While the OGC API - EDR standard does not specify any mandatory encoding, the following encodings are recommended. See <<optional_requirements_classes,Clause 2.2 (Optional Requirements Classes)>> for a discussion of this issue.
+While the OGC API - EDR Standard does not specify any mandatory encoding, the following encodings are recommended. See <<optional_requirements_classes,Clause 2.2 (Optional Requirements Classes)>> for a discussion of this issue.
 
 [[rc_html-section]]
 HTML encoding recommendation:
@@ -147,7 +147,7 @@ The API will return no `next` link, if it has returned all selected features, an
 
 Clients cannot assume that paging is safe against changes to dataset while a client iterates through `next` links. If a server provides opaque links these could be safe and maintain the dataset state during the original request. Using a parameter for the start index, however, will not be safe.
 
-Additional requirements classes for safe paging or an index parameter can be added in extensions to this specification.
+Additional requirements classes for safe paging or an index parameter can be added in extensions to this Standard.
 
 include::../recommendations/core/PER_rc-prev.adoc[]
 
