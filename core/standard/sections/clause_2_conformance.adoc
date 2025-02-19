@@ -1,12 +1,12 @@
 == Conformance
 
-Conformance with this standard SHALL be checked using the tests specified in <<ATS>> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the https://portal.ogc.org/files/?artifact_id=55234[OGC Compliance Testing Policies and Procedures] and the https://www.ogc.org/compliance[OGC Compliance Testing] web site.
+Conformance with this Standard SHALL be checked using the tests specified in <<ATS>> of this document. The framework, concepts, and methodology for testing, and the criteria to claim conformance are specified in the https://portal.ogc.org/files/?artifact_id=55234[OGC Compliance Testing Policies and Procedures] and the https://www.ogc.org/compliance[OGC Compliance Testing] web site.
 
-The one Standardization Target for this standard is <<webapi-definition,Web APIs>>.
+The one Standardization Target for this Standard is <<webapi-definition,Web APIs>>.
 
-<<OGC19-072,OGC API - Common - Part 1: Core>>  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This OGC API - EDR standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Conformance to the OGC API - EDR standard requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common.
+<<OGC19-072,OGC API - Common - Part 1: Core>>  defines  an  API  module  intended  for  re-use  by  other  OGC  Web  API  standards. This OGC API - EDR Standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Conformance to the OGC API - EDR Standard requires demonstrated conformance to the applicable Conformance Classes of OGC API - Common.
 
-This OGC API - EDR standard identifies a set of Conformance Classes. The <<ctc-definition,Conformance Classes>> implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more <<requirements-class-definition,Requirements Classes>>. The requirements in <<requirements>> are organized by Requirements Class. The Requirements Classes therefore define the functional requirements which are tested through the associated Conformance Class.
+This OGC API - EDR Standard identifies a set of Conformance Classes. The <<ctc-definition,Conformance Classes>> implemented by an API are advertised through the `/conformance` path on the landing page. Each Conformance Class is defined by one or more <<requirements-class-definition,Requirements Classes>>. The requirements in <<requirements>> are organized by Requirements Class. The Requirements Classes therefore define the functional requirements which are tested through the associated Conformance Class.
 
 === Mandatory Requirements Classes
 
