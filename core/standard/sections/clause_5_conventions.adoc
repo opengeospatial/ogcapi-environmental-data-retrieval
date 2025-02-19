@@ -11,9 +11,9 @@ https://www.opengis.net/spec/ogcapi-edr-1/1.1
 
 All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
 
-A key requirement of <<webapi-definition,Web API>> standards is the unambiguous identification of the resources they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API Standards use <<RFC6570,URI Templates>> to identify resource categories. These resource categories are instantiated in the implementation of the standard.
+A key requirement of <<webapi-definition,Web API>> standards is the unambiguous identification of the resources they address. In the implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API Standards specify <<RFC6570,URI Templates>> to identify resource categories. These resource categories are instantiated in the implementation of the standard.
 
-The scope of each URI Template is specified in the standard. In some cases, API implementations are required to implement the template as a path in their API. In most cases they are optional.
+The scope of each URI Template is specified in the standard. In some cases, implementations of an OGC API Standard are required to implement the template as a path. In most cases they are optional.
 
 Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC <<webapi-definition,Web API>> Standards.
 
@@ -51,25 +51,25 @@ Each resource representation includes an array of links. Implementations are fre
 
 A *license* link could be used for constraints on the data retrieved. Multiple *license* links could be provided for different content types. Alternatively, if all data retrieved via the API is available under the same license, the link MAY instead be added to the top-level links property of the response.
 
-NOTE: The query patterns of the EDR API use the link relation *data*. It is envisaged that, in the future, this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.
+NOTE: The query patterns of the EDR API use the link relation *data*. In the future this link relation may be replaced by *position*, *area*, and *trajectory* which would all be specializations of the currently used *data*.
 
 [[media-types-section]]
 === Media Types
 
-JSON media types that would typically be used in an OGC API that supports JSON are:
+JSON media types that would typically be used in implementations of an OGC API endpoint that supports JSON are:
 
 * `application/vnd.cov+json` for resources that include coverage content encoded according to CoverageJSON
 * `application/geo+json` for feature <<collection-definition,collections>> and features
 * `application/json` for all other resource representations, as well as coverage content encoded according to the https://docs.ogc.org/is/09-146r8/09-146r8.html[Coverage Implementation Schema (CIS)]
 
-XML media types that would typically occur in an OGC API that supports XML are:
+XML media types that would typically occur in implemention of an OGC API endpoint that supports XML are:
 
 * `application/gml+xml;version=3.2` for any https://portal.ogc.org/files/?artifact_id=74183&version=2[Geography Markup Language (GML) 3.2] feature <<collection-definition,collections>> and features
 * `application/gml+xml;version=3.2;profile=https://www.opengis.net/def/profile/ogc/2.0/gml-sf0` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 0 profile
 * `application/gml+xml;version=3.2;profile=https://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile
 * `application/xml` for all other resources
 
-The typical HTML media type for all "web pages" in an OGC API would be `text/html`.
+The typical HTML media type for all "web pages" in an implementation of an OGC API point would be `text/html`.
 
 The media types for an OpenAPI definition are `application/vnd.oai.openapi+json;version=3.0.4` or `application/vnd.oai.openapi+json;version=3.1.1` (JSON) and `application/vnd.oai.openapi;version=3.0.4` or `application/vnd.oai.openapi;version=3.1.1` (YAML).
 
@@ -79,7 +79,7 @@ NOTE: The CoverageJSON media type has not been registered yet with IANA and may 
 
 === Examples
 
-Most of the examples provided in this Standard are encoded in JSON. JSON was chosen because it is widely understood by implementors and easy to include in a text document. This convention should NOT be interpreted as a requirement that JSON must be used. Implementors are free to use any format they desire as long as there is a Conformance Class for that format and the API advertises its support for that Conformance Class.
+Most of the examples provided in this OGC API-EDR Standard are encoded in JSON. JSON was chosen because it is widely understood by implementors and easy to include in a text document. This convention should NOT be interpreted as a requirement that JSON must be used. Implementors are free to use any format they desire as long as there is a Conformance Class for that format and the API advertises its support for that Conformance Class.
 
 === Schema
 
@@ -94,15 +94,15 @@ For simplicity, this Standard generally refers to the HTTP protocol. This is not
 
 ==== General remarks
 
-So that developers can more easily learn how to use the API, good documentation is essential for any API. In the best case, documentation would be available both in HTML for human consumption and in a machine-readable format that can be best processed by software for run-time binding.
+So that developers can more easily learn how to implement the EDR API, good documentation is essential for any OGC API Standard. In the best case, documentation would be available both in HTML for human consumption and in a machine-readable format that can be best processed by software for run-time binding.
 
-This OGC Standard specifies requirements and recommendations for implementation APIs that share spatio-temporal resources and want to follow a standard way of doing so. In general, APIs will go beyond the requirements and recommendations stated in this Standard. They will support additional operations, parameters, etc. that are specific to the API or the software tool used to implement the API.
+This OGC Standard specifies requirements and recommendations for implementation APIs that share spatio-temporal resources and want to follow a standard way of doing so. In general, API deployments will go beyond the requirements and recommendations stated in this Standard. They will support additional operations, parameters, etc. that are specific to the specific API deployment or the software tool used to implement the API.
 
 ==== Role of OpenAPI
 
 This document uses OpenAPI 3.1 fragments as examples and to formally state requirements. However, using OpenAPI 3.1 is not required for implementing a server.
 
-Therefore, the _Core_ requirements class only requires that an API definition is provided and linked from the landing page.
+Therefore, the EDR API _Core_ requirements class only requires that an API definition is provided and linked from the landing page.
 
 Separate requirements classes are specified for API definitions that follow the <<rc_oas30,OpenAPI Specification 3.0>> and <<rc_oas31,OpenAPI Specification 3.1>>. This does not preclude that in the future or in parallel other versions of OpenAPI or other API descriptions are provided by a server.
 
@@ -152,4 +152,4 @@ URL `https://data.example.org/mypath` for the production server.
 
 ==== Reusable OpenAPI components
 
-Reusable components for OpenAPI definitions for implementations of OGC API Features are referenced from this document.
+Reusable components for OpenAPI definitions for implementations of the OGC API - Features Standard are referenced from this document.
