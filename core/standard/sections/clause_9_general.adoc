@@ -60,7 +60,7 @@ Two common mechanisms to support cross-origin requests are:
 [[asynchronous_queries]]
 === Asynchronous queries
 
-Responding to queries synchronously is not always be possible. The EDR API Standard does not specify how to handle asynchronous requests. Different services may propose different best practices.
+Responding to queries synchronously is not always possible. The EDR API Standard does not specify how to handle asynchronous requests. Different services may offer different best practices.
 
 For example, if the query requires handling requests asynchronously, one option of many, is that the system could respond with a HTTP code  of `308` and include a `Location` response header field with the URI of the location of the data once the query has completed.  If the user queries the URI of the product of the query before the data is available that response should respond with a HTTP code of `202` and include a `Retry-after` response header field with a suggested interval in seconds to retry the data retrieval.
 
@@ -69,7 +69,7 @@ For example, if the query requires handling requests asynchronously, one option 
 
 As discussed in Chapter 9 of the OGC/W3C Spatial Data on the Web <<SDWBP,Best Practices document>>, how to express and share the location of resources in a consistent way is one of the most fundamental aspects of publishing geospatial or spatio-temporal data and it is important to be clear about the coordinate reference system that the coordinates use.
 
-For the reasons discussed in the Best Practices, EDR APIs SHOULD support WGS84 longitude and latitude (https://www.opengis.net/def/crs/OGC/1.3/CRS84) as a coordinate reference system.
+For the reasons discussed in the Best Practices, implementations of EDR APIs SHOULD support WGS84 longitude and latitude (https://www.opengis.net/def/crs/OGC/1.3/CRS84) as a coordinate reference system.
 
 
 [[rc_encoding-section]]
@@ -93,7 +93,7 @@ Requirement <<req_core_http,`/req/core/http`>> implies that the encoding of a re
 
 The section <<media-types-section,Media Types>> includes guidance on media types for encodings that are specified in this document.
 
-Note that any API that supports multiple encodings will have to support a mechanism to create encoding-specific URIs for resources to express links, such as for alternative representations of the same resource. This document does not mandate any approach to how this is supported by the API.
+Note that any API deployment that supports multiple encodings will have to support a mechanism to create encoding-specific URIs for resources to express links, such as for alternative representations of the same resource. This document does not mandate any approach to how this is supported by the API deployment.
 
 As clients simply need to dereference the URI of the link, the implementation details and the mechanism of how the encoding is included in the URI of the link are not important. Developers interested in the approach of a particular implementation, can study the API definition.
 
@@ -108,7 +108,7 @@ Two common approaches are:
 [[limit-parameter]]
 === Support for limit query parameter
 
-An EDR server MAY provide support for a `limit` query parameter when the requested output format can support data paging.
+An EDR enabled server MAY provide support for a `limit` query parameter when the requested output format can support data paging.
 **Note**: If either the server or the requested data format do not support paging responses the `limit` query parameter value will be ignored.
 
 If the `limit` query parameter is supported the following applies: 
@@ -119,7 +119,7 @@ The number of features returned depends on the server and the parameter `limit.`
 
 * The server likely has a default value for the limit, and a maximum limit.
 
-* If the server has any more results available than it returns (the number it returns is less than or equal to the requested/default/maximum limit) then the server will include a link to the next set of results.
+* If the server has any more results available than it returns (the number the server returns is less than or equal to the requested/default/maximum limit) then the server will include a link to the next set of results.
 
 So (using the default/maximum values of 10/10000 from the OpenAPI fragment in requirement `/req/core/fc-limit-definition`):
 
@@ -137,13 +137,13 @@ include::../recommendations/core/REC_rc-next-2.adoc[]
 
 include::../recommendations/core//REC_rc-next-3.adoc[]
 
-This document does not mandate any specific implementation approach for the `next` links.
+This Standard does not mandate any specific implementation approach for the `next` links.
 
 An implementation could use opaque links that are managed by the server. It is up to the server to determine how long these links can be de-referenced. Clients have to be prepared to receive a 404 response.
 
 Another implementation approach is to use an implementation-specific parameter that specifies the index within the result set from which the server begins presenting results in the response.
 
-The API will return no `next` link, if it has returned all selected features, and the server knows that. However, the server can not be aware that it has already returned all selected features. For example, if the request states `limit=10` and the query to the backend datastore returns 10 features, the server may not know, if there are more features or not (in most cases there will be more features), unless the total number of matches is also computed, which can be too costly. The server will then add the next link, and if there are no more features, dereferencing the next link will return an empty feature collection and no next link. This behavior is consistent with the statements above.
+If all selected features are returned, the API endpoint will return no `next` link. However, the server can not be aware that it has already returned all selected features. For example, if the request states `limit=10` and the query to the backend datastore returns 10 features, the server may not know, if there are more features or not (in most cases there will be more features), unless the total number of matches is also computed, which can be too costly. The server will then add the next link, and if there are no more features, dereferencing the next link will return an empty feature collection and no next link. This behavior is consistent with the statements above.
 
 Clients cannot assume that paging is safe against changes to dataset while a client iterates through `next` links. If a server provides opaque links these could be safe and maintain the dataset state during the original request. Using a parameter for the start index, however, will not be safe.
 
