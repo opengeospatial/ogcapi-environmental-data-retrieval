@@ -2,7 +2,7 @@
 [[environmental-resource-section]]
 == Query, Spatiotemporal and Information Resources
 
-Query resources are spatio-temporal queries which support operation of the API for the access and use of the spatio-temporal data resources. The OGC API-EDR standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
+Query resources are spatio-temporal queries which support operation of the API for the access and use of the spatio-temporal data resources. The OGC API-EDR Standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
 
 [[rc_collection-section]]
 A spatio-temporal data resource is a <<collection-definition,collection>> of spatio-temporal data that can be sampled using the OGC API-EDR query patterns.
@@ -43,7 +43,7 @@ The resources returned from each node in these templates are described in <<quer
 |/collections/{collectionId}/{queryType} |Identifies an Information Resource of type {queryType} associated with the `{collectionId}` <<collection-definition,collection>>.
 |===
 
-The OGC API — Common standard does not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
+The OGC API — Common Standard does not define any information resource types. However <<query-resource-table>> provides a mapping of the initial query types proposed for the EDR API.
 
 [[query-resources-section]]
 === Query Resources
@@ -53,7 +53,7 @@ _Where necessary an EDR implementation can use its OpenAPI document response (i.
 
 `The OpenAPI document for an EDR service *SHALL* be the definitive (NORMATIVE) reference of whether a query parameter is required in any request to the EDR server.`
 
-`ALL EDR implementations *MUST* implement query parameters that are required by the EDR standard.`
+`ALL EDR implementations *MUST* implement query parameters that are required by the EDR Standard.`
 
 
 
