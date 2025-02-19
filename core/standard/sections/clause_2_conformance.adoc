@@ -10,9 +10,9 @@ This OGC API - EDR Standard identifies a set of Conformance Classes. The <<ctc-d
 
 === Mandatory Requirements Classes
 
-The mandatory requirements classes of OGC API - EDR include:
+The mandatory requirements classes spcified in the OGC API - EDR Standard include:
 
-* <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">>: This requirements class inherits from the _Core Requirements Class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> which specifies the minimal useful service interface for an OGC API. The requirements specified in the <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">> are mandatory for all implementations of the EDR API. The requirements are specified in <<rc_core-section,Chapter 7>> and in <<rc_core, Annex A.2>> in more detail.
+* <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">>: This requirements class inherits from the _Core Requirements Class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> which specifies the minimal useful service interface for an OGC API endpoint. The requirements specified in the <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">> are mandatory for all implementations of the EDR API. The requirements are specified in <<rc_core-section,Chapter 7>> and in <<rc_core, Annex A.2>> in more detail.
 
 * <<rc_collections,Requirements Class "Collections">>: This requirements class inherits from the _Collections Requirements Class_ of <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>> which extends the _Core Requirements class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
@@ -34,9 +34,9 @@ Neither the _Core_ nor _Collections_ requirements classes mandate specific encod
 
 The Requirements Classes are specified in <<rc_encoding-section,Chapter 9>> and specified in more detail in Annex <<rc_geojson,A.6>>, <<rc_covjson,A.8>>, and <<rc_html,A.9>>.
 
-None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability, so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatiotemporal data.
+None of these encodings are mandatory. A developer of an implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability, so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatiotemporal data.
 
-The _Core_ does not mandate any encoding or format for the formal definition of the API either. The recommended option is the OpenAPI specification and three requirements classes have been specified for OpenAPI:
+The EDR API _Core_ does not mandate any encoding or format for the formal definition of the API either. The recommended option is the OpenAPI specification and three requirements classes have been specified for OpenAPI:
 
 * <<rc_oas,OpenAPI Specification>> (depends on _Core_),
 * <<rc_oas30,OpenAPI Specification 3.0>> (depends on _OpenAPI Specification_).
@@ -57,7 +57,7 @@ The _Core_ requirements class can also decide to use other API definition repres
 
 The EDR API Queries Conformance class does not mandate any specific query patterns for querying resources. The requirements class specifies query patterns for which there are ubiquitous use cases.
 
-An implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <<position-definition,position>> (with elevation and time) does simplify interoperability so support for the <<rc_position-section,position>> query is highly recommended.
+The developer of an implementation of the EDR API may decide to implement another query pattern instead of, or in addition to, those listed. However, a minimal query pattern of retrieving data at a <<position-definition,position>> (with elevation and time) does simplify interoperability so support for the <<rc_position-section,position>> query is highly recommended.
 
 At least one of the following queries: Position, Radius, Area, Cube, Trajectory, Corridor, Items, or Locations SHALL be implemented.
 
