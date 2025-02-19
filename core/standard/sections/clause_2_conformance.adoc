@@ -16,9 +16,9 @@ The mandatory requirements classes of OGC API - EDR include:
 
 * <<rc_collections,Requirements Class "Collections">>: This requirements class inherits from the _Collections Requirements Class_ of <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>> which extends the _Core Requirements class_ of <<OGC19-072,OGC API - Common - Part 1: Core>> to enable discovery and query access to <<collection-definition,collections>> of <<spatial-resource-definition,spatial resources>>.
 
-The structure and organization of a <<collection-definition,collection>> of spatio-temporal data is very much dependent on the nature of that data and the expected access patterns. This is information which cannot be specified in a common manner. The <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>> Candidate Standard, specifies the requirements necessary to discover and understand a generic <<collection-definition,collection>> of spatio-temporal data.
+The structure and organization of a <<collection-definition,collection>> of spatio-temporal data is very much dependent on the nature of that data and the expected access patterns. This is information which cannot be specified in a common manner. The <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>> Candidate Standard, specifies the requirements necessary to discover and understand a generic <<collection-definition,collection>> of spatiotemporal data.
 
-The _Collections Requirements Class_ of the EDR API extends the common requirements to those specific to the query and retrieval of collections of spatio-temporal data. The Requirements Class is specified in <<rc_collection-section,Chapter 8>> and specified in more detail in <<rc_collections,Annex A.3>>.
+The _Collections Requirements Class_ of the EDR API extends the common requirements to those specific to the query and retrieval of collections of spatiotemporal data. The Requirements Class is specified in <<rc_collection-section,Chapter 8>> and specified in more detail in <<rc_collections,Annex A.3>>.
 
 [[optional_requirements_classes]]
 === Optional Requirements Classes
@@ -34,7 +34,7 @@ Neither the _Core_ nor _Collections_ requirements classes mandate specific encod
 
 The Requirements Classes are specified in <<rc_encoding-section,Chapter 9>> and specified in more detail in Annex <<rc_geojson,A.6>>, <<rc_covjson,A.8>>, and <<rc_html,A.9>>.
 
-None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability, so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatio-temporal data.
+None of these encodings are mandatory. An implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability, so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatiotemporal data.
 
 The _Core_ does not mandate any encoding or format for the formal definition of the API either. The recommended option is the OpenAPI specification and three requirements classes have been specified for OpenAPI:
 
