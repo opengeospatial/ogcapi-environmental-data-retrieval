@@ -7,17 +7,17 @@ identifier:: /req/edr/rc-corridor-variables
 
 *A:*
 
-A corridor `data_queries` object `variables` property MUST comply with the requirement `/req/edr/rc-variables-common`.
+A corridor `data_queries` object `variables` property SHALL comply with the requirement `/req/edr/rc-variables-common`.
 
 ---
 *B:*
 
-A corridor `data_queries` object `variables` property MUST include a `height_units` property which MUST be a string array
+A corridor `data_queries` object `variables` property SHALL include a `height_units` property which MUST be a string array
 
 ---
 *C:*
 
-A corridor `data_queries` object `variables` property MUST include a `width_units` property which MUST be a string array
+A corridor `data_queries` object `variables` property SHALL include a `width_units` property which MUST be a string array
 
 
 ====
