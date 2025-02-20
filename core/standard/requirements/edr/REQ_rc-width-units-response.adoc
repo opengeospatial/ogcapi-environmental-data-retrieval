@@ -19,6 +19,6 @@ width-units = units
 ---
 *B:*
 
-If an unsupported units value is requested a `400` error should be returned.
+If an unsupported units value is requested a `400` error SHOULD be returned.
 
 ====
