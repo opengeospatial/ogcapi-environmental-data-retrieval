@@ -7,6 +7,6 @@ identifier:: /req/instances/rc-md-op
 
 *A:* 
 
-The API MAY support the HTTP GET operation at the path `/collections/{collection_id}/instances`.
+The API implementation MAY support the HTTP GET operation at the path `/collections/{collection_id}/instances`.
 
 ====
