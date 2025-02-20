@@ -66,7 +66,7 @@ The OpenAPI specification currently supports the following link:https://spec.ope
 
 === Requirements Class "OpenAPI Specification 3.0"
 
-Servers conforming to OpenAPI Specification 3.0 requirements class provide their API definition by an link:https://spec.openapis.org/oas/v3.0.4#openapi-document[OpenAPI 3.0 Document].
+Servers conforming to OpenAPI Specification 3.0 requirements class provide their API definition as an link:https://spec.openapis.org/oas/v3.0.4#openapi-document[OpenAPI 3.0 Document].
 
 include::../requirements/requirements_class_oas30.adoc[]
 
@@ -74,7 +74,7 @@ include::../requirements/oas30/REQ_oas-definition.adoc[]
 
 === Requirements Class "OpenAPI Specification 3.1"
 
-Servers conforming to this requirements class define their API by an link:https://spec.openapis.org/oas/v3.1.1#openapi-document[OpenAPI 3.1 Document].
+Servers conforming to this requirements class provide their API definition as an link:https://spec.openapis.org/oas/v3.1.1#openapi-document[OpenAPI 3.1 Document].
 
 include::../requirements/requirements_class_oas31.adoc[]
 
