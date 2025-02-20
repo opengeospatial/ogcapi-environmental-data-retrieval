@@ -8,7 +8,7 @@ identifier:: /req/edr/REQ_rc-f-response
 
 *A:*
 
-If the `f` parameter is provided, the returned information should be transformed to the defined data format.
+If the `f` parameter is provided, the returned information SHOULD be transformed to the defined data format.
 
 ---
 *B:*
@@ -18,11 +18,11 @@ The `f` parameter SHALL consist of a string value based on an enumerated list of
 ---
 *C:*
 
-If `f` value is not defined the returned data should be in the default format specified by the *default_output_format* attribute of the <<collection_metadata_desc, collections>> metadata response.  If a *default_output_format* attribute is not specified, the data return SHOULD be in the native format of the source datastore. 
+If `f` value is not defined the returned data SHOULD be in the default format specified by the *default_output_format* attribute of the <<collection_metadata_desc, collections>> metadata response.  If a *default_output_format* attribute is not specified, the data return SHOULD be in the native format of the source datastore. 
 
 ---
 *D:*
 
-If an unsupported `f` value is requested a `400` error message should be returned.
+If an unsupported `f` value is requested a `400` error message SHOULD be returned.
 
 ====
