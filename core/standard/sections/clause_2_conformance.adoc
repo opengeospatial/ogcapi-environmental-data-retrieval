@@ -18,7 +18,7 @@ The mandatory requirements classes spcified in the OGC API - EDR Standard includ
 
 The structure and organization of a <<collection-definition,collection>> of spatio-temporal data is very much dependent on the nature of that data and the expected access patterns. This is information which cannot be specified in a common manner. The <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>> Candidate Standard, specifies the requirements necessary to discover and understand a generic <<collection-definition,collection>> of spatiotemporal data.
 
-The _Collections Requirements Class_ of the EDR API extends the common requirements to those specific to the query and retrieval of collections of spatiotemporal data. The Requirements Class is specified in <<rc_collection-section,Chapter 8>> and specified in more detail in <<rc_collections,Annex A.3>>.
+The _Collections Requirements Class_ of the EDR API extends the common requirements to those specific to the query and retrieval of collections of spatiotemporal data. The _Collections Requirements Class_ is specified in <<rc_collection-section,Chapter 8>> and specified in more detail in <<rc_collections,Annex A.3>>.
 
 [[optional_requirements_classes]]
 === Optional Requirements Classes
@@ -32,13 +32,13 @@ Neither the _Core_ nor _Collections_ requirements classes mandate specific encod
 ** <<rc_geojson,GeoJSON>>
 ** <<rc_covjson,CoverageJSON>>
 
-The Requirements Classes are specified in <<rc_encoding-section,Chapter 9>> and specified in more detail in Annex <<rc_geojson,A.6>>, <<rc_covjson,A.8>>, and <<rc_html,A.9>>.
+The Encoding Requirements Classes are specified in <<rc_encoding-section,Chapter 9>> and specified in more detail in Annex <<rc_geojson,A.6>>, <<rc_covjson,A.8>>, and <<rc_html,A.9>>.
 
 None of these encodings are mandatory. A developer of an implementation of the EDR API may decide to implement another encoding instead of, or in addition to, those listed. However, a common format does simplify interoperability, so support for _CoverageJSON_ is highly recommended as an established, efficient and effective format for a variety of spatiotemporal data.
 
-The EDR API _Core_ does not mandate any encoding or format for the formal definition of the API either. The recommended option is the OpenAPI specification and three requirements classes have been specified for OpenAPI:
+The EDR API _Core_ does not mandate any encoding or format for the formal, machinable, definition of the API, such as using schemas and schema fragments. The recommended option is to use the OpenAPI specification (either Version 3.0 or 3.1). Three requirements classes have been specified for OpenAPI:
 
-* <<rc_oas,OpenAPI Specification>> (depends on _Core_),
+* <<rc_oas,OpenAPI Specification>> (depends on _Core_).
 * <<rc_oas30,OpenAPI Specification 3.0>> (depends on _OpenAPI Specification_).
 * <<rc_oas31,OpenAPI Specification 3.1>> (depends on _OpenAPI Specification_).
 
@@ -61,4 +61,4 @@ The developer of an implementation of the EDR API may decide to implement anothe
 
 At least one of the following queries: Position, Radius, Area, Cube, Trajectory, Corridor, Items, or Locations SHALL be implemented.
 
-The Queries Requirements Class is described in <<query-resources-section,Chapter 9>> and to ease readability, fully specified in detail in <<rc_queries,Annex A.4>>.
+The Queries Requirements Class is described in <<query-resources-section,Chapter 8>> and to ease readability, fully specified in detail in <<rc_queries,Annex A.4>>.
