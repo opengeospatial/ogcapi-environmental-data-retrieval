@@ -123,11 +123,11 @@ The number of features returned depends on the server and the parameter `limit.`
 
 So (using the default/maximum values of 10/10000 from the OpenAPI fragment in requirement `/req/core/fc-limit-definition`):
 
-* Asking for 10 will return 0 to 10 (as requested) and if there are more, a `next` link;
+* Asking for 10 will return 0 to 10 (as requested) and if there are more, a `next` link.
 
-* Asking without a limit will return 0 to 10 (default) and if there are more, a `next` link;
+* Asking without a limit will return 0 to 10 (default) and if there are more, a `next` link.
 
-* Asking for 50000 will return up to 10000 (server-limited) and if there are more, a `next` link;
+* Asking for 50000 will return up to 10000 (server-limited) and if there are more, a `next` link.
 
 * Following the next link from the previous response will return up to 10000 additional features and if there are more, a `next` link.
 
