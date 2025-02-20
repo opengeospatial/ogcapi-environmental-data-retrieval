@@ -5,7 +5,7 @@
 === Introduction
 
 The Abstract Test Suite (ATS) is a compendium of test assertions applicable to
-implementations of the EDR API. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation under test conforms to all the relevant functional specifications.
+implementations of the EDR API Standard. An ATS provides a basis for developing an Executable Test Suite to verify that the implementation being tested conforms to all the relevant functional specifications.
 
 The abstract test cases (assertions) are organized into test groups that correspond to distinct conformance test classes defined in the EDR API Standard.
 
