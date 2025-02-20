@@ -12,6 +12,6 @@ If a property `numberMatched` is included in the response, the value SHALL be id
 
 *B:*
 
-A server MAY omit this information in a response, if the information about the number of matching features is not known or difficult to compute.
+If the information about the number of matching features is not known or difficult to compute, a server MAY omit this information in a response.
 
 ====
