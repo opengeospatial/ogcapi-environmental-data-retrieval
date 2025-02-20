@@ -89,7 +89,7 @@ include::../recommendations/core/REC_geojson.adoc[]
 CoverageJSON encoding recommendation. This is specific to the EDR API:
 include::../recommendations/core/REC_covjson.adoc[]
 
-Requirement <<req_core_http,`/req/core/http`>> implies that the encoding of a response is determined using content negotiation as specified by the HTTP RFC.
+Requirement <<req_core_http,Requirement /req/core/http>> implies that the encoding of a response is determined using content negotiation as specified by the HTTP RFC.
 
 The section <<media-types-section,Media Types>> includes guidance on media types for encodings that are specified in this document.
 
