@@ -5,17 +5,17 @@
 
 The https://www.w3.org/TR/webarch/[Architecture of the World Wide Web] establishes the Uniform Resource Identifier (URI) as the single global identification system for the Web. Therefore, URIs or <<RFC 6570,URI Templates>> are used in OGC <<webapi-definition,Web API>> standards to identify key entities in those standards.
 
-The normative provisions in this standard are denoted by the URI:
+The normative provisions in this Standard are denoted by the URI:
 
 https://www.opengis.net/spec/ogcapi-edr-1/1.1
 
 All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
 
-A key requirement of <<webapi-definition,Web API>> standards is the unambiguous identification of the resources they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API standards use <<RFC6570,URI Templates>> to identify resource categories. These resource categories are instantiated in the implementation of the standard.
+A key requirement of <<webapi-definition,Web API>> standards is the unambiguous identification of the resources they address. In an implementation of such a standard, URIs would be used to identify those resources. A standard, however, is not an implementation. A standard can identify potential resources, but not the resources themselves. Therefore, OGC Web API Standards use <<RFC6570,URI Templates>> to identify resource categories. These resource categories are instantiated in the implementation of the standard.
 
 The scope of each URI Template is specified in the standard. In some cases, API implementations are required to implement the template as a path in their API. In most cases they are optional.
 
-Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC <<webapi-definition,Web API>> standards.
+Implementation of the URI Templates is recommended in that they provide a common look and feel to implementations of OGC <<webapi-definition,Web API>> Standards.
 
 === Link relations
 
@@ -79,11 +79,11 @@ NOTE: The CoverageJSON media type has not been registered yet with IANA and may 
 
 === Examples
 
-Most of the examples provided in this standard are encoded in JSON. JSON was chosen because it is widely understood by implementors and easy to include in a text document. This convention should NOT be interpreted as a requirement that JSON must be used. Implementors are free to use any format they desire as long as there is a Conformance Class for that format and the API advertises its support for that Conformance Class.
+Most of the examples provided in this Standard are encoded in JSON. JSON was chosen because it is widely understood by implementors and easy to include in a text document. This convention should NOT be interpreted as a requirement that JSON must be used. Implementors are free to use any format they desire as long as there is a Conformance Class for that format and the API advertises its support for that Conformance Class.
 
 === Schema
 
-JSON Schema is used throughout this standard to define the structure of resources. These schemas are typically represented using YAML encoding, a human-readable data-serialization language. This convention is for the ease of the user. This Standard does not prohibit the use of another schema language or encoding. Nor does the Standard specify that JSON Schema is required. Implementations should use a schema language and encoding appropriate for the format of the resource.
+JSON Schema is used throughout this Standard to define the structure of resources. These schemas are typically represented using YAML encoding, a human-readable data-serialization language. This convention is for the ease of the user. This Standard does not prohibit the use of another schema language or encoding. Nor does the Standard specify that JSON Schema is required. Implementations should use a schema language and encoding appropriate for the format of the resource.
 
 === Use of HTTPS
 
@@ -96,7 +96,7 @@ For simplicity, this Standard generally refers to the HTTP protocol. This is not
 
 So that developers can more easily learn how to use the API, good documentation is essential for any API. In the best case, documentation would be available both in HTML for human consumption and in a machine-readable format that can be best processed by software for run-time binding.
 
-This OGC Standard specifies requirements and recommendations for implementation APIs that share spatio-temporal resources and want to follow a standard way of doing so. In general, APIs will go beyond the requirements and recommendations stated in this standard. They will support additional operations, parameters, etc. that are specific to the API or the software tool used to implement the API.
+This OGC Standard specifies requirements and recommendations for implementation APIs that share spatio-temporal resources and want to follow a standard way of doing so. In general, APIs will go beyond the requirements and recommendations stated in this Standard. They will support additional operations, parameters, etc. that are specific to the API or the software tool used to implement the API.
 
 ==== Role of OpenAPI
 
