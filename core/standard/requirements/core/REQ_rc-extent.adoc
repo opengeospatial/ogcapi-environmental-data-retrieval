@@ -7,7 +7,7 @@ identifier:: /req/core/rc-extent
 
 *A:*
 
-For each spatial resource collection, the ``extent`` property, if provided, SHALL provide bounding boxes that include all spatial geometries and time intervals that include all temporal geometries in this collection. The temporal extent may use ``null`` values to indicate an open time interval.
+For each spatial resource collection, the ``extent`` property (if provided) SHALL specify bounding boxes that include all spatial geometries and time intervals that include all temporal geometries in this collection. The temporal extent may use ``null`` values to indicate an open time interval.
 
 ---
 *B:*
