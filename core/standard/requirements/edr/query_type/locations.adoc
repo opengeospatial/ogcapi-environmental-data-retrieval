@@ -1,4 +1,4 @@
-The Locations query returns data for the named location. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. If a location id is not defined the API *SHALL* return a GeoJSON features array of valid location identifiers, the schema of the GeoJSON response *SHOULD* be defined in the OpenAPI definition of the EDR service.
+The Locations query returns data for the named location. *Logic for identifying the best match for the coordinate will depend on the <<collection-definition,collection>> and is at the discretion of the query service implementer*. If a location id is not defined, the API implementation *SHALL* return a GeoJSON features array of valid location identifiers and the schema of the GeoJSON response *SHOULD* be defined in the OpenAPI definition of the EDR service.
 
 The filter constraints are defined by the following query parameters:
 [#locations-def-table,reftext='{table-caption} {counter:table-num}']
