@@ -8,7 +8,7 @@ identifier:: /req/edr/resolution-y-response
 
 *A:*
 
-If the `resolution-y` parameter is provided, denotes the number of intervals to retrieve data for along the path between the minimum and maximum y coordinates
+If the `resolution-y` parameter is provided, it denotes the number of intervals to retrieve data for along the path between the minimum and maximum y coordinates
 
 ---
 *B:*
@@ -23,7 +23,7 @@ A `resolution-y` value of 0 SHALL return all available data at the native y reso
 ---
 *D:*
 
-IF `resolution-y` is not specified, data should be returned for just the locations specified in the requested coordinates (**ONLY IF** interpolation is supported by the API)
+If `resolution-y` is not specified, data SHOULD be returned for just the locations specified in the requested coordinates (**ONLY IF** interpolation is supported by the API)
 
 
 [source,txt]
@@ -33,7 +33,7 @@ resolution-y = number of intervals
 
 *E:*
 
-If the specified `resolution-y` value is invalid the API SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-y` values. 
+If the specified `resolution-y` value is invalid the API implementation SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-y` values. 
 
 ---
 
