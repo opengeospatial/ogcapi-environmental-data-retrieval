@@ -129,7 +129,7 @@ Only the link is required by OGC API - Common.
 
 ===== Response
 
-A successful response to the API Definition request is a resource which documents the design of the API. OGC API - Common leaves the selection of the format for the API Definition response to the API implementor. However, the options are limited to those which are defined in the OGC API - Common Standard. At this time OpenAPI 3.0 is the only option provided.
+A successful response to the API Definition request is a resource which documents the design of the API. OGC API - Common leaves the selection of the format for the API Definition response to the API implementor. However, the options are limited to those which are defined in the OGC API - Common Standard. OpenAPI 3.0 is the only option provided, though OpenAPI 3.1 is expected to be supported.
 
 ===== Error Handling
 
