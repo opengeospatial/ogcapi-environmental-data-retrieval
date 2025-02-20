@@ -61,4 +61,4 @@ The developer of an implementation of the EDR API may decide to implement anothe
 
 At least one of the following queries: Position, Radius, Area, Cube, Trajectory, Corridor, Items, or Locations SHALL be implemented.
 
-The Queries Requirements Class is specified in <<query-resources-section,Chapter 9>> and specified in detail in <<rc_queries,Annex A.4>>.
+The Queries Requirements Class is described in <<query-resources-section,Chapter 9>> and to ease readability, fully specified in detail in <<rc_queries,Annex A.4>>.
