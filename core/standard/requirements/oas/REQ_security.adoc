@@ -8,6 +8,6 @@ identifier:: /req/oas/security
 
 *A:*
 
-For cases, where the operations of the API are access-controlled, the security scheme(s) and requirements SHALL be documented in the OpenAPI definition.
+For cases, where the operations of the API implementation are access-controlled, the security scheme(s) and requirements SHALL be documented in the OpenAPI definition.
 
 ====

@@ -1,4 +1,4 @@
-[[req_edr_rc-crs]]
+.[[req_edr_rc-crs]]
 
 [requirement]
 ====
@@ -7,7 +7,7 @@ identifier:: /req/edr/rc-crs
 
 *A:*
 
-A crs object SHALL have a unique (to the collection) `crs` property, it MAY be an EPSG code.
+A crs object SHALL have a unique (to the collection) `crs` property. It MAY be an EPSG code.
 
 ---
 *B:*

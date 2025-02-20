@@ -20,11 +20,11 @@ a| **coords**
 * The *Z* in `LINESTRINGZ` and `LINESTRINGZM` refers to the height value.
 `If the specified CRS does not define the height units, the heights units will default to meters above mean sea level`
 
-* The *M* in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See
+* The *M* in `LINESTRINGM` and `LINESTRINGZM` refers to the number of seconds that have elapsed since the Unix epoch, that is the time 00:00:00 UTC on 1 January 1970. See 
 https://en.wikipedia.org/wiki/Unix_time a| * A Simple 2D trajectory
     `coords=LINESTRING(-3.53 50.72,-3.35 50.92,-3.11 51.02,-2.85 51.42,-2.59 51.46)`
 
-* A 2D trajectory with mutiple segments:
+* A 2D trajectory with multiple segments:
     `coords=MULTILINESTRING((-3.53 50.72,-3.35 50.92),(-3.11 51.02,-2.85 51.42,-2.59 51.46))`
 
 * A 2D trajectory with all waypoints at same time:

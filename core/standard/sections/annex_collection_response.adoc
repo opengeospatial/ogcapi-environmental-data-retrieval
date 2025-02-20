@@ -2,9 +2,9 @@
 [[collection_metadata_desc]]
 == Collection Response Metadata (Informative)
 
-This Annex contains a more-easily human-readable view of the content in the OpenAPI definitions.
+This Annex contains a more human-readable view of the content in the OpenAPI definitions.
 
-The collection response structure provides the details which describe the information available and the query capabilities supported by the collections served by the API. 
+The collection response structure provides the details which describe the information available and the query capabilities supported by the collections served by the implemnentation of an API incorporating OGC API - EDR Standard requirements. 
 
 === EDR Collection Object Structure
 
@@ -188,7 +188,7 @@ Each custom object describes the extent of the custom dimension for the collecti
 |==========================
 |Field Name|Type|Required|Description
 |**id**     |String|**Yes**|  Name of the custom dimension.
-|**interval**  | String Array|**Yes**| Array of data values arrays, each value in the values array should contain two values; the first being the minimum value of the custom dimension and second the maximum value for the custom dimension for information in the collection
+|**interval**  | String Array|**Yes**| Array of data values arrays, each value in the values array should contain two values, the first being the minimum value of the custom dimension and second the maximum value for the custom dimension for information in the collection
 |**values**  | String Array|**No**| Array of data values for the custom dimension supported by the collection .
 |**reference**     |String|**Yes**|  A uri which links to a definition or description of the custom dimension.
 |==========================

@@ -8,7 +8,7 @@ identifier:: /req/edr/REQ_rc-within-units-response
 
 *A:*
 
-The `within-units` parameter defines the distance units of the `within` query parameter value.
+The `within-units` parameter SHALL define the distance units of the `within` query parameter value.
 
 
 ====

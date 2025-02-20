@@ -2,7 +2,7 @@
 [[environmental-resource-section]]
 == Query, Spatiotemporal and Information Resources
 
-Query resources are spatiotemporal queries which support operation of the API for the access and use of the spatiotemporal data resources. The OGC API - EDR Standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
+Query resources are spatiotemporal queries which support operation of the API implementation instance for access and use of the spatiotemporal data resources. The OGC API - EDR Standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
 
 [[rc_collection-section]]
 A spatiotemporal data resource is a <<collection-definition,collection>> of spatiotemporal data that can be sampled using the OGC API-EDR query patterns.
@@ -16,13 +16,13 @@ Query resources related to spatiotemporal data resources (<<collection-definitio
 
 Where
 
-`{collectionId}` = a unique identifier for a <<collection-definition,collection>> of spatiotemporal data.
+`{collectionId}` = A unique identifier for a <<collection-definition,collection>> of spatiotemporal data.
 
-`{instanceId}` = a text string identifying the version or <<instance-definition,instance>> of the chosen <<collection-definition,collection>>.
+`{instanceId}` = A text string identifying the version or <<instance-definition,instance>> of the chosen <<collection-definition,collection>>.
 
-`{queryType}` = a text string identifying the query pattern performed by the API.
+`{queryType}` = A text string identifying the query pattern performed by the API.
 
-The `instanceId` parameter supports multiple <<instance-definition,instances>> or versions of the same underlying data source to be accessed by the API.  This is applicable when the entire data source has been regenerated rather than individual values in the data source being changed.  If only one <<instance-definition,instance>> of the data source exists a value of `_default_` or `_latest_` could be used.
+The `instanceId` parameter supports multiple <<instance-definition,instances>> or versions of the same underlying data source to be accessed by a request to the API endpoint.  This is applicable when the entire data source has been regenerated rather than individual values in the data source being changed.  If only one <<instance-definition,instance>> of the data source exists a value of `_default_` or `_latest_` could be used.
 
 [[collection-information-queries]]
 Information resources associated with a specific <<collection-definition,collection>> should be accessed through the `/collections` path. Information resources not associated with a specific <<collection-definition,collection>> should be accessed via the `/{instanceId}/{queryType}` path template.

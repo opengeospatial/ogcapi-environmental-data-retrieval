@@ -13,7 +13,7 @@ If the `datetime` parameter is provided, only resources that have a temporal geo
 ---
 *B:*
 
-If a resource has multiple temporal properties, the API implementor decides whether only a single temporal property is used to determine the extent or all relevant temporal properties.
+If a resource has multiple temporal properties, the API service implementation decides whether only a single temporal property is used to determine the extent or all relevant temporal properties.
 
 ---
 *C:*

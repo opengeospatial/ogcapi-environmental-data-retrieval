@@ -42,7 +42,7 @@ If the `within` query parameter is not specified, an HTTP `400` error should be 
 ---
 *H:*
 
-A `radius` GET or POST operation MUST include a `within-units` query parameter
+A `radius` GET or POST operation SHALL include a `within-units` query parameter
 
 ---
 *I:*

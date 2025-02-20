@@ -1,4 +1,4 @@
-Having multiple versions or instances of the same <<collection-definition,collection>>, where the same information is reprocessed or regenerated is not unusal.  Although these versions could be described as new <<collection-definition,collections>> the instance query type allows this data to be described as different views of the same <<collection-definition,collection>>.
+Having multiple versions or instances of the same <<collection-definition,collection>>, where the same information is reprocessed or regenerated is not unusual.  Although these versions could be described as new <<collection-definition,collections>> the instance query type allows this data to be described as different views of the same <<collection-definition,collection>>.
 
 ===== *Parameter instanceId*
 

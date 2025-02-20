@@ -24,7 +24,7 @@ image::images/REQ_rc-resolution-z-b.png[native resolution corridor example]
 ---
 *C:*
 
-If `resolution-z` is not specified the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.
+If `resolution-z` is not specified the API implementation SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates of the defined corridor.
 
 
 [source,txt]
@@ -33,7 +33,7 @@ resolution-z = number of intervals + 1
 ----
 *D:*
 
-If the specified `resolution-z` value is invalid the API SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-z` values. 
+If the specified `resolution-z` value is invalid the API implementation SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-z` values. 
 
 ---
 ====

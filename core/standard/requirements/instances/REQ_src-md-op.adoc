@@ -7,7 +7,7 @@ identifier:: /req/instances/src-md-op
 
 *A:*
 
-The API SHALL support the HTTP GET operation at the path `/collections/{collectionId}/instances/{instanceId}`.
+The API implementation SHALL support the HTTP GET operation at the path `/collections/{collectionId}/instances/{instanceId}`.
 
 ---
 

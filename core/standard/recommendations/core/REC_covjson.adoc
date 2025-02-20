@@ -3,5 +3,5 @@
 ====
 *A:*
 
-If the resource can be represented for the intended use in CoverageJSON, implementations SHOULD consider to support CoverageJSON as an encoding.
+If the resource can be represented for the intended use in CoverageJSON, implementations SHOULD consider supporting CoverageJSON as an encoding.
 ====

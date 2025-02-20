@@ -10,9 +10,9 @@ identifier:: /req/core/rc-collection-info-links
 A `200`-response SHALL include the following links in the `links` property of the response:
 
 
-* a link to this response document (relation: `self`),
-* a link to the response document in every other media type supported by the server (relation: `alternate`).
-* at least one link to a query end point.
+* A link to this response document (relation: `self`).
+* A link to the response document in every other media type supported by the server (relation: `alternate`).
+* At least one link to a query end point.
 
 ---
 *B:*

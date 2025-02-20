@@ -27,13 +27,13 @@ A `link` property of a `<<col-data_queries,data_queries>>` object SHALL include 
 ---
 *E:*
 
-. if the attribute `type` has the value `position` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
-. if the attribute `type` has the value `radius` verify the `variables` property complies with  <<ats_edr_rc-radius-variables,/req/edr/rc-radius-variables>>
-. if the attribute `type` has the value `area` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
-. if the attribute `type` has the value `cube` verify the `variables` property complies with <<ats_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
-. if the attribute `type` has the value `trajectory` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
-. if the attribute `type` has the value `corridor` verify the `variables` property complies with <<ats_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
-. if the attribute `type` has the value `items` verify the `variables` property complies with  <<ats_edr_rc-items-variables,/req/edr/rc-items-variables>>
-. if the attribute `type` has the value `locations` verify the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the attribute `type` has the value `position`, the `variables` property SHALL comply with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the attribute `type` has the value `radius`, the `variables` property SHALL comply with  <<ats_edr_rc-radius-variables,/req/edr/rc-radius-variables>>
+. if the attribute `type` has the value `area`, the `variables` property SHALL comply with<<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the attribute `type` has the value `cube`, the `variables` property SHALL comply with <<ats_edr_rc-cube-variables,/req/edr/rc-cube-variables>>
+. if the attribute `type` has the value `trajectory`, the `variables` property SHALL comply with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+. if the attribute `type` has the value `corridor`, the `variables` property SHALL comply with <<ats_edr_rc-corridor-variables,/req/edr/rc-corridor-variables>>
+. if the attribute `type` has the value `items`, the `variables` property SHALL complys with  <<ats_edr_rc-items-variables,/req/edr/rc-items-variables>>
+. if the attribute `type` has the value `locations`, the `variables` property SHALL comply with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
 
 ====

@@ -3,5 +3,5 @@
 ====
 *A:*
 
-The number of features in a response to a `next` link SHOULD follow the same rules as for the response to the original query and again include a `next` link, if there are more features in the selection that have not yet been returned.
+If there are more features in the selection that have not yet been returned, the number of features in a response to a `next` link SHOULD follow the same rules as for the response to the original query and again include a `next` link.
 ====

@@ -8,7 +8,7 @@ identifier:: /req/edr/resolution-x-response
 
 *A:*
 
-If the `resolution-x` parameter is provided, it denotes the number of positions to retrieve data for, along the path between (and including) the minimum and maximum x coordinates, width coordinates.
+If the `resolution-x` parameter is provided, it denotes the number of positions to retrieve data for, along the path between (and including) the minimum and maximum x coordinates.
 
 
 .interpolated corridor example
@@ -25,7 +25,7 @@ image::images/REQ_rc-resolution-x-b.png[native resolution corridor example]
 ---
 *C:*
 
-If `resolution-x` is not specified, the API SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates.
+If `resolution-x` is not specified, the API implementation SHOULD return all available data at a resolution determined by the server, including the minimum and maximum coordinates.
 
 [source,txt]
 ----
@@ -33,7 +33,7 @@ resolution-x = number of intervals + 1
 ----
 *D:*
 
-If the specified `resolution-x` value is invalid the API SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-x` values. 
+If the specified `resolution-x` value is invalid the API implementation SHALL return a HTTP 400 error code with a message body which describes the range of valid `resolution-x` values. 
 
 ---
 ====

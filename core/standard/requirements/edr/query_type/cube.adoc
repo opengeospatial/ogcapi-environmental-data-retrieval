@@ -22,7 +22,7 @@ are selected.
 bbox=minx,miny,maxx,maxy
 
 The X and Y coordinates are values in the coordinate system defined by the `crs` query parameter.
-If `crs` is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in meters above mean sea level, or below for negative values. a| * `bbox=-6.0,50.0,-4.35,52.0`
+If `crs` is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be meters above mean sea level, or below for negative values. a| * `bbox=-6.0,50.0,-4.35,52.0`
 a| **z**
 
 * <<req_edr_z-definition,definition>> 
@@ -46,19 +46,19 @@ a| **resolution-x**
 
 * <<req_edr_resolution-x-definition,definition>> 
 
-* <<req_edr_resolution-x-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the x-axis, it denotes the number of intervals to retrieve data for along the x-axis
+* <<req_edr_resolution-x-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the x-axis, it denotes the number of intervals to retrieve data along the x-axis
  a| * `resolution-x=10`
 a| **resolution-y**
 
 * <<req_edr_resolution-y-definition,definition>> 
 
-* <<req_edr_resolution-y-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the y-axis, it denotes the number of intervals to retrieve data for along the y-axis
+* <<req_edr_resolution-y-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the y-axis, it denotes the number of intervals to retrieve data along the y-axis
  a| * `resolution-y=5`
 a| **resolution-z**
 
 * <<req_edr_resolution-z-definition,definition>> 
 
-* <<req_edr_resolution-z-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the z-axis, it denotes the number of intervals to retrieve data for along the z-axis
+* <<req_edr_resolution-z-response,rules>> |String  |No| Defined if the user requires data at a different resolution from the native resolution of the data along the z-axis, it denotes the number of intervals to retrieve data along the z-axis
  a| * `resolution-z=100`
 a| **crs**
 

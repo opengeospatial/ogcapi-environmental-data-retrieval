@@ -13,6 +13,6 @@ If the `within` parameter is provided, all selected information within the speci
 ---
 *B:*
 
-If a `within-units` parameter is not provided, a `400` error WILL be returned.
+If a `within-units` parameter is not provided, a `400` error SHALL be returned.
 
 ====

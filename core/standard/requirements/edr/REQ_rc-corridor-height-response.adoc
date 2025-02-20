@@ -8,7 +8,7 @@ identifier:: /req/edr/REQ_rc-corridor-height-response
 
 *A:*
 
-If the `corridor-height` parameter is defined the result set SHALL contain values derived from the chosen interpolation algorithm at the number of specified intervals.
+If the `corridor-height` parameter is defined, the result set SHALL contain values derived from the implemented interpolation algorithm at the number of specified intervals.
 
 
 
@@ -19,16 +19,16 @@ corridor-height = height
 ---
 *B:*
 
-The height of the corridor parameter is the total height of the required corridor.
+The height of the corridor parameter SHALL be the total height of the required corridor.
 
 ---
 *C:*
 
-The coordinates of the `coords` parameter define the center point of the corridor.
+The coordinates of the `coords` parameter SHALL define the center point of the corridor.
 
 ---
 *D:*
 
-If an unsupported units value is requested, an HTTP `400` error should be returned.
+If an unsupported units value is requested, an HTTP `400` error SHOULD be returned.
 
 ====

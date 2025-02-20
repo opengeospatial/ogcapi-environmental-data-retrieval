@@ -42,7 +42,7 @@ A `cube` GET or POST operation SHALL include a `z` query parameter
 ---
 *H:*
 
-If the `z` query parameter is not specified a HTTP `400` error should be generated
+If the `z` query parameter is not specified a HTTP `400` error SHOULD be generated
 
 ---
 *I:*
