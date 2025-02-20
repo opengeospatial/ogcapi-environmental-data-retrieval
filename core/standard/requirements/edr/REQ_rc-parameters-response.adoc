@@ -8,7 +8,7 @@ identifier:: /req/edr/parameter-name-response
 
 *A:*
 
-If the `parameter-name` parameter is provided, only those parameters named SHALL be returned.  If the `parameter-name` parameter is not specified all parameters in the collection SHALL be returned.
+If the `parameter-name` parameter is provided, only those parameters listed SHALL be returned.  If the `parameter-name` parameter is not specified all parameters in the collection SHALL be returned.
 
 ---
 *B:*
