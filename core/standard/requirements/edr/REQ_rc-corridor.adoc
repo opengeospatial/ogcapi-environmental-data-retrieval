@@ -42,7 +42,7 @@ If the `corridor-width` query parameter is not specified, an HTTP `400` error SH
 ---
 *H:*
 
-A `corridor` GET operation MUST include a `corridor-height` query parameter
+A `corridor` GET operation SHALL include a `corridor-height` query parameter
 
 ---
 *I:*
@@ -52,7 +52,7 @@ If the `corridor-height` query parameter is not specified, an HTTP `400` error S
 ---
 *J:*
 
-A `corridor` GET operation MUST include a `width-units` query parameter
+A `corridor` GET operation SHALL include a `width-units` query parameter
 
 ---
 *K:*
@@ -67,7 +67,7 @@ If the `width-units` query parameter value is not one of the supported values a 
 ---
 *M:*
 
-A `corridor` GET operation MUST include a `height-units` query parameter
+A `corridor` GET operation SHALL include a `height-units` query parameter
 
 ---
 *N:*
