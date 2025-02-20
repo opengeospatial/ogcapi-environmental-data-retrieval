@@ -48,13 +48,14 @@ The OGC API - Common Standard does not define any information resource types
 [[query-resources-section]]
 === Query Resources
 
-_The following tables are the informative definition for the EDR query types, the query types support a mix of optional and required query parameters._ 
-_Where necessary an EDR implementation can use its OpenAPI document response (i.e. `/api`) to provide a normative definition of the functionality of the service allowing a service to advertise which parameters that are although optional as part of the EDR standard are required for the service or vice versa (i.e. the parameter is optional in the EDR standard but not supported by the service)_
+_The following tables are the informative definition for the EDR query types. The query types support a mix of optional and required query parameters._ 
+_Where necessary an EDR implementation can use its OpenAPI document response (i.e. `/api`) to provide a normative definition of the functionality of the service. This allows a service to advertise which parameters, although optional as part of the EDR API Standard, are required for the service or vice versa (i.e. the parameter is optional in the EDR API Standard but not supported by the service)._
 
 `The OpenAPI document for an EDR service *SHALL* be the definitive (NORMATIVE) reference of whether a query parameter is required in any request to the EDR server.`
 
-`ALL EDR implementations *MUST* implement query parameters that are required by the EDR Standard.`
+`ALL EDR implementations *SHALL* implement query parameters that are required by the EDR Standard.`
 
+`At least one of the following queries: Position, Radius, Area, Cube, Trajectory, Corridor, Items, or Locations *SHALL* be implemented.`
 
 
 [#query-resource-table,reftext='{table-caption} {counter:table-num}']
