@@ -12,6 +12,6 @@ For each spatial resource collection, the ``extent`` property (if provided) SHAL
 ---
 *B:*
 
-If a spatial resource has multiple properties with spatial or temporal information, it is the decision of the API implementation whether only a single spatial or temporal geometry property is used to determine the extent or all relevant geometries.
+If a spatial resource has multiple properties with spatial or temporal information, it is the decision of the API server implementation whether only a single spatial or temporal geometry property is used to determine the extent or all relevant geometries.
 
 ====
