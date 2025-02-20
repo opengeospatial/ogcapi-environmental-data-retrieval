@@ -8,7 +8,7 @@ identifier:: /req/edr/REQ_rc-crs-response
 
 *A:*
 
-If the `crs` parameter is provided, the returned information should be reprojected  (if required) to the defined coordinate system.  If the `crs` parameter is not specified the data SHALL be returned in the coordinate reference system defined by the spatial element of the extent section in the collection.
+If the `crs` parameter is provided, the returned information SHOULD be reprojected  (if required) to the defined coordinate system.  If the `crs` parameter is not specified the data SHALL be returned in the coordinate reference system defined by the spatial element of the extent section in the collection.
 
 ---
 *B:*
