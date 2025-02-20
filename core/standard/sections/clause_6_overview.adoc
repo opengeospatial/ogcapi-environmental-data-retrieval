@@ -9,7 +9,7 @@ The https://ogcapi.ogc.org/[OGC API] Standards enable access to resources using 
 The https://ogcapi.ogc.org/edr[OGC API - Environmental Data Retrieval] Standard defines an API with the following goals:
 
 . To make it easier to access a wide range of data through a uniform, well-defined simple Web interface;
-. To allow clients to retrieve a subset of data created by the API in response to a standardized, coordinate orientated, query pattern;
+. To allow clients to retrieve a subset of data hosted and selected by a server via the API in response to a standardized, coordinate orientated, query pattern;
 . To provide 'building blocks' enabling the construction of more complex applications.
 
 An EDR API implementation conformant to this Standard can be considered a 'Sampling API'. The query creates a discrete sampling geometry against the spatio-temporal data resource of a relatively persistent data store. The query and its response are transient resources, but if required the resource could be made persistent for re-use.
