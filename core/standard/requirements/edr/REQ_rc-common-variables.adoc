@@ -38,6 +38,6 @@ A `variables` property MAY include a `crs_details` property which MUST be an arr
 ---
 *G:*
 
-Objects in a `crs_details` array MUST have a `crs` and `wkt` property both of which are of type string.
+Objects in a `crs_details` array SHALL have a `crs` and `wkt` property both of which are of type string.
 
 ====
