@@ -29,7 +29,7 @@ An `area` GET operation SHALL include a `coords` query parameter
 ---
 *E:*
 
-If the `coords` query parameter is not specified a HTTP `400` error should be generated
+If the `coords` query parameter is not specified a HTTP `400` error SHOULD be generated
 
 ---
 *F:*
