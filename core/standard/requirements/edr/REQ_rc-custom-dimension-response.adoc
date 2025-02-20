@@ -28,7 +28,7 @@ An Arithmetic sequence using Recurring value intervals can be specified by **R**
 ---
 *E:*
 
-If a <<rc_custom-dimensions-section,custom dimension>> is defined in the <<collection_metadata_desc, collections>> response but not included in the query request all valid values should be returned with no subsetting by the <<rc_custom-dimensions-section,custom dimension>>.
+If a <<rc_custom-dimensions-section,custom dimension>> is defined in the <<collection_metadata_desc, collections>> response but not included in the query request all valid values SHOULD be returned with no subsetting by the <<rc_custom-dimensions-section,custom dimension>>.
 
 ====
 
