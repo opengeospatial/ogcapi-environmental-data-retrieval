@@ -96,13 +96,13 @@ For simplicity, this Standard generally refers to the HTTP protocol. This is not
 
 So that developers can more easily learn how to implement the EDR API, good documentation is essential for any OGC API Standard. In the best case, documentation would be available both in HTML for human consumption and in a machine-readable format that can be best processed by software for run-time binding.
 
-This OGC Standard specifies requirements and recommendations for implementation APIs that share spatio-temporal resources and want to follow a standard way of doing so. In general, API deployments will go beyond the requirements and recommendations stated in this Standard. They will support additional operations, parameters, etc. that are specific to the specific API deployment or the software tool used to implement the API.
+This OGC Standard specifies requirements and recommendations for implementation APIs that share spatiotemporal resources and want to follow a standard interoperable way of doing so. In general, API deployments will go beyond the requirements and recommendations stated in this Standard. They will support additional operations, parameters, etc. that are specific to the specific API deployment or the software tool used to implement the API.
 
 ==== Role of OpenAPI
 
 This document uses OpenAPI 3.1 fragments as examples and to formally state requirements. However, using OpenAPI 3.1 is not required for implementing a server.
 
-Therefore, the EDR API _Core_ requirements class only requires that an API definition is provided and linked from the landing page.
+Therefore, the EDR API _Core_ requirements class only requires that an API definition is provided and linked from the landing page resource at `{root}/`.
 
 Separate requirements classes are specified for API definitions that follow the <<rc_oas30,OpenAPI Specification 3.0>> and <<rc_oas31,OpenAPI Specification 3.1>>. This does not preclude that in the future or in parallel other versions of OpenAPI or other API descriptions are provided by a server.
 
