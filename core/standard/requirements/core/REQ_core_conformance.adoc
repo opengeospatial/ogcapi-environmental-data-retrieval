@@ -8,7 +8,7 @@ identifier:: /req/core/conformance
 
 *A:*
 
-The list of Conformance Classes advertised by the API SHALL include:
+The list of Conformance Classes advertised by the API endpoint SHALL include:
 
 * https://www.opengis.net/spec/ogcapi-common-1/1.0/conf/core
 * https://www.opengis.net/spec/ogcapi-common-2/1.0/conf/collections
