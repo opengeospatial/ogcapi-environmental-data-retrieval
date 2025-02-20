@@ -61,7 +61,7 @@ identifier:: /conf/trajectory/coords-param-separate-z-linestringzm
 target:: /req/edr/rc-trajectory
 test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z` query parameter is specified
 test-method::
-step::: Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
+step::: If a vertical level is specified in both the `coords` and `z` parameters, check that coords query parameter throws an error 
 step::: Validate that a document was returned with a status code 400.
 ====
 
