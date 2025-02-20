@@ -6,6 +6,6 @@ identifier:: /conf/oas31/security
 target:: /req/oas/security
 test-purpose:: Verify that any authentication protocols implemented by the API are documented in the OpenAPI document.
 test-method::
-step::: Identify all authentication protocols supported by the API.
+step::: Identify all authentication protocols supported by the API implementation incorporating EDR API requirements.
 step::: Validate that each authentication protocol is described in the OpenAPI document by a Security Schema Object and its use specified by a Security Requirement Object.
 ====
