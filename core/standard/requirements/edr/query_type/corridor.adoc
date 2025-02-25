@@ -130,8 +130,8 @@ a| **f**
 
 #If any of the following occurs:#
 
-* Client request contains coords=LINESTRINGZ(...) and a *z* query parameter 
-* Client request contains coords=LINESTRINGM(...) and a *datetime* query parameter 
-* Client request contains coords=LINESTRINGZM(...) and *z* or *datetime* query parameters 
+* Client request contains `coords`=LINESTRINGZ(...) and a *z* query parameter 
+* Client request contains `coords`=LINESTRINGM(...) and a *datetime* query parameter 
+* Client request contains `coords`=LINESTRINGZM(...) and *z* or *datetime* query parameters 
 
 #An error SHALL be thrown by the server#
