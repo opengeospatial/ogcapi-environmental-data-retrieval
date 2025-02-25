@@ -85,7 +85,7 @@ identifier:: /conf/trajectory/coords-param-invalid-linestringz
 target:: /req/edr/rc-trajectory
 test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
 test-method::
-step::: Check coords query parameter with `time` parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
+step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
 step::: Validate that a document was returned with a status code 400.
 ====
 
