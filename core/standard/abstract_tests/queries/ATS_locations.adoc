@@ -15,7 +15,7 @@ step::: Validate that a GeoJSON document was returned with a status code 200 con
 [%metadata]
 identifier:: /conf/locations/location-identifier-invalid
 target:: /req/edr/rc-locations
-test-purpose:: Validate that an error is returned by a `Locations` query when the locationId is invalid.
+test-purpose:: Validate that an error is returned by a `Locations` query when the `locationId` is invalid.
 test-method::
 step::: Check that invalid `locationId` values return an error message
 step::: Validate that a document was returned with a status code 404.
@@ -61,7 +61,7 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
 * Response <<req_core_rc-time-response,/req/core/datetime-response>>
 
-Execute requests with combinations of the "time","parameter-name","crs" and "f" query parameters
+Execute requests with combinations of the `time`,`parameter-name`,`crs` and `f` query parameters
 and verify that only information that matches the selection criteria is returned.
 --
 ====
