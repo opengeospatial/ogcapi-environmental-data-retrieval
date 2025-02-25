@@ -15,9 +15,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/trajectory/no-coords-param
 target:: /req/edr/rc-trajectory
-test-purpose:: Validate that an error is returned by a `Trajectory` query when the coords query parameter is not specified.
+test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is not specified.
 test-method::
-step::: coords query parameter is not specified
+step::: `coords` query parameter is not specified
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -26,9 +26,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/trajectory/coords-param-invalid-linestring
 target:: /req/edr/rc-trajectory
-test-purpose:: Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRING or MULTILINESTRING Well Known Text value.
+test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter does not contain a valid LINESTRING or MULTILINESTRING Well Known Text value.
 test-method::
-step::: Check coords query parameter is a valid Well Known Text LINESTRING or MULTILINESTRING value
+step::: Check `coords` query parameter is a valid Well Known Text LINESTRING or MULTILINESTRING value
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -37,9 +37,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/trajectory/coords-param-invalid-linestringm
 target:: /req/edr/rc-trajectory
-test-purpose:: Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
+test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter does not contain a valid LINESTRINGM or MULTILINESTRINGM Well Known Text value.
 test-method::
-step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `M` coordinate SHALL be a valid Epoch value (as known as UNIX time)
+step::: Check `coords` query parameter with time parameter is a valid Well Known Text LINESTRINGM or MULTILINESTRINGM value, the `m` coordinate SHALL be a valid Epoch value (as known as UNIX time)
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -50,7 +50,7 @@ identifier:: /conf/trajectory/coords-param-separate-z-linestringz
 target:: /req/edr/rc-trajectory
 test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZ or MULTILINESTRINGZ coordinate and the `z` query parameter is specified
 test-method::
-step::: Check coords query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
+step::: Check `coords` query parameter that the system throws an error when a vertical level is specified in both the `coords` and `z` parameters
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -61,7 +61,7 @@ identifier:: /conf/trajectory/coords-param-separate-z-linestringzm
 target:: /req/edr/rc-trajectory
 test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter is a LINESTRINGZM or MULTILINESTRINGZM coordinate and the `z` query parameter is specified
 test-method::
-step::: If a vertical level is specified in both the `coords` and `z` parameters, check that coords query parameter throws an error 
+step::: If a vertical level is specified in both the `coords` and `z` parameters, check that `coords` query parameter throws an error 
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -71,9 +71,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/trajectory/coords-param-invalid-linestringzm
 target:: /req/edr/rc-trajectory
-test-purpose:: Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
+test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter does not contain a valid LINESTRINGZM or MULTILINESTRINGZM Well Known Text value.
 test-method::
-step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZM or MULTILINESTRINGZM value, the `Z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
+step::: Check `coords` query parameter with time parameter is a valid Well Known Text LINESTRINGZM or MULTILINESTRINGZM value, the `z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -83,9 +83,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/trajectory/coords-param-invalid-linestringz
 target:: /req/edr/rc-trajectory
-test-purpose:: Validate that an error is returned by a `Trajectory` query when the coords query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
+test-purpose:: Validate that an error is returned by a `Trajectory` query when the `coords` query parameter does not contain a valid LINESTRINGZ or MULTILINESTRINGZ Well Known Text value.
 test-method::
-step::: Check coords query parameter with time parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `Z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
+step::: Check coords query parameter with `time` parameter is a valid Well Known Text LINESTRINGZ or MULTILINESTRINGZ value, the `z` coordinate SHALL be within the range of vertical levels advertised in the Collection metadata
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -144,7 +144,7 @@ Repeat these tests using the following parameter tests:
 
 
 
-Execute requests with combinations of the "coords", "parameter-name","z","crs" and "f" query parameters
+Execute requests with combinations of the `coords`, `parameter-name`,`z`,`crs` and `f` query parameters
 and verify that only information that matches the selection criteria is returned.
 --
 ====
