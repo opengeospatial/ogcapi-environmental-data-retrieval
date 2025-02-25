@@ -16,9 +16,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/area/no-coords-param
 target:: /req/edr/rc-area
-test-purpose:: Validate that an error is returned by an `Area` query when the coords query parameter is not specified.
+test-purpose:: Validate that an error is returned by an `Area` query when the `coords` query parameter is not specified.
 test-method::
-step::: coords query parameter is not specified
+step::: `coords` query parameter is not specified
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -28,9 +28,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/area/coords-param-invalid
 target:: /req/edr/rc-area
-test-purpose:: Validate that an error is returned by an `Area` query when the coords query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.
+test-purpose:: Validate that an error is returned by an `Area` query when the `coords` query parameter does not contain a valid POLYGON or MULTIPOLYGON Well Known Text value.
 test-method::
-step::: Check coords query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value
+step::: Check `coords` query parameter is a valid Well Known Text POLYGON or MULTIPOLYGON value
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -74,7 +74,7 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
 * Response <<req_core_rc-time-response,/req/core/datetime-response>>
 
-Execute requests with combinations of the "coords","time","parameter-name","z","crs" and "f" query parameters
+Execute requests with combinations of the `coords`,`time`,`parameter-name`,`z`,`crs` and `f` query parameters
 and verify that only information that matches the selection criteria is returned.
 --
 ====

@@ -23,7 +23,7 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
 * Response <<req_core_rc-time-response,/req/core/datetime-response>>
 
-Execute requests with combinations of the "bbox" and "time" query parameters
+Execute requests with combinations of the `bbox` and `time` query parameters
 and verify that only information that matches the selection criteria is returned.
 --
 ====
