@@ -17,7 +17,7 @@ identifier:: /conf/cube/no-bbox-param
 target:: /req/edr/rc-cube
 test-purpose:: Validate that an error is returned by a `Cube` query when the `bbox` query parameter is not specified.
 test-method::
-step::: bbox query parameter is not specified
+step::: `bbox` query parameter is not specified
 step::: Validate that a document was returned with a status code 400.
 ====
 
@@ -26,9 +26,9 @@ step::: Validate that a document was returned with a status code 400.
 [%metadata]
 identifier:: /conf/cube/bbox-param-invalid
 target:: /req/edr/rc-cube
-test-purpose:: Validate that an error is returned by a `Cube` query when the `bbox` query parameter does not contain a valid bbox value.
+test-purpose:: Validate that an error is returned by a `Cube` query when the `bbox` query parameter does not contain a valid `bbox` value.
 test-method::
-step::: Check bbox query parameter is valid
+step::: Check `bbox` query parameter is valid
 step::: Validate that a document was returned with a status code 400.
 ====
 
