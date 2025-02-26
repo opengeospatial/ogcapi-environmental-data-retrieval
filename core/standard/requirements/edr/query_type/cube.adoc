@@ -22,7 +22,7 @@ are selected.
 bbox=minx,miny,maxx,maxy
 
 The X and Y coordinates are values in the coordinate system defined by the `crs` query parameter.
-If `crs` is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be meters above mean sea level, or below for negative values. a| * `bbox=-6.0,50.0,-4.35,52.0`
+If *crs* is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be meters above mean sea level, or below for negative values. a| * `bbox=-6.0,50.0,-4.35,52.0`
 a| **z**
 
 * <<req_edr_z-definition,definition>> 
@@ -41,7 +41,7 @@ a| **parameter-name**
 
 * <<req_edr_parameters-definition,definition>> 
 
-* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names (available options are listed in the **parameter_names** section of the <<collection_metadata_desc, collections>> metadata response) a| * `parameter-name=Visibility,Air%20Temperature`
+* <<req_edr_parameters-response,rules>> |String  |No| Comma delimited list of parameter names (available options are listed in the *parameter_names* section of the <<collection_metadata_desc, collections>> metadata response) a| * `parameter-name=Visibility,Air%20Temperature`
 a| **resolution-x**
 
 * <<req_edr_resolution-x-definition,definition>> 
@@ -64,7 +64,7 @@ a| **crs**
 
 * <<req_edr_crs-definition,definition>> 
 
-* <<req_edr_crs-response,rules>>    |String|No|  Coordinate reference system identifier for the **coords** values and output data (available options are listed in the <<collection_metadata_desc, collections>> metadata response) a| * `crs=EPSG:4326` 
+* <<req_edr_crs-response,rules>>    |String|No|  Coordinate reference system identifier for the *coords* values and output data (available options are listed in the <<collection_metadata_desc, collections>> metadata response) a| * `crs=EPSG:4326` 
 * `crs=A_CUSTOM_LABEL`
 a| **f**
 
