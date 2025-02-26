@@ -40,8 +40,8 @@ are selected.
 
 bbox=minx,miny,maxx,maxy
 
-The X and Y coordinates are values in the coordinate system defined by the `crs` query parameter.
-If `crs` is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in meters above mean sea level. a| * `bbox=-6.0,50.0,-4.35,52.0`
+The X and Y coordinates are values in the coordinate system defined by the *crs* query parameter.
+If *crs* is not defined, the values will be assumed to be WGS84 longitude/latitude coordinates and heights will be assumed to be in meters above mean sea level. a| * `bbox=-6.0,50.0,-4.35,52.0`
 a| **datetime**
 
 * <<req_collections_rc-time-definition,definition>> 
@@ -53,7 +53,7 @@ a| **limit**
 
 * <<req_edr_rc-limit-definition,definition>> 
 
-* <<req_edr_rc-limit-response,rules>> |String  |No| The limit parameter may be used to control the subset of the selected features that should be returned in the response, the page size.
+* <<req_edr_rc-limit-response,rules>> |String  |No| The *limit* parameter may be used to control the subset of the selected features that should be returned in the response, the page size.
 Each page may include information about the number of selected and returned features (numberMatched and numberReturned) as well as links to support paging (link relation next). 
 **This value will be ignored if the requested format or the server does not support paging** a| * `limit=10` 
 
