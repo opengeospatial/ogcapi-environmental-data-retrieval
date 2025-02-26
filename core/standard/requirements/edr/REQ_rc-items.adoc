@@ -12,6 +12,6 @@ For every collection identified in the collections response (path `/collections`
 ---
 *B:*
 
-The parameter `collectionId` is each `id` property in the feature collections response (JSONPath: `$.collections[*].id`).
+The parameter `collectionId` is the `id`  property in the feature collection response (JSONPath: `$.collections[*].id`).
 
 ====

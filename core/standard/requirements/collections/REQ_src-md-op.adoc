@@ -13,6 +13,6 @@ The API implementation SHALL support the HTTP GET operation at the path `/collec
 
 *B:* 
 
-The parameter `collectionId` is each `id` property in the resource collections response (JSONPath: `$.collections[*].id`).
+The parameter `collectionId` is the `id`  property in the resource collection response (JSONPath: `$.collections[*].id`).
 
 ====
