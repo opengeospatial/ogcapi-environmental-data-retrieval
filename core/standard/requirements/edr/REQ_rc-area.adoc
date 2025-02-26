@@ -19,7 +19,7 @@ For every collection identified in the collections response (path `/collections`
 
 *C:*
 
-The parameter `collectionId` is each `id` property in the collections response (JSONPath: `$.collections[*].id`).
+The parameter `collectionId` is the `id`  property in the collection response (JSONPath: `$.collections[*].id`).
 
 ---
 *D:*
