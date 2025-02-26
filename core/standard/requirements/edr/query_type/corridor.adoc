@@ -92,31 +92,31 @@ a| **corridor-width**
 
 * <<req_edr_corridor-width-definition,definition>> 
 
-* <<req_edr_corridor-width-response,rules>> |String  |*Yes*| The width value represents the whole width of the corridor where the trajectory supplied in the coords query parameter is the center point of the corridor
+* <<req_edr_corridor-width-response,rules>> |String  |*Yes*| The width value represents the whole width of the corridor where the trajectory supplied in the *coords* query parameter is the center point of the corridor
  a| * `corridor-width=100`
 a| **width-units**
 
 * <<req_edr_width_units-definition,definition>> 
 
-* <<req_edr_width_units-response,rules>> |String  |*Yes*| Distance units for the corridor-width parameter (available options are defined in the *width_units* attribute of the corridor data_query section in the <<collection_metadata_desc, collections>> metadata response)
+* <<req_edr_width_units-response,rules>> |String  |*Yes*| Distance units for the *corridor-width* parameter (available options are defined in the *width_units* attribute of the corridor data_query section in the <<collection_metadata_desc, collections>> metadata response)
  a| * `width-units=KM`
 a| **corridor-height**
 
 * <<req_edr_corridor-height-definition,definition>> 
 
-* <<req_edr_corridor-height-response,rules>> |String  |*Yes*| The height value represents the whole height of the corridor where the trajectory supplied in the coords query parameter is the center point of the corridor
+* <<req_edr_corridor-height-response,rules>> |String  |*Yes*| The height value represents the whole height of the corridor where the trajectory supplied in the *coords* query parameter is the center point of the corridor
  a| * `corridor-height=100`
 a| **height-units**
 
 * <<req_edr_height_units-definition,definition>> 
 
-* <<req_edr_height_units-response,rules>> |String  |*Yes*| Distance units for the corridor-height parameter (available options are defined in the *height_units* attribute of the corridor data_query section in the <<collection_metadata_desc, collections>> metadata response)
+* <<req_edr_height_units-response,rules>> |String  |*Yes*| Distance units for the *corridor-height* parameter (available options are defined in the *height_units* attribute of the corridor data_query section in the <<collection_metadata_desc, collections>> metadata response)
  a| * `height-units=hPa`
 a| **crs**
 
 * <<req_edr_crs-definition,definition>> 
 
-* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the **coords** values and output data (available options are listed in the <<collection_metadata_desc, collections>> metadata response) a| * `crs=EPSG:4326` 
+* <<req_edr_crs-response,rules>>    |String|No|  coordinate reference system identifier for the *coords* values and output data (available options are listed in the <<collection_metadata_desc, collections>> metadata response) a| * `crs=EPSG:4326` 
 * `crs=A_CUSTOM_LABEL`
 a| **f**
 
