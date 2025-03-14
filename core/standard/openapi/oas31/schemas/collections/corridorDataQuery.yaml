@@ -17,13 +17,13 @@ properties:
     items: 
       type: string
     examples:
-      - km
-      - miles
+      - - km
+        - miles
   height_units:
     description: list of height distance units distance values can be specified in
     type: array
     items: 
       type: string
     examples:
-      - m
-      - hPa
+      - - m
+        - hPa

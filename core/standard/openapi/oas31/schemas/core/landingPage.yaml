@@ -15,30 +15,30 @@ properties:
     items:
       $ref: link.yaml
     examples:
-      - href: https://example.org/edr/api
-        hreflang: en
-        rel: service-desc
-        type: application/vnd.oai.openapi+json;version=3.0
-        title: ""
-      - href: https://example.org/edr/conformance
-        hreflang: en
-        rel: data
-        type: application/json
-        title: ""
-      - href: https://example.org/edr/collections
-        hreflang: en
-        rel: data
-        type: application/json
-        title: ""
+      - - href: https://example.org/edr/api
+          hreflang: en
+          rel: service-desc
+          type: application/vnd.oai.openapi+json;version=3.0
+          title: ""
+        - href: https://example.org/edr/conformance
+          hreflang: en
+          rel: data
+          type: application/json
+          title: ""
+        - href: https://example.org/edr/collections
+          hreflang: en
+          rel: data
+          type: application/json
+          title: ""
   keywords:
     type: array
     items: 
       type: string
     examples:
-      - Temperature
-      - Wind
-      - Point
-      - Trajectory
+      - - Temperature
+        - Wind
+        - Point
+        - Trajectory
   provider:
     type: object
     properties:

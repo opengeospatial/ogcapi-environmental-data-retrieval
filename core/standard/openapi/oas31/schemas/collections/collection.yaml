@@ -13,36 +13,36 @@ properties:
     items:
       $ref: ../core/link.yaml
     examples:
-      - href: https://example.org/service/description.html
-        hreflang: en
-        rel: service-doc
-        type: text/html
-        title: ""
-      - href: https://example.org/service/licence.html
-        hreflang: en
-        rel: licence
-        type: text/html
-        title: ""
-      - href: https://example.org/service/terms-and-conditions.html
-        hreflang: en
-        rel: restrictions
-        type: text/html
-        title: ""
-      - href: https://example.org/edr/collections/the_collection_id/
-        hreflang: en
-        rel: collection
-        type: collection
-        title: Collection
-      - href: https://example.org/edr/collections/the_collection_id/position
-        hreflang: en
-        rel: data
-        type: position
-        title: Position
-      - href: https://example.org/edr/collections/the_collection_id/area
-        hreflang: en
-        rel: data
-        type: area
-        title: Area
+      - - href: https://example.org/service/description.html
+          hreflang: en
+          rel: service-doc
+          type: text/html
+          title: ""
+        - href: https://example.org/service/licence.html
+          hreflang: en
+          rel: licence
+          type: text/html
+          title: ""
+        - href: https://example.org/service/terms-and-conditions.html
+          hreflang: en
+          rel: restrictions
+          type: text/html
+          title: ""
+        - href: https://example.org/edr/collections/the_collection_id/
+          hreflang: en
+          rel: collection
+          type: collection
+          title: Collection
+        - href: https://example.org/edr/collections/the_collection_id/position
+          hreflang: en
+          rel: data
+          type: position
+          title: Position
+        - href: https://example.org/edr/collections/the_collection_id/area
+          hreflang: en
+          rel: data
+          type: area
+          title: Area
   id:
     description: id of the collection
     type: string
@@ -125,10 +125,10 @@ properties:
     items: 
       type: string
     examples:
-      - CoverageJSON
-      - GeoJSON
-      - IWXXM
-      - GRIB
+      - - CoverageJSON
+        - GeoJSON
+        - IWXXM
+        - GRIB
   parameter_names:
     description: list of the data parameters available in the collection
     type: object

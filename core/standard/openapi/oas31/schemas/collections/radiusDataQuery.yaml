@@ -14,5 +14,5 @@ properties:
     items: 
       type: string
     examples:
-      - km
-      - miles
+      - - km
+        - miles
