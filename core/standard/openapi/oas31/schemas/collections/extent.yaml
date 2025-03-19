@@ -126,12 +126,12 @@ properties:
             type: 
               - string
               - "null"
-          examples:
-            - [["2020-11-12T12:15Z","2020-11-12T12:15Z"]]
-            - [["2020-11-12T12:15Z","2020-11-12T12:45Z"]]
-            - [["2022-01-14T09:00Z","2022-01-15T09:00Z"]]
-            - [["2022-01-14T09:00Z","2022-01-14T21:00Z"]]
-            - [["2022-01-14T09:00Z","2022-01-16T09:00Z"]]
+        examples:
+          - [["2020-11-12T12:15Z","2020-11-12T12:15Z"]]
+          - [["2020-11-12T12:15Z","2020-11-12T12:45Z"]]
+          - [["2022-01-14T09:00Z","2022-01-15T09:00Z"]]
+          - [["2022-01-14T09:00Z","2022-01-14T21:00Z"]]
+          - [["2022-01-14T09:00Z","2022-01-16T09:00Z"]]
       values:
         description: |-
             Provides information about the time intervals available in the collection 
@@ -147,12 +147,12 @@ properties:
             - string
             - "null"
           minItems: 1
-          examples:
-            - ["2020-11-12T12:15Z"]
-            - ["2020-11-12T12:15Z","2020-11-12T12:30Z","2020-11-12T12:45Z"]
-            - ["R12/2022-01-14T09:00Z/2022-01-15T09:00Z"]
-            - ["R12/2022-01-14T09:00Z/PT1H"]
-            - ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
+        examples:
+          - ["2020-11-12T12:15Z"]
+          - ["2020-11-12T12:15Z","2020-11-12T12:30Z","2020-11-12T12:45Z"]
+          - ["R12/2022-01-14T09:00Z/2022-01-15T09:00Z"]
+          - ["R12/2022-01-14T09:00Z/PT1H"]
+          - ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
       trs:
         description: >-
           Coordinate reference system of the coordinates in the temporal extent
@@ -195,8 +195,8 @@ properties:
             type: 
               - string
               - "null"
-          examples: 
-            - [["2","100"]]
+        examples: 
+          - [["2","100"]]
       values:
         description: |-
           Vertical level intervals that data in the collection is available at 
@@ -208,13 +208,13 @@ properties:
         type: array
         minItems: 1
         items:
-            type: 
-              - string
-              - "null"
-            examples:
-              - ["2/100"]
-              - ["R20/1000/-50"]
-              - ["2","10","80", "100"]
+          type: 
+            - string
+            - "null"
+        examples:
+          - ["2/100"]
+          - ["R20/1000/-50"]
+          - ["2","10","80", "100"]
       vrs:
         description: |-
           Coordinate reference system of the coordinates in the vertical extent
@@ -255,8 +255,8 @@ properties:
               type: 
                 - string
                 - "null"
-            examples: 
-              - [["0","50"]]
+          examples: 
+            - [["0","50"]]
         values:
           description: |-
             values that  data in the collection is available at 
@@ -271,10 +271,10 @@ properties:
             type: 
               - string
               - "null"
-            examples: 
-              - ["25/75"]
-              - ["R20/0/5"]
-              - ["25","50","75"]
+          examples: 
+            - ["25/75"]
+            - ["R20/0/5"]
+            - ["25","50","75"]
         reference:
           description: |-
             URI to a definition or description of the custom dimension

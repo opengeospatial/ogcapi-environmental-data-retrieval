@@ -16,5 +16,5 @@ properties:
     items: 
       type: string
     examples:
-      - m
-      - hPa
+      - - m
+        - hPa

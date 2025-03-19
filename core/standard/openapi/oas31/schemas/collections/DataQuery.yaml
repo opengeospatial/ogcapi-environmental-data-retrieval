@@ -24,10 +24,10 @@ properties:
     items: 
       type: string
     examples:
-      - CoverageJSON
-      - GeoJSON
-      - IWXXM
-      - GRIB
+      - - CoverageJSON
+        - GeoJSON
+        - IWXXM
+        - GRIB
   default_output_format:
     description: default output format for the Position query
     type: string
