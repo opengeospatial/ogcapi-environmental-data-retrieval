@@ -4059,7 +4059,15 @@
               "description": "Temporal reference system",
               "properties": {
                 "calendar": {
-                  "type": "string"
+                  "type": "string",
+                  "oneOf": [
+                    {
+                      "const": "Gregorian"
+                    },
+                    {
+                      "pattern": "^https?://"
+                    }
+                  ]
                 },
                 "timeScale": {
                   "type": "string"
@@ -4142,6 +4150,7 @@
           "axes": {
             "type": "object",
             "description": "Set of Axis objects, keyed by axis identifier",
+            "minProperties": 1,
             "patternProperties": {
               ".+": {
                 "$ref": "#/components/schemas/anyAxis"
@@ -5364,6 +5373,7 @@
         ]
       },
       "coveragejson": {
+        "$id": "https://schemas.opengis.net/covjson/1.0/coveragejson.json",
         "$schema": "http://json-schema.org/draft-07/schema",
         "description": "A CoverageJSON object",
         "type": "object",
@@ -5715,6 +5725,7 @@
               "axes": {
                 "type": "object",
                 "description": "Set of Axis objects, keyed by axis identifier",
+                "minProperties": 1,
                 "patternProperties": {
                   ".+": {
                     "$ref": "#/components/schemas/anyAxis"
@@ -6763,7 +6774,15 @@
                   "description": "Temporal reference system",
                   "properties": {
                     "calendar": {
-                      "type": "string"
+                      "type": "string",
+                      "oneOf": [
+                        {
+                          "const": "Gregorian"
+                        },
+                        {
+                          "pattern": "^https?://"
+                        }
+                      ]
                     },
                     "timeScale": {
                       "type": "string"
