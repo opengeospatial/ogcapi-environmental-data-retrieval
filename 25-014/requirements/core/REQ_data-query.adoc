@@ -1,0 +1,13 @@
+[[req_class_a_name_3]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-a/req-name-3
+part:: A data_queries requirement definition SHALL specify which data queries a service supports. This can be defined as follows:
+
+* Enumerated list of query types
+
+Each data_query type listed SHALL also have a requirement definition.
+
+====

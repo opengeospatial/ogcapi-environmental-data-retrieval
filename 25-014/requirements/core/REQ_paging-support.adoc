@@ -1,0 +1,11 @@
+[[req_class_a_name_13]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-a/req-name-13
+part:: Paging support depends on query pattern an output format. A requirement SHALL be created for each combination of query pattern and output format that must support paging.
+
+Each paging requirement SHOULD also include a recommendation for the default number of items to return per page request.
+
+====

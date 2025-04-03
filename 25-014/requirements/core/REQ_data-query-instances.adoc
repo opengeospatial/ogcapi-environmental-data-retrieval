@@ -1,0 +1,9 @@
+[[req_class_a_name_10]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-a/req-name-10
+part:: Instances SHALL be defined in the data_queries enumerated list if the collection has child instances that can be queried.
+
+====

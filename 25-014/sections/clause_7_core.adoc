@@ -1,0 +1,80 @@
+[[core-section]]
+
+== Requirement Class Core
+
+Paragraph
+
+include::../requirements/requirements_class_core.adoc[]
+
+=== Requirement 1
+
+include::../requirements/core/REQ_asynchronous.adoc[]
+
+=== Requirement 2
+
+include::../requirements/core/REQ_conformance-test.adoc[]
+
+=== Requirement 3
+
+include::../requirements/core/REQ_data-query.adoc[]
+
+=== Requirement 4
+
+include::../requirements/core/REQ_data-query-area.adoc[]
+
+=== Requirement 5
+
+include::../requirements/core/REQ_data-query-corridor.adoc[]
+
+=== Requirement 6
+
+include::../requirements/core/REQ_data-query-cube.adoc[]
+
+=== Requirement 7
+
+include::../requirements/core/REQ_data-query-instances.adoc[]
+
+=== Requirement 8
+
+include::../requirements/core/REQ_data-query-position.adoc[]
+
+=== Requirement 9
+
+include::../requirements/core/REQ_data-query-radius.adoc[]
+
+=== Requirement 10
+
+include::../requirements/core/REQ_data-query-trajectory.adoc[]
+
+=== Requirement 11
+
+include::../requirements/core/REQ_extent.adoc[]
+
+=== Requirement 12
+
+include::../requirements/core/REQ_id.adoc[]
+
+=== Requirement 13
+
+include::../requirements/core/REQ_output-format.adoc[]
+
+=== Requirement 14
+
+include::../requirements/core/REQ_paging-support.adoc[]
+
+=== Requirement 15
+
+include::../requirements/core/REQ_parameter-names.adoc[]
+
+=== Requirement 16
+
+include::../requirements/core/REQ_publishing.adoc[]
+
+=== Requirement 17
+
+include::../requirements/core/REQ_requirements-set.adoc[]
+
+=== Requirement 18
+
+include::../requirements/core/REQ_status-codes.adoc[]
+

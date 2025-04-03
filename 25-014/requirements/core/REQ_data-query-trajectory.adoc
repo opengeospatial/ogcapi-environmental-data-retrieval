@@ -1,0 +1,14 @@
+[[req_class_core_name_9]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-core/req-name-9
+part:: A trajectory requirement SHALL specify the following:
+
+* Enumerated list of output_format types
+* The default_output_format
+* Enumerated list of crs_details values
+* Enumerated list of the operations that the query supports (i.e. GET, POST)
+
+====

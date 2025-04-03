@@ -1,0 +1,16 @@
+[[req_class_a_name_4]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-a/req-name-4
+part:: A position query requirement SHALL specify the following:
+
+* Enumerated list of output_format types
+* The default_output_format
+* Enumerated list of crs_details values
+* Enumerated list of the operations that the query supports (i.e. GET, POST)
+
+A position query requirement SHALL also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
+
+====

@@ -1,0 +1,21 @@
+[obligation=informative]
+[[context-section]]
+
+== Context
+
+=== Standardization Goal
+
+
+
+=== Modular Specification
+
+This Standard is a profile of the "OGC ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards" (ModSpec).
+
+image::images/img02.png[align="center"]
+
+<<fig-6-1,Figure 1>> represents the UML model for modular Standards described in the ModSpec Standard. 
+
+
+=== EDR API Standard
+
+The Standardization Target Type of this Standard is profiles of the OGC Web APIs for EDR Standard.  

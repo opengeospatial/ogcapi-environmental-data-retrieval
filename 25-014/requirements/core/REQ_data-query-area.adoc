@@ -1,0 +1,14 @@
+[[req_class_a_name_6]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-a/req-name-6
+part:: An area query requirement SHALL specify the following:
+
+* Enumerated list of output_format types
+* The default_output_format
+* Enumerated list of crs_details values
+* Enumerated list of the operations that the query supports (i.e. GET, POST)
+
+====
