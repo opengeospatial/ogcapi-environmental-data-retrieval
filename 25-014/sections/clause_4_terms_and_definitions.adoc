@@ -16,7 +16,7 @@ Body of resources that belong or are used together. An aggregate, set, or group 
 A set of related conformance classes and their associated components. 
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 NOTE: When no ambiguity is possible, the word `test` may be omitted. i.e. conformance test module is the same as conformance module. Conformance modules may be nested in a hierarchical way.
 
@@ -25,7 +25,7 @@ NOTE: When no ambiguity is possible, the word `test` may be omitted. i.e. confor
 A set of conformance tests that must be passed to receive a single certificate of conformance. 
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 NOTE: When no ambiguity is possible, the word _test_ may be left out, so conformance test class maybe called a conformance class.
 
@@ -34,35 +34,35 @@ NOTE: When no ambiguity is possible, the word _test_ may be left out, so conform
 A test, abstract or real, of one or more requirements contained within a standard, or set of standards.
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 === Requirement 
 
 Expression in the content of a standard conveying criteria to be fulfilled if compliance with the standard is to be claimed and from which no deviation is permitted.
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 === Requirements Class
 
 An aggregate of requirements with a single standardization target type that must all be satisfied to pass a conformance test Class.
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 === Requirements Module
 
 A set of related requirement classes and their associated components. 
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 === Standardization Target
 
 Entity to which some requirements of a standard apply. 
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
 
 NOTE: The standardization target is the entity which may receive a certificate of conformance for a requirements class.
 
@@ -73,4 +73,4 @@ Type of entity or set of entities to which the requirement of a standard apply
 NOTE: For example, the standardization target type for The OGC API – Features Standard are Web APIs. The standardization target type for the CDB Standard is “datastore”. It is important to understand that a standard’s root standardization target type can have sub-types, and that there can be a hierarchy of target types. For example, a Web API can have sub types of client, server, security, and so forth. As such, each requirements class can have a standardization target type that is a sub-type of the root.
 
 [.source]
-(<<ogc-modspec,OGC 08-131r5>>)
+<<ogc-modspec,OGC 08-131r5>>
