@@ -1,9 +1,12 @@
+
+[[terms_and_definitions-section]]
 == Terms and definitions
 
 This document uses the terms defined in OGC Policy Directive 49, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word "`shall`" (not "`must`") is the verb form used to indicate a requirement to be strictly followed to conform to this standard.
 
 For the purposes of this document, the following additional terms and definitions apply.
 
+[[collection-definition]]
 === Collection
 
 Body of resources that belong or are used together. An aggregate, set, or group of related resources. 
@@ -11,6 +14,7 @@ Body of resources that belong or are used together. An aggregate, set, or group 
 [.source]
 (OGC20-024)
 
+[[conformance_module-definition]]
 === Conformance Module; Conformance Test Module
 
 A set of related conformance classes and their associated components. 
@@ -20,6 +24,7 @@ A set of related conformance classes and their associated components.
 
 NOTE: When no ambiguity is possible, the word `test` may be omitted. i.e. conformance test module is the same as conformance module. Conformance modules may be nested in a hierarchical way.
 
+[[conformance-class-definition]]
 === Conformance Class; Conformance Test Class
 
 A set of conformance tests that must be passed to receive a single certificate of conformance. 
@@ -29,6 +34,7 @@ A set of conformance tests that must be passed to receive a single certificate o
 
 NOTE: When no ambiguity is possible, the word _test_ may be left out, so conformance test class maybe called a conformance class.
 
+[[conformance_test-definition]]
 === Conformance Test
 
 A test, abstract or real, of one or more requirements contained within a standard, or set of standards.
@@ -36,6 +42,7 @@ A test, abstract or real, of one or more requirements contained within a standar
 [.source]
 <<ogc-modspec,OGC 08-131r5>>
 
+[[requirement-definition]]
 === Requirement 
 
 Expression in the content of a standard conveying criteria to be fulfilled if compliance with the standard is to be claimed and from which no deviation is permitted.
@@ -43,6 +50,7 @@ Expression in the content of a standard conveying criteria to be fulfilled if co
 [.source]
 <<ogc-modspec,OGC 08-131r5>>
 
+[[requirements_class-definition]]
 === Requirements Class
 
 An aggregate of requirements with a single standardization target type that must all be satisfied to pass a conformance test Class.
@@ -50,6 +58,7 @@ An aggregate of requirements with a single standardization target type that must
 [.source]
 <<ogc-modspec,OGC 08-131r5>>
 
+[[requirements_module-definition]]
 === Requirements Module
 
 A set of related requirement classes and their associated components. 
@@ -57,6 +66,15 @@ A set of related requirement classes and their associated components.
 [.source]
 <<ogc-modspec,OGC 08-131r5>>
 
+[[standardization_goal-definition]]
+=== Standardization Goal
+
+A concise statement of the problem that the standard helps address and the strategy envisioned for achieving a solution. This strategy typically identifies real-world entities that need to be modified or constrained. At the abstract level, those entities are the Standardization Target Types.
+
+[.source]
+<<ogc-modspec,OGC 08-131r5>>
+
+[[standardization_target-definition]]
 === Standardization Target
 
 Entity to which some requirements of a standard apply. 
@@ -66,6 +84,7 @@ Entity to which some requirements of a standard apply.
 
 NOTE: The standardization target is the entity which may receive a certificate of conformance for a requirements class.
 
+[[standardization_target_type-definition]]
 === Standardization Target Type
 
 Type of entity or set of entities to which the requirement of a standard apply
