@@ -12,5 +12,12 @@
                 "title":"OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow",
                 "version":"1.0.0",
                 "path":"extensions/pubsub/standard/document.adoc"
-        }        
+        } 
+        "2":  {
+                "OGC_doc_number": "25-014",
+                "urn":"https://www.opengis.net/doc/IS/ogcapi-edr-3/1.0",
+                "title":"OGC API - Environmental Data Retrieval - Part 3: Profiles",
+                "version":"1.0.0",
+                "path":"25-014/25-014.adoc"
+        }    
 }
