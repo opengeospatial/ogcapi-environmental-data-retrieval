@@ -8,6 +8,6 @@ part:: A data_queries requirement definition SHALL specify which data queries a 
 
 * Enumerated list of query types
 
-Each data_query type listed SHALL also have a requirement definition.
+part:: Each data_query type listed SHALL also have a requirement definition.
 
 ====
