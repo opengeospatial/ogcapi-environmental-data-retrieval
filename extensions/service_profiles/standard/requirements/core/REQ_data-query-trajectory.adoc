@@ -1,0 +1,14 @@
+[[req_core_data-query-trajectory]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/data-query-trajectory
+part:: A trajectory requirement _SHALL_ specify the following:
+
+* Enumerated list of output_format types
+* The default_output_format
+* Enumerated list of crs_details values
+* Enumerated list of the operations that the query supports (i.e. GET, POST)
+
+====

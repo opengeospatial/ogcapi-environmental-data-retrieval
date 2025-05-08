@@ -1,0 +1,9 @@
+[[req_class_a_name_2]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/req-class-a/req-name-2
+part:: The server SHALL support process input values encoded as qualified values.
+part:: The value of the `value` key SHALL be an _object_ instance.
+====

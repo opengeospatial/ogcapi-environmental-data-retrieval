@@ -1,0 +1,13 @@
+[[req_core_asynchronous]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/asynchronous
+part:: A requirement _SHALL_ be defined for each query type that is asynchronous.
+
+part:: ach asynchronous query type requirement _SHALL_ define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.
+
+part:: The requirement _SHALL_ document the mechanism for delivering the result of the asynchronous query. This documentation can be a link to another document.  
+
+====
