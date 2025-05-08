@@ -1,10 +1,13 @@
-[[req_core_data-query-corridor]]
+[[req_service-profile_data-query-corridor]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/data-query-corridor
-part:: A corridor requirement _SHALL_ specify the following:
+identifier:: /req/service-profile/data-query-corridor
+
+part:: A requirement MAY be defined to make support for a Corridor query mandatory.
+
+part:: A Corridor requirement SHALL specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

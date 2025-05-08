@@ -1,17 +1,12 @@
-[[req_core_paging-support]]
+[[req_service-profile_pagging-support]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/paging-support
-part:: Paging support depends on query pattern and output format. A requirement _SHALL_ be created for each combination of query pattern and output format that must support paging.
+identifier:: /req/service-profile/pagging-support
 
-====
+part:: Paging support depends on query pattern an output format. A requirement MAY be created for each combination of query pattern and output format that must support paging.
 
-[recommendation]
-====
-[%metadata]
-identifier:: /rec/core/paging-support
-part:: Each paging requirement _SHOULD_ also include a recommendation for the default number of items to return per page request.
+Each paging requirement SHOULD also include a recommendation for the default number of items to return per page request.
 
 ====

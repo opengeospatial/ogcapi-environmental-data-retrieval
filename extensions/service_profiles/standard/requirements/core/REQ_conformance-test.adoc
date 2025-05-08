@@ -1,11 +1,10 @@
-[[req_core_conformance-test]]
+[[req_service-profile_conformance-test]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/conformance-test
-part:: For each of the requirements defined in the profile there SHALL be a conformance test which defines how to validate compliance with the requirement.
+identifier:: /req/service-profile/conformance-test
 
-NOTE: this requirement can be deleted since modspec conformance addresses this issue.
+part:: For each of the requirements defined in the profile there SHALL be a conformance test which defines how to validate compliance with the requirement.
 
 ====

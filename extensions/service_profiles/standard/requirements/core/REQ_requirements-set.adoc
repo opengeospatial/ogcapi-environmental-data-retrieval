@@ -1,10 +1,14 @@
-[[req_core_requirements-set]]
+[[req_service-profile_requirements-set]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/requirements-set
-part:: The profile _SHALL_ consists of a set of requirements for a collection and (if the collection supports instances) the instances of the collection. 
-part:: For each of the attributes listed, if it is in the collection (or instance), there _SHALL_ be a requirement to define it.
+identifier:: /req/service-profile/requirements-set
+
+part:: The profile SHALL consists of a set of requirements for a collection and (if the collection supports instances) the instances of the collection. For each of the attributes listed, if it is in the collection (or instance), there SHALL be a requirement to define it.
+
+part:: A profile MAY include requirements for the landing page.
+
+part:: A profile MAY include requirements for multiple collections.
 
 ====

@@ -1,0 +1,15 @@
+[[req_service-profile_instanceid]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/instanceid
+
+part:: A requirement MAY be defined to specifying the rules that Instance id values must follow.
+
+part:: The Requirement definition rules for Instance id values can be one of the following:
+
+* identifier string
+* Regular expression defining valid string patterns.
+
+====

@@ -1,0 +1,10 @@
+[[req_service-profile_api]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/api
+
+part:: A requirement MAY be defined to which specifies the versions of OpenAPI SHALL be supported.
+
+====

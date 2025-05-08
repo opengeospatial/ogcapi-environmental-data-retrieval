@@ -1,27 +1,27 @@
-[[req_core_publishing]]
+[[req_service-profile_publishing]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/publishing
-part:: An EDR profile _SHALL_ be published as an OpenAPI JSON document. 
-part:: The rules described in the requirements _SHALL_ be encoded using the OpenAPI 3.1 specification.
-part:: The requirement rules _SHALL_ be encoded in either the OpenAPI Path Item or in the Response object schema sections of the document.
+identifier:: /req/service-profile/publishing
 
-====
+part:: An EDR profile SHALL be published as an OpenAPI JSON document. The rules described in the requirements SHALL be encoded using the OpenAPI 3.1 specification, The requirement rules are encoded in either the OpenAPI Path Item or in the Response object schema sections of the document.
 
-[requirement]
-====
-[%metadata]
-identifier:: /req/core/openapi
-statement:: The profile OpenAPI document _SHALL_ describe the profile EDR API as follows:
-part:: The servers attributes of the OpenAPI root object _SHALL_ be blank (the profile is not linked to specific implementations)
-part:: The Extent requirement rules _SHALL_ be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object
-part:: The data_query type requirement rules _SHALL_ be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object
-part:: The data_query types _SHALL_ be encoded as Paths objects in the OpenAPI document, where appropriate the output_format, default_output_format, crs, within_units, width-units, height-units and limit (paging) requirements SHALL be encoded in the child Parameter objects of the Paths object.
-part:: The output_format requirement rules _SHALL_ be encoded in the 200 responses of the data_query type Paths objects
-part:: The Parameter_names requirements _SHALL_ be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object.
-part:: An EDR API _SHALL_ advertise the location of the profile OpenAPI document it complies
-part:: An EDR API _SHALL_ advertise the location of the profile OpenAPI document it complies with in the links section of the API root with a link relation value of ‘profile’
+The profile OpenAPI document should describe the profile EDR API as follows:
 
+The servers attributes of the OpenAPI root object SHALL be blank (the profile is not linked to specific implementations)
+
+The Extent requirement rules SHALL be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object of the profile OpenAPI document
+
+The data_query type requirement rules SHALL be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object of the profile OpenAPI document
+
+The data_query types SHALL be encoded as Paths objects in the OpenAPI document, where appropriate the output_format, default_output_format, crs, within_units, width-units, height-units and limit (paging) requirements SHALL be encoded in the child Parameter objects of the Paths object.
+
+The output_format requirement rules SHALL be encoded in the 200 responses of the data_query type Paths objects
+
+The Parameter_names requirements SHALL be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object of the profile OpenAPI document.
+
+An EDR API SHALL advertise the location of the profile OpenAPI document it complies
+
+An EDR API SHALL advertise the location of the profile OpenAPI document it complies with in the links section of the API root with a link relation value of ‘profile’
 ====

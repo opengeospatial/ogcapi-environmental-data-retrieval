@@ -1,10 +1,12 @@
-[[req_core_data-query-area]]
+[[req_service-profile_data-query-area]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/data-query-area
-part:: An area query requirement _SHALL_ specify the following:
+identifier:: /req/service-profile/data-query-area
+part:: A requirement MAY be defined to make support for an Area query mandatory.
+
+part:: An Area query requirement SHALL specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

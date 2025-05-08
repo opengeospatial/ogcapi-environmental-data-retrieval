@@ -1,10 +1,13 @@
-[[req_core_data-query-radius]]
+[[req_service-profile_radius]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/data-query-radius
-part:: A radius query requirement _SHALL_ specify the following:
+identifier:: /req/service-profile/radius
+
+part:: A requirement MAY be defined to make support for an Radius query mandatory.
+
+part:: A Radius query requirement SHALL specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

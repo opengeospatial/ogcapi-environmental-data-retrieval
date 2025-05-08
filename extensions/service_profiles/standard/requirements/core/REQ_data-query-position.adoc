@@ -1,16 +1,19 @@
-[[req_core_data-query-position]]
+[[req_service-profile_position]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/data-query-position
-part:: A position query requirement _SHALL_ specify the following:
+identifier:: /req/service-profile/position
+
+part:: A requirement MAY be defined to make support for an Position query mandatory.
+
+part:: A Position query requirement SHALL specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
 
-part:: A position query requirement _SHALL_ also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
+A position query requirement SHALL also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
 
 ====

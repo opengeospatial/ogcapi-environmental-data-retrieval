@@ -1,0 +1,31 @@
+[[req_service-profile_links]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/links
+
+part:: A requirement MAY be defined to which specifies links their definitions which must be included in a response.
+
+part:: The link requirement definition would specify the required link objects in full. As a minimum the required link object SHALL specify `href`, `rel` and `type` attributes.
+
+for example:
+
+[source,JSON]
+----
+
+    {
+        "href": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "rel": "licence",
+        "type": "text/html"
+    },
+    {
+        "href": "https://docs.ogc.org/cs/21-069r2/21-069r2.html",
+        "rel": "service-doc",
+        "title": "CoverageJSON Community Standard v1.0"
+        "type": "text/html"
+    }
+
+----
+
+====

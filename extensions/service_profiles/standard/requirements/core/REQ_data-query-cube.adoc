@@ -1,10 +1,13 @@
-[[req_core_data-query-cube]]
+[[req_service-profile_data-query-cube]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/data-query-cube
-part:: A cube requirement _SHALL_ specify the following:
+identifier:: /req/service-profile/data-query-cube
+
+part:: A requirement MAY be defined to make support for a Cube query mandatory.
+
+part:: A Cube requirement SHALL specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format
