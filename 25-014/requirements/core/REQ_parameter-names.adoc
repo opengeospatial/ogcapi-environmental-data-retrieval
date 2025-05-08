@@ -1,9 +1,9 @@
-[[req_class_a_name_11]]
+[[req_core_parameter-names]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-11
-part:: The parameter_names requirement definition would specify the required parameter_names objects in full. The parameter_names object defines the name, units, data type and measurement duration of the data value so it is essential that all implementations are consistent for interoperability.
+identifier:: /req/core/parameter-names
+part:: The parameter_names requirement definition _SHALL_ specify the required parameter_names objects in full. The parameter_names object defines the name, units, data type and measurement duration of the data value so it is essential that all implementations are consistent for interoperability.
 
 ====

@@ -1,9 +1,9 @@
-[[req_class_a_name_10]]
+[[req_core_data-query-instance]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-10
-part:: Instances SHALL be defined in the data_queries enumerated list if the collection has child instances that can be queried.
+identifier:: /req/core/data-query-instance
+part:: Instances _SHALL_ be defined in the data_queries enumerated list if the collection has child instances that can be queried.
 
 ====

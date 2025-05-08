@@ -10,6 +10,12 @@ include::../requirements/requirements_class_core.adoc[]
 
 ==== Conformance to the ModSpec
 
+include::../requirements/core/REQ_modspec.adoc[]
+
+==== Profile OGC API - EDR
+
+include::../requirements/core/REQ_EDR-conformant.adoc[]
+
 ==== Requirement 2
 
 include::../requirements/core/REQ_conformance-test.adoc[]

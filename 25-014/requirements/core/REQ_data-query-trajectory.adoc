@@ -1,10 +1,10 @@
-[[req_class_core_name_9]]
+[[req_core_data-query-trajectory]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-core/req-name-9
-part:: A trajectory requirement SHALL specify the following:
+identifier:: /req/core/data-query-trajectory
+part:: A trajectory requirement _SHALL_ specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

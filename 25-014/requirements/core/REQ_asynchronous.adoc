@@ -1,13 +1,13 @@
-[[req_class_a_name_14]]
+[[req_core_asynchronous]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-14
-part:: A requirement SHALL be defined for each query type that is asynchronous.
+identifier:: /req/core/asynchronous
+part:: A requirement _SHALL_ be defined for each query type that is asynchronous.
 
-Each asynchronous query type requirement SHALL define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.
+part:: ach asynchronous query type requirement _SHALL_ define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.
 
-The requirement will also document (this can be a link to another document) the mechanism for delivering the result of the asynchronous query.
+part:: The requirement _SHALL_ document the mechanism for delivering the result of the asynchronous query. This documentation can be a link to another document.  
 
 ====

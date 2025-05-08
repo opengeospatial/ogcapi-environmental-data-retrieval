@@ -1,9 +1,9 @@
-[[req_class_a_name_1]]
+[[req_core_id]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-1
+identifier:: /req/core/id
 part:: A Requirement definition _SHALL_ specify the rules that the Collection id string must follow. This can be one of the following:
 
 * identifier string

@@ -1,9 +1,11 @@
-[[req_class_a_name_19]]
+[[req_core_conformance-test]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-19
+identifier:: /req/core/conformance-test
 part:: For each of the requirements defined in the profile there SHALL be a conformance test which defines how to validate compliance with the requirement.
+
+NOTE: this requirement can be deleted since modspec conformance addresses this issue.
 
 ====

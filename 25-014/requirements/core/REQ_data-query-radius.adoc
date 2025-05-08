@@ -1,10 +1,10 @@
-[[req_class_a_name_5]]
+[[req_core_data-query-radius]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-5
-part:: A radius query requirement SHALL specify the following:
+identifier:: /req/core/data-query-radius
+part:: A radius query requirement _SHALL_ specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

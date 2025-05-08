@@ -1,10 +1,10 @@
-[[req_class_a_name_7]]
+[[req_core_data-query-corridor]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-7
-part:: A corridor requirement SHALL specify the following:
+identifier:: /req/core/data-query-corridor
+part:: A corridor requirement _SHALL_ specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

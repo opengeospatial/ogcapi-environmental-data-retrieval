@@ -1,10 +1,11 @@
-[[req_class_a_name_17]]
+[[req_core_status-codes]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-17
-part:: For every http status code supported by the profile. A requirement SHALL be created. The requirement SHALL provide the following:
+identifier:: /req/core/status-codes
+part:: For every http status code supported by the profile. A requirement _SHALL_ be created. 
+part:: The requirement _SHALL_ provide the following:
 
 * A description of the cause of the error.
 * A JSON schema for the message body structure

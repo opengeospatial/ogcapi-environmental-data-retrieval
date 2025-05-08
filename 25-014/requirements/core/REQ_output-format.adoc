@@ -1,10 +1,10 @@
-[[req_class_a_name_12]]
+[[rec_core_output-format]]
 
-[requirement]
+[recommendation]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-12
-part:: For every output_format specified in any of the data_query enumerated lists there SHOULD be a requirement which defines the schema or structure of the data (depending on the format). Suggested definition approaches are as follows:
+identifier:: /rec/core/output-format
+part:: For every output_format specified in any of the data_query enumerated lists there _SHOULD_ be a requirement which defines the schema or structure of the data (depending on the format). Suggested definition approaches are as follows:
 
 * JSON – Link to a JSON Schema definition
 * XML – Link to a XML Schema definition

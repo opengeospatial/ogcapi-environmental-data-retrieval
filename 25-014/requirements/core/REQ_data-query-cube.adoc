@@ -1,10 +1,10 @@
-[[req_class_a_name_8]]
+[[req_core_data-query-cube]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-9
-part:: A cube requirement SHALL specify the following:
+identifier:: /req/core/data-query-cube
+part:: A cube requirement _SHALL_ specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format

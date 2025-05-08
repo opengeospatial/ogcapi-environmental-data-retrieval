@@ -1,25 +1,25 @@
-[[req_class_a_name_2]]
+[[req_core_extent]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-2
-part:: An extent requirements definition SHALL specify the rules for the spatial CRS, and where supported temporal TRS, vertical VRS and any custom dimension attributes. The attributes are constrained by one of:
+identifier:: /req/core/extent
+part:: An extent requirements definition _SHALL_ specify the rules for the spatial CRS, and where supported temporal TRS, vertical VRS and any custom dimension attributes. The attributes are constrained by one of:
 
 * Enumerated list of valid crs values
 * Regular expression defining valid crs string patterns.
 
-If the collection has a temporal dimension one of:
+part:: If the collection has a temporal dimension one of:
 
 * Enumerated list of valid trs values
 * Regular expression defining valid trs string patterns.
 
-If the collection has a vertical dimension one of:
+part:: If the collection has a vertical dimension one of:
 
 * Enumerated list of valid vrs values
 * Regular expression defining valid vrs string patterns.
 
-If the collection requires a custom dimension as requirements definition SHALL specify:
+part:: If the collection requires a custom dimension as requirements definition SHALL specify:
 
 * custom dimension name
 * custom dimension reference value

@@ -1,10 +1,10 @@
-[[req_class_a_name_6]]
+[[req_core_data-query-area]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/req-class-a/req-name-6
-part:: An area query requirement SHALL specify the following:
+identifier:: /req/core/data-query-area
+part:: An area query requirement _SHALL_ specify the following:
 
 * Enumerated list of output_format types
 * The default_output_format
