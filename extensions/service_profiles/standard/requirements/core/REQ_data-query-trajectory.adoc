@@ -1,0 +1,17 @@
+[[req_service-profile_data-query-trajectory]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/trajectory
+
+part:: A requirement MAY be defined to make support for an Trajectory query mandatory.
+
+part:: A Trajectory requirement SHALL specify the following:
+
+* Enumerated list of output_format types
+* The default_output_format
+* Enumerated list of crs_details values
+* Enumerated list of the operations that the query supports (i.e. GET, POST)
+
+====

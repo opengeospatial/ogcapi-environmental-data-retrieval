@@ -1,0 +1,13 @@
+[[req_service-profile_data-query]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/data-query
+part:: A data_queries requirement definition SHALL specify which data queries a service supports. This can be defined as follows:
+
+* Enumerated list of query types
+
+part:: Each data_query type listed SHALL also have a requirement definition.
+
+====

@@ -1,0 +1,17 @@
+[[req_service-profile_data-query-cube]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/data-query-cube
+
+part:: A requirement MAY be defined to make support for a Cube query mandatory.
+
+part:: A Cube requirement SHALL specify the following:
+
+* Enumerated list of output_format types
+* The default_output_format
+* Enumerated list of crs_details values
+* Enumerated list of the operations that the query supports (i.e. GET, POST)
+
+====

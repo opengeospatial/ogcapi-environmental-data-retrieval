@@ -1,0 +1,42 @@
+[[req_service-profile_extent]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/extent
+
+part:: A requirement MAY be defined specifying the rules for defining the Collection extent.
+
+part:: An extent requirement MAY specify the minimum spatial bounds that SHALL be supported
+
+part:: An extent requirement MAY specify the minimum temporal bounds that SHALL be supported
+
+part:: An extent requirement MAY specify the minimum vertical bounds that SHALL be supported
+
+part:: An extent requirement MAY specfiy the minimum bounds of custom extents that SHALL be supported 
+
+part:: An extent requirements definition SHALL specify the rules for the spatial CRS. The attributes are constrained by one of:
+
+    * Enumerated list of valid crs values
+    * Regular expression defining valid crs string patterns.
+
+part:: If the collection has a temporal dimension an extent requirements definition SHALL specify the rules fo temporal TRS. The attributes are constrained by one of:
+
+    * Enumerated list of valid trs values
+    * Regular expression defining valid trs string patterns.
+
+part:: If the collection has a vertical dimension an extent requirements definition SHALL specify the rules for the vertical VRS. The attributes are constrained by one of:
+
+    * Enumerated list of valid vrs values
+    * Regular expression defining valid vrs string patterns.
+
+part:: For any custom dimensions an extent requirements definition SHALL specify the rules for the custom reference systems. The attributes are constrained by one of:
+
+    * custom dimension name
+    * custom dimension reference value
+    * Where applicable enumerated list of valid custom dimension values
+
+
+(Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)
+
+====

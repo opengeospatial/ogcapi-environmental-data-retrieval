@@ -1,0 +1,22 @@
+[[req_service-profile_root]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/root
+
+part:: A requirement MAY be defined to which specifies the contents of the landing page (/).
+
+part:: A landing page requirement MAY specify a Title
+
+part:: A landing page requirement MAY specify a Description
+
+part:: A landing page requirement MAY specify a Keyword list
+
+part:: A landing page requirement MAY specify the attributes Provider information must include
+
+part:: A landing page requirement MAY specify the attributes Contact information must include
+
+part:: A landing page requirement MAY define the links that SHALL be included in the Root response.
+
+====

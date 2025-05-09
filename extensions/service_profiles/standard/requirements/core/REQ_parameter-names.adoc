@@ -1,0 +1,91 @@
+[[req_service-profile_parameter-names]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/parameter-names
+
+part:: A requirement MAY be defined to which specifies the parameter_names and their definitions.
+
+part:: The parameter_names requirement definition would specify the required parameter_names objects in full. The parameter_names object defines the name, units, data type and measurement duration of the data value so it is essential that all implementations are consistent for interoperability.
+
+
+for example:
+
+[source,JSON]
+----
+
+"parameter_names": {
+    "prmsl": {
+        "type": "Parameter",
+        "description": "Air pressure at sea level",
+        "unit": {
+            "label": "Pascals",
+            "symbol": {
+                "value": "Pa",
+                "type": "https://qudt.org/vocab/unit/PA"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-3-1",
+            "label": "MSL Pressure"
+        }
+    },
+    "t2m": {
+        "type": "Parameter",
+        "description": "Air temperature at 2m",
+        "unit": {
+        "label": "Kelvin",
+        "symbol": {
+            "value": "K",
+            "type": "https://qudt.org/vocab/unit/K"
+        }
+        },
+        "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0",
+        "label": "Air temperature at 2m"
+        }
+    },
+    "dd": {
+        "type": "Parameter",
+        "description": "Wind Direction",
+        "unit": {
+            "label": "degree true",
+            "symbol": {
+                "value": "°",
+                "type": "https://qudt.org/vocab/unit/DEG"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-0",
+            "label": "Wind Direction"
+        },
+        "measurementType": {
+            "method": "mean",
+            "duration": "-PT10M"
+        }
+    },
+    "ff": {
+        "type": "Parameter",
+        "description": "10m Wind Speed",
+        "unit": {
+            "label": "m/s",
+            "symbol": {
+              "value": "ms-1",
+              "type": "https://qudt.org/vocab/unit/M/s"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-1",
+            "label": "10m Wind Speed"
+        },
+        "measurementType": {
+            "method": "mean",
+            "duration": "-PT10M"
+        }
+    }
+}
+
+----
+
+====

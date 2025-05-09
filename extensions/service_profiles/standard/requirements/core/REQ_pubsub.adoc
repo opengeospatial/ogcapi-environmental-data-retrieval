@@ -1,0 +1,14 @@
+[[req_service-profile_pubsub]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/pubsub
+
+part:: A requirement MAY be defined to which specifies support for EDR Part 2 pubsub.
+
+part:: A pubsub requirement MAY specify the channels that SHALL be supported 
+
+part:: A pubsub requirement MAY specify the payloads that a pubsub channel SHALL support
+
+====

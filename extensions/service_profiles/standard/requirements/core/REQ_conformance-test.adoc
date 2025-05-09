@@ -1,0 +1,10 @@
+[[req_service-profile_conformance-test]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/service-profile/conformance-test
+
+part:: For each of the requirements defined in the profile there SHALL be a conformance test which defines how to validate compliance with the requirement.
+
+====
