@@ -1,0 +1,2123 @@
+
+<!DOCTYPE html>
+<html lang="en" xml:lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><style>
+  <!--
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  border: 0;
+  font-size: 100%; }
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, tt, var,
+b, u, i, center,
+dl, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  vertical-align: baseline; }
+
+html, body, div, span, applet, object, iframe,
+p, blockquote,
+a, abbr, acronym, address, big, cite,
+del, dfn, em, img, ins, q, s,
+small, strike, strong, sub, sup, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  font-family: "Overpass",sans-serif; }
+
+code, pre, tt, kbd, samp {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none; }
+
+code *, pre *, tt *, kbd *, samp * {
+  font-family: "Space Mono",monospace !important;
+  font-variant-ligatures: none; }
+
+p code, dt code, li code, label code, legend code, caption code, th code, td code,
+p tt, dt tt, li tt, label tt, legend tt, caption tt, th tt, td tt,
+p kbd, dt kbd, li kbd, label kbd, legend kbd, caption kbd, th kbd, td kbd,
+p samp, dt samp, li samp, label samp, legend samp, caption samp, th samp, td samp {
+  font-size: 0.8em; }
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Overpass",sans-serif; }
+
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: "Overpass",sans-serif; }
+
+blockquote, q {
+  quotes: none; }
+  blockquote::before, blockquote::after, q::before, q::after {
+    content: '';
+    content: none; }
+
+.h2Annex {
+  font-family: "Overpass",sans-serif; }
+
+dl {
+  display: grid;
+  grid-template-columns: max-content auto; }
+  dl dt p, dl dd p {
+    margin-top: 0; }
+  dl dt {
+    grid-column-start: 1; }
+  dl dd {
+    grid-column-start: 2; }
+
+b, strong {
+  font-weight: bold; }
+
+div.document-stage-band, div.document-type-band {
+  background-color: #333333; }
+
+a.FootnoteRef + a.FootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef + a.TableFootnoteRef::before {
+  content: ", ";
+  vertical-align: super; }
+
+a.TableFootnoteRef, span.TableFootnoteRef,
+a.FootnoteRef, span.FootnoteRef {
+  vertical-align: super; }
+
+.addition {
+  color: blue; }
+
+.deletion {
+  color: red;
+  text-decoration: line-through; }
+
+ruby {
+  ruby-position: over;
+  -webkit-ruby-position: before; }
+
+ruby ruby {
+  ruby-position: under;
+  -webkit-ruby-position: after; }
+
+/* code highlighting with line numbers */
+table.rouge-line-table td.rouge-gutter {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  padding-right: 1em; }
+
+table.rouge-line-table td.rouge-code {
+  -moz-user-select: all;
+  -ms-user-select: all;
+  -webkit-user-select: all;
+  user-select: all; }
+
+table.rouge-line-table,
+table.rouge-line-table th,
+table.rouge-line-table td {
+  width: auto;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-size: 100%; }
+
+table.rouge-line-table pre {
+  margin: 0;
+  padding: 0;
+  overflow-x: visible;
+  font-size: 100%; }
+
+#standard-band {
+  background-color: #3D9970; }
+
+#standard {
+  border-bottom: solid 3px #3D9970; }
+
+#draft-standard-band {
+  background-color: #3D9970; }
+
+#draft-standard {
+  border-bottom: solid 3px #3D9970; }
+
+#abstract-specification-topic-band {
+  background-color: #3D9970; }
+
+#abstract-specification-topic {
+  border-bottom: solid 3px #3D9970; }
+
+#reference-model-band {
+  background-color: #3D9970; }
+
+#reference-model {
+  border-bottom: solid 3px #3D9970; }
+
+#best-practice-band {
+  background-color: #39CCCC; }
+
+#best-practice {
+  border-bottom: solid 3px #39CCCC; }
+
+#discussion-paper-band {
+  background-color: #39CCCC; }
+
+#discussion-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#white-paper-band {
+  background-color: #39CCCC; }
+
+#white-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#technical-paper-band {
+  background-color: #39CCCC; }
+
+#technical-paper {
+  border-bottom: solid 3px #39CCCC; }
+
+#engineering-report-band {
+  background-color: #39CCCC; }
+
+#engineering-report {
+  border-bottom: solid 3px #39CCCC; }
+
+#release-notes-band {
+  background-color: #FFDC00; }
+
+#release-notes {
+  border-bottom: solid 3px #FFDC00; }
+
+#user-guide-band {
+  background-color: #FFDC00; }
+
+#user-guide {
+  border-bottom: solid 3px #FFDC00; }
+
+#community-practice-band {
+  background-color: #FF851B; }
+
+#community-practice {
+  border-bottom: solid 3px #FF851B; }
+
+#community-standard-band {
+  background-color: #FF851B; }
+
+#community-standard {
+  border-bottom: solid 3px #FF851B; }
+
+#other-band {
+  background-color: #0074D9; }
+
+#other {
+  border-bottom: solid 3px #0074D9; }
+
+#policy-band {
+  background-color: #0074D9; }
+
+#policy {
+  border-bottom: solid 3px #0074D9; }
+
+#change-request-supporting-document-band {
+  background-color: #0074D9; }
+
+#change-request-supporting-document {
+  border-bottom: solid 3px #0074D9; }
+
+#test-suite-band {
+  background-color: #001F3F; }
+
+#test-suite {
+  border-bottom: solid 3px #001F3F; }
+
+#candidate-band {
+  background-color: #8B9EB7; }
+
+#candidate {
+  border-bottom: solid 3px #8B9EB7; }
+
+#working-draft-band {
+  background-color: #8B9EB7; }
+
+#working-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#proposal-band {
+  background-color: #8B9EB7; }
+
+#proposal {
+  border-bottom: solid 3px #8B9EB7; }
+
+#oab-review-band {
+  background-color: #8B9EB7; }
+
+#oab-review {
+  border-bottom: solid 3px #8B9EB7; }
+
+#committee-draft-band {
+  background-color: #8B9EB7; }
+
+#committee-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#swg-draft-band {
+  background-color: #8B9EB7; }
+
+#swg-draft {
+  border-bottom: solid 3px #8B9EB7; }
+
+#public-rfc-band {
+  background-color: #48a0e7; }
+
+#public-rfc {
+  border-bottom: solid 3px #48a0e7; }
+
+#tc-vote-band {
+  background-color: #fd06fd; }
+
+#tc-vote {
+  border-bottom: solid 3px #fd06fd; }
+
+#published-band {
+  background-color: #9abd48; }
+
+#published {
+  border-bottom: solid 3px #9abd48; }
+
+#deprecated-band {
+  background-color: #7e0d13; }
+
+#deprecated {
+  border-bottom: solid 3px #7e0d13; }
+
+#retired-band {
+  background-color: #7e0d13; }
+
+#retired {
+  border-bottom: solid 3px #7e0d13; }
+
+#legacy-band {
+  background-color: #7e0d13; }
+
+#legacy {
+  border-bottom: solid 3px #7e0d13; }
+
+#rescinded-band {
+  background-color: #7e0d13; }
+
+#rescinded {
+  border-bottom: solid 3px #7e0d13; }
+
+.coverpage-maturity, .coverpage-stage {
+  font-family: "Overpass",sans-serif;
+  font-weight: 400;
+  font-size: 1.3em;
+  margin: 0 0 2em 0;
+  text-transform: uppercase; }
+
+.icon-svg {
+  width: 100%;
+  color: #5ecf86; }
+
+.wrapper-top {
+  background: #00335b;
+  background: linear-gradient(130deg, #00335b 45%, #f1f8ff 100%);
+  color: #ffffff;
+  padding: 5em 0;
+  width: 100%; }
+
+.wrapper-top-bottom {
+  width: 0;
+  height: 0;
+  border-top: 100px solid #00335b;
+  border-right: 100px solid transparent;
+  position: absolute; }
+
+.document-type-band {
+  top: 260px; }
+
+.document-stage-band > :first-child {
+  height: 240px; }
+
+.coverpage-metadata {
+  margin-top: 35px;
+  padding-top: 15px;
+  margin-right: 25px;
+  border-top: solid 1px white; }
+
+.coverpage-metadata,
+.coverpage-alt-formats {
+  font-size: 12px;
+  font-family: "Overpass",sans-serif;
+  margin-left: 1em;
+  text-align: left; }
+  .coverpage-metadata span,
+  .coverpage-alt-formats span {
+    display: block;
+    text-align: left; }
+    .coverpage-metadata span a,
+    .coverpage-alt-formats span a {
+      color: white; }
+      .coverpage-metadata span a:hover,
+      .coverpage-alt-formats span a:hover {
+        text-decoration: underline;
+        background: none;
+        box-shadow: none !important;
+        font-weight: 400; }
+  .coverpage-metadata .value,
+  .coverpage-alt-formats .value {
+    font-size: 15px;
+    margin-bottom: 15px; }
+  .coverpage-metadata .label,
+  .coverpage-alt-formats .label {
+    font-size: 12px;
+    padding: 0; }
+
+.coverpage-alt-formats span {
+  display: inline;
+  text-align: left; }
+  .coverpage-alt-formats span a {
+    padding-right: 5px; }
+
+.coverpage-title {
+  padding-bottom: 0.5em;
+  font-family: "Overpass",sans-serif;
+  font-weight: 100;
+  padding-left: 1em;
+  padding-right: 1em; }
+  .coverpage-title span {
+    font-family: "Overpass",sans-serif;
+    font-size: 1.8em;
+    line-height: 1; }
+
+.docstage-box table {
+  width: auto; }
+
+.docstage-box th {
+  background-color: #93c0d6; }
+
+.docstage-box td {
+  vertical-align: top;
+  background-color: #daeef3;
+  padding: 0.5em;
+  border: 0; }
+
+.docstage-box th:first-child {
+  border-radius: 1em 0 0 0; }
+
+.docstage-box th:last-child {
+  border-radius: 0 1em 0 0; }
+
+.docstage-box tr:first-child {
+  border-radius: 0 0 0 1em; }
+
+.docstage-box tr:last-child {
+  border-radius: 0 1em 0 0; }
+
+.docstage-box tr:last-child > td:first-child {
+  border-radius: 0 0 0 1em; }
+
+.docstage-box tr:last-child > td:last-child {
+  border-radius: 0 0 1em 0; }
+
+.WordSection11 {
+  padding: 0 2em 0 3em; }
+
+.info-section {
+  padding: 0 2em 0 5em; }
+
+.prefatory-section {
+  padding: 0 3em 0 6em; }
+
+.zzSTDTitle1, .MsoCommentText {
+  display: none; }
+
+.coverpage {
+  text-align: center;
+  padding-left: 1.5em; }
+
+.coverpage-logo span, .coverpage-tc-name span {
+  font-family: "Overpass",sans-serif;
+  text-transform: none;
+  font-weight: 300;
+  margin-left: 1em; }
+
+.coverpage-logo img {
+  width: 500px;
+  height: auto; }
+
+.coverpage-tc-name {
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin: 0.25em 0; }
+
+.copyright {
+  padding: 1em;
+  font-size: 0.9em;
+  text-align: left; }
+
+/* Document Identity */
+.coverpage-doc-identity {
+  font-size: 2em;
+  line-height: 2em; }
+
+.coverpage-title .title-second {
+  display: none; }
+
+.coverpage-stage-block {
+  font-family: "Overpass",sans-serif;
+  font-weight: 600;
+  font-size: 1.25em;
+  margin: 2em 0em 2em 0em;
+  text-transform: uppercase; }
+
+.authors {
+  margin-top: 2em; }
+  .authors span {
+    display: block;
+    line-height: 2; }
+  .authors span.roletag {
+    display: inline-block;
+    font-size: 12px;
+    color: #00335b;
+    background-color: white;
+    padding: 2px 5px;
+    margin-left: 7px;
+    border-radius: 5px; }
+
+/* Draft Warning */
+.coverpage-warning {
+  border: #f36f36 solid 2px;
+  color: #f36f36 !important;
+  margin: 1em 2em;
+  color: #2e81c2;
+  padding: 2em 1em 1em 1em;
+  border-radius: 25px; }
+  .coverpage-warning h1 {
+    font-family: "Overpass",sans-serif;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 1.2em; }
+
+@media print {
+  .document-info, .copyright {
+    page-break-before: always; }
+  .coverpage {
+    height: 23cm; }
+  .info-section {
+    display: none; }
+  .wrapper-top {
+    top: 0;
+    padding-top: 4cm;
+    padding-bottom: 4cm; }
+  .wrapper-top-bottom {
+    margin-top: -5px;
+    display: none; } }
+
+body {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 100%;
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: #00335b;
+  background-color: #f6f8fa; }
+  body main {
+    margin: 0 3em 0 6em; }
+  @media screen and (min-width: 768px) {
+    body {
+      padding-left: 360px; } }
+  @media print {
+    body {
+      padding-left: 0; } }
+dl {
+  grid-template-columns: minmax(0, 1fr) 93%; }
+  dl pre {
+    overflow-x: scroll; }
+
+#toc ul, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+  #toc ul li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul li a {
+    padding: 5px 10px; }
+  #toc ul a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a {
+    color: #00335b;
+    text-decoration: none;
+    display: block; }
+    #toc ul a:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) ul a:hover {
+      box-shadow: none;
+      color: white; }
+
+#toc .h2, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h2 {
+  padding-left: 30px; }
+
+#toc .h3, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h3 {
+  padding-left: 50px; }
+
+#toc .h4, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h4 {
+  padding-left: 70px; }
+
+#toc .h5, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h5 {
+  padding-left: 90px; }
+
+#toc .h6, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .h6 {
+  padding-left: 110px; }
+
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  background: #00335b;
+  box-shadow: inset -5px 0px 10px -5px #00335b !important; }
+  #toc .toc-active a, #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: white; }
+
+@media print {
+  #toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+    background: white;
+    box-shadow: none !important; }
+  #toc .toc-active a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active a {
+    color: #00335b; }
+  #toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+    color: black; } }
+
+#toc li a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li a {
+  font-size: 14px; }
+
+#toc li::before, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li::before {
+  content: " ";
+  display: none; }
+
+#toc .toc-active, #toc li:hover, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) .toc-active, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover {
+  font-weight: 600; }
+
+#toc li:hover a, #toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) li:hover a {
+  background: none;
+  box-shadow: none; }
+
+#toc > ul :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 100%; }
+
+@media screen and (min-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 323px;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0 0 0 45px;
+    background-color: #f1f8ff; } }
+
+@media print {
+  nav {
+    position: relative;
+    width: auto;
+    font-size: 0.9em;
+    overflow: auto;
+    padding: 0;
+    margin-right: 0;
+    background-color: white; } }
+
+@media screen and (min-width: 768px) {
+  nav {
+    margin-right: 30px; } }
+
+@media screen and (min-width: 768px) {
+  #toggle {
+    position: fixed;
+    height: 100%;
+    width: 30px;
+    background-color: #00335b;
+    color: white !important;
+    cursor: pointer;
+    z-index: 100; }
+    #toggle span {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%); } }
+
+@media screen and (max-width: 768px) {
+  #toggle {
+    display: none; } }
+
+@media print {
+  #toggle {
+    display: none; } }
+
+.rule {
+  width: 100%;
+  height: 1px;
+  background-color: #00335b;
+  margin: 2em 0; }
+  @media screen and (min-width: 768px) {
+    .rule.toc {
+      display: none; } }
+@media screen and (min-width: 768px) {
+  h1.toc-contents {
+    margin-top: 1em; }
+  ul#toc-list, ul#toc-list > :is(.h1, .h2, .h3, .h4, .h5, .h6) {
+    padding: 0;
+    margin: 0; } }
+
+#toc-list ul {
+  margin-bottom: 0.25em; }
+
+#toc-list li {
+  list-style-type: none; }
+
+.figure {
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow: auto; }
+  .figure .FigureTitle, .figure .figure-title {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .figure > img, .figure > svg {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    max-width: 100%;
+    height: auto; }
+
+table div.figure {
+  padding: 0;
+  margin: 0; }
+
+.document-stage-band {
+  left: 0;
+  top: 0;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 101;
+  box-shadow: -5px 0px 10px #1d1d1d; }
+  .document-stage-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 300;
+    height: 160px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-stage-band {
+      display: none; } }
+.document-type-band {
+  left: 0;
+  top: 180px;
+  height: 100%;
+  position: fixed;
+  display: block;
+  z-index: 102; }
+  .document-type-band > :first-child {
+    position: relative;
+    width: 25px;
+    font-weight: 400;
+    color: white;
+    text-transform: uppercase;
+    font-size: 0.9em;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    margin: 0;
+    margin-left: 6px;
+    writing-mode: tb-rl;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    white-space: nowrap;
+    display: block;
+    bottom: 0; }
+  @media print {
+    .document-type-band {
+      display: none; } }
+  .document-type-band .document-type {
+    top: 20px; }
+
+#governance-band p.document-type {
+  font-weight: 400;
+  height: 230px !important; }
+
+#standard-band p {
+  height: 135px; }
+
+#proposal-band p {
+  height: 150px; }
+
+#standard-band,
+#published-band {
+  color: #7ba812; }
+
+#standard,
+#published {
+  color: #9ABD48; }
+
+p {
+  margin-top: 1em;
+  margin-bottom: 1em; }
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: #00335b;
+  font-weight: 400;
+  margin-top: 1.6em;
+  margin-bottom: 0.3em; }
+
+h1, .h1 {
+  font-size: 1.8em;
+  text-transform: uppercase;
+  margin-top: 2em; }
+  h1 #content, .h1 #content {
+    margin-top: 2em; }
+
+h2, .h2 {
+  margin-top: 1.3em;
+  font-size: 1.7em;
+  font-weight: 300; }
+  h2 p, .h2 p {
+    display: inline; }
+
+h3, .h3 {
+  margin-top: 1.3em;
+  font-size: 1.5em;
+  font-weight: 100; }
+
+h4, .h4 {
+  font-size: 1.4em; }
+
+.contact-info {
+  padding: 2em;
+  margin-top: 5em;
+  width: 280px;
+  text-align: left;
+  border: #00335b solid 2px;
+  color: #00335b !important;
+  border-radius: 25px; }
+  .contact-info a:hover {
+    text-decoration: underline;
+    background: none;
+    box-shadow: 0 0 0 0; }
+  .contact-info a, .contact-info a:hover {
+    color: #00335b; }
+  .contact-info p, .contact-info a {
+    font-family: "Space Mono",monospace;
+    font-variant-ligatures: none;
+    font-weight: 400; }
+  .contact-info #boilerplate-name {
+    font-weight: 700;
+    font-size: 1.2em;
+    margin-bottom: 0; }
+  .contact-info #boilerplate-address {
+    font-size: 1em;
+    line-height: 1.3em;
+    margin-top: 0; }
+
+ul, ol {
+  margin-left: 1.2em; }
+
+ul > li {
+  list-style: none; }
+  ul > li::before {
+    content: "\2014";
+    display: inline-block;
+    width: 1em;
+    margin-left: -1em; }
+  ul > li p:first-child {
+    display: inline; }
+  ul > li:first-child {
+    margin-top: 1em; }
+
+ul ul > li:first-child {
+  margin-top: 0; }
+
+ol ul > li:first-child {
+  margin-top: 0; }
+
+span.keyword {
+  font-weight: 600; }
+
+/* Tables */
+table {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  /*color: #010d16;*/ }
+  table, table th, table td {
+    border: 1px solid black;
+    font-size: 0.95em; }
+  table th, table td {
+    padding: 1em; }
+  table td.header {
+    font-weight: 400; }
+  table thead tr th {
+    background-color: #5d99d6; }
+  table td, table th {
+    padding: 1em; }
+  table td.header {
+    font-weight: 400; }
+
+.docstage-box table,
+.docstage-box table th,
+.docstage-box table td {
+  border: none; }
+
+table.modspec {
+  width: 100%;
+  font-weight: 300;
+  margin: 1em 0 2em 0;
+  margin-left: auto;
+  margin-right: auto;
+  padding-right: 2em;
+  color: #010d16; }
+  table.modspec, table.modspec th, table.modspec td {
+    border: none !important;
+    font-size: 0.95em; }
+  table.modspec th, table.modspec td {
+    padding: 1em; }
+  table.modspec td.header {
+    font-weight: 400; }
+  table.modspec tr:nth-child(even) {
+    background: #ffffff; }
+  table.modspec tr:nth-child(odd) {
+    background: #ffffff; }
+  table.modspec thead tr th {
+    background-color: #5d99d6; }
+  table.modspec td, table.modspec th {
+    padding: 1em; }
+  table.modspec td.header {
+    font-weight: 400; }
+
+td > p:first-child, th > p:first-child {
+  margin-top: 0em; }
+
+td > p:last-child, th > p:last-child {
+  margin-bottom: 0em; }
+
+p.TableTitle {
+  text-align: center;
+  margin-top: 2.5em;
+  font-weight: 400; }
+
+/* Terms */
+.TermNum {
+  font-weight: 300; }
+
+.TermNum, .Terms, .AltTerms {
+  color: #00335b;
+  font-family: "Overpass",sans-serif; }
+
+h2.TermNum {
+  margin-bottom: 0; }
+
+p.AltTerms {
+  font-size: 24px;
+  margin-top: 1em; }
+
+span.AdmittedLabel {
+  color: #00335b;
+  background-color: #CFE2F3;
+  font-size: 70%;
+  vertical-align: top; }
+
+/* Links, selection */
+a, a:visited {
+  text-decoration: none;
+  color: #2e81c2; }
+
+a:hover {
+  color: #00335b;
+  background: #39CCCC;
+  box-shadow: 3px 0 0 #39CCCC, -3px 0 0 #39CCCC; }
+
+*::selection {
+  background: #39CCCC;
+  color: #00335b; }
+
+*::-moz-selection {
+  background: #39CCCC;
+  color: #00335b; }
+
+/* Bibliograhy */
+p.Biblio, p.NormRef {
+  margin-top: 1em;
+  margin-left: 2em; }
+
+/* Blocks */
+.SourceTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.ListTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center;
+  text-align: left; }
+
+pre, .sourcecode {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  background-color: #f7f7f7;
+  font-size: 0.8em;
+  line-height: 1.6em;
+  padding: 1.5em;
+  margin: 2em 0 1em 0;
+  overflow-y: auto;
+  overflow-x: scroll;
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none; }
+
+.Admonition {
+  padding: 1em 1.2em 1.2em 1.2em;
+  margin: 1em 0 1em 0;
+  background-color: #fcad88;
+  border-top: 10px solid #eb5a06;
+  color: #290404; }
+  .Admonition .AdmonitionTitle {
+    font-weight: 700;
+    font-size: 1em;
+    text-align: center; }
+  .Admonition.Important {
+    background-color: #f58cff;
+    color: #5d1364;
+    border-top: 10px solid #9503a8; }
+  .Admonition.Warning {
+    background-color: #ff989d;
+    color: #270204;
+    border-top: 10px solid #e4010c; }
+  .Admonition p, .Admonition.Important p, .Admonition.Warning p {
+    margin: 0; }
+
+.figure, pre, .pseudocode, .sourcecode {
+  background-color: #e1eef1;
+  color: #424242;
+  font-size: 0.8em; }
+
+.Note {
+  background-color: #fff8bb;
+  color: #7d760b;
+  padding: 1.2em;
+  margin: 1em 0 1em 0; }
+  .Note p {
+    margin: 0; }
+
+.example {
+  background-color: #e1eef1;
+  color: #424242;
+  padding: 1.2em;
+  margin: 2em 0 1em 0;
+  padding-left: 2em; }
+  .example .example-title {
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-top: 0;
+    margin-left: -1.5em; }
+  .example pre, .example .pseudocode {
+    background: none; }
+
+.Quote {
+  background-color: #e1eef1;
+  font-style: italic;
+  width: 80%;
+  padding: 1.5em;
+  margin-top: 2em;
+  margin-left: auto;
+  margin-right: auto; }
+
+.formula {
+  background-color: #f6f6f6;
+  padding: 1.5em;
+  margin-top: 2em;
+  text-align: center; }
+
+.recommend .RecommendationTitle, .recommendtest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.require .RecommendationTitle, .requiretest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.permission .RecommendationTitle, .permissiontest .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.RecommendationTestTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+/*
+.recommend {
+  &, .example_label {
+    background-color: #f8ffbd;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.permission {
+  &, .example_label {
+    background-color: #cdfdbe;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+
+.require {
+  &, .example_label {
+    background-color: #d3e6ff;
+  }
+  .example_label {
+    font-weight: bold;
+  }
+}
+*/
+.recommend .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.require .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+.permission .RecommendationTitle {
+  font-weight: 700;
+  font-size: 1em;
+  text-align: center; }
+
+tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle, tbody td.recommend p.RecommendationTitle {
+  font-weight: normal;
+  text-align: left; }
+
+#myBtn {
+  font-family: "Space Mono",monospace;
+  font-variant-ligatures: none;
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 30px;
+  z-index: 99;
+  font-size: 12px;
+  border: none;
+  outline: none;
+  background-color: #00335b;
+  opacity: 0.15;
+  color: white;
+  cursor: pointer;
+  padding: 10px 15px 10px 15px;
+  border-radius: 4px; }
+  #myBtn:hover {
+    opacity: 1; }
+  @media print {
+    #myBtn {
+      display: none; } }
+a.anchorjs-link:hover {
+  background: none;
+  color: #2e81c2;
+  box-shadow: none; }
+
+@page {
+  margin: 2cm 1cm; }
+
+@media print {
+  h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
+    page-break-after: avoid;
+    margin-top: 1.2em; }
+  h1, .h1 {
+    font-size: 1.5em;
+    line-height: 1.5; }
+    h1.content, .h1.content {
+      margin-top: 2em;
+      line-height: 2.5em; }
+  h2, .h2 {
+    font-size: 1.2em; }
+  h3, .h3 {
+    font-size: 1em; }
+  .prefatory-section {
+    page-break-before: always; }
+  .note, .pseudocode {
+    page-break-inside: avoid; }
+  .Note {
+    background-color: #fff495;
+    color: #47430c;
+    padding: 5px;
+    margin: 2em 0 1em 0; }
+    .Note p {
+      padding: 0 5px 0 5px; }
+  nav {
+    line-height: 1; } }
+
+/* Footnotes */
+a.footnote-number {
+  vertical-align: super;
+  font-size: 0.8em; }
+
+.footnote {
+  font-size: 0.9em; }
+
+span.hi {
+  background-color: yellow; }
+
+-->
+</style><style><!--pre.sourcecode table td { padding: 5px; }
+pre.sourcecode table pre { margin: 0; }
+pre.sourcecode, pre.sourcecode .w {
+  color: #444444;
+}
+pre.sourcecode .cp {
+  color: #CC00A3;
+}
+pre.sourcecode .cs {
+  color: #CC00A3;
+}
+pre.sourcecode .c, pre.sourcecode .ch, pre.sourcecode .cd, pre.sourcecode .cm, pre.sourcecode .cpf, pre.sourcecode .c1 {
+  color: #1E90FF;
+}
+pre.sourcecode .kc {
+  color: #C34E00;
+}
+pre.sourcecode .kd {
+  color: #0000FF;
+}
+pre.sourcecode .kr {
+  color: #007575;
+}
+pre.sourcecode .k, pre.sourcecode .kn, pre.sourcecode .kp, pre.sourcecode .kt, pre.sourcecode .kv {
+  color: #0000FF;
+}
+pre.sourcecode .s, pre.sourcecode .sb, pre.sourcecode .sc, pre.sourcecode .ld, pre.sourcecode .sd, pre.sourcecode .s2, pre.sourcecode .se, pre.sourcecode .sh, pre.sourcecode .si, pre.sourcecode .sx, pre.sourcecode .sr, pre.sourcecode .s1, pre.sourcecode .ss {
+  color: #009C00;
+}
+pre.sourcecode .sa {
+  color: #0000FF;
+}
+pre.sourcecode .nb, pre.sourcecode .bp {
+  color: #C34E00;
+}
+pre.sourcecode .nt {
+  color: #0000FF;
+}
+--></style><title>OGC API - Environmental Data Retrieval Standard - Part 3: Profiles</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!--TOC script import-->
+<script type="text/javascript" src="https://cdn.rawgit.com/jgallen23/toc/0.3.2/dist/toc.min.js"></script>
+<script type="text/javascript">function toclevel() { return "h1:not(:empty):not(.TermNum):not(.noTOC),h2:not(:empty):not(.TermNum):not(.noTOC)";}
+</script>
+
+<!--Google fonts-->
+<link rel="preconnect" href="https://fonts.gstatic.com" />
+<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i|Space+Mono:400,700" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Overpass:300,300i,600,900" rel="stylesheet" />
+<link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet" />
+
+<!--Font awesome import for the link icon-->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/solid.css" integrity="sha384-v2Tw72dyUXeU3y4aM2Y0tBJQkGfplr39mxZqlTBDUZAb9BGoC40+rdFCG0m10lXk" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/fontawesome.css" integrity="sha384-q3jl8XQu1OpdLgGFvNRnPdj5VIlCvgsDQTQB6owSOHWlAurxul7f+JpUOVdAiJ5P" crossorigin="anonymous" />
+<style class="anchorjs"></style>
+<meta name="keywords" content="ogcdoc, OGC document, API, openapi, html" /><meta name="DC.subject" lang="en" content="ogcdoc, OGC document, API, openapi, html" xml:lang="en" /><meta name="description" content="&#x3c;Insert Abstract Text here&#x3e;" />
+<meta name="DC.description" lang="en" content="&#x3c;Insert Abstract Text here&#x3e;" xml:lang="en" /><meta name="DC.title" lang="en" content="OGC API - Environmental Data Retrieval Standard - Part 3: Profiles" xml:lang="en" /><link rel="profile" href="http://dublincore.org/documents/2008/08/04/dc-html/" />
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<meta name="DC.language" content="en" />
+<meta name="DC.rights" lang="en" content="CC-BY-4.0" xml:lang="en" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<link rel="DCTERMS.license" href="https://www.ogc.org/license" />
+</head><body lang="EN-US" link="blue" vlink="#954F72" xml:lang="EN-US" class="container"><div class="title-section"><div class="document-stage-band" id="draft-band">
+    <p class="document-stage">Draft</p>
+</div>
+
+<div class="document-type-band" id="standard-band">
+    <p class="document-type">OGC Standard</p>
+</div>
+
+
+
+  <div id="toggle"> <span>•</span> </div>
+
+  <header>
+
+<!--<div class="WordSection1">-->
+  <div class="coverpage">
+    <div class="wrapper-top">
+
+  <div class="coverpage-doc-identity">
+
+    <div class="coverpage-title">
+      <span class="title-first">OGC API - Environmental Data Retrieval Standard - Part 3: Profiles</span>
+      <!--<span class="title-second"></span>-->
+    </div>
+  </div>
+
+  <div class="coverpage-logo">
+    <span><img src="data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2aWV3Qm94PSIwIDAgMTUxMS42NSA1MDYuNzYiPjxkZWZzPjxzdHlsZT4uY2xzLTF7ZmlsbDpub25lO30uY2xzLTJ7Y2xpcC1wYXRoOnVybCgjY2xpcC1wYXRoKTt9LmNscy0ze2ZpbGw6IzAwYjFmZjt9PC9zdHlsZT48Y2xpcFBhdGggaWQ9ImNsaXAtcGF0aCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSI+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iMTkyMCIgaGVpZ2h0PSI5NzguMjUiLz48L2NsaXBQYXRoPjwvZGVmcz48ZyBpZD0iQmx1ZV9Ib3Jpem9udGFsX0xvY2t1cCIgZGF0YS1uYW1lPSJCbHVlIEhvcml6b250YWwgTG9ja3VwIj48ZyBjbGFzcz0iY2xzLTIiPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIyMDQuMDcgMzY1LjI3IDIwNC4wNyA1MDYuNzMgMC4wMSAzODguOTEgMCAxNTMuMTUgMjA0LjA3IDI3MC45NyAyMDQuMDcgMzE4LjExIDE2My4zNCAyOTQuNjEgMTQyLjkzIDI4Mi44MiAxNDIuOTIgMjgyLjgyIDQwLjg0IDIyMy44OCA0MC44NCAzNjUuMzMgMTYzLjM0IDQzNi4wNiAxNjMuMzQgMzg4LjkxIDEwMi4wOSAzNTMuNTUgMTAyLjA5IDMyOS45NyAxMDIuMDkgMzA2LjQgMjA0LjA3IDM2NS4yNyIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTQyOC42OCwyMzUuNzYsMjI0LjUsMzUzLjY0LDQyOC42OCw0NzEuNTIsNjMyLjg1LDM1My42NFptMCwxODguNjFMMzA2LjE3LDM1My42NGwxMjIuNTItNzAuNzMsMTIyLjQ5LDcwLjczLTIwLjQxLDExLjc5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMyIgcG9pbnRzPSIzMjYuNzggMjcwLjQgMzY3LjYyIDI0Ni44MyA0MDguNDUgMjIzLjI1IDQwOC40NiAyNzAuNCA0NDkuMTggMjQ2Ljg5IDQ0OS4xOCAxNTMuMTIgMjQ1LjEyIDI3MC45NCAyNDUuMTIgMzE3LjU1IDI0NS4xMiAzMTcuNTUgMjQ1LjEyIDMzMS42MyAyNDUuMTIgNTA2LjE3IDI0NS4wMSA1MDYuMTEgMjQ1LjAxIDUwNi43NiA0NDkuMTggMzg4Ljg4IDQ0OS4xOCAyOTQuMDQgNDA4LjQ2IDMxNy41NiA0MDguNDYgMzY0LjcxIDI4NS45NSA0MzUuNDQgMjg1Ljk2IDI5My45OCAzMjYuNzggMjcwLjQiLz48ZyBjbGFzcz0iY2xzLTIiPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTg4MC41NywzOTguMTdjLTMyLjgxLDAtNTctMjQuMDYtNTctNTYuMDVzMjQuMi01Ni4wNSw1Ny01Ni4wNSw1Ni45MSwyNCw1Ni45MSw1Ni4wNS0yNC4xNSw1Ni4wNi01Ni45MSw1Ni4wNlptMzguODctNTYuMDVjMC0yMi4zLTE2LjU5LTM5LTM4Ljg3LTM5cy0zOSwxNi44NC0zOSwzOSwxNi42OSwzOSwzOSwzOSwzOC44Ny0xNi42OSwzOC44Ny0zOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMDAuNDgsMzEwLjc2YzI0Ljk0LDAsNDMuMTgsMTguNjIsNDMuMTgsNDMuNzFzLTE4LjI0LDQzLjc1LTQzLjE4LDQzLjc1YTQxLjY3LDQxLjY3LDAsMCwxLTI3LjY3LTEwLjA5VjQyNkg5NTUuNjdWMzEyLjhoMTEuNTVMOTcwLjQ0LDMyM2E0MS41LDQxLjUsMCwwLDEsMzAtMTIuMjZabTI1Ljg0LDQzLjcxYzAtMTUuNzEtMTEuNDctMjcuMzUtMjcuMTktMjcuMzVzLTI3LjMsMTEuNzUtMjcuMywyNy4zNSwxMS41OSwyNy4zNSwyNy4zLDI3LjM1LDI3LjE5LTExLjY0LDI3LjE5LTI3LjM1IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTE0MS4xOSwzNTQuNjdhNTYuMTUsNTYuMTUsMCwwLDEtLjM1LDUuNjNoLTY3LjY1YzIuMTQsMTMuNSwxMS44NiwyMS44MSwyNS41MSwyMS44MSwxMCwwLDE4LTQuNjEsMjIuNDItMTIuMjFoMThjLTYuNjMsMTcuNi0yMS44NSwyOC4yOC00MC40NiwyOC4yOC0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjcxczE4LjQyLTQzLjcsNDIuODMtNDMuN2MyNS41MSwwLDQyLjQ5LDE5LjY0LDQyLjQ5LDQzLjlabS02Ny41OC04LjNIMTEyNGMtMy4wOC0xMi42Ni0xMi42Mi0yMC4xMy0yNS4zMS0yMC4xMy0xMi44OSwwLTIyLjI4LDcuNzctMjUuMDksMjAuMTMiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjAzLjUsMzEwLjljMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNnY1MC4xOUgxMjE4VjM0OS40NGMwLTE1LjE0LTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2djQ0LjYzaC0xNy4xNFYzMTIuOGgxMS45NWwzLjMyLDExLjYzYzYuMzEtOC40MSwxNi42MS0xMy41MywyOC44NS0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik05MzMuNDUsNDkwLjJjLS40NCwzMy4xMi0yMi44LDU2Ljg5LTU0LjU0LDU2Ljg5cy01NS4zLTIzLjctNTUuMy01NiwyMy4yOS01Niw1NC45NS01NmMyNi4zNSwwLDQ4LjQsMTYuNTksNTMuMjgsNDAuMUg5MTMuNTZjLTQuNjMtMTMuODktMTguMzYtMjIuOTQtMzQuNjUtMjIuOTQtMjEuODQsMC0zNy4yNiwxNi0zNy4yNiwzOC44M3MxNSwzOC44NiwzNy4yNiwzOC44NmMxNy4yNSwwLDMxLjI3LTkuNzUsMzUuMzEtMjQuNDNIODc1LjdWNDkwLjE5WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEwMzEuMzEsNTAzLjU4YTUzLjE5LDUzLjE5LDAsMCwxLS4zNiw1LjYzSDk2My4zYzIuMTQsMTMuNTEsMTEuODcsMjEuODEsMjUuNTEsMjEuODEsMTAsMCwxOC00LjYsMjIuNDMtMTIuMmgxOGMtNi42NCwxNy41OS0yMS44NSwyOC4yNy00MC40NiwyOC4yNy0yNC4zNywwLTQyLjgzLTE4LjgxLTQyLjgzLTQzLjdzMTguNDItNDMuNzEsNDIuODMtNDMuNzFjMjUuNSwwLDQyLjQ5LDE5LjY1LDQyLjQ5LDQzLjlabS02Ny41OC04LjI5aDUwLjRjLTMuMDgtMTIuNjYtMTIuNjItMjAuMTQtMjUuMzItMjAuMTQtMTIuODgsMC0yMi4yNyw3Ljc4LTI1LjA4LDIwLjE0IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA4Ny45NCw1NDcuMDljLTI1LjQ5LDAtNDQuNTYtMTguNjUtNDQuNTYtNDMuNzFzMTkuMDctNDMuNyw0NC41Ni00My43LDQ0LjU2LDE4LjYxLDQ0LjU2LDQzLjcxUzExMTMuMzksNTQ3LjA5LDEwODcuOTQsNTQ3LjA5Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM0LTI3LjM0LTI3LjEyLTI3LjM0cy0yNy4xMiwxMS4zOS0yNy4xMiwyNy4zNCwxMS4zNCwyNy4zNSwyNy4xMiwyNy4zNSwyNy4xMi0xMS4zOSwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTExNDQuNDQsNTE4LjZoMTYuNzRjLjQ0LDguODEsNy44NCwxMy40MSwxNy44OCwxMy40MSw5LjIxLDAsMTYuMjgtMy44OSwxNi4yOC0xMC44NiwwLTcuOS04Ljk0LTkuNzEtMTkuMTUtMTEuNDMtMTMuODktMi4zOC0zMC4yNS01LjUzLTMwLjI1LTI0Ljg1LDAtMTQuOTUsMTIuOTItMjUuMTksMzIuMzEtMjUuMTlzMzEuOTMsMTAuNTQsMzIuMjYsMjYuNzFoLTE2LjIyYy0uMzMtNy45My02LjM3LTEyLjE5LTE2LjQ0LTEyLjE5LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjEyLDAsNy4zNSw4LjUsOC44MSwxOC41NiwxMC40NiwxNC4wOCwyLjM2LDMxLjE5LDUuMDcsMzEuMTksMjUuNjIsMCwxNi4xOS0xMy40OSwyNi42OS0zMy44LDI2LjY5cy0zMy41OS0xMS4yLTM0LTI4LjQ5IiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTI3NS40OSw0NTkuNjhjMjQuOTQsMCw0My4xOCwxOC42MSw0My4xOCw0My43MXMtMTguMjQsNDMuNzUtNDMuMTgsNDMuNzVhNDEuNjUsNDEuNjUsMCwwLDEtMjcuNjctMTAuMXYzNy45aC0xNy4xNFY0NjEuNzFoMTEuNTVsMy4yMiwxMC4yNGE0MS40OCw0MS40OCwwLDAsMSwzMC0xMi4yN1ptMjUuODUsNDMuN2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zMSwxMS43NC0yNy4zMSwyNy4zNCwxMS41OSwyNy4zNSwyNy4zMSwyNy4zNSwyNy4xOS0xMS42MywyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MjAsNDYxLjY3VjU0NWgtMTMuODJsLTEuNjctMTAuMTRhNDEuODQsNDEuODQsMCwwLDEtMzAuMjIsMTIuMjFjLTI0Ljg0LDAtNDMuNC0xOC43Ni00My40LTQzLjc1czE4LjU2LTQzLjY2LDQzLjQtNDMuNjZjMTIuMjgsMCwyMi45MSw0LjY0LDMwLjQ4LDEyLjQxbDItMTAuNDJabS0xNy4xOCw0MS42N2MwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNSwyNy4xOS0xMS42NCwyNy4xOS0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTEuMDgsNTI5LjV2MTUuNTZoLTEyLjczYy0xOC4yNiwwLTI5LjUzLTExLjI2LTI5LjUzLTI5LjY4di0zOWgtMTQuOTF2LTMuMzJsMjktMzAuODJoMi45MXYxOS40NmgyNC44djE0LjY4SDE0NjZWNTE0YzAsOS45Myw1LjUzLDE1LjQ3LDE1LjYzLDE1LjQ3WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE1MDcuNDIsNDMxLjEyaDE3Ljd2MTcuNjdoLTE3LjdabS4yOCwzMC41OWgxNy4xNHY4My4zNUgxNTA3LjdaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTYzMi4yLDQ2MS42N1Y1NDVoLTEzLjgybC0xLjY3LTEwLjE0YTQxLjg0LDQxLjg0LDAsMCwxLTMwLjIyLDEyLjIxYy0yNC44MywwLTQzLjQtMTguNzYtNDMuNC00My43NXMxOC41Ny00My42Niw0My40LTQzLjY2YzEyLjI4LDAsMjIuOTEsNC42NCwzMC40OCwxMi40MWwyLTEwLjQyWk0xNjE1LDUwMy4zNGMwLTE1LjcxLTExLjQ4LTI3LjM0LTI3LjE5LTI3LjM0cy0yNy4zLDExLjc0LTI3LjMsMjcuMzQsMTEuNTksMjcuMzUsMjcuMywyNy4zNVMxNjE1LDUxOS4wNSwxNjE1LDUwMy4zNCIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxyZWN0IGNsYXNzPSJjbHMtMyIgeD0iMTQ1Mi40NSIgeT0iMTk2LjA4IiB3aWR0aD0iMTcuMTQiIGhlaWdodD0iMTEzLjIzIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNODIzLjYxLDY0MGMwLTMyLjMzLDIzLjU3LTU2LDU1LjU0LTU2LDI1LjU2LDAsNDYuMDUsMTUuOTMsNTEuNzIsNDAuMjVoLTE4Yy01LjE2LTE0LjM5LTE3Ljc3LTIzLjA5LTMzLjc3LTIzLjA5LTIxLjY0LDAtMzcuNSwxNi4yOC0zNy41LDM4LjgzczE1Ljg2LDM4Ljc0LDM3LjUsMzguNzRjMTYuNTEsMCwyOS4yNy05LjMyLDM0LjE0LTI0LjY0aDE4Yy01LjYxLDI1LjQxLTI2LjEsNDEuOC01Mi4xMyw0MS44LTMyLDAtNTUuNTQtMjMuNjYtNTUuNTQtNTUuOSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTk4Ni44Niw2OTZjLTI1LjUsMC00NC41Ny0xOC42Ni00NC41Ny00My43MXMxOS4wNy00My43MSw0NC41Ny00My43MSw0NC41NiwxOC42Miw0NC41Niw0My43MVMxMDEyLjMsNjk2LDk4Ni44Niw2OTZaTTEwMTQsNjUyLjNjMC0xNS45NS0xMS4zNS0yNy4zNS0yNy4xMi0yNy4zNXMtMjcuMTMsMTEuNC0yNy4xMywyNy4zNSwxMS4zNSwyNy4zNSwyNy4xMywyNy4zNVMxMDE0LDY2OC4yNSwxMDE0LDY1Mi4zIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTA5My43Nyw2MDguNzNjMTkuNDksMCwzMS42NiwxNC41MywzMS42NiwzNS4wNlY2OTRIMTEwOC4zVjY0Ny4yN2MwLTE1LjEzLTYuNTktMjMuMTgtMTkuMTItMjMuMTgtMTMuMSwwLTIyLjM5LDEwLjU0LTIyLjM5LDI1LjI2VjY5NGgtMTcuMTRWNjEwLjYzaDExLjk1bDMuMzMsMTEuNjNjNi4zLTguNDEsMTYuNi0xMy41MywyOC44NC0xMy41M1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMTQyLjQzLDY2Ny41MWgxNi43NGMuNDQsOC44Miw3Ljg0LDEzLjQyLDE3Ljg5LDEzLjQyLDkuMiwwLDE2LjI3LTMuOSwxNi4yNy0xMC44NiwwLTcuOTEtOC45NC05LjcyLTE5LjE1LTExLjQzLTEzLjg4LTIuMzgtMzAuMjUtNS41NC0zMC4yNS0yNC44NiwwLTE0Ljk1LDEyLjkzLTI1LjE4LDMyLjMxLTI1LjE4czMxLjk0LDEwLjU0LDMyLjI3LDI2LjdoLTE2LjIzYy0uMzMtNy45My02LjM3LTEyLjE4LTE2LjQ0LTEyLjE4LTkuNDcsMC0xNS4zMyw0LTE1LjMzLDEwLjExLDAsNy4zNiw4LjUxLDguODEsMTguNTYsMTAuNDcsMTQuMDksMi4zNSwzMS4yLDUuMDcsMzEuMiwyNS42MiwwLDE2LjE5LTEzLjUsMjYuNjktMzMuODEsMjYuNjlzLTMzLjU5LTExLjIxLTM0LTI4LjUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xMjY3LjEyLDY5NmMtMjUuNSwwLTQ0LjU3LTE4LjY2LTQ0LjU3LTQzLjcxczE5LjA3LTQzLjcxLDQ0LjU3LTQzLjcxLDQ0LjU2LDE4LjYyLDQ0LjU2LDQzLjcxUzEyOTIuNTYsNjk2LDEyNjcuMTIsNjk2Wm0yNy4xMi00My43MWMwLTE1Ljk1LTExLjM1LTI3LjM1LTI3LjEyLTI3LjM1UzEyNDAsNjM2LjM1LDEyNDAsNjUyLjNzMTEuMzUsMjcuMzUsMjcuMTMsMjcuMzUsMjcuMTItMTEuNCwyNy4xMi0yNy4zNSIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTEzNzcuMzMsNjEwLjE2djE2LjE5aC05Yy0xNC4xNywwLTIxLjI0LDguMDgtMjEuMjQsMjMuMThWNjk0aC0xNy4xNFY2MTAuNjNoMTEuNTlsMi45LDExLjM3YzYtNy45LDE0LjE0LTExLjg0LDI1LjUyLTExLjg0WiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0MzcuNTMsNjc4LjQxVjY5NGgtMTIuNzRjLTE4LjI2LDAtMjkuNTItMTEuMjctMjkuNTItMjkuNjh2LTM5aC0xNC45MVY2MjJsMjktMzAuODJoMi45MnYxOS40NmgyNC44VjYyNS4zSDE0MTIuNHYzNy42NGMwLDkuOTQsNS41MywxNS40NywxNS42MiwxNS40N1oiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC0yMDQuMTcgLTIzNS43NikiLz48cGF0aCBjbGFzcz0iY2xzLTMiIGQ9Ik0xNDUzLjg2LDU4MGgxNy43MXYxNy42N2gtMTcuNzFabS4yOSwzMC41OWgxNy4xM1Y2OTRoLTE3LjEzWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTIwNC4xNyAtMjM1Ljc2KSIvPjxwYXRoIGNsYXNzPSJjbHMtMyIgZD0iTTE0OTQuMzYsNjU4Ljc4VjYxMC42M2gxNy4xNHY0NS43NWMwLDE0LjQ4LDcuOSwyMy4yNywyMC43NywyMy4yN1MxNTUzLDY3MC43LDE1NTMsNjU2LjM4VjYxMC42M2gxNy4xNHY0OC4xNWMwLDIyLjQzLTE0Ljg3LDM3LjIzLTM3Ljg3LDM3LjIzcy0zNy45MS0xNC44LTM3LjkxLTM3LjIzIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PHBhdGggY2xhc3M9ImNscy0zIiBkPSJNMTY4Ni4zOSw2MDguNzNjMTcuNTcsMCwyOS40MywxMy4zNywyOS40MywzMi4yNHY1M2gtMTcuMTN2LTQ4LjhjMC0xMy40Mi01LjgzLTIxLjA5LTE2LjIxLTIxLjA5LTExLDAtMTkuNTUsMTAuMTItMTkuNTUsMjQuMzFWNjk0SDE2NDYuMnYtNDguOGMwLTEzLjQyLTUuNzktMjEuMDktMTYuMjQtMjEuMDktMTEuMDgsMC0xOS42MywxMC4xMi0xOS42MywyNC4zMVY2OTRIMTU5My4yVjYxMC42M2gxMi4xNGwzLDEwLjc3YTMzLjM4LDMzLjM4LDAsMCwxLDI1Ljg5LTEyLjY3YzExLjMsMCwyMC4yNSw1LjU1LDI1LDE0LjU5YTMzLDMzLDAsMCwxLDI3LjItMTQuNTlaIiB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtMjA0LjE3IC0yMzUuNzYpIi8+PC9nPjwvZz48L2c+PC9zdmc+" alt="Open Geospatial Consortium" width="" height="" /></span>
+  </div>
+
+  <!--
+  <div class="coverpage-tc-name">
+    <span>Technical</span>
+  </div>
+  -->
+
+  <div class="authors">
+    
+    
+    
+
+    
+    
+    <span>Mark Burgoyne <span class="roletag">Editor</span></span>
+    
+    <span>Charles Heazel <span class="roletag">Editor</span></span>
+    
+    
+  </div>
+
+    <div class="coverpage-metadata">
+      <span class="label">Submission Date: </span> <span class="value">2025-05-08</span>
+      <span class="label">Approval Date: </span> <span class="value">2029-03-30</span>
+      <span class="label">Publication Date: </span> <span class="value">2029-03-30</span>
+      <span class="label">External identifier of this OGC® document: <span class="docnumber value">http://www.opengis.net/doc/IS/ogcapi-edr-3/1.0</span></span>
+      <span class="label">Internal identifier of this OGC® document: <span class="docnumber value">25-014</span></span>
+      
+      
+    </div>
+
+    <div class="coverpage-alt-formats">
+      
+      <span class="label">Version: </span> <span class="value">1.0</span><br />
+      
+    
+      <span class="label">Additional Formats: </span>
+      
+      <span class="value"><a href="./25-014.xml"><i class="far fa-file-code"></i>XML</a></span>
+      
+      
+      <span class="value"><a href="./25-014.pdf"><i class="far fa-file-pdf"></i>PDF</a></span>
+      
+      
+      <span class="value"><a href="./25-014.doc"><i class="far fa-file-word"></i>DOC</a></span>
+      
+      </div>
+    
+    </div>
+
+  </div>
+
+    <div class="wrapper-top-bottom"></div>
+
+  <div class="WordSection11">
+  <div class="coverpage-stage-block">
+    <span class="coverpage-stage" id="standard">OGC Standard</span>
+  </div>
+
+  <div class="coverpage-stage-block">
+    <p><span class="coverpage-maturity" id="draft">Draft</span></p>
+  </div>
+</div>
+
+  <div class="coverpage-warning">
+    <div class="boilerplate-legal">
+
+<div id="_notice_for_drafts"><h1 class="IntroTitle">Notice for Drafts</h1>
+
+<p id="_09caafd2-d047-3050-9095-b3f182faf86f">This document is not an OGC Standard. This document is distributed for review and comment. This document is subject to change without notice and may not be referred to as an OGC Standard.</p>
+
+<p id="_d80fd0eb-fbfd-dec3-0ddb-92472f4d5fcf">Recipients of this document are invited to submit, with their comments, notification of any relevant patent rights of which they are aware and to provide supporting documentation.</p>
+</div>
+</div>
+ </div>
+         
+
+
+<div class="docstage-box">
+  <table>
+    <tr><td>Document number:</td><td>25-014</td></tr>
+    <tr><td>Document type:</td><td>OGC Standard</td></tr>
+    <tr><td align="right">Document subtype:</td><td align="right">Implementation</td></tr>
+    <tr><td align="right">Document stage:</td><td align="right">Draft</td></tr>
+    <tr><td align="right">Document language:</td><td align="right">English</td></tr>
+  </table>
+</div>
+
+<div class="info-section">
+<div class="copyright">
+  <div class="boilerplate-copyright">
+
+<div id="_copyright_notice"><h1 class="IntroTitle">Copyright notice</h1>
+
+<p id="_57ad8640-3b0c-b487-62ff-22dc5568f09a" style="text-align:center;">Copyright © 2025 Open Geospatial Consortium<br />
+To obtain additional rights of use, visit
+<a href="https://www.ogc.org/legal">https://www.ogc.org/legal</a></p>
+</div>
+
+<div id="_note"><h1 class="IntroTitle">Note</h1>
+
+<p id="_11e88dba-9912-1a89-a82d-7291bf232191" style="text-align:left;">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p>
+
+<p id="_15067213-c07b-cba0-7e18-395ab2e00ab3" style="text-align:left;">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p>
+</div>
+</div>
+</div>
+
+<div class="rule"></div>
+</div>
+  </header>
+</div><br /><div class="prefatory-section"><div class="license">
+  <div class="boilerplate-license">
+
+<div id="_license_agreement"><h1 class="IntroTitle">License Agreement</h1>
+
+<p id="_f5fe34fd-12e2-2bb7-8cd6-9d4cffa96538">Use of this document is subject to the license agreement at <a href="https://www.ogc.org/license">https://www.ogc.org/license</a></p>
+</div>
+</div>
+
+
+<div class="boilerplate-feedback">
+
+<div id="boilerplate-standard-feedback">
+<p id="_bb5602d2-6eb1-e557-e221-499759fe237f">Suggested additions, changes and comments on this document are welcome and encouraged. Such suggestions may be submitted using the online change request form on OGC web site: <a href="http://ogc.standardstracker.org/">http://ogc.standardstracker.org/</a></p>
+</div>
+</div>
+
+
+</div>
+
+<nav>
+  <div id="toc"><h1 class="IntroTitle">Contents</h1><ul><li class="h1"><a href="#_0f5881e4-941e-49fa-9f86-644e7c496526">      I.  Abstract</a></li>
+<li class="h1"><a href="#_68b9172f-75d4-4095-a548-8da2158546b3">      II.  Keywords</a></li>
+<li class="h1"><a href="#_afcf38ec-2cac-4ec2-afb7-d87a34ecd8dc">      III.  Preface</a></li>
+<li class="h1"><a href="#_27901fa5-2152-44a3-b6f1-8fd1e1bebbd9">      IV.  Security considerations</a></li>
+<li class="h1"><a href="#_11fc0d8f-3097-4226-8a69-a03fa87c4d97">      V.  Submitting Organizations</a></li>
+<li class="h1"><a href="#_cb1d7788-8893-44e0-a2f2-670b45f92a06">      VI.  Submitters</a></li>
+<li class="h1"><a href="#_d4908305-5a4e-4b84-be6a-04e32c97c434">      VII.  Contributors</a></li>
+<li class="h1"><a href="#_8738a81b-d507-4634-a3b6-b3be33e11ec6">      1.  Scope</a></li>
+<li class="h1"><a href="#_0a653d04-09f0-406f-9eed-bd042cceb8ea">      2.  Conformance</a></li>
+<li class="h1"><a href="#_f1ef0591-677c-4bd7-bd73-700fcda3ef8d">      3.  Normative references</a></li>
+<li class="h1"><a href="#_09fdad4f-b7a7-4337-9ad4-bae13a2a8e18">      4.  Terms and definitions</a></li>
+<li class="h1"><a href="#_5d0ab890-f8bb-4794-b09a-5386068b4ef6">      5.  Conventions</a></li>
+<li class="h2"><a href="#_fda5294b-bf58-4dab-a511-eacf22b8d05f">      5.1.  Identifiers</a></li>
+<li class="h1"><a href="#_c9c753ad-848b-441f-8d99-0d1ea45ed9df">      6.  Context</a></li>
+<li class="h2"><a href="#_92ac98a8-4fa2-4daf-9408-2cdc95fb5a8d">      6.1.  Standardization Goal</a></li>
+<li class="h2"><a href="#_cdcd1d59-14d5-4033-8b3f-106b971bd08e">      6.2.  Standardization Target Type</a></li>
+<li class="h2"><a href="#_e61a1e2b-a44b-4192-986a-55bbf3116bf3">      6.3.  Profiles</a></li>
+<li class="h1"><a href="#_a5f4881c-b16b-425d-b1d8-1bf826ec3933">      7.  Requirement Class Core</a></li>
+<li class="h2"><a href="#_3f5cacc9-9f9a-400a-bff0-35a768dadee7">      7.1.  Documentation</a></li>
+<li class="h2"><a href="#_0f6b4251-ac28-4301-97ab-deca6c16feb0">      7.2.  Landing Page</a></li>
+<li class="h2"><a href="#_46b65629-5f3c-4391-b67d-288b9eb4bc44">      7.3.  Collections</a></li>
+<li class="h2"><a href="#_eeec6d8a-7d2f-4c4f-abb3-b4fa8c718074">      7.4.  Data Query</a></li>
+<li class="h2"><a href="#_80edcf67-53d9-4080-a7b4-9b4bb6cbd845">      7.5.  Parameters</a></li>
+<li class="h2"><a href="#_186fc55a-20f8-40bf-9ac7-d3a1895d26f6">      7.6.  Asynchronous</a></li>
+<li class="h1"><a href="#_477fe5d1-1ced-4603-b7a4-d30a61ba7c04">      8.  Media Types for any data encoding(s)</a></li>
+<li class="h1"><a href="#_f82e2ee5-cf7a-4812-8934-d914377ad73f">      Annex A (informative) Conformance Class Abstract Test Suite (Normative)</a></li>
+<li class="h2"><a href="#_39b1b5b2-fb54-4d9f-ab9b-d35f1aef94a7">      A.1.  Conformance Class A</a></li>
+<li class="h1"><a href="#_a1d30c24-1a9c-405e-a873-a942370a2e41">      Annex B (informative) Title</a></li>
+<li class="h1"><a href="#_e4555515-3252-4e95-8ca7-7d47065578f8">      Annex C (informative) Revision History</a></li>
+<li class="h1"><a href="#_73982935-8e52-47b8-b126-595bf5bdf92a">      Bibliography</a></li></ul></div>
+
+</nav>
+
+
+<div class="rule toc"></div>
+</div><br /><main class="main-section"><button onclick="topFunction()" id="myBtn" title="Go to top">Top</button><div class="authority">
+
+
+
+
+
+
+</div><br /><br /><div id="_abstract"><h1 class="AbstractTitle" id="_0f5881e4-941e-49fa-9f86-644e7c496526">I.  Abstract</h1><p id="_ea8b918b-259f-ad32-41cd-bf6720709423">&#x3c;Insert Abstract Text here&#x3e;</p></div><div class="Section3" id="_b340a3cb-9b3d-4d23-98f2-163bf38bf5df"><h1 class="IntroTitle" id="_68b9172f-75d4-4095-a548-8da2158546b3">II.  Keywords</h1><p>The following are keywords to be used by search engines and document catalogues.</p><p>ogcdoc, OGC document, API, openapi, html</p></div><br /><div id="_0cb0ad42-b58d-54b7-020f-a0a76b7b43f7"><h1 class="ForewordTitle" id="_afcf38ec-2cac-4ec2-afb7-d87a34ecd8dc">III.  Preface</h1><p id="_d97e17ef-a0e9-fd5c-82fc-e6e424b65321">The aim of an OGC API EDR profile is to ensure interoperability between API implementations. To achieve this, it is essential that providers use a consistent approach when defining collections and instances of collections. An OGC EDR profile will specify a set of requirements that an API implementation must support to be a compliant implementation.</p><p id="_1672ef82-930c-138c-0481-953514878191">Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.</p><p id="_0c62c3b3-5856-0347-1c13-3aecac513578">Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.</p></div><div class="Section3" id="_security_considerations"><h1 class="IntroTitle" id="_27901fa5-2152-44a3-b6f1-8fd1e1bebbd9">IV.  Security considerations</h1><p id="_4bfc9ff4-0427-16f3-2dce-96ac965b7eae">No security considerations have been made for this Standard.</p></div><div class="Section3" id="_abd72140-3d42-4ca4-8803-09ccb9ac2a6e"><h1 class="IntroTitle" id="_11fc0d8f-3097-4226-8a69-a03fa87c4d97">V.  Submitting Organizations</h1><p>The following organizations submitted this Document to the Open Geospatial Consortium (OGC):</p><ul><li>UK Met Office</li>
+<li>Heazeltech</li></ul></div><div class="Section3" id="_submitters"><h1 class="IntroTitle" id="_cb1d7788-8893-44e0-a2f2-670b45f92a06">VI.  Submitters</h1><p id="_c4485abb-cbc5-a7e8-5e00-c9c58a531cc9">All questions regarding this submission should be directed to the editor or the submitters:</p><table id="_7c862f68-dc17-1a57-b670-05344091cf61" class="MsoISOTable" style="border-width:1px;border-spacing:0;"><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><b>Name</b></td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><b>Affiliation</b></td></tr><tr><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td><td style="text-align:left;vertical-align:middle;border-top:none;border-bottom:solid windowtext 1.5pt;"></td></tr></tbody></table></div><div class="Section3" id="_contributors"><h1 class="IntroTitle" id="_d4908305-5a4e-4b84-be6a-04e32c97c434">VII.  Contributors</h1><p id="_621c4f5b-26a9-89f7-0840-938819089a27">Additional contributors to this Standard include the following:</p><p id="_45f943af-cadd-6488-bff5-c1c1376f2096">Individual name(s), Organization</p></div><div id="_scope"><h1 id="_8738a81b-d507-4634-a3b6-b3be33e11ec6">1.  Scope</h1><div id="_19759895-aabd-4232-a497-4ca4b6a23eb3" class="Note"><p><span class="note_label">NOTE:  </span>  Insert Scope text here. Give the subject of the document and the aspects of that scope covered by the document.</p></div></div><div id="_conformance"><h1 id="_0a653d04-09f0-406f-9eed-bd042cceb8ea">2.  Conformance</h1><p id="_12e50e71-32c9-4841-9afc-c19b6e3ab821">This standard defines XXXX.</p><p id="_b116691a-08b1-0620-ae3d-86e5f3a8a421">Requirements for N standardization target types are considered:</p><ul id="_7e05e339-83a3-d931-6767-a7c123e12b74"><li><p id="_1bd63b7e-eb98-ad43-1de4-c21d99d60ac2">AAAA</p>
+</li>
+<li><p id="_b6bc9b8a-bd3e-ce9e-7522-1f98d4945205">BBBB</p>
+</li>
+</ul><p id="_c881dc19-eab9-6206-0bbd-c6f07d4bb744">Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.</p><p id="_7552ac2a-6499-a44e-13ca-4abd7e2a63c4">In order to conform to this OGC® interface standard, a software implementation shall choose to implement:</p><ul id="_85556d81-fbe8-6680-06da-7a660f86b7d0"><li><p id="_28d16a05-e578-c5ec-eb3f-87a36de9e044">Any one of the conformance levels specified in Annex A (normative).</p>
+</li>
+<li><p id="_0b67bb92-65e2-2183-4a16-11664b0f122f">Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).</p>
+</li>
+</ul><p id="_595f6be4-4135-af56-59ba-b377f03b0a65">All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.</p></div><div><h1 id="_f1ef0591-677c-4bd7-bd73-700fcda3ef8d">3.  Normative references</h1>
+<p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+
+
+<p id="iso19106" class="NormRef">ISO: ISO 19106, <i>Geographic information — Profiles</i>. International Organization for Standardization, Geneva <a href="https://www.iso.org/standard/26011.html">https://www.iso.org/standard/26011.html</a>.</p>
+<p id="ogc-edr" class="NormRef"><a href="https://www.opengis.net/doc/IS/ogcapi-edr-1/1.2">OGC API — Environmental Data Retrieval Standard</a></p>
+<p id="ogc-modspec" class="NormRef"><a href="https://portal.ogc.org/files/?artifact_id=34762">The ModSpec Model — Part 1: Core — A Standard for Designing and Writing Modular Standards</a></p>
+<p id="OpenAPI30" class="NormRef">OpenAPI Initiative (OAI). <b>OpenAPI Specification 3.0</b> [online]. 2020 [viewed 2025-01-03]. The latest patch version at the time of publication of this standard was 3.0.4, available at <a href="https://spec.openapis.org/oas/v3.0.4">https://spec.openapis.org/oas/v3.0.4</a></p>
+<p id="OpenAPI31" class="NormRef">OpenAPI Initiative (OAI). <b>OpenAPI Specification 3.1</b> [online]. 2021 [viewed 2025-01-03]. The latest patch version at the time of publication of this standard was 3.1.1, available at <a href="https://spec.openapis.org/oas/v3.1.1">https://spec.openapis.org/oas/v3.1.1</a></p>
+</div><div id="terms_and_definitions-section"><h1 id="_09fdad4f-b7a7-4337-9ad4-bae13a2a8e18">4.  Terms and definitions</h1>
+<p id="_7fe04b5b-db41-5d9b-ebe1-463b3a0c16c9">This document uses the terms defined in <a href="https://portal.ogc.org/public_ogc/directives/directives.php">OGC Policy Directive 49</a>, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this document and OGC documents do not use the equivalent phrases in the ISO/IEC Directives, Part 2.</p>
+<p id="_e0235fe8-8273-26b4-faeb-a580ad58929f">This document also uses terms defined in the OGC Standard for Modular specifications (<a href="https://portal.opengeospatial.org/files/?artifact_id=34762">OGC 08-131r3</a>), also known as the ‘ModSpec’. The definitions of terms such as standard, specification, requirement, and conformance test are provided in the ModSpec.</p>
+<p id="_1448dc16-8929-d666-6525-0249826c75e3">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<p id="_70d34264-7387-52cd-ae98-e73322cfe8a4">This document uses the terms defined in OGC Policy Directive 49, which is based on the ISO/IEC Directives, Part 2, Rules for the structure and drafting of International Standards. In particular, the word “shall” (not “must”) is the verb form used to indicate a requirement to be strictly followed to conform to this standard.</p>
+
+<p id="_ccf3e63b-6acc-0cd0-687c-fd7f951288d6">For the purposes of this document, the following additional terms and definitions apply.</p>
+
+<h2 class="TermNum" style="text-align:left;" id="collection-definition">4.1. <b>Collection</b></h2>
+<p id="_f9b4f796-369f-ef02-440b-86591d58f89f">Body of resources that belong or are used together. An aggregate, set, or group of related resources.</p>
+
+
+
+<h2 class="TermNum" style="text-align:left;" id="conformance_module-definition">4.2. <b>Conformance Module; Conformance Test Module</b></h2>
+<p id="_35594807-eeef-b689-d317-ebbc81b484ad">A set of related conformance classes and their associated components.</p>
+
+
+
+
+ <div id="_628cd4ef-4a8d-2e88-06d1-190983dab1ca" class="Note"><p>Note 1 to entry: When no ambiguity is possible, the word <tt>test</tt> may be omitted. i.e. conformance test module is the same as conformance module. Conformance modules may be nested in a hierarchical way.</p></div><p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="conformance-class-definition">4.3. <b>Conformance Class; Conformance Test Class</b></h2>
+<p id="_bdabb986-9b93-75bf-d051-f7eea5e5de6f">A set of conformance tests that must be passed to receive a single certificate of conformance.</p>
+
+
+
+
+ <div id="_ae312206-0feb-6746-2b7a-a9a24f3eb276" class="Note"><p>Note 1 to entry: When no ambiguity is possible, the word <i>test</i> may be left out, so conformance test class maybe called a conformance class.</p></div><p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="conformance_test-definition">4.4. <b>Conformance Test</b></h2>
+<p id="_653c3c7d-28e3-9d5e-94ba-3b0600a12bc6">A test, abstract or real, of one or more requirements contained within a standard, or set of standards.</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="requirement-definition">4.5. <b>Requirement</b></h2>
+<p id="_aafe223f-6dee-cd6c-a15b-edda39fd62db">Expression in the content of a standard conveying criteria to be fulfilled if compliance with the standard is to be claimed and from which no deviation is permitted.</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="requirements_class-definition">4.6. <b>Requirements Class</b></h2>
+<p id="_45211260-1517-5c7e-c720-e0e10779535d">An aggregate of requirements with a single standardization target type that must all be satisfied to pass a conformance test Class.</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="requirements_module-definition">4.7. <b>Requirements Module</b></h2>
+<p id="_93b0c326-0245-5b13-0abf-613a2f1c7277">A set of related requirement classes and their associated components.</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="standardization_goal-definition">4.8. <b>Standardization Goal</b></h2>
+<p id="_fd5b0b8b-fd40-6cb2-4c95-84cf4bd6dd20">A concise statement of the problem that the standard helps address and the strategy envisioned for achieving a solution. This strategy typically identifies real-world entities that need to be modified or constrained. At the abstract level, those entities are the Standardization Target Types.</p>
+
+
+ <p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="standardization_target-definition">4.9. <b>Standardization Target</b></h2>
+<p id="_ffe56227-b949-9a28-4458-f841d7a13ad7">Entity to which some requirements of a standard apply.</p>
+
+
+
+
+ <div id="_f13993fa-fdb2-c10f-b737-2f2f582a5b2a" class="Note"><p>Note 1 to entry: The standardization target is the entity which may receive a certificate of conformance for a requirements class.</p></div><p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+
+<h2 class="TermNum" style="text-align:left;" id="standardization_target_type-definition">4.10. <b>Standardization Target Type</b></h2>
+<p id="_880c9879-4e8c-6848-861f-986597e97566">Type of entity or set of entities to which the requirement of a standard apply</p>
+
+
+
+
+ <div id="_9fa12e21-c9c4-cad2-c1a1-90ed3a9639a7" class="Note"><p>Note 1 to entry: For example, the standardization target type for The OGC API – Features Standard are Web APIs. The standardization target type for the CDB Standard is “datastore”. It is important to understand that a standard’s root standardization target type can have sub-types, and that there can be a hierarchy of target types. For example, a Web API can have sub types of client, server, security, and so forth. As such, each requirements class can have a standardization target type that is a sub-type of the root.</p></div><p>[<b>SOURCE:</b> <a href="#ogc-modspec">OGC 08-131r5</a>]</p>
+</div><div id="_conventions"><h1 id="_5d0ab890-f8bb-4794-b09a-5386068b4ef6">5.  Conventions</h1><p id="_f287e0a4-ca0e-ef98-6e01-5d09472b62aa">This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.</p><div id="_identifiers"><h2 id="_fda5294b-bf58-4dab-a511-eacf22b8d05f">5.1.  Identifiers</h2>
+
+<p id="_34025c5d-dda4-c61f-5774-94f51d938b80">The normative provisions in this standard are denoted by the URI</p>
+
+<p id="_f0191874-4eeb-2c92-18f2-f1367cf61a60"><tt><a href="http://www.opengis.net/doc/IS/ogcapi-edr-3/1.0">http://www.opengis.net/doc/IS/ogcapi-edr-3/1.0</a></tt></p>
+
+<p id="_52250454-5ac3-4fce-7c83-eb454adf6103">All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.</p>
+</div></div><div id="context-section"><h1 id="_c9c753ad-848b-441f-8d99-0d1ea45ed9df">6.  Context</h1><div id="_standardization_goal"><h2 id="_92ac98a8-4fa2-4daf-9408-2cdc95fb5a8d">6.1.  Standardization Goal</h2>
+
+<p id="_38ec1b77-27f4-e3d2-bc73-89dd8434e9d2">The goal of this Standard is to ensure interoperabilty between implementations of the OGC API — Environmental Data Retrieval Standard (EDR API).</p>
+
+<p id="_e029f9b8-0845-2a37-7182-ec45f9fb08f1">The OGC EDR Standard does not try to address every possible application domain. Rather, it provides a foundation which can be tailored for a specific domain. The result of this tailoring is a domain specific “profile” of the EDR API Standard.</p>
+
+<p id="_150f1d6b-55d8-9368-91a9-811a86db249a">A significant risk to this approach is that, in the act of profiling, interoperabilty will be compromized. This risk can be mitigated by establishing rules for how the EDR API Standard can be profiled. The goal of this Standard is to define a set of rules sufficient to ensure interoperability while retaining the adaptability needed to support domain-specific requirements.</p>
+</div><div id="_standardization_target_type"><h2 id="_cdcd1d59-14d5-4033-8b3f-106b971bd08e">6.2.  Standardization Target Type</h2>
+
+<p id="_1e5d973d-fdf4-9b70-d0b7-69dccdf42648">The <a href="#standardization_target_type-definition">Standardization Target Type</a> for this Standard is the set of standards and specifications which profile the OGC API — Environmental Data Retrieval Standard.</p>
+
+<p id="_d5773abb-f434-54fd-7dc1-bdf41acbb74e">It is important to understand that:</p>
+
+<ul id="_2ecbf178-f787-29f6-b122-269172ee920c"><li><p id="_4187d366-cede-154d-d70f-fb73576592a8">This Standard is a standard for writing standards. It does not address the EDR API implementation.</p>
+</li>
+<li><p id="_49fbba84-a4be-7c03-d933-08bc3eb33048">This Standard is a profile of the <a href="#ogc-modspec">OGC ModSpec Model — Part 1: Core — A Standard for Designing and Writing Modular Standards</a> (ModSpec).</p>
+</li>
+<li><p id="_3c5c5035-7182-5826-c969-2564c39d1835">Implementations of this Standard are Profiles of the <a href="#ogc-edr">OGC API — Environmental Data Retrieval Standard</a></p>
+</li>
+<li><p id="_071ee7f4-031f-0a7f-04c1-cfffa3d22f08">The profiling model used is defined in <a href="#iso19106">ISO 19106:2004 Geographic information — Profiles</a></p>
+</li>
+</ul>
+</div><div id="_profiles"><h2 id="_e61a1e2b-a44b-4192-986a-55bbf3116bf3">6.3.  Profiles</h2>
+
+<p id="_513edf84-731b-16c5-000a-efaab28bf693"><a href="#iso19106">ISO 19106:2004 Geographic information — Profiles</a> is the ISO TC211 Standard for developing profiles of ISO TC211 Standards. This standard defined two conformance classes. These conformance classes can be thought of as two classes of profile.</p>
+
+<ul id="_4b51e686-f059-c28a-588b-f29b13213e83"><li><p id="_4aeb3139-7650-9a49-04d6-04b7fb136f53">A Class 1 profile is a pure subset of the ISO geographic information standards.</p>
+</li>
+<li><p id="_491b20d6-9c84-c855-7b11-9ba33a06efcb">A Class 2 profile has the same basis as Class 1 but include extensions within the contexts permitted in the base standard.  Additionally, a Class 2 profile permits the profiling of non-ISO geographic information standards as part of the profile.</p>
+</li>
+</ul>
+
+<p id="_bee2dff4-cd8b-c58b-c630-2f477fc27a4c">In other words, a Class 1 profile restricts the base standard while a Class 2 profile both restricts and extends the base standard.</p>
+
+<p id="_2b927609-fe83-5fc9-3a86-3600e19d1f16">Both Class 1 and Class 2 Profiles of the OGC-EDR Standard are allowed.<div id="_f78f4e84-a982-8fb3-a872-0e653c8b0545" class="Note"><p><span class="note_label">NOTE:  </span>  Consider organizing requirements based on whether they are Class 1 or Class 2.</p></div></p>
+
+
+</div></div><div id="core-section"><h1 id="_a5f4881c-b16b-425d-b1d8-1bf826ec3933">7.  Requirement Class Core</h1><p id="_e346d47b-e37b-bad0-b7a8-85b3051c2c9a">Paragraph</p><table id="req_class_core" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirements class 1: Requirements Class ‘Core’</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/ABCD/m.n/req/req-class-a</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Conformance class</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="#ats_example1">Conformance class A.1: <tt>http://www.opengis.net/spec/name-of-standard/1.0/conf/example1</tt></a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Normative statements</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#_110919e6-b3de-b6da-ca4f-7dd61b75579a">Requirement 1-1: <tt>/req/req-class-a/req-name-1</tt></a><br /><a href="#_47252221-f560-dff4-d949-f3b211556790">Requirement 1-2: <tt>/req/req-class-a/req-name-2</tt></a></td></tr></tbody></table><div id="_documentation"><h2 id="_3f5cacc9-9f9a-400a-bff0-35a768dadee7">7.1.  Documentation</h2>
+
+<div id="_conformance_to_the_modspec"><h3>7.1.1.  Conformance to the ModSpec</h3>
+
+<table id="req_class_core_modspec" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 1</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/core/modspec</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_01327e74-568d-28e9-2146-475b20ec03fc">A profile of the <a href="#ogc-edr">OGC API — Environmental Data Retrieval Standard</a> <i>SHALL</i> be conformant to the <a href="#ogc-modspec">OGC Modular Specification</a>.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_profile_ogc_api_edr"><h3>7.1.2.  Profile OGC API — EDR</h3>
+
+<table id="req_class_core_edr-conformant" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 2</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/core/edr-conformant</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_dd496e24-e35a-8c68-c824-72acbc3a3d9c">A profile of the <a href="#ogc-edr">OGC API — Environmental Data Retrieval Standard</a> <i>SHALL</i> require that a conformant implementation (<a href="#standardization_target_definition">standardization target</a>) of that profile also demonstrate conformance to the <a href="#ogc-edr">OGC API — Environmental Data Retrieval Standard</a>.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_2"><h3>7.1.3.  Requirement 2</h3>
+
+<table id="req_service-profile_conformance-test" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 3</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/conformance-test</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_02432a07-73b2-3e0d-83b2-705599ebf043">For each of the requirements defined in the profile there SHALL be a conformance test which defines how to validate compliance with the requirement.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_18"><h3>7.1.4.  Requirement 18</h3>
+
+<table id="req_service-profile_status-codes" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 4</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/status-codes</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_e2b73628-84f1-4e1c-1914-ff3a4a3e8cda">A requirement MAY be defined to specify which http status codes SHALL be supported.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_6f62797f-f16d-5001-098b-68d531088c4e">For every http status code supported by the profile. A requirement SHALL be created. The requirement SHALL provide the following:</p>
+<ul id="_7c95c9c6-e6f2-0d13-71cf-aa7a3cb49f76"><li><p id="_b48154a4-a110-ea07-de82-e5e2bf5e50ac">A description of the cause of the error.</p>
+</li>
+<li><p id="_a5fdc668-7f21-8c1b-087c-5d077bf39114">A JSON schema for the message body structure</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirements_governing_how_links_must_be_populated"><h3>7.1.5.  Requirements governing how links must be populated</h3>
+
+</div>
+</div><div id="_landing_page"><h2 id="_0f6b4251-ac28-4301-97ab-deca6c16feb0">7.2.  Landing Page</h2>
+
+<div id="_links_requirements_for_service_doc_and_service_desc"><h3>7.2.1.  Links requirements for service-doc and service-desc</h3>
+
+</div>
+
+<div id="_conformance_classes_requirements"><h3>7.2.2.  Conformance classes requirements</h3>
+
+</div>
+
+<div id="_requirement_16"><h3>7.2.3.  Requirement 16</h3>
+
+<table id="req_service-profile_publishing" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 5</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/publishing</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_58f845ff-1df1-1a24-47a2-cdb6109ed1ea">An EDR profile SHALL be published as an OpenAPI JSON document. The rules described in the requirements SHALL be encoded using the OpenAPI 3.1 specification, The requirement rules are encoded in either the OpenAPI Path Item or in the Response object schema sections of the document.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_a8ab72f6-4fc1-257b-aa32-e0d81972e961">The profile OpenAPI document should describe the profile EDR API as follows:</p><p id="_5fbdcdd2-d170-303a-f6b0-aa19724ed865">The servers attributes of the OpenAPI root object SHALL be blank (the profile is not linked to specific implementations)</p><p id="_7a431cd9-c3ca-2eb4-f9ae-77a05fd1c172">The Extent requirement rules SHALL be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object of the profile OpenAPI document</p><p id="_c82c30a2-9266-fb06-1687-998f349079e1">The data_query type requirement rules SHALL be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object of the profile OpenAPI document</p><p id="_b141a033-7760-641e-e361-53e3bb018d42">The data_query types SHALL be encoded as Paths objects in the OpenAPI document, where appropriate the output_format, default_output_format, crs, within_units, width-units, height-units and limit (paging) requirements SHALL be encoded in the child Parameter objects of the Paths object.</p><p id="_6cdc459b-22de-3355-b22d-355bb545ad87">The output_format requirement rules SHALL be encoded in the 200 responses of the data_query type Paths objects</p><p id="_12400752-bdb5-6aa7-8c7c-b28025c2630e">The Parameter_names requirements SHALL be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object of the profile OpenAPI document.</p><p id="_d58c2768-ad7b-bcb2-167b-8cba415f5c89">An EDR API SHALL advertise the location of the profile OpenAPI document it complies</p><p id="_dd534db4-fd91-7848-0dcf-b35f0cb04d89">An EDR API SHALL advertise the location of the profile OpenAPI document it complies with in the links section of the API root with a link relation value of ‘profile’</p></td></tr></tbody></table>
+</div>
+</div><div id="_collections"><h2 id="_46b65629-5f3c-4391-b67d-288b9eb4bc44">7.3.  Collections</h2>
+
+<div id="_requirement_17"><h3>7.3.1.  Requirement 17</h3>
+
+<table id="req_service-profile_requirements-set" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 6</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/requirements-set</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_e92378ed-c655-65a9-b7b6-c5b469d0d564">The profile SHALL consists of a set of requirements for a collection and (if the collection supports instances) the instances of the collection. For each of the attributes listed, if it is in the collection (or instance), there SHALL be a requirement to define it.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_dd87e679-d9e1-297a-f1f0-3868de82da3a">A profile MAY include requirements for the landing page.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">C</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_706731c3-1444-18d2-231d-c399c6b6d443">A profile MAY include requirements for multiple collections.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_14"><h3>7.3.2.  Requirement 14</h3>
+
+<table id="req_service-profile_paging-support" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 7</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/paging-support</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_45e8054c-5dd3-07e8-293e-dfefa243fa80">Paging support depends on query pattern and output format. A requirement MAY be created for each combination of query pattern and output format that must support paging.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_84647cc9-67e5-f0b5-3f5c-099694f6e735">Each paging requirement SHOULD also include a recommendation for the default number of items to return per page request.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_titledescription"><h3>7.3.3.  Title/Description</h3>
+
+</div>
+</div><div id="_data_query"><h2 id="_eeec6d8a-7d2f-4c4f-abb3-b4fa8c718074">7.4.  Data Query</h2>
+
+<div id="_requirement_3"><h3>7.4.1.  Requirement 3</h3>
+
+<table id="req_service-profile_data-query" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 8</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/data-query</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_752f3295-69b4-f89f-28c9-ab2fe406d651">A data_queries requirement definition SHALL specify which data queries a service supports. This can be defined as follows:</p>
+<ul id="_5fe2dbaf-cd79-c4c3-7c39-949b9284bd76"><li><p id="_5ecddb22-08ca-367e-02c8-f64217da4b05">Enumerated list of query types</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_7d575ea7-5960-6ee6-5161-6597376a5d28">Each data_query type listed SHALL also have a requirement definition.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_4"><h3>7.4.2.  Requirement 4</h3>
+
+<table id="req_service-profile_data-query-area" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 9</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/data-query-area</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_bac571df-6b10-8c8e-e8de-baa2cfa5bc43">A requirement MAY be defined to make support for an Area query mandatory.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_0bb73396-728c-c7a6-57a0-9b2b2b2d9b2d">An Area query requirement SHALL specify the following:</p>
+<ul id="_47639a4b-a01c-b332-3736-e74ee12de5cf"><li><p id="_d6d3773d-15e3-469b-2936-6bfcd7c408da">Enumerated list of output_format types</p>
+</li>
+<li><p id="_8b56f360-3b6c-8a64-c720-9e5cdeab8242">The default_output_format</p>
+</li>
+<li><p id="_4787e97f-68d7-c4ee-1276-042f786701e8">Enumerated list of crs_details values</p>
+</li>
+<li><p id="_72a2d1e4-5cd7-4516-0a9f-101ae355c423">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_5"><h3>7.4.3.  Requirement 5</h3>
+
+<table id="req_service-profile_data-query-corridor" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 10</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/data-query-corridor</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_7f972912-eb3b-f004-8ca5-86c02e64ce97">A requirement MAY be defined to make support for a Corridor query mandatory.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_9bb4e692-e398-d686-2dfb-d9db7d9040a7">A Corridor requirement SHALL specify the following:</p>
+<ul id="_a2fc2f49-3857-684e-dae6-f6e27dc1545a"><li><p id="_94d0caaf-3d1d-bd43-5fd5-0db240bc019a">Enumerated list of output_format types</p>
+</li>
+<li><p id="_f9abb94a-39ca-bd60-48a6-23c92c95508a">The default_output_format</p>
+</li>
+<li><p id="_80ad3aa3-8fef-91ac-17ad-4d79add84707">Enumerated list of crs_details values</p>
+</li>
+<li><p id="_1bd80a21-5e5d-2f27-c842-4667c576d378">Enumerated list of width-units values</p>
+</li>
+<li><p id="_58283130-dcca-f5ab-d036-fc5c49dcddd4">Enumerated list of height-units values</p>
+</li>
+<li><p id="_6c597c7d-93ad-087c-71f5-f67bcd323fb7">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_6"><h3>7.4.4.  Requirement 6</h3>
+
+<table id="req_service-profile_data-query-cube" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 11</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/data-query-cube</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_5fd76219-89a7-a4f6-7e21-f568abcb7297">A requirement MAY be defined to make support for a Cube query mandatory.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_8b9f877c-efc9-75d5-3b3b-d01b7c48af92">A Cube requirement SHALL specify the following:</p>
+<ul id="_a14c2618-caf9-cdfc-a3a9-51244b272fce"><li><p id="_4e853097-5e9d-b171-0964-bb17a1ef4b83">Enumerated list of output_format types</p>
+</li>
+<li><p id="_96ffb99c-a483-6ebf-faea-2fe501ccb790">The default_output_format</p>
+</li>
+<li><p id="_21826a82-8043-7786-2817-d8e3a4362693">Enumerated list of crs_details values</p>
+</li>
+<li><p id="_736bdb68-f6c7-7b40-3882-848bdad899d8">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_7"><h3>7.4.5.  Requirement 7</h3>
+
+<table id="req_service-profile_instances" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 12</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/instances</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_11117c5a-8092-2576-aa13-6cf1959cd5f3">Instances SHALL be defined in the data_queries enumerated list if the collection has child instances that can be queried.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_8"><h3>7.4.6.  Requirement 8</h3>
+
+<table id="req_service-profile_position" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 13</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/position</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f05c6a6a-ef8e-29b7-70fe-ed8c8dd045a4">A requirement MAY be defined to make support for an Position query mandatory.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_b8d8e453-9442-191d-1ac6-1531e646dc72">A Position query requirement SHALL specify the following:</p>
+<ul id="_7e5c3bd2-dac5-435e-c8d4-1d7e53f99869"><li><p id="_44285aa4-33c2-58f3-ac41-cfa1dc6890e3">Enumerated list of output_format types</p>
+</li>
+<li><p id="_0fadf245-b4da-3521-5269-9f63b4d5063c">The default_output_format</p>
+</li>
+<li><p id="_ca2506b2-a011-d94e-06cb-79af4e4fdf42">Enumerated list of crs_details values</p>
+</li>
+<li><p id="_08887aa8-5db1-928b-2aa3-46087ec6e1b1">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_b11d6ca9-a482-aebc-10cb-8e65916cb08f">A position query requirement SHALL also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.</p></td></tr></tbody></table>
+</div>
+
+<div id="_requirement_9"><h3>7.4.7.  Requirement 9</h3>
+
+<table id="req_service-profile_radius" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 14</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/radius</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_b6835943-1d98-7f3f-92ae-a430f648e8a8">A requirement MAY be defined to make support for an Radius query mandatory.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_aba73d02-5806-afc7-d13d-72ea8c969abd">A Radius query requirement SHALL specify the following:</p>
+<ul id="_fa67bcf4-c28e-0453-df96-f436d2e48f9f"><li><p id="_3e97826b-2e0b-3769-41c1-5b3c7f5f727f">Enumerated list of output_format types</p>
+</li>
+<li><p id="_5e6b1d2a-d5c5-32f1-3d81-2f6ea6384616">The default_output_format</p>
+</li>
+<li><p id="_41ec52c2-f8bc-26fa-e252-45736e51a0d7">Enumerated list of crs_details values</p>
+</li>
+<li><p id="_ac894f2c-3262-ecaf-8402-b45938ba6b40">Enumerated list of within_units values</p>
+</li>
+<li><p id="_e23196ac-23b6-bdcb-a058-566b1672248b">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_10"><h3>7.4.8.  Requirement 10</h3>
+
+<table id="req_service-profile_data-query-trajectory" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 15</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/trajectory</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_189752d8-5ebb-4985-8f10-a9573cabcba5">A requirement MAY be defined to make support for an Trajectory query mandatory.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_69e88e25-73c5-59da-9d08-803ec196146a">A Trajectory requirement SHALL specify the following:</p>
+<ul id="_0aa4a224-43fa-98a6-6544-a9690e3429ac"><li><p id="_87ed4ee0-04c4-2b6c-4c79-b05b85f0ce81">Enumerated list of output_format types</p>
+</li>
+<li><p id="_a843d2b8-2638-2027-cb06-9d5113aa0bca">The default_output_format</p>
+</li>
+<li><p id="_135f9a02-4aea-bd96-0cf4-54b4a4bfb1fb">Enumerated list of crs_details values</p>
+</li>
+<li><p id="_91467814-33ac-d62c-b7f3-c8aa39770433">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+</div><div id="_parameters"><h2 id="_80edcf67-53d9-4080-a7b4-9b4bb6cbd845">7.5.  Parameters</h2>
+
+<div id="_requirement_15"><h3>7.5.1.  Requirement 15</h3>
+
+<table id="req_service-profile_parameter-names" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 16</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/parameter-names</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_2e86efcb-49d5-7c63-1510-3151dcf82348">A requirement MAY be defined to which specifies the parameter_names and their definitions.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_20a86826-0bed-4152-1bd8-eba264932970">The parameter_names requirement definition would specify the required parameter_names objects in full. The parameter_names object defines the name, units, data type and measurement duration of the data value so it is essential that all implementations are consistent for interoperability.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_ce2dd54a-7c2f-ddf7-fc04-cc794de4f131">for example:</p><pre id="_b40b8efe-ce05-9fa6-54f0-78f5054f637d" class="sourcecode">"parameter_names": {<br />    "prmsl": {<br />        "type": "Parameter",<br />        "description": "Air pressure at sea level",<br />        "unit": {<br />            "label": "Pascals",<br />            "symbol": {<br />                "value": "Pa",<br />                "type": "https://qudt.org/vocab/unit/PA"<br />            }<br />        },<br />        "observedProperty": {<br />            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-3-1",<br />            "label": "MSL Pressure"<br />        }<br />    },<br />    "t2m": {<br />        "type": "Parameter",<br />        "description": "Air temperature at 2m",<br />        "unit": {<br />        "label": "Kelvin",<br />        "symbol": {<br />            "value": "K",<br />            "type": "https://qudt.org/vocab/unit/K"<br />        }<br />        },<br />        "observedProperty": {<br />        "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0",<br />        "label": "Air temperature at 2m"<br />        }<br />    },<br />    "dd": {<br />        "type": "Parameter",<br />        "description": "Wind Direction",<br />        "unit": {<br />            "label": "degree true",<br />            "symbol": {<br />                "value": "°",<br />                "type": "https://qudt.org/vocab/unit/DEG"<br />            }<br />        },<br />        "observedProperty": {<br />            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-0",<br />            "label": "Wind Direction"<br />        },<br />        "measurementType": {<br />            "method": "mean",<br />            "duration": "-PT10M"<br />        }<br />    },<br />    "ff": {<br />        "type": "Parameter",<br />        "description": "10m Wind Speed",<br />        "unit": {<br />            "label": "m/s",<br />            "symbol": {<br />              "value": "ms-1",<br />              "type": "https://qudt.org/vocab/unit/M/s"<br />            }<br />        },<br />        "observedProperty": {<br />            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-1",<br />            "label": "10m Wind Speed"<br />        },<br />        "measurementType": {<br />            "method": "mean",<br />            "duration": "-PT10M"<br />        }<br />    }<br />}</pre></td></tr></tbody></table>
+</div>
+
+<div id="_requirement_11"><h3>7.5.2.  Requirement 11</h3>
+
+<table id="req_service-profile_extent" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 17</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/extent</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_f184a8d1-7b0e-5561-724b-406d24c44b89">A requirement MAY be defined specifying the rules for defining the Collection extent.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_c0fb8691-9d2a-b7d7-eb59-17c697f614d2">An extent requirement MAY specify the minimum spatial bounds that SHALL be supported</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">C</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_cb4fbcb3-de53-172d-8e98-3246ca79479c">An extent requirement MAY specify the minimum temporal bounds that SHALL be supported</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">D</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_85500183-334f-eb1f-0bbd-0be059b4d5e4">An extent requirement MAY specify the minimum vertical bounds that SHALL be supported</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">E</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_6cbf4d2d-4101-46f4-20f4-7f9e36ec1076">An extent requirement MAY specfiy the minimum bounds of custom extents that SHALL be supported</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">F</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_2ef36511-c918-fc47-0685-b9ebd208b970">An extent requirements definition SHALL specify the rules for the spatial CRS. The attributes are constrained by one of:</p>
+<ul id="_3ff61284-da6d-3ae0-d83b-999ddaef4e8a"><li><p id="_0d014556-6a23-af60-f3b5-02423cf68a77">Enumerated list of valid crs values</p>
+</li>
+<li><p id="_d7ab9b42-9370-0e7a-895f-988835144184">Regular expression defining valid crs string patterns.</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">G</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_94b55f06-29eb-9213-c6b1-8549badf1eea">If the collection has a temporal dimension an extent requirements definition SHALL specify the rules fo temporal TRS. The attributes are constrained by one of:</p>
+<ul id="_60276f5e-eab8-cfd3-d830-47601aca2a7d"><li><p id="_a06252ba-1a1e-35bc-f33d-05f9f3214eff">Enumerated list of valid trs values</p>
+</li>
+<li><p id="_23414a89-2a86-e526-902a-ea382d0f52ca">Regular expression defining valid trs string patterns.</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">H</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_9dc8c9c8-eb23-4ef9-e77b-4f8f9ea7c963">If the collection has a vertical dimension an extent requirements definition SHALL specify the rules for the vertical VRS. The attributes are constrained by one of:</p>
+<ul id="_9999ce9b-7411-588c-e198-cd14a4fb8154"><li><p id="_826cefbb-c344-7a19-d357-1981893b6cf8">Enumerated list of valid vrs values</p>
+</li>
+<li><p id="_114c2180-43c9-fc8b-0494-c4182e78dc08">Regular expression defining valid vrs string patterns.</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">I</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_85a09eaf-bd38-3ba3-0404-8b09ce709884">For any custom dimensions an extent requirements definition SHALL specify the rules for the custom reference systems. The attributes are constrained by one of:</p>
+<ul id="_b24a2fc8-1b97-875c-bca3-5847ec79648d"><li><p id="_cdcbf9ed-440a-79b3-cec4-ae0210cca669">custom dimension name</p>
+</li>
+<li><p id="_6b34bef7-7321-b821-3ed2-9a6cd4274a5e">custom dimension reference value</p>
+</li>
+<li><p id="_348b16bb-a781-ecb1-cee1-d875f7c99e7c">Where applicable enumerated list of valid custom dimension values</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_62da4e1f-4488-30fa-db7e-8bf00ee97add">(Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)</p></td></tr></tbody></table>
+</div>
+
+<div id="_requirement_12"><h3>7.5.3.  Requirement 12</h3>
+
+<table id="req_core_id" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 18</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/core/id</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_38bb8d6f-950d-3eee-6b56-ca3197aa7f59">A Requirement definition <i>SHALL</i> specify the rules that the Collection id string must follow. This can be one of the following:</p>
+<ul id="_a1a26124-582f-2fed-af0a-ec021f053121"><li><p id="_e86d5bf7-4b35-2413-f666-2f2120805287">identifier string</p>
+</li>
+<li><p id="_6b0ef295-7402-bba9-e5e8-fca15a3b1c69">Regular expression defining valid string patterns.</p>
+</li>
+</ul>
+</td></tr></tbody></table>
+</div>
+
+<div id="_requirement_13"><h3>7.5.4.  Requirement 13</h3>
+
+<table id="req_service-profile_output-format" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 19</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/output-format</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_89def7ca-bb19-ad1b-704d-6c0cd1a3da2d">For every output_format specified in any of the data_query enumerated lists there SHOULD be a requirement which defines the schema or structure of the data (depending on the format). Suggested definition approaches are as follows:</p>
+<ul id="_95f3f86a-3990-f11f-1c09-2757068f87c4"><li><p id="_f4ff5b2c-6c00-e329-03f9-c60801d2fce3">JSON – Link to a JSON Schema definition</p>
+</li>
+<li><p id="_7fcac05f-e524-dfa4-e0f5-ce193be4a170">XML – Link to a XML Schema definition</p>
+</li>
+<li><p id="_ec336787-3d03-5169-6f36-88c1384b93a2">CSV, TSV, PSV, SSV – Link to a definition based on the CSV on the web recommendations available from the <a href="https://www.w3.org/2013/csvw/wiki/Main_Page.html">CSV on the Web Working Group</a>.</p>
+</li>
+<li><p id="_0c391707-9569-e6d4-f669-467da13fe8b8">Other types (e.g. binary file types) – Link to a description of the format</p>
+</li>
+</ul>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><div id="_3a11274f-dbc8-87b9-d908-1aae102ce7d2" class="Note"><p><span class="note_label">NOTE:  </span>  What is the name of the “CSV</p></div></td></tr></tbody></table>
+</div>
+</div><div id="_asynchronous"><h2 id="_186fc55a-20f8-40bf-9ac7-d3a1895d26f6">7.6.  Asynchronous</h2>
+
+<div id="_requirement_1"><h3>7.6.1.  Requirement 1</h3>
+
+<table id="req_service-profile_asynchronous" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Requirement 20</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/req/service-profile/asynchronous</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">A</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_29b09d44-a4dc-e1f2-343a-295d3591b840">A requirement MAY be defined for each query type that is asynchronous.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">B</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_092b8500-3cb1-4dcc-9bde-1ad1d90b039b">Each asynchronous query type requirement SHALL define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Statement</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_4af9a723-82d6-1a15-e36e-aa036f13735d">The requirement will also document (this can be a link to another document) the mechanism for delivering the result of the asynchronous query.</p></td></tr></tbody></table>
+</div>
+</div></div><div id="_media_types_for_any_data_encodings"><h1 id="_477fe5d1-1ced-4603-b7a4-d30a61ba7c04">8.  Media Types for any data encoding(s)</h1><p id="_9edcb2e8-b4ab-3495-e76a-87c21ea5743d">A section describing the MIME-types to be used is mandatory for any standard involving data encodings. If no suitable MIME type exists in <a href="http://www.iana.org/assignments/media-types/index.html">http://www.iana.org/assignments/media-types/index.html</a> then this section may be used to define a new MIME type for registration with IANA.</p></div><br /><div id="_conformance_class_abstract_test_suite_normative" class="Section3"><h1 class="Annex" id="_f82e2ee5-cf7a-4812-8934-d914377ad73f"><b>Annex A</b><br />(informative)<br /><b>Conformance Class Abstract Test Suite (Normative)</b></h1><div id="_49fa4119-ff23-ba00-2b10-7c6008e83cc9" class="Note"><p><span class="note_label">NOTE:  </span>  Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)</p></div><div id="_conformance_class_a"><h2 id="_39b1b5b2-fb54-4d9f-ab9b-d35f1aef94a7">A.1.  Conformance Class A</h2>
+
+<table id="ats_example1" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTitle">Conformance class A.1</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>http://www.opengis.net/spec/name-of-standard/1.0/conf/example1</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Requirements class</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="#req_class_core">Requirements class 1: <tt>http://www.opengis.net/spec/ABCD/m.n/req/req-class-a</tt></a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Target Type</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;">Web API</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Conformance tests</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><a href="#ats_core_api-definition-op">Abstract test A.1: <tt>/conf/core/map-response</tt></a><br /><a href="#ats_core_http">Abstract test A.2: <tt>/conf/core/http</tt></a></td></tr></tbody></table>
+
+<div id="_example_1"><h3>A.1.1.  Example 1</h3>
+
+<table id="ats_core_api-definition-op" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTestTitle">Abstract test A.1</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/conf/core/map-response</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Requirement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="#_110919e6-b3de-b6da-ca4f-7dd61b75579a">Requirement 1-1: <tt>/req/req-class-a/req-name-1</tt></a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Test purpose</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_67942fbb-966c-f1dc-db38-06192459e995">Verify that the implementation’s response for the map retrieval operation is correct</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Test method</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p id="_b0e905c8-31e0-be78-c7e0-77fa90276c02">A single step test method can be documented as a single line.</p>
+</td></tr></tbody></table>
+</div>
+
+<div id="_example_2"><h3>A.1.2.  Example 2</h3>
+
+<table id="ats_core_http" class="modspec" style="border-width:1px;border-spacing:0;"><thead><tr><th colspan="2" style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="colgroup"><p class="RecommendationTestTitle">Abstract test A.2</p></th></tr></thead><tbody><tr><th style="font-weight:bold;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;" scope="row">Identifier</th><td style="border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.0pt;"><tt>/conf/core/http</tt></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Requirement</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><a href="#_47252221-f560-dff4-d949-f3b211556790">Requirement 1-2: <tt>/req/req-class-a/req-name-2</tt></a></td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.0pt;" scope="row">Test purpose</th><td style="border-top:none;border-bottom:solid windowtext 1.0pt;"><p id="_67324222-93ed-ba52-057c-70a4c3e83e8f">Validate that the resource paths advertised through the API conform with HTTP 1.1 and, where appropriate, TLS.</p>
+</td></tr><tr><th style="font-weight:bold;border-top:none;border-bottom:solid windowtext 1.5pt;" scope="row">Description</th><td style="border-top:none;border-bottom:solid windowtext 1.5pt;"><p class="SourceTitle" style="text-align:center;">Example</p><div id="_5dbdc154-fe97-3720-bebd-34fd9d7c1bd5" class="example"><para><b role="strong">&#x3c;component exclude="false" class="step"&#x3e;&#x3c;p id="_50e3f95a-196d-80f7-36c5-8f72688d117d"&#x3e;A sequential multi-step test method can be documented as shown here. This is the first step.&#x3c;/p&#x3e;
+&#x3c;/component&#x3e;</b></para>
+<para><b role="strong">&#x3c;component exclude="false" class="step"&#x3e;&#x3c;p id="_b4ac603e-84e5-9585-b6f0-d5689740fc47"&#x3e;This is the second step.&#x3c;/p&#x3e;
+&#x3c;/component&#x3e;</b></para></div></td></tr></tbody></table>
+</div>
+</div></div><br /><div id="_title" class="Section3"><h1 class="Annex" id="_a1d30c24-1a9c-405e-a873-a942370a2e41"><b>Annex B</b><br />(informative)<br /><b>Title</b></h1><div id="_9c04cf83-97ee-5129-1540-d560e28d0909" class="Note"><p><span class="note_label">NOTE:  </span>  Place other Annex material in sequential annexes beginning with “B” and leave final two annexes for the Revision History and Bibliography</p></div></div><br /><div id="_revision_history" class="Section3"><h1 class="Annex" id="_e4555515-3252-4e95-8ca7-7d47065578f8"><b>Annex C</b><br />(informative)<br /><b>Revision History</b></h1><p class="TableTitle" style="text-align:center;">Table C.1</p><table id="_5afe311c-d3e8-fb9a-9455-6031fbbc3118" class="MsoISOTable" style="border-width:1px;border-spacing:0;width:90%;"><thead><tr><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Date</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Release</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Editor</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Primary clauses modified</th><th style="font-weight:bold;text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;" scope="col">Description</th></tr></thead><tbody><tr><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">2016-04-28</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">0.1</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">G. Editor</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">all</td><td style="text-align:left;vertical-align:middle;border-top:solid windowtext 1.5pt;border-bottom:solid windowtext 1.5pt;">initial version</td></tr></tbody></table></div><br /><div><h1 class="Section3" id="_73982935-8e52-47b8-b126-595bf5bdf92a">Bibliography</h1>
+
+<div id="_3759b87c-ca5a-511b-57d2-cef257dc301a" class="Note"><p><span class="note_label">NOTE:  </span>  The TC has approved Springer LNCS as the official document citation type.</p><p id="_4b95e711-c35f-134f-4850-3e819a15ddb0">Springer LNCS is widely used in technical and computer science journals and other publications</p><p id="_91991dd8-2854-d4d4-c3b7-71e34448cc8e">– Actual References:</p><p id="_a19eddb1-f343-b2d8-fb7c-28a962268999">[n] Journal: Author Surname, A.: Title. Publication Title. Volume number, Issue number, Pages Used (Year Published)</p></div><p id="OGC2015" class="Biblio">[1]  <i>OGC: OGC Testbed 12 Annex B: Architecture</i> (2015).</p>
+
+
+</div></main><script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+    "HTML-CSS": { preferredFont: "STIX" },
+    asciimath2jax: { delimiters: [['(#(', ')#)']] }
+ });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=MML_HTMLorMML-full" async="async"></script>
+  <script>
+    $("#toc").on('click', 'li', function(e) {
+    $(this).parent().find('li.toc-active').removeClass('toc-active');
+    $(this).addClass('toc-active');
+});
+  </script>
+
+  <script>
+  //TOC toggle animation
+$('#toggle').on('click', function(){
+    if( $('nav').is(':visible') ) {
+        $('nav').animate({ 'left': '-353px' }, 'slow', function(){
+            $('nav').hide();
+        });
+        $('body').animate({ 'margin-left': '0' }, 'slow');
+    }
+    else {
+        $('nav').show();
+        $('nav').animate({ 'left': '0px' }, 'slow');
+        $('body').animate({ 'margin-left': '298px' }, 'slow');
+    }
+});
+</script>
+
+<script>
+    // Scroll to top button
+    window.onscroll = function() {scrollFunction()};
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("myBtn").style.display = "block";
+        } else {
+            document.getElementById("myBtn").style.display = "none";
+        }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+    }
+    </script>
+
+<script>
+/*
+  $(document).ready(function() {
+	  $('[id^=toc]').each(function ()
+	  {
+	     var currentToc = $(this);
+       var url = window.location.href;
+            currentToc.wrap("<a href='" + url + "#" + currentToc.attr("id") + "'></a>");
+	  });
+});
+*/
+</script>
+
+  <script>
+    document.querySelectorAll('*|svg a').forEach(function(item) {
+      var loc = item.getAttribute('href');
+      if (loc !== null && loc.startsWith('#')) {
+  item.setAttribute('href', location.pathname + loc);
+      }
+});
+  </script>
+
+
+<script>
+
+// jQuery Inline Footnotes v1.0.3
+// Copyright (c) 2011 Vesa Vänskä, released under the MIT License.
+
+// Generated by CoffeeScript 1.6.1
+(function() {
+
+  (function($) {
+    $.inlineFootnote = function(el, options) {
+      var _this = this;
+      this.el = $(el);
+      this.el.data("inlineFootnote", this);
+      this.initialize = function() {
+        this.options = $.extend({}, $.inlineFootnote.defaultOptions, options);
+        this.footnoteId = this.el.attr("href").match(/#(.*)/)[1];
+        if (this.footnoteId) {
+          this.el.mouseenter(this.openBox);
+          return $("body").mousemove(this.closeBox);
+        }
+      };
+      this.openBox = function(event) {
+        var footnoteContent, linkOffset;
+        if (!_this.box) {
+          footnoteContent = $("[id='" + _this.footnoteId + "']").children().filter(":not('" + _this.options.hideFromContent + "')");
+          linkOffset = _this.el.offset();
+          _this.box = $("<div />", {
+            id: _this.options.boxId,
+            html: footnoteContent.clone().find(_this.options.hideFromContent).remove().end(),
+            css: {
+              position: "absolute",
+              top: linkOffset.top,
+              left: linkOffset.left + _this.el.outerWidth()
+            }
+          }).appendTo("body");
+          return _this.positionBox();
+        }
+      };
+      this.closeBox = function(event) {
+        if (_this.box) {
+          if (_this.isHoveringFootnote(event)) {
+            clearTimeout(_this.closeTimeout);
+            return _this.closeTimeout = null;
+          } else {
+            if (!_this.closeTimeout) {
+              return _this.closeTimeout = setTimeout((function() {
+                _this.box.remove();
+                return _this.box = null;
+              }), _this.options.hideDelay);
+            }
+          }
+        }
+      };
+      this.isHoveringFootnote = function(event) {
+        return this.box.is(event.target) || $(event.target).closest(this.box).length > 0 || event.target === this.el[0];
+      };
+      this.positionBox = function() {
+        var boxHorizontalPadding, boxLeft, boxWidth, linkLeftOffset, windowWidth;
+        boxHorizontalPadding = parseInt(this.box.css("padding-left")) + parseInt(this.box.css("padding-right"));
+        linkLeftOffset = this.el.offset().left;
+        windowWidth = $(window).width();
+        if ((windowWidth / 2) > linkLeftOffset) {
+          boxLeft = linkLeftOffset + 20;
+          boxWidth = windowWidth - boxLeft - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+        } else {
+          boxWidth = linkLeftOffset - boxHorizontalPadding - this.options.boxMargin * 2;
+          if (boxWidth > this.options.maximumBoxWidth) {
+            boxWidth = this.options.maximumBoxWidth;
+          }
+          boxLeft = linkLeftOffset - boxWidth - this.options.boxMargin * 2;
+        }
+        return this.box.css({
+          width: boxWidth,
+          left: boxLeft
+        });
+      };
+      return this.initialize();
+    };
+    $.inlineFootnote.defaultOptions = {
+      boxMargin: 20,
+      hideDelay: 200,
+      hideFromContent: "[rel=footnote]",
+      maximumBoxWidth: 500,
+      boxId: "footnote_box"
+    };
+    return $.fn.inlineFootnote = function(options) {
+      return this.each(function() {
+        return new $.inlineFootnote(this, options);
+      });
+    };
+  })(jQuery);
+
+}).call(this);
+</script>
+
+<script>
+      $(function() {
+        $("[rel=footnote]").inlineFootnote();
+        });
+</script>
+  <script>
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+//
+// AnchorJS - v4.2.2 - 2020-04-20
+// https://www.bryanbraun.com/anchorjs/
+// Copyright (c) 2020 Bryan Braun; Licensed MIT
+//
+// @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&dn=expat.txt Expat
+!function(A,e){"use strict";"function"==typeof define&&define.amd?define([],e):"object"==typeof module&&module.exports?module.exports=e():(A.AnchorJS=e(),A.anchors=new A.AnchorJS)}(this,function(){"use strict";return function(A){function f(A){A.icon=A.hasOwnProperty("icon")?A.icon:"",A.visible=A.hasOwnProperty("visible")?A.visible:"hover",A.placement=A.hasOwnProperty("placement")?A.placement:"right",A.ariaLabel=A.hasOwnProperty("ariaLabel")?A.ariaLabel:"Anchor",A.class=A.hasOwnProperty("class")?A.class:"",A.base=A.hasOwnProperty("base")?A.base:"",A.truncate=A.hasOwnProperty("truncate")?Math.floor(A.truncate):64,A.titleText=A.hasOwnProperty("titleText")?A.titleText:""}function p(A){var e;if("string"==typeof A||A instanceof String)e=[].slice.call(document.querySelectorAll(A));else{if(!(Array.isArray(A)||A instanceof NodeList))throw new Error("The selector provided to AnchorJS was invalid.");e=[].slice.call(A)}return e}this.options=A||{},this.elements=[],f(this.options),this.isTouchDevice=function(){return!!("ontouchstart"in window||window.DocumentTouch&&document instanceof DocumentTouch)},this.add=function(A){var e,t,i,n,o,s,a,r,c,h,l,u,d=[];if(f(this.options),"touch"===(l=this.options.visible)&&(l=this.isTouchDevice()?"always":"hover"),0===(e=p(A=A||"h2, h3, h4, h5, h6")).length)return this;for(!function(){if(null!==document.head.querySelector("style.anchorjs"))return;var A,e=document.createElement("style");e.className="anchorjs",e.appendChild(document.createTextNode("")),void 0===(A=document.head.querySelector('[rel="stylesheet"],style'))?document.head.appendChild(e):document.head.insertBefore(e,A);e.sheet.insertRule(".anchorjs-link{opacity:0;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}",e.sheet.cssRules.length),e.sheet.insertRule(":hover>.anchorjs-link,.anchorjs-link:focus{opacity:1}",e.sheet.cssRules.length),e.sheet.insertRule("[data-anchorjs-icon]::after{content:attr(data-anchorjs-icon)}",e.sheet.cssRules.length),e.sheet.insertRule('@font-face{font-family:anchorjs-icons;src:url(data:n/a;base64,AAEAAAALAIAAAwAwT1MvMg8yG2cAAAE4AAAAYGNtYXDp3gC3AAABpAAAAExnYXNwAAAAEAAAA9wAAAAIZ2x5ZlQCcfwAAAH4AAABCGhlYWQHFvHyAAAAvAAAADZoaGVhBnACFwAAAPQAAAAkaG10eASAADEAAAGYAAAADGxvY2EACACEAAAB8AAAAAhtYXhwAAYAVwAAARgAAAAgbmFtZQGOH9cAAAMAAAAAunBvc3QAAwAAAAADvAAAACAAAQAAAAEAAHzE2p9fDzz1AAkEAAAAAADRecUWAAAAANQA6R8AAAAAAoACwAAAAAgAAgAAAAAAAAABAAADwP/AAAACgAAA/9MCrQABAAAAAAAAAAAAAAAAAAAAAwABAAAAAwBVAAIAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAMCQAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAg//0DwP/AAEADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAAIAAAACgAAxAAAAAwAAAAMAAAAcAAEAAwAAABwAAwABAAAAHAAEADAAAAAIAAgAAgAAACDpy//9//8AAAAg6cv//f///+EWNwADAAEAAAAAAAAAAAAAAAAACACEAAEAAAAAAAAAAAAAAAAxAAACAAQARAKAAsAAKwBUAAABIiYnJjQ3NzY2MzIWFxYUBwcGIicmNDc3NjQnJiYjIgYHBwYUFxYUBwYGIwciJicmNDc3NjIXFhQHBwYUFxYWMzI2Nzc2NCcmNDc2MhcWFAcHBgYjARQGDAUtLXoWOR8fORYtLTgKGwoKCjgaGg0gEhIgDXoaGgkJBQwHdR85Fi0tOAobCgoKOBoaDSASEiANehoaCQkKGwotLXoWOR8BMwUFLYEuehYXFxYugC44CQkKGwo4GkoaDQ0NDXoaShoKGwoFBe8XFi6ALjgJCQobCjgaShoNDQ0NehpKGgobCgoKLYEuehYXAAAADACWAAEAAAAAAAEACAAAAAEAAAAAAAIAAwAIAAEAAAAAAAMACAAAAAEAAAAAAAQACAAAAAEAAAAAAAUAAQALAAEAAAAAAAYACAAAAAMAAQQJAAEAEAAMAAMAAQQJAAIABgAcAAMAAQQJAAMAEAAMAAMAAQQJAAQAEAAMAAMAAQQJAAUAAgAiAAMAAQQJAAYAEAAMYW5jaG9yanM0MDBAAGEAbgBjAGgAbwByAGoAcwA0ADAAMABAAAAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAH//wAP) format("truetype")}',e.sheet.cssRules.length)}(),t=document.querySelectorAll("[id]"),i=[].map.call(t,function(A){return A.id}),o=0;o<e.length;o++)if(this.hasAnchorJSLink(e[o]))d.push(o);else{if(e[o].hasAttribute("id"))n=e[o].getAttribute("id");else if(e[o].hasAttribute("data-anchor-id"))n=e[o].getAttribute("data-anchor-id");else{for(c=r=this.urlify(e[o].textContent),a=0;void 0!==s&&(c=r+"-"+a),a+=1,-1!==(s=i.indexOf(c)););s=void 0,i.push(c),e[o].setAttribute("id",c),n=c}(h=document.createElement("a")).className="anchorjs-link "+this.options.class,h.setAttribute("aria-label",this.options.ariaLabel),h.setAttribute("data-anchorjs-icon",this.options.icon),this.options.titleText&&(h.title=this.options.titleText),u=document.querySelector("base")?window.location.pathname+window.location.search:"",u=this.options.base||u,h.href=u+"#"+n,"always"===l&&(h.style.opacity="1"),""===this.options.icon&&(h.style.font="1em/1 anchorjs-icons","left"===this.options.placement&&(h.style.lineHeight="inherit")),"left"===this.options.placement?(h.style.position="absolute",h.style.marginLeft="-1em",h.style.paddingRight="0.5em",e[o].insertBefore(h,e[o].firstChild)):(h.style.paddingLeft="0.375em",e[o].appendChild(h))}for(o=0;o<d.length;o++)e.splice(d[o]-o,1);return this.elements=this.elements.concat(e),this},this.remove=function(A){for(var e,t,i=p(A),n=0;n<i.length;n++)(t=i[n].querySelector(".anchorjs-link"))&&(-1!==(e=this.elements.indexOf(i[n]))&&this.elements.splice(e,1),i[n].removeChild(t));return this},this.removeAll=function(){this.remove(this.elements)},this.urlify=function(A){return this.options.truncate||f(this.options),A.trim().replace(/\'/gi,"").replace(/[& +$,:;=?@"#{}|^~[`%!'<>\]\.\/\(\)\*\\\n\t\b\v]/g,"-").replace(/-{2,}/g,"-").substring(0,this.options.truncate).replace(/^-+|-+$/gm,"").toLowerCase()},this.hasAnchorJSLink=function(A){var e=A.firstChild&&-1<(" "+A.firstChild.className+" ").indexOf(" anchorjs-link "),t=A.lastChild&&-1<(" "+A.lastChild.className+" ").indexOf(" anchorjs-link ");return e||t||!1}}});
+// @license-end
+  </script>
+    <script>
+  anchors.options = {
+  placement: 'left'
+};
+anchors.add('h1, h2, h3, h4');
+</script>
+
+</body></html>

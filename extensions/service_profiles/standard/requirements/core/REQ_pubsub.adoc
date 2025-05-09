@@ -5,7 +5,7 @@
 [%metadata]
 identifier:: /req/service-profile/pubsub
 
-part:: A requirement MAY be defined to which specifies support for EDR Part 2 pubsub.
+part:: A requirement MAY be defined to which specifies support for the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow Standard.
 
 part:: A pubsub requirement MAY specify the channels that SHALL be supported 
 
