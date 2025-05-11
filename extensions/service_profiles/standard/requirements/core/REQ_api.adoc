@@ -1,10 +1,10 @@
-[[req_service-profile_api]]
+[[req_core_api]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/api
+identifier:: /req/core/api
 
-part:: A requirement MAY be defined to which specifies the versions of OpenAPI SHALL be supported.
+statement:: A Profile of the OGC-EDR Standard _SHALL_ require that an implementation specify the versions of OpenAPI supported.
 
 ====

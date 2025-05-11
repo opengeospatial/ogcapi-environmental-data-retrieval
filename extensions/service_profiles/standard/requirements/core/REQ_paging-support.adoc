@@ -1,12 +1,11 @@
-[[req_service-profile_paging-support]]
+[[req_core_paging-support]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/paging-support
-
-part:: Paging support depends on query pattern and output format. A requirement MAY be created for each combination of query pattern and output format that must support paging.
-
-part:: Each paging requirement SHOULD also include a recommendation for the default number of items to return per page request.
+identifier:: /req/core/paging-support
+statement:: If a Profile of the OGC-EDR Standard is _extended_ to support paging, then:
+part:: A requirement _SHALL _ be created for each combination of query pattern and output format that must support paging.
+part:: Each paging requirement _SHALL_ specify the default number of items to return per page request.
 
 ====

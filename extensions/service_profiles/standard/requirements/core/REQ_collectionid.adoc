@@ -1,15 +1,13 @@
-[[req_service-profile_collectionid]]
+[[req_core_collectionid]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/collectionid
-
-part:: A requirement MAY be defined to specifying the rules that Collection id values must follow.
-
-part:: The Requirement definition rules for Collection id values can be one of the following:
-
-* identifier string
+identifier:: /req/core/collectionid
+statement:: If a Profile of the OGC-EDR Standard _restricts_ the valid values of the Collection ID parameter, then:
+part:: The Profile _SHALL_ specify the rules that the Collection ID values must follow.
+part:: Those rules _SHALL_ be specified using either:
+* identifier string or
 * Regular expression defining valid string patterns.
 
 ====

@@ -1,22 +1,24 @@
-[[req_service-profile_root]]
+[[req_core_root]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/root
+identifier:: /req/core/root
 
-part:: A requirement MAY be defined to which specifies the contents of the landing page (/).
+part:: A requirement _SHALL_ be defined to which specifies the contents of the landing page (/).
 
-part:: A landing page requirement MAY specify a Title
+part:: A landing page requirement _SHALL_ specify a Title
 
-part:: A landing page requirement MAY specify a Description
+part:: A landing page requirement _SHALL_ specify a Description
 
-part:: A landing page requirement MAY specify a Keyword list
+part:: A landing page requirement _SHALL_ specify a Keyword list
 
-part:: A landing page requirement MAY specify the attributes Provider information must include
+part:: A landing page requirement _SHALL_ specify the attributes Provider information must include
 
-part:: A landing page requirement MAY specify the attributes Contact information must include
+part:: A landing page requirement _SHALL_ specify the attributes Contact information must include
 
-part:: A landing page requirement MAY define the links that SHALL be included in the Root response.
+part:: A landing page requirement _SHALL_ define the links that SHALL be included in the Root response.
 
 ====
+
+NOTE: Question - isn't this covered by the EDR Standard?

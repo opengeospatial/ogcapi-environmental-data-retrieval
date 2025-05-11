@@ -1,14 +1,12 @@
-[[req_service-profile_radius]]
+[[req_core_radius]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/radius
-
-part:: A requirement MAY be defined to make support for an Radius query mandatory.
-
-part:: A Radius query requirement SHALL specify the following:
-
+identifier:: /req/core/radius
+statement:: If a Profile of the OGC-EDR Standard _restricts_ data queries by making the Radius query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the Radius query.
+part:: The Radius query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values

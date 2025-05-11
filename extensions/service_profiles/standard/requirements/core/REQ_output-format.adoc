@@ -1,17 +1,17 @@
-[[req_service-profile_output-format]]
+[[req_core_output-format]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/output-format
-
-part:: For every output_format specified in any of the data_query enumerated lists there SHOULD be a requirement which defines the schema or structure of the data (depending on the format). Suggested definition approaches are as follows:
+identifier:: /req/core/output-format
+statement:: For every output_format specified in any of the data_query enumerated lists there _SHALL_ be a requirement which defines the schema or structure of the data (depending on the format). Suggested definition approaches are as follows:
 
 * JSON – Link to a JSON Schema definition
 * XML – Link to a XML Schema definition
 * CSV, TSV, PSV, SSV – Link to a definition based on the CSV on the web recommendations available from the https://www.w3.org/2013/csvw/wiki/Main_Page.html[CSV on the Web Working Group].
 * Other types (e.g. binary file types) – Link to a description of the format
 
-NOTE: What is the name of the "CSV
-
 ====
+
+
+NOTE: Question: Where should the CSV citation point.  There are multiple CSV on the Web Recommendataions.

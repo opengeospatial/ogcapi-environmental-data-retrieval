@@ -1,13 +1,16 @@
-[[req_service-profile_parameter-names]]
+[[req_core_parameter-names]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/parameter-names
-
-part:: A requirement MAY be defined to which specifies the parameter_names and their definitions.
-
-part:: The parameter_names requirement definition would specify the required parameter_names objects in full. The parameter_names object defines the name, units, data type and measurement duration of the data value so it is essential that all implementations are consistent for interoperability.
+identifier:: /req/core/parameter-names
+statement:: If a Profile of the OGC-EDR Standard _restricts_ the valid values and definitions of parameter_names, then,
+part:: Requirements _SHALL_ be defined which specify the parameter_names and their definitions.
+part:: The parameter_names requirement definitions _SHALL_ specify the required parameter_names objects in full including:
+* name, 
+* units,
+* data type and
+* measurement duration 
 
 
 for example:

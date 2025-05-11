@@ -1,13 +1,13 @@
-[[req_service-profile_links]]
+[[req_core_links]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/links
-
-part:: A requirement MAY be defined to which specifies links their definitions which must be included in a response.
-
-part:: The link requirement definition would specify the required link objects in full. As a minimum the required link object SHALL specify `href`, `rel` and `type` attributes.
+identifier:: /req/core/links
+statement:: If a Profile of the OGC-EDR Standard _restricts_ valid responses to only those which include links, then:
+part:: The Profile _SHALL_ require that link objects are included in a response.
+part:: The link objects _SHALL_ defined the required link objects in full. 
+part:: The link objects _SHALL_ require that the `href`, `rel` and `type` attributes are populated.
 
 for example:
 

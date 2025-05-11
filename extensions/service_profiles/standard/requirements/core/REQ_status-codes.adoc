@@ -1,13 +1,11 @@
-[[req_service-profile_status-codes]]
+[[req_core_status-codes]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/status-codes
-
-part:: A requirement MAY be defined to specify which http status codes SHALL be supported.
-
-part:: For every http status code supported by the profile. A requirement SHALL be created. The requirement SHALL provide the following:
+identifier:: /req/core/status-codes
+statement:: A Profile of the OGC-EDR Standard _SHALL_ require that the definitions of all http status codes SHALL be provided.
+part:: These definitions _SHALL_ provide the following:
 
 * A description of the cause of the error.
 * A JSON schema for the message body structure

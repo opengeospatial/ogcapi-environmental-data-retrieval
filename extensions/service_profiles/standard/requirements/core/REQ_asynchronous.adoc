@@ -1,14 +1,21 @@
-[[req_service-profile_asynchronous]]
+[[req_core_asynchronous]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/asynchronous
-
-part:: A requirement MAY be defined for each query type that is asynchronous.
-
-part:: Each asynchronous query type requirement SHALL define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.
-
-The requirement will also document (this can be a link to another document) the mechanism for delivering the result of the asynchronous query.
+identifier:: /req/core/asynchronous
+statement:: If a Profile _extends_ the OGC-EDR Standard with support for asynchronous opperations, then:
+part:: Requirements _SHALL_ be defined for each query type that is asynchronous
+part:: Each asynchronous query type requirement _SHALL_ define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.
+part:: Each asynchronous query type requirement _SHALL_ document the mechanism for delivering the result of the asynchronous query.
 
 ====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/asynchronous
+statement:: The documentation of the mechanism for delivering the result of the asynchronous query _MAY_ be provided through a link to an external document.
+
+====
+

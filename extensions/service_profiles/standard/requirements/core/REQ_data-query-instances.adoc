@@ -7,3 +7,5 @@ identifier:: /req/service-profile/instances
 part:: Instances SHALL be defined in the data_queries enumerated list if the collection has child instances that can be queried.
 
 ====
+
+NOTE: The purpose of this requirement is not clear.

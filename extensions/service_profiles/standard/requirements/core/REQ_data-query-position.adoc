@@ -1,19 +1,16 @@
-[[req_service-profile_position]]
+[[req_core-profile_position]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/position
-
-part:: A requirement MAY be defined to make support for an Position query mandatory.
-
-part:: A Position query requirement SHALL specify the following:
-
+identifier:: /req/core/position
+statement:: If a Profile of the OGC-EDR Standard _restricts_ data queries by making the Position query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the Position query.
+part:: The Position query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
-
-A position query requirement SHALL also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
+part:: The position query requirement _SHALL_ also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
 
 ====
