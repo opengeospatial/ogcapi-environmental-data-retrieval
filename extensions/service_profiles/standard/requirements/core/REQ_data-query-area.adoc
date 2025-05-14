@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-area
-statement:: If a Profile of the OGC-EDR Standard _restricts_ data queries by making the Area query mandatory, then:
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Area query mandatory, then:
 part:: The Profile _SHALL_ include a requirement mandating the Area query.
 part:: The Area query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types

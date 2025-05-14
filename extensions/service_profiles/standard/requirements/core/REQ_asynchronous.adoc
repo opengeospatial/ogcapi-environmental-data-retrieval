@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/asynchronous
-statement:: If a Profile _extends_ the OGC-EDR Standard with support for asynchronous opperations, then:
+statement:: If a Profile _extends_ the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> with support for asynchronous opperations, then:
 part:: Requirements _SHALL_ be defined for each query type that is asynchronous
 part:: Each asynchronous query type requirement _SHALL_ define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.
 part:: Each asynchronous query type requirement _SHALL_ document the mechanism for delivering the result of the asynchronous query.

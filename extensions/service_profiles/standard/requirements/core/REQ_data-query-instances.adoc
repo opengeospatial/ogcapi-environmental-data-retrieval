@@ -1,11 +1,11 @@
-[[req_service-profile_instances]]
+[[req_core_data-query-instances]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/instances
-part:: Instances SHALL be defined in the data_queries enumerated list if the collection has child instances that can be queried.
+identifier:: /req/core/data-query-instances
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _extends_ data queries by making the Instances within a Collection queryable, then:
+part:: Instances _SHALL_ be defined in the data_queries enumerated list.
+part:: A _NULL_ value _SHALL_ be used to indicate that no child instances can be queried.
 
 ====
-
-NOTE: The purpose of this requirement is not clear.

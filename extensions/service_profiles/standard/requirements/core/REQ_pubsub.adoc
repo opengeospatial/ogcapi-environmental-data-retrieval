@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/pubsub
-statement:: If a Profile of the OGC-EDR Standard _extends_ the supported operations to include Publish-Subscribe operations, then:
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _extends_ the supported operations to include Publish-Subscribe operations, then:
 part:: Support for the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow Standard _SHALL_ be required.
 part:: The pubsub requirement _SHALL_ specify the channels that _SHALL_ be supported 
 part:: The pubsub requirement _SHALL_ specify the payloads that a pubsub channel _SHALL_ support

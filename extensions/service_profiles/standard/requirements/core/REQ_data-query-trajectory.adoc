@@ -3,7 +3,7 @@
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/trajectory
+identifier:: /req/core/data-query-trajectory
 statement:: If a Profile of the OGC-EDR Standard _restricts_ data queries by making the Trajectory query mandatory, then:
 part:: The Profile _SHALL_ include a requirement mandating the Trajectory query.
 part:: The Trajectory query requirement _SHALL_ specify the following:

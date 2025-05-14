@@ -4,7 +4,15 @@
 ====
 [%metadata]
 identifier:: /req/core/output-format
-statement:: For every output_format specified in any of the data_query enumerated lists there _SHALL_ be a requirement which defines the schema or structure of the data (depending on the format). Suggested definition approaches are as follows:
+statement:: For every output_format specified in any of the data_query enumerated lists, there _SHALL_ be a requirement which defines the schema or structure of the data (depending on the format). 
+
+====
+
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/core/output-format
+statement:: The recommended definition approaches are as follows:
 
 * JSON – Link to a JSON Schema definition
 * XML – Link to a XML Schema definition

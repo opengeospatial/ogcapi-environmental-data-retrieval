@@ -1,10 +1,10 @@
-[[req_core-profile_position]]
+[[req_core-data-query-position]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/position
-statement:: If a Profile of the OGC-EDR Standard _restricts_ data queries by making the Position query mandatory, then:
+identifier:: /req/core/data-query-position
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Position query mandatory, then:
 part:: The Profile _SHALL_ include a requirement mandating the Position query.
 part:: The Position query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types

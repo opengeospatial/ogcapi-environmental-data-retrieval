@@ -1,10 +1,10 @@
-[[req_core_radius]]
+[[req_core_data-query-radius]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/core/radius
-statement:: If a Profile of the OGC-EDR Standard _restricts_ data queries by making the Radius query mandatory, then:
+identifier:: /req/core/data-query-radius
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Radius query mandatory, then:
 part:: The Profile _SHALL_ include a requirement mandating the Radius query.
 part:: The Radius query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
