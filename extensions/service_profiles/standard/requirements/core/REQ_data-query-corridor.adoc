@@ -1,14 +1,12 @@
-[[req_service-profile_data-query-corridor]]
+[[req_core_data-query-corridor]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/data-query-corridor
-
-part:: A requirement MAY be defined to make support for a Corridor query mandatory.
-
-part:: A Corridor requirement SHALL specify the following:
-
+identifier:: /req/core/data-query-corridor
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Corridor query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the Corridor query.
+part:: The Corridor requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values

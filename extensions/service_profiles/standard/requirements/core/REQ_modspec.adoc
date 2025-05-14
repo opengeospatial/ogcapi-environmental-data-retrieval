@@ -4,6 +4,6 @@
 ====
 [%metadata]
 identifier:: /req/core/modspec
-part:: A profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ be conformant to the <<ogc-modspec,OGC Modular Specification>>.
+statement:: A profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ be conformant to the <<ogc-modspec,OGC Modular Specification>>.
 
 ====

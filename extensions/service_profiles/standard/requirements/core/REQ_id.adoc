@@ -10,3 +10,5 @@ part:: A Requirement definition _SHALL_ specify the rules that the Collection id
 * Regular expression defining valid string patterns.
 
 ====
+
+NOTE: This appears to duplicate /req/core/collectionid

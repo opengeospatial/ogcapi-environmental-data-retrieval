@@ -1,13 +1,12 @@
-[[req_service-profile_data-query-area]]
+[[req_core_data-query-area]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/data-query-area
-part:: A requirement MAY be defined to make support for an Area query mandatory.
-
-part:: An Area query requirement SHALL specify the following:
-
+identifier:: /req/core/data-query-area
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Area query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the Area query.
+part:: The Area query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values

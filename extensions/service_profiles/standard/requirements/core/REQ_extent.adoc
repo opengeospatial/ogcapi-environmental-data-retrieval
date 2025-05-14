@@ -1,9 +1,9 @@
-[[req_service-profile_extent]]
+[[req_core_extent]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/extent
+identifier:: /req/core/extent
 
 part:: A requirement MAY be defined specifying the rules for defining the Collection extent.
 
@@ -40,3 +40,5 @@ part:: For any custom dimensions an extent requirements definition SHALL specify
 (Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)
 
 ====
+
+NOTE: Needs to be re-visited
