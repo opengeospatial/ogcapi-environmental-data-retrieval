@@ -1,14 +1,12 @@
-[[req_service-profile_data-query-cube]]
+[[req_core_data-query-cube]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/data-query-cube
-
-part:: A requirement MAY be defined to make support for a Cube query mandatory.
-
-part:: A Cube requirement SHALL specify the following:
-
+identifier:: /req/core/data-query-cube
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Cube query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the Cube query.
+part:: The Cube query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values

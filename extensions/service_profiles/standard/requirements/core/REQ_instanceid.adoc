@@ -1,14 +1,12 @@
-[[req_service-profile_instanceid]]
+[[req_core_instanceid]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/instanceid
-
-part:: A requirement MAY be defined to specifying the rules that Instance id values must follow.
-
-part:: The Requirement definition rules for Instance id values can be one of the following:
-
+identifier:: /req/core/instanceid
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ the valid values of the Instance ID parameter, then:
+part:: The Profile _SHALL_ specify the rules that the Instance ID values must follow.
+part:: Those rules _SHALL_ be specified using either:
 * identifier string
 * Regular expression defining valid string patterns.
 

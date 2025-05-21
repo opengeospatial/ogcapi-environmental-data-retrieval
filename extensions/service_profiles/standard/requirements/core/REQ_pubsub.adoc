@@ -1,14 +1,12 @@
-[[req_service-profile_pubsub]]
+[[req_core_pubsub]]
 
 [requirement]
 ====
 [%metadata]
-identifier:: /req/service-profile/pubsub
-
-part:: A requirement MAY be defined to which specifies support for the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow Standard.
-
-part:: A pubsub requirement MAY specify the channels that SHALL be supported 
-
-part:: A pubsub requirement MAY specify the payloads that a pubsub channel SHALL support
+identifier:: /req/core/pubsub
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _extends_ the supported operations to include Publish-Subscribe operations, then:
+part:: Support for the OGC API - Environmental Data Retrieval - Part 2: Publish-Subscribe workflow Standard _SHALL_ be required.
+part:: The pubsub requirement _SHALL_ specify the channels that _SHALL_ be supported 
+part:: The pubsub requirement _SHALL_ specify the payloads that a pubsub channel _SHALL_ support
 
 ====
