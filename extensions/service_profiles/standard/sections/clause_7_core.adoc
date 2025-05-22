@@ -12,15 +12,19 @@ include::../requirements/requirements_class_core.adoc[]
 
 include::../requirements/core/REQ_modspec.adoc[]
 
-==== Profile of OGC API - EDR
-
-include::../requirements/core/REQ_EDR-conformant.adoc[]
-
 ==== Publish as an OpenAPI document
 
 include::../requirements/core/REQ_publishing.adoc[]
 
 include::../requirements/core/REQ_api.adoc[]
+
+==== Profile of OGC API - EDR
+
+include::../requirements/core/REQ_EDR-conformant.adoc[]
+
+include::../requirements/core/REQ_root.adoc[]
+
+include::../requirements/core/REQ_requirements-set.adoc[]
 
 === Requests
 

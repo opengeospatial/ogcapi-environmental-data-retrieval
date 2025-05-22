@@ -1,0 +1,9 @@
+[[ats_data-query-radius]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/data-query-radius
+target:: /req/core/data-query-radius
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

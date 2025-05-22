@@ -1,9 +1,56 @@
+[[annex-A]]
 [appendix]
 == Conformance Class Abstract Test Suite (Normative)
 
-[NOTE]
-Ensure that there is a conformance class for each requirements class and a test for each requirement (identified by requirement name and number)
+=== Conformance Class Core
 
-=== Conformance Class A
+include::../abstract_tests/ATS_class_core.adoc[]
 
-include::../abstract_tests/ATS_class_example1.adoc[]
+include::../abstract_tests/core/ATS_modspec.adoc[]
+
+include::../abstract_tests/core/ATS_publishing.adoc[]
+
+include::../abstract_tests/core/ATS_api.adoc[]
+
+include::../abstract_tests/core/ATS_edr-conformant.adoc[]
+
+include::../abstract_tests/core/ATS_root.adoc[]
+
+include::../abstract_tests/core/ATS_requirements-set.adoc[]
+
+include::../abstract_tests/core/ATS_parameter-names.adoc[]
+
+include::../abstract_tests/core/ATS_collectionid.adoc[]
+
+include::../abstract_tests/core/ATS_extent.adoc[]
+
+include::../abstract_tests/core/ATS_instanceid.adoc[]
+
+include::../abstract_tests/core/ATS_output-format.adoc[]
+
+include::../abstract_tests/core/ATS_paging-support.adoc[]
+
+include::../abstract_tests/core/ATS_status-codes.adoc[]
+
+include::../abstract_tests/core/ATS_links.adoc[]
+
+include::../abstract_tests/core/ATS_data-query.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-area.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-corridor.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-cube.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-instances.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-position.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-radius.adoc[]
+
+include::../abstract_tests/core/ATS_data-query-trajectory.adoc[]
+
+include::../abstract_tests/core/ATS_asynchronous.adoc[]
+
+include::../abstract_tests/core/ATS_pubsub.adoc[]
+

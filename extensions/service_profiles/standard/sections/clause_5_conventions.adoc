@@ -5,7 +5,7 @@ This sections provides details and examples for any conventions used in the docu
 === Identifiers
 The normative provisions in this standard are denoted by the URI
 
-`http://www.opengis.net/doc/IS/ogcapi-edr-3/1.0`
+`http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0`
 
 All requirements and conformance tests that appear in this document are denoted by partial URIs which are relative to this base.
 
@@ -15,4 +15,4 @@ In the interest of readability, the following terms will be used as shorthand fo
 
 * Profile: A Profile is a standard or specification which restricts and/or extends an existing standard. This standard defines the rules for creating a profile of the <<ogc-edr,OGC API - Environmental Data Retrieval>> Standard.  The term "Profile" will be used in this document as shorthand for "profile of the OGC API - Environmental Data Retrieval Standard".
 
-* OGC-EDR: The term OGC-EDR will be used in this document as shorthand for the term "OGC API - Environmental Data Retrieval Standard"
+* OGC API-EDR: The term OGC API-EDR will be used in this document as shorthand for the term "OGC API - Environmental Data Retrieval Standard"

@@ -1,0 +1,9 @@
+[[ats_publishing]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/publishing
+target:: /req/core/publishing
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

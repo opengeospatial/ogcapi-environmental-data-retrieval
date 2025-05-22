@@ -1,0 +1,33 @@
+[[ats_class-core]]
+[conformance_class]
+.Conformance Class 'Core'
+====
+[%metadata]
+identifier:: http://www.opengis.net/spec/ogcapi-edr-3/1.0/conf/conf-class-core
+target:: http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core
+abstract-test:: /conf/core/modspec
+abstract-test:: /conf/core/publishing
+abstract-test:: /conf/core/api
+abstract-test:: /conf/core/edr-conformant
+abstract-test:: /conf/core/root
+abstract-test:: /conf/core/requirements-set
+abstract-test:: /conf/core/parameter-names
+abstract-test:: /conf/core/collectionid
+abstract-test:: /conf/core/extent
+abstract-test:: /conf/core/instanceid
+abstract-test:: /conf/core/output-format
+abstract-test:: /conf/core/paging-support
+abstract-test:: /conf/core/status-codes
+abstract-test:: /conf/core/links
+abstract-test:: /conf/core/data-query
+abstract-test:: /conf/core/data-query-area
+abstract-test:: /conf/core/data-query-corridor
+abstract-test:: /conf/core/data-query-cube
+abstract-test:: /conf/core/data-query-instances
+abstract-test:: /conf/core/data-query-position
+abstract-test:: /conf/core/data-query-radius
+abstract-test:: /conf/core/data-query-trajectory
+abstract-test:: /conf/core/asynchronous
+abstract-test:: /conf/core/pubsub
+====
+

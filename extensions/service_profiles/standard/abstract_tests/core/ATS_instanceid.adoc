@@ -1,0 +1,9 @@
+[[ats_instanceid]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/instanceid
+target:: /req/core/instanceid
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

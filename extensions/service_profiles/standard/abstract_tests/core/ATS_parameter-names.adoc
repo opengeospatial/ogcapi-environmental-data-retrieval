@@ -1,0 +1,9 @@
+[[ats_parameter-names]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/parameter-names
+target:: /req/core/parameter-names
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

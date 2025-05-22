@@ -1,0 +1,9 @@
+[[ats_modspec]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/modspec
+target:: /req/core/modspec
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

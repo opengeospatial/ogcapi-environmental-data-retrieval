@@ -1,0 +1,9 @@
+[[ats_conformance-test]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/conformance-test
+target:: /req/core/conformance-test
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====
