@@ -1,0 +1,9 @@
+[[ats_pubsub]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/pubsub
+target:: /req/core/pubsub
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

@@ -1,0 +1,9 @@
+[[ats_requirements-set]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/requirements-set
+target:: /req/core/requirements-set
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

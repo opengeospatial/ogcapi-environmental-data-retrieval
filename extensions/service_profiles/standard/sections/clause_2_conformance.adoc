@@ -1,16 +1,17 @@
 == Conformance
-This standard defines XXXX.
 
-Requirements for N standardization target types are considered:
+Conformance to the ModSpec by a profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> modular standard can be tested by inspection. The test suite is provided in <<annex-A>>.
 
-* AAAA
-* BBBB
+Part 3: Core of the ModSpec (this document) defines one requirements class and one related conformance class:
 
-Conformance with this standard shall be checked using all the relevant tests specified in Annex A (normative) of this document. The framework, concepts, and methodology for testing, and the criteria to be achieved to claim conformance are specified in the OGC Compliance Testing Policies and Procedures and the OGC Compliance Testing web site.
+* The Core: Common requirements for specifying standards documents. See <<core-section>> and <<annex-A-1>>
 
-In order to conform to this OGC® interface standard, a software implementation shall choose to implement:
+The ModSpec contains normative language and thus places requirements on
+conformance, or mechanism for adoption, of candidate standards to which the ModSpec
+applies. In particular:
 
-* Any one of the conformance levels specified in Annex A (normative).
-* Any one of the Distributed Computing Platform profiles specified in Annexes TBD through TBD (normative).
+* <<core-section,OGC API-EDR Requirements Class: Core>> specifies the core requirements which shall be met by all standards claiming conformance to this Standard.
+* <<cls-9,Mapping the ModSpec to types of models>> gives information on how the ModSpec is to be applied to extensions to the core model for requirements and
+conformance clauses.
 
-All requirements-classes and conformance-classes described in this document are owned by the standard(s) identified.
+Such extensions are defined in additional Parts (volumes) to the ModSpec Standard.

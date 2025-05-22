@@ -1,0 +1,9 @@
+[[ats_status-codes]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/status-codes
+target:: /req/core/status-codes
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

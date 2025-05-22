@@ -1,0 +1,9 @@
+[[ats_paging-support]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/paging-support
+target:: /req/core/paging-support
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

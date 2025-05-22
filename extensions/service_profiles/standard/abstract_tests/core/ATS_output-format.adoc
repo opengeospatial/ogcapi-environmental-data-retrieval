@@ -1,0 +1,9 @@
+[[ats_output-format]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/output-format
+target:: /req/core/output-format
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

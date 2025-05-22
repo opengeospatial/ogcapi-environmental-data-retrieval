@@ -1,0 +1,9 @@
+[[ats_asynchronous]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/asynchronous
+target:: /req/core/asynchronous
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

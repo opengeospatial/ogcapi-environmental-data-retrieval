@@ -4,6 +4,6 @@
 ====
 [%metadata]
 identifier:: /req/core/edr-conformant
-statement:: A profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that a conformant implementation (<<standardization_target_definition,standardization target>>) of that profile also demonstrate conformance to the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>.
+statement:: A profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that a conformant implementation (<<standardization_target-definition,standardization target>>) of that profile also demonstrate conformance to the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>.
 
 ====

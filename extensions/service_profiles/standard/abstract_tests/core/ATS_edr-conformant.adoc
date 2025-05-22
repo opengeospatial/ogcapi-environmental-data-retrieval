@@ -1,0 +1,11 @@
+[[ats_edr-conformant]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/edr-conformant
+target:: /req/core/edr-conformant
+test-purpose:: Validate that the Profile Standard requires that all implementations demonstrate conformance with the OGC API-EDR Standard.
+test-method:: Inspect the document to verify the above.
+====
+
+NOTE: this "purpose" requires more specificity.

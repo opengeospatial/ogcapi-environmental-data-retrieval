@@ -1,0 +1,9 @@
+[[ats_data-query-area]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/data-query-area
+target:: /req/core/data-query-area
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====

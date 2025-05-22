@@ -1,0 +1,9 @@
+[[ats_data-query]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/data-query
+target:: /req/core/data-query
+test-purpose:: TBD
+test-method:: Inspect the document to verify the above.
+====
