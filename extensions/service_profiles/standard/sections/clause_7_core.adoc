@@ -1,10 +1,191 @@
 [[core-section]]
 
-== Requirement Class Core
-
-Paragraph
+== Requirements Class Core
 
 include::../requirements/requirements_class_core.adoc[]
+
+=== Resources and Paths
+
+Web APIs provide access to resources through URI paths. 
+
+.Environmental Data Retrieval API Paths
+[width="100%",options="header,footer"]
+|====================
+|PATH TEMPLATE |METHOD |RESOURCE
+|{root}/ |GET |Landing page
+|{root}/api |GET |API Description (optional)
+|{root}/conformance |GET |Conformance Classes
+|{root}/collections|GET |Metadata describing the collections of data available from this API.
+|{root}/collections/{collectionId} |GET |Metadata describing the collection of data which has the unique identifier{collectionId}
+|{root}/collections/{collectionId}/items |GET |Retrieve metadata about available items
+|{root}/collections/{collectionId}/{queryType} |GET, POST(Optional) |Retrieve data according to the query pattern from a collection with the unique identifier {collectionId}
+|{root}/collections/{collectionId}/instances |GET |Retrieve metadata about instances of acollection
+|{root}/collections/{collectionId}/instances/{instanceId} |GET |Retrieve metadata from a specific instanceof a collection with the unique identifiers{collectionId} and {instanceId}
+|{root}/collections/{collectionId}/instances/{instanceId}/{queryType} |GET, POST(Optional) |Retrieve data according to the query pattern from a specific instance of a collection with the unique identifiers{collectionId} and {instanceId}
+|====================
+
+Where:
+
+* {root} = Base URI for the API server
+* {collectionId} = an identifier for a specific collection of data
+* {instanceId} = an identifier for a specific version or instance of a collection of data
+* {queryType} = an identifier for a specific query pattern to retrieve data from a specific  collection of data
+
+==== API Landinding Page 
+
+Path = {root}/
+
+The purpose of the landing page is to provide clients with a starting point for using the API. Any resource exposed through an API can be accessed by following paths or links starting from the landing page.
+
+The landing page includes three metadata elements: title, description, and attribution. These three elements describe the API as a whole. Clients can expect to encounter metadata that is more resource-specific as they follow links and paths from the landing page.
+
+Section 9.1 of API Common Part 1
+/req/landing-page/root-op
+/req/landing-page/root-success
+
+http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml[text]
+
+The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. OGC API — Common already requires some common links. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not impose any additional requirements on this resource.
+
+The normative JSON Schema for the Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
+
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content which Profiles will mandate is defined in the following requirment.
+
+include::../requirements/core/REQ_root.adoc[]
+
+==== API Definition 
+
+Path = {root}/api
+
+Every API implementation is required to provide an API Definition resource that describes the capabilities provided by that API. This resource can be used by client developers to understand the supported services, by software clients to connect to the server, and by development tools to support the implementation of servers and clients.
+
+While the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> leaves the selection of format for the API Definition document to the API implementor, at this time OpenAPI 3.0 and 3.1 are the only options supported. 
+
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are to be more restricted. The following requirements mandate that there be an API Definition document to provide a common base for all implementatins, that this document be an OpenAPI document, that the specified minimum content is included, and that the version(s) of OpenAPI used are advertised.
+
+include::../requirements/core/REQ_publishing.adoc[]
+
+include::../requirements/core/REQ_api.adoc[]
+
+NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
+
+==== Declaration of Conformance Classes
+
+Path = {root}/conformance
+
+To support “generic” clients that want to access implementations of multiple OGC API Standards and extensions — and not “just” a specific API server, the OGC API-EDR Standard requires that an implementation declares the conformance classes it claims to have implemented. 
+
+NOTE: Add requirement that the Profile requires implementations to include both the core conformance class of the Profile and at least one of the OpenAPI conformance classes. 
+
+NOTE: Get guidence from the OGC Naming Authority on valid URIs for Profiles. 
+
+==== Collections
+
+Path = {root}/collections
+
+An API may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)
+
+include::../requirements/core/REQ_requirements-set.adoc[]
+
+Paging restrictions (limit parameter provided in the request, multi-page response). EDR only uses this parameter in requests to the query resources.
+
+include::../requirements/core/REQ_paging-support.adoc[]
+
+Extent restrictions (one extent per collection provided in the response). Extents are also included in each {root}/collections/{collectionId} response. In short, an Extent appears in the metadata for a collection.  Any request which returns a collection also returns an extent.
+
+include::../requirements/core/REQ_extent.adoc[]
+
+==== Collection 
+
+Path = {root}/collections/{collectionId}
+
+Collection ID parameter restictions
+
+include::../requirements/core/REQ_collectionid.adoc[]
+
+Output Format restrictions
+
+The -f parameter.
+Data format for the output data (available options are listed in the collectionsresponse).
+
+include::../requirements/core/REQ_output-format.adoc[]
+
+==== Query 
+
+Path = {root}/collections/{collectionId}/{queryType}
+
+include::../requirements/core/REQ_data-query.adoc[]
+
+==== Area Query
+
+Path = {root}/collections/{collectionId}/area
+
+include::../requirements/core/REQ_data-query-area.adoc[]
+
+==== Corridor Query
+
+Path = {root}/collections/{collectionId}/corridor
+
+include::../requirements/core/REQ_data-query-corridor.adoc[]
+
+==== Cube Query
+
+Path = {root}/collections/{collectionId}/cube
+
+include::../requirements/core/REQ_data-query-cube.adoc[]
+
+==== Locations Query
+
+Path = {root}/collections/{collectionId}/locations
+
+TBD
+
+==== Instances Query
+
+Path = {root}/collections/{collectionId}/instances
+
+Having multiple versions or instances of the same collection, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as newcollections the instance query type allows this data to be described as different views of the same collection.
+
+include::../requirements/core/REQ_data-query-instances.adoc[]
+
+===== Parameter instanceId
+
+Path - Instance {root}/collections/{collectionId}/instances/{instanceId} 
+
+Instance ID restrictions
+
+include::../requirements/core/REQ_instanceid.adoc[]
+
+===== Parameter queryType
+
+Path -  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}
+
+==== Items Query
+
+Path = {root}/collections/{collectionId}/items 
+
+EDR does not make any explicit changes to this path.
+
+
+==== Position Query
+
+Path = {root}/collections/{collectionId}/positions 
+
+include::../requirements/core/REQ_data-query-position.adoc[]
+
+==== Radius Query
+
+Path = {root}/collections/{collectionId}/radius 
+
+include::../requirements/core/REQ_data-query-radius.adoc[]
+
+==== Trajectory Query
+
+Path = {root}/collections/{collectionId}/trajectory 
+
+include::../requirements/core/REQ_data-query-trajectory.adoc[]
+
+=== Parameters
 
 === General Requirements
 
@@ -20,7 +201,7 @@ A common focus of Profiles is to restrict the values of Path parameters. The Pro
 
 include::../requirements/core/REQ_parameter-names.adoc[]
 
-=== Platform
+==== Http Status Codes
 
 HTTP response
 
@@ -28,9 +209,13 @@ HTTP response
  
 include::../requirements/core/REQ_status-codes.adoc[]
 
+==== Links
+
  - Response links
 
 include::../requirements/core/REQ_links.adoc[]
+
+==== Asynchronous Queries
 
 While Web protocols typically use request-response operations, there is also support for asychonous operations.
 
@@ -44,144 +229,3 @@ include::../requirements/core/REQ_pubsub.adoc[]
 
 
 
-=== Resources and Paths
-
-.Environmental Data Retrieval API Paths
-[width="100%",options="header,footer"]
-|====================
-|PATH TEMPLATE |RELATION |METHOD |RESOURCE
-| | Common | |
-|{root}/ |none |GET |Landing page
-|{root}/api |service-desc or service-doc |GET |API Description (optional)
-|{root}/conformance |conformance |GET |Conformance Classes
-| | Collections | |
-|{root}/collections| data |GET |Metadata describing the collections of data available from this API.
-|{root}/collections/{collectionId} | |GET |Metadata describing the collection of data which has the unique identifier{collectionId}
-| | Features | |
-|{root}/collections/{collectionId}/items |items |GET |Retrieve metadata about available items
-| | Queries | |
-|{root}/collections/{collectionId}/{queryType} | |GET, POST(Optional) |Retrieve data according to the query pattern from a collection with the unique identifier {collectionId}
-|{root}/collections/{collectionId}/instances | |GET |Retrieve metadata about instances of acollection
-|{root}/collections/{collectionId}/instances/{instanceId} | |GET |Retrieve metadata from a specific instanceof a collection with the unique identifiers{collectionId} and {instanceId}
-|{root}/collections/{collectionId}/instances/{instanceId}/{queryType} | |GET, POST(Optional) |Retrieve data according to the query pattern from a specific instance of acollection with the unique identifiers{collectionId} and {instanceId}
-|====================
-
-Where:
-
-* {root} = Base URI for the API server
-* {collectionId} = an identifier for a specific collection of data
-* {instanceId} = an identifier for a specific version or instance of a collection of data
-* {queryType} = an identifier for a specific query pattern to retrieve data from a specificcollection of data
-
-==== API Landinding Page {root}/
-
-The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. OGC API — Common already requires some common links. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not impose any additional requirements on this resource.
-
-The normative JSON Schema for the Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
-
-Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content which Profiles will mandate is defined in the following requirment.
-
-include::../requirements/core/REQ_root.adoc[]
-
-==== API Definition {root}/api
-
-Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
-
-While the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> leaves the selection of format for the API Definition document to the API implementor, at this time OpenAPI 3.0 and 3.1 are the only options supported. 
-
-Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are to be more restricted. The following requirements mandate that there be an API Definition document to provide a common base for all implementatins, that this document be an OpenAPI document, that the specified minimum content is included, and that the version(s) of OpenAPI used are advertised.
-
-include::../requirements/core/REQ_publishing.adoc[]
-
-include::../requirements/core/REQ_api.adoc[]
-
-NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
-
-==== Declaration of Conformance Classes {root}/conformance
-
-To support “generic” clients that want to access implementations of multiple OGC API Standards and extensions — and not “just” a specific API server, the OGC API-EDR Standard requires that an implementation declares the conformance classes it claims to have implemented. 
-
-NOTE: Add requirement that the Profile requires implementations to include both the core conformance class of the Profile and at least one of the OpenAPI conformance classes. 
-
-NOTE: Get guidence from the OGC Naming Authority on valid URIs for Profiles. 
-
-==== Collections {root}/collections
-
-An API may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)
-
-include::../requirements/core/REQ_requirements-set.adoc[]
-
-Paging restrictions (limit parameter provided in the request, multi-page response). EDR only uses this parameter in requests to the query resources.
-
-include::../requirements/core/REQ_paging-support.adoc[]
-
-Extent restrictions (one extent per collection provided in the response). Extents are also included in each {root}/collections/{collectionId} response. In short, an Extent appears in the metadata for a collection.  Any request which returns a collection also returns an extent.
-
-include::../requirements/core/REQ_extent.adoc[]
-
-==== Collection {root}/collections/{collectionId}
-
-
-Collection ID parameter restictions
-
-include::../requirements/core/REQ_collectionid.adoc[]
-
-Output Format restrictions
-
-The -f parameter.
-Data format for the output data (available options are listed in the collectionsresponse).
-
-include::../requirements/core/REQ_output-format.adoc[]
-
-
-==== Features {root}/collections/{collectionId}/items 
-
-EDR does not make any explicit changes to this path.
-
-==== Query {root}/collections/{collectionId}/{queryType}
-
-A profile should specify the supported queries (how?)
-
-===== Data Query
-
-include::../requirements/core/REQ_data-query.adoc[]
-
-===== Area Query
-
-include::../requirements/core/REQ_data-query-area.adoc[]
-
-===== Corridor Query
-
-include::../requirements/core/REQ_data-query-corridor.adoc[]
-
-===== Cube Query
-
-include::../requirements/core/REQ_data-query-cube.adoc[]
-
-===== Instance Query
-
-Having multiple versions or instances of the same collection, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as newcollections the instance query type allows this data to be described as different views of the same collection.
-
-include::../requirements/core/REQ_data-query-instances.adoc[]
-
-===== Position Query
-
-include::../requirements/core/REQ_data-query-position.adoc[]
-
-===== Radius Query
-
-include::../requirements/core/REQ_data-query-radius.adoc[]
-
-===== Trajectory Query
-
-include::../requirements/core/REQ_data-query-trajectory.adoc[]
-
-==== Instances {root}/collections/{collectionId}/instances
-
-==== Instance {root}/collections/{collectionId}/instances/{instanceId} 
-
-Instance ID restrictions
-
-include::../requirements/core/REQ_instanceid.adoc[]
-
-==== Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}
