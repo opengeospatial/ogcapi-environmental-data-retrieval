@@ -37,16 +37,6 @@ Path = {root}/
 
 The purpose of the landing page is to provide clients with a starting point for using the API. Any resource exposed through an API can be accessed by following paths or links starting from the landing page.
 
-The landing page includes three metadata elements: title, description, and attribution. These three elements describe the API as a whole. Clients can expect to encounter metadata that is more resource-specific as they follow links and paths from the landing page.
-
-Section 9.1 of API Common Part 1
-/req/landing-page/root-op
-/req/landing-page/root-success
-
-http://schemas.opengis.net/ogcapi/common/part1/1.0/openapi/schemas/landingPage.yaml[text]
-
-The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. OGC API — Common already requires some common links. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not impose any additional requirements on this resource.
-
 The normative JSON Schema for the Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
 
 Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content which Profiles will mandate is defined in the following requirment.
@@ -65,17 +55,15 @@ Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are 
 
 include::../requirements/core/REQ_publishing.adoc[]
 
-include::../requirements/core/REQ_api.adoc[]
-
-NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
-
 ==== Declaration of Conformance Classes
 
 Path = {root}/conformance
 
 To support “generic” clients that want to access implementations of multiple OGC API Standards and extensions — and not “just” a specific API server, the OGC API-EDR Standard requires that an implementation declares the conformance classes it claims to have implemented. 
 
-NOTE: Add requirement that the Profile requires implementations to include both the core conformance class of the Profile and at least one of the OpenAPI conformance classes. 
+include::../requirements/core/REQ_api.adoc[]
+
+NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
 
 NOTE: Get guidence from the OGC Naming Authority on valid URIs for Profiles. 
 
@@ -87,28 +75,34 @@ An API may support multiple collections. Additional requirements address how the
 
 include::../requirements/core/REQ_requirements-set.adoc[]
 
-Paging restrictions (limit parameter provided in the request, multi-page response). EDR only uses this parameter in requests to the query resources.
-
-include::../requirements/core/REQ_paging-support.adoc[]
-
-Extent restrictions (one extent per collection provided in the response). Extents are also included in each {root}/collections/{collectionId} response. In short, an Extent appears in the metadata for a collection.  Any request which returns a collection also returns an extent.
-
-include::../requirements/core/REQ_extent.adoc[]
 
 ==== Collection 
 
 Path = {root}/collections/{collectionId}
 
-Collection ID parameter restictions
+===== Collection ID parameter restictions
 
 include::../requirements/core/REQ_collectionid.adoc[]
 
-Output Format restrictions
+===== Output Format parameter restrictions
 
-The -f parameter.
+Also known as the -f parameter.
+
 Data format for the output data (available options are listed in the collectionsresponse).
 
 include::../requirements/core/REQ_output-format.adoc[]
+
+===== Paging parameter restrictions
+
+Paging restrictions (limit parameter provided in the request, multi-page response). EDR only uses this parameter in requests to the query resources.
+
+include::../requirements/core/REQ_paging-support.adoc[]
+
+===== Extent property restrictions
+
+An Extent property is included in each {root}/collections/{collectionId} response. 
+
+include::../requirements/core/REQ_extent.adoc[]
 
 ==== Query 
 
@@ -165,7 +159,6 @@ Path -  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/
 Path = {root}/collections/{collectionId}/items 
 
 EDR does not make any explicit changes to this path.
-
 
 ==== Position Query
 
