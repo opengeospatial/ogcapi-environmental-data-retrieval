@@ -1,26 +1,24 @@
 [[req_core_root]]
 
-NOTE: The standard does not require all fields; some are optional.
-
 [requirement]
 ====
 [%metadata]
 identifier:: /req/core/root
+statement:: The EDR Landing Page schema only requires the `links` property. A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require the following additional properties and content:
 
-part:: A requirement _SHALL_ be defined to which specifies the contents of the landing page (/).
+part:: The `Title` property _SHALL_ be required and populated
 
-part:: A landing page requirement _SHALL_ specify a Title
+part:: The `Description` property _SHALL_ be required and populated
 
-part:: A landing page requirement _SHALL_ specify a Description
+part:: The `Keywords` property _SHALL_ be required and at least one keyword entry _SHALL_ be populated
 
-part:: A landing page requirement _SHALL_ specify a Keyword list
+part:: The `Provider` property _SHALL_ be required and populated with the name and url properties
 
-part:: A landing page requirement _SHALL_ specify the attributes Provider information must include
+part:: The `Contact` property _SHALL_ be required and populated with the ----
 
-part:: A landing page requirement _SHALL_ specify the attributes Contact information must include
-
-part:: A landing page requirement _SHALL_ define the links that SHALL be included in the Root response.
+part:: The `Links` property _SHALL_ define the links that SHALL be included in the Root response.
 
 ====
 
-NOTE: Question - isn't this covered by the EDR Standard?
+NOTE: Contacts and Links properties are not finished.
+
