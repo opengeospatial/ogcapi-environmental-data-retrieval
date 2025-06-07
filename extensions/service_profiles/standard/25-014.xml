@@ -2,7 +2,7 @@
 <ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.5.7" schema-version="v1.3.1">
 <bibdata type="standard">
 <title language="en" format="text/plain">OGC API - Environmental Data Retrieval Standard - Part 3: Profiles</title>
-<uri type="xml">./25-014.xml</uri><uri type="pdf">./25-014.pdf</uri><uri type="doc">./25-014.doc</uri><docidentifier type="ogc-external">http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0</docidentifier><docidentifier type="ogc-internal" primary="true">25-014</docidentifier><docnumber>25-014</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2025-06-04</on></date><contributor><role type="author"/><organization>
+<uri type="xml">./25-014.xml</uri><uri type="pdf">./25-014.pdf</uri><uri type="doc">./25-014.doc</uri><docidentifier type="ogc-external">http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0</docidentifier><docidentifier type="ogc-internal" primary="true">25-014</docidentifier><docnumber>25-014</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2025-06-06</on></date><contributor><role type="author"/><organization>
 <name>UK Met Office</name>
 </organization></contributor><contributor><role type="author"/><organization>
 <name>Heazeltech</name>
@@ -15,7 +15,7 @@
 <abbreviation>OGC</abbreviation></organization></contributor><edition>1.0</edition><version><draft>3.0</draft></version><language>en</language><script>Latn</script><abstract><p>&lt;Insert Abstract Text here&gt;</p>
 </abstract><status><stage>draft</stage></status><copyright><from>2025</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>API</keyword><keyword>openapi</keyword><keyword>html</keyword><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><table id="_misccontainer_anchor_aliases"><tbody><tr><th>req_class_core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core</td></tr><tr><th>_c448ae3e-3e25-4fe9-ab6a-0c176224aa03</th><td>/req/core/modspec</td></tr><tr><th>_119aead9-0e72-47ec-9bd4-cf3669b4dfe5</th><td>/req/core/publishing</td></tr><tr><th>_d66ad185-e1fe-438d-aa48-aa7021f05f48</th><td>/req/core/api</td></tr><tr><th>_b1f396d1-f04a-44d6-a0d9-1702effa3de2</th><td>/req/core/edr-conformant</td></tr><tr><th>_b2b1535c-7b13-4d33-aca0-2af22a95d1b9</th><td>/req/core/root</td></tr><tr><th>_4332f8d4-8372-4eec-8a56-d8282b2d5486</th><td>/req/core/requirements-set</td></tr><tr><th>_1d615a4f-d6e6-470e-b2d8-7d4af013cd2d</th><td>/req/core/parameter-names</td></tr><tr><th>_2678af2f-331b-4ed3-8a90-2899604a0b12</th><td>/req/core/collectionid</td></tr><tr><th>_04210d14-1450-43da-b53a-3641813182bf</th><td>/req/core/extent</td></tr><tr><th>_43adfe9e-eff7-4d6a-92d1-ca5d7fb5b51b</th><td>/req/core/instanceid</td></tr><tr><th>_e204badf-c086-47f7-bd21-37012ff4b8fb</th><td>/req/core/output-format</td></tr><tr><th>_440274b9-8b4c-4e97-a455-47b130393942</th><td>/req/core/paging-support</td></tr><tr><th>_f445abe5-588d-4e29-a0f1-960262401814</th><td>/req/core/status-codes</td></tr><tr><th>_713d67ff-9ff6-437b-a78e-906db8f0aeed</th><td>/req/core/links</td></tr><tr><th>_956a7748-7556-4a6c-9dba-5533c625e05b</th><td>/req/core/data-query</td></tr><tr><th>_c06f4fa2-eb1a-4ebb-b13f-3bad9f8401b9</th><td>/req/core/data-query-area</td></tr><tr><th>_c02d62be-0b0b-4ad7-bddd-bd9be0e7ac60</th><td>/req/core/data-query-corridor</td></tr><tr><th>_447ca0db-2e8f-45a7-b251-67f3e2409e08</th><td>/req/core/data-query-cube</td></tr><tr><th>_95e119d0-cdac-49ae-b479-1aaad12d3b66</th><td>/req/core/data-query-instances</td></tr><tr><th>_7f9910cd-b8a3-4527-8499-025224229636</th><td>/req/core/data-query-position</td></tr><tr><th>_a2cf1508-1f22-46a6-a46b-e99c9cb9c984</th><td>/req/core/data-query-radius</td></tr><tr><th>_7658f79f-21ef-4b71-835f-77842ed1c360</th><td>/req/core/data-query-trajectory</td></tr><tr><th>_5a378945-d96c-4f7c-8d4f-96ecde3c9ee9</th><td>/req/core/asynchronous</td></tr><tr><th>_378cdb8f-083d-4465-9993-4c59291907d0</th><td>/req/core/pubsub</td></tr><tr><th>req_core_root</th><td>/req/core/root</td></tr><tr><th>req_core_publishing</th><td>/req/core/publishing</td></tr><tr><th>req_core_api</th><td>/req/core/api</td></tr><tr><th>_03deeb15-2350-4e95-9e0f-ed7c9b2c1c01</th><td>/req/core/requirements-set</td></tr><tr><th>req_core_collectionid</th><td>/req/core/collectionid</td></tr><tr><th>req_core_output-format</th><td>/req/core/output-format</td></tr><tr><th>_914b0db8-b4d9-4312-9edb-64a2a6bca14a</th><td>/rec/core/output-format</td></tr><tr><th>req_core_paging-support</th><td>/req/core/paging-support</td></tr><tr><th>req_core_extent</th><td>/req/core/extent</td></tr><tr><th>req_core_data-query</th><td>/req/core/data-query</td></tr><tr><th>req_core_data-query-area</th><td>/req/core/data-query-area</td></tr><tr><th>req_core_data-query-corridor</th><td>/req/core/data-query-corridor</td></tr><tr><th>req_core_data-query-cube</th><td>/req/core/data-query-cube</td></tr><tr><th>req_core_data-query-instances</th><td>/req/core/data-query-instances</td></tr><tr><th>req_core_instanceid</th><td>/req/core/instanceid</td></tr><tr><th>req_core-data-query-position</th><td>/req/core/data-query-position</td></tr><tr><th>req_core_data-query-radius</th><td>/req/core/data-query-radius</td></tr><tr><th>req_core_data-query-trajectory</th><td>/req/core/data-query-trajectory</td></tr><tr><th>req_class_core_modspec</th><td>/req/core/modspec</td></tr><tr><th>req_class_core_edr-conformant</th><td>/req/core/edr-conformant</td></tr><tr><th>req_core_parameter-names</th><td>/req/core/parameter-names</td></tr><tr><th>req_core_status-codes</th><td>/req/core/status-codes</td></tr><tr><th>req_core_links</th><td>/req/core/links</td></tr><tr><th>req_core_asynchronous</th><td>/req/core/asynchronous</td></tr><tr><th>_6272c910-c34a-4bca-90d2-5288379d21ef</th><td>/per/core/asynchronous</td></tr><tr><th>req_core_pubsub</th><td>/req/core/pubsub</td></tr><tr><th>ats_class-core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/conf/conf-class-core</td></tr><tr><th>_cb7c2046-40bc-4db5-9150-54a903c6f572</th><td>/conf/core/modspec</td></tr><tr><th>_84a78bc2-1848-478b-8f79-1e274935fb0e</th><td>/conf/core/publishing</td></tr><tr><th>_39146eb0-d71c-4bf1-be84-c0c4acb97657</th><td>/conf/core/api</td></tr><tr><th>_b384d1af-8640-4d11-a7fe-d0df84709382</th><td>/conf/core/edr-conformant</td></tr><tr><th>_38b638f3-ad0e-4ba0-92d4-503df4f96714</th><td>/conf/core/root</td></tr><tr><th>_35fe1f77-40d9-4819-8699-e4c206df1aca</th><td>/conf/core/requirements-set</td></tr><tr><th>_bda2b8ec-deca-4ca0-bc0e-239c500aa306</th><td>/conf/core/parameter-names</td></tr><tr><th>_de191542-da3f-4193-83be-369e916fcbc9</th><td>/conf/core/collectionid</td></tr><tr><th>_197f45f8-73f8-48f7-9b93-dda16d160fa4</th><td>/conf/core/extent</td></tr><tr><th>_e3e9c839-1b95-4661-8f6a-80188e8871af</th><td>/conf/core/instanceid</td></tr><tr><th>_f22f6cf5-31fd-43b1-b192-ba9bd5251f11</th><td>/conf/core/output-format</td></tr><tr><th>_d511d768-e63f-4074-a854-e3599c60aa72</th><td>/conf/core/paging-support</td></tr><tr><th>_72bac1a9-5f99-43fe-bcb4-18503924df20</th><td>/conf/core/status-codes</td></tr><tr><th>_5abc7ecc-4186-4745-86ac-25b8a96db51d</th><td>/conf/core/links</td></tr><tr><th>_ff6384ed-2ab9-4f70-965e-74344deba7e0</th><td>/conf/core/data-query</td></tr><tr><th>_077ad0fd-d2bc-497b-9e38-df98f22aefce</th><td>/conf/core/data-query-area</td></tr><tr><th>_5c73d4c9-87e3-4a16-8ea3-69fb5dae41b5</th><td>/conf/core/data-query-corridor</td></tr><tr><th>_86776572-d816-4658-93b8-a0b08aa4fe86</th><td>/conf/core/data-query-cube</td></tr><tr><th>_e1000d71-c144-4ca3-a02f-243bf00506c8</th><td>/conf/core/data-query-instances</td></tr><tr><th>_3b422861-b627-42b4-9310-e10a2a919353</th><td>/conf/core/data-query-position</td></tr><tr><th>_3b1d57d7-4c45-4162-87a2-e5a3c3377e52</th><td>/conf/core/data-query-radius</td></tr><tr><th>_e84c73cb-2478-4804-93a3-bd5a74cc9e91</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>_16ddee0a-431a-4afa-b8b5-df8d8913a44a</th><td>/conf/core/asynchronous</td></tr><tr><th>_00afec67-2bfb-4843-b0aa-870a0ab61f0d</th><td>/conf/core/pubsub</td></tr><tr><th>ats_modspec</th><td>/conf/core/modspec</td></tr><tr><th>ats_publishing</th><td>/conf/core/publishing</td></tr><tr><th>ats_api</th><td>/conf/core/api</td></tr><tr><th>ats_edr-conformant</th><td>/conf/core/edr-conformant</td></tr><tr><th>ats_root</th><td>/conf/core/root</td></tr><tr><th>ats_requirements-set</th><td>/conf/core/requirements-set</td></tr><tr><th>ats_parameter-names</th><td>/conf/core/parameter-names</td></tr><tr><th>ats_collectionid</th><td>/conf/core/collectionid</td></tr><tr><th>ats_extent</th><td>/conf/core/extent</td></tr><tr><th>ats_instanceid</th><td>/conf/core/instanceid</td></tr><tr><th>ats_output-format</th><td>/conf/core/output-format</td></tr><tr><th>ats_paging-support</th><td>/conf/core/paging-support</td></tr><tr><th>ats_status-codes</th><td>/conf/core/status-codes</td></tr><tr><th>ats_links</th><td>/conf/core/links</td></tr><tr><th>ats_data-query</th><td>/conf/core/data-query</td></tr><tr><th>ats_data-query-area</th><td>/conf/core/data-query-area</td></tr><tr><th>ats_data-query-corridor</th><td>/conf/core/data-query-corridor</td></tr><tr><th>ats_data-query-cube</th><td>/conf/core/data-query-cube</td></tr><tr><th>ats_data-query-instances</th><td>/conf/core/data-query-instances</td></tr><tr><th>ats_data-query-position</th><td>/conf/core/data-query-position</td></tr><tr><th>ats_data-query-radius</th><td>/conf/core/data-query-radius</td></tr><tr><th>ats_data-query-trajectory</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>ats_asynchronous</th><td>/conf/core/asynchronous</td></tr><tr><th>ats_pubsub</th><td>/conf/core/pubsub</td></tr></tbody></table><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>API</keyword><keyword>openapi</keyword><keyword>html</keyword><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><table id="_misccontainer_anchor_aliases"><tbody><tr><th>req_class_core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core</td></tr><tr><th>_781d3859-aff7-437f-9f59-5ec1041510db</th><td>/req/core/modspec</td></tr><tr><th>_c07b10cf-caed-4370-8df1-c8084473c56c</th><td>/req/core/publishing</td></tr><tr><th>_df12153f-6e35-4587-85ce-a610a62ba289</th><td>/req/core/api</td></tr><tr><th>_98320a95-4a34-4c50-a400-5e40d894fe6c</th><td>/req/core/edr-conformant</td></tr><tr><th>_be02c8ff-bda2-4a88-b35e-17a54fcd46b1</th><td>/req/core/root</td></tr><tr><th>_95752dde-e090-40e1-9d88-e12f4ab41ce6</th><td>/req/core/requirements-set</td></tr><tr><th>_b63878dc-f690-415e-a737-2d556f7d0fe2</th><td>/req/core/parameter-names</td></tr><tr><th>_ca610457-d1c8-445b-87ce-cb34cbbe31c1</th><td>/req/core/collectionid</td></tr><tr><th>_28f8d49e-ba53-49e2-8c03-2704913c2453</th><td>/req/core/extent</td></tr><tr><th>_a34e3060-247e-4bd7-ade1-4264cc2e2fa5</th><td>/req/core/instanceid</td></tr><tr><th>_b84d4d43-4741-41bf-b914-b4a908568396</th><td>/req/core/output-format</td></tr><tr><th>_0f6654af-12fd-4979-a300-5190053f062a</th><td>/req/core/paging-support</td></tr><tr><th>_c3eb3bec-1951-4eaa-bd2e-29a5f85f9ebe</th><td>/req/core/status-codes</td></tr><tr><th>_d54d4132-7846-448e-b12c-5c0ea8f590b5</th><td>/req/core/links</td></tr><tr><th>_6711e356-47c3-4192-88a0-068c039de973</th><td>/req/core/data-query</td></tr><tr><th>_25293dee-c4d7-405f-ab67-c4b25a95f7db</th><td>/req/core/data-query-area</td></tr><tr><th>_79451325-5748-40ed-93e5-d6a14012621e</th><td>/req/core/data-query-corridor</td></tr><tr><th>_5f92d7e4-7cde-43ac-9020-b42769c3c107</th><td>/req/core/data-query-cube</td></tr><tr><th>_a599f146-dee0-4227-a575-406e5f24d39f</th><td>/req/core/data-query-instances</td></tr><tr><th>_4f1dc043-3f68-41ef-9694-266894b0cc63</th><td>/req/core/data-query-position</td></tr><tr><th>_5149a75d-4357-4fc5-9dc5-5aa8614521e2</th><td>/req/core/data-query-radius</td></tr><tr><th>_42b975b6-e750-463b-a3a5-a2f12dccb954</th><td>/req/core/data-query-trajectory</td></tr><tr><th>_2ebda1dc-9cfd-4c69-9ace-9fece23a85a5</th><td>/req/core/asynchronous</td></tr><tr><th>_73a13a57-35b7-4773-a325-dba109d871eb</th><td>/req/core/pubsub</td></tr><tr><th>req_core_root</th><td>/req/core/root</td></tr><tr><th>req_core_publishing</th><td>/req/core/publishing</td></tr><tr><th>req_core_api</th><td>/req/core/api</td></tr><tr><th>_ce1a081c-1368-410f-baa5-5a35f1ac6f51</th><td>/req/core/requirements-set</td></tr><tr><th>req_core_collectionid</th><td>/req/core/collectionid</td></tr><tr><th>req_core_output-format</th><td>/req/core/output-format</td></tr><tr><th>_e6264482-810e-4904-8e1e-73512c984e97</th><td>/rec/core/output-format</td></tr><tr><th>req_core_paging-support</th><td>/req/core/paging-support</td></tr><tr><th>req_core_extent</th><td>/req/core/extent</td></tr><tr><th>req_core_data-query</th><td>/req/core/data-query</td></tr><tr><th>req_core_data-query-area</th><td>/req/core/data-query-area</td></tr><tr><th>req_core_data-query-corridor</th><td>/req/core/data-query-corridor</td></tr><tr><th>req_core_data-query-cube</th><td>/req/core/data-query-cube</td></tr><tr><th>req_core_data-query-instances</th><td>/req/core/data-query-instances</td></tr><tr><th>req_core_instanceid</th><td>/req/core/instanceid</td></tr><tr><th>req_core-data-query-position</th><td>/req/core/data-query-position</td></tr><tr><th>req_core_data-query-radius</th><td>/req/core/data-query-radius</td></tr><tr><th>req_core_data-query-trajectory</th><td>/req/core/data-query-trajectory</td></tr><tr><th>req_class_core_modspec</th><td>/req/core/modspec</td></tr><tr><th>req_class_core_edr-conformant</th><td>/req/core/edr-conformant</td></tr><tr><th>req_core_parameter-names</th><td>/req/core/parameter-names</td></tr><tr><th>req_core_status-codes</th><td>/req/core/status-codes</td></tr><tr><th>req_core_links</th><td>/req/core/links</td></tr><tr><th>req_core_asynchronous</th><td>/req/core/asynchronous</td></tr><tr><th>_eec1f1ac-a931-4c98-ae04-378d5f470ff3</th><td>/per/core/asynchronous</td></tr><tr><th>req_core_pubsub</th><td>/req/core/pubsub</td></tr><tr><th>ats_class-core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/conf/conf-class-core</td></tr><tr><th>_61f3e717-0fcf-4106-b7e6-785381fa0caa</th><td>/conf/core/modspec</td></tr><tr><th>_786b9829-eede-41cf-a0fd-96d31805e922</th><td>/conf/core/publishing</td></tr><tr><th>_ae82c5ec-2632-4c36-9805-9ab0813a0647</th><td>/conf/core/api</td></tr><tr><th>_c81bb064-d38e-45cf-b258-4f3bd85db438</th><td>/conf/core/edr-conformant</td></tr><tr><th>_901a0409-a663-4788-a8cd-bb020ea73780</th><td>/conf/core/root</td></tr><tr><th>_6f1de66b-0324-4dde-84f1-3224c84576ca</th><td>/conf/core/requirements-set</td></tr><tr><th>_082bfbf9-f491-42ff-9062-b1149deae1dd</th><td>/conf/core/parameter-names</td></tr><tr><th>_50e7a831-7fe9-457f-8cec-5e74f8b267d0</th><td>/conf/core/collectionid</td></tr><tr><th>_ce51a563-2675-43f2-a0b9-7997bf8cf7e3</th><td>/conf/core/extent</td></tr><tr><th>_e46eaf11-8351-4ffd-9cd7-035d8994d255</th><td>/conf/core/instanceid</td></tr><tr><th>_8c8d325e-6195-4c9c-9b60-3640dd2d512a</th><td>/conf/core/output-format</td></tr><tr><th>_c0cd78ef-9b91-47ec-a821-55eb237b6de1</th><td>/conf/core/paging-support</td></tr><tr><th>_f46b5bd9-2181-4eee-bc25-271c77b4ad97</th><td>/conf/core/status-codes</td></tr><tr><th>_1214e394-6bb7-41ca-b440-fa33ae007876</th><td>/conf/core/links</td></tr><tr><th>_467317df-1ef6-4f93-95f9-3ddc152f3e5a</th><td>/conf/core/data-query</td></tr><tr><th>_58dd4e52-9539-4ba8-819e-6da5016cea7c</th><td>/conf/core/data-query-area</td></tr><tr><th>_30720101-a62c-4b72-8869-db47783f2496</th><td>/conf/core/data-query-corridor</td></tr><tr><th>_390b5cde-99b6-4cbd-ad04-edc806c6daf1</th><td>/conf/core/data-query-cube</td></tr><tr><th>_78e00125-d964-47a5-9504-0c1548d9d189</th><td>/conf/core/data-query-instances</td></tr><tr><th>_ad3b9778-f93a-4443-b365-13f489386cb1</th><td>/conf/core/data-query-position</td></tr><tr><th>_d1a6d7e7-364d-4343-9365-d4c0f77cfc82</th><td>/conf/core/data-query-radius</td></tr><tr><th>_a526289f-e4a0-493c-b9a2-a782cfabf448</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>_4c1b8f38-4e48-4dfd-a33d-17e9fa1041b5</th><td>/conf/core/asynchronous</td></tr><tr><th>_0624cad9-8773-40cb-9baa-55a642131cb0</th><td>/conf/core/pubsub</td></tr><tr><th>ats_modspec</th><td>/conf/core/modspec</td></tr><tr><th>ats_publishing</th><td>/conf/core/publishing</td></tr><tr><th>ats_api</th><td>/conf/core/api</td></tr><tr><th>ats_edr-conformant</th><td>/conf/core/edr-conformant</td></tr><tr><th>ats_root</th><td>/conf/core/root</td></tr><tr><th>ats_requirements-set</th><td>/conf/core/requirements-set</td></tr><tr><th>ats_parameter-names</th><td>/conf/core/parameter-names</td></tr><tr><th>ats_collectionid</th><td>/conf/core/collectionid</td></tr><tr><th>ats_extent</th><td>/conf/core/extent</td></tr><tr><th>ats_instanceid</th><td>/conf/core/instanceid</td></tr><tr><th>ats_output-format</th><td>/conf/core/output-format</td></tr><tr><th>ats_paging-support</th><td>/conf/core/paging-support</td></tr><tr><th>ats_status-codes</th><td>/conf/core/status-codes</td></tr><tr><th>ats_links</th><td>/conf/core/links</td></tr><tr><th>ats_data-query</th><td>/conf/core/data-query</td></tr><tr><th>ats_data-query-area</th><td>/conf/core/data-query-area</td></tr><tr><th>ats_data-query-corridor</th><td>/conf/core/data-query-corridor</td></tr><tr><th>ats_data-query-cube</th><td>/conf/core/data-query-cube</td></tr><tr><th>ats_data-query-instances</th><td>/conf/core/data-query-instances</td></tr><tr><th>ats_data-query-position</th><td>/conf/core/data-query-position</td></tr><tr><th>ats_data-query-radius</th><td>/conf/core/data-query-radius</td></tr><tr><th>ats_data-query-trajectory</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>ats_asynchronous</th><td>/conf/core/asynchronous</td></tr><tr><th>ats_pubsub</th><td>/conf/core/pubsub</td></tr></tbody></table><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
 <clause id="_copyright_notice" obligation="normative">
@@ -150,7 +150,7 @@ conformance clauses.</p>
 
 
  <termnote id="_628cd4ef-4a8d-2e88-06d1-190983dab1ca"><p id="_c50002c8-e2d1-c567-d119-5b11810179e8">When no ambiguity is possible, the word <tt>test</tt> may be omitted. i.e. conformance test module is the same as conformance module. Conformance modules may be nested in a hierarchical way.</p>
-</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="conformance-class-definition"><preferred><expression>
@@ -163,7 +163,7 @@ conformance clauses.</p>
 
 
  <termnote id="_ae312206-0feb-6746-2b7a-a9a24f3eb276"><p id="_ba06969b-0f2c-b5ad-8060-46233bd9b60a">When no ambiguity is possible, the word <em>test</em> may be left out, so conformance test class maybe called a conformance class.</p>
-</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="conformance_test-definition"><preferred><expression>
@@ -173,7 +173,7 @@ conformance clauses.</p>
 <definition><verbal-definition><p id="_653c3c7d-28e3-9d5e-94ba-3b0600a12bc6">A test, abstract or real, of one or more requirements contained within a standard, or set of standards.</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+ <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="requirement-definition"><preferred><expression>
@@ -183,7 +183,7 @@ conformance clauses.</p>
 <definition><verbal-definition><p id="_aafe223f-6dee-cd6c-a15b-edda39fd62db">Expression in the content of a standard conveying criteria to be fulfilled if compliance with the standard is to be claimed and from which no deviation is permitted.</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+ <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="requirements_class-definition"><preferred><expression>
@@ -193,7 +193,7 @@ conformance clauses.</p>
 <definition><verbal-definition><p id="_45211260-1517-5c7e-c720-e0e10779535d">An aggregate of requirements with a single standardization target type that must all be satisfied to pass a conformance test Class.</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+ <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="requirements_module-definition"><preferred><expression>
@@ -203,7 +203,7 @@ conformance clauses.</p>
 <definition><verbal-definition><p id="_93b0c326-0245-5b13-0abf-613a2f1c7277">A set of related requirement classes and their associated components.</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+ <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="standardization_goal-definition"><preferred><expression>
@@ -213,7 +213,7 @@ conformance clauses.</p>
 <definition><verbal-definition><p id="_fd5b0b8b-fd40-6cb2-4c95-84cf4bd6dd20">A concise statement of the problem that the standard helps address and the strategy envisioned for achieving a solution. This strategy typically identifies real-world entities that need to be modified or constrained. At the abstract level, those entities are the Standardization Target Types.</p></verbal-definition></definition>
 
 
- <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+ <termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="standardization_target-definition"><preferred><expression>
@@ -226,7 +226,7 @@ conformance clauses.</p>
 
 
  <termnote id="_f13993fa-fdb2-c10f-b737-2f2f582a5b2a"><p id="_bfb420ff-3534-0901-ce8d-58eba5712293">The standardization target is the entity which may receive a certificate of conformance for a requirements class.</p>
-</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 
 <term id="standardization_target_type-definition"><preferred><expression>
@@ -239,7 +239,7 @@ conformance clauses.</p>
 
 
  <termnote id="_9fa12e21-c9c4-cad2-c1a1-90ed3a9639a7"><p id="_40de9546-eac4-0b26-857a-313302872c18">For example, the standardization target type for The OGC API – Features Standard are Web APIs. The standardization target type for the CDB Standard is “datastore”. It is important to understand that a standard’s root standardization target type can have sub-types, and that there can be a hierarchy of target types. For example, a Web API can have sub types of client, server, security, and so forth. As such, each requirements class can have a standardization target type that is a sub-type of the root.</p>
-</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="OGC&amp;#xa0;08-131r5">OGC 08-131r5</origin>
+</termnote><termsource status="identical" type="authoritative"><origin bibitemid="ogc-modspec" type="inline" citeas="">OGC 08-131r5</origin>
 </termsource></term>
 </terms>
 
@@ -287,7 +287,7 @@ conformance clauses.</p>
 
 <ul id="_2ecbf178-f787-29f6-b122-269172ee920c"><li><p id="_4187d366-cede-154d-d70f-fb73576592a8">This Standard is a standard for writing standards. It does not address the EDR API implementation.</p>
 </li>
-<li><p id="_49fbba84-a4be-7c03-d933-08bc3eb33048">This Standard is a profile of the <eref type="inline" bibitemid="ogc-modspec" citeas="OGC 08-131r5">OGC ModSpec Model — Part 1: Core — A Standard for Designing and Writing Modular Standards</eref> (ModSpec).</p>
+<li><p id="_49fbba84-a4be-7c03-d933-08bc3eb33048">This Standard is a profile of the <xref target="ogc-modspec">OGC ModSpec Model — Part 1: Core — A Standard for Designing and Writing Modular Standards</xref> (ModSpec).</p>
 </li>
 <li><p id="_3c5c5035-7182-5826-c969-2564c39d1835">Implementations of this Standard are Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
 </li>
@@ -319,12 +319,10 @@ conformance clauses.</p>
 
 </requirement>
 
-<clause id="_resources_and_paths" obligation="normative">
-<title>Resources and Paths</title>
-<p id="_8df57ce2-052c-347a-471e-85684ba6b972">Web APIs provide access to resources through URI paths.</p>
-
-<table id="_7912e926-85fc-c2d8-3d3b-7ee823bdb27f" width="100%">
-<name>Environmental Data Retrieval API Paths</name>
+<clause id="_platform_resources" obligation="normative">
+<title>Platform Resources</title>
+<table id="_013c5238-244c-ea43-a5fa-2a2e20ddc6af" width="100%">
+<name>Platform Resource Paths</name>
 <thead><tr><th valign="middle" align="left">PATH TEMPLATE</th>
 <th valign="middle" align="left">METHOD</th>
 <th valign="middle" align="left">RESOURCE</th>
@@ -335,55 +333,30 @@ conformance clauses.</p>
 </tr><tr><td valign="middle" align="left">{root}/api</td>
 <td valign="middle" align="left">GET</td>
 <td valign="middle" align="left">API Description (optional)</td>
-</tr><tr><td valign="middle" align="left">{root}/conformance</td>
+</tr></tbody>
+<tfoot><tr><td valign="middle" align="left">{root}/conformance</td>
 <td valign="middle" align="left">GET</td>
 <td valign="middle" align="left">Conformance Classes</td>
-</tr><tr><td valign="middle" align="left">{root}/collections</td>
-<td valign="middle" align="left">GET</td>
-<td valign="middle" align="left">Metadata describing the collections of data available from this API.</td>
-</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}</td>
-<td valign="middle" align="left">GET</td>
-<td valign="middle" align="left">Metadata describing the collection of data which has the unique identifier{collectionId}</td>
-</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}/items</td>
-<td valign="middle" align="left">GET</td>
-<td valign="middle" align="left">Retrieve metadata about available items</td>
-</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}/{queryType}</td>
-<td valign="middle" align="left">GET, POST(Optional)</td>
-<td valign="middle" align="left">Retrieve data according to the query pattern from a collection with the unique identifier {collectionId}</td>
-</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}/instances</td>
-<td valign="middle" align="left">GET</td>
-<td valign="middle" align="left">Retrieve metadata about instances of acollection</td>
-</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}/instances/{instanceId}</td>
-<td valign="middle" align="left">GET</td>
-<td valign="middle" align="left">Retrieve metadata from a specific instanceof a collection with the unique identifiers{collectionId} and {instanceId}</td>
-</tr></tbody>
-<tfoot><tr><td valign="middle" align="left">{root}/collections/{collectionId}/instances/{instanceId}/{queryType}</td>
-<td valign="middle" align="left">GET, POST(Optional)</td>
-<td valign="middle" align="left">Retrieve data according to the query pattern from a specific instance of a collection with the unique identifiers{collectionId} and {instanceId}</td>
 </tr></tfoot>
 </table>
 
-<p id="_229d8c86-4f2a-84da-0078-20441a27e85b">Where:</p>
+<p id="_73179916-2129-b5bb-49db-5ccb96af01c7">Where: {root} = Base URI for the API server</p>
 
-<ul id="_19943421-ced4-ead6-b209-f907a9fb1484"><li><p id="_a7a93890-a52e-6427-9bbb-266daaa0ddeb">{root} = Base URI for the API server</p>
-</li>
-<li><p id="_fd582802-d8bb-04c9-4fe4-1019be9eb165">{collectionId} = an identifier for a specific collection of data</p>
-</li>
-<li><p id="_d62f4d32-8e0f-376e-e730-c92640896062">{instanceId} = an identifier for a specific version or instance of a collection of data</p>
-</li>
-<li><p id="_896acedf-1a24-d222-915b-f1c2d2737783">{queryType} = an identifier for a specific query pattern to retrieve data from a specific  collection of data</p>
-</li>
-</ul>
+<p id="_990274fa-c7f0-a356-ecd2-fd9418beec81">OGC API — Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.</p>
 
 <clause id="_api_landinding_page" obligation="normative">
 <title>API Landinding Page</title>
 <p id="_96a4ea5c-1055-8194-eb3c-b6d47424a9c1">Path = {root}/</p>
 
-<p id="_5dbd7310-99d0-8b6e-c108-0ac3a4293099">The purpose of the landing page is to provide clients with a starting point for using the API. Any resource exposed through an API can be accessed by following paths or links starting from the landing page.</p>
+<p id="_5c6238c0-1a44-4950-7fe9-ec322e3cec7e">Dependencies
+* <eref type="inline" bibitemid="OGC19-072" citeas="OGC 19-072">OGC API — Common — Part 1: Core</eref>
+* <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
 
-<p id="_355e4b6c-fbd2-c7aa-a0de-38e8e7f4d340">The normative JSON Schema for the Landing Page is defined in the <link target="https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml">LandingPage.yaml</link> document. While this schema provides a rich body of information about the API, only the Links property is required.</p>
+<p id="_8e423111-560e-9024-de8f-6c5d056f05a3">The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. The Landing Page resource is initially defined in the Core conformance class of the <xref target="OGC-19-072">OGC API — Common — Part 1</xref> Standard. The <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> Standard does not make any changes to this definition.</p>
 
-<p id="_b976edbc-b14e-1330-d2ea-6049b847f4d2">Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> are expected to provide a richer description of the API. The additional content which Profiles will mandate is defined in the following requirment.</p>
+<p id="_ac77ef31-0e35-9a38-0bcb-7be75e6b5ffc">The normative JSON Schema for an EDR Landing Page is defined in the <link target="https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml">LandingPage.yaml</link> document. While this schema provides a rich body of information about the API, only the Links property is required.</p>
+
+<p id="_b7fd4d13-bb39-4646-5e17-bf3eb37f4c91">Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> are expected to provide a richer description of the API. The additional content that Profiles will mandate is defined in the following requirment.</p>
 
 <requirement id="req_core_root" model="ogc"> <identifier>/req/core/root</identifier><description><p id="_2148c999-c1c8-e799-1288-442080a7f14e">The EDR Landing Page schema only requires the <tt>links</tt> property. A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require the following additional properties and content:</p>
 </description><component class="part"><p id="_cf9c9b63-fec3-3d56-0ba6-6888351f0a30">The <tt>Title</tt> property <em>SHALL</em> be required and populated</p>
@@ -403,11 +376,16 @@ conformance clauses.</p>
 <title>API Definition</title>
 <p id="_69dbfcb5-4192-4f62-28ac-82d190822f53">Path = {root}/api</p>
 
-<p id="_4f0da093-0ec4-d3ea-7529-4adb5b67cf63">Every API implementation is required to provide an API Definition resource that describes the capabilities provided by that API. This resource can be used by client developers to understand the supported services, by software clients to connect to the server, and by development tools to support the implementation of servers and clients.</p>
+<p id="_2b25ab43-a1c0-0ecb-ce68-ace46b78cc65">Dependencies
+* <eref type="inline" bibitemid="OGC19-072" citeas="OGC 19-072">OGC API — Common — Part 1: Core</eref>
+* <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
 
-<p id="_8f1725d1-0114-d04d-ee63-0beb05889f06">While the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> leaves the selection of format for the API Definition document to the API implementor, at this time OpenAPI 3.0 and 3.1 are the only options supported.</p>
+<p id="_ac6e9d0e-1aa0-28ff-cd83-6c5e961a04d7">Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients. The API Definition resource is initially defined in the Core conformance class of the <xref target="OGC-19-072">OGC API — Common — Part 1</xref> Standard. The <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> Standard does not make any changes to this definition.<note id="_4fe2a581-8f10-ac59-3fbd-2eae7b6e0004"><p id="_9981111b-dca6-174f-d0e1-62581dbad094">At this time only OpenAPI 3.0 and OpenAPI 3.1 documents are supported by OGC Web API Standards.</p>
+</note></p>
 
-<p id="_adec33b8-0642-88f8-1a3d-39df01efa5ca">Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> are to be more restricted. The following requirements mandate that there be an API Definition document to provide a common base for all implementatins, that this document be an OpenAPI document, that the specified minimum content is included, and that the version(s) of OpenAPI used are advertised.</p>
+
+
+<p id="_d6985073-0457-c919-ab33-b32a02a93c92">Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> have additional requirements governing the provision and publication of the API Definition documents.</p>
 
 <requirement id="req_core_publishing" model="ogc"> <identifier>/req/core/publishing</identifier><description><p id="_69484441-b447-8478-82d1-a0af407b718a">An EDR profile <em>SHALL</em> be published as an OpenAPI JSON document.</p>
 </description><component class="part"><p id="_ae89361c-c054-a31e-1944-16298e67d595">The rules described in the requirements <em>SHALL</em> be encoded using the OpenAPI 3.1 specification.</p>
@@ -439,7 +417,13 @@ conformance clauses.</p>
 <title>Declaration of Conformance Classes</title>
 <p id="_eb8ebea0-60f5-de61-c930-9cb77b2bcdf0">Path = {root}/conformance</p>
 
-<p id="_58be9486-0504-39b2-0803-1df48904c5a5">To support “generic” clients that want to access implementations of multiple OGC API Standards and extensions — and not “just” a specific API server, the OGC API-EDR Standard requires that an implementation declares the conformance classes it claims to have implemented.</p>
+<p id="_1da41e3b-bbd2-931e-5e6c-bb4562efe54b">Dependencies
+* <eref type="inline" bibitemid="OGC19-072" citeas="OGC 19-072">OGC API — Common — Part 1: Core</eref>
+* <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
+
+<p id="_c9458aeb-477c-ce03-9801-9393c81f8eaf">To support “generic” clients that want to access implementations of multiple OGC API Standards and extensions — and not “just” a specific API server, the API has to declare the conformance classes it claims to have implemented. The Conformance Classes resource is initially defined in the Core conformance class of the <xref target="OGC-19-072">OGC API — Common — Part 1</xref> Standard. The <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> Standard does not make any changes to this definition.</p>
+
+<p id="_5b3cceeb-32fe-defb-760b-64954d00ea84">Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> have additional requirements governing which Conformance Classes and identifiers must be included in this resource.</p>
 
 <requirement id="req_core_api" model="ogc"> <identifier>/req/core/api</identifier><description><p id="_1b56b166-ba94-8ec2-a7be-60e7894088a8">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that an implementation specify the versions of OpenAPI supported.</p>
 </description>
@@ -451,39 +435,75 @@ conformance clauses.</p>
 <note id="_7f3fb209-653d-a2f0-884a-0a5f2d356727"><p id="_8a65617a-5ce1-481b-01a2-bd775cdedfbb">Get guidence from the OGC Naming Authority on valid URIs for Profiles.</p>
 </note>
 </clause>
+</clause>
+
+<clause id="_spatiotemporal_and_information_resources" obligation="normative">
+<title>Spatiotemporal and Information Resources</title>
+<table id="_54407bb8-e0ff-9452-16a1-bbcfe3a6d0f4" width="100%">
+<name>Spatialtemporal and Information Resource Paths</name>
+<thead><tr><th valign="middle" align="left">PATH TEMPLATE</th>
+<th valign="middle" align="left">METHOD</th>
+<th valign="middle" align="left">RESOURCE</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">{root}/collections</td>
+<td valign="middle" align="left">GET</td>
+<td valign="middle" align="left">Metadata describing the collections of data available from this API.</td>
+</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}</td>
+<td valign="middle" align="left">GET</td>
+<td valign="middle" align="left">Metadata describing the collection of data which has the unique identifier{collectionId}</td>
+</tr></tbody>
+<tfoot><tr><td valign="middle" align="left">{root}/collections/{collectionId}/items</td>
+<td valign="middle" align="left">GET</td>
+<td valign="middle" align="left">Retrieve metadata about available items</td>
+</tr></tfoot>
+</table>
+
+<p id="_d381f1fb-d54d-9c57-155d-4e8e600d46b9">Where:</p>
+
+<ul id="_0ebd6f77-d7a3-8f81-6f8e-1e1ddfd6a481"><li><p id="_6f2b70d4-7ab7-a7b7-8130-9cc5e7950abe">{root} = Base URI for the API server</p>
+</li>
+<li><p id="_2889336a-ae30-ac43-e3ba-ab09cad8b9ec">{collectionId} = an identifier for a specific collection of data</p>
+</li>
+</ul>
 
 <clause id="_collections" obligation="normative">
 <title>Collections</title>
-<p id="_0ebfec1b-b3b5-89ec-fc6f-0e49d3869379">Path = {root}/collections</p>
+<p id="_f309e96a-228c-77e2-1e92-01f6df441ad8">Path = {root}/collections</p>
 
-<p id="_b9493d5f-9202-b8f5-f9f1-355e798c8f75">An API may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)<note id="req_core_requirements-set"><p id="_1f45e6f8-00cd-77bd-23a0-0523ec77ccd9">A service may consist of multiple collections. While there may be common rules for all collections, a profile should be able to support different rules depending on the collection.</p>
+<p id="_5fa9433e-0487-466c-f509-f2dd5dfb6637">Dependencies
+* <eref type="inline" bibitemid="OGC20-024" citeas="OGC 20-024">OGC API — Common — Part 2: Geospatial Data</eref>
+* <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
+
+<p id="_5b624750-3b42-08fb-b681-3cc942f82df1">The Collections resource is initially defined in the <underline>Geospatial Data</underline> conformance class of the <xref target="OGC-20-024">OGC API — Common — Part 2</xref> Standard. The <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> Standard does not make any changes to this definition.</p>
+
+<p id="_420ee765-0864-d0b2-9004-663728537a8c">An API may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)<note id="req_core_requirements-set"><p id="_13cce6de-a745-0ef9-bf4e-a7213a5c0bc1">A service may consist of multiple collections. While there may be common rules for all collections, a profile should be able to support different rules depending on the collection.</p>
 </note></p>
 
 
 
-<requirement id="_d12fe247-b7b3-0ddf-7aec-95d92f55b477" model="ogc"> <identifier>/req/core/requirements-set</identifier>
-<component class="part"><p id="_b8cce768-4f44-f5a8-f390-2982db8b0447">The profile SHALL consists of a set of requirements for a collection and (if the collection supports instances) the instances of the collection. For each of the attributes listed, if it is in the collection (or instance), there SHALL be a requirement to define it.</p>
-</component><component class="part"><p id="_10a48959-548a-3111-8896-3cca7e21919c">A profile MAY include requirements for the landing page.</p>
-</component><component class="part"><p id="_8897c437-19ca-1616-12e1-2464163fdd45">A profile MAY include requirements for multiple collections.</p>
+<requirement id="_0e204333-bca9-b336-61bf-b886e9ef2e43" model="ogc"> <identifier>/req/core/requirements-set</identifier>
+<component class="part"><p id="_eaaf5db2-cc6e-8c1c-34b9-3233e1c4e95b">The profile SHALL consists of a set of requirements for a collection and (if the collection supports instances) the instances of the collection. For each of the attributes listed, if it is in the collection (or instance), there SHALL be a requirement to define it.</p>
+</component><component class="part"><p id="_a03ae38a-77a8-940b-0269-a1359e712677">A profile MAY include requirements for the landing page.</p>
+</component><component class="part"><p id="_4359a810-d159-fe4a-3563-1c524314804a">A profile MAY include requirements for multiple collections.</p>
 </component>
 </requirement>
 
-<note id="_46a3ba42-aa92-f83d-b530-b506054e9261"><p id="_fe472534-b6be-e532-0ba1-df5a5edb611b">Question — what is the purpose of this requirement?</p>
+<note id="_dc442a84-6a25-89f1-b55f-e62d76d9f865"><p id="_dd660b50-ff86-d863-3118-225e850224b6">Question — what is the purpose of this requirement?</p>
 </note>
 </clause>
 
 <clause id="_collection" obligation="normative">
 <title>Collection</title>
-<p id="_3a060f9d-9784-67ba-f78a-c5b0436c246b">Path = {root}/collections/{collectionId}</p>
+<p id="_ada627ef-8a57-227a-207a-182f37930a5f">Path = {root}/collections/{collectionId}</p>
 
 <clause id="_collection_id_parameter_restictions" obligation="normative">
 <title>Collection ID parameter restictions</title>
-<requirement id="req_core_collectionid" model="ogc"> <identifier>/req/core/collectionid</identifier><description><p id="_f8078860-5cd7-12ac-dbe7-b18034509dba">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values of the Collection ID parameter, then:</p>
-</description><component class="part"><p id="_4ef52d81-59b1-16e4-ef85-c9380c49deaf">The Profile <em>SHALL</em> specify the rules that the Collection ID values must follow.</p>
-</component><component class="part"><p id="_1257a65e-03b8-92b2-afb8-9d73ba8f9fed">Those rules <em>SHALL</em> be specified using either:</p>
-<ul id="_a598c784-0252-4ba5-79bb-bf5f706ac5f2"><li><p id="_7ff19ab8-7005-7936-4664-94045a1883dc">identifier string or</p>
+<requirement id="req_core_collectionid" model="ogc"> <identifier>/req/core/collectionid</identifier><description><p id="_c35c299b-2ca9-bbf6-7dc3-0763a2aadcc2">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values of the Collection ID parameter, then:</p>
+</description><component class="part"><p id="_8e4ef61a-4fca-1d0b-372d-33879f4cce0c">The Profile <em>SHALL</em> specify the rules that the Collection ID values must follow.</p>
+</component><component class="part"><p id="_498b9ef1-765a-6d41-665d-745a878b910a">Those rules <em>SHALL</em> be specified using either:</p>
+<ul id="_509f7164-2eb3-625a-b577-e0e07b2286e5"><li><p id="_5dca7ddd-f6a7-d428-e215-23908eb525a7">identifier string or</p>
 </li>
-<li><p id="_93128c25-bf07-12b3-05f2-48a0c24ca1ee">Regular expression defining valid string patterns.</p>
+<li><p id="_4ac65af7-e051-9653-041f-0ba3192b916d">Regular expression defining valid string patterns.</p>
 </li>
 </ul>
 </component>
@@ -492,115 +512,166 @@ conformance clauses.</p>
 
 <clause id="_output_format_parameter_restrictions" obligation="normative">
 <title>Output Format parameter restrictions</title>
-<p id="_1af888fd-0912-da00-080b-0113333552d5">Also known as the -f parameter.</p>
+<p id="_296706f8-6fc8-ffac-8c46-96ceaf8998d1">Also known as the -f parameter.</p>
 
-<p id="_799676e1-65fd-a1b6-e2ce-c4043b783fbc">Data format for the output data (available options are listed in the collectionsresponse).</p>
+<p id="_a0b29340-b13b-0587-104e-a61f8a91249d">Data format for the output data (available options are listed in the collectionsresponse).</p>
 
-<requirement id="req_core_output-format" model="ogc"> <identifier>/req/core/output-format</identifier><description><p id="_cd00214d-e6e4-a977-d99b-425479324664">For every output_format specified in any of the data_query enumerated lists, there <em>SHALL</em> be a requirement which defines the schema or structure of the data (depending on the format).</p>
+<requirement id="req_core_output-format" model="ogc"> <identifier>/req/core/output-format</identifier><description><p id="_6a489b13-b388-9a31-2383-e8f0cad228c5">For every output_format specified in any of the data_query enumerated lists, there <em>SHALL</em> be a requirement which defines the schema or structure of the data (depending on the format).</p>
 </description>
 </requirement>
 
-<recommendation id="_b1a1067d-126d-e92f-828c-86615a5dfee6" model="ogc"> <identifier>/rec/core/output-format</identifier><description><p id="_081371b5-d145-fbbc-8d5e-b41d6df5061b">The recommended definition approaches are as follows:</p>
-<ul id="_cabf60e0-624e-59e4-2409-ca27e4562c58"><li><p id="_237e011e-ec3a-59d2-6926-a2ec521e5c6e">JSON – Link to a JSON Schema definition</p>
+<recommendation id="_715fc70b-ce23-fb76-7e88-2fbda98a5071" model="ogc"> <identifier>/rec/core/output-format</identifier><description><p id="_d5bc00ff-447d-90a4-1987-fee3000a43bf">The recommended definition approaches are as follows:</p>
+<ul id="_48b122b8-361e-a39f-4367-7f267ff08f87"><li><p id="_f835d323-1e74-6903-0478-2375c8d1007d">JSON – Link to a JSON Schema definition</p>
 </li>
-<li><p id="_079385ba-d7e6-7b13-ba3d-a2d77ddb7479">XML – Link to a XML Schema definition</p>
+<li><p id="_bc157d19-a5ee-20e7-aae2-3f251f2e11d9">XML – Link to a XML Schema definition</p>
 </li>
-<li><p id="_93dd9b5c-ba0d-9e04-cdb4-6d2ea3f7a4ba">CSV, TSV, PSV, SSV – Link to a definition based on the CSV on the web recommendations available from the <link target="https://www.w3.org/2013/csvw/wiki/Main_Page.html">CSV on the Web Working Group</link>.</p>
+<li><p id="_d20f09bd-74b8-0e88-9484-cf921e9565b6">CSV, TSV, PSV, SSV – Link to a definition based on the CSV on the web recommendations available from the <link target="https://www.w3.org/2013/csvw/wiki/Main_Page.html">CSV on the Web Working Group</link>.</p>
 </li>
-<li><p id="_e4e1b82e-0295-27a0-0bc8-ddaadb076cca">Other types (e.g. binary file types) – Link to a description of the format</p>
+<li><p id="_f29a8f8c-b399-a573-a814-aa1d05830347">Other types (e.g. binary file types) – Link to a description of the format</p>
 </li>
 </ul>
 </description>
 </recommendation>
 
-<note id="_9ee54e9e-3795-ffc3-1503-9db67705cae8"><p id="_3298111b-d47a-ad22-0773-b7da15b1e197">Question: Where should the CSV citation point.  There are multiple CSV on the Web Recommendataions.</p>
+<note id="_4a57ef3b-4871-1b9a-fe87-55afce57f7e2"><p id="_8410ebbe-fee1-606b-4c33-f59a44118b1b">Question: Where should the CSV citation point.  There are multiple CSV on the Web Recommendataions.</p>
 </note>
 </clause>
 
 <clause id="_paging_parameter_restrictions" obligation="normative">
 <title>Paging parameter restrictions</title>
-<p id="_d9ab39e5-5ff2-1e9c-4a28-f5c724643f45">Paging restrictions (limit parameter provided in the request, multi-page response). EDR only uses this parameter in requests to the query resources.</p>
+<p id="_2c374d57-f586-2a71-322b-ea0358e65d20">Paging restrictions (limit parameter provided in the request, multi-page response). EDR only uses this parameter in requests to the query resources.</p>
 
-<requirement id="req_core_paging-support" model="ogc"> <identifier>/req/core/paging-support</identifier><description><p id="_55adcd8a-29f5-349e-bbe3-dd148d108917">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> is <em>extended</em> to support paging, then:</p>
-</description><component class="part"><p id="_3cd40166-03b8-e84f-9db7-65f942674ef0">A requirement _SHALL _ be created for each combination of query pattern and output format that must support paging.</p>
-</component><component class="part"><p id="_726d2748-07da-61a5-fe13-7a8870c30574">Each paging requirement <em>SHALL</em> specify the default number of items to return per page request.</p>
+<requirement id="req_core_paging-support" model="ogc"> <identifier>/req/core/paging-support</identifier><description><p id="_3f7ac8b3-a588-940b-2175-0c334d44273b">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> is <em>extended</em> to support paging, then:</p>
+</description><component class="part"><p id="_9d5424c5-2d4f-e5f9-6df7-fab9aa82a9e0">A requirement _SHALL _ be created for each combination of query pattern and output format that must support paging.</p>
+</component><component class="part"><p id="_492f3eff-b2ed-7b10-6c1e-4d3abf02d4c7">Each paging requirement <em>SHALL</em> specify the default number of items to return per page request.</p>
 </component>
 </requirement>
 </clause>
 
 <clause id="_extent_property_restrictions" obligation="normative">
 <title>Extent property restrictions</title>
-<p id="_ba4c1302-a92e-1c61-c9e9-31e85e749a46">An Extent property is included in each {root}/collections/{collectionId} response.</p>
+<p id="_0a79fbbf-e8bb-4c13-2c6c-06186fc6ffb6">An Extent property is included in each {root}/collections/{collectionId} response.</p>
 
-<requirement id="req_core_extent" model="ogc"> <identifier>/req/core/extent</identifier><component class="part"><p id="_f7cd6d11-5af0-574c-7570-251a86b5cb80">A requirement MAY be defined specifying the rules for defining the Collection extent.</p>
-</component><component class="part"><p id="_9bb191c4-8a50-06da-5a55-99001a7aadac">An extent requirement MAY specify the minimum spatial bounds that SHALL be supported</p>
-</component><component class="part"><p id="_e506d4eb-d0e7-4dfa-ea26-f7b488005a08">An extent requirement MAY specify the minimum temporal bounds that SHALL be supported</p>
-</component><component class="part"><p id="_b0616d07-8832-091d-3d26-e717c62e1cea">An extent requirement MAY specify the minimum vertical bounds that SHALL be supported</p>
-</component><component class="part"><p id="_75f3b3b5-9578-82b2-ca42-d3531dcacf1e">An extent requirement MAY specfiy the minimum bounds of custom extents that SHALL be supported</p>
-</component><component class="part"><p id="_0a69f536-4658-9e4c-e2bd-040e5c4d0e33">An extent requirements definition SHALL specify the rules for the spatial CRS. The attributes are constrained by one of:</p>
-<ul id="_9ecd803d-8c62-43b7-432b-e32eb1db3760"><li><p id="_8de03255-b3d8-fcdf-c718-d529eb1990f8">Enumerated list of valid crs values</p>
+<requirement id="req_core_extent" model="ogc"> <identifier>/req/core/extent</identifier><component class="part"><p id="_1d32de37-1692-3cce-70cf-931b11ccf6df">A requirement MAY be defined specifying the rules for defining the Collection extent.</p>
+</component><component class="part"><p id="_917245b5-d123-692c-0a12-b12280bf24da">An extent requirement MAY specify the minimum spatial bounds that SHALL be supported</p>
+</component><component class="part"><p id="_0f57b654-1e3f-217b-6011-40e8b972694d">An extent requirement MAY specify the minimum temporal bounds that SHALL be supported</p>
+</component><component class="part"><p id="_8bdade53-b840-05e1-d9ee-347850262daf">An extent requirement MAY specify the minimum vertical bounds that SHALL be supported</p>
+</component><component class="part"><p id="_3bc09569-d9a9-7043-559f-097d45ad8657">An extent requirement MAY specfiy the minimum bounds of custom extents that SHALL be supported</p>
+</component><component class="part"><p id="_8c836bce-58cb-460e-3a28-2ffaa2d8b21c">An extent requirements definition SHALL specify the rules for the spatial CRS. The attributes are constrained by one of:</p>
+<ul id="_63268852-e186-abc7-9b20-33d770329f9d"><li><p id="_a28f868e-2c60-d73a-45c5-8f7e7f65c94b">Enumerated list of valid crs values</p>
 </li>
-<li><p id="_62818a7d-d85c-4aba-4b20-0dce9af30c3c">Regular expression defining valid crs string patterns.</p>
-</li>
-</ul>
-</component><component class="part"><p id="_56fb1224-b9b9-44dd-986b-4f1fd04b88d5">If the collection has a temporal dimension an extent requirements definition SHALL specify the rules fo temporal TRS. The attributes are constrained by one of:</p>
-<ul id="_db60faf2-464a-3bd6-69b2-3c3a988ea782"><li><p id="_22b226af-d0bf-dcec-8263-08ce17e3e819">Enumerated list of valid trs values</p>
-</li>
-<li><p id="_0ccd1e3f-2315-366b-ef3a-ac58bbad1eb7">Regular expression defining valid trs string patterns.</p>
+<li><p id="_de38c58b-e239-fe03-a60f-05fb7ea772ef">Regular expression defining valid crs string patterns.</p>
 </li>
 </ul>
-</component><component class="part"><p id="_b90b3250-c644-efcc-5667-4e26f847fb5f">If the collection has a vertical dimension an extent requirements definition SHALL specify the rules for the vertical VRS. The attributes are constrained by one of:</p>
-<ul id="_0690ebd8-236c-7646-3aa9-4791614746e4"><li><p id="_f6c90368-cb5d-3034-4652-c6b7aae688b9">Enumerated list of valid vrs values</p>
+</component><component class="part"><p id="_87cbd696-3a4a-5229-6bb8-abbb8130b78c">If the collection has a temporal dimension an extent requirements definition SHALL specify the rules fo temporal TRS. The attributes are constrained by one of:</p>
+<ul id="_1917970f-25f6-f19b-7f25-f83a3f456b9b"><li><p id="_faf720e0-c377-00c7-4c62-9dadc8e73df3">Enumerated list of valid trs values</p>
 </li>
-<li><p id="_b38a438e-2195-1b8f-0bbf-f98d04abdead">Regular expression defining valid vrs string patterns.</p>
+<li><p id="_c989d44e-4410-851d-f8bb-72f1ed08383d">Regular expression defining valid trs string patterns.</p>
 </li>
 </ul>
-</component><component class="part"><p id="_99287075-69d5-ead7-5133-f7e569fb3850">For any custom dimensions an extent requirements definition SHALL specify the rules for the custom reference systems. The attributes are constrained by one of:</p>
-<ul id="_da0300d5-9791-1fa6-2f73-6c27f7e79686"><li><p id="_c81353f3-cbd5-17b6-ff32-89ee9d1604a9">custom dimension name</p>
+</component><component class="part"><p id="_50b2d22a-4abb-bcd7-264b-97e25fe09943">If the collection has a vertical dimension an extent requirements definition SHALL specify the rules for the vertical VRS. The attributes are constrained by one of:</p>
+<ul id="_7d65785e-5f5d-7245-c7ae-8cbee13f440d"><li><p id="_6fc79970-fad8-2f0a-5ce8-5ad917205923">Enumerated list of valid vrs values</p>
 </li>
-<li><p id="_496d9479-df8c-9701-3776-783fc95d3847">custom dimension reference value</p>
+<li><p id="_e342bd5e-9d86-f41b-809e-c88cca646108">Regular expression defining valid vrs string patterns.</p>
 </li>
-<li><p id="_573aecaa-47af-b741-80f6-0acc0714123c">Where applicable enumerated list of valid custom dimension values</p>
+</ul>
+</component><component class="part"><p id="_9c70a3f7-d115-e083-c045-c04103efc266">For any custom dimensions an extent requirements definition SHALL specify the rules for the custom reference systems. The attributes are constrained by one of:</p>
+<ul id="_f470b42d-f84a-1e15-8778-db218f11858d"><li><p id="_ec428e76-15e4-34bd-8c9c-464f58745c60">custom dimension name</p>
+</li>
+<li><p id="_9754ea32-40d4-5344-6d5a-69bbf9b2b89a">custom dimension reference value</p>
+</li>
+<li><p id="_5a5a2a15-d77d-1e7b-a478-f4078d9e5965">Where applicable enumerated list of valid custom dimension values</p>
 </li>
 </ul>
 </component>
 
-<description><p id="_aed71144-eb4c-2daa-8cf0-0044d8085865">(Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)</p></description>
+<description><p id="_e1582610-cfa5-e922-ec3d-b8d6c65f6f75">(Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)</p></description>
 </requirement>
 
-<note id="_31fa8ae0-ea46-d040-6e7b-99d2a2a8a8f3"><p id="_45433cc2-a90e-dab4-3e96-a93e9eae2ee5">Needs to be re-visited</p>
+<note id="_b6c0c3f2-0b79-a7b2-392b-d410eed0a5cf"><p id="_ca2479e4-3ead-26cb-07b0-afbdeeccb382">Needs to be re-visited</p>
 </note>
 </clause>
 </clause>
 
-<clause id="_query" obligation="normative">
-<title>Query</title>
-<p id="_84c1a01e-d57a-2b93-ed86-6a2540ec1553">Path = {root}/collections/{collectionId}/{queryType}</p>
+<clause id="_items_query" obligation="normative">
+<title>Items Query</title>
+<p id="_f8ca531c-c0c3-268a-c141-1df97b03b3de">Path = {root}/collections/{collectionId}/items</p>
 
-<requirement id="req_core_data-query" model="ogc"> <identifier>/req/core/data-query</identifier><description><p id="_e15d75eb-d4d0-9355-8b43-62a6663dbaa9">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> Standard <em>SHALL</em> require definition of the supported data queries.</p>
-</description><component class="part"><p id="_0ce09328-2404-cf96-ac9d-c4e0f1191d58">The data_queries definitions <em>SHALL</em> specify which data queries a service supports. This can be defined as follows:</p>
-<ul id="_6513ee5b-3bc6-754b-75a2-be30d71d9fac"><li><p id="_f410e8a8-356a-c741-9daa-0aa3df490b8b">Enumerated list of query types</p>
+<p id="_0b1f9866-f550-b00c-c43a-25c1e6efc971">Dependencies
+* <eref type="inline" bibitemid="OGC20-024" citeas="OGC 20-024">OGC API — Common — Part 2: Geospatial Data</eref>
+* <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
+
+<p id="_cfd4ca2c-aae4-874d-6e6d-1740b5819828">The EDR API Items query is an OGC API — Features endpoint that may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use,such as a monitoring location. Or there may be a catalog of spatiotemporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.</p>
+</clause>
+</clause>
+
+<clause id="_query_resources" obligation="normative">
+<title>Query Resources</title>
+<table id="_ba42fc82-0844-fb62-79c1-acc97d8f55cc" width="100%">
+<name>Query Resource Paths</name>
+<thead><tr><th valign="middle" align="left">PATH TEMPLATE</th>
+<th valign="middle" align="left">METHOD</th>
+<th valign="middle" align="left">RESOURCE</th>
+</tr></thead>
+<tbody><tr><td valign="middle" align="left">{root}/collections/{collectionId}/{queryType}</td>
+<td valign="middle" align="left">GET, POST(Optional)</td>
+<td valign="middle" align="left">Retrieve data according to the query pattern from a collection with the unique identifier {collectionId}</td>
+</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}/instances</td>
+<td valign="middle" align="left">GET</td>
+<td valign="middle" align="left">Retrieve metadata about instances of acollection</td>
+</tr><tr><td valign="middle" align="left">{root}/collections/{collectionId}/instances/{instanceId}</td>
+<td valign="middle" align="left">GET</td>
+<td valign="middle" align="left">Retrieve metadata from a specific instanceof a collection with the unique identifiers{collectionId} and {instanceId}</td>
+</tr></tbody>
+<tfoot><tr><td valign="middle" align="left">{root}/collections/{collectionId}/instances/{instanceId}/{queryType}</td>
+<td valign="middle" align="left">GET, POST(Optional)</td>
+<td valign="middle" align="left">Retrieve data according to the query pattern from a specific instance of a collection with the unique identifiers{collectionId} and {instanceId}</td>
+</tr></tfoot>
+</table>
+
+<p id="_af75fc57-dc31-c7b6-0233-b383627018fd">Where:</p>
+
+<ul id="_b2e10595-4036-5400-d361-acb31e24ac00"><li><p id="_cf30c160-65f1-11c5-3fe7-9b2bb7284222">{root} = Base URI for the API server</p>
+</li>
+<li><p id="_c5926e78-750d-fa45-de8f-0d350628126f">{collectionId} = an identifier for a specific collection of data</p>
+</li>
+<li><p id="_d77b5e69-f0f5-1912-17b1-d47f72ed7dec">{instanceId} = an identifier for a specific version or instance of a collection of data</p>
+</li>
+<li><p id="_4b5a4f16-7f63-6b4f-7a2b-ed222116c697">{queryType} = an identifier for a specific query pattern to retrieve data from a specific  collection of data</p>
 </li>
 </ul>
-</component><component class="part"><p id="_eed776dc-34ef-a8ca-febe-64a2591717f7">Each data_query type listed <em>SHALL</em> have a requirement definition.</p>
+
+<p id="_22fe1a9d-22cd-7312-0b0f-f07389c37f42">Path = {root}/collections/{collectionId}/{queryType}</p>
+
+<p id="_ab95dc3e-62d6-8685-aa16-0d92ec1ba610">Dependencies: <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
+
+<requirement id="req_core_data-query" model="ogc"> <identifier>/req/core/data-query</identifier><description><p id="_1445c0fc-5ef5-e9b6-3c61-476eaba8ae7f">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> Standard <em>SHALL</em> require definition of the supported data queries.</p>
+</description><component class="part"><p id="_6e8665cb-c5da-280b-42c7-d2700976b235">The data_queries definitions <em>SHALL</em> specify which data queries a service supports. This can be defined as follows:</p>
+<ul id="_3408d7a1-e340-9ce1-ab13-aab5d416aaac"><li><p id="_ea9b9d36-56a7-31c8-bda8-a4232cf34cd6">Enumerated list of query types</p>
+</li>
+</ul>
+</component><component class="part"><p id="_782f8e07-c905-5864-564b-ac876f2220d8">Each data_query type listed <em>SHALL</em> have a requirement definition.</p>
 </component>
 </requirement>
-</clause>
 
 <clause id="_area_query" obligation="normative">
 <title>Area Query</title>
-<p id="_32f6a8a7-2e9b-325d-fe22-f9cfa26591b5">Path = {root}/collections/{collectionId}/area</p>
+<p id="_d5dab7aa-2ad8-83d9-480b-4d38b6a0d553">The Area query returns data within the polygon defined by the coords parameter. Logic for identifying the best match for the requested area will depend on the collection and is at the discretion of the query service implementer.</p>
 
-<requirement id="req_core_data-query-area" model="ogc"> <identifier>/req/core/data-query-area</identifier><description><p id="_3dd7e26b-7fd6-9f51-8ed2-89399c22430f">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Area query mandatory, then:</p>
-</description><component class="part"><p id="_daed472a-88f2-964f-7fa1-c23e64224227">The Profile <em>SHALL</em> include a requirement mandating the Area query.</p>
-</component><component class="part"><p id="_2b0eafb4-2b85-bdbe-a1fa-3a40795a76dd">The Area query requirement <em>SHALL</em> specify the following:</p>
-<ul id="_74d03812-094f-4538-ff93-b5968513e166"><li><p id="_600d3156-a5d6-b0f6-b939-f42a0ec09d6f">Enumerated list of output_format types</p>
+<p id="_9073889d-a1ca-4c2d-da4b-61bd44ebbf0f">Path = {root}/collections/{collectionId}/area</p>
+
+<p id="_b3fccfce-0d53-ed96-439f-8eaedb9b7bba">Dependencies: <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref></p>
+
+<requirement id="req_core_data-query-area" model="ogc"> <identifier>/req/core/data-query-area</identifier><description><p id="_c49abcf8-0726-9191-df30-3cff3bb5bfd3">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Area query mandatory, then:</p>
+</description><component class="part"><p id="_3ea130c4-bc2d-fcf9-1e75-0f79518f46b3">The Profile <em>SHALL</em> include a requirement mandating the Area query.</p>
+</component><component class="part"><p id="_48eb2a15-1d06-543b-e569-9b2f8296070f">The Area query requirement <em>SHALL</em> specify the following:</p>
+<ul id="_479313e7-7998-2e0f-1cf3-bb200bf2bc1c"><li><p id="_8ca843c6-fe23-72c4-6947-8a123236c42f">Enumerated list of output_format types</p>
 </li>
-<li><p id="_43331c9a-9953-dc15-7209-1b0c960992d3">The default_output_format</p>
+<li><p id="_07570a98-f060-64d2-a6bd-33fc90f1b64f">The default_output_format</p>
 </li>
-<li><p id="_4e1789f0-a31b-72f7-e784-0754c6733d5a">Enumerated list of crs_details values</p>
+<li><p id="_e57b38dd-ea63-fe2e-900b-0a8b21eb1b77">Enumerated list of crs_details values</p>
 </li>
-<li><p id="_5464477b-3f45-40c3-e511-c50bfae2c0b1">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+<li><p id="_c2ed49d9-270c-94ba-63b0-131c224d48e3">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
 </li>
 </ul>
 </component>
@@ -609,22 +680,24 @@ conformance clauses.</p>
 
 <clause id="_corridor_query" obligation="normative">
 <title>Corridor Query</title>
-<p id="_6a37098b-c142-c022-9117-b5781e291a0e">Path = {root}/collections/{collectionId}/corridor</p>
+<p id="_51b62b0e-fa4c-d69d-a87f-7b973d0da9ba">The Corridor query returns data along and around the path defined by the coords parameter. Logic for identifying the best match for the requested corridor will depend on the collection and is at the discretion of the query service implementer.</p>
 
-<requirement id="req_core_data-query-corridor" model="ogc"> <identifier>/req/core/data-query-corridor</identifier><description><p id="_74951983-580a-51b1-91da-755543e355a7">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Corridor query mandatory, then:</p>
-</description><component class="part"><p id="_bd730b10-c1c8-22a6-b495-47024711b208">The Profile <em>SHALL</em> include a requirement mandating the Corridor query.</p>
-</component><component class="part"><p id="_aba7f46c-121d-3b94-b671-747bd1cc8196">The Corridor requirement <em>SHALL</em> specify the following:</p>
-<ul id="_10ef86f4-147c-edbe-358a-a553f9096522"><li><p id="_2b5cbc40-13b1-90e0-2259-866ea1d04f0a">Enumerated list of output_format types</p>
+<p id="_557b6ac8-9207-1266-99f9-b60ca9ba1c6b">Path = {root}/collections/{collectionId}/corridor</p>
+
+<requirement id="req_core_data-query-corridor" model="ogc"> <identifier>/req/core/data-query-corridor</identifier><description><p id="_3539b9f7-96cc-80bb-19f2-f5345633db8f">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Corridor query mandatory, then:</p>
+</description><component class="part"><p id="_cbe9a61b-025a-a06f-ae0d-d02fdf310f0d">The Profile <em>SHALL</em> include a requirement mandating the Corridor query.</p>
+</component><component class="part"><p id="_f46dc2ac-239a-b22e-e7ed-642bc3d74939">The Corridor requirement <em>SHALL</em> specify the following:</p>
+<ul id="_86fbe4fe-e13b-e181-1acc-01a1428743d6"><li><p id="_ebf86fc4-5710-82bf-c41e-5b673d66d16a">Enumerated list of output_format types</p>
 </li>
-<li><p id="_78ff74ca-3ace-c6bc-4002-30b6d0292a84">The default_output_format</p>
+<li><p id="_c840b2f9-004c-1f36-7910-22f1781417c5">The default_output_format</p>
 </li>
-<li><p id="_b5b4b73b-d08c-9922-0e8e-2d5f704e3276">Enumerated list of crs_details values</p>
+<li><p id="_0f2ad6ef-37e3-3fd1-b333-3e03aa2ab00d">Enumerated list of crs_details values</p>
 </li>
-<li><p id="_e380c5e9-3fcf-45aa-5954-c4dae5f17e4b">Enumerated list of width-units values</p>
+<li><p id="_7603b220-208f-a26f-5b16-16a4a405e4bd">Enumerated list of width-units values</p>
 </li>
-<li><p id="_5eac65f9-8c41-0303-421f-9b48630157b4">Enumerated list of height-units values</p>
+<li><p id="_0145c464-81bd-410a-fac1-14dd5ad8722f">Enumerated list of height-units values</p>
 </li>
-<li><p id="_90d45978-218c-7034-9de6-57c7c5b22724">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+<li><p id="_07ec13c5-d9e2-2ea4-45a2-d642840b7fb4">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
 </li>
 </ul>
 </component>
@@ -633,18 +706,20 @@ conformance clauses.</p>
 
 <clause id="_cube_query" obligation="normative">
 <title>Cube Query</title>
-<p id="_9152d561-403c-bc8d-87a3-0dfe5e1b30bc">Path = {root}/collections/{collectionId}/cube</p>
+<p id="_7c2122ff-5e0a-34ab-57a5-810e547e2137">The Cube query returns a data cube defined by the bbox and z parameters.</p>
 
-<requirement id="req_core_data-query-cube" model="ogc"> <identifier>/req/core/data-query-cube</identifier><description><p id="_1c9e54af-f137-9749-ee3e-3bcd80d5725b">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Cube query mandatory, then:</p>
-</description><component class="part"><p id="_669aee1b-bb09-b9c2-d6aa-1337ae4b3359">The Profile <em>SHALL</em> include a requirement mandating the Cube query.</p>
-</component><component class="part"><p id="_34945c0d-68c3-9363-8c49-19eba1621564">The Cube query requirement <em>SHALL</em> specify the following:</p>
-<ul id="_e374d58f-a748-33a3-00a4-caaa6e95f484"><li><p id="_226472ce-2d3d-4fbf-3fd4-acfab32f73df">Enumerated list of output_format types</p>
+<p id="_622d8353-1525-e5e0-0990-ce2a9340070e">Path = {root}/collections/{collectionId}/cube</p>
+
+<requirement id="req_core_data-query-cube" model="ogc"> <identifier>/req/core/data-query-cube</identifier><description><p id="_5e82790c-ad09-4cde-2aca-d7b7024df938">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Cube query mandatory, then:</p>
+</description><component class="part"><p id="_2b9e3bf0-4d88-c1dd-693c-363eaf0933df">The Profile <em>SHALL</em> include a requirement mandating the Cube query.</p>
+</component><component class="part"><p id="_5ac20196-5b18-a7e4-f46a-ab9cc6bfa5ef">The Cube query requirement <em>SHALL</em> specify the following:</p>
+<ul id="_bbf07aae-6007-e49e-df4f-6b83c3aacd2d"><li><p id="_b5110669-8390-1be9-08eb-89e207cd5b48">Enumerated list of output_format types</p>
 </li>
-<li><p id="_bca25b45-846e-df56-6231-03364147b7a7">The default_output_format</p>
+<li><p id="_f132adb9-de82-e7cc-d71d-2c2ee6ab4d2c">The default_output_format</p>
 </li>
-<li><p id="_575c46b4-6046-b569-fd94-7d0c75c54647">Enumerated list of crs_details values</p>
+<li><p id="_62853ba7-5cfe-1ed0-b27b-372a6f8f7403">Enumerated list of crs_details values</p>
 </li>
-<li><p id="_2f1ec5bd-b9c4-4c31-a0b1-a47f65e49e82">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+<li><p id="_45920b7c-88e9-f659-7c8c-568b56e8a251">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
 </li>
 </ul>
 </component>
@@ -653,35 +728,37 @@ conformance clauses.</p>
 
 <clause id="_locations_query" obligation="normative">
 <title>Locations Query</title>
-<p id="_9894ca2b-1092-e2dd-0014-f5b48c0348f8">Path = {root}/collections/{collectionId}/locations</p>
+<p id="_8ff8cba0-6801-521f-8453-fc5c66565486">The Locations query returns data for the named location. Logic for identifying the best match for the coordinate will depend on the collection and is at the discretion of the query service implementer. If a location id is not defined the API SHALL return a GeoJSON features array of valid location identifiers, the schema of the GeoJSON response SHOULD be defined in the OpenAPI definition of the EDR service.</p>
 
-<p id="_e03fe0ec-ba61-efeb-519b-bdd2b949f117">TBD</p>
+<p id="_8a333fa3-1a3a-133a-92de-fb25396c614d">Path = {root}/collections/{collectionId}/locations</p>
+
+<p id="_cdd93db1-9538-e690-c6c7-f8dc68e4baf4">TBD</p>
 </clause>
 
 <clause id="_instances_query" obligation="normative">
 <title>Instances Query</title>
-<p id="_2b5cc039-8cfc-bdc4-fd54-636b4b6ed109">Path = {root}/collections/{collectionId}/instances</p>
+<p id="_9ea61bb0-d5dc-33c0-8065-503660bf835c">Having multiple versions or instances of the same collection, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as new collections the instance query type allows this data to be described as different views of the same collection.</p>
 
-<p id="_8939c1f5-fa42-9554-f24d-6d96fb907099">Having multiple versions or instances of the same collection, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as newcollections the instance query type allows this data to be described as different views of the same collection.</p>
+<p id="_05632fd9-406b-7438-4f1d-5b547e140580">Path = {root}/collections/{collectionId}/instances</p>
 
-<requirement id="req_core_data-query-instances" model="ogc"> <identifier>/req/core/data-query-instances</identifier><description><p id="_ed62a56e-df11-9b71-ae2f-4b41d7c35135">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>extends</em> data queries by making the Instances within a Collection queryable, then:</p>
-</description><component class="part"><p id="_c2482bac-e328-cba8-3915-35ddb3559a55">Instances <em>SHALL</em> be defined in the data_queries enumerated list.</p>
-</component><component class="part"><p id="_dab6f462-63c2-d8c6-9357-c280b423813e">A <em>NULL</em> value <em>SHALL</em> be used to indicate that no child instances can be queried.</p>
+<requirement id="req_core_data-query-instances" model="ogc"> <identifier>/req/core/data-query-instances</identifier><description><p id="_af1eff7b-a1ee-943f-acf4-b4959dc0d9f3">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>extends</em> data queries by making the Instances within a Collection queryable, then:</p>
+</description><component class="part"><p id="_a7132a11-72a4-f3b9-57c2-edd0d93886c6">Instances <em>SHALL</em> be defined in the data_queries enumerated list.</p>
+</component><component class="part"><p id="_043bd684-8737-5f55-4419-2ca69e6bdc37">A <em>NULL</em> value <em>SHALL</em> be used to indicate that no child instances can be queried.</p>
 </component>
 </requirement>
 
 <clause id="_parameter_instanceid" obligation="normative">
 <title>Parameter instanceId</title>
-<p id="_00531298-ec0a-5f97-18ba-c7a3e7b82924">Path — Instance {root}/collections/{collectionId}/instances/{instanceId}</p>
+<p id="_ade86ada-6a05-b3d6-af74-53a0f07edfbe">Path — Instance {root}/collections/{collectionId}/instances/{instanceId}</p>
 
-<p id="_e9c068e5-e7de-7e3f-ecb0-a99b7a497d57">Instance ID restrictions</p>
+<p id="_1f6866f2-8e01-940c-0dae-3300821a3fe3">Instance ID restrictions</p>
 
-<requirement id="req_core_instanceid" model="ogc"> <identifier>/req/core/instanceid</identifier><description><p id="_9e42818a-83bf-a441-3fc0-77282042ac88">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values of the Instance ID parameter, then:</p>
-</description><component class="part"><p id="_d42ed2ca-0d19-156c-22ee-6cba7799b68c">The Profile <em>SHALL</em> specify the rules that the Instance ID values must follow.</p>
-</component><component class="part"><p id="_629617d7-24c3-f4ad-43c5-49e6bc0e9236">Those rules <em>SHALL</em> be specified using either:</p>
-<ul id="_92a62342-310e-1994-6746-34ca265392eb"><li><p id="_d55e92fd-a1a3-cd3b-aab6-3f5a51d8304d">identifier string</p>
+<requirement id="req_core_instanceid" model="ogc"> <identifier>/req/core/instanceid</identifier><description><p id="_2b955c30-c939-2ae4-a27f-0d4fa0f695be">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values of the Instance ID parameter, then:</p>
+</description><component class="part"><p id="_fa4dbae3-45dd-08ee-bad9-fff2505445a0">The Profile <em>SHALL</em> specify the rules that the Instance ID values must follow.</p>
+</component><component class="part"><p id="_1d56319d-a88d-f69c-6dce-32969738ab44">Those rules <em>SHALL</em> be specified using either:</p>
+<ul id="_12a75589-9f61-f7b1-9806-e0d950a72479"><li><p id="_2e0ca744-2109-98bb-3ee9-ad7724e3608d">identifier string</p>
 </li>
-<li><p id="_e2cbbfc7-2012-0f98-cfbe-159c02b54ee5">Regular expression defining valid string patterns.</p>
+<li><p id="_9b02a8c7-19a6-08ab-3d69-6790d62532a3">Regular expression defining valid string patterns.</p>
 </li>
 </ul>
 </component>
@@ -690,54 +767,58 @@ conformance clauses.</p>
 
 <clause id="_parameter_querytype" obligation="normative">
 <title>Parameter queryType</title>
-<p id="_5b066064-7298-9e7c-03a0-1034e6790c6e">Path —  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}</p>
+<p id="_6cb088e0-58ed-b338-0e9d-912d5cafc096">Path —  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}</p>
 </clause>
 </clause>
 
-<clause id="_items_query" obligation="normative">
+<clause id="_items_query_2" obligation="normative">
 <title>Items Query</title>
-<p id="_b8f1c7a6-873f-8f34-914b-b1ca44e9e487">Path = {root}/collections/{collectionId}/items</p>
+<p id="_68b46d19-ddd6-f8c7-2fa6-a4839c107fb9">Path = {root}/collections/{collectionId}/items</p>
 
-<p id="_cd337c6e-5768-696d-da35-65512a4ed7d3">EDR does not make any explicit changes to this path.</p>
+<p id="_8cbbc2e9-35a2-daca-7789-61a67295eea7">EDR does not make any explicit changes to this path.</p>
 </clause>
 
 <clause id="_position_query" obligation="normative">
 <title>Position Query</title>
-<p id="_034c1d70-4fba-d1a3-de8d-24bb19caec5c">Path = {root}/collections/{collectionId}/positions</p>
+<p id="_8ee341b5-4e32-60b3-2ac8-efd8e34debc1">The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the collection and is at the discretion of the query service implementer.</p>
 
-<requirement id="req_core-data-query-position" model="ogc"> <identifier>/req/core/data-query-position</identifier><description><p id="_0328fec1-8a54-d7d4-0d76-b45ae5d0e7a0">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Position query mandatory, then:</p>
-</description><component class="part"><p id="_bd89cba1-27e6-4391-1fc2-c798c1186cad">The Profile <em>SHALL</em> include a requirement mandating the Position query.</p>
-</component><component class="part"><p id="_3c9f5640-2c79-7308-6892-815970eacdc4">The Position query requirement <em>SHALL</em> specify the following:</p>
-<ul id="_3ebc2a55-3b0d-cc23-c837-e49aec4c87ca"><li><p id="_538cada3-60bc-f49d-ad7e-03fab7464826">Enumerated list of output_format types</p>
+<p id="_937fb720-7874-0834-6522-bd971c9e8dbe">Path = {root}/collections/{collectionId}/positions</p>
+
+<requirement id="req_core-data-query-position" model="ogc"> <identifier>/req/core/data-query-position</identifier><description><p id="_755bfbe6-4a3c-813a-56e4-9367a11cb144">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Position query mandatory, then:</p>
+</description><component class="part"><p id="_38e4fb32-71b9-d84f-2529-ca0f508063d7">The Profile <em>SHALL</em> include a requirement mandating the Position query.</p>
+</component><component class="part"><p id="_3ac44d04-965e-4649-7d14-90c44f1fa69d">The Position query requirement <em>SHALL</em> specify the following:</p>
+<ul id="_88125023-812f-f225-d01e-1782c30d842b"><li><p id="_24d4d5bf-8ed0-01ab-b8e7-b1fb1afa804c">Enumerated list of output_format types</p>
 </li>
-<li><p id="_31b5a34b-37d9-3859-0d3a-a65777cf0aa5">The default_output_format</p>
+<li><p id="_3a4bbd15-070c-9a85-f142-9f40ed02d66f">The default_output_format</p>
 </li>
-<li><p id="_9a27758c-d828-01f4-d436-fe7fa8d8e85c">Enumerated list of crs_details values</p>
+<li><p id="_fdf6fbb6-3800-d155-6242-4b9e1a5a0145">Enumerated list of crs_details values</p>
 </li>
-<li><p id="_33f98c74-c7e5-ae2e-0ba2-a56e1d7db2eb">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+<li><p id="_2849477b-32bb-4475-a840-3d2f8b83edca">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
 </li>
 </ul>
-</component><component class="part"><p id="_6d1b0fdb-d525-83e6-fded-daf5d2325770">The position query requirement <em>SHALL</em> also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.</p>
+</component><component class="part"><p id="_57a6ea2c-755a-463f-acef-c37e2401d0f0">The position query requirement <em>SHALL</em> also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.</p>
 </component>
 </requirement>
 </clause>
 
 <clause id="_radius_query" obligation="normative">
 <title>Radius Query</title>
-<p id="_fc29ab9d-7d79-bfd6-6df5-762511e60a82">Path = {root}/collections/{collectionId}/radius</p>
+<p id="_85a59b99-e13f-9045-b0b0-362fd91c5521">The Radius query returns data within the defined radius of the requested coordinate.</p>
 
-<requirement id="req_core_data-query-radius" model="ogc"> <identifier>/req/core/data-query-radius</identifier><description><p id="_2b30ae51-ee6c-597a-0d91-d2dfe25d8d3d">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Radius query mandatory, then:</p>
-</description><component class="part"><p id="_a55e9158-efbe-6f74-c017-cf30a47196ef">The Profile <em>SHALL</em> include a requirement mandating the Radius query.</p>
-</component><component class="part"><p id="_67c7bb1f-85b8-dbcd-fcfb-f9d14895b836">The Radius query requirement <em>SHALL</em> specify the following:</p>
-<ul id="_a66f1cdd-027f-bb8e-e8ce-5d467577d323"><li><p id="_7d1d7c99-3292-fdd6-9826-6aa18a47d657">Enumerated list of output_format types</p>
+<p id="_0751bb09-dadf-374e-a497-5676eb1d8142">Path = {root}/collections/{collectionId}/radius</p>
+
+<requirement id="req_core_data-query-radius" model="ogc"> <identifier>/req/core/data-query-radius</identifier><description><p id="_228ff25e-f397-71eb-d12b-f137263948b8">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Radius query mandatory, then:</p>
+</description><component class="part"><p id="_e4858641-25d4-8fd6-421c-2c0e8eb76d73">The Profile <em>SHALL</em> include a requirement mandating the Radius query.</p>
+</component><component class="part"><p id="_c68df071-0830-bc7c-c7cf-36c8bfac08db">The Radius query requirement <em>SHALL</em> specify the following:</p>
+<ul id="_31fff99f-b28e-e38b-74b3-2df87eb82a74"><li><p id="_3d45de8d-69d3-a7ed-5c96-db0c6837bdc0">Enumerated list of output_format types</p>
 </li>
-<li><p id="_1a03944c-1bbd-b861-39dd-a6e95da52a78">The default_output_format</p>
+<li><p id="_e2f695ff-f869-23f4-6a65-bba5092a0010">The default_output_format</p>
 </li>
-<li><p id="_e44a9393-c740-2fab-0073-002c0e218f00">Enumerated list of crs_details values</p>
+<li><p id="_aec10fe1-aaa6-1047-7a27-9e5e861ac704">Enumerated list of crs_details values</p>
 </li>
-<li><p id="_edf780a1-f056-b389-e94c-be4d95ce1f37">Enumerated list of within_units values</p>
+<li><p id="_b9756228-60f3-989a-2ad1-d47c5e23eafe">Enumerated list of within_units values</p>
 </li>
-<li><p id="_f01c41c2-13e6-5477-1234-07c332db0546">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+<li><p id="_7e81794f-6a91-b96e-08d6-fd851806cf4f">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
 </li>
 </ul>
 </component>
@@ -746,18 +827,20 @@ conformance clauses.</p>
 
 <clause id="_trajectory_query" obligation="normative">
 <title>Trajectory Query</title>
-<p id="_b20409be-c290-9f2c-2950-2ddf99596072">Path = {root}/collections/{collectionId}/trajectory</p>
+<p id="_f9091933-0e2a-6198-a8b6-93dc77168df1">The Trajectory query returns data along the path defined by the coords parameter. Logic for identifying the best matches for the requested trajectory will depend on the collection and is at the discretion of the query service implementer.</p>
 
-<requirement id="req_core_data-query-trajectory" model="ogc"> <identifier>/req/core/data-query-trajectory</identifier><description><p id="_fd7e47f9-b5a3-015a-19d8-1ded62faab73">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Trajectory query mandatory, then:</p>
-</description><component class="part"><p id="_a05838de-c76c-05cb-e14e-47e69ecf14ab">The Profile <em>SHALL</em> include a requirement mandating the Trajectory query.</p>
-</component><component class="part"><p id="_64f70b26-57fb-bd0d-5b3a-06859f396851">The Trajectory query requirement <em>SHALL</em> specify the following:</p>
-<ul id="_6a018743-6c27-f6b2-6b60-d844e2e1decd"><li><p id="_173d6827-b8c8-84e6-3388-f53b9c2bf724">Enumerated list of output_format types</p>
+<p id="_b50c650d-f550-c901-473a-4e1a20852449">Path = {root}/collections/{collectionId}/trajectory</p>
+
+<requirement id="req_core_data-query-trajectory" model="ogc"> <identifier>/req/core/data-query-trajectory</identifier><description><p id="_19c7ba65-7802-b5f9-9e3e-d075a697a646">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> data queries by making the Trajectory query mandatory, then:</p>
+</description><component class="part"><p id="_c51fb76a-bb11-2951-8434-4ef1c5781f7f">The Profile <em>SHALL</em> include a requirement mandating the Trajectory query.</p>
+</component><component class="part"><p id="_a1460645-ed40-0ccc-ba34-fb715696c97c">The Trajectory query requirement <em>SHALL</em> specify the following:</p>
+<ul id="_49b26e5b-e50b-7d78-fbb3-ec0beb633574"><li><p id="_25e095ad-1e43-33b1-8b3e-09e0a926ef34">Enumerated list of output_format types</p>
 </li>
-<li><p id="_d0d0b974-62b6-38e4-46e7-db8c8e8388e4">The default_output_format</p>
+<li><p id="_09931aa2-db55-62fe-b0ff-36f1df4cc3e5">The default_output_format</p>
 </li>
-<li><p id="_7f6210e6-2891-90fe-41ef-ad2e79f6149b">Enumerated list of crs_details values</p>
+<li><p id="_6262cddd-62ca-d9d8-2c15-9ef5da2dccde">Enumerated list of crs_details values</p>
 </li>
-<li><p id="_be6462dd-433a-cc67-172e-ab4e65410ce0">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
+<li><p id="_59578eb2-344b-b5ba-817e-4687e2f8dbd4">Enumerated list of the operations that the query supports (i.e. GET, POST)</p>
 </li>
 </ul>
 </component>
@@ -771,35 +854,35 @@ conformance clauses.</p>
 
 <clause id="_general_requirements" obligation="normative">
 <title>General Requirements</title>
-<p id="_171f1282-db5b-644c-a910-30721467d29f">Profile is conformant with the ModSpec</p>
+<p id="_379fafdc-b39f-207a-0d3e-8b4df6fb358d">Profile is conformant with the ModSpec</p>
 
-<requirement id="req_class_core_modspec" model="ogc"> <identifier>/req/core/modspec</identifier><description><p id="_84db6d18-0931-d2e6-0056-0bf0bc97cbc8">A profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> be conformant to the <eref type="inline" bibitemid="ogc-modspec" citeas="OGC 08-131r5">OGC Modular Specification</eref>.</p>
+<requirement id="req_class_core_modspec" model="ogc"> <identifier>/req/core/modspec</identifier><description><p id="_f865659b-02cb-0b1c-b34c-0766725744cb">A profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> be conformant to the <xref target="ogc-modspec">OGC Modular Specification</xref>.</p>
 </description>
 </requirement>
 
-<p id="_2c8f4884-6528-c02c-1c4d-208bacbc982e">Implementations of the Profile are conformant with EDR Part 1</p>
+<p id="_7ce0342a-0347-5540-b7cc-751317b2cbd3">Implementations of the Profile are conformant with EDR Part 1</p>
 
-<requirement id="req_class_core_edr-conformant" model="ogc"> <identifier>/req/core/edr-conformant</identifier><description><p id="_419d957f-373a-a30b-af8e-fdf698da6377">A profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that a conformant implementation (<xref target="standardization_target-definition">standardization target</xref>) of that profile also demonstrate conformance to the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref>.</p>
+<requirement id="req_class_core_edr-conformant" model="ogc"> <identifier>/req/core/edr-conformant</identifier><description><p id="_5ac713ef-69a4-6c83-c894-d86ad5eed235">A profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that a conformant implementation (<xref target="standardization_target-definition">standardization target</xref>) of that profile also demonstrate conformance to the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref>.</p>
 </description>
 </requirement>
 
-<p id="_e4dc49fa-21a0-bab6-0e3e-dfa315ff271d">A common focus of Profiles is to restrict the values of Path parameters. The Profile should fully define requirements for these restrictions.</p>
+<p id="_47341905-b22e-9fc4-6ac8-94be6b2f7ae9">A common focus of Profiles is to restrict the values of Path parameters. The Profile should fully define requirements for these restrictions.</p>
 
-<requirement id="req_core_parameter-names" model="ogc"> <identifier>/req/core/parameter-names</identifier><description><p id="_936f4a60-78c7-c5e2-2b9f-97bf4218112c">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values and definitions of parameter_names, then,</p>
-</description><component class="part"><p id="_22ac27cf-b4c5-7a53-3a2f-400f55dc4706">Requirements <em>SHALL</em> be defined which specify the parameter_names and their definitions.</p>
-</component><component class="part"><p id="_aae716bf-aca8-a4c3-2701-50f2a3a4101c">The parameter_names requirement definitions <em>SHALL</em> specify the required parameter_names objects in full including:</p>
-<ul id="_07f6568c-1213-7bb0-945c-83c2712aa74c"><li><p id="_daea3359-5cda-9163-c02c-8c436212ae0d">name,</p>
+<requirement id="req_core_parameter-names" model="ogc"> <identifier>/req/core/parameter-names</identifier><description><p id="_7aceaab6-4d6e-cf91-8742-484bbf72fc58">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values and definitions of parameter_names, then,</p>
+</description><component class="part"><p id="_f7c00fab-cf6c-7cda-4a0b-01b30f8db6f5">Requirements <em>SHALL</em> be defined which specify the parameter_names and their definitions.</p>
+</component><component class="part"><p id="_6d43ce31-b87b-3b25-1cb7-6873f4f4ae4b">The parameter_names requirement definitions <em>SHALL</em> specify the required parameter_names objects in full including:</p>
+<ul id="_1a82c4ed-a646-449a-77d2-2e687f6cfd5b"><li><p id="_9d3b583e-f84c-b3e5-30b5-695ed65c9686">name,</p>
 </li>
-<li><p id="_df4df56f-1d6c-2d56-c7e8-43917be35cc3">units,</p>
+<li><p id="_76b94ede-a526-f5d4-7b74-76ff3af83d37">units,</p>
 </li>
-<li><p id="_80a9820d-3efe-e53d-3c4f-e4cfd72d45cf">data type and</p>
+<li><p id="_574cfd41-8d18-ddfd-e02f-5a40a07c8c7c">data type and</p>
 </li>
-<li><p id="_7464d446-63b7-a5f5-82e9-f536a0139492">measurement duration</p>
+<li><p id="_e3d52533-4db8-ed25-e37f-e953424a7b54">measurement duration</p>
 </li>
 </ul>
 </component>
 
-<description><p id="_9bfce6df-7904-ef45-67b9-6f07bf5f855f">for example:</p><sourcecode id="_0953a06a-2854-bb80-8080-f2d385d563d1" lang="JSON">"parameter_names": {
+<description><p id="_6d35241c-0bcd-2f6f-6f73-a3b13341bec5">for example:</p><sourcecode id="_b48aed41-95cd-3fc7-6fa9-f64eb76fc70f" lang="JSON">"parameter_names": {
     "prmsl": {
         "type": "Parameter",
         "description": "Air pressure at sea level",
@@ -874,17 +957,17 @@ conformance clauses.</p>
 
 <clause id="_http_status_codes" obligation="normative">
 <title>Http Status Codes</title>
-<p id="_a6913088-a625-ed3d-5160-52fac679a5de">HTTP response</p>
+<p id="_a739fe55-9dce-2e8b-a136-8295013510db">HTTP response</p>
 
-<ul id="_8add97da-92d8-9798-e166-405691787614"><li><p id="_018c9bc4-cd46-afe7-29ae-0e9466195608">Response status codes</p>
+<ul id="_7f4195e8-73fb-e68c-b758-99c353f12531"><li><p id="_696bc373-59c2-e5d8-18af-1c23b19d0228">Response status codes</p>
 </li>
 </ul>
 
-<requirement id="req_core_status-codes" model="ogc"> <identifier>/req/core/status-codes</identifier><description><p id="_0dad7c77-2d7e-32a5-e1fe-573ec16124f2">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that the definitions of all http status codes SHALL be provided.</p>
-</description><component class="part"><p id="_40f21887-c140-c255-ac93-143f1dfeebda">These definitions <em>SHALL</em> provide the following:</p>
-<ul id="_0742e4e7-cf53-2d4e-8132-a888614e8fed"><li><p id="_567ea121-c8fa-09a7-2fe5-086cc86a401c">A description of the cause of the error.</p>
+<requirement id="req_core_status-codes" model="ogc"> <identifier>/req/core/status-codes</identifier><description><p id="_d4c4b857-e645-e865-ac5a-42d28bf5b4c4">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that the definitions of all http status codes SHALL be provided.</p>
+</description><component class="part"><p id="_524d1ed0-441d-b8ba-0c75-a6eb016b1ade">These definitions <em>SHALL</em> provide the following:</p>
+<ul id="_fde71f3a-e2eb-a6a6-b997-1922f4b515d5"><li><p id="_a5f48850-57d6-3764-427b-b4ade30c93c6">A description of the cause of the error.</p>
 </li>
-<li><p id="_9e7a3a5a-01c1-5e89-84d9-7112291b22b4">A JSON schema for the message body structure</p>
+<li><p id="_c71ef732-99bf-fc71-084b-56cfd5c2eb7a">A JSON schema for the message body structure</p>
 </li>
 </ul>
 </component>
@@ -893,17 +976,17 @@ conformance clauses.</p>
 
 <clause id="_links" obligation="normative">
 <title>Links</title>
-<ul id="_ea8b4fa8-aac1-4ca7-0190-3549b5951d7a"><li><p id="_db76c126-2a00-30da-01bc-a1e206620648">Response links</p>
+<ul id="_94689e0b-43b2-ba97-6e5d-4cf4f4244c02"><li><p id="_6ca35bb7-9342-1532-e2e2-b393c7c7664f">Response links</p>
 </li>
 </ul>
 
-<requirement id="req_core_links" model="ogc"> <identifier>/req/core/links</identifier><description><p id="_63a58f43-3aa1-0115-4450-869ca6ed6129">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> valid responses to only those which include links, then:</p>
-</description><component class="part"><p id="_f4925d26-10c0-bf94-6f4c-6fbab6ba421e">The Profile <em>SHALL</em> require that link objects are included in a response.</p>
-</component><component class="part"><p id="_9e8cea2d-e087-29c7-7390-8ba4b567d409">The link objects <em>SHALL</em> defined the required link objects in full.</p>
-</component><component class="part"><p id="_3abd9d9b-ff86-d5c6-3a80-bcd9c65fba10">The link objects <em>SHALL</em> require that the <tt>href</tt>, <tt>rel</tt> and <tt>type</tt> attributes are populated.</p>
+<requirement id="req_core_links" model="ogc"> <identifier>/req/core/links</identifier><description><p id="_ed887575-22cf-2e5a-fdf4-7883efc5d10a">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> valid responses to only those which include links, then:</p>
+</description><component class="part"><p id="_05da624f-460f-f1a0-b8ba-99492b41016a">The Profile <em>SHALL</em> require that link objects are included in a response.</p>
+</component><component class="part"><p id="_34038e3f-6495-36bc-b214-a8460c12c439">The link objects <em>SHALL</em> defined the required link objects in full.</p>
+</component><component class="part"><p id="_6ad4c02b-2cc4-a5e8-f9fa-608b201dcc67">The link objects <em>SHALL</em> require that the <tt>href</tt>, <tt>rel</tt> and <tt>type</tt> attributes are populated.</p>
 </component>
 
-<description><p id="_87b7d2e3-f7ff-2cd6-f5c3-a48fe3eda295">for example:</p><sourcecode id="_ce802502-ca12-9d74-31ce-0d95601faf9a" lang="JSON">    {
+<description><p id="_b085ea5b-e37a-3bb1-67d8-993e8155c76b">for example:</p><sourcecode id="_2c3baf44-3cba-0475-914b-71730568467c" lang="JSON">    {
         "href": "https://creativecommons.org/licenses/by-nc/4.0/",
         "rel": "licence",
         "type": "text/html"
@@ -920,27 +1003,27 @@ conformance clauses.</p>
 
 <clause id="_asynchronous_queries" obligation="normative">
 <title>Asynchronous Queries</title>
-<p id="_64ef4354-35b4-41b6-2dd2-6cd2ffb1fd75">While Web protocols typically use request-response operations, there is also support for asychonous operations.</p>
+<p id="_1674c411-584c-b180-c3a6-721a597cfc0b">While Web protocols typically use request-response operations, there is also support for asychonous operations.</p>
 
-<p id="_0d7ca9e3-5b33-c30f-8a27-eba21034b0c0">HTTP Asynchrouous — This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.</p>
+<p id="_97f6a043-a33b-ecfd-b6fc-bc58b64ae64e">HTTP Asynchrouous — This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.</p>
 
-<requirement id="req_core_asynchronous" model="ogc"> <identifier>/req/core/asynchronous</identifier><description><p id="_ac8f5062-e6f0-d958-7aa5-312522692df8">If a Profile <em>extends</em> the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> with support for asynchronous opperations, then:</p>
-</description><component class="part"><p id="_e6f78805-8329-9f13-eb69-b7dbb911a9b8">Requirements <em>SHALL</em> be defined for each query type that is asynchronous</p>
-</component><component class="part"><p id="_1b04031e-96c8-cbe9-7170-78d42010bbe1">Each asynchronous query type requirement <em>SHALL</em> define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.</p>
-</component><component class="part"><p id="_ef0de5d1-c6e4-1582-e6bf-7226d2bc7303">Each asynchronous query type requirement <em>SHALL</em> document the mechanism for delivering the result of the asynchronous query.</p>
+<requirement id="req_core_asynchronous" model="ogc"> <identifier>/req/core/asynchronous</identifier><description><p id="_728b20f5-1a4f-c0d2-4cd9-415b57ab5a38">If a Profile <em>extends</em> the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> with support for asynchronous opperations, then:</p>
+</description><component class="part"><p id="_43ee1d77-5ba7-6011-574a-98a4c26bd428">Requirements <em>SHALL</em> be defined for each query type that is asynchronous</p>
+</component><component class="part"><p id="_f8a41ed9-be19-808b-044c-4b25a0d1d8dc">Each asynchronous query type requirement <em>SHALL</em> define the HTTP Status Code and provide a message schema and text used to inform the user that the response is asynchronous.</p>
+</component><component class="part"><p id="_766995f4-bb7b-5377-741a-9d367bee779c">Each asynchronous query type requirement <em>SHALL</em> document the mechanism for delivering the result of the asynchronous query.</p>
 </component>
 </requirement>
 
-<permission id="_5129732b-dd34-648a-90c3-60b9caa3c248" model="ogc"> <identifier>/per/core/asynchronous</identifier><description><p id="_5dcfac64-529c-3a6b-ec6a-a5cddb547ee9">The documentation of the mechanism for delivering the result of the asynchronous query <em>MAY</em> be provided through a link to an external document.</p>
+<permission id="_ede43ffd-9699-d289-58e5-c2922367e37c" model="ogc"> <identifier>/per/core/asynchronous</identifier><description><p id="_c073cb18-2f5e-faf4-ed8a-c78306db04d1">The documentation of the mechanism for delivering the result of the asynchronous query <em>MAY</em> be provided through a link to an external document.</p>
 </description>
 </permission>
 
-<p id="_ec244c35-455c-ec5f-cbfd-88b35de34d7b">Publish-Subscribe — This requirement addresses the use of Publish-Subscribe protocols. These are protocols supported in addition to HTTP.</p>
+<p id="_f6f53d37-2162-d909-29f0-5b3547b97d4c">Publish-Subscribe — This requirement addresses the use of Publish-Subscribe protocols. These are protocols supported in addition to HTTP.</p>
 
-<requirement id="req_core_pubsub" model="ogc"> <identifier>/req/core/pubsub</identifier><description><p id="_74f54f34-2610-c696-85b2-595fd694f105">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>extends</em> the supported operations to include Publish-Subscribe operations, then:</p>
-</description><component class="part"><p id="_bd48befe-f1ba-4b82-ef78-bfdd59ad6ffb">Support for the OGC API — Environmental Data Retrieval — Part 2: Publish-Subscribe workflow Standard <em>SHALL</em> be required.</p>
-</component><component class="part"><p id="_d3d59158-247c-c7ac-c262-6708947261ee">The pubsub requirement <em>SHALL</em> specify the channels that <em>SHALL</em> be supported</p>
-</component><component class="part"><p id="_3bcde470-5d39-2c23-274e-2952c2e00762">The pubsub requirement <em>SHALL</em> specify the payloads that a pubsub channel <em>SHALL</em> support</p>
+<requirement id="req_core_pubsub" model="ogc"> <identifier>/req/core/pubsub</identifier><description><p id="_14059e01-c107-c278-d7a4-f491404821ae">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r8">OGC API — Environmental Data Retrieval Standard</eref> <em>extends</em> the supported operations to include Publish-Subscribe operations, then:</p>
+</description><component class="part"><p id="_9c8b4531-cfd9-9b8b-4cbf-ab4d95dcf904">Support for the OGC API — Environmental Data Retrieval — Part 2: Publish-Subscribe workflow Standard <em>SHALL</em> be required.</p>
+</component><component class="part"><p id="_f1a7ea45-823b-23dc-1d91-bcf75d7447e3">The pubsub requirement <em>SHALL</em> specify the channels that <em>SHALL</em> be supported</p>
+</component><component class="part"><p id="_70132227-54dd-9de2-9f93-00c220f3056b">The pubsub requirement <em>SHALL</em> specify the payloads that a pubsub channel <em>SHALL</em> support</p>
 </component>
 </requirement>
 </clause>
@@ -1111,7 +1194,7 @@ conformance clauses.</p>
 </tr></tbody>
 </table>
 </annex><bibliography><references id="_references" normative="true" obligation="informative">
-<title>Normative references</title><p id="_307b20e2-9e40-db56-abbf-2822ab2941cc">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
+<title>Normative references</title><p id="_a6dd0e6f-0745-73ef-68f5-bb185b47e3c1">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
 
 <bibitem id="iso19106" type="standard" schema-version="v1.2.8">  <fetched>2025-05-09</fetched>  
@@ -1137,7 +1220,11 @@ conformance clauses.</p>
           </organization>        </owner>      </copyright>      <place>Geneva</place>    </bibitem>
   </relation>  <place>Geneva</place></bibitem>
 <bibitem id="ogc-edr"><formattedref format="application/x-isodoc+xml"><link target="https://www.opengis.net/doc/IS/ogcapi-edr-1/1.2">OGC API — Environmental Data Retrieval Standard</link></formattedref><docidentifier type="OGC">OGC 19-086r8</docidentifier><docnumber>19-086r8</docnumber></bibitem>
-<bibitem id="ogc-modspec"><formattedref format="application/x-isodoc+xml"><link target="https://portal.ogc.org/files/?artifact_id=34762">The ModSpec Model — Part 1: Core — A Standard for Designing and Writing Modular Standards</link></formattedref><docidentifier type="OGC">OGC 08-131r5</docidentifier><docnumber>08-131r5</docnumber></bibitem>
+<bibitem id="OGC19-072"><formattedref format="application/x-isodoc+xml"><link target="https://docs.ogc.org/is/19-072/19-072.html"/>, OGC API — Common — Part 1: Core, Open Geospatial Consortium (2023).</formattedref><docidentifier type="OGC">OGC 19-072</docidentifier><docnumber>19-072</docnumber></bibitem>
+<bibitem id="OGC20-024"><formattedref format="application/x-isodoc+xml"><link target="http://docs.ogc.org/DRAFTS/20-024.html"/>, OGC API — Common — Part 2: Geospatial Data (Draft), Open Geospatial Consortium</formattedref><docidentifier type="OGC">OGC 20-024</docidentifier><docnumber>20-024</docnumber></bibitem>
+
+<p id="_7ebe4ecd-03ed-627d-5a9e-5a1fa74f270b">[<bookmark id="ogc-modspec"/>], <link target="https://portal.ogc.org/files/?artifact_id=34762">The ModSpec Model — Part 1: Core — A Standard for Designing and Writing Modular Standards</link></p>
+
 <bibitem id="OpenAPI30"><formattedref format="application/x-isodoc+xml">OpenAPI Initiative (OAI). <strong>OpenAPI Specification 3.0</strong> [online]. 2020 [viewed 2025-01-03]. The latest patch version at the time of publication of this standard was 3.0.4, available at <link target="https://spec.openapis.org/oas/v3.0.4"/></formattedref><docidentifier>OpenAPI30</docidentifier><docnumber>30</docnumber></bibitem>
 <bibitem id="OpenAPI31"><formattedref format="application/x-isodoc+xml">OpenAPI Initiative (OAI). <strong>OpenAPI Specification 3.1</strong> [online]. 2021 [viewed 2025-01-03]. The latest patch version at the time of publication of this standard was 3.1.1, available at <link target="https://spec.openapis.org/oas/v3.1.1"/></formattedref><docidentifier>OpenAPI31</docidentifier><docnumber>31</docnumber></bibitem>
 </references><references id="Bibliography" normative="false" obligation="informative">
