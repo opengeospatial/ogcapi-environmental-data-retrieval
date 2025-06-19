@@ -28,3 +28,14 @@ part:: If the collection requires a custom dimension as requirements definition 
 (Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)
 
 ====
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/extent-temporal
+part:: A Requirement definition _SHALL_ specify the rules that the Collection id string must follow. This can be one of the following:
+
+* identifier string
+* Regular expression defining valid string patterns.
+
+====

@@ -4,14 +4,13 @@ Conformance to the ModSpec by a profile of the <<ogc-edr,OGC API - Environmental
 
 Part 3: Core of the ModSpec (this document) defines one requirements class and one related conformance class:
 
-* The Core: Common requirements for specifying standards documents. See <<core-section>> and <<annex-A-1>>
+* The Core: Requirements for writing Profile Standards for the OGC API-EDR Standard
 
-The ModSpec contains normative language and thus places requirements on
-conformance, or mechanism for adoption, of candidate standards to which the ModSpec
-applies. In particular:
+The OGC API-EDR-Part 3 Standard contains normative language and thus places requirements on conformance, or mechanism for adoption, of candidate standards to which this Standard applies. In particular:
 
 * <<core-section,OGC API-EDR Requirements Class: Core>> specifies the core requirements which shall be met by all standards claiming conformance to this Standard.
-* <<cls-9,Mapping the ModSpec to types of models>> gives information on how the ModSpec is to be applied to extensions to the core model for requirements and
-conformance clauses.
+* <<cls-9,Mapping the ModSpec to types of models>> gives information on how the ModSpec is to be applied to extensions to the core model for requirements and conformance clauses.
 
 Such extensions are defined in additional Parts (volumes) to the ModSpec Standard.
+
+NOTE: I have not decided if cls-9 is necessary for this standard.
