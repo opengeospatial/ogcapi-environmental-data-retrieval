@@ -1,7 +1,5 @@
 .Preface
 
-The aim of an OGC API EDR profile is to ensure interoperability between API implementations. To achieve this, it is essential that providers use a consistent approach when defining collections and instances of collections. An OGC EDR profile will specify a set of requirements that an API implementation must support to be a compliant implementation.
-
 ////
 *OGC Declaration*
 ////
@@ -27,15 +25,22 @@ Attention is drawn to the possibility that some of the elements of this document
 [abstract]
 == Abstract
 
-<Insert Abstract Text here>
+The OGC API-EDR Part 1: Core standard was designed to be flexible and straightforward to understand and implement for Web developers. As it is being widely implemented, various groups of users have identified the need to restrict some of the flexibility to improve interoperability between different implementations of both servers and clients within their domains of interest. A set of these stricter specifications for a specific domain of user is a Profile.
 
+The aim of the OGC API-EDR Part 3: Service Profile Support standard is to ensure interoperability between API implementations by defining a standard approach to specifying a Profile of OGC API-EDR Part 1: Core. 
 
+To achieve this, it is essential that providers use a consistent approach when defining collections and instances of collections. An OGC API-EDR Profile will specify a set of requirements that an EDR API implementation must support to be a compliant implementation.
 
 == Preface
 
 [NOTE]
 ====
-Insert Preface Text here. Give OGC specific commentary: describe the technical content, reason for document, history of the document and precursors, and plans for future work. >
+The aim of the OGC API-EDR Part 3: Service Profile Support standard is to ensure interoperability between EDR API implementations by defining a standard approach to specifying a Profile of OGC API-EDR Part 1: Core. To achieve this, it is essential that service providers use a consistent approach when defining Collections and instances of Collections. An OGC API-EDR Profile will specify a set of Requirements that an EDR API implementation must support to be a profile-Markcompliant implementation.
+
+This standard specifies Requirements and Recommendations for a Profile definition, and also conforms to the OGC Mod Spec Standard.
+
+It is envisaged that this approach may be useful for other OGC API Standards.
+
 Attention is drawn to the possibility that some of the elements of this document may be the subject of patent rights. The Open Geospatial Consortium shall not be held responsible for identifying any or all such patent rights.
 
 Recipients of this document are requested to submit, with their comments, notification of any relevant patent claims or other intellectual property rights of which they may be aware that might be infringed by any implementation of the standard set forth in this document, and to provide supporting documentation.
@@ -62,7 +67,9 @@ All questions regarding this submission should be directed to the editor or the 
 
 |===
 |*Name* |*Affiliation*
-| |
+| Mark Burgoyne |Met Office
+| Charles Heazel |Heazel Tech
+| Chris Little | Met Office
 |===
 
 == Contributors
