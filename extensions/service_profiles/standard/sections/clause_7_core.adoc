@@ -1,114 +1,326 @@
 [[core-section]]
 
-== Requirement Class Core
-
-Paragraph
+== Requirements Class Core
 
 include::../requirements/requirements_class_core.adoc[]
 
-=== General
+=== Platform Resources
 
-==== Conformance to the ModSpec
+.Platform Resource Paths
+[width="100%",options="header,footer"]
+|====================
+|PATH TEMPLATE |METHOD |RESOURCE
+|{root}/ |GET |Landing page
+|{root}/api |GET |API Description (optional)
+|{root}/conformance |GET |Conformance Classes
+|====================
 
-include::../requirements/core/REQ_modspec.adoc[]
+Where: {root} = Base URI for the API server
 
-==== Publish as an OpenAPI document
+OGC API — Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
 
-include::../requirements/core/REQ_publishing.adoc[]
+==== API Landinding Page 
 
-include::../requirements/core/REQ_api.adoc[]
+Path = {root}/
 
-==== Profile of OGC API - EDR
+Dependencies 
 
-include::../requirements/core/REQ_EDR-conformant.adoc[]
+* <<OGC19-072,OGC API — Common — Part 1: Core>>
+* <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. The Landing Page resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
+
+The normative JSON Schema for an EDR Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
+
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content that Profiles will mandate is defined in the following requirment.
 
 include::../requirements/core/REQ_root.adoc[]
 
+==== API Definition 
+
+Path = {root}/api
+
+Dependencies 
+
+* <<OGC19-072,OGC API — Common — Part 1: Core>>
+* <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients. The API Definition resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
+
+NOTE: At this time only OpenAPI 3.0 and OpenAPI 3.1 documents are supported by OGC Web API Standards.
+
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> have additional requirements governing the provision and publication of the API Definition documents.
+
+include::../requirements/core/REQ_publishing.adoc[]
+
+==== Declaration of Conformance Classes
+
+Path = {root}/conformance
+
+Dependencies 
+
+* <<OGC19-072,OGC API — Common — Part 1: Core>>
+* <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+To support “generic” clients that want to access implementations of multiple OGC API Standards and extensions — and not “just” a specific API server, the API has to declare the conformance classes it claims to have implemented. The Conformance Classes resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
+
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> have additional requirements governing which Conformance Classes and identifiers must be included in this resource.
+
+include::../requirements/core/REQ_api.adoc[]
+
+NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
+
+NOTE: Get guidence from the OGC Naming Authority on valid URIs for Profiles. 
+
+=== Spatiotemporal and Information Resources
+
+.Spatialtemporal and Information Resource Paths
+[width="100%",options="header,footer"]
+|====================
+|PATH TEMPLATE |METHOD |RESOURCE
+|{root}/collections|GET |Metadata describing the collections of data available from this API.
+|{root}/collections/{collectionId} |GET |Metadata describing the collection of data which has the unique identifier{collectionId}
+|====================
+
+Where:
+
+* {root} = Base URI for the API server
+* {collectionId} = an identifier for a specific collection of data
+
+==== Collections
+
+OGC API implementations typically organize their geospatial resources into collections. Information about those collections is accessed through the /collections path and the http://www.opengis.net/def/rel/ogc/1.0/data link relation.
+
+Path = {root}/collections
+
+Dependencies 
+
+* <<OGC20-024,OGC API — Common — Part 2: Geospatial Data>>
+* <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+The Collections resource is initially defined in the `Collections` conformance class of the <<OGC20-024,OGC API — Common - Part 2>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
+
+An API may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)
+
 include::../requirements/core/REQ_requirements-set.adoc[]
 
-=== Requests
+==== Collection Description
 
-==== Parameter Names
+Each resource collection is described by a set of metadata. That metadata can be accessed directly using the /collections/{collectionId} path and as an entry in the collections property of the /collections response.
 
-include::../requirements/core/REQ_parameter-names.adoc[]
+Path:
 
-==== Collection ID Parameter
+* {root}/collections (returns metadata for every collection)
+* {root}/collections/{collectionId} (returns metadata for the specified collection)
+
+Dependencies 
+
+* <<OGC20-024,OGC API — Common — Part 2: Geospatial Data>>
+* <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+===== Collection ID parameter restictions
 
 include::../requirements/core/REQ_collectionid.adoc[]
 
-==== Extent Parameter
+===== Extent property restrictions
+
+The Collection metadata includes an Extent property which defines a spatial-temporal envelope that encompasses the geospatial data in the collection.
 
 include::../requirements/core/REQ_extent.adoc[]
 
-==== Instance ID Parameter
+=== Query Resources
 
-include::../requirements/core/REQ_instanceid.adoc[]
+.Query Resource Paths
+[width="100%",options="header,footer"]
+|====================
+|PATH TEMPLATE |METHOD |RESOURCE
+|{root}/collections/{collectionId}/{queryType} |GET, POST(Optional) |Retrieve data according to the query pattern from a collection with the unique identifier {collectionId}
+|{root}/collections/{collectionId}/instances |GET |Retrieve metadata about instances of acollection
+|{root}/collections/{collectionId}/instances/{instanceId} |GET |Retrieve metadata from a specific instanceof a collection with the unique identifiers{collectionId} and {instanceId}
+|{root}/collections/{collectionId}/instances/{instanceId}/{queryType} |GET, POST(Optional) |Retrieve data according to the query pattern from a specific instance of a collection with the unique identifiers{collectionId} and {instanceId}
+|====================
 
-==== Output Format Parameter
+Where:
 
-include::../requirements/core/REQ_output-format.adoc[]
+* {root} = Base URI for the API server
+* {collectionId} = an identifier for a specific collection of data
+* {instanceId} = an identifier for a specific version or instance of a collection of data
+* {queryType} = an identifier for a specific query pattern to retrieve data from a specific  collection of data
 
-==== Paging
+Path = {root}/collections/{collectionId}/{queryType}
 
-include::../requirements/core/REQ_paging-support.adoc[]
-
-=== Response
-
-==== Response with Status Codes
-
-include::../requirements/core/REQ_status-codes.adoc[]
-
-==== Response with Links
-
-include::../requirements/core/REQ_links.adoc[]
-
-=== Query Expressions
-
-==== Data Query
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query.adoc[]
 
+==== Parameters
+
+The following parameters are supported by all OGC EDR queries.
+
+===== Output Format parameter
+
+Also known as the -f parameter.
+
+Data format for the output data (available options are listed in the collectionsresponse).
+
+include::../requirements/core/REQ_output-format.adoc[]
+
 ==== Area Query
+
+The Area query returns data within the polygon defined by the coords parameter. Logic for identifying the best match for the requested area will depend on the collection and is at the discretion of the query service implementer.
+
+Path = {root}/collections/{collectionId}/area
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query-area.adoc[]
 
 ==== Corridor Query
 
+The Corridor query returns data along and around the path defined by the coords parameter. Logic for identifying the best match for the requested corridor will depend on the collection and is at the discretion of the query service implementer. 
+
+Path = {root}/collections/{collectionId}/corridor
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
 include::../requirements/core/REQ_data-query-corridor.adoc[]
 
 ==== Cube Query
 
+The Cube query returns a data cube defined by the bbox and z parameters.
+
+Path = {root}/collections/{collectionId}/cube
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
 include::../requirements/core/REQ_data-query-cube.adoc[]
 
-==== Instance Query
+==== Locations Query
+
+The Locations query returns data for the named location. Logic for identifying the best match for the coordinate will depend on the collection and is at the discretion of the query service implementer. If a location id is not defined the API SHALL return a GeoJSON features array of valid location identifiers, the schema of the GeoJSON response SHOULD be defined in the OpenAPI definition of the EDR service.
+
+Path = {root}/collections/{collectionId}/locations
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+TBD
+
+==== Instances Query
+
+Having multiple versions or instances of the same collection, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as new collections the instance query type allows this data to be described as different views of the same collection.
+
+Path = {root}/collections/{collectionId}/instances
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query-instances.adoc[]
 
+===== Parameter instanceId
+
+Path - Instance {root}/collections/{collectionId}/instances/{instanceId} 
+
+Instance ID restrictions
+
+include::../requirements/core/REQ_instanceid.adoc[]
+
+===== Parameter queryType
+
+Path -  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}
+
+==== Items Query
+
+Paths:
+* {root}/collections/{collectionId}/items
+* {root}/collections/{collectionId}/items/{itemid}
+
+Dependencies 
+
+* <<OGC17-069,GC API - Features - Part 1: Core>>
+* <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+The EDR API Items query is an <<OGC17-069,OGC API — Features>> endpoint that may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use,such as a monitoring location. Or there may be a catalog of spatiotemporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
+
+===== ItemID parameter
+
+If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features. All other parameters for use with the Items query are defined by OGC API — Features.
+
+===== Limit parameter
+
+Paging restrictions (limit parameter provided in the request, multi-page response). 
+
+include::../requirements/core/REQ_paging-support.adoc[]
+
 ==== Position Query
+
+The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the collection and is at the discretion of the query service implementer. 
+
+Path = {root}/collections/{collectionId}/positions 
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query-position.adoc[]
 
 ==== Radius Query
 
+The Radius query returns data within the defined radius of the requested coordinate. 
+
+Path = {root}/collections/{collectionId}/radius 
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
 include::../requirements/core/REQ_data-query-radius.adoc[]
 
 ==== Trajectory Query
 
+The Trajectory query returns data along the path defined by the coords parameter. Logic for identifying the best matches for the requested trajectory will depend on the collection and is at the discretion of the query service implementer. 
+
+Path = {root}/collections/{collectionId}/trajectory 
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
 include::../requirements/core/REQ_data-query-trajectory.adoc[]
 
-=== Asynchronous Operations
+=== General Requirements
+
+==== Profiling Requirements
+
+Profile is conformant with the ModSpec
+
+include::../requirements/core/REQ_modspec.adoc[]
+
+Implementations of the Profile are conformant with EDR Part 1
+
+include::../requirements/core/REQ_EDR-conformant.adoc[]
+
+A common focus of Profiles is to restrict the values of Path parameters. The Profile should fully define requirements for these restrictions. 
+
+include::../requirements/core/REQ_parameter-names.adoc[]
+
+==== Http Status Codes
+
+HTTP response
+
+ - Response status codes
+ 
+include::../requirements/core/REQ_status-codes.adoc[]
+
+==== Links
+
+ - Response links
+
+include::../requirements/core/REQ_links.adoc[]
+
+==== Asynchronous Queries
 
 While Web protocols typically use request-response operations, there is also support for asychonous operations.
 
-==== HTTP Asynchrouous
-
-This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.
+HTTP Asynchrouous - This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.
 
 include::../requirements/core/REQ_asynchronous.adoc[]
 
-==== Publish-Subscribe
-
-This requirement addresses the use of Publish-Subscribe protocols. These are protocols supported in addition to HTTP.
+Publish-Subscribe - This requirement addresses the use of Publish-Subscribe protocols. These are protocols supported in addition to HTTP.
 
 include::../requirements/core/REQ_pubsub.adoc[]
+
+
 
