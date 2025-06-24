@@ -1,0 +1,174 @@
+[appendix,obligation="informative"]
+== Profiles
+
+=== Profiles and Conformance
+
+ISO 19106:2004 Geographic information - Profiles details two classes of conformance, which may be generally thought of as profile types.  Conformant Class 1 profiles are a pure subset of the ISO geographic information standards.  Conformant Class 2 profiles have the same basis as Class 1 but include extensions within the contexts permitted in the base standard.  Additionally, a Class 2 profile permits the profiling of non-ISO geographic information standards as part of the profile.
+
+NSG specifications that profile, or otherwise implement, the NMF Conceptual Schema may extend the requirements of the NMF Conceptual Schema with the metadata requirements of individual organizations and systems. These specifications include NSG datasets, products, systems, and services, profiles of the NMF Conceptual Schema, application schemas, implementation specifications, and any other documentation that is required to conform to this standard.
+
+Demonstration of the compliance of a specification with the NMF requires both the determination that metadata elements and entities that are included in the NMF Conceptual Schema (Class 1 profile conformance) are correctly implemented, and the determination that metadata elements and entities that are valid extensions to the NMF Conceptual Schema (Class 2 profile conformance) are correctly implemented. The validity of metadata extensions shall be tested using the 19115:2003/Cor 1:2006 rules for metadata extensions.
+
+=== Extending the NMF Conceptual Schema Profile
+
+==== Introduction
+
+The NMF Conceptual Schema Profile defines “what we all must understand” (as a set of metadata concepts) in the NSG in regards to geospatial metadata in support of functions such as data discovery, determining data fitness for use, data access, data transfer, and mission-specific use of geospatial information.
+
+The NMF Conceptual Schema Profile does not cover all possible uses; therefore, it will require extension in order to meet the requirements of specific products and data sets.
+
+This section defines the methodology by which extensions for the NMF Conceptual Schema Profile are created.
+
+==== Extension Methodology
+
+The following steps shall be taken when creating a new extension to the NMF Conceptual Schema Profile:
+
+. Review ISO 19115:2003/Cor 1:2006. If an appropriate entity or element is located there, the UML definition and data dictionary entry can be inserted into the NMF Conceptual Schema Profile.
+. Review ISO 19115-2:2009. If an appropriate entity or element is located there, the UML definition and data dictionary entry can be inserted into the NMF Conceptual Schema Profile.
+. Review ISO/TC 211’s suite of Standards and Specifications. If an appropriate class or element is located there, the UML definition and data dictionary entry can be inserted into the NMF Conceptual Schema Profile.
+. If no existing ISO/TC 211 entity or element is appropriate, an existing class or element shall be extended. This will require the creation of new UML classes and elements, and the creation of new data dictionary entries. Register the new metadata entities and/or elements in a suitable namespace in the NSG Standards Registry.
+
+==== Existing Element
+
+===== Introduction
+
+If an existing metadata element has been identified as meeting the new requirement, there are three options for reusing existing elements.
+
+===== Domain Restriction
+
+An existing metadata element is suitable, given that the “free text” domain of the identified element is restricted. No existing metadata code list can be identified within the metadata standard that meets the requirements. In this circumstance a new metadata code list may be defined to meet the specific requirements of the profile.
+
+The new metadata code list should be defined in a style consistent with that of ISO 19115:2003/Cor 1:2006.
+METHOD:
+
+. Define the new metadata code list in terms of Definition and Name. The definition of the new code list should be done so as to be consistent with the existing code lists which can be found in Section B.5, 19115:2003/Cor 1:2006.
+. Define the new metadata code list elements in terms of Definition and Domain code. This definition should also be done so as to be consistent with the existing code list elements found in Section B.5, 19115:2003/Cor 1:2006.
+. Register the new metadata code list elements in the NSG Standards Registry, in a suitable namespace and published with a URL consistent with Section 7.2.2.
+. Update the appropriate UML diagram.
+
+===== CodeList Restriction
+
+An existing metadata code list meets the requirement, but the profile requires that the elements defined for the code list be a restricted subset of the standard domain as specified in the NMF, when applicable, or established by the external standard (e.g., ISO 19115:2003/Cor 1:2006).
+METHOD:
+
+. Identify the metadata element and record the constrained domain in terms of dataType and domainValue.
+. Update the appropriate UML diagram.
+
+===== Domain Expansion
+
+An existing metadata element is suitable, given that the metadata code list of the identified element is expanded. The new metadata code list elements should be defined with reference to the existing set of elements. The expanded metadata code list must be a logical expansion of the standard set of values.
+
+METHOD:
+
+. Identify the metadata element and record the expanded domain in terms of dataType and domainValue.
+. Register the new metadata code list elements in the NSG Standards Registry, in a suitable namespace and published with a URL consistent with Section 7.2.2.
+. Update the appropriate UML diagram
+
+==== New Element or Entity
+
+===== Introduction
+
+If no existing element or entity can be identified that meets the new requirement, a new element or class shall be defined.
+
+===== New Element
+
+No existing metadata element can be identified within the metadata standard that meets the requirements. In this circumstance a new metadata element may be defined to meet the specific requirements of the profile.
+
+The new metadata element should be defined in a style consistent with that of ISO 19115:2003/Cor 1:2006.
+
+METHOD:
+
+. Identify the existing metadata entity to which the new element should be added. 
+. Define the new metadata element in terms of the extended element information as described in 19115:2003/Cor 1:2006: name, definition, obligation, condition, maximumOccurence, dataType, and domainValue. 
+. Update the appropriate UML diagram.
+. Register the new metadata entities and/or elements in a suitable namespace in the NSG Standards Registry.
+
+===== New Entity
+
+No existing metadata element or entity can be identified within the metadata standard that meets the requirements, nor can an existing metadata entity be modified by the addition of simple metadata elements to meet the requirements. In this circumstance a new metadata entity may be defined to meet the specific requirements of the profile.
+
+The new metadata entity should be defined in a style consistent with that of ISO 19115:2003/Cor 1:2006.
+
+METHOD:
+
+. Identify which groupings of metadata best describe the function of the new entity. Define the new metadata entity in terms of the extended element information as described in ISO 19115:2003/Cor 1:2006: name, definition, obligation, condition, dataType, domainValue, maximumOccurence, parentEntity, rule, rationale, and source. Data type is “Class” for a metadata entity.
+. Identify the elements that form the metadata entity.
+. Define the new metadata element in terms of the extended element information as described in ISO 19115:2003/Cor 1:2006: name, definition, obligation, condition, maximumOccurence, dataType, and domainValue. 
+. Update the appropriate UML diagram.
+. Register the new metadata entities and/or elements in a suitable namespace in the NSG Standards Registry.
+
+=== Profiling the NMF Conceptual Schema Profile
+
+==== Introduction
+
+The geospatial metadata elements specified in the NMF Conceptual Schema Profile shall be understood by all NSG participants. However, not all NSG participants will necessarily employ all of these geospatial metadata elements in their business practices.
+
+The decision to employ a set of geospatial metadata elements is documented by specifying a profile of the NMF Conceptual Schema Profile. In a profile, metadata elements may be selected from the NMF Conceptual Schema Profile (and its extensions) and their use constrained through specifying obligations and business rules.
+
+This section specifies how to establish and document a profile of the NMF Conceptual Schema Profile.
+
+==== Profile Structure
+
+A profile of the NSG Conceptual Schema Profile is a subset of that schema. The “structure” of such a profile is based on three principles, as follows:
+
+. The conceptual element is specified by its name and its definition as specified in the NMF Conceptual Schema.
+. A selected element may have zero or more business rules.
+.. Business rules may restrict the use of an element from its specification in the NMF Conceptual Schema Profile; it may never broaden its use. Possible restrictions include:
+... Reducing the number of instances of the element value that are permitted (by “tightening” the multiplicity of the element);
+... Reducing its value domain in an allowable manner (e.g., by substituting a well-specified CodeList for a “free text” CharacterString); and/or
+... Adding context-dependent use constraints.
+The allowable types of business rules are specified in Section A.2.3.
+.. If no business rule is specified then the use of the conceptual element in the profile is identical to its specification in the NMF Conceptual Schema Profile.
+.. It is a Recommended Practice that at least one business rule be established for each profiled element in order to ensure that the element is used in a manner intended by the designers of the profile. At a minimum “extensional guidance” should be given by documenting a range of “good examples” of its use if a simple and clear rule cannot otherwise be established.
+. Profiled elements may be organized into sets in such a manner as to facilitate the specification of business rules that apply to “the set as a whole.”  The basis for these groupings is the type of geospatial resource that those elements shall be used to document. The use of any metadata elements in a grouping is conditioned by a business rule dependent on the geospatial resource type. In effect, every element in the grouping has as additional business rules those specified for the “set as a whole.”
+.. Element sets shall not violate the element structure of the NMF Conceptual Schema Profile; if an element is a member of an element set, then any elements comprising its value domain are also members of that element set.
+.. Element sets thus specified must form a complete and non-overlapping partitioning of the elements in the profile; i.e., every element of the profile must belong to exactly one element set.
+
+This regular structure of a profile allows for the direct specification of a profile-conformance test suite.
+
+==== Business Rules
+
+===== Introduction
+
+Enterprises operate according to constraints which may be captured in the form of business rules. Those constraints can be context-sensitive and dynamic. Such business rules describe the operation of an enterprise and can relate to something as high-level as privacy or security, or as low-level as the derivation of a particular metadata element value. It is generally not appropriate to build such constraints routinely into implementation database structures or even interfaces. However, such rules are still important and must be discerned, documented, and accommodated in such a way that implementers will not overlook their importance, requirements builders will fully understand their impact, and acquisition personnel will recognize their necessity. Such analysis and comment is facilitated by moving business rules out of data models and architectures, as well as determining and expressing the rules separately from the models. When the business rules are explicitly dealt with as part of the analysis process, they are more likely to be challenged and corrected in time to serve as guidance for developers.
+
+There is a strong inclination on the part of creators of metadata to “fill in all the blanks.” If an element is available, people want to use it in a resource description. Applications should be designed to make evident that not every available element is necessarily appropriate for every resource type. Similarly, applications should provide assistance where possible in selection of an appropriate value for a particular metadata element. To the extent that metadata creation facilities are built into content-creation applications, the application can identify values for some elements more reliably than the user, sometimes by accessing code lists online that tend to be more volatile and present a maintenance burden within a more static document.
+
+Ultimately, the richness of metadata descriptions will be determined by policies and best practices designated by the agency creating the metadata, and  policies and practices will be guided by the functional requirements of services or applications.
+
+===== Constraints on Primitive Values
+
+Business rules may constrain the value of a non-complex data type (see Section 7.2) in one of the following manners (examples provided are not all inclusive):
+
+* Value assignment – specifying a CharacterString value to be exactly “Version 1.0” or a CodeList value to be “dataset”.
+* Value constraint – two or more specific allowed values from a more extensive CodeList.
+* Value range restriction – the value of Real x must satisfy the inequalities: -180 <= x <= 180.
+* Value construction/test – a CharacterString value for a telephone number must follow the ITU-T Recommendation E.123.
+* Value assignment recommended but not obligated – it is a Recommended Practice that the CodeList value “utf8” be used.
+* Value absence – absence of an element/value implies that there is no applicable value as opposed to the value simply being “unknown” to the process populating the element.
+
+===== Constraints on Value Sets
+
+Business rules may constrain the members of a set of values in one of the following manners (examples provided are not all inclusive):
+
+* Value set uniqueness – the set of resource publishers should not include any duplicates.
+* Value set ordering – the values must be listed in descending “priority” order, or in temporal order.
+
+===== Constraints on Elements
+
+Business rules may simultaneously constrain the values of multiple elements in one of the following manners (examples provided are not all inclusive):
+
+* Element co-dependency – exactly one of the elements {Minimum Bounding Rectangle, Bounding Polygon, Bounding Point} should be populated.
+* Element dependency – if one element takes on a specified value (for whatever reason) then another element must take on a specified value.
+* Element co-constraint – the set of Text Locale Elements should be populated (together) as “utf8” and “eng” and “USA”.
+
+Business rules may constrain the multiplicity of elements in one of the following manners (examples provided are not all inclusive):
+
+* Element conditional obligation – specify an element obligation of Mandatory contingent on a specified criterion.
+* Element multiplicity constraint – may further constrain (“narrow”) the conceptual element multiplicity than is required “merely” by the element obligation (e.g., the conceptual element multiplicity may have been [0..*], the profile may then specify an element obligation of Mandatory, and a Business Rule further revise the profile element multiplicity to [1..2]).
+
+===== General Constraints 
+
+Business rules may provide general guidance on the use elements (and populating their value) in the following manner (example provided is not all inclusive):
+
+* Implementation guidance – the choice of a CodeList to be used as the value domain of a Country Code, such as a Geopolitical Entities and Codes (GEC) two-character code from  http://nsgreg.nga.mil/genc/registers.jsp?register=FIPS or a GENC three-character code as specified at https://nsgreg.nga.mil/genc/discovery

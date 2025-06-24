@@ -26,7 +26,15 @@ part:: Those rules _SHALL_ be specified using either:
 * Enumerated list of valid CRS values
 * Regular expression defining valid CRS string patterns.
 
-(Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)
+NOTE:: Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/extent-spatial
+statement:: Regular expressions _MAY_ be used to restrict reference system definitions to WKT2 or EPSG values
+
 ====
 
 [requirement]
