@@ -5,12 +5,25 @@
 [%metadata]
 identifier:: http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core
 target-type:: OGC API-EDR Profile Standard
+requirement:: /req/core/modspec
+requirement:: /req/core/edr-conformant
+requirement:: /req/core/parameter-names
 requirement:: /req/core/root
+requirement:: /req/core/root-description
+requirement:: /req/core/root-keywords
+requirement:: /req/core/root-provider
+requirement:: /req/core/root-contact
+requirement:: /req/core/root-links
 requirement:: /req/core/publishing
+requirement:: /req/core/openapi
 requirement:: /req/core/api
 requirement:: /req/core/requirements-set
 requirement:: /req/core/collectionid
 requirement:: /req/core/extent
+requirement:: /req/core/extent-spatial
+requirement:: /req/core/extent-temporal
+requirement:: /req/core/extent-vertical
+requirement:: /req/core/extent-custom
 requirement:: /req/core/data-query
 requirement:: /req/core/output-format
 requirement:: /req/core/data-query-area
@@ -22,9 +35,6 @@ requirement:: /req/core/paging-support
 requirement:: /req/core/data-query-position
 requirement:: /req/core/data-query-radius
 requirement:: /req/core/data-query-trajectory
-requirement:: /req/core/modspec
-requirement:: /req/core/edr-conformant
-requirement:: /req/core/parameter-names
 requirement:: /req/core/status-codes
 requirement:: /req/core/links
 requirement:: /req/core/asynchronous

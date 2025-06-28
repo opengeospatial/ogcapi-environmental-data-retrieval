@@ -1,16 +1,9 @@
 == Conformance
 
-Conformance to the ModSpec by a profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> modular standard can be tested by inspection. The test suite is provided in <<annex-A>>.
+Conformance to the OGC API-EDR-Part 3 Standard (this document) by a profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> can be tested by inspection. The test suite is provided in <<annex-A>>.
 
-Part 3: Core of the ModSpec (this document) defines one requirements class and one related conformance class:
-
-* The Core: Requirements for writing Profile Standards for the OGC API-EDR Standard
-
-The OGC API-EDR-Part 3 Standard contains normative language and thus places requirements on conformance, or mechanism for adoption, of candidate standards to which this Standard applies. In particular:
+This Standard contains normative language and thus places requirements on conformance, or mechanism for adoption, of candidate standards to which this Standard applies. In particular:
 
 * <<core-section,OGC API-EDR Requirements Class: Core>> specifies the core requirements which shall be met by all standards claiming conformance to this Standard.
-* <<cls-9,Mapping the ModSpec to types of models>> gives information on how the ModSpec is to be applied to extensions to the core model for requirements and conformance clauses.
 
-Such extensions are defined in additional Parts (volumes) to the ModSpec Standard.
-
-NOTE: I have not decided if cls-9 is necessary for this standard.
+Annex B provides guidance on how to build a profile of an ISO Standard. While not normative, following these practices increases the likelihood that the suite of OGC API-EDR Standards and profiles will form an interoperable whole. 

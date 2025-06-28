@@ -4,7 +4,29 @@
 
 include::../requirements/requirements_class_core.adoc[]
 
+=== Profiling Requirements
+
+Profile is conformant with the ModSpec
+
+include::../requirements/core/REQ_modspec.adoc[]
+
+Implementations of the Profile are conformant with EDR Part 1
+
+include::../requirements/core/REQ_EDR-conformant.adoc[]
+
+A common focus of Profiles is to restrict the values of Path parameters. The Profile should fully define requirements for these restrictions. 
+
+include::../requirements/core/REQ_parameter-names.adoc[]
+
+A Profile must be interoperable with other EDR API data providers. Any valid EDR API document should be valid under the profile. That means:
+
+* If a data element is valid for EDR, then it should not prohibited under the profile
+* Data elements which are not applicable for the profile domain should be permitted but ignored by processing.
+* It is valid for a profile to prohibit the production and population of EDR optional elements by data providers within the profile's domain.
+
 === Platform Resources
+
+OGC API — Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
 
 .Platform Resource Paths
 [width="100%",options="header,footer"]
@@ -16,8 +38,6 @@ include::../requirements/requirements_class_core.adoc[]
 |====================
 
 Where: {root} = Base URI for the API server
-
-OGC API — Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
 
 ==== API Landinding Page 
 
@@ -32,7 +52,7 @@ The landing page provides links that support exploration of the resources offere
 
 The normative JSON Schema for an EDR Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
 
-Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content that Profiles will mandate is defined in the following requirment.
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content that Profiles should mandate is defined in the following requirements.
 
 include::../requirements/core/REQ_root.adoc[]
 
@@ -49,7 +69,7 @@ Every API is required to provide a definition document that describes the capabi
 
 NOTE: At this time only OpenAPI 3.0 and OpenAPI 3.1 documents are supported by OGC Web API Standards.
 
-Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> have additional requirements governing the provision and publication of the API Definition documents.
+Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are required to provide an OpenAPI 3.1 document. This document extends the API definition provided by the OGC API-EDR Standard. These extensions reflect the additional requirements added by the Profile. Implementors of the profile will then build on that document to produce the API definition document for their implementation.
 
 include::../requirements/core/REQ_publishing.adoc[]
 
@@ -281,20 +301,6 @@ Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 include::../requirements/core/REQ_data-query-trajectory.adoc[]
 
 === General Requirements
-
-==== Profiling Requirements
-
-Profile is conformant with the ModSpec
-
-include::../requirements/core/REQ_modspec.adoc[]
-
-Implementations of the Profile are conformant with EDR Part 1
-
-include::../requirements/core/REQ_EDR-conformant.adoc[]
-
-A common focus of Profiles is to restrict the values of Path parameters. The Profile should fully define requirements for these restrictions. 
-
-include::../requirements/core/REQ_parameter-names.adoc[]
 
 ==== Http Status Codes
 

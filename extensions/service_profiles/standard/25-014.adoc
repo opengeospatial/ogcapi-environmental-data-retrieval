@@ -7,7 +7,7 @@
 :draft: 3.0
 :external-id: http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0
 :docnumber: 25-014
-:received-date: 2025-06-07
+:received-date: 2025-06-25
 :issued-date: 2029-03-30
 :published-date: 2029-03-30
 :fullname: Mark Burgoyne
@@ -49,6 +49,8 @@ include::sections/clause_8_media_types.adoc[]
 add or remove annexes after "A" as necessary
 ////
 include::sections/annex-a.adoc[]
+
+include::sections/annex-b.adoc[]
 
 ////
 include::sections/annex-n.adoc[]
