@@ -18,11 +18,11 @@ A common focus of Profiles is to restrict the values of Path parameters. The Pro
 
 include::../requirements/core/REQ_parameter-names.adoc[]
 
-A Profile must be interoperable with "foreign" data providers. Any valid foreign document should be valid under the profile. That means:
+A Profile must be interoperable with other EDR API data providers. Any valid EDR API document should be valid under the profile. That means:
 
 * If a data element is valid for EDR, then it should not prohibited under the profile
-* Data elements which are not applicale for the profile domain should be permitted but ignored by processing.
-* It is valid for a profile to prohibit the production and population of EDR optional elements by data providers within it's domain.
+* Data elements which are not applicable for the profile domain should be permitted but ignored by processing.
+* It is valid for a profile to prohibit the production and population of EDR optional elements by data providers within the profile's domain.
 
 === Platform Resources
 
