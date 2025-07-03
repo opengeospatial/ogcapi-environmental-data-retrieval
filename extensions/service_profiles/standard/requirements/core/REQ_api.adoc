@@ -5,6 +5,6 @@
 [%metadata]
 identifier:: /req/core/api
 
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that an implementation specify the versions of OpenAPI supported.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ specify the versions of OpenAPI that an implementation _SHALL_ support.
 
 ====

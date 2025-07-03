@@ -4,6 +4,9 @@
 [%metadata]
 identifier:: /conf/core/api
 target:: /req/core/api
-test-purpose:: Paraphrase the requirement - Validate that all the parts of a requirement are testable and that Failure to pass any part of a requirement is also a failure to pass the associated conformance test.
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile includes a requirement specifying the OpenAPI versions implementations shall support.
+test-method:: 
+step:: Verify that the profile includes a requirement defining the OpenAPI versions implementations shall support.
+step:: Verify that the profile includes a conformance class testing that OpenAPI versions are supported.
+
 ====

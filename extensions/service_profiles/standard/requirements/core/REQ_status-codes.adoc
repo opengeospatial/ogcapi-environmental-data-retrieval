@@ -7,7 +7,7 @@ identifier:: /req/core/status-codes
 statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that the definitions of all http status codes SHALL be provided.
 part:: These definitions _SHALL_ provide the following:
 
-* A description of the cause of the error.
+* A description of the cause of the response.
 * A JSON schema for the message body structure
 
 ====

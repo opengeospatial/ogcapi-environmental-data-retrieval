@@ -4,6 +4,7 @@
 [%metadata]
 identifier:: /conf/core/output-format
 target:: /req/core/output-format
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile correctly defines output-formats
+test-method:: 
+step:: Verify that the profile contains references to the schemas or format descriptions for all output-formats defined in the data queries requirements
 ====

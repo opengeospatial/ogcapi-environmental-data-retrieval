@@ -4,6 +4,10 @@
 [%metadata]
 identifier:: /conf/core/pubsub
 target:: /req/core/pubsub
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate Pub/Sub requirements
+test-method:: 
+step:: Verify that the profile specifes the OGC API-EDR Part 2 conformance class
+step:: Verify that the profile defines the channels services shall implement.
+step:: Verify that the profile defines the message payloads required for each of the channels in the service.  
+step:: Verify the profile contains an AsyncAPI definition that describes the channels and their messages.
 ====

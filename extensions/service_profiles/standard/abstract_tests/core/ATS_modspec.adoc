@@ -4,6 +4,7 @@
 [%metadata]
 identifier:: /conf/core/modspec
 target:: /req/core/modspec
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile is compliant with the <<ogc-modspec,OGC Modular Specification>>.
+test-method:: 
+step:: Verify that the profile is compliant with the <<ogc-modspec,OGC Modular Specification>>.
 ====

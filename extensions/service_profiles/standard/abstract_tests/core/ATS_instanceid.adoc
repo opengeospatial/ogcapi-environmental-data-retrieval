@@ -4,6 +4,8 @@
 [%metadata]
 identifier:: /conf/core/instanceid
 target:: /req/core/instanceid
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that a profile instanceid id requirement is correctly structured 
+test-method:: 
+step:: Verify that an instance id requirement contains either an identifier string or a Regular expression rule for defining the instance id.
+
 ====

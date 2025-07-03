@@ -4,6 +4,7 @@
 [%metadata]
 identifier:: /conf/core/id
 target:: /req/core/id
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile defines how a collection id should be structured
+test-method:: 
+step:: Verify that the profile contains either an identifier string or a Regular expression rule for defining a collection id.
 ====

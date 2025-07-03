@@ -4,6 +4,18 @@
 [%metadata]
 identifier:: /conf/core/parameter-names
 target:: /req/core/parameter-names
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the parameter_names requirement is correctly defined
+test-method::
+step:: Verify that the parameter_names requirement defines a set of parameter objects
+step:: Verify that each parameter object in the set has a unique key
+step:: Verify that each parameter object in the set has a type value of "Parameter"
+step:: Verify that each parameter object in the set has a description attribute
+step:: Verify that each parameter object in the set has a unit attribute
+step:: Verify that each unit object a label attribute
+step:: Verify that each unit object a symbol attribute
+step:: Verify that each symbol object a value attribute
+step:: Verify that each symbol object a type attribute
+step:: Verify that each parameter object in the set has an observedProperty attribute
+step:: Verify that each observedProperty object has an id attribute
+step:: Verify that each observedProperty object has a label attribute
 ====

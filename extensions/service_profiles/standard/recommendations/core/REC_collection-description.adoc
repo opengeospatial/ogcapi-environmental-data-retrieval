@@ -1,0 +1,11 @@
+[[rec_core_collection-description]]
+
+[recommendation]
+====
+[%metadata]
+identifier:: /rec/core/collection-description
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHOULD_ define how a collection is described:
+part:: A profile _SHOULD_ have a requirement defining the collections `Title`.
+part:: A profile _SHOULD_ have a requirement defining the collections `Description`.
+part:: A profile _SHOULD_ have a requirement defining the collections `Keywords`.
+====

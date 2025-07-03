@@ -4,6 +4,7 @@
 [%metadata]
 identifier:: /conf/core/data-query-instances
 target:: /req/core/data-query-instances
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate than a profile correctly defines support for instances
+test-method:: 
+step:: Verify that the data queries requirement enumerated list includes an entry for `instances`. 
 ====

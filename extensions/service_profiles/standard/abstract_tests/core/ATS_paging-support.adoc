@@ -4,6 +4,9 @@
 [%metadata]
 identifier:: /conf/core/paging-support
 target:: /req/core/paging-support
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that paging support requirements are correctly defined
+test-method::
+step:: Verify that a paging support requirement defines which query types will support output paging
+step:: Verify that a paging support requirement identifies which output formats support paging in paging-capable queries
+step:: Verify that a paging support requirement defines the default number of items to return per page request
 ====

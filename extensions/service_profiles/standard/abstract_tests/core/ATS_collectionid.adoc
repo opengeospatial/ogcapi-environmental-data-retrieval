@@ -4,6 +4,7 @@
 [%metadata]
 identifier:: /conf/core/collectionid
 target:: /req/core/collectionid
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that a collectionid requirement is correctly defined.
+test-method:: 
+step:: Verify that a collectionid requirement specifies either an identifier string or a Regular expression.
 ====
