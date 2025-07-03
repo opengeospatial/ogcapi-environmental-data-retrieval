@@ -6,6 +6,7 @@
 identifier:: /req/core/collectionid
 statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ the valid values of the Collection ID parameter, then:
 part:: The Profile _SHALL_ specify the rules that the Collection ID values must follow.
+part:: Those rules _SHALL_ include a brief description explaining how the Collection ID is generated.
 part:: Those rules _SHALL_ be specified using either:
 * identifier string or
 * Regular expression defining valid string patterns.

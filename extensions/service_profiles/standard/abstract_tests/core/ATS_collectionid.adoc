@@ -6,5 +6,6 @@ identifier:: /conf/core/collectionid
 target:: /req/core/collectionid
 test-purpose:: Validate that a collectionid requirement is correctly defined.
 test-method:: 
+step:: Verify that a collectionid requirement includes an explanation of how a Collection ID is derived.
 step:: Verify that a collectionid requirement specifies either an identifier string or a Regular expression.
 ====
