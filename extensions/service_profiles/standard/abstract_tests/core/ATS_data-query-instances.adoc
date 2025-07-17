@@ -4,7 +4,10 @@
 [%metadata]
 identifier:: /conf/core/data-query-instances
 target:: /req/core/data-query-instances
-test-purpose:: Validate than a profile correctly defines support for instances
+test-purpose:: Validate than a profile correctly defines support for `instances`
 test-method:: 
 step:: Verify that the data queries requirement enumerated list includes an entry for `instances`. 
+step:: Verify that an instance id requirement includes an explanation of how an Instance ID is derived.
+step:: Verify that an instance id requirement contains either an identifier string or a Regular expression rule for defining the instance id.
+
 ====

@@ -4,9 +4,9 @@
 [%metadata]
 identifier:: /conf/core/api
 target:: /req/core/api
-test-purpose:: Validate that the profile includes a requirement specifying the OpenAPI versions implementations shall support.
+test-purpose:: Validate that the profile includes a requirement specifying the OpenAPI versions that implementations shall support.
 test-method:: 
-step:: Verify that the profile includes a requirement defining the OpenAPI versions implementations shall support.
+step:: Verify that the profile includes a requirement defining the OpenAPI versions that implementations shall support.
 step:: Verify that the profile includes a conformance class testing that OpenAPI versions are supported.
 
 ====
