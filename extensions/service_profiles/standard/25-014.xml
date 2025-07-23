@@ -2,7 +2,7 @@
 <ogc-standard xmlns="https://www.metanorma.org/ns/ogc" type="semantic" version="2.5.7" schema-version="v1.3.1">
 <bibdata type="standard">
 <title language="en" format="text/plain">OGC API - Environmental Data Retrieval Standard - Part 3: Profiles</title>
-<uri type="xml">./25-014.xml</uri><uri type="pdf">./25-014.pdf</uri><uri type="doc">./25-014.doc</uri><docidentifier type="ogc-external">http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0</docidentifier><docidentifier type="ogc-internal" primary="true">25-014</docidentifier><docnumber>25-014</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2025-06-25</on></date><contributor><role type="author"/><organization>
+<uri type="xml">./25-014.xml</uri><uri type="pdf">./25-014.pdf</uri><uri type="doc">./25-014.doc</uri><docidentifier type="ogc-external">http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0</docidentifier><docidentifier type="ogc-internal" primary="true">25-014</docidentifier><docnumber>25-014</docnumber><date type="published"><on>2029-03-30</on></date><date type="issued"><on>2029-03-30</on></date><date type="received"><on>2025-07-23</on></date><contributor><role type="author"/><organization>
 <name>UK Met Office</name>
 </organization></contributor><contributor><role type="author"/><organization>
 <name>Heazeltech</name>
@@ -19,7 +19,7 @@
 <p>To achieve this, it is essential that providers use a consistent approach when defining collections and instances of collections. An OGC API-EDR Profile will specify a set of requirements that an EDR API implementation must support to be a compliant implementation.</p>
 </abstract><status><stage>draft</stage></status><copyright><from>2025</from><owner><organization>
 <name>Open Geospatial Consortium</name>
-<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>API</keyword><keyword>openapi</keyword><keyword>html</keyword><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><table id="_misccontainer_anchor_aliases"><tbody><tr><th>req_class_core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core</td></tr><tr><th>_e4f44bb5-1b42-4e14-9b34-8f22a280d44a</th><td>/req/core/modspec</td></tr><tr><th>_1564059c-1212-48f1-aafb-9302b028e6fd</th><td>/req/core/edr-conformant</td></tr><tr><th>_c5f67b65-6555-45df-9f88-aab4861f97ac</th><td>/req/core/parameter-names</td></tr><tr><th>_91a9e08a-110a-406b-896e-395c6261bc34</th><td>/req/core/root</td></tr><tr><th>_ad52544a-bfad-4b15-8fbc-15349dd898a6</th><td>/req/core/root-description</td></tr><tr><th>_b31766e8-3d0a-41cb-8588-6419f81e403b</th><td>/req/core/root-keywords</td></tr><tr><th>_69a14b42-43a0-4568-8cd8-388dabf55fe3</th><td>/req/core/root-provider</td></tr><tr><th>_d939b438-c255-4f0e-bb1b-e23a1256c0b5</th><td>/req/core/root-contact</td></tr><tr><th>_48896257-d5d4-483c-9c08-e96e148f3294</th><td>/req/core/root-links</td></tr><tr><th>_fc6a17db-0479-44e6-b7fd-067ff1730228</th><td>/req/core/publishing</td></tr><tr><th>_f963e3c6-52a8-4917-9927-2001d1e84100</th><td>/req/core/openapi</td></tr><tr><th>_1c8db55a-49b7-456c-8e54-4746bc887063</th><td>/req/core/api</td></tr><tr><th>_623db814-5fe4-479c-86b0-9a9895fea540</th><td>/req/core/requirements-set</td></tr><tr><th>_0f2e1fea-432f-4b4a-baea-674bd9fcd9e5</th><td>/req/core/collectionid</td></tr><tr><th>_2131a78f-a00a-43c6-aa68-1ef754019785</th><td>/req/core/extent</td></tr><tr><th>_867c782f-8845-4adc-b203-625e834ed763</th><td>/req/core/extent-spatial</td></tr><tr><th>_aa82c0d7-5ddd-4ab1-9723-69968263cb5d</th><td>/req/core/extent-temporal</td></tr><tr><th>_7cd04959-a606-42d5-9303-7614a6536c07</th><td>/req/core/extent-vertical</td></tr><tr><th>_e07b4a4a-39ae-4ed3-8828-9957857917db</th><td>/req/core/extent-custom</td></tr><tr><th>_70a4e3ed-8a55-46cf-9f3e-d0d560dad929</th><td>/req/core/data-query</td></tr><tr><th>_3a89c672-afca-4672-af64-585c3d2be592</th><td>/req/core/output-format</td></tr><tr><th>_a6ae2726-6895-49fa-8ded-aa8de7a1db4d</th><td>/req/core/data-query-area</td></tr><tr><th>_c14da505-1dfe-4f99-873f-cdcf01c2c9c2</th><td>/req/core/data-query-corridor</td></tr><tr><th>_b2973364-8612-4dbe-b4db-c320fd0924e9</th><td>/req/core/data-query-cube</td></tr><tr><th>_34b2c558-4f20-4992-9bee-197d2e7b34f5</th><td>/req/core/data-query-instances</td></tr><tr><th>_4a18fac4-adb4-4cb0-853a-9adb3b61ef8f</th><td>/req/core/instanceid</td></tr><tr><th>_7b0f5a8b-feb4-4ff6-b6b5-553ba2440303</th><td>/req/core/paging-support</td></tr><tr><th>_4f427804-199c-426c-ab75-3f4226c30b60</th><td>/req/core/data-query-position</td></tr><tr><th>_29adc964-7423-4caa-b82e-c51845156615</th><td>/req/core/data-query-radius</td></tr><tr><th>_96ee21d4-989b-4176-90de-6e1a26ba1bbf</th><td>/req/core/data-query-trajectory</td></tr><tr><th>_0f37f6b5-113b-4640-be0c-d47e1c517e4e</th><td>/req/core/status-codes</td></tr><tr><th>_76dd5caa-6d76-43b7-89f4-5873d2b0ef68</th><td>/req/core/links</td></tr><tr><th>_0991f7f2-4f2e-4cda-9f62-d583e29aa488</th><td>/req/core/asynchronous</td></tr><tr><th>_79da9756-c785-4e72-b44e-e7c36fd6e562</th><td>/req/core/pubsub</td></tr><tr><th>req_class_core_modspec</th><td>/req/core/modspec</td></tr><tr><th>req_class_core_edr-conformant</th><td>/req/core/edr-conformant</td></tr><tr><th>req_core_parameter-names</th><td>/req/core/parameter-names</td></tr><tr><th>req_core_root</th><td>/req/core/root</td></tr><tr><th>_2f7a316a-d7c4-4a1f-bdeb-2211813a1c9f</th><td>/rec/core/root</td></tr><tr><th>_59b33ce1-e91b-451d-8a36-a11e21dcfa74</th><td>/req/core/root-description</td></tr><tr><th>_0d4133f8-cafb-4051-8de1-7f894818c372</th><td>/req/core/root-keywords</td></tr><tr><th>_a590a2dc-cd51-47b3-b1f9-4e490ba67681</th><td>/req/core/root-provider</td></tr><tr><th>_e5089850-680f-4f21-993f-c0e7db08a966</th><td>/req/core/root-contact</td></tr><tr><th>_030ac2f8-e46f-4e36-a040-9ba251ded4a7</th><td>/req/core/root-links</td></tr><tr><th>_aa748004-36e7-4685-a989-7ce4894bbd9e</th><td>/rec/core/root-links</td></tr><tr><th>req_core_publishing</th><td>/req/core/publishing</td></tr><tr><th>_35263aa7-451b-43b1-b112-e5b22562969b</th><td>/req/core/openapi</td></tr><tr><th>req_core_api</th><td>/req/core/api</td></tr><tr><th>_e29acde6-d450-4789-be58-5d0dc180df46</th><td>/req/core/requirements-set</td></tr><tr><th>req_core_collectionid</th><td>/req/core/collectionid</td></tr><tr><th>req_core_extent</th><td>/req/core/extent</td></tr><tr><th>_3ab46cec-3574-46f8-a817-0c6f59cefae8</th><td>/rec/core/extent</td></tr><tr><th>_9e633dc1-fd9c-4d81-bedb-1208f80eb04a</th><td>/req/core/extent-spatial</td></tr><tr><th>_3a8a9c97-ebdf-4443-a748-47972203a647</th><td>/per/core/extent-spatial</td></tr><tr><th>_12253a18-aa57-4e95-b5f0-41032e40280c</th><td>/req/core/extent-temporal</td></tr><tr><th>_5d9509a0-3e67-436f-9e4f-239450198912</th><td>/rec/core/extent-temporal</td></tr><tr><th>_b2cb054e-a956-4cd8-bee7-34ab94fa4b5a</th><td>/req/core/extent-vertical</td></tr><tr><th>_4f6c8534-4050-4bdb-88da-e7649e565bf9</th><td>/rec/core/extent-vertical</td></tr><tr><th>_d4545b3b-7ef7-467b-a725-2f9b8aad5932</th><td>/req/core/extent-custom</td></tr><tr><th>_3638af84-8291-4037-b409-41decdc54405</th><td>/rec/core/extent-custom</td></tr><tr><th>req_core_data-query</th><td>/req/core/data-query</td></tr><tr><th>req_core_output-format</th><td>/req/core/output-format</td></tr><tr><th>_102584b4-68cc-41ad-a420-43292e5583e1</th><td>/rec/core/output-format</td></tr><tr><th>req_core_data-query-area</th><td>/req/core/data-query-area</td></tr><tr><th>req_core_data-query-corridor</th><td>/req/core/data-query-corridor</td></tr><tr><th>req_core_data-query-cube</th><td>/req/core/data-query-cube</td></tr><tr><th>req_core_data-query-instances</th><td>/req/core/data-query-instances</td></tr><tr><th>req_core_instanceid</th><td>/req/core/instanceid</td></tr><tr><th>req_core_paging-support</th><td>/req/core/paging-support</td></tr><tr><th>req_core-data-query-position</th><td>/req/core/data-query-position</td></tr><tr><th>req_core_data-query-radius</th><td>/req/core/data-query-radius</td></tr><tr><th>req_core_data-query-trajectory</th><td>/req/core/data-query-trajectory</td></tr><tr><th>req_core_status-codes</th><td>/req/core/status-codes</td></tr><tr><th>req_core_links</th><td>/req/core/links</td></tr><tr><th>req_core_asynchronous</th><td>/req/core/asynchronous</td></tr><tr><th>_4ff04504-9106-4934-aefe-edcc3f5da75b</th><td>/per/core/asynchronous</td></tr><tr><th>req_core_pubsub</th><td>/req/core/pubsub</td></tr><tr><th>ats_class-core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/conf/conf-class-core</td></tr><tr><th>_e2046a99-75a7-47ad-aa06-26cacbb6b9f4</th><td>/conf/core/modspec</td></tr><tr><th>_1318c61a-4adf-4321-b7f8-3ec99d2b909a</th><td>/conf/core/publishing</td></tr><tr><th>_7660244e-a2d9-438a-a9ac-cec5d8f9c062</th><td>/conf/core/api</td></tr><tr><th>_405970d1-06f2-4888-9215-934cd9318624</th><td>/conf/core/edr-conformant</td></tr><tr><th>_d76a82ea-5ecc-4e7e-9508-ad8347fe48f3</th><td>/conf/core/root</td></tr><tr><th>_13fd5ff8-7bc1-4627-97cc-e23fc204de79</th><td>/conf/core/requirements-set</td></tr><tr><th>_1ba4dfdf-1e2a-40d6-a47c-a814ba481714</th><td>/conf/core/parameter-names</td></tr><tr><th>_8e9547d6-b82e-4e5b-a497-fe680bb32d03</th><td>/conf/core/collectionid</td></tr><tr><th>_b7335e69-f4b1-4ef4-894c-81ca2c31a373</th><td>/conf/core/extent</td></tr><tr><th>_4707d590-1d55-427d-880b-c28218981289</th><td>/conf/core/instanceid</td></tr><tr><th>_a217966e-136d-4698-ad2f-d873fd3abf7f</th><td>/conf/core/output-format</td></tr><tr><th>_2fb5fc9b-318b-4577-879e-6a6c9ebd1353</th><td>/conf/core/paging-support</td></tr><tr><th>_3c86f331-34c4-49e6-935e-2da6f7a8de17</th><td>/conf/core/status-codes</td></tr><tr><th>_d6c4802c-7c5a-4007-8d6d-507fbc9ca370</th><td>/conf/core/links</td></tr><tr><th>_dc8a2fc4-0b9e-4f9f-9be8-5c6769dc976a</th><td>/conf/core/data-query</td></tr><tr><th>_43e1d714-943d-41cc-8b9d-c712f2044e22</th><td>/conf/core/data-query-area</td></tr><tr><th>_5f7fa3ef-d1cb-420c-b4cb-41dcc8469323</th><td>/conf/core/data-query-corridor</td></tr><tr><th>_f093f60b-1efe-4a5e-8ca2-abe076acb548</th><td>/conf/core/data-query-cube</td></tr><tr><th>_003b8171-6e80-40d7-86f9-ceff3dcc6532</th><td>/conf/core/data-query-instances</td></tr><tr><th>_3b4f4fb8-5bb2-4c67-b940-89fd441c5521</th><td>/conf/core/data-query-position</td></tr><tr><th>_52709b79-06cf-4fd1-88cb-6ec2ab531820</th><td>/conf/core/data-query-radius</td></tr><tr><th>_4ce72596-749f-4b54-b336-b75244ebf0b1</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>_d9ff570a-a996-4355-894c-e903d048b34d</th><td>/conf/core/asynchronous</td></tr><tr><th>_02405f2b-45b9-433e-9f02-e994a68ece74</th><td>/conf/core/pubsub</td></tr><tr><th>ats_modspec</th><td>/conf/core/modspec</td></tr><tr><th>ats_publishing</th><td>/conf/core/publishing</td></tr><tr><th>ats_api</th><td>/conf/core/api</td></tr><tr><th>ats_edr-conformant</th><td>/conf/core/edr-conformant</td></tr><tr><th>ats_root</th><td>/conf/core/root</td></tr><tr><th>ats_requirements-set</th><td>/conf/core/requirements-set</td></tr><tr><th>ats_parameter-names</th><td>/conf/core/parameter-names</td></tr><tr><th>ats_collectionid</th><td>/conf/core/collectionid</td></tr><tr><th>ats_extent</th><td>/conf/core/extent</td></tr><tr><th>ats_instanceid</th><td>/conf/core/instanceid</td></tr><tr><th>ats_output-format</th><td>/conf/core/output-format</td></tr><tr><th>ats_paging-support</th><td>/conf/core/paging-support</td></tr><tr><th>ats_status-codes</th><td>/conf/core/status-codes</td></tr><tr><th>ats_links</th><td>/conf/core/links</td></tr><tr><th>ats_data-query</th><td>/conf/core/data-query</td></tr><tr><th>ats_data-query-area</th><td>/conf/core/data-query-area</td></tr><tr><th>ats_data-query-corridor</th><td>/conf/core/data-query-corridor</td></tr><tr><th>ats_data-query-cube</th><td>/conf/core/data-query-cube</td></tr><tr><th>ats_data-query-instances</th><td>/conf/core/data-query-instances</td></tr><tr><th>ats_data-query-position</th><td>/conf/core/data-query-position</td></tr><tr><th>ats_data-query-radius</th><td>/conf/core/data-query-radius</td></tr><tr><th>ats_data-query-trajectory</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>ats_asynchronous</th><td>/conf/core/asynchronous</td></tr><tr><th>ats_pubsub</th><td>/conf/core/pubsub</td></tr></tbody></table><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
+<abbreviation>OGC</abbreviation></organization></owner></copyright><keyword>ogcdoc</keyword><keyword>OGC document</keyword><keyword>API</keyword><keyword>openapi</keyword><keyword>html</keyword><ext><doctype>standard</doctype><subdoctype>implementation</subdoctype><editorialgroup><committee>technical</committee></editorialgroup></ext></bibdata><metanorma-extension><table id="_misccontainer_anchor_aliases"><tbody><tr><th>req_class_core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core</td></tr><tr><th>_884809a0-41a1-4b98-b83f-d6be8d5c256e</th><td>/req/core/modspec</td></tr><tr><th>_25df936b-467c-465b-b7c6-c981fc269164</th><td>/req/core/edr-conformant</td></tr><tr><th>_a3438b20-7941-4ec0-b40b-5d27fde6b586</th><td>/req/core/parameter-names</td></tr><tr><th>_b7930177-2bed-45e0-8a73-c3c45694fe60</th><td>/req/core/root</td></tr><tr><th>_1d1e79d1-549a-4b12-b4ba-353bb6f277f9</th><td>/req/core/root-description</td></tr><tr><th>_73a09c5c-bce4-4fbc-9e07-ea0298e46659</th><td>/req/core/root-keywords</td></tr><tr><th>_25003048-c320-4af2-9c9f-5a08eb3614ec</th><td>/req/core/root-provider</td></tr><tr><th>_8f05d86e-25bb-4001-8756-b5c1c3ee94d3</th><td>/req/core/root-contact</td></tr><tr><th>_6a3094f5-cec8-4abd-afa1-c7ab38bf8823</th><td>/req/core/root-links</td></tr><tr><th>_3a4377f0-5884-40e3-977d-23afa99bf064</th><td>/req/core/publishing</td></tr><tr><th>_0f4e42d2-b21b-4667-ac6c-b7dc0cbdce92</th><td>/req/core/openapi</td></tr><tr><th>_1bfdd8d9-bcb4-47a5-a6fc-edbc278bb631</th><td>/req/core/api</td></tr><tr><th>_ffdcb6cf-4add-4de5-b23b-f101fc4483f7</th><td>/req/core/requirements-set</td></tr><tr><th>_29f03cbf-2547-4b3a-bbdf-641ca61e2c95</th><td>/req/core/collectionid</td></tr><tr><th>_ec24e772-2115-41a4-bf26-630100258dc7</th><td>/req/core/extent</td></tr><tr><th>_47dc49eb-cea5-4278-ae79-a19c5a7812e5</th><td>/req/core/extent-spatial</td></tr><tr><th>_7927fe8e-2ca3-4da0-bfe4-1ea21488304b</th><td>/req/core/extent-temporal</td></tr><tr><th>_78c42f41-4676-4bff-b276-f4e31b482229</th><td>/req/core/extent-vertical</td></tr><tr><th>_a0e80437-4ea7-4816-a18a-e7db05d34298</th><td>/req/core/extent-custom</td></tr><tr><th>_e1ca69c6-c83c-45bc-a78b-a6b73425ae73</th><td>/req/core/data-query</td></tr><tr><th>_723560ae-1e6d-4107-9c51-72e895fe264d</th><td>/req/core/output-format</td></tr><tr><th>_717538cb-a4bf-476c-b3ce-e279a985fb09</th><td>/req/core/data-query-area</td></tr><tr><th>_663549c1-8636-4255-ad51-b5e544cd4b6d</th><td>/req/core/data-query-corridor</td></tr><tr><th>_236f62b0-14b5-42a4-b247-a55798f76b9d</th><td>/req/core/data-query-cube</td></tr><tr><th>_1a3379a5-7e8f-4c81-96fe-39a5e747bb61</th><td>/req/core/data-query-instances</td></tr><tr><th>_0b846263-1b4f-4451-901d-022d537e81ae</th><td>/req/core/instanceid</td></tr><tr><th>_50e6cbde-ae33-4151-92ef-6fdf4d7da4c2</th><td>/req/core/paging-support</td></tr><tr><th>_a8d052e0-3b3a-4796-892c-0c70705f1072</th><td>/req/core/data-query-position</td></tr><tr><th>_2094b9b6-3baa-4253-99a9-14bfaaeeea92</th><td>/req/core/data-query-radius</td></tr><tr><th>_d996f0b0-9bb4-4c56-8317-2aa3359e2129</th><td>/req/core/data-query-trajectory</td></tr><tr><th>_6dee8c83-be06-4167-9373-843a3e39eefc</th><td>/req/core/status-codes</td></tr><tr><th>_206e9553-fc34-4587-bf8b-7f55e46ea323</th><td>/req/core/links</td></tr><tr><th>_d82af42b-e28f-4b45-8674-b0b934c0f1bf</th><td>/req/core/asynchronous</td></tr><tr><th>_89f18245-416b-489a-92fc-c89e74b5805c</th><td>/req/core/pubsub</td></tr><tr><th>req_class_core_modspec</th><td>/req/core/modspec</td></tr><tr><th>req_class_core_edr-conformant</th><td>/req/core/edr-conformant</td></tr><tr><th>req_core_parameter-names</th><td>/req/core/parameter-names</td></tr><tr><th>req_core_root</th><td>/req/core/root</td></tr><tr><th>_5c024894-04d7-4543-b92a-f0fe6d11cd1e</th><td>/rec/core/root</td></tr><tr><th>_34556a36-f6db-4f57-b5b7-99f278034ab2</th><td>/req/core/root-description</td></tr><tr><th>_3c8a26d1-126f-41cc-a7ba-a0612e026443</th><td>/req/core/root-keywords</td></tr><tr><th>_ee0aabfb-4541-4e7b-8fe4-062efb90bbfb</th><td>/req/core/root-provider</td></tr><tr><th>_c953eb20-f36b-4e5b-b8da-cbbc941f5b08</th><td>/req/core/root-contact</td></tr><tr><th>_d9bceea7-b3c2-4478-93e4-901b95780e05</th><td>/req/core/root-links</td></tr><tr><th>_6a167dc7-a2f2-4814-8abc-d237f7e5e93d</th><td>/rec/core/root-links</td></tr><tr><th>req_core_publishing</th><td>/req/core/publishing</td></tr><tr><th>_5a08b506-8744-4e20-9854-a94ce9874fb2</th><td>/req/core/openapi</td></tr><tr><th>req_core_api</th><td>/req/core/api</td></tr><tr><th>_eb89e9b6-bd92-4d82-9edd-c0ccc2002ca1</th><td>/req/core/requirements-set</td></tr><tr><th>req_core_collectionid</th><td>/req/core/collectionid</td></tr><tr><th>req_core_extent</th><td>/req/core/extent</td></tr><tr><th>_0fe9fb8f-30b1-4922-9fb7-8ea47ff7de20</th><td>/rec/core/extent</td></tr><tr><th>_c23d9329-d159-4ef7-a47e-dd34dbc43379</th><td>/req/core/extent-spatial</td></tr><tr><th>_5e32c68d-2a59-443f-b8b2-258e815d16eb</th><td>/per/core/extent-spatial</td></tr><tr><th>_ca46ad16-ed5b-4b22-af0d-c4ebcc3ce4d1</th><td>/req/core/extent-temporal</td></tr><tr><th>_144cba66-0ab6-4d78-b759-14f8762e6283</th><td>/rec/core/extent-temporal</td></tr><tr><th>_2bf68f08-dbd8-4cca-b95f-da58afc82f59</th><td>/req/core/extent-vertical</td></tr><tr><th>_b1b37c5b-f298-4d85-9465-e64703a6e02d</th><td>/rec/core/extent-vertical</td></tr><tr><th>_7718dbcc-3f2f-448c-a734-ff547c5ac943</th><td>/req/core/extent-custom</td></tr><tr><th>_74e34977-06cc-43bb-a3ff-4a8f586bf639</th><td>/rec/core/extent-custom</td></tr><tr><th>req_core_data-query</th><td>/req/core/data-query</td></tr><tr><th>req_core_output-format</th><td>/req/core/output-format</td></tr><tr><th>_f2709d38-2db5-4afe-aa47-549366733b21</th><td>/rec/core/output-format</td></tr><tr><th>req_core_data-query-area</th><td>/req/core/data-query-area</td></tr><tr><th>req_core_data-query-corridor</th><td>/req/core/data-query-corridor</td></tr><tr><th>req_core_data-query-cube</th><td>/req/core/data-query-cube</td></tr><tr><th>req_core_data-query-instances</th><td>/req/core/data-query-instances</td></tr><tr><th>req_core_paging-support</th><td>/req/core/paging-support</td></tr><tr><th>req_core-data-query-position</th><td>/req/core/data-query-position</td></tr><tr><th>req_core_data-query-radius</th><td>/req/core/data-query-radius</td></tr><tr><th>req_core_data-query-trajectory</th><td>/req/core/data-query-trajectory</td></tr><tr><th>req_core_status-codes</th><td>/req/core/status-codes</td></tr><tr><th>req_core_links</th><td>/req/core/links</td></tr><tr><th>req_core_asynchronous</th><td>/req/core/asynchronous</td></tr><tr><th>_6b7722f8-dbcf-4902-8fd7-be611c2a8487</th><td>/per/core/asynchronous</td></tr><tr><th>req_core_pubsub</th><td>/req/core/pubsub</td></tr><tr><th>ats_class-core</th><td>http://www.opengis.net/spec/ogcapi-edr-3/1.0/conf/conf-class-core</td></tr><tr><th>_420cde46-18cf-4ef1-b70a-61c44d6b6777</th><td>/conf/core/modspec</td></tr><tr><th>_cb569638-a7d5-4b92-8991-bf263f60576c</th><td>/conf/core/publishing</td></tr><tr><th>_43c82a2d-09be-4ec3-ab66-5343d4a11ae7</th><td>/conf/core/api</td></tr><tr><th>_79e47204-d22e-49d9-a95b-02d2dbbe24a4</th><td>/conf/core/edr-conformant</td></tr><tr><th>_2c419eae-7014-48e0-a10c-b25c7bcf893c</th><td>/conf/core/root</td></tr><tr><th>_337f8305-9411-4a5b-9e54-3cf43ffb0e12</th><td>/conf/core/requirements-set</td></tr><tr><th>_96507894-a5fd-4811-a6f1-6891824ff83e</th><td>/conf/core/parameter-names</td></tr><tr><th>_920d1135-5617-4c7e-b309-9a34286ddb5e</th><td>/conf/core/collectionid</td></tr><tr><th>_9fd34823-8871-47f3-8ca3-c106cb5b39ca</th><td>/conf/core/extent</td></tr><tr><th>_9d073b49-34ca-4b72-b8bc-23d1a236de54</th><td>/conf/core/instanceid</td></tr><tr><th>_48f06297-105e-452f-b5b5-8f9beeb90001</th><td>/conf/core/output-format</td></tr><tr><th>_3db8376d-f8f9-472f-94a4-ea36798005c2</th><td>/conf/core/paging-support</td></tr><tr><th>_29c57f4c-965b-417d-baf7-6aa18a2c23e7</th><td>/conf/core/status-codes</td></tr><tr><th>_18ff3e4b-ac77-4bcd-b64a-fbdb2e062523</th><td>/conf/core/links</td></tr><tr><th>_6376cbe0-7408-40d4-bbde-e702eca961b3</th><td>/conf/core/data-query</td></tr><tr><th>_7fc96610-49b5-46c9-b486-56a33c0e40d0</th><td>/conf/core/data-query-area</td></tr><tr><th>_44cd500f-5fc8-485a-8591-890519bf6ddf</th><td>/conf/core/data-query-corridor</td></tr><tr><th>_0f698925-81cd-4cb2-a926-a3e3d709f74d</th><td>/conf/core/data-query-cube</td></tr><tr><th>_d0f919e5-02a0-499c-b3eb-a2d6874f9ea0</th><td>/conf/core/data-query-instances</td></tr><tr><th>_965a37f3-5bbf-4f26-8abf-06f3f5e98f10</th><td>/conf/core/data-query-position</td></tr><tr><th>_321587bd-f87e-43d5-b3ac-21d5b509367e</th><td>/conf/core/data-query-radius</td></tr><tr><th>_fc2afd7f-8c0a-46a2-877e-9c645616a6ae</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>_c7c86fdd-5caf-405f-9866-a7c2f112adb2</th><td>/conf/core/asynchronous</td></tr><tr><th>_c5a19bb9-cc33-4ea6-bca7-e1a5891f5fcd</th><td>/conf/core/pubsub</td></tr><tr><th>ats_modspec</th><td>/conf/core/modspec</td></tr><tr><th>ats_publishing</th><td>/conf/core/publishing</td></tr><tr><th>ats_api</th><td>/conf/core/api</td></tr><tr><th>ats_edr-conformant</th><td>/conf/core/edr-conformant</td></tr><tr><th>ats_root</th><td>/conf/core/root</td></tr><tr><th>ats_requirements-set</th><td>/conf/core/requirements-set</td></tr><tr><th>ats_parameter-names</th><td>/conf/core/parameter-names</td></tr><tr><th>ats_collectionid</th><td>/conf/core/collectionid</td></tr><tr><th>ats_extent</th><td>/conf/core/extent</td></tr><tr><th>ats_output-format</th><td>/conf/core/output-format</td></tr><tr><th>ats_paging-support</th><td>/conf/core/paging-support</td></tr><tr><th>ats_status-codes</th><td>/conf/core/status-codes</td></tr><tr><th>ats_links</th><td>/conf/core/links</td></tr><tr><th>ats_data-query</th><td>/conf/core/data-query</td></tr><tr><th>ats_data-query-area</th><td>/conf/core/data-query-area</td></tr><tr><th>ats_data-query-corridor</th><td>/conf/core/data-query-corridor</td></tr><tr><th>ats_data-query-cube</th><td>/conf/core/data-query-cube</td></tr><tr><th>ats_data-query-instances</th><td>/conf/core/data-query-instances</td></tr><tr><th>ats_data-query-position</th><td>/conf/core/data-query-position</td></tr><tr><th>ats_data-query-radius</th><td>/conf/core/data-query-radius</td></tr><tr><th>ats_data-query-trajectory</th><td>/conf/core/data-query-trajectory</td></tr><tr><th>ats_asynchronous</th><td>/conf/core/asynchronous</td></tr><tr><th>ats_pubsub</th><td>/conf/core/pubsub</td></tr></tbody></table><presentation-metadata><name>TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>HTML TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>DOC TOC Heading Levels</name><value>2</value></presentation-metadata><presentation-metadata><name>PDF TOC Heading Levels</name><value>2</value></presentation-metadata></metanorma-extension>
 <boilerplate><copyright-statement>
 
 <clause id="_copyright_notice" obligation="normative">
@@ -132,7 +132,7 @@ To obtain additional rights of use, visit
 </li>
 </ul>
 
-<p id="_f954e111-6cdc-c91c-7f6a-aaf904a63144">Annex B provides guidance on how to build a profile of an ISO Standard. While not normative, following these practices increases the likelyhood that the suite of OGC API-EDR Standards and profiles will form an interoperable whole.</p>
+<p id="_eb96d090-204c-bf74-57e9-ebebe7d898af">Annex B provides guidance on how to build a profile of an ISO Standard. While not normative, following these practices increases the likelihood that the suite of OGC API-EDR Standards and profiles will form an interoperable whole.</p>
 </clause>
 
 
@@ -436,13 +436,13 @@ To obtain additional rights of use, visit
 
 </requirement>
 
-<p id="_7a805632-f8e3-d512-b687-c8b6e0bc472b">A Profile must be interoperable with “foreign” data providers. Any valid foreign document should be valid under the profile. That means:</p>
+<p id="_1645f1ac-99a5-3238-98ae-b8ae7b7217f9">A Profile must be interoperable with other EDR API data providers. Any valid EDR API document should be valid under the profile. That means:</p>
 
-<ul id="_a01b0b72-78b9-12be-35e3-fd91c52d6ace"><li><p id="_fe2f35ba-462c-9c03-a1c7-8e1655bde538">If a data element is valid for EDR, then it should not prohibited under the profile</p>
+<ul id="_8d2fd54e-8d40-3e68-271e-25b2799c5db7"><li><p id="_fe2f35ba-462c-9c03-a1c7-8e1655bde538">If a data element is valid for EDR, then it should not prohibited under the profile</p>
 </li>
-<li><p id="_db83e1c4-e29b-7095-8a8c-43d051871a63">Data elements which are not applicale for the profile domain should be permitted but ignored by processing.</p>
+<li><p id="_79387292-94e3-9122-d54b-eee89b2ce4f2">Data elements which are not applicable for the profile domain should be permitted but ignored by processing.</p>
 </li>
-<li><p id="_0cd96492-5d29-d7ce-9c6b-da9e0fa9f87c">It is valid for a profile to prohibit the production and population of EDR optional elements by data providers within it’s domain.</p>
+<li><p id="_59d58bc6-b82e-c894-29c1-4f9720ffc2b4">It is valid for a profile to prohibit the production and population of EDR optional elements by data providers within the profile’s domain.</p>
 </li>
 </ul>
 </clause>
@@ -585,7 +585,7 @@ To obtain additional rights of use, visit
 
 <p id="_23fff5fa-09dc-20dd-eb0e-ced8668385d9">Profiles of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> have additional requirements governing which Conformance Classes and identifiers must be included in this resource.</p>
 
-<requirement id="req_core_api" model="ogc"> <identifier>/req/core/api</identifier><description><p id="_84ce927b-7b0e-ca8f-fd99-4d62bc76d979">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that an implementation specify the versions of OpenAPI supported.</p>
+<requirement id="req_core_api" model="ogc"> <identifier>/req/core/api</identifier><description><p id="_4e333be5-4d7b-74a7-0f0b-1171c76ce693">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> specify the versions of OpenAPI that an implementation <em>SHALL</em> support.</p>
 </description>
 </requirement>
 
@@ -679,10 +679,11 @@ To obtain additional rights of use, visit
 <title>Collection ID parameter restictions</title>
 <requirement id="req_core_collectionid" model="ogc"> <identifier>/req/core/collectionid</identifier><description><p id="_6b24ffe3-dd34-0d44-a691-cb791bd67d93">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values of the Collection ID parameter, then:</p>
 </description><component class="part"><p id="_5af4d458-61f3-fe02-361e-d55e7bd48241">The Profile <em>SHALL</em> specify the rules that the Collection ID values must follow.</p>
-</component><component class="part"><p id="_5b251327-4821-5dbe-d5b7-511596d05521">Those rules <em>SHALL</em> be specified using either:</p>
-<ul id="_378dc244-e1cf-f1c6-8dbb-dd14174bb1d9"><li><p id="_e64dc038-4598-afed-0087-859e1ef6d9b3">identifier string or</p>
+</component><component class="part"><p id="_032b1c0a-3574-5ebc-8d3d-8574bfecddbc">Those rules <em>SHALL</em> include a brief description explaining how the Collection ID is generated.</p>
+</component><component class="part"><p id="_3b3a4b15-2a79-b436-bb44-e6caab6df66b">Those rules <em>SHALL</em> be specified using either:</p>
+<ul id="_4a42390f-9cbb-b415-b407-e60d274761d9"><li><p id="_37d705c9-5aaf-7658-0a9c-e766483335a6">identifier string or</p>
 </li>
-<li><p id="_c05b385c-1d6e-0f31-7e82-3a39c75a542f">Regular expression defining valid string patterns.</p>
+<li><p id="_401c7b53-b899-b87d-b4b6-2455da722041">Regular expression defining valid string patterns.</p>
 </li>
 </ul>
 </component>
@@ -834,7 +835,7 @@ To obtain additional rights of use, visit
 </li>
 <li><p id="_62bea3c8-2410-e624-e842-71e27590cdc7">XML – Link to a XML Schema definition</p>
 </li>
-<li><p id="_914f88a9-767d-0940-2458-09dd74140af5">CSV, TSV, PSV, SSV – Link to a definition based on the CSV on the web recommendations available from the <link target="https://www.w3.org/2013/csvw/wiki/Main_Page.html">CSV on the Web Working Group</link>.</p>
+<li><p id="_914f88a9-767d-0940-2458-09dd74140af5">CSV, TSV, PSV, SSV – Link to a definition based on the CSV on the web recommendations available from the <link target="https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/">CSV on the Web Working Group</link>.</p>
 </li>
 <li><p id="_30842e22-8e96-c9d1-d30d-8444ccaaa78f">Other types (e.g. binary file types) – Link to a description of the format</p>
 </li>
@@ -945,30 +946,20 @@ To obtain additional rights of use, visit
 <requirement id="req_core_data-query-instances" model="ogc"> <identifier>/req/core/data-query-instances</identifier><description><p id="_76e46fa2-e42e-4757-35a4-2e55d77bf705">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>extends</em> data queries by making the Instances within a Collection queryable, then:</p>
 </description><component class="part"><p id="_74ca24cf-4b3f-bbc7-4874-e720511b82aa">Instances <em>SHALL</em> be defined in the data_queries enumerated list.</p>
 </component><component class="part"><p id="_c6aab0ce-78a0-58c4-cef7-347830cc2d4c">A <em>NULL</em> value <em>SHALL</em> be used to indicate that no child instances can be queried.</p>
-</component>
-</requirement>
-
-<clause id="_parameter_instanceid" obligation="normative">
-<title>Parameter instanceId</title>
-<p id="_a061f958-336c-6587-8fa4-ca1db94a96ea">Path — Instance {root}/collections/{collectionId}/instances/{instanceId}</p>
-
-<p id="_03c057d5-b4d4-10d8-67c3-7d979b82ebfc">Instance ID restrictions</p>
-
-<requirement id="req_core_instanceid" model="ogc"> <identifier>/req/core/instanceid</identifier><description><p id="_105b2923-19dc-4e1f-fb18-cd41c97ccd41">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> the valid values of the Instance ID parameter, then:</p>
-</description><component class="part"><p id="_3a79426d-4fd8-ae8c-97cf-f2cc94931a46">The Profile <em>SHALL</em> specify the rules that the Instance ID values must follow.</p>
-</component><component class="part"><p id="_0fa7fb74-029c-655d-06e6-c21f59f53394">Those rules <em>SHALL</em> be specified using either:</p>
-<ul id="_7e395b4b-9a6b-f11e-37fb-b1e1942f1142"><li><p id="_2e4048a7-9869-5c13-d186-16963e1f55ef">identifier string</p>
+</component><component class="part"><p id="_dd518035-d4f7-d54f-cfeb-642738046b88">The Profile <em>SHALL</em> specify the rules that the Instance ID values must follow.</p>
+</component><component class="part"><p id="_cb6721aa-b50a-5476-29bb-d6a22331ee62">Those rules <em>SHALL</em> include a brief description explaining how the Instance ID is generated.</p>
+</component><component class="part"><p id="_e8c0428a-bcb8-9917-8776-ab09774f5de3">Those rules <em>SHALL</em> be specified using either:</p>
+<ul id="_164a992f-8c97-d06b-311e-dfc995d46873"><li><p id="_71e75756-12f3-434d-7d74-f9e4ca803a58">identifier string</p>
 </li>
-<li><p id="_25b919b5-0c2e-a810-d35e-59b7bccb3fb4">Regular expression defining valid string patterns.</p>
+<li><p id="_dde6b1d5-b83d-9b93-e001-2ade07a23221">Regular expression defining valid string patterns.</p>
 </li>
 </ul>
 </component>
 </requirement>
-</clause>
 
 <clause id="_parameter_querytype" obligation="normative">
 <title>Parameter queryType</title>
-<p id="_05125f0d-8265-fe8c-9c12-da7790a9e777">Path —  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}</p>
+<p id="_1829496a-a148-1511-fd5c-f261e07de101">Path —  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}</p>
 </clause>
 </clause>
 
@@ -1093,7 +1084,7 @@ To obtain additional rights of use, visit
 
 <requirement id="req_core_status-codes" model="ogc"> <identifier>/req/core/status-codes</identifier><description><p id="_d4c4b857-e645-e865-ac5a-42d28bf5b4c4">A Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>SHALL</em> require that the definitions of all http status codes SHALL be provided.</p>
 </description><component class="part"><p id="_524d1ed0-441d-b8ba-0c75-a6eb016b1ade">These definitions <em>SHALL</em> provide the following:</p>
-<ul id="_fde71f3a-e2eb-a6a6-b997-1922f4b515d5"><li><p id="_a5f48850-57d6-3764-427b-b4ade30c93c6">A description of the cause of the error.</p>
+<ul id="_aa2d2a86-a7fd-5d61-94d0-27cde7cd4b07"><li><p id="_4cbe5d9b-7b83-f917-fb0c-28abe5d5833e">A description of the cause of the response.</p>
 </li>
 <li><p id="_c71ef732-99bf-fc71-084b-56cfd5c2eb7a">A JSON schema for the message body structure</p>
 </li>
@@ -1110,7 +1101,7 @@ To obtain additional rights of use, visit
 
 <requirement id="req_core_links" model="ogc"> <identifier>/req/core/links</identifier><description><p id="_ed887575-22cf-2e5a-fdf4-7883efc5d10a">If a Profile of the <eref type="inline" bibitemid="ogc-edr" citeas="OGC 19-086r4">OGC API — Environmental Data Retrieval Standard</eref> <em>restricts</em> valid responses to only those which include links, then:</p>
 </description><component class="part"><p id="_05da624f-460f-f1a0-b8ba-99492b41016a">The Profile <em>SHALL</em> require that link objects are included in a response.</p>
-</component><component class="part"><p id="_34038e3f-6495-36bc-b214-a8460c12c439">The link objects <em>SHALL</em> defined the required link objects in full.</p>
+</component><component class="part"><p id="_1af61491-5354-8fe7-6d8f-90bdfc7961e6">The Profile <em>SHALL</em> define the required link objects in full.</p>
 </component><component class="part"><p id="_6ad4c02b-2cc4-a5e8-f9fa-608b201dcc67">The link objects <em>SHALL</em> require that the <tt>href</tt>, <tt>rel</tt> and <tt>type</tt> attributes are populated.</p>
 </component>
 
@@ -1175,31 +1166,46 @@ To obtain additional rights of use, visit
 
 </requirement>
 
-<requirement id="ats_modspec" model="ogc" type="abstracttest"> <identifier>/conf/core/modspec</identifier><classification><tag>target</tag><value>/req/core/modspec</value></classification><component class="test-purpose"><p id="_d1ef98f7-f932-3f62-5547-5c2e9f8d29db">TBD</p>
-</component><component class="test-method"><p id="_c336ec25-6061-4a00-e84d-628b84e30db9">Inspect the document to verify the above.</p>
+<requirement id="ats_modspec" model="ogc" type="abstracttest"> <identifier>/conf/core/modspec</identifier><classification><tag>target</tag><value>/req/core/modspec</value></classification><component class="test-purpose"><p id="_b76dc53a-9647-dcb5-313c-4c579427bf43">Validate that the profile is compliant with the <eref type="inline" bibitemid="ogc-modspec" citeas="OGC 08-131r3">OGC Modular Specification</eref>.</p>
+</component><component class="test-method"/><component class="step"><p id="_af37fcfd-05c9-375e-204b-02b6c67f0b60">Verify that the profile is compliant with the <eref type="inline" bibitemid="ogc-modspec" citeas="OGC 08-131r3">OGC Modular Specification</eref>.</p>
 </component>
 </requirement>
 
-<requirement id="ats_publishing" model="ogc" type="abstracttest"> <identifier>/conf/core/publishing</identifier><classification><tag>target</tag><value>/req/core/publishing</value></classification><component class="test-purpose"><p id="_00796656-1eda-1100-00c9-d447083826b6">TBD</p>
-</component><component class="test-method"><p id="_e8ddcea0-ff03-b57e-836c-8b04aeae1297">Inspect the document to verify the above.</p>
+<requirement id="ats_publishing" model="ogc" type="abstracttest"> <identifier>/conf/core/publishing</identifier><classification><tag>target</tag><value>/req/core/publishing</value></classification><component class="test-purpose"><p id="_72f39354-916f-0141-25b8-25768827f478">Validate that an OpenAPI description of the profile is available</p>
+</component><component class="test-method"/><component class="step"><p id="_6bc8cf31-5269-5dd6-15af-1d68fcad36be">Verify that an OpenAPI document describing the profile exists</p>
+</component><component class="step"><p id="_2e164df6-d77a-302a-a7d1-47c9cf32d54e">Verify that the OpenAPI document is compliant with the OpenAPI 3.1 specification</p>
+</component><component class="step"><p id="_6aa7b2da-befc-23aa-992e-dfe9a21b2285">Verify that the OpenAPI document includes schemas for the Collection and Instance query responses</p>
+</component><component class="step"><p id="_eb5862f1-1150-09d0-bda2-58ad71223c89">Verify that the Collection and Instance schemas include all of the queries defined in the  <xref target="req_core_data-query">data-query</xref> requirement</p>
+</component><component class="step"><p id="_4d9b7d7b-3889-c61e-2820-50549ab4d3b1">Verify that the Collection and Instance schema include Path objects for each of the data_queries defined in the profile.</p>
+</component><component class="step"><p id="_88d483dc-6366-d6e5-ce88-db5e6c3430aa">Verify that the Path Object define Items for the HTTP operations defined by the data query requirements in the profile</p>
+</component><component class="step"><p id="_f08101a6-799b-c221-25de-bd28c29e3657">Verify that the Path Item definitions include the enumerated lists defined by the data query requirements in the profile</p>
 </component>
 </requirement>
 
-<requirement id="ats_api" model="ogc" type="abstracttest"> <identifier>/conf/core/api</identifier><classification><tag>target</tag><value>/req/core/api</value></classification><component class="test-purpose"><p id="_2392beee-bb40-6cae-3ab7-818d857c48cc">Paraphrase the requirement — Validate that all the parts of a requirement are testable and that Failure to pass any part of a requirement is also a failure to pass the associated conformance test.</p>
-</component><component class="test-method"><p id="_d5ba1f8a-fc3d-3b4e-2eba-0ee9d450da9e">Inspect the document to verify the above.</p>
+<requirement id="ats_api" model="ogc" type="abstracttest"> <identifier>/conf/core/api</identifier><classification><tag>target</tag><value>/req/core/api</value></classification><component class="test-purpose"><p id="_d008f7cc-ca52-d122-ec81-5f886c69facd">Validate that the profile includes a requirement specifying the OpenAPI versions that implementations shall support.</p>
+</component><component class="test-method"/><component class="step"><p id="_5d4be8ac-40ad-40c9-eb81-c636dcef76b2">Verify that the profile includes a requirement defining the OpenAPI versions that implementations shall support.</p>
+</component><component class="step"><p id="_3e4c897b-23cf-0e8d-8aec-8ff035c2908a">Verify that the profile includes a conformance class testing that OpenAPI versions are supported.</p>
 </component>
 </requirement>
 
 <requirement id="ats_edr-conformant" model="ogc" type="abstracttest"> <identifier>/conf/core/edr-conformant</identifier><classification><tag>target</tag><value>/req/core/edr-conformant</value></classification><component class="test-purpose"><p id="_8b7c5f8a-43d8-93f7-4932-bb47ad7fd180">Validate that the Profile Standard requires that all implementations demonstrate conformance with the OGC API-EDR Standard.</p>
-</component><component class="test-method"><p id="_fd7117af-8148-47b0-184f-630609582ae0">Inspect the document to verify the above.</p>
+</component><component class="test-method"/><component class="step"><p id="_b5c381df-eeef-cabb-1074-ef8719ea16ed">Verify that the profile specifies that regardless of any profile specifc requirements, implementations shall function as OGC API-EDR Part 1 — Core compliant API’s.</p>
 </component>
 </requirement>
 
 <note id="_bbd26e31-1f26-71af-ef1a-1c9ec5169be8"><p id="_a9078308-b202-f487-5291-1b8743f05871">this “purpose” requires more specificity.</p>
 </note>
 
-<requirement id="ats_root" model="ogc" type="abstracttest"> <identifier>/conf/core/root</identifier><classification><tag>target</tag><value>/req/core/root</value></classification><component class="test-purpose"><p id="_5c655cfe-07c5-9987-c33e-4bf054c88534">TBD</p>
-</component><component class="test-method"><p id="_13bcda2b-060e-2828-6709-fa2869fcdc7d">Inspect the document to verify the above.</p>
+<requirement id="ats_root" model="ogc" type="abstracttest"> <identifier>/conf/core/root</identifier><classification><tag>target</tag><value>/req/core/root</value></classification><component class="test-purpose"><p id="_d1d25bd0-efc1-b9d8-2c62-3446f88310f4">Validate that the profile defines the service landing page</p>
+</component><component class="test-method"/><component class="step"><p id="_aff15349-70b6-b9ac-3aa0-ec0411693246">Verify that the profile defines a <tt>Title</tt> for the service</p>
+</component><component class="step"><p id="_884e6272-df81-1a7a-5502-258a3dbafde7">Verify that the profile defines the <tt>Links</tt> required for the service</p>
+</component><component class="step"><p id="_9e3c3940-69a2-3e39-1680-12b600bad258">Verify that each link defined for the service has a <tt>href</tt> and <tt>rel</tt> attribute.</p>
+</component><component class="step"><p id="_3b803416-a28d-211f-bbb9-05f8275eb030">Verify that any <tt>Description</tt> attributes in the profile have a defined value.</p>
+</component><component class="step"><p id="_0bfbaed0-531b-ff9c-0edd-3db2798cecfc">Verify that any <tt>Keywords</tt> attributes in the profile have defined values.</p>
+</component><component class="step"><p id="_f53e3780-e362-d2a5-b0b4-bbe048dbefc8">Verify that any <tt>Provider</tt> attributes in the profile have <tt>name</tt> and <tt>url</tt> attributes.</p>
+</component><component class="step"><p id="_b6a54b21-070f-0ec8-eb8d-f6bef2b5a0dc">Verify that the providers <tt>name</tt> and <tt>url</tt> attributes have defined values.</p>
+</component><component class="step"><p id="_4f46d2fe-193a-5a5c-d059-feba29416ee2">Verify that any <tt>Contact</tt> attributes in the profile have an <tt>email</tt> attributes.</p>
+</component><component class="step"><p id="_3529f7ff-680c-9ea1-f05d-c34a6ce35f9a">Verify that contact <tt>email</tt> attributes has a defined value.</p>
 </component>
 </requirement>
 
@@ -1208,93 +1214,143 @@ To obtain additional rights of use, visit
 </component>
 </requirement>
 
-<requirement id="ats_parameter-names" model="ogc" type="abstracttest"> <identifier>/conf/core/parameter-names</identifier><classification><tag>target</tag><value>/req/core/parameter-names</value></classification><component class="test-purpose"><p id="_fd9208a4-01fe-7355-1feb-3fcb494ffc62">TBD</p>
-</component><component class="test-method"><p id="_cadcd9fc-fe88-af1f-2c0e-cc8832e84b93">Inspect the document to verify the above.</p>
+<requirement id="ats_parameter-names" model="ogc" type="abstracttest"> <identifier>/conf/core/parameter-names</identifier><classification><tag>target</tag><value>/req/core/parameter-names</value></classification><component class="test-purpose"><p id="_5c326449-a4d4-9bed-f3cd-b7b0090c0bfe">Validate that the parameter_names requirement is correctly defined</p>
+</component><component class="test-method"/><component class="step"><p id="_586a12fc-2bee-2c35-9f42-9e507a1407cd">Verify that the parameter_names requirement defines a set of parameter objects</p>
+</component><component class="step"><p id="_467eb81a-fdf9-f72a-84e8-2910435ec8ec">Verify that each parameter object in the set has a unique key</p>
+</component><component class="step"><p id="_375a780b-bdb1-a4cd-e68e-0a32dc0f0bc5">Verify that each parameter object in the set has a type value of “Parameter”</p>
+</component><component class="step"><p id="_ace53c0a-c151-c1be-5835-f5125a4cad9d">Verify that each parameter object in the set has a description attribute</p>
+</component><component class="step"><p id="_b9e49fb7-4b5c-844a-c138-490b4426bec5">Verify that each parameter object in the set has a unit attribute</p>
+</component><component class="step"><p id="_f73c7bf6-4645-07ce-84d3-3d1a2d035ef3">Verify that each unit object a label attribute</p>
+</component><component class="step"><p id="_d8ab1684-def3-bf6f-0aff-a1ece8fb66e5">Verify that each unit object a symbol attribute</p>
+</component><component class="step"><p id="_70c0f75a-bad4-9ce5-69fd-dd1dac5ca763">Verify that each symbol object a value attribute</p>
+</component><component class="step"><p id="_fcf72fc3-ef75-2d7b-2672-282c823647f4">Verify that each symbol object a type attribute</p>
+</component><component class="step"><p id="_bfba4485-c28a-a311-a919-592763d42a6c">Verify that each parameter object in the set has an observedProperty attribute</p>
+</component><component class="step"><p id="_1eaebb8c-4c42-f1ae-3256-4664a72b6b35">Verify that each observedProperty object has an id attribute</p>
+</component><component class="step"><p id="_68bdb606-0ba5-4e8e-af8a-4bbe26f54a6d">Verify that each observedProperty object has a label attribute</p>
 </component>
 </requirement>
 
-<requirement id="ats_collectionid" model="ogc" type="abstracttest"> <identifier>/conf/core/collectionid</identifier><classification><tag>target</tag><value>/req/core/collectionid</value></classification><component class="test-purpose"><p id="_b4914be7-37c8-5c9b-7c1f-6725b26dde16">TBD</p>
-</component><component class="test-method"><p id="_640ad9d4-f29f-dc16-88ba-c2b6ae7ac9d4">Inspect the document to verify the above.</p>
+<requirement id="ats_collectionid" model="ogc" type="abstracttest"> <identifier>/conf/core/collectionid</identifier><classification><tag>target</tag><value>/req/core/collectionid</value></classification><component class="test-purpose"><p id="_ef4d6421-8ada-fb58-9dce-0b0e06b8dc64">Validate that a collectionid requirement is correctly defined.</p>
+</component><component class="test-method"/><component class="step"><p id="_7b159b04-6dab-bf3e-51b3-be307aa975fb">Verify that a collectionid requirement includes an explanation of how a Collection ID is derived.</p>
+</component><component class="step"><p id="_e361bf09-10f1-faf0-c635-073ccbcc88b6">Verify that a collectionid requirement specifies either an identifier string or a Regular expression.</p>
 </component>
 </requirement>
 
-<requirement id="ats_extent" model="ogc" type="abstracttest"> <identifier>/conf/core/extent</identifier><classification><tag>target</tag><value>/req/core/extent</value></classification><component class="test-purpose"><p id="_e7970c06-49ad-21db-240f-b2e2808b87ef">TBD</p>
-</component><component class="test-method"><p id="_808fe222-8091-68fd-8993-66d0b847b373">Inspect the document to verify the above.</p>
+<requirement id="ats_extent" model="ogc" type="abstracttest"> <identifier>/conf/core/extent</identifier><classification><tag>target</tag><value>/req/core/extent</value></classification><component class="test-purpose"><p id="_f5b5913c-3ff2-f709-6a24-c77aea8e9de6">Validate the profile extent requirements are defined correctly.</p>
+</component><component class="test-method"/><component class="step"><p id="_53c3abfa-106d-3b48-4ac6-1024b9bfadc4">Verfiy that the profile has a requirement specifying the spatial extent of the collection.</p>
+</component><component class="step"><p id="_64f6a90b-0850-8f38-098e-857ab52a1f00">Verfiy that the profile specifies either an enumerated list of CRS values or a Regular expression definition for valid CRS values.</p>
+</component><component class="step"><p id="_c5bee72b-6f6c-795e-c2fc-de489da5ce69">Verify that Temporal extent requirements specify either an enumerated list of TRS values or a Regular expression definition for valid TRS values.</p>
+</component><component class="step"><p id="_306cfdf1-8b46-6c0b-7135-ae8bc17b5b4f">Verify that Vertical extent requirements specify either an enumerated list of VRS values or a Regular expression definition for valid VRS values.</p>
+</component><component class="step"><p id="_9529eb53-5f4a-cc34-9049-e22cd594904f">Verify that Custom extent requirements specify the name of the custom dimension.</p>
+</component><component class="step"><p id="_9fff7ddc-0b2b-f905-2f0b-fc13dd6805c9">Verify that Custom extent requirements specify the custom dimension reference value.</p>
+</component><component class="step"><p id="_d5e915fa-feef-690c-e910-e6adc0661636">Verify that Custom extent requirements specify an enumerated list of the valid custom dimension values.</p>
 </component>
 </requirement>
 
-<requirement id="ats_instanceid" model="ogc" type="abstracttest"> <identifier>/conf/core/instanceid</identifier><classification><tag>target</tag><value>/req/core/instanceid</value></classification><component class="test-purpose"><p id="_338c80aa-fef3-c059-ae6a-4720e76ee1cc">TBD</p>
-</component><component class="test-method"><p id="_4f7a4074-fd90-3ba1-12ab-1b762f41d428">Inspect the document to verify the above.</p>
+<requirement id="ats_output-format" model="ogc" type="abstracttest"> <identifier>/conf/core/output-format</identifier><classification><tag>target</tag><value>/req/core/output-format</value></classification><component class="test-purpose"><p id="_29f83e0e-75a8-12a9-af77-58757d87cd63">Validate that the profile correctly defines output-formats</p>
+</component><component class="test-method"/><component class="step"><p id="_95a4e327-eb65-0497-42a4-1c1738c1ac5f">Verify that the profile contains references to the schemas or format descriptions for all output-formats defined in the data queries requirements</p>
 </component>
 </requirement>
 
-<requirement id="ats_output-format" model="ogc" type="abstracttest"> <identifier>/conf/core/output-format</identifier><classification><tag>target</tag><value>/req/core/output-format</value></classification><component class="test-purpose"><p id="_b5dd6974-fd57-966a-10a8-765629a243d5">TBD</p>
-</component><component class="test-method"><p id="_2518ca44-6de1-0296-bdf7-348eaff5ed81">Inspect the document to verify the above.</p>
+<requirement id="ats_paging-support" model="ogc" type="abstracttest"> <identifier>/conf/core/paging-support</identifier><classification><tag>target</tag><value>/req/core/paging-support</value></classification><component class="test-purpose"><p id="_9b178acb-81e3-9eea-522d-cbdd398309d3">Validate that paging support requirements are correctly defined</p>
+</component><component class="test-method"/><component class="step"><p id="_80564d5c-f82a-1bc0-ffaa-56bce4e2e466">Verify that a paging support requirement defines which query types will support output paging</p>
+</component><component class="step"><p id="_1f8bbddc-0643-ff30-2853-6e4ee723e705">Verify that a paging support requirement identifies which output formats support paging in paging-capable queries</p>
+</component><component class="step"><p id="_143580f6-f723-4e55-a683-07cfca43b003">Verify that a paging support requirement defines the default number of items to return per page request</p>
 </component>
 </requirement>
 
-<requirement id="ats_paging-support" model="ogc" type="abstracttest"> <identifier>/conf/core/paging-support</identifier><classification><tag>target</tag><value>/req/core/paging-support</value></classification><component class="test-purpose"><p id="_4c27fed5-8f24-e51e-cd30-3829ae073c63">TBD</p>
-</component><component class="test-method"><p id="_99563a0e-2c1f-a0cd-6e91-e872aa7eeb14">Inspect the document to verify the above.</p>
+<requirement id="ats_status-codes" model="ogc" type="abstracttest"> <identifier>/conf/core/status-codes</identifier><classification><tag>target</tag><value>/req/core/status-codes</value></classification><component class="test-purpose"><p id="_41cbba33-a91d-e780-287d-326804ad3648">Validate that the profile defines any HTTP status code responses required by a service.</p>
+</component><component class="test-method"/><component class="step"><p id="_58340c2a-c116-f379-012f-b2fca8aedae8">Verify that the profile contains HTTP status code definitions</p>
+</component><component class="step"><p id="_ec708321-58af-c2ef-de0f-444a5ae9b161">Verify that any HTTP status code definition has a description value.</p>
+</component><component class="step"><p id="_3b647b97-c41d-2759-c9bc-ca53da6ffc89">Verify that each HTTP status code definition includes a JSON schema for the response body.</p>
 </component>
 </requirement>
 
-<requirement id="ats_status-codes" model="ogc" type="abstracttest"> <identifier>/conf/core/status-codes</identifier><classification><tag>target</tag><value>/req/core/status-codes</value></classification><component class="test-purpose"><p id="_b492b105-ba4c-0781-8788-8537535c0e40">TBD</p>
-</component><component class="test-method"><p id="_eddd2e7c-7f19-ee3c-fee4-f3230b9c7672">Inspect the document to verify the above.</p>
+<requirement id="ats_links" model="ogc" type="abstracttest"> <identifier>/conf/core/links</identifier><classification><tag>target</tag><value>/req/core/links</value></classification><component class="test-purpose"><p id="_72eec656-4150-87a9-c89e-fc536bc32a3f">Validate that link requirements are correctly defined</p>
+</component><component class="test-method"/><component class="step"><p id="_1c03a9b2-fc54-0ba1-21fd-ade3679420b5">Verify that link requirements define a <tt>href</tt> value</p>
+</component><component class="step"><p id="_edb06269-22a1-ffde-29cf-3c3700a41b1e">Verify that link requirements define a <tt>rel</tt> value</p>
+</component><component class="step"><p id="_cdb4f920-d79c-95c2-e6e5-08e1a45f0d64">Verify that link requirements define a <tt>type</tt> value</p>
 </component>
 </requirement>
 
-<requirement id="ats_links" model="ogc" type="abstracttest"> <identifier>/conf/core/links</identifier><classification><tag>target</tag><value>/req/core/links</value></classification><component class="test-purpose"><p id="_2c8577cf-b7de-08eb-7297-7674dcf12324">TBD</p>
-</component><component class="test-method"><p id="_4032a2aa-e869-621b-2d73-d6a8628f9955">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query</identifier><classification><tag>target</tag><value>/req/core/data-query</value></classification><component class="test-purpose"><p id="_f83c7114-abe5-a4e3-4e06-37d5bd8b568e">Validate that a profile correctly defines the query types that a service shall support.</p>
+</component><component class="test-method"/><component class="step"><p id="_1a6d21f1-a057-5929-296e-a3f4424d9778">Verify that the profile defines an enumerated list of the queries that a service shall support.</p>
+</component><component class="step"><p id="_a4dccb58-91f6-c2d9-a8e6-07d180c31849">Verify that for each definition in the enumerated list there is a corresponding data query requirement in the profile.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query</identifier><classification><tag>target</tag><value>/req/core/data-query</value></classification><component class="test-purpose"><p id="_cd92fd0e-2d15-016b-decd-3e1f034d563c">TBD</p>
-</component><component class="test-method"><p id="_f00ddc5c-ffca-7d6c-7dea-353f64c2a75d">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-area" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-area</identifier><classification><tag>target</tag><value>/req/core/data-query-area</value></classification><component class="test-purpose"><p id="_b3ec4895-e6ff-9365-f1f9-bfa4157c9564">Verify that Area query requirements are defined correctly in a profile.</p>
+</component><component class="test-method"/><component class="step"><p id="_ecfbf340-6dcb-b6e1-08ac-880936a156ce">Verify an Area query requirement defines an enumerated list of output_format types.</p>
+</component><component class="step"><p id="_d4629fc9-32ae-3cbf-d2c8-5bc854611a3c">Verify an Area query requirement defines the default output_format.</p>
+</component><component class="step"><p id="_fa3fd4bb-cf14-661f-e55f-67d01e299c49">Verify an Area query requirement defines an enumerated list of crs_details values.</p>
+</component><component class="step"><p id="_bfa63ebd-0796-87e6-6132-720e2f972e94">Verify an Area query requirement defines a list of supported HTTP operations.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-area" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-area</identifier><classification><tag>target</tag><value>/req/core/data-query-area</value></classification><component class="test-purpose"><p id="_56a111bd-0e84-6517-5dcc-9f8bdf9e1b43">TBD</p>
-</component><component class="test-method"><p id="_37447e7c-0c5f-9202-d50f-3227598d5fc7">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-corridor" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-corridor</identifier><classification><tag>target</tag><value>/req/core/data-query-corridor</value></classification><component class="test-purpose"><p id="_c4472608-3870-d0eb-cb1a-65215393737d">Verify that Corridor query requirements are defined correctly in a profile.</p>
+</component><component class="test-method"/><component class="step"><p id="_00a9988c-7309-8306-ce67-87265883b4c4">Verify that a Corridor requirement defines an enumerated list of output_format types.</p>
+</component><component class="step"><p id="_541b78c1-1f49-9ed3-4182-5ced91379c59">Verify that a Corridor requirement defines the default output_format.</p>
+</component><component class="step"><p id="_7aa53fbf-cd98-4ed0-b728-cc5cdb8b11d8">Verify that a Corridor requirement defines an enumerated list of crs_details values.</p>
+</component><component class="step"><p id="_df98a107-0f67-1614-523c-106085edcfe3">Verify that a Corridor requirement defines an enumerated list of width-units values.</p>
+</component><component class="step"><p id="_fd6dbd7d-4cab-7d2d-ed85-2740b1434b88">Verify that a Corridor requirement defines an enumerated list of height-units values.</p>
+</component><component class="step"><p id="_7e7032da-c6d3-2b4d-f34a-ad34bca67f91">Verify that a Corridor requirement defines a list of supported HTTP operations.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-corridor" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-corridor</identifier><classification><tag>target</tag><value>/req/core/data-query-corridor</value></classification><component class="test-purpose"><p id="_8165ecd4-74f5-a011-6539-e8dc9ed7d8ff">TBD</p>
-</component><component class="test-method"><p id="_3631e1d6-8b7f-50af-a5d2-b1781c247743">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-cube" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-cube</identifier><classification><tag>target</tag><value>/req/core/data-query-cube</value></classification><component class="test-purpose"><p id="_5eb43c37-0100-cce6-c2a1-b56d5e10d6e3">Verify that Cube query requirements are defined correctly in a profile.</p>
+</component><component class="test-method"/><component class="step"><p id="_855c95f9-de60-7178-1558-862c041bba1e">Verify a Cube query requirement defines an enumerated list of output_format types.</p>
+</component><component class="step"><p id="_7374e79e-a44e-3994-8aac-97d5f93a7c3e">Verify a Cube query requirement defines the default output_format.</p>
+</component><component class="step"><p id="_0aeb3f8a-fd8e-4b8d-a9f6-cf58404fd7b1">Verify a Cube query requirement defines an enumerated list of crs_details values.</p>
+</component><component class="step"><p id="_aa43156d-e3f4-de35-2083-b5caf7f521b1">Verify a Cube query requirement defines a list of supported HTTP operations.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-cube" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-cube</identifier><classification><tag>target</tag><value>/req/core/data-query-cube</value></classification><component class="test-purpose"><p id="_95e23228-ede0-5e47-f8ba-aab7deeaaba8">TBD</p>
-</component><component class="test-method"><p id="_aac1d9db-007b-9d6d-c1b4-c23e94f878ad">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-instances" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-instances</identifier><classification><tag>target</tag><value>/req/core/data-query-instances</value></classification><component class="test-purpose"><p id="_b83e40c8-aaf1-3534-d415-34b330746732">Validate than a profile correctly defines support for <tt>instances</tt></p>
+</component><component class="test-method"/><component class="step"><p id="_50f1014d-6656-1864-14cb-8163032429d4">Verify that the data queries requirement enumerated list includes an entry for <tt>instances</tt>.</p>
+</component><component class="step"><p id="_564f4924-be70-df10-ad4d-9b2d99ac961c">Verify that an instance id requirement includes an explanation of how an Instance ID is derived.</p>
+</component><component class="step"><p id="_232365fc-716f-a22e-acef-1e0885295bde">Verify that an instance id requirement contains either an identifier string or a Regular expression rule for defining the instance id.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-instances" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-instances</identifier><classification><tag>target</tag><value>/req/core/data-query-instances</value></classification><component class="test-purpose"><p id="_d2c93c0e-5c35-b38b-a9a9-eb23213ba010">TBD</p>
-</component><component class="test-method"><p id="_1dd2a3cf-23f5-5359-2eb2-73916c442c39">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-position" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-position</identifier><classification><tag>target</tag><value>/req/core/data-query-position</value></classification><component class="test-purpose"><p id="_adcbf798-0708-1af8-8bf5-3a7feb69eb88">Verify that Position query requirements are defined correctly in a profile.</p>
+</component><component class="test-method"/><component class="step"><p id="_88d10cf8-5044-cd2c-002b-0eb73654ec35">Verify a Position query requirement defines the logic in used selecting the appropriate data response.</p>
+</component><component class="step"><p id="_84d32c5d-c119-ae6a-5529-d67751961c43">Verify a Position query requirement defines an enumerated list of output_format types.</p>
+</component><component class="step"><p id="_274747de-3efe-cbb6-9f5d-688aa0aee1e2">Verify a Position query requirement defines the default output_format.</p>
+</component><component class="step"><p id="_77a5924c-3805-c585-d2b6-618ed0f30293">Verify a Position query requirement defines an enumerated list of crs_details values.</p>
+</component><component class="step"><p id="_1dd19504-3f55-3db4-fabc-86d0292f5ee7">Verify a Position query requirement defines a list of supported HTTP operations.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-position" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-position</identifier><classification><tag>target</tag><value>/req/core/data-query-position</value></classification><component class="test-purpose"><p id="_d85da64f-6846-f675-2e4d-51b40a5502ce">TBD</p>
-</component><component class="test-method"><p id="_975f8d9f-7265-21a3-208c-d0b8de63084f">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-radius" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-radius</identifier><classification><tag>target</tag><value>/req/core/data-query-radius</value></classification><component class="test-purpose"><p id="_a4586db4-c71c-38b5-3def-7b50d9044dab">Verify that Radius query requirements are defined correctly in a profile.</p>
+</component><component class="test-method"/><component class="step"><p id="_de832c04-83df-5e12-1e78-ee5921e236b1">Verify a Radius query requirement defines an enumerated list of output_format types.</p>
+</component><component class="step"><p id="_2eff217f-2291-3465-fcf8-a272a62590e3">Verify a Radius query requirement defines the default output_format.</p>
+</component><component class="step"><p id="_b72d5b41-b845-3645-7274-6ef54b0e8676">Verify a Radius query requirement defines an enumerated list of crs_details values.</p>
+</component><component class="step"><p id="_4970ff10-3ef6-5f61-bfd0-efc7ebc49364">Verify a Radius query requirement defines an enumerated list of within_units values.</p>
+</component><component class="step"><p id="_7b7e88e9-791f-4634-8eb0-c2726a70c535">Verify a Radius query requirement defines a list of supported HTTP operations.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-radius" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-radius</identifier><classification><tag>target</tag><value>/req/core/data-query-radius</value></classification><component class="test-purpose"><p id="_aa65f596-a9e3-5117-0e33-b4d14a5b6b8d">TBD</p>
-</component><component class="test-method"><p id="_a204e57d-23d4-47ea-4495-d08292f0da39">Inspect the document to verify the above.</p>
+<requirement id="ats_data-query-trajectory" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-trajectory</identifier><classification><tag>target</tag><value>/req/core/data-query-trajectory</value></classification><component class="test-purpose"><p id="_ee1864fc-99ba-20fb-758d-d2e49df97c48">Verify that Trajectory query requirements are defined correctly in a profile.</p>
+</component><component class="test-method"/><component class="step"><p id="_2795cbe1-91c7-e0cb-f21f-e85a10dbee14">Verify a Trajectory query requirement defines an enumerated list of output_format types.</p>
+</component><component class="step"><p id="_da741da4-ef87-390c-d255-c18c4a8975bb">Verify a Trajectory query requirement defines the default output_format.</p>
+</component><component class="step"><p id="_b8fd683d-a663-24aa-6d75-bcb98ecf5299">Verify a Trajectory query requirement defines an enumerated list of crs_details values.</p>
+</component><component class="step"><p id="_e61fe953-d356-3f95-0d8a-bef905989c54">Verify a Trajectory query requirement defines a list of supported HTTP operations.</p>
 </component>
 </requirement>
 
-<requirement id="ats_data-query-trajectory" model="ogc" type="abstracttest"> <identifier>/conf/core/data-query-trajectory</identifier><classification><tag>target</tag><value>/req/core/data-query-trajectory</value></classification><component class="test-purpose"><p id="_6edd74fe-263c-2fea-1d3b-f1eccf48d076">TBD</p>
-</component><component class="test-method"><p id="_e2b054d4-dd13-ab4f-6488-ba684d08984e">Inspect the document to verify the above.</p>
+<requirement id="ats_asynchronous" model="ogc" type="abstracttest"> <identifier>/conf/core/asynchronous</identifier><classification><tag>target</tag><value>/req/core/asynchronous</value></classification><component class="test-purpose"><p id="_134ae7a9-044a-b747-184c-d5da15ff23d7">Validate that an asynchronous query support requirement in correctly defined</p>
+</component><component class="test-method"/><component class="step"><p id="_52040a7b-8a11-3c5f-d6f0-9340f428c0ca">Verify that all asynchronous query requirements in a profile define a HTTP Status Code for the asynchronous response.</p>
+</component><component class="step"><p id="_a0d6a10b-58c7-f09f-f86c-e69a2e534eeb">Verify that all asynchronous query requirements in a profile define a message schema for the asynchronous response.</p>
+</component><component class="step"><p id="_2e26f17c-7081-1f11-9a26-64b2aabf0a2a">Verify that all asynchronous query requirements in a profile define the text for the asynchronous response.</p>
+</component><component class="step"><p id="_64341ac4-0d4a-6952-a50d-0037c816f5e7">Verify that all asynchronous query requirements in a profile define the mechanism for delivering the asynchronous query result.</p>
 </component>
 </requirement>
 
-<requirement id="ats_asynchronous" model="ogc" type="abstracttest"> <identifier>/conf/core/asynchronous</identifier><classification><tag>target</tag><value>/req/core/asynchronous</value></classification><component class="test-purpose"><p id="_473df4ec-fb63-5091-f1cd-52734c2d540d">TBD</p>
-</component><component class="test-method"><p id="_c948e6a5-a167-3bf1-601e-50f7d24fbafa">Inspect the document to verify the above.</p>
-</component>
-</requirement>
-
-<requirement id="ats_pubsub" model="ogc" type="abstracttest"> <identifier>/conf/core/pubsub</identifier><classification><tag>target</tag><value>/req/core/pubsub</value></classification><component class="test-purpose"><p id="_a5c5573b-84d5-7ded-89e8-92163e5e2756">TBD</p>
-</component><component class="test-method"><p id="_cc212a18-c9ed-a364-1736-3dc84834ff06">Inspect the document to verify the above.</p>
+<requirement id="ats_pubsub" model="ogc" type="abstracttest"> <identifier>/conf/core/pubsub</identifier><classification><tag>target</tag><value>/req/core/pubsub</value></classification><component class="test-purpose"><p id="_40970a83-ceb4-fe0a-da6c-1a149c101570">Validate Pub/Sub requirements</p>
+</component><component class="test-method"/><component class="step"><p id="_8ed2d55e-9bed-2691-d335-9f79da3539b1">Verify that the profile specifes the OGC API-EDR Part 2 conformance class</p>
+</component><component class="step"><p id="_e00f5fb1-e74a-4eb6-1980-8ae7882d3de0">Verify that the profile defines the channels services shall implement.</p>
+</component><component class="step"><p id="_893c14e7-c5c3-316e-293d-e3711b27d600">Verify that the profile defines the message payloads required for each of the channels in the service.</p>
+</component><component class="step"><p id="_5e1e7cac-a23e-f42c-af01-2cbe27b650ff">Verify the profile contains an AsyncAPI definition that describes the channels and their messages.</p>
 </component>
 </requirement>
 </clause>
@@ -1543,7 +1599,7 @@ The allowable types of business rules are specified in Section A.2.3.</p>
 <title>Normative references</title><p id="_cdc64d2a-a937-72f4-1261-c3b19cc626b1">The following documents are referred to in the text in such a way that some or all of their content constitutes requirements of this document. For dated references, only the edition cited applies. For undated references, the latest edition of the referenced document (including any amendments) applies.</p>
 
 
-<bibitem id="iso19106" type="standard" schema-version="v1.2.8">  <fetched>2025-05-09</fetched>  
+<bibitem id="iso19106" type="standard" schema-version="v1.2.8">  <fetched>2025-07-23</fetched>  
 <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
   
 <title type="title-main" format="text/plain" language="en" script="Latn">Profiles</title>
@@ -1553,7 +1609,7 @@ The allowable types of business rules are specified in Section A.2.3.</p>
 <name>International Organization for Standardization</name>
       <abbreviation>ISO</abbreviation>      <uri>www.iso.org</uri>    </organization>  </contributor>  <edition>1</edition>  <language>en</language>  <language>fr</language>  <script>Latn</script>  <status>    <stage>90</stage>    <substage>93</substage>  </status>  <copyright>    <from>2004</from>    <owner>      <organization>        
 <name>ISO</name>
-      </organization>    </owner>  </copyright>  <relation type="instanceOf">    <bibitem type="standard">      <fetched>2025-05-09</fetched>      
+      </organization>    </owner>  </copyright>  <relation type="instanceOf">    <bibitem type="standard">      <fetched>2025-07-23</fetched>      
 <title type="title-intro" format="text/plain" language="en" script="Latn">Geographic information</title>
       
 <title type="title-main" format="text/plain" language="en" script="Latn">Profiles</title>
