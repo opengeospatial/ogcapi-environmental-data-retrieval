@@ -4,6 +4,12 @@
 [%metadata]
 identifier:: /conf/core/data-query-corridor
 target:: /req/core/data-query-corridor
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Verify that Corridor query requirements are defined correctly in a profile.
+test-method:: 
+step:: Verify that a Corridor requirement defines an enumerated list of output_format types.
+step:: Verify that a Corridor requirement defines the default output_format.
+step:: Verify that a Corridor requirement defines an enumerated list of crs_details values.
+step:: Verify that a Corridor requirement defines an enumerated list of width-units values.
+step:: Verify that a Corridor requirement defines an enumerated list of height-units values.
+step:: Verify that a Corridor requirement defines a list of supported HTTP operations.
 ====

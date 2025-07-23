@@ -6,7 +6,7 @@
 identifier:: /req/core/links
 statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ valid responses to only those which include links, then:
 part:: The Profile _SHALL_ require that link objects are included in a response.
-part:: The link objects _SHALL_ defined the required link objects in full. 
+part:: The Profile _SHALL_ define the required link objects in full. 
 part:: The link objects _SHALL_ require that the `href`, `rel` and `type` attributes are populated.
 
 for example:

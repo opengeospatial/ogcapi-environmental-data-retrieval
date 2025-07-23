@@ -4,6 +4,9 @@
 [%metadata]
 identifier:: /conf/core/links
 target:: /req/core/links
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that link requirements are correctly defined
+test-method::
+step:: Verify that link requirements define a `href` value 
+step:: Verify that link requirements define a `rel` value
+step:: Verify that link requirements define a `type` value 
 ====

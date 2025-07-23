@@ -4,6 +4,11 @@
 [%metadata]
 identifier:: /conf/core/data-query-radius
 target:: /req/core/data-query-radius
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Verify that Radius query requirements are defined correctly in a profile.
+test-method:: 
+step:: Verify a Radius query requirement defines an enumerated list of output_format types.
+step:: Verify a Radius query requirement defines the default output_format.
+step:: Verify a Radius query requirement defines an enumerated list of crs_details values.
+step:: Verify a Radius query requirement defines an enumerated list of within_units values.
+step:: Verify a Radius query requirement defines a list of supported HTTP operations.
 ====

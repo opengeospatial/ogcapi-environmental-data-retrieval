@@ -4,6 +4,15 @@
 [%metadata]
 identifier:: /conf/core/root
 target:: /req/core/root
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile defines the service landing page
+test-method:: 
+step:: Verify that the profile defines a `Title` for the service
+step:: Verify that the profile defines the `Links` required for the service
+step:: Verify that each link defined for the service has a `href` and `rel` attribute.
+step:: Verify that any `Description` attributes in the profile have a defined value.
+step:: Verify that any `Keywords` attributes in the profile have defined values.
+step:: Verify that any `Provider` attributes in the profile have `name` and `url` attributes.
+step:: Verify that the providers `name` and `url` attributes have defined values.
+step:: Verify that any `Contact` attributes in the profile have an `email` attributes.
+step:: Verify that contact `email` attributes has a defined value.
 ====

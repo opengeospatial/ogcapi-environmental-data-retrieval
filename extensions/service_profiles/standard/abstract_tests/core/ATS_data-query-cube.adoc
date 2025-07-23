@@ -4,6 +4,10 @@
 [%metadata]
 identifier:: /conf/core/data-query-cube
 target:: /req/core/data-query-cube
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Verify that Cube query requirements are defined correctly in a profile.
+test-method:: 
+step:: Verify a Cube query requirement defines an enumerated list of output_format types.
+step:: Verify a Cube query requirement defines the default output_format.
+step:: Verify a Cube query requirement defines an enumerated list of crs_details values.
+step:: Verify a Cube query requirement defines a list of supported HTTP operations.
 ====

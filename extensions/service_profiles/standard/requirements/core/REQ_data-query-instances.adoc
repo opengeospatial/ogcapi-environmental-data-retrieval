@@ -7,5 +7,10 @@ identifier:: /req/core/data-query-instances
 statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _extends_ data queries by making the Instances within a Collection queryable, then:
 part:: Instances _SHALL_ be defined in the data_queries enumerated list.
 part:: A _NULL_ value _SHALL_ be used to indicate that no child instances can be queried.
+part:: The Profile _SHALL_ specify the rules that the Instance ID values must follow.
+part:: Those rules _SHALL_ include a brief description explaining how the Instance ID is generated.
+part:: Those rules _SHALL_ be specified using either:
+* identifier string
+* Regular expression defining valid string patterns.
 
 ====

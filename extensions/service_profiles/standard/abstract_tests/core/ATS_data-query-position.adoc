@@ -4,6 +4,11 @@
 [%metadata]
 identifier:: /conf/core/data-query-position
 target:: /req/core/data-query-position
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Verify that Position query requirements are defined correctly in a profile.
+test-method:: 
+step:: Verify a Position query requirement defines the logic in used selecting the appropriate data response.
+step:: Verify a Position query requirement defines an enumerated list of output_format types.
+step:: Verify a Position query requirement defines the default output_format.
+step:: Verify a Position query requirement defines an enumerated list of crs_details values.
+step:: Verify a Position query requirement defines a list of supported HTTP operations.
 ====

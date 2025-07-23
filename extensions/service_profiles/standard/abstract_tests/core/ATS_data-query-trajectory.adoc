@@ -4,6 +4,10 @@
 [%metadata]
 identifier:: /conf/core/data-query-trajectory
 target:: /req/core/data-query-trajectory
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Verify that Trajectory query requirements are defined correctly in a profile.
+test-method:: 
+step:: Verify a Trajectory query requirement defines an enumerated list of output_format types.
+step:: Verify a Trajectory query requirement defines the default output_format.
+step:: Verify a Trajectory query requirement defines an enumerated list of crs_details values.
+step:: Verify a Trajectory query requirement defines a list of supported HTTP operations.
 ====

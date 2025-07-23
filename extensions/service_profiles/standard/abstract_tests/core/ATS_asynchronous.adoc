@@ -4,6 +4,11 @@
 [%metadata]
 identifier:: /conf/core/asynchronous
 target:: /req/core/asynchronous
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that an asynchronous query support requirement in correctly defined
+test-method:: 
+step:: Verify that all asynchronous query requirements in a profile define a HTTP Status Code for the asynchronous response.
+step:: Verify that all asynchronous query requirements in a profile define a message schema for the asynchronous response.
+step:: Verify that all asynchronous query requirements in a profile define the text for the asynchronous response.
+step:: Verify that all asynchronous query requirements in a profile define the mechanism for delivering the asynchronous query result.
+
 ====

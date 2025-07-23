@@ -4,6 +4,9 @@
 [%metadata]
 identifier:: /conf/core/status-codes
 target:: /req/core/status-codes
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile defines any HTTP status code responses required by a service.
+test-method::
+step:: Verify that the profile contains HTTP status code definitions
+step:: Verify that any HTTP status code definition has a description value.
+step:: Verify that each HTTP status code definition includes a JSON schema for the response body.
 ====
