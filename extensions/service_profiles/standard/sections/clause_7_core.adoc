@@ -235,14 +235,6 @@ Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query-instances.adoc[]
 
-===== Parameter instanceId
-
-Path - Instance {root}/collections/{collectionId}/instances/{instanceId} 
-
-Instance ID restrictions
-
-include::../requirements/core/REQ_instanceid.adoc[]
-
 ===== Parameter queryType
 
 Path -  Instance Query {root}/collections/{collectionId}/instances/{instanceId}/{queryType}

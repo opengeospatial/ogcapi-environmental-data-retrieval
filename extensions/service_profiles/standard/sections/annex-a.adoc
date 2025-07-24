@@ -24,8 +24,6 @@ include::../abstract_tests/core/ATS_collectionid.adoc[]
 
 include::../abstract_tests/core/ATS_extent.adoc[]
 
-include::../abstract_tests/core/ATS_instanceid.adoc[]
-
 include::../abstract_tests/core/ATS_output-format.adoc[]
 
 include::../abstract_tests/core/ATS_paging-support.adoc[]
