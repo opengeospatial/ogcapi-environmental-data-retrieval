@@ -4,13 +4,14 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-radius
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Radius query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the Radius query.
-part:: The Radius query requirement _SHALL_ specify the following:
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Radius` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `Radius` query.
+part:: The `Radius` query requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values
 * Enumerated list of within_units values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
+part:: The `Radius` requirement _MAY_ specify which OGC API-EDR `Radius` query parameters are mandatory for compliance with the profile.
 
 ====
