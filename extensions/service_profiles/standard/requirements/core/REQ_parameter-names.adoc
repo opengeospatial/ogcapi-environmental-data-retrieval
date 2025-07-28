@@ -8,7 +8,7 @@ statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval
 part:: Requirements _SHALL_ be defined which specify the parameter_names and their definitions.
 part:: The parameter_names requirement definitions _SHALL_ specify the required parameter_names objects in full including:
 * name, 
-* units,
+* unit,
 * data type and
 * measurement duration 
 
