@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/extent
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ define a requirement specifying the minimum spatial bounds that _SHALL_ be supported
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ define a requirement defining a `bbox` which specifies the minimum spatial bounds that _SHALL_ be supported
 
 ====
 
@@ -12,7 +12,7 @@ statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval St
 ====
 [%metadata]
 identifier:: /rec/core/extent
-statement:: A requirement _SHOULD_ be defined specifying the rules for defining the Collection extent.
+statement:: A requirement _SHOULD_ be defined specifying the rules for defining the `Collection` extent.
 
 ====
 
@@ -26,7 +26,7 @@ part:: Those rules _SHALL_ be specified using either:
 * Enumerated list of valid CRS values
 * Regular expression defining valid CRS string patterns.
 
-NOTE:: Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)
+NOTE:: Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values
 ====
 
 [permission]
@@ -84,8 +84,9 @@ identifier:: /req/core/extent-custom
 statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a custom dimension, then:
 part:: The Profile _SHALL_ specify the rules for expressing the custom dimension.
 part:: Those rules _SHALL_ be specified using either:
-* A custom dimension name
+* A custom dimension id
 * A custom dimension reference value
+* A custom interval value
 * An enumerated list of valid custom dimension values
 
 ====
