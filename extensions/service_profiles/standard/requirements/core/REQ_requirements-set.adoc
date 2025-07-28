@@ -1,13 +1,13 @@
 [[req_core_requirements-set]]
 
-NOTE: A service may consist of multiple collections. While there may be common rules for all collections, a profile should be able to support different rules depending on the collection.
+NOTE: A service may consist of multiple `Collections`. While there may be common rules for all `Collections`, a profile should be able to support different rules depending on the `Collection`.
 
 [requirement]
 ====
 [%metadata]
 identifier:: /req/core/requirements-set
 statement:: 
-part:: The profile SHALL consists of a set of requirements for a collection and (if the collection supports instances) the instances of the collection. For each of the attributes listed, if it is in the collection (or instance), there SHALL be a requirement to define it.
+part:: The profile SHALL consists of a set of requirements for a `Collection` and (if the `Collection` supports `Instances`) the `Instances` of the `Collection`. For each of the attributes listed, if it is in the `Collection` (or instance), there SHALL be a requirement to define it.
 
 part:: A profile MAY include requirements for the landing page.
 

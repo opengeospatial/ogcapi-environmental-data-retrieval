@@ -5,7 +5,7 @@
 [%metadata]
 identifier:: /req/core/paging-support
 statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> is _extended_ to support paging, then:
-part:: A requirement _SHALL _ be created for each combination of query pattern and output format that must support paging.
+part:: A requirement _SHALL_ be created for each combination of query pattern and output format that must support paging.
 part:: Each paging requirement _SHALL_ specify the default number of items to return per page request.
 
 ====
