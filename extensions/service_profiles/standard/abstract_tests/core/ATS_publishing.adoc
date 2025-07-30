@@ -8,9 +8,9 @@ test-purpose:: Validate that an OpenAPI description of the profile is available
 test-method:: 
 step:: Verify that an OpenAPI document describing the profile exists
 step:: Verify that the OpenAPI document is compliant with the OpenAPI 3.1 specification
-step:: Verify that the OpenAPI document includes schemas for the Collection and Instance query responses
-step:: Verify that the Collection and Instance schemas include all of the queries defined in the  <<req_core_data-query, data-query>> requirement
-step:: Verify that the Collection and Instance schema include Path objects for each of the data_queries defined in the profile.
+step:: Verify that the OpenAPI document includes schemas for the `Collection` and `Instance` query responses
+step:: Verify that the `Collection` and `Instance` schemas include all of the queries defined in the  <<req_core_data-query, data-query>> requirement
+step:: Verify that the `Collection` and `Instance` schema include Path objects for each of the data_queries defined in the profile.
 step:: Verify that the Path Object define Items for the HTTP operations defined by the data query requirements in the profile
 step:: Verify that the Path Item definitions include the enumerated lists defined by the data query requirements in the profile
 ====

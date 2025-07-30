@@ -10,6 +10,13 @@ Body of resources that belong or are used together. An aggregate, set, or group 
 [.source]
 <<OGC20-024,OGC 20-024>>
 
+=== Profile
+
+An implementation case of a more general standard or set of standards. 
+
+[.source]
+<<https://defs.opengis.net/prez/catalogs/ogc-cat:register/col/ogc:glossary/it1/term:Profile,OGC Rainbow>>
+
 [[conformance_module-definition]]
 === Conformance Module; Conformance Test Module
 
@@ -57,7 +64,7 @@ An aggregate of requirements with a single standardization target type that must
 [[requirements_module-definition]]
 === Requirements Module
 
-A set of related requirement classes and their associated components. 
+A set of related requirements classes and their associated components. 
 
 [.source]
 <<ogc-modspec,OGC 08-131r5>>
@@ -83,9 +90,9 @@ NOTE: The standardization target is the entity which may receive a certificate o
 [[standardization_target_type-definition]]
 === Standardization Target Type
 
-Type of entity or set of entities to which the requirement of a standard apply
+Type of entity or set of entities to which the requirement of a standard apply.
 
-NOTE: For example, the standardization target type for The OGC API – Features Standard are Web APIs. The standardization target type for the CDB Standard is “datastore”. It is important to understand that a standard’s root standardization target type can have sub-types, and that there can be a hierarchy of target types. For example, a Web API can have sub types of client, server, security, and so forth. As such, each requirements class can have a standardization target type that is a sub-type of the root.
+NOTE: For example, the standardization target type for The https://docs.ogc.org/is/17-069r4/17-069r4.html[OGC API – Features Standard] are Web APIs. The standardization target type for the https://docs.ogc.org/is/15-113r6/15-113r6.html[CDB Standard] is “datastore”. It is important to understand that a standard’s root standardization target type can have sub-types, and that there can be a hierarchy of target types. For example, a Web API can have sub types of client, server, security, and so forth. As such, each requirements class can have a standardization target type that is a sub-type of the root.
 
 [.source]
 <<ogc-modspec,OGC 08-131r5>>

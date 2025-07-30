@@ -4,14 +4,15 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-corridor
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Corridor query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the Corridor query.
-part:: The Corridor requirement _SHALL_ specify the following:
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Corridor` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `Corridor` query.
+part:: The `Corridor` requirement _SHALL_ specify the following:
 * Enumerated list of output_format types
 * The default_output_format
 * Enumerated list of crs_details values
 * Enumerated list of width-units values
 * Enumerated list of height-units values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
+part:: The `Corridor` requirement _MAY_ specify which OGC API-EDR `Corridor` query parameters are mandatory for compliance with the profile.
 
 ====
