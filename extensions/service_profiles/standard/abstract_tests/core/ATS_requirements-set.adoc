@@ -4,6 +4,8 @@
 [%metadata]
 identifier:: /conf/core/requirements-set
 target:: /req/core/requirements-set
-test-purpose:: TBD
-test-method:: Inspect the document to verify the above.
+test-purpose:: Validate that the profile defines at least one requirement for a collection
+test-method:: 
+step:: Verify that the profile contains at least one requirement which applies to a collection.
+step:: Verify that collection requirements in the profile clearly idenitify which collection a requirement applies to.
 ====

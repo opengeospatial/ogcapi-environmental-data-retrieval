@@ -32,6 +32,7 @@ requirement:: /req/core/data-query-cube
 requirement:: /req/core/data-query-instances
 requirement:: /req/core/instanceid
 requirement:: /req/core/paging-support
+requirement:: /req/core/data-query-locations
 requirement:: /req/core/data-query-position
 requirement:: /req/core/data-query-radius
 requirement:: /req/core/data-query-trajectory

@@ -7,6 +7,9 @@ NOTE: A service may consist of multiple `Collections`. While there may be common
 [%metadata]
 identifier:: /req/core/requirements-set
 statement:: 
+
+part:: The profile SHALL clearly define which collection a requirement applies to.
+
 part:: The profile SHALL consists of a set of requirements for a `Collection` and (if the `Collection` supports `Instances`) the `Instances` of the `Collection`. For each of the attributes listed, if it is in the `Collection` (or instance), there SHALL be a requirement to define it.
 
 part:: A profile MAY include requirements for the landing page.
@@ -14,5 +17,3 @@ part:: A profile MAY include requirements for the landing page.
 part:: A profile MAY include requirements for multiple collections.
 
 ====
-
-NOTE: Question - what is the purpose of this requirement?

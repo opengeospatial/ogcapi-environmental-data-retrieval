@@ -223,7 +223,7 @@ Path = {root}/collections/{collectionId}/locations
 
 Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-TBD
+include::../requirements/core/REQ_data-query-locations.adoc[]
 
 ==== Instances Query
 
@@ -250,11 +250,11 @@ Dependencies
 * <<OGC17-069,GC API - Features - Part 1: Core>>
 * <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-The EDR API Items query is like an [OGC API — Features Part 1: Core](https://docs.ogc.org/is/19-086r6/19-086r6.html#OGC17-069r4) endpoint. It offers some basic compatibility with API-Features for convenience. It may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use, such as a monitoring location. Or there may be a catalog of spatio-temporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
+The EDR API Items query is like an https://docs.ogc.org/is/19-086r6/19-086r6.html#OGC17-069r4[OGC API — Features Part 1: Core] endpoint. It offers some basic compatibility with API-Features for convenience. It may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use, such as a monitoring location. Or there may be a catalog of spatio-temporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
 
 ===== ItemID parameter
 
-If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features. All other parameters for use with the Items query are defined by OGC API — Features.
+If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features.
 
 ===== Limit parameter
 
