@@ -6,8 +6,8 @@ identifier:: /conf/core/data-query-locations
 target:: /req/core/data-query-locations
 test-purpose:: Verify that Locations query requirements are defined correctly in a profile.
 test-method:: 
-step:: Verify an Locations query requirement defines an enumerated list of output_format types.
-step:: Verify an Locations query requirement defines the default output_format.
-step:: Verify an Locations query requirement defines an enumerated list of crs_details values.
-step:: Verify an Locations query requirement defines a list of supported HTTP operations.
+step:: Verify a Locations query requirement defines an enumerated list of output_format types.
+step:: Verify a Locations query requirement defines the default output_format.
+step:: Verify a Locations query requirement defines an enumerated list of crs_details values.
+step:: Verify a Locations query requirement defines a list of supported HTTP operations.
 ====
