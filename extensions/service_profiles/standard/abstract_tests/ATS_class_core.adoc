@@ -14,7 +14,6 @@ abstract-test:: /conf/core/requirements-set
 abstract-test:: /conf/core/parameter-names
 abstract-test:: /conf/core/collectionid
 abstract-test:: /conf/core/extent
-abstract-test:: /conf/core/instanceid
 abstract-test:: /conf/core/output-format
 abstract-test:: /conf/core/paging-support
 abstract-test:: /conf/core/status-codes
@@ -24,6 +23,7 @@ abstract-test:: /conf/core/data-query-area
 abstract-test:: /conf/core/data-query-corridor
 abstract-test:: /conf/core/data-query-cube
 abstract-test:: /conf/core/data-query-instances
+abstract-test:: /conf/core/data-query-locations
 abstract-test:: /conf/core/data-query-position
 abstract-test:: /conf/core/data-query-radius
 abstract-test:: /conf/core/data-query-trajectory

@@ -67,9 +67,9 @@ Dependencies
 
 Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients. The API Definition resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
 
-NOTE: At this time only OpenAPI 3.0 and OpenAPI 3.1 documents are supported by OGC Web API Standards.
-
 Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are required to provide an OpenAPI 3.1 document. This document extends the API definition provided by the OGC API-EDR Standard. These extensions reflect the additional requirements added by the Profile. Implementors of the profile will then build on that document to produce the API definition document for their implementation.
+
+NOTE: At this time only OpenAPI 3.0 and OpenAPI 3.1 documents are supported by OGC Web API Standards.
 
 include::../requirements/core/REQ_publishing.adoc[]
 
@@ -223,7 +223,7 @@ Path = {root}/collections/{collectionId}/locations
 
 Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-TBD
+include::../requirements/core/REQ_data-query-locations.adoc[]
 
 ==== Instances Query
 
@@ -250,11 +250,11 @@ Dependencies
 * <<OGC17-069,GC API - Features - Part 1: Core>>
 * <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-The EDR API Items query is like an [OGC API — Features Part 1: Core](https://docs.ogc.org/is/19-086r6/19-086r6.html#OGC17-069r4) endpoint. It offers some basic compatibility with API-Features for convenience. It may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use, such as a monitoring location. Or there may be a catalog of spatio-temporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
+The EDR API Items query is like an https://docs.ogc.org/is/19-086r6/19-086r6.html#OGC17-069r4[OGC API — Features Part 1: Core] endpoint. It offers some basic compatibility with API-Features for convenience. It may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use, such as a monitoring location. Or there may be a catalog of spatio-temporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
 
 ===== ItemID parameter
 
-If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features. All other parameters for use with the Items query are defined by OGC API — Features.
+If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features.
 
 ===== Limit parameter
 
