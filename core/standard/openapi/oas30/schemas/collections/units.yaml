@@ -35,8 +35,7 @@ properties:
   id:
     type: string
 example:
-  label:
-    en: Kelvin
+  label: Kelvin
   symbol:
     value: K
     type: https://www.opengis.net/def/uom/UCUM/
