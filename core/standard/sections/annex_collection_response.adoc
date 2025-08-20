@@ -147,9 +147,22 @@ The spatial object describes the spatial area covered by the information availab
             * Lower left corner, coordinate axis 2
             * Upper right corner, coordinate axis 1
             * Upper right corner, coordinate axis 2
+|**values**  | <<col-spatial_values, spatial values>>|**No**| Describes the spatial resolution of the data
 |**crs**     |String|**Yes**| This can either be a https://docs.ogc.org/is/18-010r7/18-010r7.html[Well Known Text definition] of the CRS or follow a convention of https://www.opengis.net/def/crs/{authority}/{version}/{code} where the token **{authority}** is a placeholder for a code the designates to authority responsible for the definition of this CRS. Typical values include "EPSG" and "OGC". The token **{version}** is a placeholder for the specific version of the coordinate reference system definition or 0 for the latest version or if the version is unknown. The token **{code}** is a placeholder for the authority’s code for the CRS.
 |==========================
 
+
+[[col-spatial_values]]
+=== Spatial values object
+The spatial values object describes the spatial resolution of the information available in the collection.
+
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Spatial values object
+|==========================
+|Field Name|Type|Required|Description
+|**x**  |Array |**Yes** | Provides information about the spatial resolution available in the collection for the xcoordinates as number of repetitions / minimum value / interval (e.g. "R720/0/0.5") or a list of the values (e.g. 0, 0.5, 1.0, 1.5 ... 719.5, 720)
+|**y**  |Array |**Yes** | Provides information about the spatial resolution available in the collection for the xcoordinates as number of repetitions / minimum value / interval (e.g. "R361/90/-0.5") or a list of the values (e.g. 90, 89.5, 89, 88.5 ... -89.5,-90)
+|==========================
 
 [[col-temporal]]
 === Temporal Object

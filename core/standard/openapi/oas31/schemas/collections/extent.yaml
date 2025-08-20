@@ -88,6 +88,35 @@ properties:
         examples: 
           - [[-180, -90, 180, 90]]
 
+      values:
+        description: |-
+            Provides information about the spatial resolution available in the collection
+            for the x and y coordinates  
+            as number of repetitions / minimum value / interval (e.g. "R720/0/0.5") 
+            or a list of the values (e.g. 0, 0.5, 1.0, 1.5 ... 715, 720)
+        type: object
+        required:
+          - x
+          - y
+        properties:
+          x:
+            type: array
+            description:  |-
+               x coordinates as number of repetitions / minimum value / interval 
+               (e.g. "R720/0/0.5") or a list of the values 
+               (e.g. 0, 0.5, 1.0, 1.5 ... 715, 720)
+            items:
+              type:
+                - string
+          y:
+            type: array
+            description:  |-
+               y coordinates as number of repetitions / minimum value / interval 
+               (e.g. "R361/90/-0.5") or a list of the values 
+               (e.g. 90, 89.5, 89, 88.5 ... -89.5,-90)
+            items:
+              type:
+                - string
       crs:
         description: >-
           Coordinate reference system of the coordinates in the spatial extent
