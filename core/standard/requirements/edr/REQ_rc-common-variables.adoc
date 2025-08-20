@@ -28,12 +28,12 @@ A `variables` property  SHOULD include a `default_output_format` property of typ
 ---
 *E:*
 
-If a `default_output_format` property exists the defined value MUST be a value contained either in the `output_formats` defined in the `variables` section or in the parent collection  `output_formats`.
+If a `default_output_format` property exists the defined value SHALL be a value contained either in the `output_formats` defined in the `variables` section or in the parent collection  `output_formats`.
 
 ---
 *F:*
 
-A `variables` property MAY include a `crs_details` property which MUST be an array of objects.
+A `variables` property MAY include a `crs_details` property which SHALL be an array of objects.
 
 ---
 *G:*

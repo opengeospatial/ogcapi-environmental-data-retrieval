@@ -430,7 +430,7 @@ The unit object provides the information to describe the units of measure of the
 |**symbol**  | <<col-symbol,symbol>> object|**No^1^**| Information to describe the symbols used to represent the unit
 |==========================
 
-^1^ Either one of label or symbol or both attributes MUST be present in a unit object
+^1^ Either one of label or symbol or both attributes SHALL be present in a unit object
 
 [[col-symbol]]
 === Symbol Object
