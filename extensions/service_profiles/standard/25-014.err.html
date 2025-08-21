@@ -20,6 +20,15 @@ thead th { font-weight: bold; background-color: aqua; }
 <td></td><th><code>--</code></th>
 <td>draft is not an allowed status for standard</td><td><pre></pre></td><td>2</td></tr>
 </tbody></table>
+<h2>AsciiDoc Input</h2>
+<table border="1">
+<thead><th width="5%">Line</th><th width="20%">ID</th>
+<th width="30%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
+<tbody>
+<tr class="severity1">
+<td></td><th><code><a href='./25-014.html#_profile'>_profile</a></code></th>
+<td>term reference not in expected format:​&lt;&lt;​<link target=​"https://​defs.opengis.​net/prez/​catalogs/​ogc-cat:​register/col/​ogc:​glossary/it1/term:​Profile,​OGC"/>&gt; Rainbow&gt;&gt;</td><td><pre>#&lt;Asciidoctor::Block@481640 {context: :paragraph, content_model: :simple, style: nil, lines: 1}&gt;</pre></td><td>1</td></tr>
+</tbody></table>
 <h2>Style</h2>
 <table border="1">
 <thead><th width="5%">Line</th><th width="20%">ID</th>
@@ -52,82 +61,75 @@ thead th { font-weight: bold; background-color: aqua; }
 &lt;td valign=&quot;middle&quot; align=&quot;left&quot;&gt;Met Office&lt;/td&gt;
 &lt;/tr&gt; &lt;tr&gt; &lt;td valign=&quot;middle&quot; align=&quot;left&quot;&gt;Charles Heazel&lt;/td&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000268</td><th><code><a href='./25-014.html#_conventions'>_​conventions</a></code></th>
+<td>000276</td><th><code><a href='./25-014.html#_conventions'>_​conventions</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_conventions&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Conventions&lt;/title&gt;
 &lt;p id=&quot;_f287e0a4-ca0e-ef98-6e01-5d09472b62aa&quot;&gt;This sections provides details and examples for any conventions used in the document. Examples of conventions are symbols, abbreviations, use of XML schema, or special notes regarding how to read the document.&lt;/p&gt;
 
 &lt;clause id=&quot;_identifiers&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000272</td><th><code><a href='./25-014.html#_identifiers'>_​identifiers</a></code></th>
+<td>000280</td><th><code><a href='./25-014.html#_identifiers'>_​identifiers</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_identifiers&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Identifiers&lt;/title&gt;
 &lt;p id=&quot;_34025c5d-dda4-c61f-5774-94f51d938b80&quot;&gt;The normative provisions in this standard are denoted by the URI&lt;/p&gt;
 
 &lt;p id=&quot;_f0191874-4eeb-2c92-18f2-f1367cf61a60&quot;&gt; &lt;tt&gt; &lt;link target=&quot;http://www.opengis.net/doc/spec/ogcapi-edr-3/1.0&quot;/&gt; &lt;/tt&gt; &lt;/p&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000339</td><th><code><a href='./25-014.html#core-section'>core-section</a></code></th>
+<td>000347</td><th><code><a href='./25-014.html#core-section'>core-section</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;core-section&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Requirements Class Core&lt;/title&gt;
 &lt;requirement id=&quot;req_class_core&quot; model=&quot;ogc&quot; type=&quot;class&quot;&gt;
-&lt;title&gt;Requirements Class ‘Core’&lt;/title&gt; &lt;identifier&gt;http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core&lt;/identifier&gt; &lt;classification&gt; &lt;tag&gt;target-type&lt;/tag&gt; &lt;value&gt;OGC API-EDR Profile Standard&lt;/value&gt; &lt;/classification&gt; &lt;requirement id=&quot;_49b8a711-0949-7471-edd2-7821a4138f87&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/modspec&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_b5a0f84b-c5ab-5998-2d79-1bcf5b2edd50&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/edr-conformant&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_9a781342-1cc9-e6d6-956f-addb7666de31&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/parameter-names&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_bfb998ec-caf0-f6df-e637-5357ca080650&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_ecfd5ee0-3458-23a8-1d36-d67179c7dcb7&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-description&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_f04a2100-d0dc-aba2-503d-c38a78cb9785&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-keywords&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_670fd96e-6a9b-e512-6dd4-4d4994579cb2&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-provider&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_9a030600-0a8e-1101-c5e2-6afcdf2b6a2f&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-contact&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_bdd6c11f-1dfd-9ff3-6bc4-1ac9b5940fbc&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-links&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_a0c819e3-e613-106c-ad96-a95a3e0dde1d&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/publishing&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_18386ed2-9fcc-7800-7a50-7f581ae38a40&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/openapi&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_e22e6199-d7cd-4144-2f93-a60b05febb8b&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/api&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_a4b4d8fb-4d4a-3b41-dabe-8d20da8b933d&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/requirements-set&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_09421fad-f303-80d5-0078-13acdf8153d3&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/collectionid&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_bbf0b161-fa0e-f12e-aa65-306895e2a90d&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_090677d5-a89b-6340-1b94-98da86509bc1&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-spatial&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_eb0337c6-dba4-1b28-e5ec-427a110d7ce6&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-temporal&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_2fad2b50-0a03-6104-8a3b-dd850c9bb808&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-vertical&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_15c4051e-a2da-e62f-44ed-8376861c61c7&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-custom&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0a097114-44b1-97fc-9947-63322623fde7&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_33ea41e5-cab8-a278-840d-dcb7f417b001&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/output-format&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0f88c40f-66cc-424a-eace-e3b0a23efa5b&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-area&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_692f5090-6cf7-55e8-a915-3a3a3438b594&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-corridor&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_cf4977c5-288b-8b6b-0873-4e196c54c12b&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-cube&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0f3b4eb2-a9de-e883-feb8-9ffadd30e401&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-instances&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_df08e497-7b82-8cf6-27ee-d470d3449e47&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/instanceid&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_4de56705-b534-8e36-9502-942fd38beeae&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/paging-support&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_eae86f25-6a86-020a-6e4c-4b767be1f532&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-position&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0583b141-01d8-7a84-7b36-b2a7542194de&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-radius&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_27e382e6-8b3e-654e-484b-225c26e16dc2&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-trajectory&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_b07faf91-7c0d-17b9-e289-60388606cc03&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/status-codes&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_c032069f-e51d-03b7-80e3-ed7665eaf876&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/links&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_4249579a-a6b1-306d-bc33-e879f955b066&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/asynchronous&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_1b48153e-6c07-d765-5bc4-5249f38131e4&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/pubsub&lt;/identifier&gt; &lt;/requirement&gt;
+&lt;title&gt;Requirements Class ‘Core’&lt;/title&gt; &lt;identifier&gt;http://www.opengis.net/spec/ogcapi-edr-3/1.0/req/req-class-core&lt;/identifier&gt; &lt;classification&gt; &lt;tag&gt;target-type&lt;/tag&gt; &lt;value&gt;OGC API-EDR Profile Standard&lt;/value&gt; &lt;/classification&gt; &lt;requirement id=&quot;_49b8a711-0949-7471-edd2-7821a4138f87&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/modspec&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_b5a0f84b-c5ab-5998-2d79-1bcf5b2edd50&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/edr-conformant&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_9a781342-1cc9-e6d6-956f-addb7666de31&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/parameter-names&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_bfb998ec-caf0-f6df-e637-5357ca080650&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_ecfd5ee0-3458-23a8-1d36-d67179c7dcb7&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-description&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_f04a2100-d0dc-aba2-503d-c38a78cb9785&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-keywords&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_670fd96e-6a9b-e512-6dd4-4d4994579cb2&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-provider&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_9a030600-0a8e-1101-c5e2-6afcdf2b6a2f&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-contact&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_bdd6c11f-1dfd-9ff3-6bc4-1ac9b5940fbc&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/root-links&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_a0c819e3-e613-106c-ad96-a95a3e0dde1d&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/publishing&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_18386ed2-9fcc-7800-7a50-7f581ae38a40&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/openapi&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_e22e6199-d7cd-4144-2f93-a60b05febb8b&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/api&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_a4b4d8fb-4d4a-3b41-dabe-8d20da8b933d&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/requirements-set&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_09421fad-f303-80d5-0078-13acdf8153d3&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/collectionid&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_bbf0b161-fa0e-f12e-aa65-306895e2a90d&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_090677d5-a89b-6340-1b94-98da86509bc1&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-spatial&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_eb0337c6-dba4-1b28-e5ec-427a110d7ce6&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-temporal&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_2fad2b50-0a03-6104-8a3b-dd850c9bb808&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-vertical&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_15c4051e-a2da-e62f-44ed-8376861c61c7&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/extent-custom&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0a097114-44b1-97fc-9947-63322623fde7&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_33ea41e5-cab8-a278-840d-dcb7f417b001&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/output-format&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0f88c40f-66cc-424a-eace-e3b0a23efa5b&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-area&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_692f5090-6cf7-55e8-a915-3a3a3438b594&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-corridor&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_cf4977c5-288b-8b6b-0873-4e196c54c12b&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-cube&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0f3b4eb2-a9de-e883-feb8-9ffadd30e401&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-instances&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_df08e497-7b82-8cf6-27ee-d470d3449e47&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/instanceid&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_4de56705-b534-8e36-9502-942fd38beeae&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/paging-support&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_5580ec66-3bc8-132c-554f-bf4a7b42fea2&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-locations&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_56546587-b3d7-0488-6ca7-db65eccd6cca&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-position&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_18ad07f4-a4f7-ee77-033d-5b62813ef4f3&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-radius&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_87b266e2-624a-6a7b-a711-4513d81e2f9a&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/data-query-trajectory&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_dcc64663-e1fe-c14c-7c76-7cd6c5399e80&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/status-codes&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_8e2507c5-5e4d-8fd7-a2dd-f58d5c0cded8&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/links&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_0e19939c-67fc-8347-1174-6bf336a64277&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/asynchronous&lt;/identifier&gt; &lt;/requirement&gt; &lt;requirement id=&quot;_58802963-dbd3-4297-2389-dd7a9243d589&quot; model=&quot;ogc&quot; type=&quot;general&quot;&gt; &lt;identifier&gt;/req/core/pubsub&lt;/identifier&gt; &lt;/requirement&gt;
 </pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000589</td><th><code><a href='./25-014.html#_platform_resources'>_platform_​resources</a></code></th>
+<td>000600</td><th><code><a href='./25-014.html#_platform_resources'>_platform_​resources</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_platform_resources&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Platform Resources&lt;/title&gt;
 &lt;p id=&quot;_a4afbc51-8fbd-56c6-7604-065c0017a998&quot;&gt;OGC API — Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.&lt;/p&gt;
 
 &lt;table id=&quot;_f7a616a4-2e2a-3dd3-380d-6a8a6673e642&quot; width=&quot;100%&quot;&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000830</td><th><code><a href='./25-014.html#_spatiotemporal_and_information_resources'>_​spatiotemporal_and_​information_​resources</a></code></th>
-<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_spatiotemporal_and_information_resources&quot; obligation=&quot;normative&quot;&gt;
-&lt;title&gt;Spatiotemporal and Information Resources&lt;/title&gt;
-&lt;table id=&quot;_61417af2-fa3d-e080-a093-e87e788b3568&quot; width=&quot;100%&quot;&gt;
+<td>000871</td><th><code><a href='./25-014.html#_spatio_temporal_and_information_resources'>_spatio_​temporal_​and_​information_​resources</a></code></th>
+<td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_spatio_temporal_and_information_resources&quot; obligation=&quot;normative&quot;&gt;
+&lt;title&gt;Spatio-temporal and Information Resources&lt;/title&gt;
+&lt;table id=&quot;_e1606364-192e-13f8-be20-6487e43e37b6&quot; width=&quot;100%&quot;&gt;
 &lt;name&gt;Spatialtemporal and Information Resource Paths&lt;/name&gt;
 &lt;thead&gt; &lt;tr&gt; &lt;th valign=&quot;middle&quot; align=&quot;left&quot;&gt;PATH TEMPLATE&lt;/th&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000897</td><th><code><a href='./25-014.html#_collection_description'>_​collection_​description</a></code></th>
+<td>000938</td><th><code><a href='./25-014.html#_collection_description'>_​collection_​description</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_collection_description&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Collection Description&lt;/title&gt;
-&lt;p id=&quot;_63727229-c2ea-9c68-d0d2-926da4c60341&quot;&gt;Each resource collection is described by a set of metadata. That metadata can be accessed directly using the /collections/{collectionId} path and as an entry in the collections property of the /collections response.&lt;/p&gt;
+&lt;p id=&quot;_252bd9cf-562a-3c57-1707-223cc675efc3&quot;&gt;Each resource &lt;tt&gt;Collection&lt;/tt&gt; is described by a set of metadata. That metadata can be accessed directly using the /collections/{collectionId} path and as an entry in the Collections property of the /collections response.&lt;/p&gt;
 
 &lt;p id=&quot;_0ec43087-0366-c676-52ea-dd990ff1de03&quot;&gt;Path:&lt;/p&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001089</td><th><code><a href='./25-014.html#_query_resources'>_query_​resources</a></code></th>
+<td>001132</td><th><code><a href='./25-014.html#_query_resources'>_query_​resources</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_query_resources&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Query Resources&lt;/title&gt;
-&lt;table id=&quot;_2a8050de-8726-11c6-cc5f-2764c01ce7b7&quot; width=&quot;100%&quot;&gt;
+&lt;table id=&quot;_5ec9eb06-94cf-e360-d16a-3445d7f4ca4c&quot; width=&quot;100%&quot;&gt;
 &lt;name&gt;Query Resource Paths&lt;/name&gt;
 &lt;thead&gt; &lt;tr&gt; &lt;th valign=&quot;middle&quot; align=&quot;left&quot;&gt;PATH TEMPLATE&lt;/th&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001147</td><th><code><a href='./25-014.html#_parameters'>_​parameters</a></code></th>
+<td>001190</td><th><code><a href='./25-014.html#_parameters'>_​parameters</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_parameters&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Parameters&lt;/title&gt;
-&lt;p id=&quot;_2493cda5-b9de-1340-2a3b-9468a239e3df&quot;&gt;The following parameters are supported by all OGC EDR queries.&lt;/p&gt;
+&lt;p id=&quot;_08232507-5436-2194-fb57-184854bbb78f&quot;&gt;The following parameters are supported by all OGC API-EDR queries.&lt;/p&gt;
 
 &lt;clause id=&quot;_output_format_parameter&quot; obligation=&quot;normative&quot;&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001303</td><th><code><a href='./25-014.html#_instances_query'>_​instances_query</a></code></th>
+<td>001380</td><th><code><a href='./25-014.html#_instances_query'>_​instances_query</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_instances_query&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Instances Query&lt;/title&gt;
-&lt;p id=&quot;_53f0bc3d-54bb-a81b-5dc9-68c226583d6a&quot;&gt;Having multiple versions or instances of the same collection, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as new collections the instance query type allows this data to be described as different views of the same collection.&lt;/p&gt;
+&lt;p id=&quot;_0799393e-50fd-9c33-48e3-69eb2c10bd8b&quot;&gt;Having multiple versions or &lt;tt&gt;Instances&lt;/tt&gt; of the same &lt;tt&gt;Collection&lt;/tt&gt;, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as new Collections the &lt;tt&gt;Instance&lt;/tt&gt; query type allows this data to be described as different views of the same &lt;tt&gt;Collection&lt;/tt&gt;.&lt;/p&gt;
 
 &lt;p id=&quot;_3750d506-d1de-2535-e336-ac66840a8727&quot;&gt;Path = {root}/collections/{collectionId}/instances&lt;/p&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001346</td><th><code><a href='./25-014.html#_items_query'>_items_​query</a></code></th>
+<td>001426</td><th><code><a href='./25-014.html#_items_query'>_items_​query</a></code></th>
 <td>Hanging paragraph in clause</td><td><pre>&lt;clause id=&quot;_items_query&quot; obligation=&quot;normative&quot;&gt;
 &lt;title&gt;Items Query&lt;/title&gt;
 &lt;p id=&quot;_eaa2bd45-ec05-a1cd-bea2-642f868afae1&quot;&gt;Paths:
 * {root}/collections/{collectionId}/items
 * {root}/collections/{collectionId}/items/{itemid}&lt;/p&gt;</pre></td><td>2</td></tr>
-<tr class="severity2">
-<td>002291</td><th><code><a href='./25-014.html#annex-B'>annex-B</a></code></th>
-<td>Hanging paragraph in clause</td><td><pre>&lt;annex id=&quot;annex-B&quot; obligation=&quot;informative&quot;&gt;
-&lt;title&gt;Profiles&lt;/title&gt;
-&lt;note id=&quot;_4ca0834f-9ffe-433b-9c4c-ec83e2a1480a&quot;&gt; &lt;p id=&quot;_9c8fce50-f8be-f36b-b7b6-f65297ab7667&quot;&gt;The following content is based on a UML model / XML schema environment. We may want to re-write it to better align with the OGC Building Block approach.&lt;/p&gt;
-&lt;/note&gt;
-</pre></td><td>2</td></tr>
 </tbody></table>
 <h2>Requirements</h2>
 <table border="1">
@@ -135,81 +137,91 @@ thead th { font-weight: bold; background-color: aqua; }
 <th width="30%">Message</th><th width="40%">Context</th><th width="5%">Severity</th></thead>
 <tbody>
 <tr class="severity2">
-<td>000647</td><th><code><a href='./25-014.html#_e7f486c3-750f-6484-99a2-cbb693613f56'>_e7f486c3-750f-6484-99a2-cbb693613f56</a></code></th>
+<td>000658</td><th><code><a href='./25-014.html#_8dbeda3a-d03d-175a-e7b9-388203977ecf'>_8dbeda3a-d03d-175a-e7b9-388203977ecf</a></code></th>
 <td>Requirement /rec/​core/root has no corresponding Conformance test
-</td><td><pre>&lt;recommendation id=&quot;_e7f486c3-750f-6484-99a2-cbb693613f56&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/root&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_12836775-15ad-ebc6-27f0-ee52b73a136e&quot;&gt;The EDR Landing Page schema only requires the &lt;tt&gt;links&lt;/tt&gt; property. A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHOULD&lt;/em&gt; require the following additional properties:&lt;/p&gt;
+</td><td><pre>&lt;recommendation id=&quot;_8dbeda3a-d03d-175a-e7b9-388203977ecf&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/root&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_6b6e2d03-3961-116c-5511-d2e9b7cd8ed9&quot;&gt;The OGC API-EDR Landing Page schema only requires the &lt;tt&gt;links&lt;/tt&gt; property, however, a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHOULD&lt;/em&gt; require the following additional properties:&lt;/p&gt;
 &lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_698c5472-8b41-7e72-8142-6cde05b9ad90&quot;&gt;The &lt;tt&gt;Description&lt;/tt&gt; property &lt;em&gt;SHOULD&lt;/em&gt; be required&lt;/p&gt;
 &lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_68b0df92-8c59-124c-4e5f-f74b7da634f8&quot;&gt;The &lt;tt&gt;Keywords&lt;/tt&gt; property &lt;em&gt;SHOULD&lt;/em&gt; be required&lt;/p&gt;
 &lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_fdaee1e0-eae5-39e7-0250-24fd147921e4&quot;&gt;The &lt;tt&gt;Provider&lt;/tt&gt; property &lt;em&gt;SHOULD&lt;/em&gt; be required and populated with the name and url properties&lt;/p&gt;
 &lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_aab0bf08-2bcd-5959-c412-e68c4a269300&quot;&gt;The &lt;tt&gt;Contact&lt;/tt&gt; property &lt;em&gt;SHOULD&lt;/em&gt; be required and populated with the with the email properties&lt;/p&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000668</td><th><code><a href='./25-014.html#_ddcb0206-7445-b337-7a3d-8c0a830d7108'>_ddcb0206-7445-b337-7a3d-8c0a830d7108</a></code></th>
+<td>000679</td><th><code><a href='./25-014.html#_ddcb0206-7445-b337-7a3d-8c0a830d7108'>_ddcb0206-7445-b337-7a3d-8c0a830d7108</a></code></th>
 <td>Requirement /req/​core/root-description has no corresponding Conformance test
 </td><td><pre>&lt;requirement id=&quot;_ddcb0206-7445-b337-7a3d-8c0a830d7108&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-description&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_b2f37df3-6af4-1b3a-c984-9445bdbafcb0&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Description&lt;/tt&gt; property, that property &lt;em&gt;SHALL&lt;/em&gt; be populated.&lt;/p&gt;
 &lt;/description&gt;
 &lt;/requirement&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000677</td><th><code><a href='./25-014.html#_669a6737-8e5a-3d5b-42c5-b92566f6ccc8'>_669a6737-8e5a-3d5b-42c5-b92566f6ccc8</a></code></th>
+<td>000688</td><th><code><a href='./25-014.html#_d53938ea-4570-934d-660e-9e417751b43c'>_d53938ea-4570-934d-660e-9e417751b43c</a></code></th>
+<td>Requirement /req/​core/root-attribution has no corresponding Conformance test
+</td><td><pre>&lt;requirement id=&quot;_d53938ea-4570-934d-660e-9e417751b43c&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-attribution&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_8bbae04a-4e73-e721-5c8b-4b6a8d80702c&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Attribution&lt;/tt&gt; property, that property &lt;em&gt;SHALL&lt;/em&gt; be populated.&lt;/p&gt;
+&lt;/description&gt;
+&lt;/requirement&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000697</td><th><code><a href='./25-014.html#_a40f79ff-3268-d6fb-958d-c5d493fbce63'>_a40f79ff-3268-d6fb-958d-c5d493fbce63</a></code></th>
 <td>Requirement /req/​core/root-keywords has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_669a6737-8e5a-3d5b-42c5-b92566f6ccc8&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-keywords&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_62f4d9f8-e170-3c95-392f-47633cc2062a&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Keywords&lt;/tt&gt; property, that property &lt;em&gt;SHALL&lt;/em&gt; be populated with at least one keyword entry.&lt;/p&gt;
+</td><td><pre>&lt;requirement id=&quot;_a40f79ff-3268-d6fb-958d-c5d493fbce63&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-keywords&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_f888cb6a-e6f2-faee-2a4e-0ae15b6fc6f8&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Keywords&lt;/tt&gt; property, that property &lt;em&gt;SHALL&lt;/em&gt; be populated with at least one keyword entry.&lt;/p&gt;
 &lt;/description&gt;
 &lt;/requirement&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000686</td><th><code><a href='./25-014.html#_c3b65ced-97bb-9ab4-ef5e-87231098b4d0'>_c3b65ced-97bb-9ab4-ef5e-87231098b4d0</a></code></th>
+<td>000706</td><th><code><a href='./25-014.html#_773b5e14-fbd4-6808-fa70-7668fa606caf'>_773b5e14-fbd4-6808-fa70-7668fa606caf</a></code></th>
 <td>Requirement /req/​core/root-provider has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_c3b65ced-97bb-9ab4-ef5e-87231098b4d0&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-provider&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_eaa0892a-720c-4518-9dc2-7cc52124b336&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Provider&lt;/tt&gt; property, that property &lt;em&gt;SHALL&lt;/em&gt; be populated with the name and url properties.&lt;/p&gt;
-&lt;/description&gt;
-&lt;/requirement&gt;</pre></td><td>2</td></tr>
-<tr class="severity2">
-<td>000695</td><th><code><a href='./25-014.html#_32709d1a-fef6-f15e-bf1b-b2d507b7e622'>_32709d1a-fef6-f15e-bf1b-b2d507b7e622</a></code></th>
-<td>Requirement /req/​core/root-contact has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_32709d1a-fef6-f15e-bf1b-b2d507b7e622&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-contact&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_61ffc6f1-227b-96bb-504e-1cb0d663f92e&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Contact&lt;/tt&gt; property, that property &lt;em&gt;SHALL&lt;/em&gt; be populated with the email properties.&lt;/p&gt;
-&lt;/description&gt;
-&lt;/requirement&gt;</pre></td><td>2</td></tr>
-<tr class="severity2">
-<td>000704</td><th><code><a href='./25-014.html#_a4a9023c-707e-a976-147b-d5178e561673'>_a4a9023c-707e-a976-147b-d5178e561673</a></code></th>
-<td>Requirement /req/​core/root-links has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_a4a9023c-707e-a976-147b-d5178e561673&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-links&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_fff049cc-158d-75b5-b99b-d4884fced1dc&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Links&lt;/tt&gt; property:&lt;/p&gt;
-&lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_88ffb445-4ac1-45c7-9401-ae84d7b78773&quot;&gt;The &lt;tt&gt;Links&lt;/tt&gt; property &lt;em&gt;SHALL&lt;/em&gt; define the links that &lt;em&gt;SHALL&lt;/em&gt; be included in the Root response&lt;/p&gt;
-&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_9a98f653-9ece-5e14-93ed-ddad9e1b0528&quot;&gt;The &lt;tt&gt;Links&lt;/tt&gt; property &lt;em&gt;SHALL&lt;/em&gt; be populated with href and rel properties&lt;/p&gt;
+</td><td><pre>&lt;requirement id=&quot;_773b5e14-fbd4-6808-fa70-7668fa606caf&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-provider&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_75d651e3-cbc0-7aa7-ef82-99665c2cbc26&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Provider&lt;/tt&gt; property.&lt;/p&gt;
+&lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_560c25cf-f819-271a-753a-4b8e35eae8ad&quot;&gt;A &lt;tt&gt;Provider&lt;/tt&gt; property &lt;em&gt;SHALL&lt;/em&gt; be populated with a &lt;tt&gt;name&lt;/tt&gt; property.&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_1e5414c5-7c99-42b2-e2a1-ad472604dbe3&quot;&gt;A &lt;tt&gt;Provider&lt;/tt&gt; property &lt;em&gt;MAY&lt;/em&gt; be populated with a &lt;tt&gt;url&lt;/tt&gt; property.&lt;/p&gt;
 &lt;/component&gt;
 &lt;/requirement&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000719</td><th><code><a href='./25-014.html#_2c724162-d05c-ebaf-fe35-d0bc541f2973'>_2c724162-d05c-ebaf-fe35-d0bc541f2973</a></code></th>
+<td>000721</td><th><code><a href='./25-014.html#_8cb20e89-d0ca-5071-ce73-f887d26d49c2'>_8cb20e89-d0ca-5071-ce73-f887d26d49c2</a></code></th>
+<td>Requirement /req/​core/root-contact has no corresponding Conformance test
+</td><td><pre>&lt;requirement id=&quot;_8cb20e89-d0ca-5071-ce73-f887d26d49c2&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-contact&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_867503c4-006a-5ef5-3d03-86c7e4fc26d7&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Contact&lt;/tt&gt; property,&lt;/p&gt;
+&lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_f70d2c48-31b4-2c43-1361-9dadab5edb95&quot;&gt;A &lt;tt&gt;Contact&lt;/tt&gt; property &lt;em&gt;SHALL&lt;/em&gt; be populated with the &lt;tt&gt;email&lt;/tt&gt; property.&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_c0a2975d-3c27-12ec-f348-08fa752a5ff8&quot;&gt;A &lt;tt&gt;Contact&lt;/tt&gt; property &lt;em&gt;MAY&lt;/em&gt; be populated with the &lt;tt&gt;name&lt;/tt&gt; property.&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_1f124282-88c0-faf6-0cc2-31ab456eb14d&quot;&gt;A &lt;tt&gt;Contact&lt;/tt&gt; property &lt;em&gt;MAY&lt;/em&gt; be populated with the &lt;tt&gt;url&lt;/tt&gt; property.&lt;/p&gt;
+&lt;/component&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000739</td><th><code><a href='./25-014.html#_87fef462-686b-1379-eb2d-cc84198c5298'>_87fef462-686b-1379-eb2d-cc84198c5298</a></code></th>
+<td>Requirement /req/​core/root-links has no corresponding Conformance test
+</td><td><pre>&lt;requirement id=&quot;_87fef462-686b-1379-eb2d-cc84198c5298&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/root-links&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_19dcf6bb-92fd-bed4-c96a-1771181d6d98&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHALL&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Links&lt;/tt&gt; property:&lt;/p&gt;
+&lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_eb64a2d0-747a-c88e-309a-1ed46c0b2e5f&quot;&gt;The &lt;tt&gt;Links&lt;/tt&gt; property &lt;em&gt;SHALL&lt;/em&gt; define the links that &lt;em&gt;SHALL&lt;/em&gt; be included in the Root response&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_56343052-3ac5-d3e0-aab1-684b911cb3c8&quot;&gt;The &lt;tt&gt;Links&lt;/tt&gt; property &lt;em&gt;SHALL&lt;/em&gt; be populated with href and rel properties&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_beaa2964-2ef7-c1ff-d072-9c3dabb243de&quot;&gt;The &lt;tt&gt;Links&lt;/tt&gt; property &lt;em&gt;MAY&lt;/em&gt; be populated with type, hreflang and length properties&lt;/p&gt;
+&lt;/component&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>000757</td><th><code><a href='./25-014.html#_2c724162-d05c-ebaf-fe35-d0bc541f2973'>_2c724162-d05c-ebaf-fe35-d0bc541f2973</a></code></th>
 <td>Requirement /rec/​core/root-links has no corresponding Conformance test
 </td><td><pre>&lt;recommendation id=&quot;_2c724162-d05c-ebaf-fe35-d0bc541f2973&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/root-links&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_12e7def2-b54e-6039-0acb-bf1d806491bc&quot;&gt;A Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;SHOULD&lt;/em&gt; require that when an EDR Landing Page includes the &lt;tt&gt;Links&lt;/tt&gt; property, the title property of each link &lt;em&gt;SHALL&lt;/em&gt; be populated.&lt;/p&gt;
 &lt;/description&gt;
 &lt;/recommendation&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000763</td><th><code><a href='./25-014.html#_6017aa69-d45e-e71c-99a8-caffe98e4068'>_6017aa69-d45e-e71c-99a8-caffe98e4068</a></code></th>
+<td>000801</td><th><code><a href='./25-014.html#_cf8b6fc9-1e52-3da5-0eab-7180cd31dcda'>_cf8b6fc9-1e52-3da5-0eab-7180cd31dcda</a></code></th>
 <td>Requirement /req/​core/openapi has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_6017aa69-d45e-e71c-99a8-caffe98e4068&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/openapi&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_2851fcad-9812-710d-419a-9e60dd53e178&quot;&gt;The profile OpenAPI document &lt;em&gt;SHALL&lt;/em&gt; describe the profile EDR API as follows:&lt;/p&gt;
+</td><td><pre>&lt;requirement id=&quot;_cf8b6fc9-1e52-3da5-0eab-7180cd31dcda&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/openapi&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_2851fcad-9812-710d-419a-9e60dd53e178&quot;&gt;The profile OpenAPI document &lt;em&gt;SHALL&lt;/em&gt; describe the profile EDR API as follows:&lt;/p&gt;
 &lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_0d065cad-4cee-eb3e-49f6-dc0f140a474f&quot;&gt;The servers attributes of the OpenAPI root object &lt;em&gt;SHALL&lt;/em&gt; be blank (the profile is not linked to specific implementations)&lt;/p&gt;
-&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_1a17a8ed-6c46-e72c-5a61-1426e64a6793&quot;&gt;The Extent requirement rules &lt;em&gt;SHALL&lt;/em&gt; be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object&lt;/p&gt;
-&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_b117839d-75f6-2494-be43-cc5c7f7a13ff&quot;&gt;The data_query type requirement rules &lt;em&gt;SHALL&lt;/em&gt; be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collection} id Paths object&lt;/p&gt;
-&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_dd4cf6cc-bad2-912f-7203-c22550b6a899&quot;&gt;The data_query types &lt;em&gt;SHALL&lt;/em&gt; be encoded as Paths objects in the OpenAPI document, where appropriate the output_format, default_output_format, crs, within_units, width-units, height-units and limit (paging) requirements SHALL be encoded in the child Parameter objects of the Paths object.&lt;/p&gt;</pre></td><td>2</td></tr>
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_118fed54-7a04-c307-ec07-f5bc9ce82846&quot;&gt;The Extent requirement rules &lt;em&gt;SHALL&lt;/em&gt; be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collectionId} Paths object&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_1266a662-3321-853e-49aa-12bca5b14019&quot;&gt;The data_query type requirement rules &lt;em&gt;SHALL&lt;/em&gt; be encoded in the JSON schema defined in the 200 responses for the /collections and /collections/{collectionId} Paths object&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_ddc56b53-0459-5f98-a7ae-75b1913df11e&quot;&gt;The conformance classes &lt;em&gt;SHALL&lt;/em&gt; be encoded in the JSON schema defined in the 200 responses for the /conformance Paths object.&lt;/p&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000956</td><th><code><a href='./25-014.html#_b5f26496-ca66-40ed-b3c9-e73df7c22fcf'>_b5f26496-ca66-40ed-b3c9-e73df7c22fcf</a></code></th>
+<td>000997</td><th><code><a href='./25-014.html#_b5f26496-ca66-40ed-b3c9-e73df7c22fcf'>_b5f26496-ca66-40ed-b3c9-e73df7c22fcf</a></code></th>
 <td>Requirement /rec/​core/extent has no corresponding Conformance test
-</td><td><pre>&lt;recommendation id=&quot;_b5f26496-ca66-40ed-b3c9-e73df7c22fcf&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/extent&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_a299449b-d4f4-3d68-44de-2bca934febec&quot;&gt;A requirement &lt;em&gt;SHOULD&lt;/em&gt; be defined specifying the rules for defining the Collection extent.&lt;/p&gt;
+</td><td><pre>&lt;recommendation id=&quot;_b5f26496-ca66-40ed-b3c9-e73df7c22fcf&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/extent&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_a299449b-d4f4-3d68-44de-2bca934febec&quot;&gt;A requirement &lt;em&gt;SHOULD&lt;/em&gt; be defined specifying the rules for defining the &lt;tt&gt;Collection&lt;/tt&gt; extent.&lt;/p&gt;
 &lt;/description&gt;
 &lt;/recommendation&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000965</td><th><code><a href='./25-014.html#_ab5f6b81-7668-040a-56a7-c325554b4682'>_ab5f6b81-7668-040a-56a7-c325554b4682</a></code></th>
+<td>001006</td><th><code><a href='./25-014.html#_ae335308-9e67-ca9d-0c34-c3277e0aedc3'>_ae335308-9e67-ca9d-0c34-c3277e0aedc3</a></code></th>
 <td>Requirement /req/​core/extent-spatial has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_ab5f6b81-7668-040a-56a7-c325554b4682&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/extent-spatial&lt;/identifier&gt; &lt;classification&gt; &lt;tag&gt;NOTE&lt;/tag&gt; &lt;value&gt;Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values)&lt;/value&gt; &lt;/classification&gt; &lt;description&gt; &lt;p id=&quot;_bd8188b3-5a22-9588-3b9d-f1b2ddc1d150&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; supports Extents with spatial dimensions, then:&lt;/p&gt;
+</td><td><pre>&lt;requirement id=&quot;_ae335308-9e67-ca9d-0c34-c3277e0aedc3&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/extent-spatial&lt;/identifier&gt; &lt;classification&gt; &lt;tag&gt;NOTE&lt;/tag&gt; &lt;value&gt;Regular expressions could be used to restrict reference system definitions to WKT2 or EPSG values&lt;/value&gt; &lt;/classification&gt; &lt;description&gt; &lt;p id=&quot;_bd8188b3-5a22-9588-3b9d-f1b2ddc1d150&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; supports Extents with spatial dimensions, then:&lt;/p&gt;
 &lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_7f1a495f-cf0f-d1c6-d024-e74364f1187e&quot;&gt;The Profile &lt;em&gt;SHALL&lt;/em&gt; specify the rules for the spatial Coordinate Reference System (CRS).&lt;/p&gt;
 &lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_88e2e1a5-cd07-21d3-e312-353f60a9007a&quot;&gt;Those rules &lt;em&gt;SHALL&lt;/em&gt; be specified using either:&lt;/p&gt;
 &lt;ul id=&quot;_f348387b-148e-268e-d455-d0f5908c65e8&quot;&gt; &lt;li&gt; &lt;p id=&quot;_1f3bcbea-45d9-cf93-9670-baaeec074ccc&quot;&gt;Enumerated list of valid CRS values&lt;/p&gt;
 &lt;/li&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000988</td><th><code><a href='./25-014.html#_02cd887f-be23-ec11-b1ba-5abc7a80293d'>_02cd887f-be23-ec11-b1ba-5abc7a80293d</a></code></th>
+<td>001029</td><th><code><a href='./25-014.html#_02cd887f-be23-ec11-b1ba-5abc7a80293d'>_02cd887f-be23-ec11-b1ba-5abc7a80293d</a></code></th>
 <td>Requirement /per/​core/extent-spatial has no corresponding Conformance test
 </td><td><pre>&lt;permission id=&quot;_02cd887f-be23-ec11-b1ba-5abc7a80293d&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/per/core/extent-spatial&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_692b2af4-9f87-dd66-9cbd-1bf08ca29fa5&quot;&gt;Regular expressions &lt;em&gt;MAY&lt;/em&gt; be used to restrict reference system definitions to WKT2 or EPSG values&lt;/p&gt;
 &lt;/description&gt;
 &lt;/permission&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>000997</td><th><code><a href='./25-014.html#_a1e135b5-bd74-9f1a-3809-280b4d3ba84c'>_a1e135b5-bd74-9f1a-3809-280b4d3ba84c</a></code></th>
+<td>001038</td><th><code><a href='./25-014.html#_a1e135b5-bd74-9f1a-3809-280b4d3ba84c'>_a1e135b5-bd74-9f1a-3809-280b4d3ba84c</a></code></th>
 <td>Requirement /req/​core/extent-temporal has no corresponding Conformance test
 </td><td><pre>&lt;requirement id=&quot;_a1e135b5-bd74-9f1a-3809-280b4d3ba84c&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/extent-temporal&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_f54b5b61-5efe-d9a7-2437-3dc243bae0bf&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; supports Extents with a temporal dimension, then:&lt;/p&gt;
 &lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_ba955f1d-555a-8327-df16-6d365c58b016&quot;&gt;The Profile &lt;em&gt;SHALL&lt;/em&gt; specify the rules for expressing the Temporal Reference System (TRS).&lt;/p&gt;
@@ -217,13 +229,13 @@ thead th { font-weight: bold; background-color: aqua; }
 &lt;ul id=&quot;_27d95584-1dce-02ba-8165-aaa05eed7293&quot;&gt; &lt;li&gt; &lt;p id=&quot;_3bd32d9a-3c74-eefe-ae46-a55371f99628&quot;&gt;Enumerated list of valid TRS values&lt;/p&gt;
 &lt;/li&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001017</td><th><code><a href='./25-014.html#_2f86b71c-559a-a378-8ec0-1c7b59d84516'>_2f86b71c-559a-a378-8ec0-1c7b59d84516</a></code></th>
+<td>001058</td><th><code><a href='./25-014.html#_2f86b71c-559a-a378-8ec0-1c7b59d84516'>_2f86b71c-559a-a378-8ec0-1c7b59d84516</a></code></th>
 <td>Requirement /rec/​core/extent-temporal has no corresponding Conformance test
 </td><td><pre>&lt;recommendation id=&quot;_2f86b71c-559a-a378-8ec0-1c7b59d84516&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/extent-temporal&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_aac4a454-5778-933b-b96e-a602440a4e56&quot;&gt;A requirement &lt;em&gt;SHOULD&lt;/em&gt; be defined specifying the minimum temporal bounds that &lt;em&gt;SHALL&lt;/em&gt; be supported&lt;/p&gt;
 &lt;/description&gt;
 &lt;/recommendation&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001026</td><th><code><a href='./25-014.html#_66c45d1e-a69e-de47-1769-bdb9a2e3e233'>_66c45d1e-a69e-de47-1769-bdb9a2e3e233</a></code></th>
+<td>001067</td><th><code><a href='./25-014.html#_66c45d1e-a69e-de47-1769-bdb9a2e3e233'>_66c45d1e-a69e-de47-1769-bdb9a2e3e233</a></code></th>
 <td>Requirement /req/​core/extent-vertical has no corresponding Conformance test
 </td><td><pre>&lt;requirement id=&quot;_66c45d1e-a69e-de47-1769-bdb9a2e3e233&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/extent-vertical&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_38e31bf0-3fff-ebfa-b0ba-c19191a5141d&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; supports Extents with a vertical dimension, then:&lt;/p&gt;
 &lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_c33e6b06-0b78-097a-dbd2-4b36e6c03656&quot;&gt;The Profile &lt;em&gt;SHALL&lt;/em&gt; specify the rules for expressing the Vertical Reference System (VRS).&lt;/p&gt;
@@ -231,27 +243,27 @@ thead th { font-weight: bold; background-color: aqua; }
 &lt;ul id=&quot;_f0ddc0a9-987f-1132-33c2-842736c1a554&quot;&gt; &lt;li&gt; &lt;p id=&quot;_f06de7c1-c7a5-2aa3-4900-807372f4a2c7&quot;&gt;Enumerated list of valid VRS values&lt;/p&gt;
 &lt;/li&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001046</td><th><code><a href='./25-014.html#_536254b2-c831-1ae4-8d34-262c2a53bc53'>_536254b2-c831-1ae4-8d34-262c2a53bc53</a></code></th>
+<td>001087</td><th><code><a href='./25-014.html#_536254b2-c831-1ae4-8d34-262c2a53bc53'>_536254b2-c831-1ae4-8d34-262c2a53bc53</a></code></th>
 <td>Requirement /rec/​core/extent-vertical has no corresponding Conformance test
 </td><td><pre>&lt;recommendation id=&quot;_536254b2-c831-1ae4-8d34-262c2a53bc53&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/extent-vertical&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_c72f4f3b-c6c9-2fcf-37c7-e4010b38e721&quot;&gt;A requirement &lt;em&gt;SHOULD&lt;/em&gt; be defined specifying the minimum vertical bounds that &lt;em&gt;SHALL&lt;/em&gt; be supported&lt;/p&gt;
 &lt;/description&gt;
 &lt;/recommendation&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001055</td><th><code><a href='./25-014.html#_f5c99bed-2dc6-94d0-5299-11036905aaab'>_f5c99bed-2dc6-94d0-5299-11036905aaab</a></code></th>
+<td>001096</td><th><code><a href='./25-014.html#_ac370c00-0045-32b1-e29e-8a79386480ec'>_ac370c00-0045-32b1-e29e-8a79386480ec</a></code></th>
 <td>Requirement /req/​core/extent-custom has no corresponding Conformance test
-</td><td><pre>&lt;requirement id=&quot;_f5c99bed-2dc6-94d0-5299-11036905aaab&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/extent-custom&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_3bd83c54-f4df-80d2-78c1-8ed92686f777&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; supports Extents with a custom dimension, then:&lt;/p&gt;
+</td><td><pre>&lt;requirement id=&quot;_ac370c00-0045-32b1-e29e-8a79386480ec&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/extent-custom&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_3bd83c54-f4df-80d2-78c1-8ed92686f777&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; supports Extents with a custom dimension, then:&lt;/p&gt;
 &lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_8bea8e4f-67dd-4d4d-52c2-a72e13d74e9d&quot;&gt;The Profile &lt;em&gt;SHALL&lt;/em&gt; specify the rules for expressing the custom dimension.&lt;/p&gt;
 &lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_5a271d71-92cd-e022-d5fc-e8f5c69ea185&quot;&gt;Those rules &lt;em&gt;SHALL&lt;/em&gt; be specified using either:&lt;/p&gt;
-&lt;ul id=&quot;_8cd4f7dd-f2e2-b6a7-f572-5f20649e9b65&quot;&gt; &lt;li&gt; &lt;p id=&quot;_251f5746-3663-dac8-3a81-193ad8269d3d&quot;&gt;A custom dimension name&lt;/p&gt;
+&lt;ul id=&quot;_3090a07f-a28f-3f7a-8d21-58db1ae5ee85&quot;&gt; &lt;li&gt; &lt;p id=&quot;_8e3cba30-afc1-de45-8841-264901844e61&quot;&gt;A custom dimension id&lt;/p&gt;
 &lt;/li&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001077</td><th><code><a href='./25-014.html#_6dc5c727-1ca7-964f-d313-f1cd1f33a52b'>_6dc5c727-1ca7-964f-d313-f1cd1f33a52b</a></code></th>
+<td>001120</td><th><code><a href='./25-014.html#_6dc5c727-1ca7-964f-d313-f1cd1f33a52b'>_6dc5c727-1ca7-964f-d313-f1cd1f33a52b</a></code></th>
 <td>Requirement /rec/​core/extent-custom has no corresponding Conformance test
 </td><td><pre>&lt;recommendation id=&quot;_6dc5c727-1ca7-964f-d313-f1cd1f33a52b&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/extent-custom&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_6c833252-adbb-e8ec-a8cb-c81d0c6680b8&quot;&gt;A requirement &lt;em&gt;SHOULD&lt;/em&gt; be defined specifying the minimum bounds of custom extents that &lt;em&gt;SHALL&lt;/em&gt; be supported&lt;/p&gt;
 &lt;/description&gt;
 &lt;/recommendation&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001166</td><th><code><a href='./25-014.html#_5b31f0a8-8923-823f-d34e-60760020eff2'>_5b31f0a8-8923-823f-d34e-60760020eff2</a></code></th>
+<td>001209</td><th><code><a href='./25-014.html#_5b31f0a8-8923-823f-d34e-60760020eff2'>_5b31f0a8-8923-823f-d34e-60760020eff2</a></code></th>
 <td>Requirement /rec/​core/output-format has no corresponding Conformance test
 </td><td><pre>&lt;recommendation id=&quot;_5b31f0a8-8923-823f-d34e-60760020eff2&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/rec/core/output-format&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_f302600f-d8bd-25c4-8a83-7b79655e7046&quot;&gt;The recommended definition approaches are as follows:&lt;/p&gt;
 &lt;ul id=&quot;_3f3406f2-986c-ce14-1cb7-e8a642a85a89&quot;&gt; &lt;li&gt; &lt;p id=&quot;_5cdcff15-3969-5c52-365c-d45674e4db09&quot;&gt;JSON – Link to a JSON Schema definition&lt;/p&gt;
@@ -259,7 +271,15 @@ thead th { font-weight: bold; background-color: aqua; }
 &lt;li&gt; &lt;p id=&quot;_62bea3c8-2410-e624-e842-71e27590cdc7&quot;&gt;XML – Link to a XML Schema definition&lt;/p&gt;
 &lt;/li&gt;</pre></td><td>2</td></tr>
 <tr class="severity2">
-<td>001585</td><th><code><a href='./25-014.html#_ede43ffd-9699-d289-58e5-c2922367e37c'>_ede43ffd-9699-d289-58e5-c2922367e37c</a></code></th>
+<td>001349</td><th><code><a href='./25-014.html#req_core_data-query-locations'>req_core_​data-query-locations</a></code></th>
+<td>Requirement /req/​core/data-query-locations has no corresponding Conformance test
+</td><td><pre>&lt;requirement id=&quot;req_core_data-query-locations&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/req/core/data-query-locations&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_d2e765bc-b911-2df3-268a-5d0bf88006b5&quot;&gt;If a Profile of the &lt;eref type=&quot;inline&quot; bibitemid=&quot;ogc-edr&quot; citeas=&quot;OGC 19-086r4&quot;&gt;OGC API — Environmental Data Retrieval Standard&lt;/eref&gt; &lt;em&gt;restricts&lt;/em&gt; data queries by making the Locations query mandatory, then:&lt;/p&gt;
+&lt;/description&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_18077cb3-f799-5930-fb1c-f2010787a27c&quot;&gt;The Profile &lt;em&gt;SHALL&lt;/em&gt; include a requirement mandating the &lt;tt&gt;Locations&lt;/tt&gt; query.&lt;/p&gt;
+&lt;/component&gt; &lt;component class=&quot;part&quot;&gt; &lt;p id=&quot;_5d65b73c-9e49-7fcf-ddfc-0a2c6fdf6296&quot;&gt;The &lt;tt&gt;Locations&lt;/tt&gt; query requirement &lt;em&gt;SHALL&lt;/em&gt; specify the following:&lt;/p&gt;
+&lt;ul id=&quot;_c1fb945c-1d15-89f2-2b25-d2554a13e5fa&quot;&gt; &lt;li&gt; &lt;p id=&quot;_eee675c0-73c2-e229-44b8-3bd5b7551d86&quot;&gt;Enumerated list of output_format types&lt;/p&gt;
+&lt;/li&gt;</pre></td><td>2</td></tr>
+<tr class="severity2">
+<td>001674</td><th><code><a href='./25-014.html#_ede43ffd-9699-d289-58e5-c2922367e37c'>_ede43ffd-9699-d289-58e5-c2922367e37c</a></code></th>
 <td>Requirement /per/​core/​asynchronous has no corresponding Conformance test
 </td><td><pre>&lt;permission id=&quot;_ede43ffd-9699-d289-58e5-c2922367e37c&quot; model=&quot;ogc&quot;&gt; &lt;identifier&gt;/per/core/asynchronous&lt;/identifier&gt; &lt;description&gt; &lt;p id=&quot;_c073cb18-2f5e-faf4-ed8a-c78306db04d1&quot;&gt;The documentation of the mechanism for delivering the result of the asynchronous query &lt;em&gt;MAY&lt;/em&gt; be provided through a link to an external document.&lt;/p&gt;
 &lt;/description&gt;
@@ -295,52 +315,40 @@ thead th { font-weight: bold; background-color: aqua; }
 <td></td><th><code>XML Line 000098:50</code></th>
 <td>element "foreword" not allowed here; expected element "clause",​ "definitions", "floating-title" or "terms"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001170:45</code></th>
+<td></td><th><code>XML Line 001206:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001175:45</code></th>
+<td></td><th><code>XML Line 001211:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001186:45</code></th>
+<td></td><th><code>XML Line 001222:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001192:45</code></th>
+<td></td><th><code>XML Line 001228:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001200:45</code></th>
+<td></td><th><code>XML Line 001236:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001218:45</code></th>
-<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 001234:45</code></th>
-<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 001240:45</code></th>
-<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 001251:45</code></th>
+<td></td><th><code>XML Line 001250:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
 <td></td><th><code>XML Line 001256:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001263:45</code></th>
+<td></td><th><code>XML Line 001272:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001270:45</code></th>
+<td></td><th><code>XML Line 001278:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001277:45</code></th>
+<td></td><th><code>XML Line 001290:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001283:45</code></th>
+<td></td><th><code>XML Line 001295:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001291:45</code></th>
-<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
-<tr class="severity2">
-<td></td><th><code>XML Line 001301:45</code></th>
+<td></td><th><code>XML Line 001302:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
 <td></td><th><code>XML Line 001309:45</code></th>
@@ -349,91 +357,106 @@ thead th { font-weight: bold; background-color: aqua; }
 <td></td><th><code>XML Line 001316:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001325:45</code></th>
+<td></td><th><code>XML Line 001322:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001334:45</code></th>
+<td></td><th><code>XML Line 001330:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001342:45</code></th>
+<td></td><th><code>XML Line 001340:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001350:45</code></th>
+<td></td><th><code>XML Line 001348:45</code></th>
 <td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001603:75</code></th>
+<td></td><th><code>XML Line 001355:45</code></th>
+<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001364:45</code></th>
+<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001373:45</code></th>
+<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001381:45</code></th>
+<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001389:45</code></th>
+<td>element "component" incomplete; expected element "admonition", "amend", "bookmark", "columnbreak", "component", "dl", "example", "figure",​ "form", "formula", "hr", "imagemap", "note", "ol", "p", "pagebreak", "passthrough", "permission", "pre", "quote", "recommendation", "requirement", "review",​ "sourcecode", "svgmap",​ "table", "toc" or "ul"</td><td><pre></pre></td><td>2</td></tr>
+<tr class="severity2">
+<td></td><th><code>XML Line 001401:75</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001605:74</code></th>
+<td></td><th><code>XML Line 001403:74</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001607:68</code></th>
+<td></td><th><code>XML Line 001405:68</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001613:75</code></th>
+<td></td><th><code>XML Line 001411:75</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001615:74</code></th>
+<td></td><th><code>XML Line 001413:74</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001617:68</code></th>
+<td></td><th><code>XML Line 001415:68</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001620:293</code></th>
+<td></td><th><code>XML Line 001418:293</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001625:75</code></th>
+<td></td><th><code>XML Line 001423:75</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001627:74</code></th>
+<td></td><th><code>XML Line 001425:74</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001629:68</code></th>
+<td></td><th><code>XML Line 001427:68</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001640:166</code></th>
+<td></td><th><code>XML Line 001438:166</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001641:73</code></th>
+<td></td><th><code>XML Line 001439:73</code></th>
 <td>found attribute "format",​ but no attributes allowed here</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001641:80</code></th>
+<td></td><th><code>XML Line 001439:80</code></th>
 <td>element "link" missing required attribute "target"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001642:73</code></th>
+<td></td><th><code>XML Line 001440:73</code></th>
 <td>found attribute "format",​ but no attributes allowed here</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001642:80</code></th>
+<td></td><th><code>XML Line 001440:80</code></th>
 <td>element "link" missing required attribute "target"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001643:73</code></th>
+<td></td><th><code>XML Line 001441:73</code></th>
 <td>found attribute "format",​ but no attributes allowed here</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001643:80</code></th>
+<td></td><th><code>XML Line 001441:80</code></th>
 <td>element "link" missing required attribute "target"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001645:75</code></th>
+<td></td><th><code>XML Line 001443:75</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001647:74</code></th>
+<td></td><th><code>XML Line 001445:74</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001649:68</code></th>
+<td></td><th><code>XML Line 001447:68</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001654:166</code></th>
+<td></td><th><code>XML Line 001452:166</code></th>
 <td>attribute "format" not allowed here; expected attribute "language", "locale" or "script"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001655:278</code></th>
+<td></td><th><code>XML Line 001453:278</code></th>
 <td>element "link" missing required attribute "target"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001655:73</code></th>
+<td></td><th><code>XML Line 001453:73</code></th>
 <td>found attribute "format",​ but no attributes allowed here</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001656:278</code></th>
+<td></td><th><code>XML Line 001454:278</code></th>
 <td>element "link" missing required attribute "target"</td><td><pre></pre></td><td>2</td></tr>
 <tr class="severity2">
-<td></td><th><code>XML Line 001656:73</code></th>
+<td></td><th><code>XML Line 001454:73</code></th>
 <td>found attribute "format",​ but no attributes allowed here</td><td><pre></pre></td><td>2</td></tr>
 </tbody></table>
 </body></html>
