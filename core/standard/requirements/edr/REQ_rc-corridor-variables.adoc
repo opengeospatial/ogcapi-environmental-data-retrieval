@@ -12,12 +12,12 @@ A corridor `data_queries` object `variables` property SHALL comply with the requ
 ---
 *B:*
 
-A corridor `data_queries` object `variables` property SHALL include a `height_units` property which MUST be a string array
+A corridor `data_queries` object `variables` property SHALL include a `height_units` property which SHALL be a string array
 
 ---
 *C:*
 
-A corridor `data_queries` object `variables` property SHALL include a `width_units` property which MUST be a string array
+A corridor `data_queries` object `variables` property SHALL include a `width_units` property which SHALL be a string array
 
 
 ====

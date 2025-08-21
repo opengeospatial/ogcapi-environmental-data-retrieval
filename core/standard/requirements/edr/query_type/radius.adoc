@@ -57,6 +57,8 @@ a| **f**
 * `f=CSV`
 a| **limit**
 
+* <<limit-parameter,guidance>> 
+
 * <<req_edr_rc-limit-definition,definition>> 
 
 * <<req_edr_rc-limit-response,rules>>  |String|No|The *limit* parameter may be used to control subsets of the selected features that should be returned in multiple responses. The full response is "paged" into smaller responses. The *limit* parameter determines a size of the paged responses.
