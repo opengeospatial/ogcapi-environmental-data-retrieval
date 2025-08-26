@@ -51,6 +51,8 @@ a| **datetime**
 * `datetime=2018-02-12T00:00Z,2018-02-12T01:00Z,2018-02-14T12:00Z`
 a| **limit**
 
+* <<limit-parameter,guidance>> 
+
 * <<req_edr_rc-limit-definition,definition>> 
 
 * <<req_edr_rc-limit-response,rules>> |String  |No| The *limit* parameter may be used to control the subset of the selected features that should be returned in the response, the page size.

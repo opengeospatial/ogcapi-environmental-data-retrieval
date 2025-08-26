@@ -50,7 +50,7 @@ Dependencies
 
 The landing page provides links that support exploration of the resources offered via the API. The most important component of a landing page is a list of links. The Landing Page resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not make any changes to this definition.
 
-The normative JSON Schema for an EDR Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
+The normative JSON Schema for an EDR Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
 
 Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content that Profiles should mandate is defined in the following requirements.
 

@@ -3,5 +3,5 @@
 ====
 *A:*
 
- `200`-response SHOULD include a link to the next "page" (relation: `next`), if more features have been selected than returned in the response.
+A HTTP 200 OK response SHOULD include a link to the next "page" (relation: `next`), if more features have been selected than returned in the response.
 ====
