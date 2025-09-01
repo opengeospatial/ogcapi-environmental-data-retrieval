@@ -8,7 +8,7 @@ identifier:: /req/edr/REQ_rc-locationid-response
 
 *A:*
 
-If the collection supports <<req_edr_rc-locations-variables,multiple locations>> The `locationId` parameter SHALL be a *comma delimited* string. Each delimited value representing a unique location.
+If the collection supports <<req_edr_rc-locations-variables,multiple locations>> the `locationId` parameter SHALL be a *comma delimited* string. Each delimited value representing a unique location.
 
 ---
 
