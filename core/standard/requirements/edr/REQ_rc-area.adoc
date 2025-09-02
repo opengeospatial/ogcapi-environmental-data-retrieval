@@ -7,53 +7,26 @@ identifier:: /req/edr/rc-area
 
 *A:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/area`.
+An `area` operation SHALL support all <<req_edr_rc-common-query-base,common query base requirements>>
 
 ---
-
 *B:*
-
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/area`.
-
----
-
-*C:*
-
-The parameter `collectionId` is the `id`  property in the collection response (JSONPath: `$.collections[*].id`).
-
----
-*D:*
 
 An `area` GET operation SHALL include a `coords` query parameter
 
 ---
-*E:*
+*C:*
 
 If the `coords` query parameter is not specified a HTTP `400` error SHOULD be generated
 
 ---
-*F:*
+*D:*
+
+An `area` `coords` query parameter value SHALL be either a WKT POLYGON or a WKT MULTIPOLYGON value
+
+---
+*E:*
 
 An `area` GET or POST operation MAY include a `z` query parameter
-
----
-*G:*
-
-An `area` GET or POST operation SHOULD include a `parameter-name` query parameter
-
----
-*H:*
-
-An `area` GET or POST operation MAY include a `datetime` query parameter
-
----
-*I:*
-
-An `area` GET or POST operation SHOULD include a `crs` query parameter
-
----
-*J:*
-
-An `area` GET or POST operation SHOULD include a `f` query parameter
 
 ====

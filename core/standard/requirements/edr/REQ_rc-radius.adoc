@@ -3,76 +3,51 @@
 [requirement]
 ====
 [%metadata]
-identifier:: /req/queries/radius
+identifier::/req/edr/rc-radius
 
 *A:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/radius`.
+A `radius` operation SHALL support all <<req_edr_rc-common-query-base,common query base requirements>>
 
 ---
 *B:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/radius`.
+A `radius` GET or POST operation SHALL include a `coords` query parameter
 
 ---
 *C:*
 
-The parameter `collectionId` is the `id`  property in the collection response (JSONPath: `$.collections[*].id`).
+If the `coords` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *D:*
 
-A `radius` GET or POST operation SHALL include a `coords` query parameter
+A `radius` `coords` query parameter value SHALL be either a WKT POINT or a WKT MULTIPOINT value
 
 ---
 *E:*
 
-If the `coords` query parameter is not specified, an HTTP `400` error should be generated
+A `radius` GET or POST operation SHALL include a `within` query parameter
 
 ---
 *F:*
 
-A `radius` GET or POST operation SHALL include a `within` query parameter
+If the `within` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *G:*
 
-If the `within` query parameter is not specified, an HTTP `400` error should be generated
-
----
-*H:*
-
 A `radius` GET or POST operation SHALL include a `within-units` query parameter
 
 ---
-*I:*
+*H:*
 
 If the `within-units` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 
-*J:*
+*I:*
 
 A `radius` GET or POST operation MAY include a `z` query parameter
-
----
-*K:*
-
-A `radius` GET or POST operation SHOULD include a `parameter-name` query parameter
-
----
-*L:*
-
-A `radius` GET or POST operation MAY include a `datetime` query parameter
-
----
-*M:*
-
-A `radius` GET or POST operation SHOULD include a `crs` query parameter
-
----
-*N:*
-
-A `radius` GET or POST operation SHOULD include an `f` query parameter
 
 ====
