@@ -3,7 +3,7 @@
 ====
 [%metadata]
 identifier:: /conf/position/no-query-params
-target:: /req/queries/position
+target:: /req/edr/rc-position
 test-purpose:: Validate that an error is returned by a `Position` query if no query parameters are specified.
 test-method::
 step::: No query parameters are specified
@@ -15,7 +15,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/position/no-coords-param
-target:: /req/queries/position
+target:: /req/edr/rc-position
 test-purpose:: Validate that an error is returned by a `Position` query when the `coords` query parameter is not specified.
 test-method::
 step::: `coords` query parameter is not specified
@@ -28,7 +28,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/position/coords-param-invalid
-target:: /req/queries/position
+target:: /req/edr/rc-position
 test-purpose:: Validate that an error is returned by a `Position` query when the `coords` query parameter does not contain a valid POINT or MULTIPOINT Well Known Text value.
 test-method::
 step::: Check `coords` query parameter is a valid Well Known Text Point or MultiPoint value
@@ -40,7 +40,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/position/valid-query-params
-target:: /req/queries/position
+target:: /req/edr/rc-position
 test-purpose:: Validate that resources can be identified and extracted from a Collection with a `Position` query using  query parameters.
 test-method::
 +

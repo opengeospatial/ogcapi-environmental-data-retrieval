@@ -11,12 +11,13 @@ obligation:: requirement
 subject:: Web API
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections
 
-requirement:: /req/queries/position
+requirement:: /req/edr/rc-common-query-base
+requirement:: /req/edr/rc-position
 requirement:: /req/edr/rc-area
 requirement:: /req/edr/rc-cube
 requirement:: /req/edr/rc-trajectory
 requirement:: /req/edr/rc-corridor
-requirement:: /req/queries/radius
+requirement::/req/edr/rc-radius
 requirement:: /req/edr/rc-items
 requirement:: /req/edr/rc-locations
 requirement:: /req/instances/rc-md-op

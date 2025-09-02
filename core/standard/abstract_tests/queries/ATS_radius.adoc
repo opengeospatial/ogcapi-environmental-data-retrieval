@@ -3,7 +3,7 @@
 ====
 [%metadata]
 identifier:: /conf/radius/no-query-params
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query if no query parameters are specified.
 test-method::
 step::: No query parameters are specified
@@ -14,7 +14,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/no-coords-param
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `coords` query parameter is not specified.
 test-method::
 step::: `coords` query parameter is not specified
@@ -26,7 +26,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/coords-param-invalid
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `coords` query parameter does not contain a valid POINT or MULTIPOINT Well Known Text value.
 test-method::
 step::: Check `coords` query parameter is a valid Well Known Text Point or MultiPoint value
@@ -37,7 +37,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/no-within-param
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `within` query parameter is not specified.
 test-method::
 step::: `within` query parameter is not specified
@@ -48,7 +48,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/no-within_units-param
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `within_units` query parameter is not specified.
 test-method::
 step::: `within_units` query parameter is not specified
@@ -60,7 +60,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/valid-query-params
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that resources can be identified and extracted from a Collection with a `radius` query using  query parameters.
 test-method::
 +

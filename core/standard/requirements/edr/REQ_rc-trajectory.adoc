@@ -7,52 +7,26 @@ identifier:: /req/edr/rc-trajectory
 
 *A:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/trajectory`.
+A `trajectory` operation SHALL support all <<req_edr_rc-common-query-base,common query base requirements>>
 
 ---
 *B:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/trajectory`.
-
----
-
-*C:*
-
-The parameter `collectionId` is the `id`  property in the collection response (JSONPath: `$.collections[*].id`).
-
----
-*D:*
-
 A `trajectory` GET or POST operation SHALL include a `coords` query parameter
 
 ---
-*E:*
+*C:*
 
 If the `coords` query parameter is not specified a HTTP `400` error SHOULD be generated
 
 ---
-*F:*
+*D:*
+
+A `trajectory` `coords` query parameter value SHALL be either a WKT LINESTRING, WKT LINESTRINGZ, WKT LINESTRINGM or WKT LINESTRINGZM value
+
+---
+*E:*
 
 A `trajectory` GET or POST operation MAY include a `z` query parameter
-
----
-*G:*
-
-A `trajectory` GET or POST operation SHOULD include a `parameter-name` query parameter
-
----
-*H:*
-
-A `trajectory` GET or POST operation MAY include a `datetime` query parameter
-
----
-*I:*
-
-A `trajectory` GET or POST operation SHOULD include a `crs` query parameter
-
----
-*J:*
-
-A `trajectory` GET or POST operation SHOULD include an `f` query parameter
 
 ====
