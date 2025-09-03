@@ -2,6 +2,17 @@
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/area/common-query-params
+target:: /req/edr/rc-cube
+test-purpose:: Validate that the `Cube` query supports the core EDR query parameters.
+test-method::
+step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/cube/no-query-params
 target:: /req/edr/rc-cube
 test-purpose:: Validate that an error is returned by a `Cube` query if no query parameters are specified.
@@ -78,27 +89,9 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-
-include::../collections/cube/ATS_rc-z-definition.adoc[]
-
-include::../collections/cube/ATS_rc-z-response.adoc[]
-
-include::../collections/cube/ATS_rc-custom-dimension-definition.adoc[]
-
-include::../collections/cube/ATS_rc-custom-dimension-response.adoc[]
-
 include::../core/cube/ATS_rc-bbox-definition.adoc[]
 
 include::../core/cube/ATS_rc-bbox-response.adoc[]
-
-include::../core/cube/ATS_rc-time-definition.adoc[]
-
-include::../core/cube/ATS_rc-time-response.adoc[]
-ATS_rc-cube-z-response.adoc
-
-include::../collections/cube/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/cube/ATS_rc-parameter-name-response.adoc[]
 
 include::../core/cube/ATS_rc-resolution-x-definition.adoc[]
 
@@ -111,11 +104,3 @@ include::../core/cube/ATS_rc-resolution-y-response.adoc[]
 include::../core/cube/ATS_rc-resolution-z-definition.adoc[]
 
 include::../core/cube/ATS_rc-resolution-z-response.adoc[]
-
-include::../collections/cube/ATS_rc-crs-definition.adoc[]
-
-include::../collections/cube/ATS_rc-crs-response.adoc[]
-
-include::../collections/cube/ATS_rc-f-definition.adoc[]
-
-include::../collections/cube/ATS_rc-f-response.adoc[]

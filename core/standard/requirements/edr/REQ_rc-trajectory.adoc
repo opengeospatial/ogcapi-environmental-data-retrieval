@@ -24,9 +24,4 @@ If the `coords` query parameter is not specified a HTTP `400` error SHOULD be ge
 
 A `trajectory` `coords` query parameter value SHALL be either a WKT LINESTRING, WKT LINESTRINGZ, WKT LINESTRINGM or WKT LINESTRINGZM value
 
----
-*E:*
-
-A `trajectory` GET or POST operation MAY include a `z` query parameter
-
 ====

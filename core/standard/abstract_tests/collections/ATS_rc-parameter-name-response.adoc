@@ -1,9 +1,9 @@
 //Source file - EDIT and RUN Python Script
-[[ats_collections_rc-parameter-name-response-asciidochandle]]
+[[ats_collections_rc-parameter-name-response]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-parameter-name-response-asciidochandle
+identifier:: /conf/edr/rc-parameter-name-response
 target:: /req/edr/parameter-name-response
 test-purpose:: Validate that the parameter-name query parameters are processed correctly.
 test-method::

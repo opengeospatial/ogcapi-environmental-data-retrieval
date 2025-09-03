@@ -44,10 +44,4 @@ A `radius` GET or POST operation SHALL include a `within-units` query parameter
 
 If the `within-units` query parameter is not specified, an HTTP `400` error should be generated
 
----
-
-*I:*
-
-A `radius` GET or POST operation MAY include a `z` query parameter
-
 ====

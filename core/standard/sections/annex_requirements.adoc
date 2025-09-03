@@ -93,7 +93,7 @@ include::../requirements/requirements_class_queries.adoc[]
 
 ==== Common Requirements for Data Queries
 
-include::../requirements/edr/REQ_rc-common-query-base.adoc[]
+include::../requirements/edr/REQ_rc-core-query-parameters.adoc[]
 
 :sectnums:
 

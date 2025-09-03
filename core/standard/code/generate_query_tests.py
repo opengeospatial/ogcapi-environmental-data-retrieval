@@ -42,8 +42,8 @@ def generate(infile_path,outfile_path,querytype):
 #area
 generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/area/ATS_rc-coords-definition.adoc','area')
 generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/area/ATS_rc-coords-response.adoc','area')
-generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/area/ATS_rc-z-definition.adoc','area')
-generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/area/ATS_rc-z-response.adoc','area')
+#generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/area/ATS_rc-z-definition.adoc','area')
+#generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/area/ATS_rc-z-response.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/area/ATS_rc-parameter-name-definition.adoc','area')
@@ -63,8 +63,8 @@ generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_t
 
 generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/position/ATS_rc-coords-definition.adoc','position')
 generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/position/ATS_rc-coords-response.adoc','position')
-generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/position/ATS_rc-z-definition.adoc','position')
-generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/position/ATS_rc-z-response.adoc','position')
+#generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/position/ATS_rc-z-definition.adoc','position')
+#generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/position/ATS_rc-z-response.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/position/ATS_rc-parameter-name-definition.adoc','position')
@@ -81,8 +81,8 @@ generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_t
 
 generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/radius/ATS_rc-coords-definition.adoc','radius')
 generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/radius/ATS_rc-coords-response.adoc','radius')
-generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/radius/ATS_rc-z-definition.adoc','radius')
-generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/radius/ATS_rc-z-response.adoc','radius')
+#generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/radius/ATS_rc-z-definition.adoc','radius')
+#generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/radius/ATS_rc-z-response.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/radius/ATS_rc-parameter-name-definition.adoc','radius')

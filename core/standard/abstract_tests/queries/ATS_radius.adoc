@@ -2,6 +2,17 @@
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/area/common-query-params
+target:: /req/edr/rc-radius
+test-purpose:: Validate that the `Radius` query supports the core EDR query parameters.
+test-method::
+step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/radius/no-query-params
 target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query if no query parameters are specified.
@@ -101,29 +112,6 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-
-include::../collections/radius/ATS_rc-coords-definition.adoc[]
-
-include::../collections/radius/ATS_rc-coords-response.adoc[]
-
-include::../collections/radius/ATS_rc-z-definition.adoc[]
-
-include::../collections/radius/ATS_rc-z-response.adoc[]
-
-include::../collections/radius/ATS_rc-custom-dimension-definition.adoc[]
-
-include::../collections/radius/ATS_rc-custom-dimension-response.adoc[]
-
-include::../core/radius/ATS_rc-time-definition.adoc[]
-
-include::../core/radius/ATS_rc-time-response.adoc[]
-
-
-
-include::../collections/radius/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/radius/ATS_rc-parameter-name-response.adoc[]
-
 include::../core/radius/ATS_rc-within-definition.adoc[]
 
 include::../core/radius/ATS_rc-within-response.adoc[]
@@ -131,18 +119,6 @@ include::../core/radius/ATS_rc-within-response.adoc[]
 include::../core/radius/ATS_rc-within-units-definition.adoc[]
 
 include::../core/radius/ATS_rc-within-units-response.adoc[]
-
-
-include::../collections/radius/ATS_rc-crs-definition.adoc[]
-
-include::../collections/radius/ATS_rc-crs-response.adoc[]
-
-
-
-include::../collections/radius/ATS_rc-f-definition.adoc[]
-
-include::../collections/radius/ATS_rc-f-response.adoc[]
-
 
 include::../collections/radius/ATS_rc-limit-definition.adoc[]
 

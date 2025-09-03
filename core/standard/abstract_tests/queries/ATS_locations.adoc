@@ -2,6 +2,17 @@
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/area/common-query-params
+target:: /req/edr/rc-locations
+test-purpose:: Validate that the `Locations` query supports the core EDR query parameters.
+test-method::
+step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/locations/no-query-params
 target:: /req/edr/rc-locations
 test-purpose:: Validate that a list of valid locations is returned by a `Locations` query if no query parameters are specified.
@@ -65,31 +76,6 @@ Execute requests with combinations of the `time`,`parameter-name`,`crs` and `f` 
 and verify that only information that matches the selection criteria is returned.
 --
 ====
-
-
-include::../core/locations/ATS_rc-time-definition.adoc[]
-
-include::../core/locations/ATS_rc-time-response.adoc[]
-
-include::../collections/locations/ATS_rc-custom-dimension-definition.adoc[]
-
-include::../collections/locations/ATS_rc-custom-dimension-response.adoc[]
-
-include::../collections/locations/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/locations/ATS_rc-parameter-name-response.adoc[]
-
-
-
-include::../collections/locations/ATS_rc-crs-definition.adoc[]
-
-include::../collections/locations/ATS_rc-crs-response.adoc[]
-
-
-
-include::../collections/locations/ATS_rc-f-definition.adoc[]
-
-include::../collections/locations/ATS_rc-f-response.adoc[]
 
 include::../collections/locations/ATS_rc-limit-definition.adoc[]
 
