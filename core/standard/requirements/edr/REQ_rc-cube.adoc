@@ -27,11 +27,6 @@ If the `bbox` query parameter is not specified a HTTP `400` error should be gene
 ---
 *E:*
 
-A `cube` GET or POST operation SHALL include a `z` query parameter
-
----
-*F:*
-
 If the `z` query parameter is not specified a HTTP `400` error SHOULD be generated
 
 ====

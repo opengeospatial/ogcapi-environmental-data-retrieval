@@ -2,6 +2,17 @@
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/area/common-query-params
+target:: /req/edr/rc-trajectory
+test-purpose:: Validate that the `Trajectory` query supports the core EDR query parameters.
+test-method::
+step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/trajectory/no-query-params
 target:: /req/edr/rc-trajectory
 test-purpose:: Validate that an error is returned by a `Trajectory` query if no query parameters are specified.
@@ -149,26 +160,3 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-include::../collections/trajectory/ATS_rc-coords-definition.adoc[]
-
-include::../collections/trajectory/ATS_rc-coords-response.adoc[]
-
-include::../collections/trajectory/ATS_rc-custom-dimension-definition.adoc[]
-
-include::../collections/trajectory/ATS_rc-custom-dimension-response.adoc[]
-
-include::../collections/trajectory/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/trajectory/ATS_rc-parameter-name-response.adoc[]
-
-
-
-include::../collections/trajectory/ATS_rc-crs-definition.adoc[]
-
-include::../collections/trajectory/ATS_rc-crs-response.adoc[]
-
-
-
-include::../collections/trajectory/ATS_rc-f-definition.adoc[]
-
-include::../collections/trajectory/ATS_rc-f-response.adoc[]

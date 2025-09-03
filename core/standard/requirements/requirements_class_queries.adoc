@@ -11,7 +11,7 @@ obligation:: requirement
 subject:: Web API
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections
 
-requirement:: /req/edr/rc-common-query-base
+requirement:: /req/edr/rc-core-query-parameters
 requirement:: /req/edr/rc-position
 requirement:: /req/edr/rc-area
 requirement:: /req/edr/rc-cube
