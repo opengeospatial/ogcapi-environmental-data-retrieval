@@ -1,0 +1,21 @@
+[[req_edr_rc-locations-variables]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/rc-locations-variables
+
+*A:*
+
+A locations `data_queries` object `variables` property SHALL comply with the requirement `/req/edr/rc-variables-common`.
+
+---
+*B:*
+
+A locations `data_queries` object `variables` property MAY include a `multiple_locations` property which SHALL be a boolean value (true/false).
+
+---
+*C:*
+
+If the `variables` property of a `data_queries` object does not include a `multiple_locations` property, the client SHALL assume that the server does not support requests for multiple locations.
+====

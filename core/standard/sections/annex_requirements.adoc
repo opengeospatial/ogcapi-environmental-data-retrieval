@@ -63,6 +63,8 @@ include::../requirements/edr/REQ_rc-cube-variables.adoc[]
 
 include::../requirements/edr/REQ_rc-corridor-variables.adoc[]
 
+include::../requirements/edr/REQ_rc-locations-variables.adoc[]
+
 include::../requirements/edr/REQ_rc-items-variables.adoc[]
 
 include::../requirements/core/REQ_rc-collection-info-links.adoc[]

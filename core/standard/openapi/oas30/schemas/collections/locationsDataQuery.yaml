@@ -7,3 +7,11 @@ properties:
     enum: 
       - locations
     example: locations
+  multiple_locations:
+    description: A flag indicating whether the collection supports queries for multiple locations within a single request.
+    type: boolean
+    enum: 
+      - true
+      - false
+    example: true
+

@@ -4,3 +4,5 @@ required: true
 description: Comma delimited list of location identifiers (i.e. EGLL or EGLL,YBBN,CYOW or London,Brisbane)
 schema:
     type: string
+style: simple
+explode: false

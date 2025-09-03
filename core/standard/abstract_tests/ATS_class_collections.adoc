@@ -20,6 +20,7 @@ conformance-test:: /conf/edr/rc-common-variables
 conformance-test:: /conf/edr/rc-radius-variables
 conformance-test:: /conf/edr/rc-cube-variables
 conformance-test:: /conf/edr/rc-corridor-variables
+conformance-test:: /conf/edr/rc-locations-variables
 conformance-test:: /conf/edr/rc-items-variables
 conformance-test:: /conf/edr/rc-md-query-links
 conformance-test:: /conf/core/rc-collection-info-links
@@ -83,6 +84,8 @@ include::collections/ATS_rc-radius-variables.adoc[]
 include::collections/ATS_rc-cube-variables.adoc[]
 
 include::collections/ATS_rc-corridor-variables.adoc[]
+
+include::collections/ATS_rc-locations-variables.adoc[]
 
 include::collections/ATS_rc-items-variables.adoc[]
 
