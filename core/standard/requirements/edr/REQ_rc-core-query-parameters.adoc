@@ -1,0 +1,58 @@
+[[req_edr_rc-common-query-base]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/edr/rc-core-query-parameters
+
+
+*A:*
+
+Every data query defined within a `collection` SHALL support at least one of the following operations: HTTP GET, HTTP POST, or both.
+
+---
+*B:*
+
+The parameter `collectionId` is the `id`  property in the `collection` response (JSONPath: `$.collections[*].id`).
+
+---
+*C:*
+
+When a `collection` contains instances the parameter `instanceId` is the `id`  property in the instances response (JSONPath: `$.instances[*].id`).
+
+---
+*E:*
+
+A data query GET or POST operation SHOULD include a `parameter-name` query parameter
+
+---
+*H:*
+
+When a `collection` defines a temporal extent a data query GET or POST operation SHOULD include a `datetime` query parameter
+
+---
+*H:*
+
+When a `collection` defines a vertical extent a data query GET or POST operation SHOULD include a `z` query parameter
+
+---
+*I:*
+
+A data query GET or POST operation SHOULD include a `crs` query parameter
+
+---
+*J:*
+
+A data query GET or POST operation SHOULD include an `f` query parameter
+
+---
+*K:*
+
+When a `custom_dimension` is defined within a `collection` a data query GET or POST operation MAY include the custom query parameter.
+
+---
+*L:*
+
+A data query using GET or POST MAY include a `limit` parameter. If the chosen output format does not support paged responses, the `limit` parameter SHALL be ignored.
+ 
+====

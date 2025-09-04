@@ -14,4 +14,9 @@ For every collection identified in the collections response (path `/collections`
 
 The parameter `collectionId` is the `id`  property in the feature collection response (JSONPath: `$.collections[*].id`).
 
+---
+*C:*
+
+When a `collection` contains instances the parameter `instanceId` is the `id`  property in the instances response (JSONPath: `$.instances[*].id`).
+
 ====

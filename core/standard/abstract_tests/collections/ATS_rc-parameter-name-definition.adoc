@@ -1,9 +1,8 @@
-//Source file - EDIT and RUN Python Script
-[[ats_collections_rc-parameter-name-definition-asciidochandle]]
+[[ats_collections_rc-parameter-name-definition]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/collections/REQ_rc-parameter-name-definition-asciidochandle
+identifier:: /conf/collections/REQ_rc-parameter-name-definition
 target:: /req/edr/REQ_rc-parameter-name-definition
 test-purpose:: Validate that the parameter-name query parameters are constructed correctly.
 test-method::
