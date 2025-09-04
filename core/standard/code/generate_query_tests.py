@@ -40,8 +40,8 @@ def generate(infile_path,outfile_path,querytype):
 
 
 #area
-generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/area/ATS_rc-coords-definition.adoc','area')
-generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/area/ATS_rc-coords-response.adoc','area')
+#generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/area/ATS_rc-coords-definition.adoc','area')
+#generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/area/ATS_rc-coords-response.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/area/ATS_rc-z-definition.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/area/ATS_rc-z-response.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','area')
@@ -54,15 +54,15 @@ generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_
 #generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/area/ATS_rc-time-response.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/area/ATS_rc-f-definition.adoc','area')
 #generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/area/ATS_rc-f-response.adoc','area')
-generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','area')
-generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','area')
+#generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','area')
+#generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','area')
 
 
 
 #position
 
-generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/position/ATS_rc-coords-definition.adoc','position')
-generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/position/ATS_rc-coords-response.adoc','position')
+#generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/position/ATS_rc-coords-definition.adoc','position')
+#generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/position/ATS_rc-coords-response.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/position/ATS_rc-z-definition.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/position/ATS_rc-z-response.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','position')
@@ -75,12 +75,12 @@ generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_
 #generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/position/ATS_rc-time-response.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/position/ATS_rc-f-definition.adoc','position')
 #generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/position/ATS_rc-f-response.adoc','position')
-generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','position')
-generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','position')
+#generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','position')
+#generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','position')
 #radius
 
-generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/radius/ATS_rc-coords-definition.adoc','radius')
-generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/radius/ATS_rc-coords-response.adoc','radius')
+#generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/radius/ATS_rc-coords-definition.adoc','radius')
+#generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/radius/ATS_rc-coords-response.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/radius/ATS_rc-z-definition.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-z-response.adoc','./abstract_tests/collections/radius/ATS_rc-z-response.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','radius')
@@ -93,8 +93,8 @@ generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_
 #generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/radius/ATS_rc-time-response.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/radius/ATS_rc-f-definition.adoc','radius')
 #generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/radius/ATS_rc-f-response.adoc','radius')
-generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','radius')
-generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','radius')
+#generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','radius')
+#generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','radius')
 
 #cube
 
@@ -104,7 +104,7 @@ generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_t
 #generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/cube/ATS_rc-coords-response.adoc','cube')
 
 # See ATS_cube.adoc, we do not modify ATS_rc-cube-z-response.adoc. So there is no call to generate the associated file.
-generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/cube/ATS_rc-z-definition.adoc','cube')
+#generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tests/collections/cube/ATS_rc-z-definition.adoc','cube')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','cube')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','cube')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/cube/ATS_rc-parameter-name-definition.adoc','cube')
@@ -120,8 +120,8 @@ generate('./abstract_tests/collections/ATS_rc-z-definition.adoc','./abstract_tes
 
 #trajectory
 
-generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-coords-definition.adoc','trajectory')
-generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-coords-response.adoc','trajectory')
+#generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-coords-definition.adoc','trajectory')
+#generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/trajectory/ATS_rc-coords-response.adoc','trajectory')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','trajectory')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','trajectory')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/trajectory/ATS_rc-parameter-name-definition.adoc','trajectory')
@@ -133,8 +133,8 @@ generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_
 
 #corridor
 
-generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-coords-definition.adoc','corridor')
-generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/corridor/ATS_rc-coords-response.adoc','corridor')
+#generate('./abstract_tests/collections/ATS_rc-coords-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-coords-definition.adoc','corridor')
+#generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_tests/collections/corridor/ATS_rc-coords-response.adoc','corridor')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','corridor')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','corridor')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/corridor/ATS_rc-parameter-name-definition.adoc','corridor')
@@ -146,8 +146,8 @@ generate('./abstract_tests/collections/ATS_rc-coords-response.adoc','./abstract_
 
 #locations
 
-generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/core/locations/ATS_rc-time-definition.adoc','locations')
-generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/locations/ATS_rc-time-response.adoc','locations')
+#generate('./abstract_tests/core/ATS_rc-time-definition.adoc','./abstract_tests/core/locations/ATS_rc-time-definition.adoc','locations')
+#generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/core/locations/ATS_rc-time-response.adoc','locations')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-definition.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-definition.adoc','locations')
 #generate('./abstract_tests/collections/ATS_rc-custom-dimension-response.adoc','./abstract_tests/collections/area/ATS_rc-custom-dimension-response.adoc','locations')
 #generate('./abstract_tests/collections/ATS_rc-parameter-name-definition.adoc','./abstract_tests/collections/locations/ATS_rc-parameter-name-definition.adoc','locations')
@@ -156,5 +156,5 @@ generate('./abstract_tests/core/ATS_rc-time-response.adoc','./abstract_tests/cor
 #generate('./abstract_tests/collections/ATS_rc-crs-response.adoc','./abstract_tests/collections/locations/ATS_rc-crs-response.adoc','locations')
 #generate('./abstract_tests/collections/ATS_rc-f-definition.adoc','./abstract_tests/collections/locations/ATS_rc-f-definition.adoc','locations')
 #generate('./abstract_tests/collections/ATS_rc-f-response.adoc','./abstract_tests/collections/locations/ATS_rc-f-response.adoc','locations')
-generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','locations')
-generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','locations')
+#generate('./abstract_tests/collections/ATS_rc-limit-definition.adoc','./abstract_tests/collections/cube/ATS_rc-limit-definition.adoc','locations')
+#generate('./abstract_tests/collections/ATS_rc-limit-response.adoc','./abstract_tests/collections/cube/ATS_rc-limit-response.adoc','locations')

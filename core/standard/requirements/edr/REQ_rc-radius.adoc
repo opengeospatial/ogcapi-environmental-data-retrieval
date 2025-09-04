@@ -17,30 +17,35 @@ A `radius` GET or POST operation SHALL include a `coords` query parameter
 ---
 *C:*
 
-If the `coords` query parameter is not specified, an HTTP `400` error should be generated
+If the `coords` query parameter includes a z coordinate value and the `z` query parameter is also specified, the `z` query parameter must be used as the vertical coordinate filter.
 
 ---
 *D:*
 
-A `radius` `coords` query parameter value SHALL be either a WKT POINT or a WKT MULTIPOINT value
+If the `coords` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *E:*
 
-A `radius` GET or POST operation SHALL include a `within` query parameter
+A `radius` `coords` query parameter value SHALL be either a WKT POINT or a WKT MULTIPOINT value
 
 ---
 *F:*
 
-If the `within` query parameter is not specified, an HTTP `400` error should be generated
+A `radius` GET or POST operation SHALL include a `within` query parameter
 
 ---
 *G:*
 
-A `radius` GET or POST operation SHALL include a `within-units` query parameter
+If the `within` query parameter is not specified, an HTTP `400` error should be generated
 
 ---
 *H:*
+
+A `radius` GET or POST operation SHALL include a `within-units` query parameter
+
+---
+*I:*
 
 If the `within-units` query parameter is not specified, an HTTP `400` error should be generated
 

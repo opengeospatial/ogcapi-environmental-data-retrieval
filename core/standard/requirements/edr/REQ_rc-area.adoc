@@ -24,4 +24,9 @@ If the `coords` query parameter is not specified a HTTP `400` error SHOULD be ge
 
 An `area` `coords` query parameter value SHALL be either a WKT POLYGON or a WKT MULTIPOLYGON value
 
+---
+*E:*
+
+If the `coords` query parameter includes a z coordinate value and the `z` query parameter is also specified, the `z` query parameter must be used as the vertical coordinate filter.
+
 ====

@@ -93,11 +93,15 @@ include::../requirements/requirements_class_queries.adoc[]
 
 ==== Common Requirements for Data Queries
 
+:sectnums:
+
 include::../requirements/edr/REQ_rc-core-query-parameters.adoc[]
 
 :sectnums:
 
 ==== Requirements for Position Queries
+
+:sectnums:
 
 include::../requirements/edr/REQ_rc-position.adoc[]
 

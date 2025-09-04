@@ -2,11 +2,11 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area/common-query-params
+identifier:: /conf/position/common-query-params
 target:: /req/edr/rc-position
 test-purpose:: Validate that the `Position` query supports the core EDR query parameters.
 test-method::
-step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+step::: Run the <<ats_core-query-parameters, core query parameter>> tests.
 
 ====
 
@@ -33,8 +33,6 @@ step::: `coords` query parameter is not specified
 step::: Validate that a document was returned with a status code 400.
 ====
 
-
-
 [abstract_test]
 ====
 [%metadata]
@@ -44,6 +42,16 @@ test-purpose:: Validate that an error is returned by a `Position` query when the
 test-method::
 step::: Check `coords` query parameter is a valid Well Known Text Point or MultiPoint value
 step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/position/coords-and-z
+target:: /req/edr/rc-position
+test-purpose:: Ensure that when the coords query parameter includes a z-coordinate and the `z` query parameter is also specified, the returned values are correct.
+test-method::
+step::: Confirm that only resources matching the vertical coordinates specified in the `z` query parameter are returned.
 ====
 
 [abstract_test]
@@ -86,9 +94,3 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-
-include::../collections/position/ATS_rc-coords-definition.adoc[]
-
-include::../collections/position/ATS_rc-limit-definition.adoc[]
-
-include::../collections/position/ATS_rc-limit-response.adoc[]

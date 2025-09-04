@@ -53,4 +53,6 @@ When a `custom_dimension` is defined within a `collection` a data query GET or P
 ---
 *L:*
 
-A data query using GET or POST MAY include a `limit` parameter. If the chosen output format does not support paged responses, the `limit` parameter SHALL be ignored. 
+A data query using GET or POST MAY include a `limit` parameter. If the chosen output format does not support paged responses, the `limit` parameter SHALL be ignored.
+ 
+====

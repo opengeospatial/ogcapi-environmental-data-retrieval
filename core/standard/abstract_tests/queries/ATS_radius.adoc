@@ -2,11 +2,11 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area/common-query-params
+identifier:: /conf/radius/common-query-params
 target:: /req/edr/rc-radius
 test-purpose:: Validate that the `Radius` query supports the core EDR query parameters.
 test-method::
-step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+step::: Run the <<ats_core-query-parameters, core query parameter>> tests.
 
 ====
 
@@ -42,6 +42,16 @@ test-purpose:: Validate that an error is returned by a `radius` query when the `
 test-method::
 step::: Check `coords` query parameter is a valid Well Known Text Point or MultiPoint value
 step::: Validate that a document was returned with a status code 400.
+====
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/radius/coords-and-z
+target:: /req/edr/rc-radius
+test-purpose:: Ensure that when the coords query parameter includes a z-coordinate and the `z` query parameter is also specified, the returned values are correct.
+test-method::
+step::: Confirm that only resources matching the vertical coordinates specified in the `z` query parameter are returned.
 ====
 
 [abstract_test]
@@ -120,6 +130,3 @@ include::../core/radius/ATS_rc-within-units-definition.adoc[]
 
 include::../core/radius/ATS_rc-within-units-response.adoc[]
 
-include::../collections/radius/ATS_rc-limit-definition.adoc[]
-
-include::../collections/radius/ATS_rc-limit-response.adoc[]

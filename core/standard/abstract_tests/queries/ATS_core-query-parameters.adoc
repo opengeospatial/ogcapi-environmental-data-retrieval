@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /conf/core-query-parameters/operation
-target::/req/edr/rc-core-query-parameters
+target:: /req/edr/rc-core-query-parameters
 test-purpose:: Validate that the data query supports either a GET or POST operation.
 test-method::
 step::: Make a HTTP GET request.
