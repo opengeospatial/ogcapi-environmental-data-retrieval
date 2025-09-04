@@ -120,12 +120,18 @@ conformance-test:: /conf/core/rc-bbox-response
 conformance-test:: /conf/edr/rc-locationid-definition
 conformance-test:: /conf/edr/rc-locationid-response
 conformance-test:: /conf/core/rc-items
+conformance-test:: /conf/core/items/datetime-definition
+conformance-test:: /conf/core/items/datetime-response
 conformance-test:: /conf/core/rc-numberReturned
 conformance-test:: /conf/core/rc-numberMatched
 
 ====
 
 ==== Query Pattern Tests
+
+===== Core data query parameters 
+
+include::queries/ATS_core-query-parameters.adoc[]
 
 ===== Position
 

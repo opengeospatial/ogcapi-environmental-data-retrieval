@@ -2,11 +2,11 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area/common-query-params
+identifier:: /conf/corridor/common-query-params
 target:: /req/edr/rc-corridor
 test-purpose:: Validate that the `Corridor` query supports the core EDR query parameters.
 test-method::
-step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+step::: Run the <<ats_core-query-parameters, core query parameter>> tests.
 
 ====
 

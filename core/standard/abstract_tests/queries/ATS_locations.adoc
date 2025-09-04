@@ -2,11 +2,11 @@
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/area/common-query-params
+identifier:: /conf/locations/common-query-params
 target:: /req/edr/rc-locations
 test-purpose:: Validate that the `Locations` query supports the core EDR query parameters.
 test-method::
-step::: Run the <</conf/core-query-parameters/operation, core query parameter>> tests.
+step::: Run the <<ats_core-query-parameters, core query parameter>> tests.
 
 ====
 
@@ -76,10 +76,6 @@ Execute requests with combinations of the `time`,`parameter-name`,`crs` and `f` 
 and verify that only information that matches the selection criteria is returned.
 --
 ====
-
-include::../collections/locations/ATS_rc-limit-definition.adoc[]
-
-include::../collections/locations/ATS_rc-limit-response.adoc[]
 
 include::../collections/locations/ATS_rc-locationid-definition.adoc[]
 
