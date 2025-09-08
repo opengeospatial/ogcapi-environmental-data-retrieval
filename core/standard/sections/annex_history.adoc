@@ -27,4 +27,5 @@
 |2023-06-30 |1.1|G.Hobona | all | Final OGC Staff review
 |2024-09-19 |1.2|Mark Burgoyne| all | Changes for v1.2 (link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/321[#321], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/398[#398], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/414[#414], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/455[#455], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/479[#479] link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/527[#527], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/529[#529], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/560[#560], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/565[#565])
 |2024-02-19 |Master branch|Chris Little | all |editorial changes arising from OAB Review
+|2025-09-04 |Master branch|Mark Burgoyne | all |Refactor requirements and abstract tests sections to reduce duplication
 |===

@@ -41,7 +41,7 @@ description: An error occurred.
 content:
   application/json:
     schema:
-      $ref: https://schemas.opengis.net/ogcapi/edr/1.1/openapi/schemas/core/exception.yaml
+      $ref: https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/core/exception.yaml
   text/html:
     schema:
       type: string
