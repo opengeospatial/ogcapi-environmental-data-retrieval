@@ -4,6 +4,4 @@ Conformance to the OGC API-EDR-Part 3 Standard (this document) by a profile of t
 
 This Standard contains normative language and thus places requirements on conformance, or mechanism for adoption, of candidate standards to which this Standard applies. In particular:
 
-* <<core-section,OGC API-EDR Requirements Class: Core>> specifies the core requirements which shall be met by all standards claiming conformance to this Standard.
-
-Annex B provides guidance on how to build a profile of an ISO Standard. While not normative, following these practices increases the likelihood that the suite of OGC API-EDR Standards and profiles will form an interoperable whole. 
+* <<core-section,OGC API-EDR Requirements Class: Core>> specifies the core requirements which shall be met by all standards claiming conformance to this Standard. 
