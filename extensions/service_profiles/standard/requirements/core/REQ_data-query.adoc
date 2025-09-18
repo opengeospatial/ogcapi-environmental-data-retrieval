@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard _SHALL_ require definition of the supported data queries.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require definition of the supported data queries.
 part:: The data_queries definitions _SHALL_ specify which data queries a service supports. This can be defined as follows:
 
 * Enumerated list of query types
