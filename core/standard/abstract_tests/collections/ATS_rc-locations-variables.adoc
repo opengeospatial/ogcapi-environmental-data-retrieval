@@ -1,0 +1,11 @@
+[[ats_edr_rc-locations-variables]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/edr/rc-locations-variables
+target:: /req/edr/rc-locations-variables
+test-purpose:: Validate `variables` property for a query data type in the `data_queries` section in the collection is correctly defined.
+test-method::
+step::: Verify that the `variables` property complies with <<ats_edr_rc-common-variables,/req/edr/rc-common-variables>>
+step::: Verify that if the `variables` property has a `multiple_locations` property it is a boolean value of *true* or *false*
+====
