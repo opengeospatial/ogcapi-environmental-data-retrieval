@@ -1,8 +1,8 @@
-[[ats_core_rc-limit-response-asciidochandle]]
+[[ats_core_rc-limit-response]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/core/rc-limit-response-asciidochandle
+identifier:: /conf/core/rc-limit-response
 target:: /req/edr/REQ_rc-limit-response
 test-purpose:: Validate that the limit query parameters are evaluated correctly.
 test-method::

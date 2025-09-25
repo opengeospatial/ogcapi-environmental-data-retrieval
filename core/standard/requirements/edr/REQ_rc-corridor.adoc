@@ -7,101 +7,81 @@ identifier:: /req/edr/rc-corridor
 
 *A:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP GET operation at the path `/collections/{collectionId}/corridor`.
+A `corridor` operation SHALL support all <<req_edr_rc-common-query-base,common query base requirements>>
 
 ---
 *B:*
 
-For every collection identified in the collections response (path `/collections`), the server MAY support the HTTP POST operation at the path `/collections/{collectionId}/corridor`.
+A `corridor` GET operation SHALL include a `coords` query parameter
 
 ---
 *C:*
 
-The parameter `collectionId` is the `id`  property in the collection response (JSONPath: `$.collections[*].id`).
+If the `coords` query parameter is not specified, an HTTP `400` error SHOULD be generated
 
 ---
 *D:*
 
-A `corridor` GET operation SHALL include a `coords` query parameter
+A `corridor` `coords` query parameter value SHALL be either a WKT LINESTRING, WKT LINESTRINGZ, WKT LINESTRINGM or WKT LINESTRINGZM value
 
 ---
 *E:*
 
-If the `coords` query parameter is not specified, an HTTP `400` error SHOULD be generated
+A `corridor` GET operation SHALL include a `corridor-width` query parameter
 
 ---
 *F:*
 
-A `corridor` GET operation SHALL include a `corridor-width` query parameter
+If the `corridor-width` query parameter is not specified, an HTTP `400` error SHOULD be generated
 
 ---
 *G:*
 
-If the `corridor-width` query parameter is not specified, an HTTP `400` error SHOULD be generated
+A `corridor` GET operation SHALL include a `corridor-height` query parameter
 
 ---
 *H:*
 
-A `corridor` GET operation SHALL include a `corridor-height` query parameter
+If the `corridor-height` query parameter is not specified, an HTTP `400` error SHOULD be generated
 
 ---
 *I:*
 
-If the `corridor-height` query parameter is not specified, an HTTP `400` error SHOULD be generated
+A `corridor` GET operation SHALL include a `width-units` query parameter
 
 ---
 *J:*
 
-A `corridor` GET operation SHALL include a `width-units` query parameter
+If the `width-units` query parameter is not specified, an HTTP `400` error SHOULD be generated
 
 ---
 *K:*
 
-If the `width-units` query parameter is not specified, an HTTP `400` error SHOULD be generated
+If the `width-units` query parameter value is not one of the supported values a HTTP `400` error SHOULD be generated
 
 ---
 *L:*
 
-If the `width-units` query parameter value is not one of the supported values a HTTP `400` error SHOULD be generated
+A `corridor` GET operation SHALL include a `height-units` query parameter
 
 ---
 *M:*
 
-A `corridor` GET operation SHALL include a `height-units` query parameter
+If the `height-units` query parameter is not specified, an HTTP `400` error SHOULD be generated
 
 ---
 *N:*
 
-If the `height-units` query parameter is not specified, an HTTP `400` error SHOULD be generated
+If the `height-units` query parameter value is not one of the supported values a HTTP `400` error SHOULD be generated
 
 ---
 *O:*
 
-If the `height-units` query parameter value is not one of the supported values a HTTP `400` error SHOULD be generated
+If a `corridor` operation includes a `datetime` query parameter and the `coords` parameter is a WKT LINESTRINGM or WKT LINESTRINGZM value a HTTP 400 error SHALL be thrown by the server
 
 ---
 *P:*
 
-A `corridor` GET or POST operation MAY include a `z` query parameter
-
----
-*Q:*
-
-A `corridor` GET or POST operation SHOULD include a `parameter-name` query parameter
-
----
-*R:*
-
-A `corridor` GET or POST operation MAY include a `datetime` query parameter
-
----
-*S:*
-
-A `corridor` GET or POST operation SHOULD include a `crs` query parameter
-
----
-*T:*
-
-A `corridor` GET or POST operation SHOULD include a `f` query parameter
+If a `corridor` operation includes a `z` query parameter and the `coords` parameter is a  WKT LINESTRINGZ or WKT LINESTRINGZM value a HTTP 400 error SHALL be thrown by the server
 
 ====

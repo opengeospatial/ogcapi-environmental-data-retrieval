@@ -8,24 +8,30 @@ identifier:: /req/edr/z-response
 
 *A:*
 
-If the `z` parameter is provided, only resources that have a vertical geometry intersecting the vertical information in the `z` parameter SHALL be part of the result set.
+If the `z` parameter is provided and a vertical extent is not defined in a `collection`, the `z` value SHALL be ignored
 
 ---
 *B:*
 
-The `z` MAY be defined as a height range by specifying a min-level and max-level separated by a forward slash "/"
+If the `z` parameter is provided, only resources that have a vertical geometry intersecting the vertical information in the `z` parameter SHALL be part of the result set.
 
 ---
 *C:*
 
+The `z` MAY be defined as a height range by specifying a min-level and max-level separated by a forward slash "/"
+
+---
+*D:*
+
 A list of `z` MAY be defined by specifying a comma delimited list of values level1, level2, level3 etc
 
----D:*
+---
+*E:*
 
 An Arithmetic sequence using Recurring height intervals MAY be specified by **R**`number of intervals`**/**`min height`**/**`height interval`
 
 ---
-*E:*
+*F:*
 
 If the `z` parameter is not provided, the server SHOULD return data at all available vertical levels
 

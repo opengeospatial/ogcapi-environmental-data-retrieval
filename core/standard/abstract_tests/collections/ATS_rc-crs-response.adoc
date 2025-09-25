@@ -1,9 +1,8 @@
-//Source file - EDIT and RUN Python Script
-[[ats_edr_rc-crs-response-asciidochandle]]
+[[ats_edr_rc-crs-response]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/REQ_rc-crs-response-asciidochandle
+identifier:: /conf/edr/REQ_rc-crs-response
 target:: /req/edr/REQ_rc-crs-response
 test-purpose:: Validate that the crs query parameters are processed correctly.
 test-method::

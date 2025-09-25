@@ -75,7 +75,7 @@ For the reasons discussed in the Best Practices, implementations of EDR APIs SHO
 [[rc_encoding-section]]
 === Encodings
 
-While the OGC API - EDR Standard does not specify any mandatory encoding, the following encodings are recommended. See <<optional_requirements_classes,Clause 2.2 (Optional Requirements Classes)>> for a discussion of this issue.
+While the OGC API-EDR Standard does not specify any mandatory encoding, the following encodings are recommended. See <<optional_requirements_classes,Clause 2.2 (Optional Requirements Classes)>> for a discussion of this issue.
 
 [[rc_html-section]]
 HTML encoding recommendation:

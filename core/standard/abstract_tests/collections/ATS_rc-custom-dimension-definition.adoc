@@ -1,8 +1,8 @@
-[[ats_collections_rc-custom-dimension-definition-asciidochandle]]
+[[ats_collections_rc-custom-dimension-definition]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-custom-dimension-definition-asciidochandle
+identifier:: /conf/edr/rc-custom-dimension-definition
 target:: /req/edr/rc-custom-dimension-definition
 test-purpose:: Validate that any custom query parameters are constructed correctly.
 test-method::

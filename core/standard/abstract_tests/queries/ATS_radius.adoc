@@ -2,8 +2,19 @@
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/radius/common-query-params
+target:: /req/edr/rc-radius
+test-purpose:: Validate that the `Radius` query supports the core EDR query parameters.
+test-method::
+step::: Run the <<ats_core-query-parameters, core query parameter>> tests.
+
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/radius/no-query-params
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query if no query parameters are specified.
 test-method::
 step::: No query parameters are specified
@@ -14,7 +25,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/no-coords-param
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `coords` query parameter is not specified.
 test-method::
 step::: `coords` query parameter is not specified
@@ -26,7 +37,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/coords-param-invalid
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `coords` query parameter does not contain a valid POINT or MULTIPOINT Well Known Text value.
 test-method::
 step::: Check `coords` query parameter is a valid Well Known Text Point or MultiPoint value
@@ -36,8 +47,18 @@ step::: Validate that a document was returned with a status code 400.
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/radius/coords-and-z
+target:: /req/edr/rc-radius
+test-purpose:: Ensure that when the coords query parameter includes a z-coordinate and the `z` query parameter is also specified, the returned values are correct.
+test-method::
+step::: Confirm that only resources matching the vertical coordinates specified in the `z` query parameter are returned.
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/radius/no-within-param
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `within` query parameter is not specified.
 test-method::
 step::: `within` query parameter is not specified
@@ -48,7 +69,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/no-within_units-param
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that an error is returned by a `radius` query when the `within_units` query parameter is not specified.
 test-method::
 step::: `within_units` query parameter is not specified
@@ -60,7 +81,7 @@ step::: Validate that a document was returned with a status code 400.
 ====
 [%metadata]
 identifier:: /conf/radius/valid-query-params
-target:: /req/queries/radius
+target::/req/edr/rc-radius
 test-purpose:: Validate that resources can be identified and extracted from a Collection with a `radius` query using  query parameters.
 test-method::
 +
@@ -101,29 +122,6 @@ and verify that only information that matches the selection criteria is returned
 --
 ====
 
-
-include::../collections/radius/ATS_rc-coords-definition.adoc[]
-
-include::../collections/radius/ATS_rc-coords-response.adoc[]
-
-include::../collections/radius/ATS_rc-z-definition.adoc[]
-
-include::../collections/radius/ATS_rc-z-response.adoc[]
-
-include::../collections/radius/ATS_rc-custom-dimension-definition.adoc[]
-
-include::../collections/radius/ATS_rc-custom-dimension-response.adoc[]
-
-include::../core/radius/ATS_rc-time-definition.adoc[]
-
-include::../core/radius/ATS_rc-time-response.adoc[]
-
-
-
-include::../collections/radius/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/radius/ATS_rc-parameter-name-response.adoc[]
-
 include::../core/radius/ATS_rc-within-definition.adoc[]
 
 include::../core/radius/ATS_rc-within-response.adoc[]
@@ -132,18 +130,3 @@ include::../core/radius/ATS_rc-within-units-definition.adoc[]
 
 include::../core/radius/ATS_rc-within-units-response.adoc[]
 
-
-include::../collections/radius/ATS_rc-crs-definition.adoc[]
-
-include::../collections/radius/ATS_rc-crs-response.adoc[]
-
-
-
-include::../collections/radius/ATS_rc-f-definition.adoc[]
-
-include::../collections/radius/ATS_rc-f-response.adoc[]
-
-
-include::../collections/radius/ATS_rc-limit-definition.adoc[]
-
-include::../collections/radius/ATS_rc-limit-response.adoc[]

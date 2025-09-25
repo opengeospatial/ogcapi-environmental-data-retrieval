@@ -1,7 +1,7 @@
 [[dependencies-overview]]
-== Dependencies on Core and Collections Requirements Classes of OGC API - Common
+== Dependencies on Core and Collections Requirements Classes of OGC API-Common
 
-The OGC API - EDR Standard is an extension of <<OGC19-072,OGC API - Common - Part 1: Core>> and <<OGC20-024,OGC API - Common - Part 2: Geospatial Data>>. Therefore, an implementation of the OGC API - EDR Standard SHALL first satisfy the appropriate Requirements Classes from OGC API - Common, namely:
+The OGC API-EDR Standard is an extension of <<OGC19-072,OGC API-Common-Part 1: Core>> and <<OGC20-024,OGC API-Common-Part 2: Geospatial Data>>. Therefore, an implementation of the OGC API-EDR Standard SHALL first satisfy the appropriate Requirements Classes from OGC API-Common, namely:
 
 * Core, <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core>>
 * Collections, <<OGC20-024,https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections>>
@@ -23,15 +23,16 @@ The following four sections explain aspects of the `Core`, `Collections` and `Qu
 <<mapping-to-common>> Identifies the OGC API - Common Requirements Classes which are applicable to each section of this Standard. Instructions on when and how to apply these Requirements Classes are provided in each section.
 
 [#mapping-to-common,reftext='{table-caption} {counter:table-num}']
-.Mapping OGC API - EDR Sections to OGC API - Common Requirements Classes
+.Mapping OGC API-EDR Sections to OGC API - Common Requirements Classes
 [width="90%",cols="2,4,4",options="header"]
 |====
-^|*API - EDR Section* ^|*API - EDR Requirements Class* ^|*API - Common Requirements Class*
+^|*API-EDR Section* ^|*API-EDR Requirements Class* ^|*API-Common Requirements Class*
 |<<landing-page,API Landing Page>>| <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 |<<api-definition,API Definition>>| <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 |<<conformance-classes,Declaration of Conformance Classes>>| <<rc_core,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/core>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/core
 |<<rc_collection-section,Collections>>| <<rc_collections,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/collections>> | https://www.opengis.net/spec/ogcapi-common-2/1.0/req/collections
 |<<requirements-class-openapi_3_0-clause,OpenAPI 3.0>>| <<rc_oas30,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas30>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas30
+|<<requirements-class-openapi_3_1-clause,OpenAPI 3.1>>| <<rc_oas31,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/oas31>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/oas31
 |<<rc_geojson,GeoJSON>>| <<rc_geojson,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/geojson>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
 |<<rc_covjson,CoverageJSON>>| <<rc_covjson,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/covjson>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/json
 |<<rc_html,HTML>>| <<rc_html,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/html>> | https://www.opengis.net/spec/ogcapi-common-1/1.0/req/html
@@ -45,7 +46,7 @@ The OGC API - Common Standard defines a set of common capabilities which are
 [[landing-page]]
 ==== API landing page
 
-The landing page provides links that support exploration of the resources offered via the API endpoint. The most important component of a landing page is a list of links. The OGC API - Common Standard requires some common links, sufficient for this Standard, that are stated in the following Requirements Class of the OGC API - Common Standard (hereafter referred to as OGC API  - Common):
+The landing page provides links that support exploration of the resources offered via the API endpoint. The most important component of a landing page is a list of links. The OGC API-Common Standard requires some common links, sufficient for this Standard, that are stated in the following Requirements Class of the OGC API-Common Standard (hereafter referred to as OGC API -Common):
 
 .Dependencies
 
@@ -70,7 +71,7 @@ A successful response to the `Landing Page` operation is defined in OGC API -�
 include::../openapi/oas31/schemas/core/landingPage.yaml[]
 ----
 
-The following JSON fragment is an example of a response to an OGC API - EDR Landing Page operation.
+The following JSON fragment is an example of a response to an OGC API-EDR Landing Page operation.
 
 [#landingPage-example,reftext=`Landing Page Example`]
 .Landing Page Example
@@ -81,7 +82,7 @@ include::../examples/json/landingPage_example.json[]
 
 ===== Error Handling
 
-The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
+The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API-Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>-HTTP Status Codes.
 
 [[api-definition]]
 === API definition
@@ -112,7 +113,7 @@ In case the API definition is based on OpenAPI 3.1, consider the <<two_approache
 
 Every API implementation is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API deployment, by software clients to connect to the server, or by development tools to support the implementation of servers and clients.
 
-Support for an API definition is specified in the following Requirements Class of OGC API - Common:
+Support for an API definition is specified in the following Requirements Class of OGC API-Common:
 
 .Dependencies
 
@@ -129,18 +130,18 @@ Only the link is required by OGC API - Common.
 
 ===== Response
 
-A successful response to the API Definition request is a resource which documents the design of the API. OGC API - Common leaves the selection of the format for the API Definition response to the API implementor. However, the options are limited to those which are defined in the OGC API - Common Standard. OpenAPI 3.0 is the only option provided, though OpenAPI 3.1 is expected to be supported.
+A successful response to the API Definition request is a resource which documents the design of the API. OGC API - Common leaves the selection of the format for the API Definition response to the API implementor. However, the options are limited to those which are defined in the OGC API-Common Standard. OpenAPI 3.0 is the only option provided, though OpenAPI 3.1 is expected to be supported.
 
 ===== Error Handling
 
-The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API - Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>> - HTTP Status Codes.
+The requirements for handling unsuccessful requests are provided in Recommendation <<OGC19-072,https://www.opengis.net/spec/ogcapi-common-1/1.0/rec/core/problem-details>> of OGC API-Common. General guidance on HTTP status codes and how they should be handled is provided in <<http-status-codes>>-HTTP Status Codes.
 
 [[conformance-classes]]
 ==== Declaration of conformance classes
 
-To support "generic" clients that want to access implementations of multiple OGC API Standards and extensions - and not "just" a specific API server, the EDR API implementation has to declare the conformance classes it claims to have implemented.
+To support "generic" clients that want to access implementations of multiple OGC API Standards and extensions-and not "just" a specific API server, the EDR API implementation has to declare the conformance classes it claims to have implemented.
 
-Support for the declaration of conformance classes is specified in the following Requirements Class of OGC API - Common:
+Support for the declaration of conformance classes is specified in the following Requirements Class of OGC API-Common:
 
 .Dependencies
 

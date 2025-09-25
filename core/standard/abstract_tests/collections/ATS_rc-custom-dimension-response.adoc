@@ -1,9 +1,9 @@
-[[ats_collections_rc-custom-dimension-response-asciidochandle]]
+[[ats_collections_rc-custom-dimension-response]]
 
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-custom-dimension-response-asciidochandle
+identifier:: /conf/edr/rc-custom-dimension-response
 target:: /req/edr/custom-dimension-response
 test-purpose:: Validate that the <<rc_custom-dimensions-section,custom dimension>> parameters query parameters are processed correctly.
 test-method::

@@ -2,7 +2,7 @@
 [[environmental-resource-section]]
 == Query, Spatiotemporal and Information Resources
 
-Query resources are spatiotemporal queries which support operation of the API implementation instance for access and use of the spatiotemporal data resources. The OGC API - EDR Standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
+Query resources are spatiotemporal queries which support operation of the API implementation instance for access and use of the spatiotemporal data resources. The OGC API-EDR Standard has identified an initial set of common `queryTypes` to implement. These are described in <<query-resources-section>>. This list may change as the Standard is used and experience gained.
 
 [[rc_collection-section]]
 A spatiotemporal data resource is a <<collection-definition,collection>> of spatiotemporal data that can be sampled using the OGC API-EDR query patterns.

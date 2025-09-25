@@ -1,12 +1,12 @@
-//Source file - EDIT and RUN Python Script
-[[ats_collections_rc-z-response-asciidochandle]]
+[[ats_collections_rc-z-response]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-z-response-asciidochandle
+identifier:: /conf/edr/rc-z-response
 target:: /req/edr/z-response
 test-purpose:: Validate that the vertical level query parameters are processed correctly.
 test-method::
+step::: Verify that the `z` value is ignored if the `collection` does not define a vertical extent.
 step::: Verify that only resources that have a vertical geometry that intersects the vertical information in the `z` parameter were included in the result set
 step::: Validate that the vertical level parameter complies with the syntax described in <<req_edr_z-response,/req/edr/z-response>>.
 ====
