@@ -10,7 +10,7 @@ part:: The `Title` property _SHALL_ be required and populated
 
 part:: The `Links` property _SHALL_ define the links that SHALL be included in the Root response.
 
-part:: The Root response _SHALL_ be populated with href and rel properties defined by the `Links` property.
+part:: Each `link` defined in the `Links` property _SHALL_ be populated with href and rel properties.
 
 ====
 
