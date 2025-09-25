@@ -6,11 +6,11 @@ include::../requirements/requirements_class_core.adoc[]
 
 === Profiling Requirements
 
-Profile is conformant with the ModSpec
+The Profile is conformant with the ModSpec
 
 include::../requirements/core/REQ_modspec.adoc[]
 
-Implementations of the Profile are conformant with OGC API-EDR Part 1
+Implementations of the Profile are conformant with OGC API-EDR Part 1: Core
 
 include::../requirements/core/REQ_EDR-conformant.adoc[]
 
@@ -26,7 +26,7 @@ A Profile must be interoperable with other OGC API-EDR data providers. Any valid
 
 === Platform Resources
 
-OGC API — Common defines a set of common capabilities which are applicable to any OGC Web API. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
+OGC API — Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
 
 .Platform Resource Paths
 [width="100%",options="header,footer"]
@@ -65,7 +65,7 @@ Dependencies
 * <<OGC19-072,OGC API — Common — Part 1: Core>>
 * <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-Every API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients. The API Definition resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
+Every OGC API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients. The API Definition resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not make any changes to that definition.
 
 Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are required to provide an OpenAPI 3.1 document. This document extends the API definition provided by the OGC API-EDR Standard. These extensions reflect the additional requirements added by the Profile. Implementors of the profile will then build on that document to produce the API definition document for their implementation.
 
@@ -90,11 +90,11 @@ include::../requirements/core/REQ_api.adoc[]
 
 NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
 
-NOTE: Get guidance from the https://docs.ogc.org/pol/10-103r1.html[OGC Naming Authority] on valid URIs for Profiles. 
+NOTE: Profile developers shold get guidance from the https://docs.ogc.org/pol/10-103r1.html[OGC Naming Authority] on valid URIs for Profiles. 
 
 === Spatio-temporal and Information Resources
 
-.Spatialtemporal and Information Resource Paths
+.Spatio-temporal and Information Resource Paths
 [width="100%",options="header,footer"]
 |====================
 |PATH TEMPLATE |METHOD |RESOURCE
@@ -118,9 +118,9 @@ Dependencies
 * <<OGC20-024,OGC API — Common — Part 2: Geospatial Data>>
 * <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-The Collections resource is initially defined in the `Collections` conformance class of the <<OGC20-024,OGC API — Common - Part 2>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Standard does not make any changes to this definition.
+The Collections resource is initially defined in the `Collections` conformance class of the <<OGC20-024,OGC API — Common - Part 2>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not make any changes to that definition.
 
-An API may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)
+An implementation of the OGC API-EDR may support multiple collections. Additional requirements address how the Profile should document requirements at the per-collection level as well as on the landing page (where appropriate)
 
 include::../requirements/core/REQ_requirements-set.adoc[]
 
@@ -138,13 +138,13 @@ Dependencies
 * <<OGC20-024,OGC API — Common — Part 2: Geospatial Data>>
 * <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-===== Collection ID parameter restictions
+===== Collection ID parameter restrictions
 
 include::../requirements/core/REQ_collectionid.adoc[]
 
 ===== Extent property restrictions
 
-The `Collection` metadata includes an Extent property which defines a spatial-temporal envelope that encompasses the geospatial data in the `Collection`.
+The `Collection` metadata includes an Extent property which defines a spatio-temporal envelope that encompasses the geospatial data in the `Collection`.
 
 include::../requirements/core/REQ_extent.adoc[]
 
@@ -169,7 +169,7 @@ Where:
 
 Path = {root}/collections/{collectionId}/{queryType}
 
-Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> Part 1: Core
 
 include::../requirements/core/REQ_data-query.adoc[]
 
@@ -217,7 +217,7 @@ include::../requirements/core/REQ_data-query-cube.adoc[]
 
 ==== Locations Query
 
-The Locations query returns data for the named location. Logic for identifying the best match for the coordinate will depend on the `Collection` and is at the discretion of the query service implementer. If a location id is not defined the API SHALL return a GeoJSON features array of valid location identifiers, the schema of the GeoJSON response SHOULD be defined in the OpenAPI definition of the EDR service.
+The Locations query returns data for the named location. Logic for identifying the best match for the coordinate will depend on the `Collection` and is at the discretion of the query service implementer. If a location id is not defined, the API implementation instance SHALL return a GeoJSON features array of valid location identifiers, the schema of the GeoJSON response SHOULD be defined in the OpenAPI definition of the EDR service.
 
 Path = {root}/collections/{collectionId}/locations
 
@@ -227,7 +227,7 @@ include::../requirements/core/REQ_data-query-locations.adoc[]
 
 ==== Instances Query
 
-Having multiple versions or `Instances` of the same `Collection`, where the same information is reprocessed or regenerated is not unusal. Although these versions could be described as new Collections the `Instance` query type allows this data to be described as different views of the same `Collection`.
+Having multiple versions or `Instances` of the same `Collection`, where the same information is reprocessed or regenerated is not unusual. Although these versions could be described as new Collections the `Instance` query type allows this data to be described as different views of the same `Collection`.
 
 Path = {root}/collections/{collectionId}/instances
 
@@ -250,7 +250,7 @@ Dependencies
 * <<OGC17-069,GC API - Features - Part 1: Core>>
 * <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
-The EDR API Items query is like an https://docs.ogc.org/is/19-086r6/19-086r6.html#OGC17-069r4[OGC API — Features Part 1: Core] endpoint. It offers some basic compatibility with API-Features for convenience. It may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use, such as a monitoring location. Or there may be a catalog of spatio-temporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
+The EDR API Items query is like an https://docs.ogc.org/is/19-086r6/19-086r6.html#OGC17-069r4[OGC API — Features Part 1: Core] endpoint. The Items query offers some basic compatibility with API-Features for convenience. It may be used to catalog pre-existing EDR sampling features. The pre-existence of an EDR sampling feature may be because a particular query has been cached for later use, such as a monitoring location. Or there may be a catalog of spatio-temporal sampling features such as domains of anomalies in a dataset. A GeoJSON-compatible JSON-Schema is specified to document an EDR API query endpoint and valid query parameters including time range, parameters, and spatial characteristics. A service can define a custom GeoJSON schema in the OpenAPI definition for the service, with the default being the edr-geojson schema if no alternative is documented.
 
 ===== ItemID parameter
 
@@ -310,9 +310,9 @@ include::../requirements/core/REQ_links.adoc[]
 
 ==== Asynchronous Queries
 
-While Web protocols typically use request-response operations, there is also support for asychonous operations.
+While Web protocols typically use request-response operations, there is also support for asychronous operations.
 
-HTTP Asynchrouous - This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.
+HTTP Asynchronous - This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.
 
 include::../requirements/core/REQ_asynchronous.adoc[]
 

@@ -6,7 +6,7 @@ identifier:: /conf/core/edr-conformant
 target:: /req/core/edr-conformant
 test-purpose:: Validate that the Profile Standard requires that all implementations demonstrate conformance with the OGC API-EDR Standard.
 test-method:: 
-step:: Verify that the profile specifies that regardless of any profile specifc requirements, implementations shall function as OGC API-EDR Part 1 - Core compliant API's.
+step:: Verify that the profile specifies that regardless of any profile specific requirements, implementations shall function as OGC API-EDR Part 1 - Core compliant API's.
 ====
 
 NOTE: this "purpose" requires more specificity.
