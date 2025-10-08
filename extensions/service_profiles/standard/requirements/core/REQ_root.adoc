@@ -62,9 +62,16 @@ statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval St
 
 part:: A `Provider` property _SHALL_ be populated with a `name` property.
 
-part:: A `Provider` property _MAY_ be populated with a `url` property.
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/provider-url-definition
+statement:: A `Provider` property _MAY_ be populated with a `url` property.
 
 ====
+
 
 [requirement]
 ====
@@ -74,11 +81,24 @@ statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval St
 
 part:: A `Contact` property _SHALL_ be populated with the `email` property.
 
-part:: A `Contact` property _MAY_ be populated with the `name` property.
+====
 
-part:: A `Contact` property _MAY_ be populated with the `url` property.
+[permission]
+====
+[%metadata]
+identifier:: /per/core/contact-name-definition
+statement:: A `Contact` property _MAY_ be populated with the `name` property.
 
 ====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/contact-url-definition
+statement::A `Contact` property _MAY_ be populated with the `url` property.
+
+====
+
 
 [requirement]
 ====
@@ -90,9 +110,16 @@ part:: The `Links` property _SHALL_ define the links that _SHALL_ be included in
 
 part:: The `Links` property _SHALL_ be populated with href and rel properties
 
-part:: The `Links` property _MAY_ be populated with type, hreflang and length properties
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/links-type-href-length-definition
+statement:: The `Links` property _MAY_ be populated with type, hreflang and length properties
 
 ====
+
 
 [recommendation]
 ====

@@ -13,6 +13,13 @@ part:: The `Corridor` requirement _SHALL_ specify the following:
 * Enumerated list of width-units values
 * Enumerated list of height-units values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
-part:: The `Corridor` requirement _MAY_ specify which OGC API-EDR `Corridor` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-mandatory-query-definition
+statement:: The `Corridor` requirement _MAY_ specify which OGC API-EDR `Corridor` query parameters are mandatory for compliance with the profile.
 
 ====

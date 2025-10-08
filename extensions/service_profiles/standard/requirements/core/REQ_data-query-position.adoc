@@ -12,6 +12,13 @@ part:: The `Position` query requirement _SHALL_ specify the following:
 * Enumerated list of crs_details values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
 part:: The `Position` query requirement _SHALL_ also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
-part:: The `Position` requirement _MAY_ specify which OGC API-EDR `Position` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/position-mandatory-query-definition
+statement:: The `Position` requirement _MAY_ specify which OGC API-EDR `Position` query parameters are mandatory for compliance with the profile.
 
 ====
