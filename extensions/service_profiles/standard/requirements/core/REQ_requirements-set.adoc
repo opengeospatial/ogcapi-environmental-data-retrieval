@@ -12,8 +12,22 @@ part:: The profile SHALL clearly define which collection a requirement applies t
 
 part:: The profile SHALL consist of a set of requirements for a `Collection` and (if the `Collection` supports `Instances`) the `Instances` of the `Collection`. For each of the attributes listed, if it is in the `Collection` (or instance), there SHALL be a requirement to define it.
 
-part:: A profile MAY include requirements for the landing page.
+====
 
-part:: A profile MAY include requirements for multiple collections.
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/landing-page-definition
+statement:: A profile MAY include requirements for the landing page.
 
 ====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/multiple-collection-definition
+statement::A profile MAY include requirements for multiple collections.
+
+====
+

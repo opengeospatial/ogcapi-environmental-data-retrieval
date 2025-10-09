@@ -11,6 +11,13 @@ part:: The `Trajectory` query requirement _SHALL_ specify the following:
 * The default_output_format
 * Enumerated list of crs_details values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
-part:: The `Trajectory` requirement _MAY_ specify which OGC API-EDR `Trajectory` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/radius-mandatory-query-definition
+statement:: The `Trajectory` requirement _MAY_ specify which OGC API-EDR `Trajectory` query parameters are mandatory for compliance with the profile.
 
 ====

@@ -12,6 +12,13 @@ part:: The `Radius` query requirement _SHALL_ specify the following:
 * Enumerated list of crs_details values
 * Enumerated list of within_units values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
-part:: The `Radius` requirement _MAY_ specify which OGC API-EDR `Radius` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/radius-mandatory-query-definition
+statement:: The `Radius` query requirement _MAY_ specify which OGC API-EDR `Radius` query parameters are mandatory for compliance with the profile.
 
 ====
