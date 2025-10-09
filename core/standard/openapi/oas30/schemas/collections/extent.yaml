@@ -104,8 +104,7 @@ properties:
                (e.g. "R720/0/0.5") or a list of the values 
                (e.g. 0, 0.5, 1.0, 1.5 ... 715, 720)
             items:
-              type:
-                - string
+              type: string
           y:
             type: array
             description:  |-
@@ -113,8 +112,7 @@ properties:
                (e.g. "R361/90/-0.5") or a list of the values 
                (e.g. 90, 89.5, 89, 88.5 ... -89.5,-90)
             items:
-              type:
-                - string
+              type: string
       crs:
         description: >-
           Coordinate reference system of the coordinates in the spatial extent
@@ -166,7 +164,6 @@ properties:
         minItems: 1
         items:
           type: string
-          minItems: 1
           nullable: true
           example: ["R12/2022-01-14T09:00Z/PT1H","R4/2022-01-14T21:00Z/PT3H","R4/2022-01-15T09:00Z/PT6H"]
 

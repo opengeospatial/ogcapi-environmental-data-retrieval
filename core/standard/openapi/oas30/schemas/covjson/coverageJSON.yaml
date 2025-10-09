@@ -32,16 +32,13 @@ properties:
           "$ref": domain.yaml
         ranges:
           additionalProperties:
-              type: object
               "$ref": ndArray.yaml
   parameters:
     additionalProperties:
-        type: object
         $ref: ../edr-geojson/parameter.yaml
   ranges:
     type: object
     additionalProperties:
-        type: object
         $ref: ndArray.yaml
   referencing:
     type: array
