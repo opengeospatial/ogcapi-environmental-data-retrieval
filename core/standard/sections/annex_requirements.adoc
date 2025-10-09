@@ -11,7 +11,7 @@ For clarity, the complete <<requirements-class-definition,requirements class>> d
 
 :sectnums!:
 
-==== *Requirements Class:* OGC API - Environmental Data Retrieval Core
+==== *Requirements Class:* OGC API-Environmental Data Retrieval Core
 
 include::../requirements/requirements_class_core.adoc[]
 
@@ -91,14 +91,21 @@ include::../requirements/edr/REQ_rc-parameters.adoc[]
 
 include::../requirements/requirements_class_queries.adoc[]
 
+==== Common Requirements for Data Queries
+
+:sectnums:
+
+include::../requirements/edr/REQ_rc-core-query-parameters.adoc[]
+
+:sectnums:
 
 ==== Requirements for Position Queries
+
+:sectnums:
 
 include::../requirements/edr/REQ_rc-position.adoc[]
 
 :sectnums:
-
-
 
 ==== Requirements for Area Queries
 
@@ -140,10 +147,6 @@ include::../requirements/edr/REQ_rc-radius.adoc[]
 
 :sectnums:
 
-==== Requirements for Items Queries
-
-:sectnums:
-
 include::../requirements/edr/REQ_rc-items.adoc[]
 
 :sectnums:
@@ -156,6 +159,9 @@ include::../requirements/edr/REQ_rc-locations.adoc[]
 
 :sectnums:
 
+==== Requirements for Items Queries
+
+:sectnums:
 
 
 ==== Requirements for Instances Queries

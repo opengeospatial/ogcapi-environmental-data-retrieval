@@ -1,8 +1,8 @@
-[[ats_core_rc-limit-definition-asciidochandle]]
+[[ats_core_rc-limit-definition]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/core/rc-limit-definition-asciidochandle
+identifier:: /conf/core/rc-limit-definition
 target:: /req/edr/rc-limit-definition
 test-purpose:: Validate that the limit query parameters are defined correctly.
 test-method::

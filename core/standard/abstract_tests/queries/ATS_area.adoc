@@ -2,6 +2,17 @@
 [abstract_test]
 ====
 [%metadata]
+identifier:: /conf/area/common-query-params
+target:: /req/edr/rc-area
+test-purpose:: Validate that the `Area` query supports the core EDR query parameters.
+test-method::
+step::: Run the <<ats_core-query-parameters, core query parameter>> tests.
+
+====
+
+[abstract_test]
+====
+[%metadata]
 identifier:: /conf/area/no-query-params
 target:: /req/edr/rc-area
 test-purpose:: Validate that an error is returned by an `Area` query if no query parameters are specified.
@@ -34,6 +45,15 @@ step::: Check `coords` query parameter is a valid Well Known Text POLYGON or MUL
 step::: Validate that a document was returned with a status code 400.
 ====
 
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/area/coords-and-z
+target:: /req/edr/rc-area
+test-purpose:: Ensure that when the coords query parameter includes a z-coordinate and the `z` query parameter is also specified, the returned values are correct.
+test-method::
+step::: Confirm that only resources matching the vertical coordinates specified in the `z` query parameter are returned.
+====
 
 [abstract_test]
 ====
@@ -74,45 +94,13 @@ Repeat these tests using the following parameter tests:
 * Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
 * Response <<req_core_rc-time-response,/req/core/datetime-response>>
 
+*CRS*
+
+* Parameter <<req_collections_rc-time-definition,/req/core/datetime-definition>>
+* Response <<req_core_rc-time-response,/req/core/datetime-response>>
+
 Execute requests with combinations of the `coords`,`time`,`parameter-name`,`z`,`crs` and `f` query parameters
 and verify that only information that matches the selection criteria is returned.
 --
 ====
 
-include::../collections/area/ATS_rc-coords-definition.adoc[]
-
-include::../collections/area/ATS_rc-coords-response.adoc[]
-
-include::../collections/area/ATS_rc-z-definition.adoc[]
-
-include::../collections/area/ATS_rc-z-response.adoc[]
-
-include::../collections/area/ATS_rc-custom-dimension-definition.adoc[]
-
-include::../collections/area/ATS_rc-custom-dimension-response.adoc[]
-
-include::../core/area/ATS_rc-time-definition.adoc[]
-
-include::../core/area/ATS_rc-time-response.adoc[]
-
-
-
-include::../collections/area/ATS_rc-parameter-name-definition.adoc[]
-
-include::../collections/area/ATS_rc-parameter-name-response.adoc[]
-
-
-
-include::../collections/area/ATS_rc-crs-definition.adoc[]
-
-include::../collections/area/ATS_rc-crs-response.adoc[]
-
-
-
-include::../collections/area/ATS_rc-f-definition.adoc[]
-
-include::../collections/area/ATS_rc-f-response.adoc[]
-
-include::../collections/area/ATS_rc-limit-definition.adoc[]
-
-include::../collections/area/ATS_rc-limit-response.adoc[]

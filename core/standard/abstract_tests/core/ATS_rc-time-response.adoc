@@ -1,9 +1,8 @@
-//Source file - EDIT and RUN Python Script
-[[ats_core_rc-time-response-asciidochandle]]
+[[ats_core_rc-time-response]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/core/datetime-response-asciidochandle
+identifier:: /conf/core/datetime-response
 target:: /req/core/datetime-response
 test-purpose:: Validate that the `datetime` query parameters are processed correctly.
 test-method::
