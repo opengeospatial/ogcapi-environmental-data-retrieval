@@ -6,8 +6,8 @@ identifier:: /conf/core/extent
 target:: /req/core/extent
 test-purpose:: Validate the profile extent requirements are defined correctly. 
 test-method:: 
-step:: Verfiy that the profile has a requirement specifying the spatial extent of the `Collection`.
-step:: Verfiy that the profile specifies either an enumerated list of CRS values or a Regular expression definition for valid CRS values.
+step:: Verify that the profile has a requirement specifying the spatial extent of the `Collection`.
+step:: Verify that the profile specifies either an enumerated list of CRS values or a Regular expression definition for valid CRS values.
 step:: Verify that Temporal extent requirements specify either an enumerated list of TRS values or a Regular expression definition for valid TRS values.
 step:: Verify that Vertical extent requirements specify either an enumerated list of VRS values or a Regular expression definition for valid VRS values.
 step:: Verify that Custom extent requirements specify the id of the custom dimension.

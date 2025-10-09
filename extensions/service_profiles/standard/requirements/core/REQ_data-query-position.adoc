@@ -19,6 +19,6 @@ part:: The `Position` query requirement _SHALL_ also specify the logic used in s
 ====
 [%metadata]
 identifier:: /per/core/position-mandatory-query-definition
-statement:: The `Position` requirement _MAY_ specify which OGC API-EDR `Position` query parameters are mandatory for compliance with the profile.
+statement:: The `Position` query requirement _MAY_ specify which OGC API-EDR `Position` query parameters are mandatory for compliance with the profile.
 
 ====

@@ -4,9 +4,9 @@
 
 === General
 
-The https://ogcapi.ogc.org/[OGC API] Standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC Standards extend API - Common with facilities specific to a resource type.
+The https://ogcapi.ogc.org/[OGC API] Standards enable access to resources using the HTTP protocol and its associated operations (GET, PUT, POST, etc.). OGC API-Common defines a set of facilities which are applicable to all OGC APIs. Other OGC Standards extend API-Common with facilities specific to a resource type.
 
-The https://ogcapi.ogc.org/edr[OGC API - Environmental Data Retrieval] Standard defines an API with the following goals:
+The https://ogcapi.ogc.org/edr[OGC API-Environmental Data Retrieval] Standard defines an API with the following goals:
 
 . To make it easier to access a wide range of data through a uniform, well-defined simple Web interface;
 . To allow clients to retrieve a subset of data hosted and selected by a server via the API in response to a standardized, coordinate orientated, query pattern;

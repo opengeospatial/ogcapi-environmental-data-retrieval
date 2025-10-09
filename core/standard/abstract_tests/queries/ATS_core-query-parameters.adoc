@@ -1,0 +1,42 @@
+[[ats_core-query-parameters]]
+
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core-query-parameters/operation
+target:: /req/edr/rc-core-query-parameters
+test-purpose:: Validate that the data query supports either a GET or POST operation.
+test-method::
+step::: Make a HTTP GET request.
+step::: Make a HTTP POST request.
+step::: Validate that at least one of the requests did not return a HTTP STATUS 405 code 
+====
+
+include::../collections/ATS_rc-parameter-name-definition.adoc[]
+
+include::../collections/ATS_rc-parameter-name-response.adoc[]
+
+include::../core/ATS_rc-time-definition.adoc[]
+
+include::../core/ATS_rc-time-response.adoc[]
+
+include::../collections/ATS_rc-z-definition.adoc[]
+
+include::../collections/ATS_rc-z-response.adoc[]
+
+include::../collections/ATS_rc-crs-definition.adoc[]
+
+include::../collections/ATS_rc-crs-response.adoc[]
+
+include::../collections/ATS_rc-f-definition.adoc[]
+
+include::../collections/ATS_rc-f-response.adoc[]
+
+include::../collections/ATS_rc-custom-dimension-definition.adoc[]
+
+include::../collections/ATS_rc-custom-dimension-response.adoc[]
+
+include::../collections/ATS_rc-limit-definition.adoc[]
+
+include::../collections/ATS_rc-limit-response.adoc[]
+

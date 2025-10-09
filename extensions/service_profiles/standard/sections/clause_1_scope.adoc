@@ -1,9 +1,9 @@
 == Scope
 [NOTE]
 ====
-This Standard defines how to specify a Profile of the OGC API-EDR Part 1: Core Standard. It only defines restrictive profiles, not profiles that extend the EDR API Standard with new functionality, which may not maintain backward compatibility with the EDR API.
+This Standard defines how to specify a Profile of the OGC API-EDR Part 1: Core Standard. It only defines restrictive profiles, not profiles that extend the EDR API Standard with new functionality. An extension may not maintain backward compatibility with the EDR API.
 
-Some parts of the specification could be used by other OGC APIs.
+Some parts of this Standard could be used by other OGC API Standards and implementations.
 
-The restrictions are defined by using JSON Schema fragments, which can be formally tested.
+The restrictions are defined in requirements. The requirements are defined by using JSON Schema fragments, which can then be formally tested.
 ====

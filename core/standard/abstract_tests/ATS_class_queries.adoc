@@ -8,26 +8,35 @@ subject:: <<rc_queries,https://www.opengis.net/spec/ogcapi-edr-1/1.2/req/queries
 classification:: Target Type:Web API
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/core
 inherit:: https://www.opengis.net/spec/ogcapi-edr-1/1.2/conf/collections
+
+
+conformance-test:: /conf/core-query-parameters/operation
+
+
+conformance-test:: /conf/edr/rc-coords-definition
+conformance-test:: /conf/edr/rc-coords-response
+conformance-test:: /conf/edr/rc-z-definition
+conformance-test:: /conf/edr/rc-z-response
+conformance-test:: /conf/edr/rc-custom-dimension-definition
+conformance-test:: /conf/edr/rc-custom-dimension-response
+conformance-test:: /conf/core/datetime-definition
+conformance-test:: /conf/core/datetime-response
+conformance-test:: /conf/collections/REQ_rc-parameter-name-definition
+conformance-test:: /conf/edr/rc-parameter-name-response
+conformance-test:: /conf/edr/REQ_rc-crs-definition
+conformance-test:: /conf/edr/REQ_rc-crs-response
+conformance-test:: /conf/edr/rc-f-definition
+conformance-test:: /conf/collections/rc-f-response
+conformance-test:: /conf/core/rc-limit-definition
+conformance-test:: /conf/core/rc-limit-response
+
+
 conformance-test:: /conf/position/no-query-params
 conformance-test:: /conf/position/no-coords-param
 conformance-test:: /conf/position/coords-param-invalid
 conformance-test:: /conf/position/valid-query-params
-conformance-test:: /conf/edr/rc-coords-definition-position
-conformance-test:: /conf/edr/rc-coords-response-position
-conformance-test:: /conf/edr/rc-z-definition-position
-conformance-test:: /conf/edr/rc-z-response-position
-conformance-test:: /conf/edr/rc-custom-dimension-definition-position
-conformance-test:: /conf/edr/rc-custom-dimension-response-position
-conformance-test:: /conf/core/datetime-definition-position
-conformance-test:: /conf/core/datetime-response-position
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-position
-conformance-test:: /conf/edr/rc-parameter-name-response-position
-conformance-test:: /conf/edr/REQ_rc-crs-definition-position
-conformance-test:: /conf/edr/REQ_rc-crs-response-position
-conformance-test:: /conf/edr/rc-f-definition-position
-conformance-test:: /conf/collections/rc-f-response-position
-conformance-test:: /conf/core/rc-limit-definition-position
-conformance-test:: /conf/core/rc-limit-response-position
+
+
 
 conformance-test:: /conf/radius/no-query-params
 conformance-test:: /conf/radius/no-coords-param
@@ -35,47 +44,15 @@ conformance-test:: /conf/radius/no-within-param
 conformance-test:: /conf/radius/no-within_units-param
 conformance-test:: /conf/radius/coords-param-invalid
 conformance-test:: /conf/radius/valid-query-params
-conformance-test:: /conf/edr/rc-coords-definition-radius
-conformance-test:: /conf/edr/rc-coords-response-radius
-conformance-test:: /conf/edr/rc-z-definition-radius
-conformance-test:: /conf/edr/rc-z-response-radius
-conformance-test:: /conf/edr/rc-custom-dimension-definition-radius
-conformance-test:: /conf/edr/rc-custom-dimension-response-radius
-conformance-test:: /conf/core/datetime-definition-radius
-conformance-test:: /conf/core/datetime-response-radius
 conformance-test:: /conf/edr/REQ_rc-within-definition
 conformance-test:: /conf/collections/REQ_rc-within-response
 conformance-test:: /conf/edr/REQ_rc-within-units-definition 
 conformance-test:: /conf/collections/REQ_rc-within-units-response
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-radius
-conformance-test:: /conf/edr/rc-parameter-name-response-radius
-conformance-test:: /conf/edr/REQ_rc-crs-definition-radius
-conformance-test:: /conf/edr/REQ_rc-crs-response-radius
-conformance-test:: /conf/edr/rc-f-definition-radius
-conformance-test:: /conf/collections/rc-f-response-radius
-conformance-test:: /conf/core/rc-limit-definition-radius
-conformance-test:: /conf/core/rc-limit-response-radius
 
 conformance-test:: /conf/area/no-query-params
 conformance-test:: /conf/area/no-coords-param
 conformance-test:: /conf/area/coords-param-invalid
 conformance-test:: /conf/area/valid-query-params
-conformance-test:: /conf/edr/rc-coords-definition-area
-conformance-test:: /conf/edr/rc-coords-response-area
-conformance-test:: /conf/edr/rc-z-definition-area
-conformance-test:: /conf/edr/rc-z-response-area
-conformance-test:: /conf/edr/rc-custom-dimension-definition-area
-conformance-test:: /conf/edr/rc-custom-dimension-response-area
-conformance-test:: /conf/core/datetime-definition-area
-conformance-test:: /conf/core/datetime-response-area
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-area
-conformance-test:: /conf/edr/rc-parameter-name-response-area
-conformance-test:: /conf/edr/REQ_rc-crs-definition-area
-conformance-test:: /conf/edr/REQ_rc-crs-response-area
-conformance-test:: /conf/edr/rc-f-definition-area
-conformance-test:: /conf/collections/rc-f-response-area
-conformance-test:: /conf/core/rc-limit-definition-area
-conformance-test:: /conf/core/rc-limit-response-area
 
 conformance-test:: /conf/cube/no-query-params
 conformance-test:: /conf/cube/no-bbox-param
@@ -83,24 +60,12 @@ conformance-test:: /conf/cube/bbox-param-invalid
 conformance-test:: /conf/cube/valid-query-params
 conformance-test:: /conf/core/rc-bbox-definition-cube
 conformance-test:: /conf/core/rc-bbox-response-cube
-conformance-test:: /conf/core/rc-z-definition-cube
-conformance-test:: /conf/core/rc-z-response-cube
-conformance-test:: /conf/edr/rc-custom-dimension-definition-cube
-conformance-test:: /conf/edr/rc-custom-dimension-response-cube
-conformance-test:: /conf/core/datetime-definition-cube
-conformance-test:: /conf/core/datetime-response-cube
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-cube
-conformance-test:: /conf/edr/rc-parameter-name-response-cube
 conformance-test:: /conf/core/rc-resolution-x-definition-cube
 conformance-test:: /conf/core/rc-resolution-x-response-cube
 conformance-test:: /conf/core/rc-resolution-y-definition-cube
 conformance-test:: /conf/core/rc-resolution-y-response-cube
 conformance-test:: /conf/core/rc-resolution-z-definition-cube
 conformance-test:: /conf/core/rc-resolution-z-response-cube
-conformance-test:: /conf/edr/REQ_rc-crs-definition-cube
-conformance-test:: /conf/edr/REQ_rc-crs-response-cube
-conformance-test:: /conf/edr/rc-f-definition-cube
-conformance-test:: /conf/collections/rc-f-response-cube
 
 conformance-test:: /conf/trajectory/no-query-params
 conformance-test:: /conf/trajectory/no-coords-param
@@ -111,17 +76,7 @@ conformance-test:: /conf/trajectory/coords-param-separate-z-linestringzm
 conformance-test:: /conf/trajectory/coords-param-invalid-linestringzm
 conformance-test:: /conf/trajectory/coords-param-invalid-linestringz
 conformance-test:: /conf/trajectory/coords-param-invalid-time
-conformance-test:: /conf/edr/rc-custom-dimension-definition-trajectory
-conformance-test:: /conf/edr/rc-custom-dimension-response-trajectory
 conformance-test:: /conf/trajectory/valid-query-params
-conformance-test:: /conf/edr/rc-coords-definition-trajectory
-conformance-test:: /conf/edr/rc-coords-response-trajectory
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-trajectory
-conformance-test:: /conf/edr/rc-parameter-name-response-trajectory
-conformance-test:: /conf/edr/REQ_rc-crs-definition-trajectory
-conformance-test:: /conf/edr/REQ_rc-crs-response-trajectory
-conformance-test:: /conf/edr/rc-f-definition-trajectory
-conformance-test:: /conf/collections/rc-f-response-trajectory
 
 conformance-test:: /conf/corridor/no-query-params
 conformance-test:: /conf/corridor/no-coords-param
@@ -142,11 +97,7 @@ conformance-test:: /conf/edr/rc-resolution-x-definition-corridor
 conformance-test:: /conf/edr/rc-resolution-x-response-corridor
 conformance-test:: /conf/edr/rc-resolution-y-definition-corridor
 conformance-test:: /conf/edr/rc-resolution-y-response-corridor
-conformance-test:: /conf/edr/rc-custom-dimension-definition-corridor
-conformance-test:: /conf/edr/rc-custom-dimension-response-corridor
 conformance-test:: /conf/corridor/valid-query-params
-conformance-test:: /conf/edr/rc-coords-definition-corridor
-conformance-test:: /conf/edr/rc-coords-response-corridor
 conformance-test:: /conf/edr/REQ_rc-corridor-width-definition
 conformance-test:: /conf/collections/REQ_rc-corridor-width-response
 conformance-test:: /conf/edr/REQ_rc-corridor-height-definition
@@ -155,12 +106,6 @@ conformance-test:: /conf/edr/REQ_rc-width-units-definition
 conformance-test:: /conf/collections/REQ_rc-width-units-response
 conformance-test:: /conf/edr/REQ_rc-height-units-definition
 conformance-test:: /conf/collections/rc-height-units-response
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-corridor
-conformance-test:: /conf/edr/rc-parameter-name-response-corridor
-conformance-test:: /conf/edr/REQ_rc-crs-definition-corridor
-conformance-test:: /conf/edr/REQ_rc-crs-response-corridor
-conformance-test:: /conf/edr/rc-f-definition-corridor
-conformance-test:: /conf/collections/rc-f-response-corridor
 conformance-test:: /conf/instances/rc-md-op
 conformance-test:: /conf/instances/rc-md-success
 conformance-test:: /conf/instances/src-md-op
@@ -169,32 +114,24 @@ conformance-test:: /conf/locations/no-query-params
 conformance-test:: /conf/locations/locations-nodata
 conformance-test:: /conf/locations/location-identifier-invalid
 conformance-test:: /conf/locations/valid-query-params
-conformance-test:: /conf/core/datetime-definition-locations
-conformance-test:: /conf/core/datetime-response-locations
-conformance-test:: /conf/collections/REQ_rc-parameter-name-definition-locations
-conformance-test:: /conf/edr/rc-parameter-name-response-locations
-conformance-test:: /conf/edr/REQ_rc-crs-definition-locations
-conformance-test:: /conf/edr/REQ_rc-crs-response-locations
-conformance-test:: /conf/edr/rc-f-definition-locations
-conformance-test:: /conf/collections/rc-f-response-locations
-conformance-test:: /conf/core/rc-limit-definition-locations
-conformance-test:: /conf/core/rc-limit-response-locations
 
 conformance-test:: /conf/core/rc-bbox-definition
 conformance-test:: /conf/core/rc-bbox-response
-conformance-test:: /conf/core/datetime-definition-items
-conformance-test:: /conf/core/datetime-response-items
-conformance-test:: /conf/edr/rc-custom-dimension-definition-locations 
-conformance-test:: /conf/edr/rc-custom-dimension-response-locations
 conformance-test:: /conf/edr/rc-locationid-definition
 conformance-test:: /conf/edr/rc-locationid-response
 conformance-test:: /conf/core/rc-items
+conformance-test:: /conf/core/items/datetime-definition
+conformance-test:: /conf/core/items/datetime-response
 conformance-test:: /conf/core/rc-numberReturned
 conformance-test:: /conf/core/rc-numberMatched
 
 ====
 
 ==== Query Pattern Tests
+
+===== Core data query parameters 
+
+include::queries/ATS_core-query-parameters.adoc[]
 
 ===== Position
 

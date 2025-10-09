@@ -7,7 +7,7 @@ The https://www.w3.org/TR/webarch/[Architecture of the World Wide Web] establish
 
 The normative provisions in this Standard are denoted by the URI:
 
-https://www.opengis.net/spec/ogcapi-edr-1/1.1
+https://www.opengis.net/spec/ogcapi-edr-1/1.2
 
 All <<requirement-definition,Requirements>> and <<ctc-definition,Conformance Tests>> that appear in this document are denoted by partial URIs which are relative to this base.
 
@@ -69,7 +69,7 @@ XML media types that would typically occur in implemention of an OGC API endpoin
 * `application/gml+xml;version=3.2;profile=https://www.opengis.net/def/profile/ogc/2.0/gml-sf2` for GML 3.2 feature <<collection-definition,collections>> and features conforming to the GML Simple Feature Level 2 profile
 * `application/xml` for all other resources
 
-The typical HTML media type for all "web pages" in an implementation of an OGC API point would be `text/html`.
+The typical HTML media type for all "web pages" in an implementation of an OGC API service endpoint would be `text/html`.
 
 The media types for an OpenAPI definition are `application/vnd.oai.openapi+json;version=3.0.4` or `application/vnd.oai.openapi+json;version=3.1.1` (JSON) and `application/vnd.oai.openapi;version=3.0.4` or `application/vnd.oai.openapi;version=3.1.1` (YAML).
 
@@ -140,9 +140,9 @@ If the OpenAPI Server Object looks like this:
 [source,YAML]
 ----
 servers:
-  - url: https://dev.example.org/
+ - url: https://dev.example.org/
     description: Development server
-  - url: https://data.example.org/
+ - url: https://data.example.org/
     description: Production server
 ----
 
@@ -152,4 +152,4 @@ URL `https://data.example.org/mypath` for the production server.
 
 ==== Reusable OpenAPI components
 
-Reusable components for OpenAPI definitions for implementations of the OGC API - Features Standard are referenced from this document.
+Reusable components for OpenAPI definitions for implementations of the OGC API-Features Standard are referenced from this document.

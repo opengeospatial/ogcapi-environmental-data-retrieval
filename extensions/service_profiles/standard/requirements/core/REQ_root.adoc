@@ -4,11 +4,13 @@
 ====
 [%metadata]
 identifier:: /req/core/root
-statement:: The OGC API-EDR Landing Page schema only requires the `links` property, however, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require the following additional properties and content:
+statement:: The OGC API-EDR Landing Page schema only requires the `links` property. However, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require the following additional properties and content:
 
 part:: The `Title` property _SHALL_ be required and populated
 
-part:: The `Links` property _SHALL_ define the links that SHALL be included in the Root response and _SHALL_ be populated with href and rel properties.
+part:: The `Links` property _SHALL_ define the links that SHALL be included in the Root response.
+
+part:: Each `link` defined in the `Links` property _SHALL_ be populated with href and rel properties.
 
 ====
 

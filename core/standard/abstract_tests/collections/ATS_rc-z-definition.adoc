@@ -1,9 +1,8 @@
-//Source file - EDIT and RUN Python Script
-[[ats_collections_rc-z-definition-asciidochandle]]
+[[ats_collections_rc-z-definition]]
 [abstract_test]
 ====
 [%metadata]
-identifier:: /conf/edr/rc-z-definition-asciidochandle
+identifier:: /conf/edr/rc-z-definition
 target:: /req/edr/z-definition
 test-purpose:: Validate that the vertical level query parameters are constructed correctly.
 test-method::
