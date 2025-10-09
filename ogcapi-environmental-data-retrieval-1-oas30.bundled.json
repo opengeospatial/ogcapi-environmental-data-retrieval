@@ -2496,18 +2496,14 @@
                     "type": "array",
                     "description": "x coordinates as number of repetitions / minimum value / interval \n(e.g. \"R720/0/0.5\") or a list of the values \n(e.g. 0, 0.5, 1.0, 1.5 ... 715, 720)",
                     "items": {
-                      "type": [
-                        "string"
-                      ]
+                      "type": "string"
                     }
                   },
                   "y": {
                     "type": "array",
                     "description": "y coordinates as number of repetitions / minimum value / interval \n(e.g. \"R361/90/-0.5\") or a list of the values \n(e.g. 90, 89.5, 89, 88.5 ... -89.5,-90)",
                     "items": {
-                      "type": [
-                        "string"
-                      ]
+                      "type": "string"
                     }
                   }
                 }
@@ -2558,7 +2554,6 @@
                 "minItems": 1,
                 "items": {
                   "type": "string",
-                  "minItems": 1,
                   "nullable": true,
                   "example": [
                     "R12/2022-01-14T09:00Z/PT1H",
@@ -3202,7 +3197,6 @@
           "categories": {
             "type": "array",
             "items": {
-              "minItems": 1,
               "type": "object",
               "required": [
                 "id",
@@ -4123,7 +4117,6 @@
                 },
                 "ranges": {
                   "additionalProperties": {
-                    "type": "object",
                     "$ref": "#/components/schemas/ndArray"
                   }
                 }
@@ -4132,14 +4125,12 @@
           },
           "parameters": {
             "additionalProperties": {
-              "type": "object",
               "$ref": "#/components/schemas/parameter"
             }
           },
           "ranges": {
             "type": "object",
             "additionalProperties": {
-              "type": "object",
               "$ref": "#/components/schemas/ndArray"
             }
           },
