@@ -11,6 +11,25 @@ part:: The `Locations` query requirement _SHALL_ specify the following:
 * The default_output_format
 * Enumerated list of crs_details values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
-part:: The `Locations` requirement _MAY_ specify which OGC API-EDR `Locations` query parameters are mandatory for compliance with the profile.
-part:: The `Locations` query requirement _MAY_ specify a list of required `locationId` values.
+
+====
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/locations-mandatory-query-definition
+statement:: The `Locations` requirement _MAY_ specify which OGC API-EDR `Locations` query parameters are mandatory for compliance with the profile.
+
+====
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/locations-mandatory-locationid-definition
+statement:: The `Locations` query requirement _MAY_ specify a list of required `locationId` values.
+
 ====

@@ -185,6 +185,26 @@ Data format for the output data (available options are listed in the Collections
 
 include::../requirements/core/REQ_output-format.adoc[]
 
+==== Position Query
+
+The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the `Collection` and is at the discretion of the query service implementer. 
+
+Path = {root}/collections/{collectionId}/positions 
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+include::../requirements/core/REQ_data-query-position.adoc[]
+
+==== Radius Query
+
+The Radius query returns data within the defined radius of the requested coordinate. 
+
+Path = {root}/collections/{collectionId}/radius 
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+include::../requirements/core/REQ_data-query-radius.adoc[]
+
 ==== Area Query
 
 The Area query returns data within the polygon defined by the coords parameter. Logic for identifying the best match for the requested area will depend on the Collection and is at the discretion of the query service implementer.
@@ -195,16 +215,6 @@ Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query-area.adoc[]
 
-==== Corridor Query
-
-The Corridor query returns data along and around the path defined by the coords parameter. Logic for identifying the best match for the requested corridor will depend on the `Collection` and is at the discretion of the query service implementer. 
-
-Path = {root}/collections/{collectionId}/corridor
-
-Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
-
-include::../requirements/core/REQ_data-query-corridor.adoc[]
-
 ==== Cube Query
 
 The Cube query returns a data cube defined by the bbox and z parameters.
@@ -214,6 +224,26 @@ Path = {root}/collections/{collectionId}/cube
 Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
 include::../requirements/core/REQ_data-query-cube.adoc[]
+
+==== Trajectory Query
+
+The Trajectory query returns data along the path defined by the coords parameter. Logic for identifying the best matches for the requested trajectory will depend on the `Collection` and is at the discretion of the query service implementer. 
+
+Path = {root}/collections/{collectionId}/trajectory 
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+include::../requirements/core/REQ_data-query-trajectory.adoc[]
+
+==== Corridor Query
+
+The Corridor query returns data along and around the path defined by the coords parameter. Logic for identifying the best match for the requested corridor will depend on the `Collection` and is at the discretion of the query service implementer. 
+
+Path = {root}/collections/{collectionId}/corridor
+
+Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
+
+include::../requirements/core/REQ_data-query-corridor.adoc[]
 
 ==== Locations Query
 
@@ -261,36 +291,6 @@ If an itemId is not specified, the query will return a list of the available ite
 Paging restrictions (limit parameter provided in the request, multi-page response). 
 
 include::../requirements/core/REQ_paging-support.adoc[]
-
-==== Position Query
-
-The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the `Collection` and is at the discretion of the query service implementer. 
-
-Path = {root}/collections/{collectionId}/positions 
-
-Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
-
-include::../requirements/core/REQ_data-query-position.adoc[]
-
-==== Radius Query
-
-The Radius query returns data within the defined radius of the requested coordinate. 
-
-Path = {root}/collections/{collectionId}/radius 
-
-Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
-
-include::../requirements/core/REQ_data-query-radius.adoc[]
-
-==== Trajectory Query
-
-The Trajectory query returns data along the path defined by the coords parameter. Logic for identifying the best matches for the requested trajectory will depend on the `Collection` and is at the discretion of the query service implementer. 
-
-Path = {root}/collections/{collectionId}/trajectory 
-
-Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
-
-include::../requirements/core/REQ_data-query-trajectory.adoc[]
 
 === General Requirements
 
