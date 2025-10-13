@@ -409,7 +409,7 @@ a set of key-value pairs, where the key is the name of the parameter and the val
 |**type**  |String|**Yes**| Always 'Parameter'
 |label  | String |No| A short text label for the parameter
 |description |String|No|  A description of the parameter
-|data-type |String|No|  The data type of the parameter values [integer, float, string]
+|dataType |String|No|  The data type of the parameter values [integer, float, string]
 |unit |<<col-unit,unit>> object|No|  A description of the units of the parameter values
 |**observedProperty** |<<col-observed_property,observedProperty>> object|**Yes**|  A formal definition of the parameter
 |extent |<<col-extent,Extent>> object|No|  Information on the spatio-temporal extent of the parameter values (if different from other parameters in the collection)
