@@ -17,7 +17,7 @@ part:: The `Trajectory` query requirement _SHALL_ specify the following:
 [permission]
 ====
 [%metadata]
-identifier:: /per/core/radius-mandatory-query-definition
+identifier:: /per/core/trajectory-mandatory-query-definition
 statement:: The `Trajectory` requirement _MAY_ specify which OGC API-EDR `Trajectory` query parameters are mandatory for compliance with the profile.
 
 ====
