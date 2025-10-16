@@ -13,7 +13,7 @@ properties:
     type: string
   label:
     type: string
-  data-type:
+  dataType:
     description: Data type of returned parameter
     type: string
     enum:
