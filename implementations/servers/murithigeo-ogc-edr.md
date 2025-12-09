@@ -4,7 +4,9 @@ This implementation is a work in progress and may not conform to the conformance
 
 This implementation conditionally supports queries based on the data type of the source data or a personal decision. Available output formats also depend on the data type of source data although most collections do support CoverageJSON.
 
-It currently supports v1, v1.0.1 and Part 2: Publish/Subscribe.
+For example, raster datasets may support `resolution-[x|y|z]` parameter queries but vector ones don't because it is easy to sample raster datasets.
+
+It should support v1.0.0, v1.0.1, v1.1.0 and Part 2: Publish/Subscribe.
 
 [Project Github Repo](http://github.com/murithigeo/ogc-edr-api)
 
