@@ -37,7 +37,7 @@ The columns for each part list the conformance classes of the standard that are 
 | https://www.ogc.org/resource/products/details/?pid=1684[Link]
 | igor.andruska [at] iblsoft.com
 
-| link:servers/murithigeo-ogc-edr.md[Reference Implementation by murithigeo]
+| link:servers/murithigeo-ogc-edr.md[Demo Implementation in TypeScript]
 | `core`, `edr-geojson`, `queries`, `asyncapi`
 | None
 | murithiedwing [at] gmail.com

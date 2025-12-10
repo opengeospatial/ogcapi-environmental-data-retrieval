@@ -1,4 +1,4 @@
-# OGC-EDR Reference Server Implementation by Edwin Gichuru
+# OGC-EDR Demo Server Implementation by Edwin Gichuru
 
 This implementation is a work in progress and may not conform to the conformance classes advertised. If such an error is found, feel free to create an issue or reach out via e-mail.
 
