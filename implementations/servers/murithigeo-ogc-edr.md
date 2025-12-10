@@ -8,7 +8,7 @@ For example, raster datasets may support `resolution-[x|y|z]` parameter queries 
 
 It should support v1.0.0, v1.0.1, v1.1.0 and Part 2: Publish/Subscribe.
 
-[Project Github Repo](http://github.com/murithigeo/ogc-edr-api)
+[Project GitHub Repo](http://github.com/murithigeo/ogc-edr-api)
 
 ## Demo Deployment
 
