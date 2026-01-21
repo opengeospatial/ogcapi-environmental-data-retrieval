@@ -62,7 +62,7 @@ With the OGC API family of standards, the OGC community has extended its suite o
 |====
 | Resource | Path | HTTP Method | Document Reference
 | Landing page | ``/`` | GET | <<landing-page,API Landing Page>>
-| API definition | ``/api`` | GET | <<api-definition,API Definition>>
+| API definition | ``/{api}`` | GET | <<api-definition,API Definition>>
 | Conformance classes | ``/conformance`` | GET |<<conformance-classes,Declaration of Conformance Classes>>
 | Collections metadata | ``/collections`` | GET | <<rc_collection-section,Collections Metadata>>
 | Collection instance metadata | ``/collections/{collection_id}`` | GET | <<collection-definition,Collection Metadata>>
