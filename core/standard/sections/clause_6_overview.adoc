@@ -30,7 +30,7 @@ The EDR API defines behavior for the HTTP GET and POST operations. Future versio
 ^|**Path Template** ^|**Relation** ^|**Method** ^|**Resource**
 4+^|**Common**
 |<<landing-page,{root}/>> |none |GET|Landing page
-|<<api-definition,{root}/api>> |`service-desc` +
+|<<api-definition,{root}/{api}>> |`service-desc` +
 or +
 `service-doc` |GET|API Description (optional)
 |<<conformance-classes,{root}/conformance>> |`conformance` |GET|Conformance Classes
@@ -49,6 +49,7 @@ or +
 Where:
 
 * `{root}` = Base URI for the API server
+* `{api}` = an identifier for an optional description of the API
 * `{collectionId}` = an identifier for a specific <<collection-definition,collection>> of data
 * `{instanceId}` = an identifier for a specific version or <<instance-definition,instance>> of a <<collection-definition,collection>> of data
 * `{queryType}` = an identifier for a specific query pattern to retrieve data from a specific <<collection-definition,collection>> of data
