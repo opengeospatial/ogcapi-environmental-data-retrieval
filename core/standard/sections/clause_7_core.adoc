@@ -103,7 +103,7 @@ include::../requirements/core/REQ_rc-api-definition-success.adoc[]
 
 include::../recommendations/core/REC_api-definition-oas.adoc[]
 
-If the server hosts the API definition under the base path of the API endpoint (for example, at path `/api`), there is no need to include the path of the API definition in the API definition itself.
+If the server hosts the API definition under the base path of the API endpoint (for example, at path `/{api}`), there is no need to include the path of the API definition in the API definition itself.
 
 The idea is that any implementation of the OGC API Features Standard may be used by developers that are familiar with the API definition language(s) supported by the server. For example, if an OpenAPI definition is used, it is possible to create a working client using the OpenAPI definition. The developer may need to learn a little bit about geometry data types, etc., but it is not necessary to read this Standard to access the data via an API endpoint.
 
