@@ -123,7 +123,7 @@ Support for an API definition is specified in the following Requirements Class o
 
 This operation is defined in the `Core` conformance class of OGC API — Common. No modifications are needed to support spatio-temporal data resources. The `Core` conformance class describes two ways of performing this operation:
 
-. Issue a `GET` request on the `{root}/api` path
+. Issue a `GET` request on the `{root}/{api}` path
 . Follow the `service-desc` or `service-doc` link on the landing page
 
 Only the link is required by OGC API - Common.
