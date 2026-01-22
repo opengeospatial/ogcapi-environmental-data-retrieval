@@ -14,6 +14,8 @@ The EDR API is described using the OpenAPI 3.0 or OpenAPI 3.1 specifications. Ex
 
 link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/ogcapi-environmental-data-retrieval-1.yaml[YAML OpenAPI document]
 
+NOTE This paragraph to be removed at publication. Currently can be temporarily found at https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/ogcapi-environmental-data-retrieval-1-oas30.bundled.json[OpenAPI 3.0] and https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/ogcapi-environmental-data-retrieval-1-oas31.bundled.json[OpenAPI 3.1]
+
 [[conformance-response-examples]]
 === Conformance Examples
 
