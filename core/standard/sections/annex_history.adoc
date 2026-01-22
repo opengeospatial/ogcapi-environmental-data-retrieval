@@ -4,7 +4,7 @@
 [cols="12,18,12,12,46",options="header"]
 .Revision History
 |===
-|Date |Release |Editor | Primary clauses modified |Description
+|Date |Release |Editor |Primary clauses modified |Description
 |2019-10-31 |October 2019 snapshot |C. Heazel |all |Baseline update
 |2020-06-04 |June 2020 master |Mark Burgoyne |all |Resolved Trajectory pattern
 |2020-06-05 |June 2020 branch |Chris Little |all |Increase alignment with Common
@@ -12,20 +12,21 @@
 |2020-07-22 |Restructure branch |Chris Little |all |Restructure 7,8,9,10
 |2020-07-22 |Issues 106, 107 |Dave Blodgett |all |Fix broken links
 |2020-10-20 |Oct 2020 Master|Chris Little |Definitions |Added missing Cube definition
-|2021-01-14 |Issue 170|Tom Kralidis | all |normalize query parameters as kebab-case
-|2021-01-20 |master branch|Tom Kralidis | all |Editorial updates, requirement update for z parameter
-|2021-02-18 |Master branch|Mark Burgoyne | all |Add dedicated width and height query parameters to the corridor query
-|2021-03-03 |Master branch|Mark Burgoyne | all |Simplify Cube query
-|2021-03-03 |Master branch|Chris Little | all |replace references to Environmental with spatio-temporal
-|2021-03-26 |Master branch|Chris Little | Title Page |Capture r3 snapshot of document prior to Planning Committee Vote
-|2021-04-20 |Master branch|Mark Burgoyne | all | Finalize collection response metadata
-|2021-04-27 |Master branch|Chris Little and others | all | Improved realism of examples, editorial niceties
-|2021-05-10 |Master branch|Mark Burgoyne | all | Fix broken links
-|2021-09-09 |1.0|G.Hobona | all | Conversion to metanorma asciidoc
-|2022-05-12 |Master branch|Mark Burgoyne | all | Add missing requirements and tests for data_queries metadata
-|2022-06-01 |1.0.1|G.Hobona | all | Final OGC Staff review
-|2023-06-30 |1.1|G.Hobona | all | Final OGC Staff review
-|2024-09-19 |1.2|Mark Burgoyne| all | Changes for v1.2 (link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/321[#321], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/398[#398], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/414[#414], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/455[#455], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/479[#479] link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/527[#527], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/529[#529], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/560[#560], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/565[#565])
-|2024-02-19 |Master branch|Chris Little | all |editorial changes arising from OAB Review
-|2025-09-04 |Master branch|Mark Burgoyne | all |Refactor requirements and abstract tests sections to reduce duplication
+|2021-01-14 |Issue 170|Tom Kralidis |all |Normalize query parameters as kebab-case
+|2021-01-20 |master branch|Tom Kralidis |all |Editorial updates, requirement update for z parameter
+|2021-02-18 |Master branch|Mark Burgoyne |all |Add dedicated width and height query parameters to the corridor query
+|2021-03-03 |Master branch|Mark Burgoyne |all |Simplify Cube query
+|2021-03-03 |Master branch|Chris Little |all |Replace references to Environmental with spatio-temporal
+|2021-03-26 |Master branch|Chris Little |Title Page |Capture r3 snapshot of document prior to Planning Committee Vote
+|2021-04-20 |Master branch|Mark Burgoyne |all |Finalize collection response metadata
+|2021-04-27 |Master branch|Chris Little and others |all |Improved realism of examples, editorial niceties
+|2021-05-10 |Master branch|Mark Burgoyne |all |Fix broken links
+|2021-09-09 |1.0|G.Hobona |all |Conversion to metanorma asciidoc
+|2022-05-12 |Master branch|Mark Burgoyne |all |Add missing requirements and tests for data_queries metadata
+|2022-06-01 |1.0.1|G.Hobona |all |Final OGC Staff review
+|2023-06-30 |1.1|G.Hobona |all |Final OGC Staff review
+|2024-09-19 |1.2|Mark Burgoyne|all |Changes for v1.2 (link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/321[#321], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/398[#398], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/414[#414], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/455[#455], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/479[#479] link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/527[#527], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/529[#529], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/560[#560], link:https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues/565[#565])
+|2024-02-19 |Master branch|Chris Little |all |Editorial changes arising from OAB Review
+|2025-09-04 |Master branch|Mark Burgoyne |all |Refactor requirements and abstract tests sections to reduce duplication
+|2025-09-30 |Master branch|Mark Burgoyne, Chris Little |all |Editorial changes and fixes from Public Review agreed with OAB
 |===
