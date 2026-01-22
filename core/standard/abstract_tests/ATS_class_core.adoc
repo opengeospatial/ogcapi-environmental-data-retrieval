@@ -28,7 +28,7 @@ include::core/ATS_root-op.adoc[]
 
 include::core/ATS_root-success.adoc[]
 
-==== API Definition Path {root}/api (link)
+==== API Definition Path {root}/{api} (link)
 
 include::core/ATS_api-definition.adoc[]
 
