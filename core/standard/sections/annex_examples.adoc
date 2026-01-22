@@ -10,7 +10,7 @@ include::../examples/landing_page_JSON_1.adoc[]
 [[oas-examples]]
 === API Description Examples
 
-The EDR API is described using the OpenAPI 3.0 specification. Example responses for a server which supports all possible EDR query patterns can be found at:
+The EDR API is described using the OpenAPI 3.0 or OpenAPI 3.1 specifications. Example responses for a server which supports all possible EDR query patterns can be found at:
 
 link:https://schemas.opengis.net/ogcapi/edr/1.2/openapi/ogcapi-environmental-data-retrieval-1.yaml[YAML OpenAPI document]
 
