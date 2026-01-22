@@ -321,7 +321,7 @@ The EDR query object provides the metadata for the specified query type.
 .EDR Query Object
 |==========================
 |Field Name|Type|Required|Description
-|**link**  | <<col-links,Link>> object|**Yes**| Array of height values supported by the collection.
+|**link**  | <<col-links,Link>> object|**Yes**| Link for the query.
 |==========================
 
 A data query object example for a collection that supports Position and Radius queries is shown below.

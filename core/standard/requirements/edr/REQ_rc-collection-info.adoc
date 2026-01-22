@@ -47,12 +47,12 @@ Every Collection within a collections array SHALL have a `crs` parameter which S
 ---
 *I:*
 
-Every Collection within a collections array MAY have a `distanceunits` parameter containing an array of supported distance units.
+Every Collection within a collections array MAY have a `within_units` parameter containing an array of supported distance units.
 
 ---
 *J:*
 
-If the `links` parameter includes a link to a `Radius` query there SHALL be a `distanceunits` parameter.
+If the `links` parameter includes a link to a `Radius` query there SHALL be a `within_units` parameter.
 
 ---
 *K:*
