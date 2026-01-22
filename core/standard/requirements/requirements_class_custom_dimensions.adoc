@@ -36,7 +36,7 @@ properties:
 ----
 ====
 
-Following the conventions used for the temporal or vertical extents, custom extent objects SHALL provide the following information:
+Consistent with the conventions used for temporal and vertical extents, a custom extent SHALL define a structured set of metadata describing the dimension it represents. A custom extent is used when a collection contains an axis that is neither purely spatial, temporal, nor vertical, but is nevertheless required for correctly interpreting or subsetting the data. To ensure interoperability and predictable behaviour across EDR implementations, each custom extent SHALL include the following properties:
 
 * id: Name of the <<rc_custom-dimensions-section,custom dimension>>.
 * interval: data value range of the dimension (minimum value, maximum value).

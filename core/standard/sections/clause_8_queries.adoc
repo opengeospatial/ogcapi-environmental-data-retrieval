@@ -29,6 +29,11 @@ Information resources associated with a specific <<collection-definition,collect
 
 The resources returned from each node in these templates are described in <<query-resource-paths>>.
 
+NOTE: An EDR collection is a set of data that shares the same coordinate dimensions (i.e. the same units of space, height and time) as specified in the collection’s extent.
+
+NOTE: All coordinates defined in an EDR collection’s extent must be mutually consistent, ensuring that a valid query can subset the data across all coordinate axes simultaneously
+
+
 [[information-resources]]
 [[collections-access-section]]
 === Information Resources
