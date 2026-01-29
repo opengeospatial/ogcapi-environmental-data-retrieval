@@ -33,11 +33,13 @@ OGC API — Common Standard defines a set of common capabilities which are a
 |====================
 |PATH TEMPLATE |METHOD |RESOURCE
 |{root}/ |GET |Landing page
-|{root}/api |GET |API Description (optional)
+|{root}/{api} |GET |API Description (optional)
 |{root}/conformance |GET |Conformance Classes
 |====================
 
-Where: {root} = Base URI for the API server
+Where: 
+* {root} = Base URI for the API server
+* {api} = an identifier for an optional description of the API
 
 ==== API Landing Page 
 
@@ -58,7 +60,7 @@ include::../requirements/core/REQ_root.adoc[]
 
 ==== API Definition 
 
-Path = {root}/api
+Path = {root}/{api}
 
 Dependencies 
 
