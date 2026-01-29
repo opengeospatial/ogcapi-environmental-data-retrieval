@@ -26,7 +26,7 @@ A Profile must be interoperable with other OGC API-EDR data providers. Any valid
 
 === Platform Resources
 
-OGC API — Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
+OGC API - Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
 
 .Platform Resource Paths
 [width="100%",options="header,footer"]
@@ -38,6 +38,7 @@ OGC API — Common Standard defines a set of common capabilities which are a
 |====================
 
 Where: 
+
 * {root} = Base URI for the API server
 * {api} = an identifier for an optional description of the API
 
