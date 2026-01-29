@@ -286,7 +286,7 @@ The EDR API Items query is like an https://docs.ogc.org/is/19-086r6/19-086r6.htm
 
 ===== ItemID parameter
 
-If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features.
+If an `itemId` is not specified, the query will return a list of the available `itemId`s. This behavior is specified in OGC API - Features.
 
 ===== Limit parameter
 
