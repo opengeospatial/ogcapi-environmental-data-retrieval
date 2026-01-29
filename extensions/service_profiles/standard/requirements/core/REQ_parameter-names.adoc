@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/parameter-names
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ the valid values and definitions of `parameter_names`, then,
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ the allowed values and definitions of `parameter_names`, then,
 part:: Requirements _SHALL_ be defined which specify the `parameter_names` and their definitions.
 part:: The `parameter_names` requirement definitions _SHALL_ specify the required `parameter_names` objects in full including:
 * name, 
