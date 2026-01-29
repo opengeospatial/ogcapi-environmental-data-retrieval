@@ -27,15 +27,15 @@ Attention is drawn to the possibility that some of the elements of this document
 
 The OGC API-Environmental Data Retrieval Part 1: Core Standard was designed to be flexible and straightforward to understand and implement by Web developers. As the OGC API-EDR is being widely implemented, various groups of users have identified the need to restrict some of that flexibility. This is to improve interoperability between different implementations of both servers and clients within their domains of interest. An API-EDR Profile is a set of these stricter requirements for a specific user domain.
 
-The goal of the OGC API-EDR Part 3: Service Profile Support Standard is to ensure interoperability between API-EDR implementations by defining a standard approach to specifying a Profile. 
+The goal of the OGC API-EDR Part 3: Service Profile Standard is to ensure interoperability between API-EDR implementations by defining a standard approach to specifying a Profile. 
 
-To ensure such consistency, providers must adopt a standardized approach when defining `Collections` and their `Instances`. The OGC API-EDR Profile outlines a set of requirements that an EDR API implementation must meet to be considered compliant with the requirements specified in a service profile.
+To ensure such consistency, providers must adopt a standardized approach when defining `Collections` and their `Instances`. An OGC API-EDR Profile outlines a set of requirements that an EDR API implementation must meet to be considered compliant with the requirements specified in a service profile.
 
 == Preface
 
 [NOTE]
 ====
-The aim of the OGC API-EDR Part 3: Service Profile Support standard is to ensure interoperability between EDR API implementations by defining a standard approach to specifying a Profile of OGC API-EDR Part 1: Core. To achieve this, it is essential that service providers use a consistent approach when defining `Collections` and `Instances` of `Collections`. An OGC API-EDR Profile will specify a set of Requirements that an EDR API implementation must support to be a profile-Markcompliant implementation.
+The aim of the OGC API-EDR Part 3: Service Profile standard is to ensure interoperability between EDR API implementations by defining a standard approach to specifying a Profile of OGC API-EDR Part 1: Core. To achieve this, it is essential that service providers use a consistent approach when defining `Collections` and `Instances` of `Collections`. An OGC API-EDR Profile will specify a set of Requirements that an EDR API implementation must support to be a profile-compliant implementation.
 
 This standard specifies Requirements and Recommendations for a Profile definition, and also conforms to the OGC Mod Spec Standard.
 
