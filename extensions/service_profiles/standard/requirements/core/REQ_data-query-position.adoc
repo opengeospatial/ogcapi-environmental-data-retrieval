@@ -4,14 +4,14 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-position
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Position` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `Position` query.
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `position` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `position` query.
 part:: The `Position` query requirement _SHALL_ specify the following:
-* Enumerated list of output_format types
-* The default_output_format
-* Enumerated list of crs_details values
+* Enumerated list of `output_format` types
+* The `default_output_format`
+* Enumerated list of `crs_details` values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
-part:: The `Position` query requirement _SHALL_ also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
+part:: The `position` query requirement _SHALL_ also specify the logic used in selecting the data returned by the response, i.e. exact, nearest neighbour, most representative or interpolated.
 
 ====
 
@@ -19,6 +19,6 @@ part:: The `Position` query requirement _SHALL_ also specify the logic used in s
 ====
 [%metadata]
 identifier:: /per/core/position-mandatory-query-definition
-statement:: The `Position` query requirement _MAY_ specify which OGC API-EDR `Position` query parameters are mandatory for compliance with the profile.
+statement:: The `position` query requirement _MAY_ specify which OGC API-EDR `position` query parameters are mandatory for compliance with the profile.
 
 ====
