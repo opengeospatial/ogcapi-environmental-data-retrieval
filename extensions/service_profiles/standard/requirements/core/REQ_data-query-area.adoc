@@ -4,12 +4,12 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-area
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Area query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `Area` query.
-part:: The `Area` query requirement _SHALL_ specify the following:
-* Enumerated list of output_format types
-* The default_output_format
-* Enumerated list of crs_details values
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `area` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `area` query.
+part:: The `area` query requirement _SHALL_ specify the following:
+* Enumerated list of `output_format` types
+* The `default_output_format`
+* Enumerated list of `crs_details` values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
 
 ====
@@ -18,6 +18,6 @@ part:: The `Area` query requirement _SHALL_ specify the following:
 ====
 [%metadata]
 identifier:: /per/core/area-mandatory-query-definition
-statement:: The `Area` query requirement _MAY_ specify which OGC API-EDR `Area` query parameters are mandatory for compliance with the profile.
+statement:: The `area` query requirement _MAY_ specify which OGC API-EDR `area` query parameters are mandatory for compliance with the profile.
 
 ====
