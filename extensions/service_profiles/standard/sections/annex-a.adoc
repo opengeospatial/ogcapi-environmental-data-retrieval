@@ -46,7 +46,7 @@ include::../abstract_tests/core/ATS_data-query-trajectory.adoc[]
 
 include::../abstract_tests/core/ATS_data-query-corridor.adoc[]
 
-include::../abstract_tests/core/ATS_data-locations.adoc[]
+include::../abstract_tests/core/ATS_data-query-locations.adoc[]
 
 include::../abstract_tests/core/ATS_data-query-instances.adoc[]
 
