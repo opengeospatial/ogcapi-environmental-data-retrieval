@@ -4,12 +4,12 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-locations
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the Locations query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `Locations` query.
-part:: The `Locations` query requirement _SHALL_ specify the following:
-* Enumerated list of output_format types
-* The default_output_format
-* Enumerated list of crs_details values
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `locations` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `locations` query.
+part:: The `locations` query requirement _SHALL_ specify the following:
+* Enumerated list of `output_format` types
+* The `default_output_format`
+* Enumerated list of `crs_details` values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
 
 ====
@@ -20,7 +20,7 @@ part:: The `Locations` query requirement _SHALL_ specify the following:
 ====
 [%metadata]
 identifier:: /per/core/locations-mandatory-query-definition
-statement:: The `Locations` requirement _MAY_ specify which OGC API-EDR `Locations` query parameters are mandatory for compliance with the profile.
+statement:: The `locations` requirement _MAY_ specify which OGC API-EDR `locations` query parameters are mandatory for compliance with the profile.
 
 ====
 
@@ -30,6 +30,6 @@ statement:: The `Locations` requirement _MAY_ specify which OGC API-EDR `Locatio
 ====
 [%metadata]
 identifier:: /per/core/locations-mandatory-locationid-definition
-statement:: The `Locations` query requirement _MAY_ specify a list of required `locationId` values.
+statement:: The `locations` query requirement _MAY_ specify a list of required `locationId` values.
 
 ====

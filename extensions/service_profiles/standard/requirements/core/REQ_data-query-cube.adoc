@@ -4,12 +4,12 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-cube
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Cube` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `Cube` query.
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `cube` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `cube` query.
 part:: The `Cube` query requirement _SHALL_ specify the following:
-* Enumerated list of output_format types
-* The default_output_format
-* Enumerated list of crs_details values
+* Enumerated list of `output_format` types
+* The `default_output_format`
+* Enumerated list of `crs_details` values
 * Enumerated list of the operations that the query supports (i.e. GET, POST)
 
 ====
@@ -18,6 +18,6 @@ part:: The `Cube` query requirement _SHALL_ specify the following:
 ====
 [%metadata]
 identifier:: /per/core/cube-mandatory-query-definition
-statement:: The `Cube` requirement _MAY_ specify which OGC API-EDR `Cube` query parameters are mandatory for compliance with the profile.
+statement:: The `cube` requirement _MAY_ specify which OGC API-EDR `cube` query parameters are mandatory for compliance with the profile.
 
 ====

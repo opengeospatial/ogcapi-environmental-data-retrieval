@@ -6,11 +6,11 @@
 identifier:: /req/core/root
 statement:: The OGC API-EDR Landing Page schema only requires the `links` property. However, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require the following additional properties and content:
 
-part:: The `Title` property _SHALL_ be required and populated
+part:: The `title` property _SHALL_ be required and populated
 
-part:: The `Links` property _SHALL_ define the links that SHALL be included in the Root response.
+part:: The `links` property _SHALL_ define the links that SHALL be included in the Root response.
 
-part:: Each `link` defined in the `Links` property _SHALL_ be populated with href and rel properties.
+part:: Each `link` defined in the `links` property _SHALL_ be populated with href and rel properties.
 
 ====
 
@@ -20,13 +20,13 @@ part:: Each `link` defined in the `Links` property _SHALL_ be populated with hre
 identifier:: /rec/core/root
 statement:: The OGC API-EDR Landing Page schema only requires the `links` property, however, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHOULD_ require the following additional properties:
 
-part:: The `Description` property _SHOULD_ be required
+part:: The `description` property _SHOULD_ be required
 
-part:: The `Keywords` property _SHOULD_ be required
+part:: The `keywords` property _SHOULD_ be required
 
-part:: The `Provider` property _SHOULD_ be required and populated with the name and url properties
+part:: The `provider` property _SHOULD_ be required and populated with the `name` and `url` properties
 
-part:: The `Contact` property _SHOULD_ be required and populated with the with the email properties
+part:: The `contact` property _SHOULD_ be required and populated with the with the `email` properties
 
 ====
 
@@ -35,7 +35,7 @@ part:: The `Contact` property _SHOULD_ be required and populated with the with t
 ====
 [%metadata]
 identifier:: /req/core/root-description
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `Description` property, that property _SHALL_ be populated.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `description` property, that property _SHALL_ be populated.
 
 ====
 
@@ -44,7 +44,7 @@ statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval St
 ====
 [%metadata]
 identifier:: /req/core/root-attribution
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `Attribution` property, that property _SHALL_ be populated.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `attribution` property, that property _SHALL_ be populated.
 
 ====
 
@@ -53,16 +53,16 @@ statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval St
 ====
 [%metadata]
 identifier:: /req/core/root-keywords
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `Keywords` property, that property _SHALL_ be populated with at least one keyword entry.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `keywords` property, that property _SHALL_ be populated with at least one keyword entry.
 
 ====
 [requirement]
 ====
 [%metadata]
 identifier:: /req/core/root-provider
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `Provider` property.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `provider` property.
 
-part:: A `Provider` property _SHALL_ be populated with a `name` property.
+part:: A `provider` property _SHALL_ be populated with a `name` property.
 
 ====
 
@@ -70,7 +70,7 @@ part:: A `Provider` property _SHALL_ be populated with a `name` property.
 ====
 [%metadata]
 identifier:: /per/core/provider-url-definition
-statement:: A `Provider` property _MAY_ be populated with a `url` property.
+statement:: A `provider` property _MAY_ be populated with a `url` property.
 
 ====
 
@@ -79,9 +79,9 @@ statement:: A `Provider` property _MAY_ be populated with a `url` property.
 ====
 [%metadata]
 identifier:: /req/core/root-contact
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `Contact` property,
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `contact` property,
 
-part:: A `Contact` property _SHALL_ be populated with the `email` property.
+part:: A `contact` property _SHALL_ be populated with the `email` property.
 
 ====
 
@@ -89,7 +89,7 @@ part:: A `Contact` property _SHALL_ be populated with the `email` property.
 ====
 [%metadata]
 identifier:: /per/core/contact-name-definition
-statement:: A `Contact` property _MAY_ be populated with the `name` property.
+statement:: A `contact` property _MAY_ be populated with the `name` property.
 
 ====
 
@@ -97,7 +97,7 @@ statement:: A `Contact` property _MAY_ be populated with the `name` property.
 ====
 [%metadata]
 identifier:: /per/core/contact-url-definition
-statement::A `Contact` property _MAY_ be populated with the `url` property.
+statement::A `contact` property _MAY_ be populated with the `url` property.
 
 ====
 
@@ -106,11 +106,11 @@ statement::A `Contact` property _MAY_ be populated with the `url` property.
 ====
 [%metadata]
 identifier:: /req/core/root-links
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `Links` property:
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require that when an EDR Landing Page includes the `links` property:
 
-part:: The `Links` property _SHALL_ define the links that _SHALL_ be included in the Root response
+part:: The `links` property _SHALL_ define the links that _SHALL_ be included in the Root response
 
-part:: The `Links` property _SHALL_ be populated with href and rel properties
+part:: The `links` property _SHALL_ be populated with `href` and `rel` properties
 
 ====
 
@@ -118,7 +118,7 @@ part:: The `Links` property _SHALL_ be populated with href and rel properties
 ====
 [%metadata]
 identifier:: /per/core/links-type-href-length-definition
-statement:: The `Links` property _MAY_ be populated with type, hreflang and length properties
+statement:: The `links` property _MAY_ be populated with type, hreflang and length properties
 
 ====
 
@@ -127,6 +127,6 @@ statement:: The `Links` property _MAY_ be populated with type, hreflang and leng
 ====
 [%metadata]
 identifier:: /rec/core/root-links
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHOULD_ require that when an EDR Landing Page includes the `Links` property, the title property of each link _SHALL_ be populated.
+statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHOULD_ require that when an EDR Landing Page includes the `links` property, the title property of each link _SHALL_ be populated.
 
 ====

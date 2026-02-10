@@ -26,18 +26,21 @@ A Profile must be interoperable with other OGC API-EDR data providers. Any valid
 
 === Platform Resources
 
-OGC API — Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
+OGC API - Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
 
 .Platform Resource Paths
 [width="100%",options="header,footer"]
 |====================
 |PATH TEMPLATE |METHOD |RESOURCE
 |{root}/ |GET |Landing page
-|{root}/api |GET |API Description (optional)
+|{root}/{api} |GET |API Description (optional)
 |{root}/conformance |GET |Conformance Classes
 |====================
 
-Where: {root} = Base URI for the API server
+Where: 
+
+* {root} = Base URI for the API server
+* {api} = an identifier for an optional description of the API
 
 ==== API Landing Page 
 
@@ -58,7 +61,7 @@ include::../requirements/core/REQ_root.adoc[]
 
 ==== API Definition 
 
-Path = {root}/api
+Path = {root}/{api}
 
 Dependencies 
 
@@ -284,7 +287,7 @@ The EDR API Items query is like an https://docs.ogc.org/is/19-086r6/19-086r6.htm
 
 ===== ItemID parameter
 
-If an itemId is not specified, the query will return a list of the available itemId’s. This behavior is specified in OGC API — Features.
+If an `itemId` is not specified, the query will return a list of the available `itemId`s. This behavior is specified in OGC API - Features.
 
 ===== Limit parameter
 

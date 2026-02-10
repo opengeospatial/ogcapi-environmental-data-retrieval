@@ -4,13 +4,13 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-trajectory
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Trajectory` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `Trajectory` query.
-part:: The `Trajectory` query requirement _SHALL_ specify the following:
-* Enumerated list of output_format types
-* The default_output_format
-* Enumerated list of crs_details values
-* Enumerated list of the operations that the query supports (i.e. GET, POST)
+statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `trajectory` query mandatory, then:
+part:: The Profile _SHALL_ include a requirement mandating the `Ttrajectory` query.
+part:: The `trajectory` query requirement _SHALL_ specify the following:
+* Enumerated list of `output_format` types
+* The `default_output_format`
+* Enumerated list of `crs_details` values
+* Enumerated list of the operations that the query supports (i.e. `GET`, `POST`)
 
 ====
 
@@ -18,6 +18,6 @@ part:: The `Trajectory` query requirement _SHALL_ specify the following:
 ====
 [%metadata]
 identifier:: /per/core/trajectory-mandatory-query-definition
-statement:: The `Trajectory` requirement _MAY_ specify which OGC API-EDR `Trajectory` query parameters are mandatory for compliance with the profile.
+statement:: The `trajectory` requirement _MAY_ specify which OGC API-EDR `trajectory` query parameters are mandatory for compliance with the profile.
 
 ====
