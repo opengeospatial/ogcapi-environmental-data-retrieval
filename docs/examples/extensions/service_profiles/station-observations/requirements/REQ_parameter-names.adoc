@@ -1,0 +1,248 @@
+[req_surface-observations_parameter-names]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/parameter-names
+statement:: The surface observations Collection SHALL provide the following data parameters
+part:: MSL pressure parameter_names key SHALL be `msl_pressure`.
+part:: MSL pressure data SHALL be in `hPa` units
+part:: Surface pressure parameter_names key SHALL be `surface_pressure`.
+part:: Surface pressure data SHALL be in `hPa` units
+part:: Screen level air temperature parameter_names key SHALL be `air_temperature`.
+part:: 1hr Mean Screen level air temperature parameter_names key SHALL be `mean_air_temperature_PT1H`.
+part:: 12hr Max Screen level air temperature parameter_names key SHALL be `max_air_temperature_PT12H`.
+part:: 24hr Max Screen level air temperature parameter_names key SHALL be `max_air_temperature_PT24H`.
+part:: Screen level air temperature data SHALL be in `Celsius` units
+part:: Screen level dewpoint temperature parameter_names key SHALL be `dew_point`.
+part:: Screen level dewpoint temperature data SHALL be in `Celsius` units
+part:: 10m wind direction data parameter_names key SHALL be `wind_from_dir`.
+part:: 10m wind direction which SHALL be in `Degree` units
+part:: 10m wind speed data parameter_names key SHALL be `wind_speed`.
+part:: 10m wind speed data which SHALL be in `m/s` units
+part:: 1hr Total Precipitation amount parameter_names key SHALL be `total_precipitation_amount_PT1H`.
+part:: 24hr Total Precipitation amount parameter_names key SHALL be `total_precipitation_amount_P24H`.
+part:: Precipitation data SHALL be in `mm` units
+
+
+part:: The parameter_names SHALL be described as follows in the Collections/Instances responses.
+
+[source,JSON]
+----
+
+    "msl_pressure": {
+      "type": "Parameter",
+      "description": "Air pressure at sea level",
+      "unit": {
+        "label": "HectoPascals",
+        "symbol": {
+          "value": "hPa",
+          "type": "https://qudt.org/vocab/unit/HectoPA"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/air_pressure_at_mean_sea_level",
+        "label": "MSL Pressure"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0M"
+      }
+    },
+    "surface_pressure": {
+      "type": "Parameter",
+      "description": "Surface air pressure",
+      "unit": {
+        "label": "HectoPascals",
+        "symbol": {
+          "value": "hPa",
+          "type": "https://qudt.org/vocab/unit/HectoPA"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/surface_air_pressure",
+        "label": "Surface air pressure"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0M"
+      }
+    },
+    "air_temperature": {
+      "type": "Parameter",
+      "description": "Screen level air temperature",
+      "unit": {
+        "label": "Celsius",
+        "symbol": {
+          "value": "C",
+          "type": "https://qudt.org/vocab/unit/DEG_C"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
+        "label": "Air temperature at screen level"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0M"
+      }
+    },
+    "mean_air_temperature_PT1H": {
+      "type": "Parameter",
+      "description": "Mean Screen level air temperature over previous hour",
+      "unit": {
+        "label": "Celsius",
+        "symbol": {
+          "value": "C",
+          "type": "https://qudt.org/vocab/unit/DEG_C"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
+        "label": "Mean air temperature at screen level over 1 hour"
+      },
+      "measurementType": {
+        "method": "mean",
+        "duration": "PT1H"
+      }
+    },
+    "max_air_temperature_PT12H": {
+      "type": "Parameter",
+      "description": "Maximum Screen level air temperature over previous 12 hours",
+      "unit": {
+        "label": "Celsius",
+        "symbol": {
+          "value": "C",
+          "type": "https://qudt.org/vocab/unit/DEG_C"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
+        "label": "Maximum air temperature at screen level over 12 hours"
+      },
+      "measurementType": {
+        "method": "maximum",
+        "duration": "PT12H"
+      }
+    },
+    "max_air_temperature_PT24H": {
+      "type": "Parameter",
+      "description": "Maximum Screen level air temperature over previous 24 hours",
+      "unit": {
+        "label": "Celsius",
+        "symbol": {
+          "value": "C",
+          "type": "https://qudt.org/vocab/unit/DEG_C"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/air_temperature",
+        "label": "Maximum air temperature at screen level over 24 hours"
+      },
+      "measurementType": {
+        "method": "maximum",
+        "duration": "PT24H"
+      }
+    },
+    "dew_point": {
+      "type": "Parameter",
+      "description": "Screen level Dewpoint temperature",
+      "unit": {
+        "label": "Celsius",
+        "symbol": {
+          "value": "C",
+          "type": "https://qudt.org/vocab/unit/DEG_C"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/dew_point_temperature",
+        "label": "Dewpoint temperature at screen level"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0S"
+      }
+    },
+    "wind_from_dir": {
+      "type": "Parameter",
+      "description": "Wind from direction at 10m above surface",
+      "unit": {
+        "label": "deg",
+        "symbol": {
+          "value": "°", 
+          "type": "https://qudt.org/vocab/unit/DEG"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/wind_from_direction",
+        "label": "Wind direction"
+      },
+      "measurementType": {
+        "method": "mean",
+        "duration": "PT10M"
+      }
+    },
+    "wind_speed": {
+      "type": "Parameter",
+      "description": "Wind speed at 10m above surface",
+      "unit": {
+        "label": "m/s",
+        "symbol": {
+          "value": "m%20s",
+          "type": "https://qudt.org/vocab/unit/M-PER-SEC"
+        }
+      },
+      "observedProperty": {
+        "id": "https://vocab.nerc.ac.uk/standard_name/wind_speed",
+        "label": "Wind speed"
+      },
+      "measurementType": {
+        "method": "mean",
+        "duration": "PT10M"
+      }
+    },
+    "total_precipitation_amount_PT1H": {
+        "type": "Parameter",
+        "label": "Precipitation amount",
+        "description": "Precipitation amount aggregated over previous hour",
+        "unit": {
+            "label": "kg/m2",
+            "symbol": {
+                "value": "kg/m²",
+                "type": "https://qudt.org/vocab/unit/KiloGM-PER-M2"
+            }
+        },
+        "observedProperty": {
+            "id": "https://vocab.nerc.ac.uk/standard_name/precipitation_amount",
+            "label": "12hr precipitation amount"
+        },
+        "measurementType": {
+            "method": "sum",
+            "duration": "PT1H"
+        }
+    },
+    "total_precipitation_amount_P24H": {
+        "type": "Parameter",
+        "label": "Precipitation amount",
+        "description": "Precipitation amount aggregated over previous 24 hours",
+        "unit": {
+            "label": "kg/m2",
+            "symbol": {
+                "value": "kg/m²",
+                "type": "https://qudt.org/vocab/unit/KiloGM-PER-M2"
+            }
+        },
+        "observedProperty": {
+            "id": "https://vocab.nerc.ac.uk/standard_name/precipitation_amount",
+            "label": "24hr total precipitation amount"
+        },
+        "measurementType": {
+            "method": "sum",
+            "duration": "PT24H"
+        }
+    }
+
+
+----
+
+====

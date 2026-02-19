@@ -1,0 +1,41 @@
+[[req_surface-observations_links]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/links
+statement:: A surface observations Collection SHALL have the following links:
+part:: A link to the licence for the Collection data
+part:: A link to the profile requirements document
+part:: A link to the profile OpenAPI definition
+part:: A link to the csv format metadata
+
+[source,JSON]
+----
+
+    {
+        "href": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "rel": "licence",
+        "type": "text/html"
+    },
+    {
+        "href": "https://location.of.profile/requirements/document",
+        "rel": "service-doc",
+        "type": "text/html"
+    },
+    {
+        "href": "https://location.of.profile/openapi/document",
+        "rel": "service-desc",
+        "type": "application/openapi+yaml"
+    },
+    {
+        "href": "https://location.of.csv/format/metadata",
+        "rel": "describedBy",
+        "type": "application/csvm+json",
+        "title": "Metadata vocabulary for CSV data responses"
+    }
+
+
+----
+
+====

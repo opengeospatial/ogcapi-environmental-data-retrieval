@@ -1,0 +1,15 @@
+[[ats_surface-observations_rc-data-query]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/surface-observations/rc-data-query
+target:: /req/surface-observations/data-query
+test-purpose:: Validate the surface observations Collection response data query is correctly defined
+test-method::
+step::: Verfiy that NWP station level Collection response data query section includes definitions for the following data queries:
+    * area
+    * position
+    * locations
+    * radius
+
+====

@@ -1,0 +1,14 @@
+[[ats_nwp-pressure-level_rc-collectionid]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-pressure-level/rc-collectionid
+target:: /req/nwp-pressure-level/Collectionid
+test-purpose:: Validate the NWP pressure level Collection id is correctly defined
+test-method::
+step::: Verify that the `collectionid` does not contain any special characters
+step::: Verify that that the `collectionid` is lowercase.
+step::: Verify that the `collectionid` ends with "prslvl".
+step::: Verify that the `collectionid` includes the generating centre name in its definition.
+step::: Verify that the `collectionid` includes the data source NWP model name in its definition.
+====

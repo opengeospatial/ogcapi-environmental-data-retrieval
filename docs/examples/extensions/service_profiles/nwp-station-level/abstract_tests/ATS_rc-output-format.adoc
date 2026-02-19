@@ -1,0 +1,16 @@
+[[ats_nwp-station-level_rc-output-format]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-station-level/rc-output-format
+target:: /req/nwp-station-level/output-format
+test-purpose:: Validate the NWP station level Collection response output formats are correctly labeled
+test-method::
+step::: Verfiy that NWP station level Collection response output_format sections define GRIB2 data as `GRIB2`:
+step::: Verfiy that NWP station level Collection response output_format sections define CF-NetCDF data as `CF-NetCDF`:
+step::: Verfiy that NWP station level Collection response output_format sections define CoverageJSON data as `CoverageJSON`:
+step::: Verfiy that NWP station level Collection response output_format sections define GeoJSON data as `GeoJSON`:
+step::: Verfiy that NWP station level Collection response output_format sections define CSV data as `CSV`:
+step::: Verify that the Collection response links section has a link with a rel of `describedBy`.
+
+====

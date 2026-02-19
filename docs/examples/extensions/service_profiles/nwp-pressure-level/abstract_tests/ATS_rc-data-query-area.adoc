@@ -1,0 +1,24 @@
+[[ats_nwp-pressure-level_rc-data-query-area]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-pressure-level/rc-data-query-area
+target:: /req/nwp-pressure-level/data-query-area
+test-purpose:: Validate the NWP pressure level area data query is correctly defined
+test-method::
+step::: Verfiy that NWP pressure level Instance responses include a area data query definition which specifies the following data formats:
+    * GRIB2
+    * CoverageJSON
+    * CF-NetCDF
+
+step::: Verify that the area query supports GET requests
+step::: Verify that the area query supports POST requests
+step::: Verify that the GRIB2 data response from the area query is compliant with the https://library.wmo.int/viewer/35625?medianame=306_v.I.2_2019_edition_Updated_2022_en_#page=31&viewer=picture[GRIB2 specification]
+step::: Verify that the GRIB2 data response media type response is `application/grib;edition=2`
+step::: Verify that the CoverageJSON data response from the cube query is compliant with the Grid domainType of the https://docs.ogc.org/cs/21-069r2/21-069r2.html#_df6ce66a-7369-49cb-b59f-47a8c5d424ca[CoverageJSON Grid domainType]
+step::: Verify that the CoverageJSON data response media type response is application/vnd.cov+json
+step::: Verify that the CF-NetCDF data response from the area query is compliant with the Grid domainType of the https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.htm[CF-NetCDF specification]
+step::: Verify that the CF-NetCDF data response media type response is application/netcdf
+
+
+====

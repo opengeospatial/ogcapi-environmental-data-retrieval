@@ -1,0 +1,13 @@
+[[ats_surface-observations_rc-collectionid]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/surface-observations/rc-collectionid
+target:: /req/surface-observations/Collectionid
+test-purpose:: Validate the surface observations Collection id is correctly defined
+test-method::
+step::: Verify that the `collectionid` does not contain any special characters
+step::: Verify that that the `collectionid` is lowercase.
+step::: Verify that the `collectionid` ends with "surface-observations".
+step::: Verify that the `collectionid` includes the generating centre name in its definition.
+====

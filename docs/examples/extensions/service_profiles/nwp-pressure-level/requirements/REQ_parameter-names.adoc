@@ -1,0 +1,122 @@
+[req_nwp-pressure-level_parameter-names]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-pressure-level/parameter-names
+statement:: The NWP Pressure level Collection SHALL provide the following data parameters
+part:: Geopotential height data parameter_names key SHALL be `z`.
+part:: Geopotential height data which SHALL be in `m` units
+part:: Specific humidity data parameter_names key SHALL be `q`.
+part:: Specific humidity data which SHALL be in `kg/kg` units
+part:: Air temperature data parameter_names key SHALL be `t`.
+part:: Air temperature data which SHALL be in `K` units
+part:: u-component of wind data parameter_names key SHALL be `u`.
+part:: u-component of wind data which SHALL be in `m/s` units
+part:: v-component of wind data parameter_names key SHALL be `v`.
+part:: v-component of wind data which SHALL be in `m/s` units
+part:: The parameter_names SHALL be described as follows in the Collections/Instances responses.
+
+[source,JSON]
+----
+"parameter_names": {
+    "z": {
+        "type": "Parameter",
+        "description": "Geopotential Height",
+        "unit": {
+            "label": "m",
+            "symbol": {
+                "value": "m",
+                "type": "https://qudt.org/vocab/unit/M"
+            }
+        },
+            "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-3-5",
+            "label": "Geopotential Height"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "duration": "PT0S"
+        }
+    },
+    "q": {
+        "type": "Parameter",
+        "description": "Specific humidity",
+        "unit": {
+            "label": "kg/kg",
+            "symbol": {
+                "value": "kg%20kg",
+                "type": "https://qudt.org/vocab/unit/KiloGM-PER-KiloGM"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-1-0",
+            "label": "Specific humidity"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "duration": "PT0S"
+        }
+    },
+    "t": {
+        "type": "Parameter",
+        "description": "Air temperature",
+        "unit": {
+            "label": "Kelvin",
+            "symbol": {
+                "value": "K",
+                "type": "https://qudt.org/vocab/unit/K"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0",
+            "label": "Air temperature"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "duration": "PT0M"
+        }
+    },
+    "u": {
+        "type": "Parameter",
+        "description": "u-component of wind",
+        "unit": {
+        "label": "m/s",
+        "symbol": {
+            "value": "m%20s",
+            "type": "https://qudt.org/vocab/unit/M-PER-SEC"
+        }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2",
+            "label": "u component of wind"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "duration": "PT0S"
+        }
+    },
+    "v": {
+        "type": "Parameter",
+        "description": "v-component of wind",
+        "unit": {
+            "label": "m/s",
+            "symbol": {
+                "value": "m%20s",
+                "type": "https://qudt.org/vocab/unit/M-PER-SEC"
+            }
+        },
+        "observedProperty": {
+            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3",
+            "label": "v component of wind"
+        },
+        "measurementType": {
+            "method": "instantaneous",
+            "duration": "PT0S"
+        }
+    }
+}
+
+----
+
+====

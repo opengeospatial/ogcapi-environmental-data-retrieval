@@ -1,0 +1,12 @@
+[[req_surface-observations_collectionid]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/Collectionid
+statement:: The Collection id must be based on the center name.
+part:: the centre name may contain dashes (but no other special characters).
+part:: the Collection id SHALL end with the string `surface-observations`.
+part:: The centre name and the `surface-observations` string SHALL be separated by an underscore `{centre-name}_surface-observations`.
+part:: The Collection id SHALL be lowercase
+
