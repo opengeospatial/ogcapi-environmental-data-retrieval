@@ -7,18 +7,18 @@ target:: /req/surface-observations/data-query-area
 test-purpose:: Validate the surface observations area data query is correctly defined
 test-method::
 step::: Verfiy that surface observation Collection responses include a area data query definition which specifies the following data formats:
-    * CoverageJSON
-    * GeoJSON
-    * CSV
+    * *CoverageJSON*
+    * *GeoJSON*
+    * *CSV*
 
-step::: Verify that the area query supports GET requests
-step::: Verify that the area query supports POST requests
-step::: Verify that the CoverageJSON data response from the position query is compliant with the VerticalProfile domainType of CoverageJSON https://docs.ogc.org/cs/21-069r2/21-069r2.html#_8962dcde-77d5-426d-8eeb-ca2c168a0bee[CoverageJSON PointSeries]
-step::: Verify that the CoverageJSON data response media type response is application/vnd.cov+json
-step::: Verify that the GeoJSON data response from the position query is compliant with https://github.com/opengeospatial/OGC-feat-geo-json[OGC Features and Geometries JSON]
-step::: Verify that the CoverageJSON data response media type response is application/geo+json
-step::: Verify that the CSV data response from the position query is compliant with the https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/[W3C Model for Tabular Data and Metadata on the Web] provided by the `service-desc` link in the Collections response links section.
-step::: Verify that the CoverageJSON data response media type response is text/csv
+step::: Verify that the area query supports *GET* requests
+step::: Verify that the area query supports *POST* requests
+step::: Verify that the *CoverageJSON* data response from the position query is compliant with the VerticalProfile domainType of CoverageJSON https://docs.ogc.org/cs/21-069r2/21-069r2.html#_8962dcde-77d5-426d-8eeb-ca2c168a0bee[CoverageJSON PointSeries]
+step::: Verify that the *CoverageJSON* data response media type response is *application/vnd.cov+json*
+step::: Verify that the *GeoJSON* data response from the position query is compliant with https://github.com/opengeospatial/OGC-feat-geo-json[OGC Features and Geometries JSON]
+step::: Verify that the *GeoJSON* data response media type response is *application/geo+json*
+step::: Verify that the *CSV* data response from the position query is compliant with the https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/[W3C Model for Tabular Data and Metadata on the Web] provided by the `service-desc` link in the Collections response links section.
+step::: Verify that the *CSV* data response media type response is *text/csv*
 
 
 ====

@@ -6,7 +6,7 @@ identifier:: /conf/surface-observations/rc-links
 target:: /req/surface-observations/links
 test-purpose:: Validate the surface observation Collection response links are correctly defined
 test-method::
-step::: Verfiy that surface observation Collections response links section includes a link to the data licence
-step::: Verfiy that surface observation Collections response links section includes a link to the profile requirements documentation
-step::: Verfiy that surface observation Collections response links section includes a link to the profile OpenAPI definition
-step::: Verfiy that surface observation Collections response links section includes a link to the csv data response format
+step::: Verfiy that surface observation Collections response links section includes a *link to the data licence*
+step::: Verfiy that surface observation Collections response links section includes a *link to the profile requirements documentation*
+step::: Verfiy that surface observation Collections response links section includes a *link to the profile OpenAPI definition*
+step::: Verfiy that surface observation Collections response links section includes a *link to the csv data response format*

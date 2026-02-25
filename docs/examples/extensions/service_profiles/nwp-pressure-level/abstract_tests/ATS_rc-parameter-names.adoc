@@ -6,16 +6,16 @@ identifier:: /conf/nwp-pressure-level/parameter-names
 target:: /req/nwp-pressure-level/parameter-names
 test-purpose:: Validate the NWP pressure level Collection response parameter_names are correctly defined
 test-method::
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes Geopotential Height definition with a key of `z`.
-step::: Verfiy that NWP pressure level Collection response parameter_names Geopotential Height definition has units of `m`. 
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes Specific humidity definition with a key of `q`.
-step::: Verfiy that NWP pressure level Collection response parameter_names Specific humidity definition has units of `kg/kg`. 
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes Air temperature definition with a key of `t`.
-step::: Verfiy that NWP pressure level Collection response parameter_names Air temperature definition has units of `K`. 
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes u-component of wind definition with a key of `u`.
-step::: Verfiy that NWP pressure level Collection response parameter_names u-component of wind definition has units of `m/s`. 
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes v-component of wind definition with a key of `u`.
-step::: Verfiy that NWP pressure level Collection response parameter_names v-component of wind definition has units of `m/s`. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *Geopotential Height* definition with a key of *`z`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *Geopotential Height* definition has units of *`m`*. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *Specific humidity* definition with a key of *`q`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *Specific humidity* definition has units of *`kg/kg`*. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *Air temperature* definition with a key of *`t`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *Air temperature* definition has units of *`K`*. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *u-component of wind* definition with a key of *`u`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *u-component of wind* definition has units of *`m/s`*. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *v-component of wind* definition with a key of *`u`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *v-component of wind* definition has units of *`m/s`*. 
 step::: Verfiy that NWP pressure level Collection response parameter_names section includes the following parameter definitions:
 
 [source,JSON]

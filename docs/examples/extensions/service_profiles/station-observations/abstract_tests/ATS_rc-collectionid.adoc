@@ -8,6 +8,6 @@ test-purpose:: Validate the surface observations Collection id is correctly defi
 test-method::
 step::: Verify that the `collectionid` does not contain any special characters
 step::: Verify that that the `collectionid` is lowercase.
-step::: Verify that the `collectionid` ends with "surface-observations".
+step::: Verify that the `collectionid` ends with *"surface-observations"*.
 step::: Verify that the `collectionid` includes the generating centre name in its definition.
 ====

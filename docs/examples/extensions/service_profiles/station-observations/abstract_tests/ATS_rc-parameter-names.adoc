@@ -6,26 +6,26 @@ identifier:: /conf/surface-observations/parameter-names
 target:: /req/surface-observations/parameter-names
 test-purpose:: Validate the surface observation Collection response parameter_names are correctly defined
 test-method::
-step::: Verfiy that surface observation Collection response parameter_names section includes MSL pressure with a key of `msl_pressure`.
-step::: Verfiy that surface observation Collection response parameter_names MSL pressure definition has units of `hPa`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes surface air pressure with a key of `surface_pressure`.
-step::: Verfiy that surface observation Collection response parameter_names surface air pressure definition has units of `hPa`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes screen level air temperature with a key of `air_temperature`.
-step::: Verfiy that surface observation Collection response parameter_names screen level air temperature definition has units of `Celsius`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes 12hr max screen level air temperature with a key of `max_air_temperature_PT12H`.
-step::: Verfiy that surface observation Collection response parameter_names 12hr max screen level air temperature definition has units of `Celsius`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes 24hr max screen level air temperature with a key of `max_air_temperature_PT24H`.
-step::: Verfiy that surface observation Collection response parameter_names 24hr max screen level air temperature definition has units of `Celsius`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes screen level dewpoint temperature with a key of `dew_point`.
-step::: Verfiy that surface observation Collection response parameter_names screen level dewpoint temperature definition has units of `Celsius`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes 10m wind direction with a key of `wind_from_dir`.
-step::: Verfiy that surface observation Collection response parameter_names 10m wind direction definition has units of `Degree`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes 10m wind speed with a key of `wind_speed`.
-step::: Verfiy that surface observation Collection response parameter_names 10m wind speed definition has units of `m/s`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes 1hr total precipitation with a key of `total_precipitation_amount_PT1H`.
-step::: Verfiy that surface observation Collection response parameter_names 1hr total precipitation definition has units of `mm`. 
-step::: Verfiy that surface observation Collection response parameter_names section includes 24hr total precipitation with a key of `total_precipitation_amount_PT24H`.
-step::: Verfiy that surface observation Collection response parameter_names 24hr total precipitation definition has units of `mm`. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *MSL pressure* with a key of *`msl_pressure`*.
+step::: Verfiy that surface observation Collection response parameter_names *MSL pressure* definition has units of *`hPa`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *surface air pressure* with a key of *`surface_pressure`*.
+step::: Verfiy that surface observation Collection response parameter_names *surface air pressure* definition has units of *`hPa`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *screen level air temperature* with a key of *`air_temperature`*.
+step::: Verfiy that surface observation Collection response parameter_names *screen level air temperature* definition has units of *`Celsius`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *12hr max screen level air temperature* with a key of *`max_air_temperature_PT12H`*.
+step::: Verfiy that surface observation Collection response parameter_names *12hr max screen level air temperature* definition has units of *`Celsius`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *24hr max screen level air temperature* with a key of *`max_air_temperature_PT24H`*.
+step::: Verfiy that surface observation Collection response parameter_names *24hr max screen level air temperature* definition has units of *`Celsius`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *screen level dewpoint temperature* with a key of *`dew_point`*.
+step::: Verfiy that surface observation Collection response parameter_names *screen level dewpoint temperature* definition has units of *`Celsius`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *10m wind direction* with a key of *`wind_from_dir`*.
+step::: Verfiy that surface observation Collection response parameter_names *10m wind direction* definition has units of *`Degree`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *10m wind speed* with a key of *`wind_speed`*.
+step::: Verfiy that surface observation Collection response parameter_names *10m wind speed* definition has units of *`m/s`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *1hr total precipitation* with a key of *`total_precipitation_amount_PT1H`*.
+step::: Verfiy that surface observation Collection response parameter_names *1hr total precipitation* definition has units of *`mm`*. 
+step::: Verfiy that surface observation Collection response parameter_names section includes *24hr total precipitation* with a key of *`total_precipitation_amount_PT24H`*.
+step::: Verfiy that surface observation Collection response parameter_names *24hr total precipitation* definition has units of *`mm`*. 
 
 step::: Verfiy that surface observation Collection response parameter_names section includes the following parameter definitions:
 

@@ -5,10 +5,10 @@
 [%metadata]
 identifier:: /req/surface-observations/links
 statement:: A surface observations Collection SHALL have the following links:
-part:: A link to the licence for the Collection data
-part:: A link to the profile requirements document
-part:: A link to the profile OpenAPI definition
-part:: A link to the csv format metadata
+part:: A link to the *licence for the Collection data*
+part:: A link to the *profile requirements document*
+part:: A link to the *profile OpenAPI definition*
+part:: A link to the *csv format metadata*
 
 [source,JSON]
 ----

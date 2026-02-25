@@ -1,29 +1,5 @@
 [[core-section]]
 
-== Requirements Class Core
-
-include::../requirements/requirements_class_core.adoc[]
-
-=== Profiling Requirements
-
-The Profile is conformant with the ModSpec
-
-include::../requirements/REQ_modspec.adoc[]
-
-Implementations of the Profile are conformant with OGC API-EDR Part 1: Core
-
-include::../requirements/REQ_EDR-conformant.adoc[]
-
-Profiles often focus on restricting the values of Path parameters. A Profile should clearly specify the requirements for these restrictions
-
-include::../requirements/REQ_parameter-names.adoc[]
-
-A Profile must be interoperable with other OGC API-EDR data providers. Any valid OGC API-EDR document should be valid under the profile. That means:
-
-* If a data element is valid for OGC API-EDR, then it should not be prohibited under the profile
-* Custom query elements defined by a Service Profile _SHALL_ be optional, not mandatory, for data queries. 
-* It is valid for a profile to prohibit the production and population of OGC API-EDR optional elements by data providers within the profile's domain.
-
 === Platform Resources
 
 OGC API - Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
@@ -159,6 +135,8 @@ include::../requirements/REQ_data-query.adoc[]
 ==== Parameters
 
 The following parameters are supported by all OGC API-EDR queries.
+
+include::../requirements/REQ_parameter-names.adoc[]
 
 ===== Output Format parameter
 

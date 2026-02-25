@@ -5,12 +5,12 @@
 [%metadata]
 identifier:: /req/nwp-station-level/data-query-Instances
 statement:: A NWP station level Collection SHALL support Instances:
-part:: Instances SHALL be defined in the data_queries enumerated list.
+part:: Instances SHALL be defined in the Collection data_queries enumerated list.
 part:: Instanceid's SHALL be based on the UTC run time of the NWP model.
-part:: Instanceid's SHALL be defined as an RFC 3339 string in the form `YYYYmmddTHHMMZ`
+part:: Instanceid's SHALL be defined as an *RFC 3339 string* in the form *`YYYYmmddTHHMMZ`*
 part:: NWP station level Collection Instances SHALL support the following data queries:
-    * area
-    * position
-    * locations
+    * *area*
+    * *position*
+    * *locations*
 
 ====

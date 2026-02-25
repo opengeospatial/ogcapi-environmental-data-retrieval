@@ -14,9 +14,9 @@ step::: Verify that the ids of the Instances of the Collection match the followi
     ^\d{8}T\d{4}Z$
 ----
 
-step::: Verify that Collection Instances support `position` queries by constructing a valid `position` query and checking for a valid response.
-step::: Verify that Collection Instances support `area` queries by constructing a valid `area` query and checking for a valid response.
-step::: Verify that Collection Instances support `locations` queries by constructing a valid `locations` query and checking for a valid response.
+step::: Verify that Collection Instances support *`position`* queries by constructing a valid *`position`* query and checking for a valid response.
+step::: Verify that Collection Instances support *`area`* queries by constructing a valid *`area`* query and checking for a valid response.
+step::: Verify that Collection Instances support *`locations`* queries by constructing a valid *`locations`* query and checking for a valid response.
 
 
 ====

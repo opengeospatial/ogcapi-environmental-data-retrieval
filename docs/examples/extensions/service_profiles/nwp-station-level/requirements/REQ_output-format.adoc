@@ -14,3 +14,4 @@ part:: The links section of the Collection response shall include a link to the 
     * `rel` of `describedBy`
     * `type` of `application/csvm+json`
     * `title` of `Metadata vocabulary for CSV data responses`
+====

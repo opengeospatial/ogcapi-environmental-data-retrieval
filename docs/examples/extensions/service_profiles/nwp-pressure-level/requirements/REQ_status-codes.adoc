@@ -17,10 +17,10 @@ part:: The message descriptions SHALL be as follows:
 |`500` |An internal error occurred in the server.
 !===
 
-part:: time values outside of the range defined in the Collections response SHALL generate a 204 status
-part:: z values outside of the range defined in the Collections response SHALL generate a 204 status
+part:: Time values outside of the range defined in the Collections response SHALL generate a 204 status
+part:: Z values outside of the range defined in the Collections response SHALL generate a 204 status
 part:: Invalid time string values SHALL generate a 400 error
-part:: Invalid z string values SHALL generate a 400 error
+part:: Invalid Z string values SHALL generate a 400 error
 part:: Invalid collection id values SHALL generate a 404 error
 part:: Invalid instance id values SHALL generate a 404 error
 part:: Invalid parameter_names values SHALL generate a 404 error

@@ -5,24 +5,24 @@
 [%metadata]
 identifier:: /req/surface-observations/parameter-names
 statement:: The surface observations Collection SHALL provide the following data parameters
-part:: MSL pressure parameter_names key SHALL be `msl_pressure`.
-part:: MSL pressure data SHALL be in `hPa` units
-part:: Surface pressure parameter_names key SHALL be `surface_pressure`.
-part:: Surface pressure data SHALL be in `hPa` units
-part:: Screen level air temperature parameter_names key SHALL be `air_temperature`.
-part:: 1hr Mean Screen level air temperature parameter_names key SHALL be `mean_air_temperature_PT1H`.
-part:: 12hr Max Screen level air temperature parameter_names key SHALL be `max_air_temperature_PT12H`.
-part:: 24hr Max Screen level air temperature parameter_names key SHALL be `max_air_temperature_PT24H`.
-part:: Screen level air temperature data SHALL be in `Celsius` units
-part:: Screen level dewpoint temperature parameter_names key SHALL be `dew_point`.
-part:: Screen level dewpoint temperature data SHALL be in `Celsius` units
-part:: 10m wind direction data parameter_names key SHALL be `wind_from_dir`.
-part:: 10m wind direction which SHALL be in `Degree` units
-part:: 10m wind speed data parameter_names key SHALL be `wind_speed`.
-part:: 10m wind speed data which SHALL be in `m/s` units
-part:: 1hr Total Precipitation amount parameter_names key SHALL be `total_precipitation_amount_PT1H`.
-part:: 24hr Total Precipitation amount parameter_names key SHALL be `total_precipitation_amount_P24H`.
-part:: Precipitation data SHALL be in `mm` units
+part:: *MSL pressure* parameter_names key SHALL be *`msl_pressure`*.
+part:: *MSL pressure* data SHALL be in *`hPa`* units
+part:: *Surface pressure* parameter_names key SHALL be *`surface_pressure`*.
+part:: *Surface pressure* data SHALL be in *`hPa`* units
+part:: *Screen level air temperature* parameter_names key SHALL be *`air_temperature`*.
+part:: *1hr Mean Screen level air temperature* parameter_names key SHALL be *`mean_air_temperature_PT1H`*.
+part:: *12hr Max Screen level air temperature* parameter_names key SHALL be *`max_air_temperature_PT12H`*.
+part:: *24hr Max Screen level air temperature* parameter_names key SHALL be *`max_air_temperature_PT24H`*.
+part:: *Screen level air temperature* data SHALL be in *`Celsius`* units
+part:: *Screen level dewpoint temperature* parameter_names key SHALL be *`dew_point`*.
+part:: *Screen level dewpoint temperature* data SHALL be in *`Celsius`* units
+part:: *10m wind direction* data parameter_names key SHALL be *`wind_from_dir`*.
+part:: *10m wind direction* which SHALL be in *`Degree`* units
+part:: *10m wind speed* data parameter_names key SHALL be *`wind_speed`*.
+part:: *10m wind speed* data which SHALL be in *`m/s`* units
+part:: *1hr Total Precipitation amount* parameter_names key SHALL be *`total_precipitation_amount_PT1H`*.
+part:: *24hr Total Precipitation amount* parameter_names key SHALL be *`total_precipitation_amount_P24H`*.
+part:: Precipitation data SHALL be in *`mm`* units
 
 
 part:: The parameter_names SHALL be described as follows in the Collections/Instances responses.

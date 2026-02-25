@@ -8,27 +8,27 @@ test-purpose:: Validate the NWP pressure level data extents are correctly define
 test-method::
 step::: Verfiy that NWP pressure level Collection response includes the following spatial crs value:
 
-* GEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["Horizontal component of 3D system."],AREA["World."],BBOX[-90,-180,90,180]],ID["EPSG",4326]]
+* *GEOGCRS["WGS 84",ENSEMBLE["World Geodetic System 1984 ensemble",MEMBER["World Geodetic System 1984 (Transit)"],MEMBER["World Geodetic System 1984 (G730)"],MEMBER["World Geodetic System 1984 (G873)"],MEMBER["World Geodetic System 1984 (G1150)"],MEMBER["World Geodetic System 1984 (G1674)"],MEMBER["World Geodetic System 1984 (G1762)"],MEMBER["World Geodetic System 1984 (G2139)"],MEMBER["World Geodetic System 1984 (G2296)"],ELLIPSOID["WGS 84",6378137,298.257223563,LENGTHUNIT["metre",1]],ENSEMBLEACCURACY[2.0]],PRIMEM["Greenwich",0,ANGLEUNIT["degree",0.0174532925199433]],CS[ellipsoidal,2],AXIS["geodetic latitude (Lat)",north,ORDER[1],ANGLEUNIT["degree",0.0174532925199433]],AXIS["geodetic longitude (Lon)",east,ORDER[2],ANGLEUNIT["degree",0.0174532925199433]],USAGE[SCOPE["Horizontal component of 3D system."],AREA["World."],BBOX[-90,-180,90,180]],ID["EPSG",4326]]*
 
 
 step::: Verfiy that NWP pressure level Collection response spatial extent bounds contains or matches the following spatial bounds:
 
-* [-180,-90,180,90]
+* *[-180, -90, 180, 90]*
 
 step::: Verfiy that NWP pressure level Collection response includes a temporal extent definition.
 
 step::: Verfiy that NWP pressure level Collection response temporal extent has the following trs value:
 
-* TIMECRS["DateTime",TDATUM["Gregorian Calendar"],CS[temporal,1],AXIS["Time (T)",future],TIMEUNIT["day",86400]]
+* *TIMECRS["DateTime",TDATUM["Gregorian Calendar"],CS[temporal,1],AXIS["Time (T)",future],TIMEUNIT["day",86400]]*
 
 step::: Verify the NWP pressure level Collection response includes a vertical extent definition.
 
 step::: Verify the NWP pressure level Collection response vertical extent definition has the following vrs definition:
 
-* PARAMETRICCRS["WMO standard atmosphere layer 0",PDATUM["Mean Sea Level",ANCHOR["101325 Pa at 15°C"]],CS[parametric,1],AXIS["pressure (Pa)",down],PARAMETRICUNIT["Pascal",100.0]]
+* *PARAMETRICCRS["WMO standard atmosphere layer 0",PDATUM["Mean Sea Level",ANCHOR["101325 Pa at 15°C"]],CS[parametric,1],AXIS["pressure (Pa)",down],PARAMETRICUNIT["Pascal",100.0]]*
 
 step::: Verify the NWP pressure level Collection response vertical extent definition includes the following values:
 
-* "1000","925","850","700","600","500","400","300","250","200","150","100","50"
+* *"1000", "925", "850", "700", "600", "500", "400", "300", "250", "200", "150", "100", "50"*
 
 ====

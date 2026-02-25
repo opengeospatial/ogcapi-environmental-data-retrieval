@@ -6,18 +6,18 @@ identifier:: /conf/nwp-station-level/parameter-names
 target:: /req/nwp-station-level/parameter-names
 test-purpose:: Validate the NWP station level Collection response parameter_names are correctly defined
 test-method::
-step::: Verfiy that NWP station level Collection response parameter_names section includes MSL pressure with a key of `msl`.
-step::: Verfiy that NWP station level Collection response parameter_names MSL pressure definition has units of `Pa`. 
-step::: Verfiy that NWP station level Collection response parameter_names section includes Surface pressure with a key of `sp`.
-step::: Verfiy that NWP station level Collection response parameter_names Surface pressure definition has units of `Pa`. 
-step::: Verfiy that NWP station level Collection response parameter_names section includes Screen level air temperature with a key of `t2m`.
-step::: Verfiy that NWP station level Collection response parameter_names Screen level air temperature definition has units of `K`. 
-step::: Verfiy that NWP station level Collection response parameter_names section includes Screen level dewpoint temperature with a key of `d2m`.
-step::: Verfiy that NWP station level Collection response parameter_names Screen level dewpoint temperature definition has units of `K`. 
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes 10m u-component of wind definition with a key of `u10`.
-step::: Verfiy that NWP pressure level Collection response parameter_names 10m u-component of wind definition has units of `m/s`. 
-step::: Verfiy that NWP pressure level Collection response parameter_names section includes 10m v-component of wind definition with a key of `v10`.
-step::: Verfiy that NWP pressure level Collection response parameter_names 10m v-component of wind definition has units of `m/s`. 
+step::: Verfiy that NWP station level Collection response parameter_names section includes *MSL pressure* with a key of *`msl`*.
+step::: Verfiy that NWP station level Collection response parameter_names *MSL pressure* definition has units of *`Pa`*. 
+step::: Verfiy that NWP station level Collection response parameter_names section includes *Surface pressure* with a key of *`sp`*.
+step::: Verfiy that NWP station level Collection response parameter_names *Surface pressure* definition has units of *`Pa`*. 
+step::: Verfiy that NWP station level Collection response parameter_names section includes *Screen level air temperature* with a key of *`t2m`*.
+step::: Verfiy that NWP station level Collection response parameter_names *Screen level air temperature* definition has units of *`K`*. 
+step::: Verfiy that NWP station level Collection response parameter_names section includes *Screen level dewpoint temperature* with a key of *`d2m`*.
+step::: Verfiy that NWP station level Collection response parameter_names *Screen level dewpoint temperature* definition has units of *`K`*. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *10m u-component of wind* definition with a key of *`u10`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *10m u-component of wind* definition has units of *`m/s`*. 
+step::: Verfiy that NWP pressure level Collection response parameter_names section includes *10m v-component of wind* definition with a key of *`v10`*.
+step::: Verfiy that NWP pressure level Collection response parameter_names *10m v-component of wind* definition has units of *`m/s`*. 
 step::: Verfiy that NWP pressure level Collection response parameter_names section includes the following parameter definitions:
 
 step::: Verfiy that NWP station level Collection response parameter_names section includes the following parameter definitions:
