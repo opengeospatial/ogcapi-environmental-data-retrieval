@@ -1,0 +1,14 @@
+[[ats_nwp-station-level_rc-collectionid]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-station-level/rc-collectionid
+target:: /req/nwp-station-level/Collectionid
+test-purpose:: Validate the NWP station level Collection id is correctly defined
+test-method::
+step::: Verify that the *`collectionid`* does not contain any special characters
+step::: Verify that that the *`collectionid`* is lowercase.
+step::: Verify that the *`collectionid`* ends with *"stnlvl"*.
+step::: Verify that the *`collectionid`* includes the generating centre name in its definition.
+step::: Verify that the *`collectionid`* includes the data source NWP model name in its definition.
+====

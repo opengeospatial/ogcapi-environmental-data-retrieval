@@ -1,0 +1,13 @@
+[[req_nwp-station-level_data-query]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-station-level/data-query
+statement:: The NWP Station Level Collection SHALL support the following data queries.
+    * Instances
+part:: A NWP Station Level Collection Instance SHALL support the following data queries:
+    * *area*
+    * *position*
+    * *locations*
+====

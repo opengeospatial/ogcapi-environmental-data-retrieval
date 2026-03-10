@@ -1,0 +1,13 @@
+[[req_nwp-pressure-level_data-query]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-pressure-level/data-query
+statement:: The NWP Pressure Level Collection SHALL support the following data queries.
+    * *Instances*
+part:: A NWP Pressure Level Collection Instance SHALL support the following data queries:
+    * *area*
+    * *cube*
+    * *position*
+====

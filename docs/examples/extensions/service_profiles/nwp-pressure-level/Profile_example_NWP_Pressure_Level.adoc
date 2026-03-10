@@ -1,0 +1,47 @@
+= OGC API - Environmental Data Retrieval Standard - Example profile based on NWP Pressure Level data
+:doctype: community-practice
+:encoding: utf-8
+:lang: en
+:status: draft
+:committee: technical
+:draft: 1.0
+:received-date: 2026-02-18
+:issued-date: 2029-03-30
+:published-date: 2029-03-30
+:fullname: Mark Burgoyne
+:docsubtype: Profile
+:keywords: ogcdoc, OGC document, ModSpec, API, OpenAPI, html, Profile
+:submitting-organizations: UK Met Office;
+:mn-document-class: ogc
+:mn-output-extensions: xml,html,doc,pdf
+:local-cache-only:
+:data-uri-image:
+:pdf-uri: ./NWP_Pressure_Level_Profile.pdf
+:xml-uri: ./NWP_Pressure_Level_Profile.xml
+:doc-uri: ./NWP_Pressure_Level_Profile.doc
+:edition: 1.0
+
+////
+Make sure to complete each included document
+////
+include::sections/clause_0_front_material.adoc[]
+
+include::sections/clause_1_scope.adoc[]
+
+include::sections/clause_2_conformance.adoc[]
+
+include::sections/clause_3_references.adoc[]
+
+include::sections/clause_4_terms_and_definitions.adoc[]
+
+include::sections/clause_5_conventions.adoc[]
+
+include::sections/clause_6_context.adoc[]
+
+include::sections/clause_7_core.adoc[]
+
+include::sections/annex-a.adoc[]
+
+include::sections/annex-history.adoc[]
+
+include::sections/annex-bibliography.adoc[]

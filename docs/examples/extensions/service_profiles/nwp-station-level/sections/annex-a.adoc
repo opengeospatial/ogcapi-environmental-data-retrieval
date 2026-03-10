@@ -1,0 +1,28 @@
+[[annex-A]]
+[appendix,obligation="normative"]
+== Conformance Class Abstract Test Suite (Normative)
+
+=== Conformance Class Core
+
+include::../abstract_tests/ATS_rc-collectionid.adoc[]
+
+include::../abstract_tests/core/ATS_rc-links.adoc[]
+
+include::../abstract_tests/core/ATS_rc-extent.adoc[]
+
+include::../abstract_tests/core/ATS_rc-data-query.adoc[]
+
+include::../abstract_tests/core/ATS_rc-data-query-instances.adoc[]
+
+include::../abstract_tests/core/ATS_rc-data-query-area.adoc[]
+
+include::../abstract_tests/core/ATS_rc-data-query-locations.adoc[]
+
+include::../abstract_tests/core/ATS_rc-data-query-position.adoc[]
+
+include::../abstract_tests/core/ATS_rc-parameter-names.adoc[]
+
+include::../abstract_tests/core/ATS_rc-output-format.adoc[]
+
+include::../abstract_tests/core/ATS_rc-status-codes.adoc[]
+

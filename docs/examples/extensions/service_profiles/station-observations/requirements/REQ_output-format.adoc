@@ -1,0 +1,14 @@
+[[req_surface-observations_output-format]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/output-format
+statement:: surface observations Collections SHALL support the following formats:
+part:: A format with the label *GeoJSON* SHALL provide OGC Features and Geometries JSON output which is described by https://github.com/opengeospatial/OGC-feat-geo-json
+part:: A format with the label *CoveageJSON* SHALL provide CoverageJSON output which is described by https://docs.ogc.org/cs/21-069r2/21-069r2.html[CoverageJSON specification]
+part:: A format with the label *CSV* SHALL provide CSV output with a metadata file which is described by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/[W3C Model for Tabular Data and Metadata on the Web]
+part:: The links section of the Collection response shall include a link to the CSV tablular data model with the following attributes:
+    * `rel` of `describedBy`
+    * `type` of `application/csvm+json`
+    * `title` of `Metadata vocabulary for CSV data responses`

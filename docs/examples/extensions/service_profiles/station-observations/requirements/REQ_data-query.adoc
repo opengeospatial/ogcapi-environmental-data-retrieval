@@ -1,0 +1,12 @@
+[[req_surface-observations_data-query]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/data-query
+part:: A NWP Station Level Collection SHALL support the following data queries:
+    * *area*
+    * *position*
+    * *locations*
+    * *radius*
+====

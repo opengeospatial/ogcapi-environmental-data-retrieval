@@ -1,0 +1,14 @@
+[[ats_surface-observations_rc-output-format]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/surface-observations/rc-output-format
+target:: /req/surface-observations/output-format
+test-purpose:: Validate the surface observation Collection response output formats are correctly labeled
+test-method::
+step::: Verfiy that surface observation Collection response output_format sections define *CoverageJSON data as *`CoverageJSON`*:
+step::: Verfiy that surface observation Collection response output_format sections define *GeoJSON* data as *`GeoJSON`*:
+step::: Verfiy that surface observation Collection response output_format sections define *CSV* data as *`CSV`*:
+step::: Verify that the Collection response links section has a link with a *rel* of *`describedBy`*.
+
+====

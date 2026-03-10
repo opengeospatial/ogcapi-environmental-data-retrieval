@@ -1,0 +1,25 @@
+[[req_nwp-pressure-level_collectionid]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-pressure-level/Collectionid
+statement:: The Collection id must be based on the center name and the name of the NWP model that the data is sourced from.
+part:: the centre name may contain dashes (but no other special characters).
+part:: the NWP model name may contain dashes (but no other special characters).
+part:: the Collection id SHALL end with the characters *`prslvl`*.
+part:: The *centre name*, *NWP model name* and *`prslvl`* SHALL be separated by an underscore *`{centre-name}_{NWP model name}_prslvl`*.
+part:: The Collection id SHALL be lowercase
+
+[source,text]
+----
+
+examples:
+
+ecmwf_ifs_prslvl
+meteofrance_arpege-world_prslvl
+metoffice_global-deterministic-10km_prslvl
+noaa_gfs_prslvl
+
+----
+====

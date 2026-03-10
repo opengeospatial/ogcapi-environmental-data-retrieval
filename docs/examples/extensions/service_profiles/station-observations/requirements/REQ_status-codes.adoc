@@ -1,0 +1,62 @@
+[[req_surface-observations_status-codes]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/status-codes
+statement:: The NWP Station Level Collection profile SHALL support the following HTTP status codes.
+part:: The message descriptions SHALL be as follows:
+
+!===
+|Status code |Description
+|`200` |A successful request.
+|`204` |A successful request, but the resource has no data resulting from the request.  No additional content or message body is provided.
+|`400` |The server cannot or will not process the request due to an apparent client error. For example, a query parameter had an incorrect value.
+|`404` |The requested resource does not exist on the server. For example, a path parameter had an incorrect value.
+|`413` |Request entity too large. For example, the query would involve returning more data than the server is capable of processing, the implementation should return a message explaining the query limits imposed by the server implementation.
+|`500` |An internal error occurred in the server.
+!===
+
+part:: Time values outside of the range defined in the Collections response SHALL generate a 204 status
+part:: Invalid time string values SHALL generate a 400 error
+part:: Invalid collection id values SHALL generate a 404 error
+part:: Invalid instance id values SHALL generate a 404 error
+part:: Invalid location id values SHALL generate a 404 error
+part:: Invalid parameter_names values SHALL generate a 404 error
+part:: Invalid output_format values SHALL generate a 404 error
+part:: Invalid crs values SHALL generate a 404 error
+part:: Queries that do not specify a datetime query parameter SHALL generate a 413 error.
+part:: Queries that do not specify spatial bounds SHALL generate a 413 error.
+part:: Badly formed requests SHALL return a 500 error.
+part:: In Queries that have one or more incorrect parameters the highest value status code SHALL be returned
+
+part:: The surface observations Collection SHALL use the following JSON schema for error response bodies (HTTP Status Codes 400 and above) 
+
+[source,JSON]
+----
+{
+    "type": "object",
+    "required": [
+        "code"
+    ],
+    "properties": {
+        "code": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        }
+    }
+}
+----
+
+i.e.
+[source,JSON]
+----
+ {
+    "code": 204,
+    "description": "Date time value outside of available data times"
+}
+----
+
+====

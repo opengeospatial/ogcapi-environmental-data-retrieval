@@ -1,0 +1,12 @@
+[[ats_nwp-station-level_rc-links]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-station-level/rc-links
+target:: /req/nwp-station-level/links
+test-purpose:: Validate the NWP station level Collection response links are correctly defined
+test-method::
+step::: Verfiy that NWP model profile Collections response links section includes a *link to the data licence*
+step::: Verfiy that NWP model profile Collections response links section includes a *link to the profile requirements documentation*
+step::: Verfiy that NWP model profile Collections response links section includes a *link to the profile OpenAPI definition*
+step::: Verfiy that NWP model profile Collections response links section includes a *link to the csv data response format*

@@ -1,0 +1,30 @@
+[[req_nwp-pressure-level_data-query-area]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-pressure-level/data-query-area
+statement:: A NWP presure Collection SHALL support area queries:
+part:: The area query SHALL support *GET* and *POST* operations
+part:: The area query SHALL support the following data output_formats
+    * *GRIB2*
+    * *CoverageJSON*
+    * *CF-NetCDF*
+
+
+part:: *GRIB2* data SHALL be compliant with the https://library.wmo.int/viewer/35625?medianame=306_v.I.2_2019_edition_Updated_2022_en_#page=31&viewer=picture[GRIB2 specification]
+part:: *GRIB2* data SHALL be returned with a media type response of *`application/grib;edition=2`*
+
+part:: *CoverageJSON* data response SHALL be compliant with the Grid domainType of the https://docs.ogc.org/cs/21-069r2/21-069r2.html#_df6ce66a-7369-49cb-b59f-47a8c5d424ca[CoverageJSON Grid domainType]
+part:: *CoverageJSON* data response SHALL be returned with a media type response of *`application/vnd.cov+json`*
+
+part:: *CF-NetCDF* data response SHALL be compliant with the Grid domainType of the https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.htm[CF-NetCDF specification]
+part:: *CF-NetCDF* data response SHALL be returned with a media type of *`application/netcdf`*
+
+part:: The area query SHALL support outputing data in the following CRS:
+    * *GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]*
+
+part:: The area query SHALL advertise the CRS in the Collection/Instance responses as follows:
+    * *EPSG:4326*
+
+====

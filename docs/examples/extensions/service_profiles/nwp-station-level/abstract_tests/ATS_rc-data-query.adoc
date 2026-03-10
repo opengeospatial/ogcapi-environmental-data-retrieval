@@ -1,0 +1,15 @@
+[[ats_nwp-station-level_rc-data-query]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-station-level/rc-data-query
+target:: /req/nwp-station-level/data-query
+test-purpose:: Validate the NWP station level Collection response data query is correctly defined
+test-method::
+step::: Verfiy that NWP station level Collection response data query section includes an instances data-query definition
+step::: Verfiy that NWP station level Collection Instance response data query section includes definitions for the following data queries:
+    * *area*
+    * *position*
+    * *locations*
+
+====

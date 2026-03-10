@@ -1,0 +1,142 @@
+[req_nwp-station-level_parameter-names]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-station-level/parameter-names
+statement:: The NWP Station level Collection SHALL provide the following data parameters
+part:: *MSL pressure* parameter_names key SHALL be *`msl`*.
+part:: *MSL pressure* data SHALL be in *`Pa`* units
+part:: *Surface pressure* parameter_names key SHALL be *`sp`*.
+part:: *Surface pressure* data SHALL be in *`Pa`* units
+part:: *Screen level air temperature* parameter_names key SHALL be *`t2m`*.
+part:: *Screen level air temperature* data SHALL be in *`K`* units
+part:: *Screen level dewpoint temperature* parameter_names key SHALL be *`d2m`*.
+part:: *Screen level dewpoint temperature* data SHALL be in *`K`* units
+part:: *10m u-component of wind* data parameter_names key SHALL be *`u10`*.
+part:: *10m u-component of wind* data which SHALL be in *`m/s`* units
+part:: *10m v-component of wind* data parameter_names key SHALL be *`v10`*.
+part:: *10m v-component of wind* data which SHALL be in *`m/s`* units
+part:: The parameter_names SHALL be described as follows in the Collections/Instances responses.
+
+[source,JSON]
+----
+  "parameter_names": {
+    "msl": {
+      "type": "Parameter",
+      "description": "Air pressure at sea level",
+      "unit": {
+        "label": "Pascals",
+        "symbol": {
+          "value": "Pa",
+          "type": "https://qudt.org/vocab/unit/PA"
+        }
+      },
+      "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-3-1",
+        "label": "MSL Pressure"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0M"
+      }
+    },
+    "sp": {
+      "type": "Parameter",
+      "description": "Surface air pressure",
+      "unit": {
+        "label": "Pascals",
+        "symbol": {
+          "value": "Pa",
+          "type": "https://qudt.org/vocab/unit/PA"
+        }
+      },
+      "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-3-0",
+        "label": "Surface air pressure"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0M"
+      }
+    },
+    "t2m": {
+      "type": "Parameter",
+      "description": "Screen level air temperature",
+      "unit": {
+        "label": "Kelvin",
+        "symbol": {
+          "value": "K",
+          "type": "https://qudt.org/vocab/unit/K"
+        }
+      },
+      "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0",
+        "label": "Air temperature at 2m"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0M"
+      }
+    },
+    "d2m": {
+      "type": "Parameter",
+      "description": "Screen level Dewpoint",
+      "unit": {
+        "label": "K",
+        "symbol": {
+          "value": "K",
+          "type": "https://qudt.org/vocab/unit/K"
+        }
+      },
+      "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-6",
+        "label": "dewpoint"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0S"
+      }
+    },
+    "u10": {
+      "type": "Parameter",
+      "description": "u-component of wind at 10m above surface",
+      "unit": {
+        "label": "m/s",
+        "symbol": {
+          "value": "m%20s",
+          "type": "https://qudt.org/vocab/unit/M-PER-SEC"
+        }
+      },
+      "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-2",
+        "label": "u component of wind"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0S"
+      }
+    },
+    "v10": {
+      "type": "Parameter",
+      "description": "v-component of wind at 10m above surface",
+      "unit": {
+        "label": "m/s",
+        "symbol": {
+          "value": "m%20s",
+          "type": "https://qudt.org/vocab/unit/M-PER-SEC"
+        }
+      },
+      "observedProperty": {
+        "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-2-3",
+        "label": "v component of wind"
+      },
+      "measurementType": {
+        "method": "instantaneous",
+        "duration": "PT0S"
+      }
+    }
+  }
+----
+
+====

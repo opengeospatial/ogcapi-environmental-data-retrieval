@@ -1,0 +1,15 @@
+[[ats_nwp-pressure-level_rc-data-query]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-pressure-level/rc-data-query
+target:: /req/nwp-pressure-level/data-query
+test-purpose:: Validate the NWP pressure level Collection response data query is correctly defined
+test-method::
+step::: Verfiy that NWP pressure level Collection response data query section includes an instances data-query definition
+step::: Verfiy that NWP pressure level Collection Instance response data query section includes definitions for the following data queries:
+    * *area*
+    * *cube*
+    * *position*
+
+====

@@ -1,0 +1,22 @@
+[[ats_nwp-station-level_rc-data-query-locations]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-station-level/rc-data-query-locations
+target:: /req/nwp-station-level/data-query-locations
+test-purpose:: Validate the NWP Station level locations data query is correctly defined
+test-method::
+step::: Verfiy that NWP Station level Collections Instance responses include a locations data query definition which specifies the following data formats:
+    * *CoverageJSON*
+    * *GeoJSON*
+    * *CSV*
+
+step::: Verify that the locations query supports *GET* requests
+step::: Verify that the locations query supports *POST* requests
+step::: Verify that the *CoverageJSON* data response from the position query is compliant with the VerticalProfile domainType of CoverageJSON https://docs.ogc.org/cs/21-069r2/21-069r2.html#_b6f98535-44bf-44f8-82cc-c210526cab65[CoverageJSON VerticalProfile]
+step::: Verify that the *CoverageJSON* data response media type response is *application/vnd.cov+json*
+step::: Verify that the *GeoJSON* data response from the position query is compliant with https://github.com/opengeospatial/OGC-feat-geo-json[OGC Features and Geometries JSON]
+step::: Verify that the *GeoJSON* data response media type response is *application/geo+json*
+step::: Verify that the *CSV* data response from the position query is compliant with the https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/[W3C Model for Tabular Data and Metadata on the Web] provided by the `describedBy` link in the Collections response links section.
+step::: Verify that the *CSV* data response media type response is *text/csv*
+====

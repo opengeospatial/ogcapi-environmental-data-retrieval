@@ -1,0 +1,31 @@
+[[req_surface-observations-data-query-radius]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/surface-observations/data-query-radius
+statement:: A surface observations Collection SHALL support radius queries:
+part:: The radius query SHALL support *GET* and *POST* operations
+part:: The radius query SHALL support the following data output_formats
+    * *CoverageJSON*
+    * *GeoJSON*
+    * *CSV*
+
+part:: The radius query SHALL support specifiying *`width-units`* in *miles* and *kilometers*
+
+part:: *CoverageJSON* data returned by a position query SHALL be based on the https://docs.ogc.org/cs/21-069r2/21-069r2.html#_8962dcde-77d5-426d-8eeb-ca2c168a0bee[CoverageJSON PointSeries].
+part:: *CoverageJSON* data response SHALL be returned with a media type of *`application/vnd.cov+json`*
+
+part:: *CSV* data returned by a position query SHALL follow the schema defined at a link in the Collection response section links with a rel of `describedBy`.
+part:: *CSV* data response SHALL be returned with a media type of *`text/csv`*
+
+part:: *GeoJSON* data responses SHALL be compliant with is compliant with https://github.com/opengeospatial/OGC-feat-geo-json[OGC Features and Geometries JSON]
+part:: *GeoJSON* data response SHALL be returned with a media type of *`application/geo+json`*
+
+part:: The position query SHALL support outputing data in the following CRS:
+    * *GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]]*
+
+part:: The position query SHALL advertise the CRS in the Collection/Instance responses as follows:
+    * *EPSG:4326*
+
+====

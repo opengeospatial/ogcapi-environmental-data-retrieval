@@ -1,0 +1,59 @@
+[[ats_nwp-pressure-level_rc-status-codes]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-pressure-level/rc-status-codes
+target:: /req/nwp-pressure-level/status-codes
+test-purpose:: Validate the NWP pressure level responses have the correct HTTP status codes
+test-method::
+step::: Verfiy that a valid Collections query generates a HTTP status code of 200
+step::: Verfiy that a valid Collections Instances query generates a HTTP status code of 200
+step::: Verfiy that a valid position query generates a HTTP status code of 200
+step::: Verfiy that a valid area query generates a HTTP status code of 200
+step::: Verfiy that a valid cube query generates a HTTP status code of 200
+step::: Verfiy that a valid position query with a date value outside of the time extent advertised in the Collections response has a HTTP status code of 204
+step::: Verfiy that a valid area query with a date value outside of the time extent advertised in the Collections response has a HTTP status code of 204
+step::: Verfiy that a valid cube query with a date value outside of the time extent advertised in the Collections response has a HTTP status code of 204
+step::: Verfiy that a valid position query with a z value outside of the vertical extent advertised in the Collections response has a HTTP status code of 204
+step::: Verfiy that a valid area query with a z value outside of the vertical extent advertised in the Collections response has a HTTP status code of 204
+step::: Verfiy that a valid cube query with a z value outside of the vertical extent advertised in the Collections response has a HTTP status code of 204
+step::: Verfiy that a position query with an invalid date string value has a HTTP status code of 400
+step::: Verfiy that a area query with an invalid date string value has a HTTP status code of 400
+step::: Verfiy that a cube query with an invalid date string value has a HTTP status code of 400
+step::: Verfiy that a Collections query with an invalid collectionid string value has a HTTP status code of 404
+step::: Verfiy that a Instances query with an invalid instanceid string value has a HTTP status code of 404
+step::: Verfiy that a position query with an invalid parameter_names string value has a HTTP status code of 404
+step::: Verfiy that a area query with an invalid parameter_names string value has a HTTP status code of 404
+step::: Verfiy that a cube query with an invalid parameter_names string value has a HTTP status code of 404
+step::: Verfiy that a position query with an invalid output_format string value has a HTTP status code of 404
+step::: Verfiy that a area query with an invalid output_format string value has a HTTP status code of 404
+step::: Verfiy that a cube query with an invalid output_format string value has a HTTP status code of 404
+step::: Verfiy that a position query with an invalid crs string value has a HTTP status code of 404
+step::: Verfiy that a area query with an invalid crs string value has a HTTP status code of 404
+step::: Verfiy that a cube query with an invalid crs string value has a HTTP status code of 404
+step::: Verfiy that a position query with a missing datetime value has a HTTP status code of 413
+step::: Verfiy that a area query with a missing datetime value has a HTTP status code of 413
+step::: Verfiy that a cube query with a missing datetime value has a HTTP status code of 413
+
+step::: Verfiy that an invalid query has a HTTP status code of 500
+
+step::: Verify that the message bodies in responses with HTTP status codes or 400 or higher comply with the following schema:
+
+[source,JSON]
+----
+{
+    "type": "object",
+    "required": [
+        "code"
+    ],
+    "properties": {
+        "code": {
+            "type": "string"
+        },
+        "description": {
+            "type": "string"
+        }
+    }
+}
+----
+====

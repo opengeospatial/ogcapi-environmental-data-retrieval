@@ -1,0 +1,22 @@
+[[ats_nwp-pressure-level_rc-data-query-instances]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/nwp-pressure-level/rc-data-query-instances
+target:: /req/nwp-pressure-level/data-query-cube
+test-purpose:: Validate the NWP pressure level Collection has Instances of the Collection 
+test-method::
+step::: Verify that the NWP  pressure level Collections response includes an Instances data-query definition 
+step::: Verify that the ids of the Instances of the Collection match the following regular expression
+
+[source,python]
+----
+    ^\d{8}T\d{4}Z$
+----
+
+step::: Verify that Collection Instances support `position` queries by constructing a valid `position` query and checking for a valid response.
+step::: Verify that Collection Instances support `area` queries by constructing a valid `area` query and checking for a valid response.
+step::: Verify that Collection Instances support `cube` queries by constructing a valid `cube` query and checking for a valid response.
+
+
+====

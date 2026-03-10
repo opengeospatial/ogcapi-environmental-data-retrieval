@@ -1,0 +1,17 @@
+[[req_nwp-station-level_output-format]]
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/nwp-station-level/output-format
+statement:: NWP Station level Collections SHALL support the following formats:
+part:: A format with the label *GRIB2* SHALL provide GRIB2 output which is described by https://library.wmo.int/viewer/35625?medianame=306_v.I.2_2019_edition_Updated_2022_en_#page=31&viewer=picture[GRIB2 specification]
+part:: A format with the label *GeoJSON* SHALL provide OGC Features and Geometries JSON output which is described by https://github.com/opengeospatial/OGC-feat-geo-json
+part:: A format with the label *CoveageJSON* SHALL provide CoverageJSON output which is described by https://docs.ogc.org/cs/21-069r2/21-069r2.html[CoverageJSON specification]
+part:: A format with the label *NetCDF4* SHALL provide CF-NetCDF output which is described by https://cfconventions.org/Data/cf-conventions/cf-conventions-1.10/cf-conventions.html[CF-NetCDF specification]
+part:: A format with the label *CSV* SHALL provide CSV output with a metadata file which is described by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/[W3C Model for Tabular Data and Metadata on the Web]
+part:: The links section of the Collection response shall include a link to the CSV tablular data model with the following attributes:
+    * `rel` of `describedBy`
+    * `type` of `application/csvm+json`
+    * `title` of `Metadata vocabulary for CSV data responses`
+====
