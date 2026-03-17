@@ -3,7 +3,7 @@ in: query
 description: |+
   Defined if the user requires data at a different resolution from the native resolution of the data along the z-axis
 
-  Tis is a single value it denotes the number of intervals to retrieve data for along the z-axis
+  This is a single value it denotes the number of intervals to retrieve data for along the z-axis
     
     i.e. resolution-z=10 
     
