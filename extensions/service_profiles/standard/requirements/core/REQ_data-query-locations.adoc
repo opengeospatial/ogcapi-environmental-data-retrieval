@@ -33,3 +33,20 @@ identifier:: /per/core/locations-mandatory-locationid-definition
 statement:: The `locations` query requirement _MAY_ specify a list of required `locationId` values.
 
 ====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/location-timestep-diff-query-definition
+statement:: The `location` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but the not all parameters have data for the requested timesteps.
+
+====
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/location-custom-dimension-diff-query-definition
+statement:: The `location` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but the not all parameters have data for the requested dimension values.
+
+====

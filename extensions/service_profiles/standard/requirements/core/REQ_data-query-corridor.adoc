@@ -23,3 +23,28 @@ identifier:: /per/core/corridor-mandatory-query-definition
 statement:: The `corridor` requirement _MAY_ specify which OGC API-EDR `corridor` query parameters are mandatory for compliance with the profile.
 
 ====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-timestep-diff-query-definition
+statement:: The `corridor` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but the not all parameters have data for the requested timesteps.
+
+====
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-vertical-diff-query-definition
+statement:: The `corridor` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but the not all parameters have data for the requested levels.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-custom-dimension-diff-query-definition
+statement:: The `corridor` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but the not all parameters have data for the requested dimension values.
+
+====
