@@ -4,9 +4,9 @@
 ====
 [%metadata]
 identifier:: /req/core/publishing
-statement:: An EDR profile _SHALL_ be published as an OpenAPI JSON document. 
-part:: The rules described in the requirements _SHALL_ be encoded using the OpenAPI 3.1 specification.
-part:: The requirement rules _SHALL_ be encoded in either the OpenAPI Path Item or in the Response object schema sections of the document.
+statement:: An EDR service profile _SHALL_ be published as an OpenAPI JSON document when it contains requirements that can be encoded in the OpenAPI specification. 
+part:: The OpenAPI compatible rules described in the requirements _SHALL_ be encoded using the OpenAPI 3.1 specification.
+part:: The OpenAPI compatible requirement rules _SHALL_ be encoded in either the OpenAPI Path Item or in the Response object schema sections of the document.
 
 ====
 

@@ -6,5 +6,5 @@ identifier:: /conf/core/conformance-test
 target:: /req/core/conformance-test
 test-purpose:: Validate that each requirement has a corresponding conformance class
 test-method:: 
-step:: Verify that there is a conformance class for each requirement defined in a profile.
+step:: Verify that there is a conformance class for each requirement defined in a service profile.
 ====

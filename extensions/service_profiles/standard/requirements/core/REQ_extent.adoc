@@ -4,7 +4,7 @@
 ====
 [%metadata]
 identifier:: /req/core/extent
-statement:: A Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ define a requirement defining a `bbox` which specifies the minimum spatial bounds that _SHALL_ be supported
+statement:: A Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ define a requirement defining a `bbox` which specifies the minimum spatial bounds that _SHALL_ be supported
 
 ====
 
@@ -20,8 +20,8 @@ statement:: A requirement _SHOULD_ be defined specifying the rules for defining 
 ====
 [%metadata]
 identifier:: /req/core/extent-spatial
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with spatial dimensions, then:
-part:: The Profile _SHALL_ specify the rules for the spatial Coordinate Reference System (CRS).
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with spatial dimensions, then:
+part:: The Service Profile _SHALL_ specify the rules for the spatial Coordinate Reference System (CRS).
 part:: Those rules _SHALL_ be specified using either:
 * Enumerated list of valid CRS values
 * Regular expression defining valid CRS string patterns.
@@ -41,8 +41,8 @@ statement:: Regular expressions _MAY_ be used to restrict reference system defin
 ====
 [%metadata]
 identifier:: /req/core/extent-temporal
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a temporal dimension, then:
-part:: The Profile _SHALL_ specify the rules for expressing the Temporal Reference System (TRS).
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a temporal dimension, then:
+part:: The Service Profile _SHALL_ specify the rules for expressing the Temporal Reference System (TRS).
 part:: Those rules _SHALL_ be specified using either:
 * Enumerated list of valid TRS values
 * Regular expression defining valid TRS string patterns.
@@ -61,8 +61,8 @@ statement:: A requirement _SHOULD_ be defined specifying the minimum temporal bo
 ====
 [%metadata]
 identifier:: /req/core/extent-vertical
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a vertical dimension, then:
-part:: The Profile _SHALL_ specify the rules for expressing the Vertical Reference System (VRS).
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a vertical dimension, then:
+part:: The Service Profile _SHALL_ specify the rules for expressing the Vertical Reference System (VRS).
 part:: Those rules _SHALL_ be specified using either:
 * Enumerated list of valid VRS values
 * Regular expression defining valid VRS string patterns.
@@ -81,8 +81,8 @@ statement:: A requirement _SHOULD_ be defined specifying the minimum vertical bo
 ====
 [%metadata]
 identifier:: /req/core/extent-custom
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a custom dimension, then:
-part:: The Profile _SHALL_ specify the rules for expressing the custom dimension.
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> supports Extents with a custom dimension, then:
+part:: The Service Profile _SHALL_ specify the rules for expressing the custom dimension.
 part:: Those rules _SHALL_ be specified using either:
 * A custom dimension id
 * A custom dimension reference value

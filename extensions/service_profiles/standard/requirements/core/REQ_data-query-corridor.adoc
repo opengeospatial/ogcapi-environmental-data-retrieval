@@ -4,8 +4,8 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-corridor
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `corridor` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `corridor` query.
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `corridor` query mandatory, then:
+part:: The Service Profile _SHALL_ include a requirement mandating the `corridor` query.
 part:: The `corridor` requirement _SHALL_ specify the following:
 * Enumerated list of `output_format` types
 * The `default_output_format`

@@ -4,7 +4,7 @@
 [%metadata]
 identifier:: /conf/core/modspec
 target:: /req/core/modspec
-test-purpose:: Validate that the profile is compliant with the <<ogc-modspec,OGC Modular Specification>>.
+test-purpose:: Validate that the service profile is compliant with the <<ogc-modspec,OGC Modular Specification>>.
 test-method:: 
-step:: Verify that the profile is compliant with the <<ogc-modspec,OGC Modular Specification>>.
+step:: Verify that the service profile is compliant with the <<ogc-modspec,OGC Modular Specification>>.
 ====
