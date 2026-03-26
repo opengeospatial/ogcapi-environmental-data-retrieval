@@ -93,7 +93,7 @@ include::../requirements/core/REQ_api.adoc[]
 
 NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
 
-NOTE: Profile developers shold get guidance from the https://docs.ogc.org/pol/10-103r1.html[OGC Naming Authority] on valid URIs for Profiles. 
+NOTE: Profile developers should get guidance from the https://docs.ogc.org/pol/10-103r1.html[OGC Naming Authority] on valid URIs for Profiles. 
 
 === Spatio-temporal and Information Resources
 
