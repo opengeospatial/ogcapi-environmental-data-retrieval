@@ -30,7 +30,7 @@ statement:: A profile MAY include requirements for the landing page.
 ====
 [%metadata]
 identifier:: /per/core/multiple-collection-definition
-statement::A profile MAY include requirements for multiple collections.
+statement:: A profile MAY include requirements for multiple collections.
 
 ====
 
@@ -38,7 +38,7 @@ statement::A profile MAY include requirements for multiple collections.
 ====
 [%metadata]
 identifier:: /per/core/multiple-service-profile-definition
-statement::An OGC API EDR implementation MAY include multiple service profiles.
+statement:: An OGC API EDR implementation MAY include multiple service profiles.
 
 ====
 
