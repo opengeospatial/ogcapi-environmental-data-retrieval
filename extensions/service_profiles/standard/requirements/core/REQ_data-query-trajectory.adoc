@@ -26,7 +26,7 @@ statement:: The `trajectory` requirement _MAY_ specify which OGC API-EDR `trajec
 ====
 [%metadata]
 identifier:: /per/core/trajectory-timestep-diff-query-definition
-statement:: The `trajectory` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but the not all parameters have data for the requested timesteps.
+statement:: The `trajectory` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but not all parameters have data for the requested timesteps.
 
 ====
 
@@ -35,7 +35,7 @@ statement:: The `trajectory` query requirement _MAY_ specify specify rules on ho
 ====
 [%metadata]
 identifier:: /per/core/trajectory-vertical-diff-query-definition
-statement:: The `trajectory` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but the not all parameters have data for the requested levels.
+statement:: The `trajectory` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but not all parameters have data for the requested levels.
 
 ====
 
@@ -43,6 +43,6 @@ statement:: The `trajectory` query requirement _MAY_ specify specify rules on ho
 ====
 [%metadata]
 identifier:: /per/core/trajectory-custom-dimension-diff-query-definition
-statement:: The `trajectory` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but the not all parameters have data for the requested dimension values.
+statement:: The `trajectory` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but not all parameters have data for the requested dimension values.
 
 ====

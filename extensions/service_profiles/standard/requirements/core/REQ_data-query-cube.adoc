@@ -26,7 +26,7 @@ statement:: The `cube` requirement _MAY_ specify which OGC API-EDR `cube` query 
 ====
 [%metadata]
 identifier:: /per/core/cube-timestep-diff-query-definition
-statement:: The `cube` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but the not all parameters have data for the requested timesteps.
+statement:: The `cube` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but not all parameters have data for the requested timesteps.
 
 ====
 
@@ -35,7 +35,7 @@ statement:: The `cube` query requirement _MAY_ specify specify rules on how the 
 ====
 [%metadata]
 identifier:: /per/core/cube-vertical-diff-query-definition
-statement:: The `cube` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but the not all parameters have data for the requested levels.
+statement:: The `cube` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but not all parameters have data for the requested levels.
 
 ====
 
@@ -43,6 +43,6 @@ statement:: The `cube` query requirement _MAY_ specify specify rules on how the 
 ====
 [%metadata]
 identifier:: /per/core/cube-custom-dimension-diff-query-definition
-statement:: The `cube` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but the not all parameters have data for the requested dimension values.
+statement:: The `cube` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but not all parameters have data for the requested dimension values.
 
 ====

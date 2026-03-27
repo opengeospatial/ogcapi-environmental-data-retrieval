@@ -27,7 +27,7 @@ statement:: The `position` query requirement _MAY_ specify which OGC API-EDR `po
 ====
 [%metadata]
 identifier:: /per/core/position-timestep-diff-query-definition
-statement:: The `position` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but the not all parameters have data for the requested timesteps.
+statement:: The `position` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but not all parameters have data for the requested timesteps.
 
 ====
 
@@ -36,7 +36,7 @@ statement:: The `position` query requirement _MAY_ specify specify rules on how 
 ====
 [%metadata]
 identifier:: /per/core/position-vertical-diff-query-definition
-statement:: The `position` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but the not all parameters have data for the requested levels.
+statement:: The `position` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but not all parameters have data for the requested levels.
 
 ====
 
@@ -44,7 +44,7 @@ statement:: The `position` query requirement _MAY_ specify specify rules on how 
 ====
 [%metadata]
 identifier:: /per/core/position-custom-dimension-diff-query-definition
-statement:: The `position` query requirement _MAY_ specify specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but the not all parameters have data for the requested dimension values.
+statement:: The `position` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but not all parameters have data for the requested dimension values.
 
 ====
 
@@ -52,6 +52,6 @@ statement:: The `position` query requirement _MAY_ specify specify rules on how 
 ====
 [%metadata]
 identifier:: /per/core/position-choice-query-definition
-statement:: The `position` query requirement _MAY_ specify specify rules on how the service should identify the most appropriate value for the requested position if there is no exact match (i.e. nearest, most representative, interpolated or none).
+statement:: The `position` query requirement _MAY_ specify rules on how the service should identify the most appropriate value for the requested position if there is no exact match (i.e. nearest, most representative, interpolated or none).
 
 ====
