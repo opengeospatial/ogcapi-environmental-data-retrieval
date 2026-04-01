@@ -1,10 +1,18 @@
 [[req_core_root]]
 
+[permission]
+====
+[%metadata]
+identifier:: /per/core/multiple-collection-definition
+statement:: A Profile MAY impose requirements on the complete OGC API service implementation or on a defined subset of the functionality it provides.
+
+====
+
 [requirement]
 ====
 [%metadata]
 identifier:: /req/core/root
-statement:: The OGC API-EDR Landing Page schema only requires the `links` property. However, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require the following additional properties and content:
+statement:: While the OGC API-EDR Landing Page schema requires only the links property, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHALL_ require the following additional properties and content:
 
 part:: The `title` property _SHALL_ be required and populated
 
@@ -18,7 +26,7 @@ part:: Each `link` defined in the `links` property _SHALL_ be populated with hre
 ====
 [%metadata]
 identifier:: /rec/core/root
-statement:: The OGC API-EDR Landing Page schema only requires the `links` property, however, a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _SHOULD_ require the following additional properties:
+statement:: While the OGC API-EDR Landing Page schema requires only the links property, a Profile of the <<ogc-edr,OGC API – Environmental Data Retrieval Standard>> _SHOULD_ mandate the following additional properties.
 
 part:: The `description` property _SHOULD_ be required
 
@@ -97,7 +105,7 @@ statement:: A `contact` property _MAY_ be populated with the `name` property.
 ====
 [%metadata]
 identifier:: /per/core/contact-url-definition
-statement::A `contact` property _MAY_ be populated with the `url` property.
+statement:: A `contact` property _MAY_ be populated with the `url` property.
 
 ====
 

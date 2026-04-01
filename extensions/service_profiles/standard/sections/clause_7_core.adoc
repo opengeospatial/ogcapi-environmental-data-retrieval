@@ -55,8 +55,7 @@ The landing page provides links that support exploration of the resources offere
 
 The normative JSON Schema for an EDR Landing Page is defined in the https://schemas.opengis.net/ogcapi/edr/1.2/openapi/schemas/core/landingPage.yaml[LandingPage.yaml] document. While this schema provides a rich body of information about the API, only the Links property is required. 
 
-Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The additional content that Profiles should mandate is defined in the following requirements.
-
+Profiles of the <<ogc-edr,OGC API – Environmental Data Retrieval Standard>> are expected to provide a richer description of the API. The requirements below define additional content rules that Profiles can mandate.
 include::../requirements/core/REQ_root.adoc[]
 
 ==== API Definition 
@@ -70,7 +69,7 @@ Dependencies
 
 Every OGC API is required to provide a definition document that describes the capabilities of that API. This definition document can be used by developers to understand the API, by software clients to connect to the server, or by development tools to support the implementation of servers and clients. The API Definition resource is initially defined in the Core conformance class of the <<OGC19-072,OGC API — Common - Part 1>> Standard. The <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> does not make any changes to that definition.
 
-Service profiles of the <<ogc-edr, OGC API – Environmental Data Retrieval>> standard must provide an OpenAPI 3.1 document when the profile includes requirements that can be expressed using the OpenAPI specification. This service profile document is a subset of the API definition produced by the OGC API‑EDR implementation and reflects the additional requirements specified by the profile.
+Each service profiles of the <<ogc-edr, OGC API – Environmental Data Retrieval>> standard must provide an OpenAPI 3.1 document when the profile includes requirements that can be expressed using the OpenAPI specification. A service profile document is a subset of the API definition produced by the OGC API-EDR implementation and reflects the additional requirements specified by the profile.
 
 NOTE: At this time only OpenAPI 3.0 and OpenAPI 3.1 documents are supported by OGC Web API Standards.
 
@@ -192,7 +191,7 @@ include::../requirements/core/REQ_output-format.adoc[]
 
 The Position query returns data for the requested coordinate. Logic for identifying the best match for the coordinate will depend on the `Collection` and is at the discretion of the query service implementer. 
 
-Path = {root}/collections/{collectionId}/positions 
+Path = {root}/collections/{collectionId}/position
 
 Dependencies: <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
 
@@ -318,6 +317,8 @@ While Web protocols typically use request-response operations, there is also sup
 HTTP Asynchronous - This requirement address the use of HTTP asynchronous operations such as Webhooks and Callbacks.
 
 include::../requirements/core/REQ_asynchronous.adoc[]
+
+==== EDR Part 2 Publish Subscribe Workflows
 
 Publish-Subscribe - This requirement addresses the use of Publish-Subscribe protocols. These are protocols supported in addition to HTTP.
 

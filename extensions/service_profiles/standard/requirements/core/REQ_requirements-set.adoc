@@ -18,21 +18,6 @@ part:: The service profile SHALL consist of a set of requirements for a `Collect
 ====
 
 
-[permission]
-====
-[%metadata]
-identifier:: /per/core/landing-page-definition
-statement:: A profile MAY include requirements for the landing page.
-
-====
-
-[permission]
-====
-[%metadata]
-identifier:: /per/core/multiple-collection-definition
-statement:: A profile MAY include requirements for multiple collections.
-
-====
 
 [permission]
 ====
