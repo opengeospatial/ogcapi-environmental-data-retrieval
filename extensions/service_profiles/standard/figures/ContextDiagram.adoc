@@ -1,0 +1,13 @@
+== Service Profiles - Context - A Graphical View
+```mermaid
+flowchart LR
+A[OGC API-EDR Profile Implementation] -->|conforms to| B[OGC API-EDR Profile]
+D[OGC API-EDR Implementation] -->|conforms to| E[OGC API-EDR Standard]
+A -->|customizes| D
+A -->|conforms to| E
+B -->|conforms to| C[OGC API-EDR Part 3]
+B -->|restricts and extends| E
+E -->|conforms to| F[ModSpec]
+B -->|conforms to| F
+C -->|conforms to| F
+```
