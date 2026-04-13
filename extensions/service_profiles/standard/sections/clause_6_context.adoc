@@ -13,14 +13,14 @@ A significant risk to this approach is that, in the act of profiling, interopera
 
 === Standardization Target Type
 
-The <<standardization_target_type-definition,Standardization Target Type>> for this Standard is the set of standards and specifications which profile the OGC API - Environmental Data Retrieval Standard.  
+The <<standardization_target_type-definition,Standardization Target Type>> for this Standard is the Service Profile definition. This Standard establishes the requirements for creating, documenting, and validating these profiles.
 
-It is important to understand that:
+It is important to understand the following distinctions:
 
-* This Standard is a standard for writing standards. It does not address the EDR API implementation.
-* This Standard is a profile of the <<ogc-modspec,OGC ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards>> (ModSpec).
-* Implementations of this Standard are Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>>
-* The profiling model used is defined in <<iso19106,ISO 19106:2004 Geographic information - Profiles>>
+* A Standard for Standards: This document provides the rules for writing profile specifications; it does not define the requirements for the EDR API software implementation itself.
+* ModSpec Alignment: This Standard is a profile of <<ogc-modspec,OGC ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards>> (ModSpec), ensuring that all resulting Service Profiles follow a consistent modular structure.
+* Implementation: An "implementation" of this Standard is a completed Service Profile document (e.g., a MetOcean EDR Profile).
+* Foundational Model: The profiling methodology is based on <<iso19106,ISO 19106:2004 Geographic information - Profiles>>.
  
 
 

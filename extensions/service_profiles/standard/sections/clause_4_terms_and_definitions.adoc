@@ -10,12 +10,18 @@ Body of resources that belong or are used together. An aggregate, set, or group 
 [.source]
 <<OGC20-024,OGC 20-024>>
 
+[[profile-definition]]
 === Profile
 
-An implementation case of a more general standard or set of standards. 
+A named set of requirements and constraints that specialize one or more base standards for a specific community or domain of use.
 
 [.source]
-<<https://defs.opengis.net/prez/catalogs/ogc-cat:register/col/ogc:glossary/it1/term:Profile,OGC Rainbow>>
+<<iso19106,ISO 19106:2004 Geographic information - Profiles>>
+
+[[service-profile-definition]]
+=== Service Profile
+
+A Profile of the OGC API – Environmental Data Retrieval (EDR) Part 1: Core Standard that defines a constrained and well-specified set of requirements for a specific domain or community of use.
 
 [[conformance_module-definition]]
 === Conformance Module; Conformance Test Module
