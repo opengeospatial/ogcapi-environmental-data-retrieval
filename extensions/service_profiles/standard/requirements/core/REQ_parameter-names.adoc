@@ -4,91 +4,58 @@
 ====
 [%metadata]
 identifier:: /req/core/parameter-names
-statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ the allowed values and definitions of `parameter_names`, then,
-part:: Requirements _SHALL_ be defined which specify the `parameter_names` and their definitions.
-part:: The `parameter_names` requirement definitions _SHALL_ specify the required `parameter_names` objects in full including:
-* name, 
-* unit,
-* data type and
-* measurement duration 
+statement:: If a Service Profile restricts the allowed values or definitions of `parameter_names`, then:
+part:: The Service Profile _SHALL_ define requirements that explicitly list the permitted `parameter_names`.
+part:: Each parameter definition _SHALL_ include the following properties as defined in the OGC API-EDR Part 1 schema: `name` (the key within the `parameter_names` object), `unit`, `observedProperty`, and `measurementType` (including `method` and `duration` where applicable).
 
+====
 
-for example:
-
+.Example of a constrained parameter_names definition in a Service Profile
 [source,JSON]
 ----
-
 "parameter_names": {
-    "prmsl": {
-        "type": "Parameter",
-        "description": "Air pressure at sea level",
-        "unit": {
-            "label": "Pascals",
-            "symbol": {
-                "value": "Pa",
-                "type": "https://qudt.org/vocab/unit/PA"
-            }
-        },
-        "observedProperty": {
-            "id": "http://codes.wmo.int/grib2/codeflag/4.2/_0-3-1",
-            "label": "MSL Pressure"
-        }
+  "t2m": {
+    "type": "Parameter",
+    "description": "Air temperature at 2m",
+    "unit": {
+      "label": "Kelvin",
+      "symbol": { 
+        "value": "K", 
+        "type": "https://qudt.org/vocab/unit/K" 
+      }
     },
-    "t2m": {
-        "type": "Parameter",
-        "description": "Air temperature at 2m",
-        "unit": {
-        "label": "Kelvin",
-        "symbol": {
-            "value": "K",
-            "type": "https://qudt.org/vocab/unit/K"
-        }
-        },
-        "observedProperty": {
-        "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0",
-        "label": "Air temperature at 2m"
-        }
-    },
-    "dd": {
-        "type": "Parameter",
-        "description": "Wind Direction",
-        "unit": {
-            "label": "degree true",
-            "symbol": {
-                "value": "°",
-                "type": "https://qudt.org/vocab/unit/DEG"
-            }
-        },
-        "observedProperty": {
-            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-0",
-            "label": "Wind Direction"
-        },
-        "measurementType": {
-            "method": "mean",
-            "duration": "-PT10M"
-        }
-    },
-    "ff": {
-        "type": "Parameter",
-        "description": "10m Wind Speed",
-        "unit": {
-            "label": "m/s",
-            "symbol": {
-              "value": "ms-1",
-              "type": "https://qudt.org/vocab/unit/M/s"
-            }
-        },
-        "observedProperty": {
-            "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-1",
-            "label": "10m Wind Speed"
-        },
-        "measurementType": {
-            "method": "mean",
-            "duration": "-PT10M"
-        }
+    "observedProperty": {
+      "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-0-0",
+      "label": "Air temperature at 2m"
     }
+  },
+  "ff": {
+    "type": "Parameter",
+    "description": "10m Wind Speed",
+    "unit": {
+      "label": "m/s",
+      "symbol": { 
+        "value": "ms-1", 
+        "type": "https://qudt.org/vocab/unit/M/s" 
+      }
+    },
+    "observedProperty": {
+      "id": "http://codes.wmo.int/grib2/codeflag/4.2/0-2-1",
+      "label": "10m Wind Speed"
+    },
+    "measurementType": {
+      "method": "mean",
+      "duration": "-PT10M"
+    }
+  }
 }
-
 ----
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/parameter-names-schema
+statement:: An OGC API EDR implementation MAY apply schema constraints to the parameter_names objects without explicity enumerating the parameters. Explicit enumeration of parameters is only required when a service profile mandates the presence of specific named parameters.
 
 ====

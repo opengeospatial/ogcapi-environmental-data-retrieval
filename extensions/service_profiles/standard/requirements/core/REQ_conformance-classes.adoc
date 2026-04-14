@@ -1,0 +1,10 @@
+[[req_core_conformance]]
+
+
+[requirement]
+====
+[%metadata]
+identifier:: /req/core/conformance-classes
+statement:: An OGC API-EDR implementation SHALL advertise, in its list of conformance classes all service profiles that it supports. 
+
+====
