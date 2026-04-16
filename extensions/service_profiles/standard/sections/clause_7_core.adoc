@@ -23,6 +23,10 @@ A Profile must be interoperable with other OGC API-EDR data providers. Any valid
 * Custom query elements defined by a Service Profile _SHALL_ be optional, not mandatory, for data queries. 
 * It is valid for a profile to prohibit the production and population of OGC API-EDR optional elements by data providers within the profile's domain.
 
+A resource constrained by a Service Profile SHOULD include a link with a link relation type of `profile` that references the Service Profile defining the rules implemented by the response.
+
+NOTE: Resources defined by Service Profiles can include /root, /collections, and /instances.
+
 === Platform Resources
 
 OGC API - Common Standard defines a set of common capabilities which are applicable to any OGC Web API Standard and implementation instance. Those capabilities provide the platform upon which resource-specific APIs can be built. This section describes those capabilities and any modifications needed to better support spatio-temporal data resources.
