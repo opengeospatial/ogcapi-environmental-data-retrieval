@@ -16,13 +16,16 @@ include::../requirements/core/REQ_EDR-conformant.adoc[]
 
 Profiles often focus on restricting the values of Path parameters. A Profile should clearly specify the requirements for these restrictions
 
-include::../requirements/core/REQ_parameter-names.adoc[]
 
 A Profile must be interoperable with other OGC API-EDR data providers. Any valid OGC API-EDR document should be valid under the profile. That means:
 
 * If a data element is valid for OGC API-EDR, then it should not be prohibited under the profile
 * Custom query elements defined by a Service Profile _SHALL_ be optional, not mandatory, for data queries. 
 * It is valid for a profile to prohibit the production and population of OGC API-EDR optional elements by data providers within the profile's domain.
+
+A resource constrained by a Service Profile SHOULD include a link with a link relation type of `profile` that references the Service Profile defining the rules implemented by the response.
+
+NOTE: Resources defined by Service Profiles can include /root, /collections, and /instances.
 
 === Platform Resources
 
@@ -86,6 +89,10 @@ To support “generic” clients that want to access implementations of multiple
 
 Profiles of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> have additional requirements governing which Conformance Classes and identifiers must be included in this resource.
 
+include::../requirements/core/REQ_conformance-classes.adoc[]
+
+==== OpenAPI version support
+
 include::../requirements/core/REQ_api.adoc[]
 
 NOTE: OpenAPI 3.0 and OpenAPI 3.1 are two distinct Conformance Classes in the OGC API-EDR Standard. This requirement can be addressed in a Profile by including the appropriate conformance classes at {root}/conformance. 
@@ -147,6 +154,10 @@ include::../requirements/core/REQ_collectionid.adoc[]
 The `Collection` metadata includes an Extent property which defines a spatio-temporal envelope that encompasses the geospatial data in the `Collection`.
 
 include::../requirements/core/REQ_extent.adoc[]
+
+===== Parameter metadata
+
+include::../requirements/core/REQ_parameter-names.adoc[]
 
 === Query Resources
 

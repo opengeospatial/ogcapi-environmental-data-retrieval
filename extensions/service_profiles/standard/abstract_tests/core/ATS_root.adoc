@@ -6,6 +6,7 @@ identifier:: /conf/core/root
 target:: /req/core/root
 test-purpose:: Validate that the service profile defines the service landing page
 test-method:: 
+step:: Verify that the links section includes a link to its service profile definition.
 step:: Verify that the service profile defines a `Title` for the service
 step:: Verify that the service profile defines the `Links` required for the service
 step:: Verify that each link defined for the service has a `href` and `rel` attribute.

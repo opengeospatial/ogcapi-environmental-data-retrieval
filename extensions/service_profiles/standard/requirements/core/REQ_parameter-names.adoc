@@ -50,3 +50,12 @@ part:: Each parameter definition _SHALL_ include the following properties as def
   }
 }
 ----
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/parameter-names-schema
+statement:: An OGC API EDR implementation MAY apply schema constraints to the parameter_names objects without explicity enumerating the parameters. Explicit enumeration of parameters is only required when a service profile mandates the presence of specific named parameters.
+
+====

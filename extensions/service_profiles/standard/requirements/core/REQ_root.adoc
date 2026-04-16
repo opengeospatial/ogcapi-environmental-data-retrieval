@@ -8,6 +8,20 @@ statement:: A Profile MAY impose requirements on the complete OGC API service im
 
 ====
 
+
+[requirement]
+====
+[%metadata]
+identifier:: /rec/core/root-service-profile
+statement:: 
+
+part:: The root SHALL clearly indicate when service profile defines rules that apply to its contents.
+
+part:: The root SHOULD provide a link to its service profile definition with a link relation type of `profile`.
+
+====
+
+
 [requirement]
 ====
 [%metadata]

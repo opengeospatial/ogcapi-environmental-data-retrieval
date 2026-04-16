@@ -10,6 +10,8 @@ include::../abstract_tests/core/ATS_modspec.adoc[]
 
 include::../abstract_tests/core/ATS_publishing.adoc[]
 
+include::../abstract_tests/core/ATS_conformance-classes.adoc[]
+
 include::../abstract_tests/core/ATS_api.adoc[]
 
 include::../abstract_tests/core/ATS_edr-conformant.adoc[]

@@ -1,0 +1,12 @@
+[[ats_conformance-classes]]
+[abstract_test]
+====
+[%metadata]
+identifier:: /conf/core/conformance-classes
+target:: /req/core/conformance-classes
+test-purpose:: Validate that all conformance classes are advertised
+test-method:: 
+step:: Verify that any service profile advertised in the links section of the root or collection endpoints is included in the response from the /conformance endpoint.
+
+
+====
