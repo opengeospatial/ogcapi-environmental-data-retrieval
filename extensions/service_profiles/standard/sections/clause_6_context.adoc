@@ -23,4 +23,5 @@ It is important to understand the following distinctions:
 * Foundational Model: The profiling methodology is based on <<iso19106,ISO 19106:2004 Geographic information - Profiles>>.
 
 === Service Profiles - Context - A Graphical View
-include::../figures/ContextDiagram.svg[]
+
+image::figures/ContextDiagram.svg[Static]
