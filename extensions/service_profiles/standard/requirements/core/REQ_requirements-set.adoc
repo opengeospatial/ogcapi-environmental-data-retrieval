@@ -1,6 +1,7 @@
 [[req_core_requirements-set]]
 
-NOTE: A service may consist of multiple `Collections`. While there may be common rules for all `Collections`, a profile should be able to support different rules depending on the `Collection`.
+NOTE: A Service profile can apply to multiple `Collections` and an OGC API EDR implementation can support multiple `Service Profiles`.
+
 
 [requirement]
 ====
@@ -8,26 +9,21 @@ NOTE: A service may consist of multiple `Collections`. While there may be common
 identifier:: /req/core/requirements-set
 statement:: 
 
-part:: The profile SHALL clearly define which collection a requirement applies to.
+part:: The collection SHALL clearly identify the service profile that applies.
 
-part:: The profile SHALL consist of a set of requirements for a `Collection` and (if the `Collection` supports `Instances`) the `Instances` of the `Collection`. For each of the attributes listed, if it is in the `Collection` (or instance), there SHALL be a requirement to define it.
+part:: The collection SHOULD provide a link to the service profile definition with a link relation type of `profile`.
+
+part:: The service profile SHALL consist of a set of requirements for a `Collection` and (if the `Collection` supports `Instances`) the `Instances` of the `Collection`. For each of the attributes listed, if it is in the `Collection` (or instance), there SHALL be a requirement to define it.
 
 ====
+
 
 
 [permission]
 ====
 [%metadata]
-identifier:: /per/core/landing-page-definition
-statement:: A profile MAY include requirements for the landing page.
-
-====
-
-[permission]
-====
-[%metadata]
-identifier:: /per/core/multiple-collection-definition
-statement::A profile MAY include requirements for multiple collections.
+identifier:: /per/core/multiple-service-profile-definition
+statement:: An OGC API EDR implementation MAY include multiple service profiles.
 
 ====
 

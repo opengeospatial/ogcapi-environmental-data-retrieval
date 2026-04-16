@@ -4,8 +4,8 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-position
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `position` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `position` query.
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `position` query mandatory, then:
+part:: The Service Profile _SHALL_ include a requirement mandating the `position` query.
 part:: The `Position` query requirement _SHALL_ specify the following:
 * Enumerated list of `output_format` types
 * The `default_output_format`
@@ -20,5 +20,38 @@ part:: The `position` query requirement _SHALL_ also specify the logic used in s
 [%metadata]
 identifier:: /per/core/position-mandatory-query-definition
 statement:: The `position` query requirement _MAY_ specify which OGC API-EDR `position` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/position-timestep-diff-query-definition
+statement:: The `position` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but not all parameters have data for the requested timesteps.
+
+====
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/position-vertical-diff-query-definition
+statement:: The `position` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but not all parameters have data for the requested levels.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/position-custom-dimension-diff-query-definition
+statement:: The `position` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but not all parameters have data for the requested dimension values.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/position-choice-query-definition
+statement:: The `position` query requirement _MAY_ specify rules on how the service should identify the most appropriate value for the requested position if there is no exact match (i.e. nearest, most representative, interpolated or none).
 
 ====

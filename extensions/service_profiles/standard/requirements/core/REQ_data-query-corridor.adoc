@@ -4,8 +4,8 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-corridor
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `corridor` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `corridor` query.
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `corridor` query mandatory, then:
+part:: The Service Profile _SHALL_ include a requirement mandating the `corridor` query.
 part:: The `corridor` requirement _SHALL_ specify the following:
 * Enumerated list of `output_format` types
 * The `default_output_format`
@@ -21,5 +21,54 @@ part:: The `corridor` requirement _SHALL_ specify the following:
 [%metadata]
 identifier:: /per/core/corridor-mandatory-query-definition
 statement:: The `corridor` requirement _MAY_ specify which OGC API-EDR `corridor` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-timestep-diff-query-definition
+statement:: The `corridor` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but not all parameters have data for the requested timesteps.
+
+====
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-vertical-diff-query-definition
+statement:: The `corridor` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but not all parameters have data for the requested levels.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-resolution-x
+statement:: The `corridor` query requirement _MAY_ specify rules that constrain the valid range of resolution-x values.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-resolution-y
+statement:: The `corridor` query requirement _MAY_ specify rules that constrain the valid range of resolution-y values.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-resolution-z
+statement:: The `corridor` query requirement _MAY_ specify rules that constrain the valid range of resolution-z values.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/corridor-custom-dimension-diff-query-definition
+statement:: The `corridor` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but not all parameters have data for the requested dimension values.
 
 ====

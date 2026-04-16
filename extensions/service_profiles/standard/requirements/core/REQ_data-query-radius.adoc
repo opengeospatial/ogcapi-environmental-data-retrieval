@@ -4,8 +4,8 @@
 ====
 [%metadata]
 identifier:: /req/core/data-query-radius
-statement:: If a Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Radius` query mandatory, then:
-part:: The Profile _SHALL_ include a requirement mandating the `Radius` query.
+statement:: If a Service Profile of the <<ogc-edr,OGC API - Environmental Data Retrieval Standard>> _restricts_ data queries by making the `Radius` query mandatory, then:
+part:: The Service Profile _SHALL_ include a requirement mandating the `Radius` query.
 part:: The `radius` query requirement _SHALL_ specify the following:
 * Enumerated list of `output_format` types
 * The `default_output_format`
@@ -20,5 +20,30 @@ part:: The `radius` query requirement _SHALL_ specify the following:
 [%metadata]
 identifier:: /per/core/radius-mandatory-query-definition
 statement:: The `radius` query requirement _MAY_ specify which OGC API-EDR `radius` query parameters are mandatory for compliance with the profile.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/radius-timestep-diff-query-definition
+statement:: The `radius` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple timesteps, but not all parameters have data for the requested timesteps.
+
+====
+
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/radius-vertical-diff-query-definition
+statement:: The `radius` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for multiple vertical levels, but not all parameters have data for the requested levels.
+
+====
+
+[permission]
+====
+[%metadata]
+identifier:: /per/core/radius-custom-dimension-diff-query-definition
+statement:: The `radius` query requirement _MAY_ specify rules on how the service should respond if a query is made for several parameters for a custom dimension value range, but not all parameters have data for the requested dimension values.
 
 ====
