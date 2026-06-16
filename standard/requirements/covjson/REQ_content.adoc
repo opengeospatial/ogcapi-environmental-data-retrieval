@@ -7,7 +7,7 @@ identifier:: /req/covjson/content
 
 *A:* 
 
-Every `200`-response with the media type `application/prs.coverage+json` SHALL be
+Every `200`-response with the media type `application/vnd.cov+json` SHALL be
 
 
 
@@ -19,6 +19,6 @@ Every `200`-response with the media type `application/prs.coverage+json` SHALL b
 
 *B:* 
 
-The schema of all responses with the media type `application/prs.coverage+json` SHALL conform with the JSON Schema specified for the resource in the <<rc_core,Core>> requirements class.
+The schema of all responses with the media type `application/vnd.cov+json` SHALL conform with the JSON Schema specified for the resource in the <<rc_core,Core>> requirements class.
 
 ====

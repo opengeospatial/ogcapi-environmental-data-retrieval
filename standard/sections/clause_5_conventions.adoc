@@ -58,7 +58,7 @@ NOTE: The query patterns of the EDR API use the link relation *data*. It is envi
 
 JSON media types that would typically be used in an OGC API that supports JSON are:
 
-* `application/prs.coverage+json` for resources that include coverage content encoded according to CoverageJSON
+* `application/vnd.cov+json` for resources that include coverage content encoded according to CoverageJSON
 * `application/geo+json` for feature <<collection-definition,collections>> and features
 * `application/json` for all other resource representations, as well as coverage content encoded according to the http://docs.opengeospatial.org/is/09-146r8/09-146r8.html[Coverage Implementation Schema (CIS)]
 
