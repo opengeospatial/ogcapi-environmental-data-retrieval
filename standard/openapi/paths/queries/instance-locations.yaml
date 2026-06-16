@@ -4,7 +4,7 @@ get:
     - Instance data queries
   summary: List available location identifers for the instance
   description: List the locations available for the instance of the collection
-  operationId: ListDataInstanceLocations
+  operationId: GetListDataInstanceLocations
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml
@@ -30,7 +30,7 @@ post:
     - Instance data queries
   summary: List available location identifers for the instance
   description: List the locations available for the instance of the collection
-  operationId: ListDataInstanceLocations
+  operationId: PostListDataInstanceLocations
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml    
