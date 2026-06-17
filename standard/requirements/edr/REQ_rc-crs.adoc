@@ -5,7 +5,7 @@
 
 *A:*
 
-A crs object MUST have a unique (to the collection) `name` property, it MAY be an EPSG code.
+A crs object MUST have a unique (to the collection) `crs` property, it MAY be an EPSG code.
 
 ---
 *B:*
