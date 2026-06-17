@@ -7,7 +7,7 @@ get:
   operationId: GetDataForCube
   parameters:
     - $ref: ../../parameters/collectionId.yaml
-    - $ref: ../../parameters/bbox.yaml
+    - $ref: ../../parameters/cube-bbox.yaml
     - $ref: ../../parameters/cube-z.yaml
     - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/tags/Common2023/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/parameter-name.yaml
