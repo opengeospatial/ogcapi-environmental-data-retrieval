@@ -423,7 +423,7 @@ Parameter names example
         },
         "measurementType": {
         "method": "instantaneous",
-        "period": "PT0S"
+        "duration": "PT0S"
         }
     },
     "u-component_of_wind_altitude_above_msl": {
@@ -442,7 +442,7 @@ Parameter names example
         },
         "measurementType": {
             "method": "instantaneous",
-            "period": "PT0S"
+            "duration": "PT0S"
         }
     },
     "v-component_of_wind_altitude_above_msl": {
@@ -461,7 +461,7 @@ Parameter names example
         },
         "measurementType": {
             "method": "instantaneous",
-            "period": "PT0S"
+            "duration": "PT0S"
         }
     }
     }
