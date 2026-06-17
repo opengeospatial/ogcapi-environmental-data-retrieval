@@ -8,7 +8,7 @@ get:
   parameters:
     - $ref: ../../parameters/collectionId.yaml
     - $ref: ../../parameters/locationId.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/tags/Common2023/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/crs.yaml
     - $ref: ../../parameters/f.yaml
   responses:
