@@ -15,7 +15,7 @@ As with other OGC APIs that include a `/collections` end point, EDR supports dis
 1. An ensemble of forecast model data might be accessed for a specific location.
 1. Information from a hydrologic sensor might be found spatially or accessed by ID.
 
-EDR aims to specify the minimum yet sufficient diversity in metadata, query patterns, and response formats to enable this wide range of environmental data retrieval applications. Furthermore, any collections of data that have consistent spatio-temporal coordinates could be used.
+EDR aims to specify the minimum yet sufficient diversity in metadata, query patterns, and response formats to enable this wide range of environmental data retrieval applications. Furthermore, any collections of data that have consistent spatio-temporal coordinates could be used, not just environmental.
 
 ### EDR API Query Patterns
 The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. Each of these patterns is optional, but a compliant API should implement at least one of them.
@@ -45,7 +45,7 @@ There are also other variants of these query patterns to make the API easier and
 
 - **7 - Items** Retrieve a feature by identifier. The coordinates in the feature could be used to create an EDR query. The feature could also be a previously stored query. Compatible with OGC API - Features - Part 1: Core.
 
-- **8 - Instance** This allows discrimination between different versions of a collection. [Note: This may become part of API - Common as hierarchical collections.]
+- **8 - Instance** This allows discrimination between different versions of a collection. [Note: This may become part of API - Common Part 4 as hierarchical collections.]
 
 ### EDR API Vision
 
@@ -63,7 +63,7 @@ It is considered a 'convenience' API because:
 * It complements and provides synergy with other web based OGC APIs;
 * The query patterns allow users to get just the data that they need;
 * Users do not need to know the structure of the underlying data;
-* It is not constrained to a particular data structure susch as grids, point clouds, features, etc.;
+* It is not constrained to a particular data structure such as grids, point clouds, features, etc.;
 * It hides the complication of any underlying time structures because queries retrieve data for the time(s) that the user selects;
 * It is the responsibility of the publisher to simplify appropriately the output, making it convenient for the user to consume the data;
 * Implementations are constrained by the API definition, so all implementations will have the same URL structure.
@@ -90,9 +90,9 @@ Version 1.2 will be re-labelled as OGC API - Environmental Data Retrieval, Part 
 A Part 2: Publish-Subscribe Workflow has been developed and approved. It uses AsyncAPI as well as OpenAPI to support an asynchronous "publish and subscribe" model for data and notifications. The intent is that will also be applicable to, and usable by, other OGC APIs:
 * [OGC API-Environmental Data Retrieval Standard, Part 2: Publish-Subscribe](https://docs.ogc.org/is/23-057r1/23-057r1.html).
 
-### Service Profile Support
+### Service Profiles
 
-A Part 3: Service Profile Support is being developed and a draft is nearly ready for Public Comment. The OGC API-EDR Part 1: Core standard was designed to be flexible and straightforward to understand and implement for Web developers. As it is being widely implemented, various groups of users have identified the need to restrict some of the flexibility to improve interoperability between different implementations of both servers and clients within their domains of interest. A set of these stricter specifications for a specific domain of user is a Profile. The Part 3 will define how to specify a Profile of the OGC API-EDR Part 1: Core Standard. It only defines restrictive profiles and the restrictions are defined by using JSON Schema fragments, which can be formally tested.
+A Part 3: Service Profiles is being developed and a draft has been approved for Public Comment. The OGC API-EDR Part 1: Core standard was designed to be flexible and straightforward to understand and implement for Web developers. As it is being widely implemented, various groups of users have identified the need to restrict some of the flexibility to improve interoperability between different implementations of both servers and clients within their domains of interest. A set of these stricter specifications for a specific domain of user is a Profile. The Part 3 will define how to specify a Profile of the OGC API-EDR Part 1: Core Standard. It only defines restrictive profiles and the restrictions are defined by using JSON Schema fragments, which can be formally tested.
 
 The intent is that Part 3 will also be applicable to, and usable by, other OGC APIs:
 * DRAFT [OGC API-Environmental Data Retrieval Standard, Part 3: Service Profile Support](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/extensions/service_profiles/standard/25-014.adoc).
@@ -138,7 +138,7 @@ Longer term work is being recorded [here](https://github.com/opengeospatial/ogca
 The repository contains:
 
 - [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
-- [Standard documents, as a work-in-progress drafts](./standard_template/standard).
+- [Standard documents, as work-in-progress drafts](./standard_template/standard).
 
 The charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
 
@@ -156,7 +156,11 @@ The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was forma
 
 Version 1.1 has been approved and was published on 23 July 2023. 
 
-The Working Group is now developing a backwards-compatible V1.2 and future enhancements (Parts 2, 3, and perhaps 4).
+OGC API-EDR Part 2: Publish-Subscribe Workflow V1.0 was published on 23 Sept 2024.
+
+A backwards-compatible V1.2 has been approved and is awaiting publication.
+
+The EDR API Working Group is planning future enhancements such as Part 3: Service Profiles (approved for release for Public Comment) and Part 1: Core V1.3.
 
 ### Best Practice
 
