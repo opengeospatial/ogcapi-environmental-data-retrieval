@@ -8,7 +8,8 @@ We welcome pull requests to update this page to add or update an entry for a cli
 
 ## Native APIs / Libraries
 
-- [OWSLib](owslib.md)
+- [OWSLib](owslib.md) (Python)
+- [edr4r](https://github.com/ksonda/edr4r) (R)
 
 ## JavaScript APIs
 
