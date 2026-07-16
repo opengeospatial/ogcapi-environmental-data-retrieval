@@ -2,9 +2,13 @@
 
 #work-in-progress#
 
-This page lists software packages that implement approved or draft OGC API Features standards. Draft standards are only added once they have a tagged version. Currently the following parts are covered:
+This page lists software packages that implement approved or draft OGC API-EDR standards. Draft standards are only added once they have a tagged version. Currently the following parts are covered:
 
-* https://docs.ogc.org/DRAFTS/19-086.html[OGC API - Environmental Data Retrieval Standard 1.0]
+* https://docs.ogc.org/is/19-086r4/19-086r4.html[OGC API - Environmental Data Retrieval Standard V1.0]
+* https://docs.ogc.org/is/19-086r5/19-086r5.html[OGC API - Environmental Data Retrieval Standard V1.0.1 Corrigendum]
+* https://docs.ogc.org/is/19-086r6/19-086r6.html[OGC API - Environmental Data Retrieval Standard V1.1]
+* https://docs.ogc.org/DRAFTS/19-086r7.html[OGC API - Environmental Data Retrieval Standard V1.2]
+* https://docs.ogc.org/is/23-057r1/23-057r1.html[OGC API - Environmental Data Retrieval Standard Part 2: Publish-Subscibe Workflow V1.0]
 
 Two types of software packages are distinguished:
 
@@ -56,9 +60,6 @@ The columns for each part list the conformance classes of the standard that the 
 | Product | Conformance Classes | OGC Product Database | Contact email
 
 |  https://plugins.qgis.org/plugins/edr_plugin/[QGIS plugin] | `core`, `queries` | https://plugins.qgis.org/plugins/edr_plugin/[GitHub repo] | saber.razmjooei [at] lutraconsulting.co.uk
-| TBD
-| TBD
-| TBD
 
 |===
 
