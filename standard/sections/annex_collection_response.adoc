@@ -20,7 +20,7 @@ Collection objects describe both collections and instances of a collection.
 |description |String  |No| A text description of the information provided by the collection
 |keywords     |String Array  |No| Array of words and phrases that define the information that the collection provides
 |**extent**     |<<col-extent,extent>> object|**Yes**| Object describing the spatio-temporal extent of the information provided by the collection
-|data_queries  |<<col-data_queries,data_queries>> object|No| Object providing query specific information
+|data_queries  |<<col-data_queries,data_queries>> object|**Yes**| Object providing query specific information
 |crs     |String Array|No| Array of coordinate reference system names, which define the output coordinate systems supported by the collection
 |output_formats  |String Array|No| Array of data format names, which define the data formats to which information in the collection can be output
 |**parameter_names**  |<<col-parameter_names,parameter_names>> object|**Yes**| Describes the data values available in the collection
@@ -58,7 +58,7 @@ The variables object provides fields to describe information that only applies t
 |Field Name|Type|Required|Description
 |title  | String |No| A short text label for the query
 |description |String|No|  A description of the query
-|query_type  | String |No| One of: `position`, `radius`, `area`, `cube`, `trajectory`, `corridor`, `items`, `locations`, `instances`
+|query_type  | String |Yes| One of: `position`, `radius`, `area`, `cube`, `trajectory`, `corridor`, `items`, `locations`, `instances`
 |coords |String|No|  An example of valid `coords` query parameter values
 |within_units |String Array|No|  A list of the valid `within` units for radius queries
 |width_units |String Array|No|  A list of the valid `width` units
@@ -140,7 +140,7 @@ The spatial object describes the spatial area covered by the information availab
 .Spatial Object
 |==========================
 |Field Name|Type|Required|Description
-|**bbox**     |Number Array|**Yes** a| A bounding box is provided as four numbers:
+|**bbox**     |Array of Number Array|**Yes** a| A bounding box is provided as four numbers:
 
             * Lower left corner, coordinate axis 1
             * Lower left corner, coordinate axis 2
@@ -159,7 +159,7 @@ The temporal object describes the time period covered by the information availab
 |==========================
 |Field Name|Type|Required|Description
 |**interval**  | Array of ISO 8601 Date Array|**Yes**| An array of ISO 8601 Date Array, each ISO 8601 Date Array should contain two values first being the minimum date time and second the maximum date time for information in the collection (see https://en.wikipedia.org/wiki/ISO_8601)
-|**values**  | ISO 8601 Date Array|**Yes**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the array can either be a single time, an ISO 8601 time interval or an ISO 8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
+|**values**  | ISO 8601 Date Array|**No**| An array of ISO 8601 datestrings which details the time intervals available in the collection, each member of the array can either be a single time, an ISO 8601 time interval or an ISO 8601 time duration (see https://en.wikipedia.org/wiki/ISO_8601)
 |**trs**     |String|**Yes**| This defaults to Gregorian, but other temporal systems can be supported following the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
 
@@ -173,9 +173,33 @@ The vertical object describes the vertical extent of information available in th
 |==========================
 |Field Name|Type|Required|Description
 |**interval**  | String Array|**Yes**| Array of level values array, each Level value Array should contain two values first being the minimum vertical level and second the maximum vertical level for information in the collection
-|**values**  | String Array|**Yes**| Array of height values supported by the collection.
+|**values**  | String Array|**No**| Array of height values supported by the collection.
 |**vrs**     |String|**Yes**|  Follows the conventions defined by the http://docs.opengeospatial.org/is/18-010r7/18-010r7.html[Well Known Text] standard.
 |==========================
+
+[[col-custom]]
+=== Custom Object
+Each custom object describes the extent of the custom dimension for the collection.
+
+[width="100%",cols="22%,22%,14%,42%",frame="topbot",options="header"]
+.Custom Object
+|==========================
+|Field Name|Type|Required|Description
+|**id**     |String|**Yes**|  Name of the custom dimension.
+|**interval**  | String Array|**Yes**| Array of data values arrays, each value in the values array should contain two values, the first being the minimum value of the custom dimension and second the maximum value for the custom dimension for information in the collection
+|**values**  | String Array|**No**| Array of data values for the custom dimension supported by the collection .
+|**reference**     |String|**Yes**|  A uri which links to a definition or description of the custom dimension.
+|==========================
+
+
+
+*Repeating intervals*
+
+In the Vertical and Custom dimension objects values can be defined as repeating intervals. They are formed by adding *"R[n]/"* to the beginning of an interval expression, where *R* is used as the letter itself and *[n]* is replaced by the number of repetitions. Leaving out the value for *[n]* or specifying a value of *-1*, means an unbounded number of repetitions. A value of *0* for *[n]* means the interval is not repeated.
+
+``Rn/<start value>/<interval>``
+
+For example ``"R4/100/5"``  would be values start at *100* and increment by *5*, *4 times* which equates to ``[100,105,110,115,120]``.
 
 A simple extent object example for collection with no vertical or temporal dimensions is shown below.
 
@@ -230,7 +254,22 @@ Below is a more complex extent object example for a collection with vertical and
                 AUTHORITY['EPSG','5100']],
                 UNIT['metre',1,AUTHORITY['EPSG','9001']],
                 AXIS['Up',UP],AUTHORITY['EPSG','5714']]"
-    }
+        },
+    "custom": [
+        {
+            "id": "percentile",
+            "interval": [
+                [
+                    0,
+                    100
+                ]
+            ],
+            "values": [
+                "R20/0/5"
+            ],
+            "reference": "https://en.wikipedia.org/wiki/Percentile"
+        }
+    ] 
 }
 ----
 
@@ -249,8 +288,8 @@ The data queries object provides the extra metadata required for the queries sup
 |cube  |<<col-edr_query,EDRQuery>> object|No| Cube query metadata
 |trajectory  |<<col-edr_query,EDRQuery>> object|No| Trajectory query metadata
 |corridor  |<<col-edr_query,EDRQuery>> object|No| Corridor query metadata
-|item  |<<col-edr_query,EDRQuery>> object|No| Item query metadata
-|location  |<<col-edr_query,EDRQuery>> object|No| Location query metadata
+|items  |<<col-edr_query,EDRQuery>> object|No| Item query metadata
+|locations  |<<col-edr_query,EDRQuery>> object|No| Location query metadata
 |==========================
 
 
@@ -263,7 +302,7 @@ The EDR query object provides the metadata for the specified query type.
 .EDR Query Object
 |==========================
 |Field Name|Type|Required|Description
-|**link**  | <<col-links,Link>> object|**Yes**| Array of height values supported by the collection.
+|**link**  | <<col-links,Link>> object|**Yes**| Link to the data query.
 |==========================
 
 A data query object example for a collection that supports Position and Radius queries is shown below.
@@ -368,9 +407,11 @@ The unit object provides the information to describe the units of measure of the
 .Unit Object
 |==========================
 |Field Name|Type|Required|Description
-|**label**  | String|**Yes**| Name of the unit
-|**symbol**  | <<col-symbol,symbol>> object|**Yes**| Information to describe the symbols used to represent the unit
+|**label**  | String|**No^1**| Name of the unit
+|**symbol**  | <<col-symbol,symbol>> object|**No^1**| Information to describe the symbols used to represent the unit
 |==========================
+
+^1^ Either one of label or symbol or both attributes SHALL be present in a unit object
 
 [[col-symbol]]
 === Symbol Object
@@ -423,7 +464,7 @@ A Parameter names example is shown below.
 [source,json]
 ----
 
-"parameter_names": {
+{"parameter_names": {
     "Temperature_altitude_above_msl": {
         "type": "Parameter",
         "description": "Temperature for Specific altitude above MSL",
@@ -440,7 +481,7 @@ A Parameter names example is shown below.
         },
         "measurementType": {
         "method": "instantaneous",
-        "period": "PT0S"
+        "duration": "PT0S"
         }
     },
     "u-component_of_wind_altitude_above_msl": {
@@ -459,7 +500,7 @@ A Parameter names example is shown below.
         },
         "measurementType": {
             "method": "instantaneous",
-            "period": "PT0S"
+            "duration": "PT0S"
         }
     },
     "v-component_of_wind_altitude_above_msl": {
@@ -478,7 +519,7 @@ A Parameter names example is shown below.
         },
         "measurementType": {
             "method": "instantaneous",
-            "period": "PT0S"
+            "duration": "PT0S"
         }
     }
     }

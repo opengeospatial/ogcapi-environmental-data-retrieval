@@ -4,12 +4,12 @@ get:
     - Instance data queries
   summary: List available location identifers for the instance
   description: List the locations available for the instance of the collection
-  operationId: ListDataInstanceLocations
+  operationId: GetListDataInstanceLocations
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml
     - $ref: ../../parameters/core/bbox.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/tags/Common2023/collections/openapi/parameters/datetime.yaml
   responses:
     200:
       $ref: ../../responses/queries/items.yaml
@@ -30,7 +30,7 @@ post:
     - Instance data queries
   summary: List available location identifers for the instance
   description: List the locations available for the instance of the collection
-  operationId: ListDataInstanceLocations
+  operationId: PostListDataInstanceLocations
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml    

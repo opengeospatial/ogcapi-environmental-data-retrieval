@@ -22,7 +22,7 @@ description: |-
   If a feature has multiple spatial geometry properties, it is the decision of the
   server whether only a single spatial geometry property is used to determine
   the extent or all relevant geometries.
-required: false
+required: true
 schema:
   oneOf:
     - items:

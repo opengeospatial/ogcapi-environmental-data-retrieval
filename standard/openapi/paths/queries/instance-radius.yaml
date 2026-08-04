@@ -4,13 +4,13 @@ get:
     - Instance data queries
   summary: 'Query end point to return data within defined radius of a point for an instance {instanceId} of collection {collectionId}'
   description: Query end point to return all data within a defined radius of the defined point location queries
-  operationId: PostInstanceDataForRadius
+  operationId: GetInstanceDataForRadius
   parameters:
     - $ref: ../../parameters/collections/collectionId.yaml
     - $ref: ../../parameters/queries/instanceId.yaml
     - $ref: ../../parameters/core/radiusCoords.yaml
     - $ref: ../../parameters/core/z.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/tags/Common2023/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/core/within.yaml
     - $ref: ../../parameters/core/within-units.yaml
     - $ref: ../../parameters/core/parameter-name.yaml
