@@ -10,7 +10,7 @@ get:
     - $ref: ../../parameters/instanceId.yaml
     - $ref: ../../parameters/trajectoryCoords.yaml
     - $ref: ../../parameters/z.yaml
-    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/master/collections/openapi/parameters/datetime.yaml
+    - $ref: https://raw.githubusercontent.com/opengeospatial/ogcapi-common/refs/tags/Common2023/collections/openapi/parameters/datetime.yaml
     - $ref: ../../parameters/parameter-name.yaml
     - $ref: ../../parameters/crs.yaml
     - $ref: ../../parameters/f.yaml
