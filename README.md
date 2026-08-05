@@ -95,7 +95,7 @@ A Part 2: Publish-Subscribe Workflow has been developed and approved. It uses As
 A Part 3: Service Profiles is being developed and a draft has been approved for Public Comment. The OGC API-EDR Part 1: Core standard was designed to be flexible and straightforward to understand and implement for Web developers. As it is being widely implemented, various groups of users have identified the need to restrict some of the flexibility to improve interoperability between different implementations of both servers and clients within their domains of interest. A set of these stricter specifications for a specific domain of user is a Profile. The Part 3 will define how to specify a Profile of the OGC API-EDR Part 1: Core Standard. It only defines restrictive profiles and the restrictions are defined by using JSON Schema fragments, which can be formally tested.
 
 The intent is that Part 3 will also be applicable to, and usable by, other OGC APIs:
-* DRAFT [OGC API-Environmental Data Retrieval Standard, Part 3: Service Profile Support](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/extensions/service_profiles/standard/25-014.adoc).
+* DRAFT [OGC API-Environmental Data Retrieval Standard, Part 3: Service Profiles](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/extensions/service_profiles/standard/25-014.adoc).
 
 ### Conformance Test Suite
 
