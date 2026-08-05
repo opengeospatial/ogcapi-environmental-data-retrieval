@@ -85,6 +85,8 @@ The Master Branch is the latest draft of the standard, currently V1.2.0, and is 
 
 Version 1.2 will be re-labelled as OGC API - Environmental Data Retrieval, Part 1: Core, Version 1.2.
 
+Some minor errors have been found in V1.0.1 and V1.1.0 that are fixed in V1.2, so these are being processed as Corrigenda to create V1.0.2 and V1.1.1 versions for those implementations deployed in production mode and are not yet ready to migrate to V1.2.
+
 ### Publish and Subscribe 
 
 A Part 2: Publish-Subscribe Workflow has been developed and approved. It uses AsyncAPI as well as OpenAPI to support an asynchronous "publish and subscribe" model for data and notifications. The intent is that will also be applicable to, and usable by, other OGC APIs:
