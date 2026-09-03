@@ -81,7 +81,7 @@ The Master Branch is the latest draft of the standard, currently V1.2.0, and is 
 * [OGC API - Environmental Data Retrieval Standard, Version 1.0.0](https://docs.ogc.org/is/19-086r4/19-086r4.html)
 * [OGC API - Environmental Data Retrieval Standard, with Corrigendum, Version 1.0.1](https://docs.ogc.org/is/19-086r5/19-086r5.html)
 * [OGC API - Environmental Data Retrieval Standard, Version 1.1.0](https://docs.ogc.org/is/19-086r6/19-086r6.html)
-* DRAFT [EDR OpenAPI Document](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html)
+* DRAFT [EDR OpenAPI Document](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/docs/edr_api.html)
 
 Version 1.2 will be re-labelled as OGC API - Environmental Data Retrieval, Part 1: Core, Version 1.2.
 
