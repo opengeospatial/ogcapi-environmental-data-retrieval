@@ -14,7 +14,7 @@ include::../requirements/oas/REQ_oas-definition.adoc[]
 
 The requirements <<req_core_root-success,/req/core/root-success>> and <<req_core_api-definition-success,/req/core/api-definition-success>> in _Core_ require that the API definition documents are referenced from the landing page.
 
-[[two_appraoches_oas]]
+[[two_approaches_oas]]
 OpenAPI definitions can be created using different approaches. A typical example is the representation of the feature collections. One approach is to use a path parameter `collectionId,` i.e., the API definition has only a single path entry for all feature collections. Another approach is to explicitly define each feature collection in a separate path and without a path parameter, which enables specifying filter parameters or explicit feature schemas per feature collection. Both approaches are valid.
 
 include::../requirements/oas/REQ_oas-impl.adoc[]

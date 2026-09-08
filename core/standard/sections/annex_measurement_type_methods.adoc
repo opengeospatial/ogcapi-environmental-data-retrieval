@@ -26,7 +26,7 @@ The parameter-names object provides information about the data parameters suppor
 In the example below the data in the collection consists of:
 
 Air temperature values which represent an instantaneous value for the validity time
-Wind Speed and Wind direction values which represent a average value over the 10 minute period upto the validity time.
+Wind Speed and Wind direction values which represent a average value over the 10 minute period up to the validity time.
 
 [source,json]
 ----

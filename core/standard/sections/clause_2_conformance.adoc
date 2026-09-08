@@ -10,7 +10,7 @@ This OGC API-EDR Standard identifies a set of Conformance Classes. The <<ctc-def
 
 === Mandatory Requirements Classes
 
-The mandatory requirements classes spcified in the OGC API-EDR Standard include:
+The mandatory requirements classes specified in the OGC API-EDR Standard include:
 
 * <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">>: This requirements class inherits from the _Core Requirements Class_ of <<OGC19-072,OGC API-Common-Part 1: Core>> which specifies the minimal useful service interface for an OGC API endpoint. The requirements specified in the <<rc_core,Requirements Class "OGC API - Environmental Data Retrieval Core">> are mandatory for all implementations of the EDR API. The requirements are specified in <<rc_core-section,Chapter 7>> and in <<rc_core, Annex A.2>> in more detail.
 
@@ -25,7 +25,7 @@ The _Collections Requirements Class_ of the EDR API extends the common requireme
 
 Neither the _Core_ nor _Collections_ requirements classes mandate specific encodings or formats for representing resources. The optional _HTML_, _GeoJSON_ and _CoverageJSON_ requirements classes specify representations for these resources in frequently used encodings for spatial data on the web.
 
-* The *<<rc_json,JSON>>* and *<<rc_edr_geojson,EDR GeoJSON>>* conformance classes ensure that basic discovery of Core and Collection resources for the EDR API can be performed. They have one Requirements Class each
+* The *<<rc_json,JSON>>* and *<<rc_edr_geojson,EDR GeoJSON>>* conformance classes ensure that basic discovery of Core and Collection resources for the EDR API can be performed. They have one Requirements Class each:
 
 * <<rc_encoding-section,Encodings>>, three Requirements Classes
 ** <<rc_html,HTML>>
@@ -38,8 +38,8 @@ None of these encodings are mandatory. A developer of an implementation of the E
 
 The EDR API _Core_ does not mandate any encoding or format for the formal, machinable, definition of the API, such as using schemas and schema fragments. The recommended option is to use the OpenAPI specification (either Version 3.0 or 3.1). Three requirements classes have been specified for OpenAPI:
 
-* <<rc_oas,OpenAPI Specification>> (depends on _Core_).
-* <<rc_oas30,OpenAPI Specification 3.0>> (depends on _OpenAPI Specification_).
+* <<rc_oas,OpenAPI Specification>> (depends on _Core_);
+* <<rc_oas30,OpenAPI Specification 3.0>> (depends on _OpenAPI Specification_); and
 * <<rc_oas31,OpenAPI Specification 3.1>> (depends on _OpenAPI Specification_).
 
 The _Core_ requirements class can also decide to use other API definition representations in addition or instead of an OpenAPI 3.x definition. Examples for alternative API definitions: OpenAPI 2.0 (Swagger), future versions of the OpenAPI specification, an OWS Common 2.0 capabilities document or WSDL.

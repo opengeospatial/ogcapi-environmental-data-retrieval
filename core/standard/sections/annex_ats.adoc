@@ -9,7 +9,7 @@ implementations of the EDR API Standard. An ATS provides a basis for developing 
 
 The abstract test cases (assertions) are organized into test groups that correspond one-to-one to distinct conformance test classes defined in the EDR API Standard.
 
-OGC APIs are not Web Services in the traditional sense. Rather, they define the behavior and content of a set of Resources exposed through a Web Application Programing Interface (Web API). Therefore, an API may expose resources in addition to those defined by the standard. A test engine SHALL be able to traverse the API, identify and validate test points, and SHOULD ignore resource paths which are not to be tested.
+OGC APIs are not Web Services in the traditional sense. Rather, they define the behavior and content of a set of Resources exposed through a Web Application Programming Interface (Web API). Therefore, an API may expose resources in addition to those defined by the standard. A test engine SHALL be able to traverse the API, identify and validate test points, and SHOULD ignore resource paths which are not to be tested.
 
 === Conformance Class Core
 
