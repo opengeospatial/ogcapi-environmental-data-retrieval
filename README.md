@@ -2,30 +2,74 @@
 
 [<img src="https://www.ogc.org/pub/www/files/OGC_Logo_2D_Blue_x_0_0.png" width="200"/>](https://www.ogc.org/)
 
-This is the GitHub repository of the [OGC Environmental Data Retrieval API Standard Working Group (EDR API SWG)](https://www.ogc.org/projects/groups/edr-apiswg).
+The **[OGC API - Environmental Data Retrieval (EDR)](https://ogcapi.ogc.org/edr/)** standards define lightweight query interfaces for retrieving spatio-temporal data. A client requests data at a position, within an area, along a trajectory, and so on, and gets back only the data for that query.
 
-The **[OGC API - Environmental Data Retrieval](https://ogcapi.ogc.org/edr/)** standard is part of the OGC API suite of standards. [OGC API standards](https://ogcapi.ogc.org) define modular API building blocks to spatially enable Web APIs in a consistent way. [OpenAPI](https://www.openapis.org/) is used to define the reusable API building blocks.
+EDR is part of the [OGC API](https://ogcapi.ogc.org) family of standards, which define modular API building blocks to spatially enable Web APIs in a consistent way. The building blocks are defined using [OpenAPI](https://www.openapis.org/).
 
-### EDR API Collections
-As with other OGC APIs that include a `/collections` end point, EDR supports distribution of _collections_ of geospatial data in particular ways. An EDR collection can contain virtually any data about the natural or built environment that needs to be _sampled_ using a spatio-temporal query pattern. The following is a list of examples that illustrate what this environmental data sampling paradigm might entail.
+This repository is where the [OGC](https://www.ogc.org/) EDR API Standards Working Group (SWG) develops and maintains the EDR standards.
 
-1. A climate model or weather re-analysis might be accessed at a point or within a bounding rectangle.
-1. Geospatial gridded data such as a digital elevation model might be accessed along a transect.
-1. Weather information from meteorological observing stations might be queried within a specified polygon.
-1. An ensemble of forecast model data might be accessed for a specific location.
-1. Information from a hydrologic sensor might be found spatially or accessed by ID.
+## Standards at a glance
 
-EDR aims to specify the minimum yet sufficient diversity in metadata, query patterns, and response formats to enable this wide range of environmental data retrieval applications. Furthermore, any collections of data that have consistent spatio-temporal coordinates could be used, not just environmental.
+| Part | Latest version | Status | OGC doc | Read |
+|---|---|---|---|---|
+| [Part 1: Core](#part-1-core) | 1.2 | Approved standard, published 2026-09-08 | 19-086r9 | [HTML](https://docs.ogc.org/is/19-086r9/19-086r9.html) · [PDF](https://docs.ogc.org/is/19-086r9/19-086r9.pdf) |
+| [Part 2: Publish-Subscribe Workflow](#part-2-publish-subscribe-workflow) | 1.0 | Approved standard, published 2024-09-23 | 23-057r1 | [HTML](https://docs.ogc.org/is/23-057r1/23-057r1.html) · [PDF](https://docs.ogc.org/is/23-057r1/23-057r1.pdf) |
+| [Part 3: Service Profiles](#part-3-service-profiles) | 1.0 (draft) | Public comment open until 2026-10-21 | 25-014r1 | [Draft for comment](https://files.ogc.org/file/klygae855164e973f4d84a9d343dbb737a230) |
 
-### EDR API Query Patterns
-The EDR API allows a query, constructed of a spatio-temporal pattern, to retrieve data just for that pattern, from a data collection resource. Each of these patterns is optional, but a compliant API should implement at least one of them.
+All published EDR documents are also listed on the [OGC API - EDR standard page](https://www.ogc.org/standards/ogcapi-edr/).
 
-The main patterns are:
-- **1 - Position**: Retrieve data for point/position for several parameters at a time instant, or as a timeseries, or as a vertical profile for a time instant.
-- **2 - Area**:  Retrieve data within a polygon or rectangular tile/subset at a time instant, or as a timeseries, or as a vertical profile for a time instant.
-- **3 - Trajectory and Corridor**: Retrieve data along a 2D, 3D or 4D trajectory or within a defined corridor around a trajectory.
+## Part 1: Core
 
-These patterns would be accessed through endpoints like:
+Part 1 defines the core EDR API: how a server describes its data collections, and the query patterns clients use to retrieve data from them (see [Query patterns](#query-patterns)). Versions up to and including 1.2 are published as *OGC API - Environmental Data Retrieval Standard*. The name "Part 1: Core" is used to distinguish it from Parts 2 and 3.
+
+**Published versions**
+
+| Version | OGC doc | Published | Read |
+|---|---|---|---|
+| 1.2 (current) | 19-086r9 | 2026-09-08 | [HTML](https://docs.ogc.org/is/19-086r9/19-086r9.html) · [PDF](https://docs.ogc.org/is/19-086r9/19-086r9.pdf) |
+| 1.1 | 19-086r6 | 2023-07-27 | [HTML](https://docs.ogc.org/is/19-086r6/19-086r6.html) · [PDF](https://docs.ogc.org/is/19-086r6/19-086r6.pdf) |
+| 1.0.1 (corrigendum) | 19-086r5 | 2022-08-05 | [HTML](https://docs.ogc.org/is/19-086r5/19-086r5.html) · [PDF](https://docs.ogc.org/is/19-086r5/19-086r5.pdf) |
+| 1.0 | 19-086r4 | 2021-08-13 | [HTML](https://docs.ogc.org/is/19-086r4/19-086r4.html) · [PDF](https://docs.ogc.org/is/19-086r4/19-086r4.pdf) |
+
+Version 1.2 is backwards compatible with 1.1.
+
+**Corrigenda in preparation:** some minor errors found in 1.0.1 and 1.1 were fixed in 1.2. For deployments that are not yet ready to move to 1.2, the fixes are being published as corrigenda 1.0.2 (19-086r7, branch [`1.0.2`](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/1.0.2)) and 1.1.1 (19-086r8, branch [`1.1.1`](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/1.1.1)).
+
+**OpenAPI definitions:** the source YAML is in [`core/standard/openapi/`](core/standard/openapi/). Bundled single-file versions for [OpenAPI 3.0](ogcapi-environmental-data-retrieval-1-oas30.bundled.json) and [OpenAPI 3.1](ogcapi-environmental-data-retrieval-1-oas31.bundled.json) are generated automatically in the repository root. Official schemas for published versions are on [schemas.opengis.net](https://schemas.opengis.net/ogcapi/edr/).
+
+## Part 2: Publish-Subscribe Workflow
+
+Part 2 adds an asynchronous "publish and subscribe" model for data and notifications, using [AsyncAPI](https://www.asyncapi.com/) alongside OpenAPI. It is intended to be usable by other OGC APIs as well.
+
+Version 1.0 (23-057r1) was published on 2024-09-23 and is available in [HTML](https://docs.ogc.org/is/23-057r1/23-057r1.html) and [PDF](https://docs.ogc.org/is/23-057r1/23-057r1.pdf). Source: [`extensions/pubsub/standard/`](extensions/pubsub/standard/).
+
+## Part 3: Service Profiles
+
+Part 1 was designed to be flexible and easy for Web developers to implement. As it has been widely adopted, some communities have asked to restrict that flexibility so that servers and clients within their domain work together more reliably. A set of such stricter rules for a particular community is a *profile*.
+
+Part 3 defines how to specify a profile of Part 1. It covers restrictive profiles only, and the restrictions are expressed as JSON Schema fragments that can be tested formally. Like Part 2, it is intended to be usable by other OGC APIs.
+
+**Public comment is open from 2026-09-21 until 2026-10-21.** Read the [draft for public comment](https://files.ogc.org/file/klygae855164e973f4d84a9d343dbb737a230) and submit comments as [GitHub issues](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues). See the [OGC announcement](https://www.ogc.org/requests/ogc-api-edr-part-3-service-profiles-public-comment/) for details.
+
+The latest editor's draft is built from [`extensions/service_profiles/standard/`](extensions/service_profiles/standard/) and published in [HTML](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/extensions/service_profiles/standard/25-014.html).
+
+## About EDR
+
+### Collections
+
+As with other OGC APIs that have a `/collections` endpoint, EDR serves *collections* of geospatial data. An EDR collection can hold almost any data about the natural or built environment that is best *sampled* with a spatio-temporal query. For example:
+
+1. A climate model or weather re-analysis accessed at a point or within a bounding rectangle.
+1. Gridded data such as a digital elevation model accessed along a transect.
+1. Observations from weather stations queried within a polygon.
+1. An ensemble of forecast model data accessed for a named location.
+1. Readings from a hydrologic sensor found spatially or accessed by identifier.
+
+EDR aims to specify the minimum, yet sufficient, variety of metadata, query patterns and response formats to support this range of uses. Any collection of data with consistent spatio-temporal coordinates can be served, not only environmental data.
+
+### Query patterns
+
+Each query pattern is optional, but an EDR API should implement at least one. Queries are made against a collection:
 
 ```
 /collections/{collectionId}/{queryType}?
@@ -33,142 +77,115 @@ These patterns would be accessed through endpoints like:
   parameter-name={parameter_1},{parameter_n}&
   datetime={RFC3339/ISO8601}&
   f={format}&
-  {queryType-specific-parameter_n_}={queryType-specific-parameter_n_value}
+  {queryType-specific-parameter}={value}
 ```
-There are also other variants of these query patterns to make the API easier and more convenient to use. These are:
 
-- **4 - Radius**: Retrieve data within a specified horizontal radius of a point/position
+| Query type | Retrieves data… |
+|---|---|
+| `position` | at a point, for a time instant, as a time series, or as a vertical profile |
+| `radius` | within a horizontal radius of a point |
+| `area` | within a polygon |
+| `cube` | within a 2D, 3D or 4D bounding box (a restricted case of `area`) |
+| `trajectory` | along a 2D, 3D or 4D path |
+| `corridor` | within a corridor around a trajectory |
+| `locations` | at a location identified by name rather than coordinates |
+| `items` | as features, by identifier; compatible with OGC API - Features - Part 1: Core. A feature can hold coordinates for a new EDR query, or be a stored query. |
+| `instances` | from a specific version (instance) of a collection. All other query types can be used under `/collections/{collectionId}/instances/{instanceId}/`. |
 
-- **5 - Cube**: Retrieve data within a specified 2D, 3D, or 4D bounding box. This is just a restricted special case of a polygon.
+<details>
+<summary><strong>Design goals</strong></summary>
 
-- **6 - Location** Retrieve data for point/position identified by a name rather than coordinates.
+EDR can be considered both a "simple" API and a "convenience" API.
 
-- **7 - Items** Retrieve a feature by identifier. The coordinates in the feature could be used to create an EDR query. The feature could also be a previously stored query. Compatible with OGC API - Features - Part 1: Core.
+It is a *simple* API because:
 
-- **8 - Instance** This allows discrimination between different versions of a collection. [Note: This may become part of API - Common Part 4 as hierarchical collections.]
-
-### EDR API Vision
-
-The Environmental Data Retrieval (EDR) API can be considered both a 'simple' API and a 'convenience' API.
-
-It is considered a 'simple' API because:
-* From an implementation viewpoint, the specification encourages a 'core' plus 'plug-in' framework;
+* From an implementation viewpoint, the specification encourages a "core" plus "plug-in" framework;
 * It does not require much domain knowledge compared to other OGC WxS and API standards;
-* It uses Key/Value pairs;
+* It uses key/value pairs;
 * The metadata is based on the data being queried and is not verbose;
-* The queries are “fixed” and predefined in the OpenAPI definition;
+* The queries are fixed and predefined in the OpenAPI definition;
 * The specification encourages the data publisher to publish data in fixed formats that are described within the metadata in a simple way.
 
-It is considered a 'convenience' API because:
-* It complements and provides synergy with other web based OGC APIs;
-* The query patterns allow users to get just the data that they need;
+It is a *convenience* API because:
+
+* It complements, and works alongside, other Web-based OGC APIs;
+* The query patterns allow users to get just the data they need;
 * Users do not need to know the structure of the underlying data;
-* It is not constrained to a particular data structure such as grids, point clouds, features, etc.;
-* It hides the complication of any underlying time structures because queries retrieve data for the time(s) that the user selects;
-* It is the responsibility of the publisher to simplify appropriately the output, making it convenient for the user to consume the data;
-* Implementations are constrained by the API definition, so all implementations will have the same URL structure.
+* It is not constrained to a particular data structure such as grids, point clouds or features;
+* It hides the complexity of any underlying time structures, because queries retrieve data for the time(s) the user selects;
+* It is the publisher's responsibility to simplify the output appropriately, making it convenient for the user to consume;
+* Implementations are constrained by the API definition, so all implementations have the same URL structure.
 
-The EDR API can be considered a 'Sampling API'. EDR queries create discrete sampling geometries that can sample a relatively persistent spatio-temporal data store resource. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic as to whether the data store is a digital data cube that could be sampled anywhere or pre-existing samples of, or a model of, real world phenomena. While the former is the emphasis, EDR APIs can also provide a list of pre-defined or pre-existing monitoring/modeled "locations" which can be accessed by location identifier. There is an assumption that the spatio-temporal data store is non-sparse, in that most queries are expected to return useful values rather than 'data not found'.
+EDR can also be considered a *sampling* API. EDR queries create discrete sampling geometries that sample a relatively persistent spatio-temporal data store. The query and its response are transient resources, which can be made persistent for re-use if required. EDR is agnostic as to whether the data store is a data cube that can be sampled anywhere, or a set of pre-existing samples or models of real-world phenomena. While the former is the emphasis, EDR APIs can also offer a list of pre-defined monitoring or modelled locations that can be accessed by identifier. EDR assumes the data store is non-sparse, so that most queries return useful values rather than "data not found".
 
-## Progress
+</details>
 
-### Standard and Draft Specifications
+## Implementations
 
-The standard is in the V1.1 Branch.
+Server and client implementations are listed in [`implementations/`](implementations/README.adoc). Pull requests adding new implementations are welcome.
 
-The Master Branch is the latest draft of the standard, currently V1.2.0, and is built daily (based on the configuration contained in this [GitHub Action](https://github.com/opengeospatial/ogcna-auto-review/blob/main/.github/workflows/generate_19-086r6.yml) file):
+[`deployments.md`](deployments.md) is an older list of demonstration servers, many of them from the development of version 1.0.
 
-* [OGC API - Environmental Data Retrieval Standard, Version 1.0.0](https://docs.ogc.org/is/19-086r4/19-086r4.html)
-* [OGC API - Environmental Data Retrieval Standard, with Corrigendum, Version 1.0.1](https://docs.ogc.org/is/19-086r5/19-086r5.html)
-* [OGC API - Environmental Data Retrieval Standard, Version 1.1.0](https://docs.ogc.org/is/19-086r6/19-086r6.html)
-* DRAFT [EDR OpenAPI Document](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/docs/edr_api.html)
+## Conformance testing
 
-Version 1.2 will be re-labelled as OGC API - Environmental Data Retrieval, Part 1: Core, Version 1.2.
+An Executable Test Suite (ETS) lets implementations be tested, and optionally certified, as conforming to the standard. The current ETS covers versions 1.0 and 1.0.1 of Part 1. There are three ways to run it:
 
-Some minor errors have been found in V1.0.1 and V1.1.0 that are fixed in V1.2, so these are being processed as Corrigenda to create V1.0.2 and V1.1.1 versions for those implementations deployed in production mode and are not yet ready to migrate to V1.2.
+1. On the [OGC Validator](https://cite.ogc.org/teamengine/).
+1. With Docker: `docker run -p 8081:8080 ogccite/ets-ogcapi-edr10`
+1. From an IDE such as Eclipse or IntelliJ, using the [Maven project](https://github.com/opengeospatial/ets-ogcapi-edr10).
 
-### Publish and Subscribe 
+Please report problems with the test suite in its [issue tracker](https://github.com/opengeospatial/ets-ogcapi-edr10/issues).
 
-A Part 2: Publish-Subscribe Workflow has been developed and approved. It uses AsyncAPI as well as OpenAPI to support an asynchronous "publish and subscribe" model for data and notifications. The intent is that will also be applicable to, and usable by, other OGC APIs:
-* [OGC API-Environmental Data Retrieval Standard, Part 2: Publish-Subscribe](https://docs.ogc.org/is/23-057r1/23-057r1.html).
+Implementations that pass can be submitted for certification through the [OGC Compliance Program](https://www.ogc.org/how-our-compliance-program-works/). Certified products are listed in the [OGC product database](https://portal.ogc.org/public_ogc/compliance/compliant.php?display_opt=1&specid=1247).
 
-### Service Profiles
+## Repository guide
 
-A Part 3: Service Profiles is being developed and a draft has been approved for Public Comment. The OGC API-EDR Part 1: Core standard was designed to be flexible and straightforward to understand and implement for Web developers. As it is being widely implemented, various groups of users have identified the need to restrict some of the flexibility to improve interoperability between different implementations of both servers and clients within their domains of interest. A set of these stricter specifications for a specific domain of user is a Profile. The Part 3 will define how to specify a Profile of the OGC API-EDR Part 1: Core Standard. It only defines restrictive profiles and the restrictions are defined by using JSON Schema fragments, which can be formally tested.
+**Branches**
 
-The intent is that Part 3 will also be applicable to, and usable by, other OGC APIs:
-* DRAFT [OGC API-Environmental Data Retrieval Standard, Part 3: Service Profiles](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/extensions/service_profiles/standard/25-014.adoc).
+| Branch | Contents |
+|---|---|
+| `master` | Part 1 at the latest version (currently 1.2), plus the Part 2 and Part 3 sources. Future work happens here. |
+| `1.0.1`, `1.1.0` | Sources of the published 1.0.1 and 1.1 versions of Part 1 |
+| `1.0.2`, `1.1.1` | Corrigenda to 1.0.1 and 1.1 in preparation |
 
-### Conformance Test Suite
+**Directories**
 
-An OGC API-EDR conformance test suite has been developed so that implementations can be formally certified as conforming to the standard, if so desired.
- 
-The [Executable Test Suite (ETS) of OGC API - EDR](https://cite.ogc.org/teamengine/) is available on the OGC Validator.
+| Path | Contents |
+|---|---|
+| [`core/standard/`](core/standard/) | Part 1 source (Metanorma AsciiDoc) and OpenAPI definitions |
+| [`extensions/pubsub/standard/`](extensions/pubsub/standard/) | Part 2 source |
+| [`extensions/service_profiles/standard/`](extensions/service_profiles/standard/) | Part 3 source |
+| `*.bundled.json` (root) | Generated OpenAPI bundles. Do not edit by hand. |
+| [`implementations/`](implementations/) | Server and client implementations |
+| [`ogc-web-api-guidelines/`](ogc-web-api-guidelines/) | [OGC Web API Guidelines](https://github.com/opengeospatial/ogc-web-api-guidelines) checklists for each version and part |
+| [`use-cases/`](use-cases/) | Use cases that informed the standard |
+| [`proposals/`](proposals/) | Process for proposing new features |
+| [`docs/`](docs/) | SWG charter, development process notes and background material |
 
-Implementations that pass the conformance tests can be submitted for Compliance certification, by following the steps to [Get Certified](https://www.ogc.org/compliance/getCertified).
+**Building the documents:** each standard directory has a `Makefile` that builds HTML and PDF with [Metanorma](https://www.metanorma.org/). Run `make all` in that directory, or `METANORMA_DOCKER=metanorma/mn make all` to use Docker instead of a local install. See [`core/standard/README.adoc`](core/standard/README.adoc) for details.
 
-Implementations that are Certified OGC Compliant are listed on the [OGC Product Database](https://www.ogc.org/resource/products/compliant?display_opt=1&specid=1247).
+## Getting involved
 
-If you encounter any bugs, please [log the issues](https://github.com/opengeospatial/ets-ogcapi-edr10/issues).
+* Report problems or suggest changes through [GitHub issues](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/issues). Change requests for published standards can also be submitted through the [OGC change request form](https://portal.ogc.org/public_ogc/change_request.php).
+* Meeting [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) are on the wiki, along with the [development guidelines](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Guidelines), [comparisons with other OGC standards](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Examples) and [longer-term future work](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Future-Work).
+* The SWG's scope and deliverables are set out in its [charter](docs/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc). OGC members can join through the [OGC Standards Working Groups](https://www.ogc.org/standards/technical-committee/standards-working-groups/) page.
+* To report a security vulnerability, see [SECURITY.md](SECURITY.md).
 
-There are three approaches to testing:
+## History
 
-* Option 1: Run the ETS on the [OGC Validator](https://cite.ogc.org/teamengine/).
+| Date | Milestone |
+|---|---|
+| March 2020 | [First virtual sprint](https://github.com/opengeospatial/EDR-API-Sprint) |
+| September 2020 | Public comment period on version 1.0 closed (28 September) |
+| November 2020 | [Second sprint](https://github.com/opengeospatial/OGCAPI-EDR-Sprint2) (9–10 November) |
+| 2021-08-13 | Version 1.0 published (19-086r4) |
+| 2022-08-05 | Corrigendum 1.0.1 published (19-086r5) |
+| 2023-07-27 | Version 1.1 published (19-086r6) |
+| 2024-09-23 | Part 2: Publish-Subscribe Workflow 1.0 published (23-057r1) |
+| 2026-09-08 | Version 1.2 published (19-086r9) |
+| 2026-09-21 | Part 3: Service Profiles released for public comment |
 
-* Option 2: Run the ETS through `docker` by executing this command: `docker run -p 8081:8080 ogccite/ets-ogcapi-edr10`
-
-* Option 3: Use the ETS from within an IDE such as Eclipse or IntelliJ. There is a [Maven project](https://github.com/opengeospatial/ets-ogcapi-edr10). If you are planning to use an IDE for testing, we can arrange a brief telecon to help you set up your environment.
-
-### Implementations
-
-Implementations are being advertised [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/deployments.md). Some are live demos with real data, designed for a production environment, others are "work in progress" and some just "proofs of concept". There are other implementations in development but not yet public.
-
-### Development Guidelines
-
-The development of the API has used other [well-established standards and guidelines](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Guidelines). The overlaps, and gaps, with other OGC standards are also being described [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Examples).  The API also supports the [OGC Web API Guidelines](ogc-web-api-guidelines-checklist.md).
-
-### Future Work
-
-Proposed changes and extensions to the standard will be documented in the folder [proposals](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/master/proposals).
-
-Longer term work is being recorded [here](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki/Future-Work)
-
-**Conformance Test Suite** work started at the beginning of 2021 using [TeamEngine](https://github.com/opengeospatial/teamengine).
-
-### EDR API Standard Working Group
-
-The repository contains:
-
-- [Working Group Charter](./EnvironmentalDataRetrievalAPI-SWG-Charter.adoc)
-- [Standard documents, as work-in-progress drafts](./standard_template/standard).
-
-The charter lists initial deliverables in [section 4.1](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables) and a number of additional tasks in [section 4.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#41-initial-deliverables). There is also an "out of scope" statement in [section 3.2](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/blob/master/EnvironmentalDataRetrievalAPI-SWG-Charter.adoc#32-what-is-out-of-scope).
-
-The repository also contains the plan of work and links to other relevant documents such as [minutes, actions and notes](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/wiki#meetings) of meetings on the associated Wiki pages.
-
-**The public comment period on the EDR API closed 28th September 2020.** [Go here for more information.](https://www.ogc.org/standards/requests/215)
-
-**A public Hackathon/Sprint** was held [virtually in March 2020](https://github.com/opengeospatial/EDR-API-Sprint) and another was held [9-10 November 2020](https://github.com/opengeospatial/OGCAPI-EDR-Sprint2) to help finalise the specification. There was a **public Webinar** outlining the Sprint's objectives on Wednesday 4 November 2020.
-
-In December 2020, the OGC Technical Committee agreed, with no objections to unanimous consent, to have an electronic vote to recommend the specification for public release as an OGC Standard. The OGC TC e-vote was **passed** with quorum on 8 March 2021. The OGC Planning Committee on 30 March 2021 voted, with no objections to unanimous consent, **to recommend the OGC API - EDR as a full OGC Standard**, and to not change the name.
-
-On 28 April 2021, at 16:00 UTC, the standard started editing for publication as a formal standard.
-
-The [OGC API - EDR standard](https://www.ogc.org/standards/ogcapi-edr) was formally published on 13 September 2021 and a Corrigendum V1.0.1 published on 5 August 2022.
-
-Version 1.1 has been approved and was published on 23 July 2023. 
-
-OGC API-EDR Part 2: Publish-Subscribe Workflow V1.0 was published on 23 Sept 2024.
-
-A backwards-compatible V1.2 has been approved and is awaiting publication.
-
-The EDR API Working Group is planning future enhancements such as Part 3: Service Profiles (approved for release for Public Comment) and Part 1: Core V1.3.
-
-### Best Practice
-
-* [OGC API - Environmental Data Retrieval Best Practice](https://docs.ogc.org/DRAFTS/20-065.html) - No Content yet
-
-### Contributing
+## Contributing
 
 The contributor understands that any contributions, if accepted by the OGC Membership, shall be incorporated into OGC standards documents and that all copyright and intellectual property shall be vested to the OGC.
 
