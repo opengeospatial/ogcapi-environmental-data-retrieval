@@ -35,7 +35,7 @@ Version 1.2 is backwards compatible with 1.1.
 
 **Corrigenda in preparation:** some minor errors found in 1.0.1 and 1.1 were fixed in 1.2. For deployments that are not yet ready to move to 1.2, the fixes are being published as corrigenda 1.0.2 (19-086r7, branch [`1.0.2`](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/1.0.2)) and 1.1.1 (19-086r8, branch [`1.1.1`](https://github.com/opengeospatial/ogcapi-environmental-data-retrieval/tree/1.1.1)).
 
-**OpenAPI definitions:** the source YAML is in [`core/standard/openapi/`](core/standard/openapi/). Bundled single-file versions for [OpenAPI 3.0](ogcapi-environmental-data-retrieval-1-oas30.bundled.json) and [OpenAPI 3.1](ogcapi-environmental-data-retrieval-1-oas31.bundled.json) are generated automatically in the repository root. Official schemas for published versions are on [schemas.opengis.net](https://schemas.opengis.net/ogcapi/edr/).
+**OpenAPI definitions:** the source YAML is in [`core/standard/openapi/`](core/standard/openapi/). Bundled single-file versions for [OpenAPI 3.0](ogcapi-environmental-data-retrieval-1-oas30.bundled.json) and [OpenAPI 3.1](ogcapi-environmental-data-retrieval-1-oas31.bundled.json) are generated automatically in the repository root, and the 3.1 bundle can be browsed in the [interactive API viewer](https://opengeospatial.github.io/ogcapi-environmental-data-retrieval/docs/edr_api.html). Official schemas for published versions are on [schemas.opengis.net](https://schemas.opengis.net/ogcapi/edr/).
 
 ## Part 2: Publish-Subscribe Workflow
 
