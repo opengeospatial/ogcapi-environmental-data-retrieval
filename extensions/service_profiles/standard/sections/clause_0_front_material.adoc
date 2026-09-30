@@ -43,7 +43,7 @@ Service profiles utilize a tiered architecture to maintain a clear distinction b
 
 A Service Profile is not required to constrain all aspects of the Core Standard; profiles may selectively address only those elements relevant to their specific domain requirements.
 
-Implementations shall advertise their supported service profiles through a conformance declaration. This enables clients to automatically discover available functionality while allowing services to evolve and extend beyond the scope of individual profiles without compromising conformance.
+Implementations advertise their supported service profiles through a conformance declaration. This enables clients to automatically discover available functionality while allowing services to evolve and extend beyond the scope of individual profiles without compromising conformance.
 
 == Preface
 
@@ -91,8 +91,6 @@ All questions regarding this submission should be directed to the editor or the 
 //This clause is optional.
 
 Additional contributors to this Standard include the following:
-
-Individual name(s), Organization
 
 Shane Mill, National Weather Service
 
