@@ -6,6 +6,11 @@ on:
       - master
     paths:
       - 'core/standard/openapi/**.yaml'
+      - 'core/standard/code/check_openapi_bundles.py'
+      - '.github/workflows/test-build-openapi-bundle.yml'
+
+permissions:
+  contents: read
 
 jobs:
   test-build-openapi-bundle:
@@ -21,6 +26,7 @@ jobs:
       with:
         repository: ${{ github.event.pull_request.head.repo.full_name }}
         ref: ${{ github.event.pull_request.head.ref }}
+        persist-credentials: false
       #with:
       #  fetch-depth: 0
     - name: Generate OpenAPI 3.0 bundle
@@ -31,4 +37,12 @@ jobs:
       run: |
         cd core/standard/openapi       
         redocly bundle -o ogcapi-environmental-data-retrieval-1-oas31.bundled.json ogcapi-environmental-data-retrieval-1-oas31.yaml
+    - name: Setup Python
+      uses: actions/setup-python@v7
+      with:
+        python-version: '3.x'
+    - name: Check OpenAPI bundles
+      run: |
+        pip install 'jsonschema>=4.18,<5'
+        python core/standard/code/check_openapi_bundles.py core/standard/openapi
 
