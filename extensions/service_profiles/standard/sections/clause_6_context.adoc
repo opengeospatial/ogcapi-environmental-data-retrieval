@@ -19,7 +19,7 @@ It is important to understand the following distinctions:
 
 * A Standard for Standards: This document provides the rules for writing profile specifications; it does not define the requirements for the EDR API software implementation itself.
 * ModSpec Alignment: This Standard is a profile of <<ogc-modspec,OGC ModSpec Model - Part 1: Core - A Standard for Designing and Writing Modular Standards>> (ModSpec), ensuring that all resulting Service Profiles follow a consistent modular structure.
-* Implementation: An "implementation" of this Standard is a completed Service Profile document (e.g., a MetOcean EDR Profile).
+* Implementation: An "implementation" of this Standard is a completed Service Profile document (e.g., a Met-Ocean EDR API Profile).
 * Foundational Model: The profiling methodology is based on <<iso19106,ISO 19106:2004 Geographic information - Profiles>>.
  
 
