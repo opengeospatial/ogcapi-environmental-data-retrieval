@@ -2,7 +2,7 @@ description: Data ranges required to construct valid queries for the choosen dat
 content:
   application/vnd.cov+json:
     schema:
-      $ref: https://schemas.opengis.net/covjson/1.0/coveragejson.json
+      $ref: ../../schemas/covjson/coverageJSON.yaml
   application/geo+json:
     schema:
       $ref: ../../schemas/edr-geojson/edrFeatureCollectionGeoJSON.yaml
