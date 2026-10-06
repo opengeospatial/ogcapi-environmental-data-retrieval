@@ -34,6 +34,7 @@ The OGC API-EDR Part 3: Service Profile Standard establishes a consistent approa
 
 The primary purpose of a Service Profile is to eliminate the "validation gap" by providing a machine-readable set of rules for service discovery and interaction. By standardizing collection structures and parameters, profiles allow clients to understand exactly what a specific implementation provides without manual intervention. To support this, each profile includes a dedicated OpenAPI definition that provides a precise, machine-readable description of the operations and responses required by that profile.
 
+Many Recommendations and Permissions cannot be tested by machine; they could instead be assessed by inspection, scoring and ranking.
 
 Service profiles utilize a tiered architecture to maintain a clear distinction between standard rules and deployed instances:
 
@@ -43,7 +44,7 @@ Service profiles utilize a tiered architecture to maintain a clear distinction b
 
 A Service Profile is not required to constrain all aspects of the Core Standard; profiles may selectively address only those elements relevant to their specific domain requirements.
 
-Implementations shall advertise their supported service profiles through a conformance declaration. This enables clients to automatically discover available functionality while allowing services to evolve and extend beyond the scope of individual profiles without compromising conformance.
+Implementations advertise their supported service profiles through a conformance declaration. This enables clients to automatically discover available functionality while allowing services to evolve and extend beyond the scope of individual profiles without compromising conformance.
 
 == Preface
 
@@ -51,7 +52,7 @@ Implementations shall advertise their supported service profiles through a confo
 ====
 The aim of the OGC API-EDR Part 3: Service Profile standard is to ensure interoperability between EDR API implementations by defining a consistent approach to specifying a Profile of OGC API-EDR Part 1: Core. To achieve this, it is essential that service providers use a consistent approach when defining `collections` and `instances` of `collections`. An OGC API-EDR Profile will specify a set of Requirements that an EDR API implementation must support to be a profile-compliant implementation.
 
-This standard specifies Requirements and Recommendations for a Profile definition, and also conforms to the OGC Mod Spec Standard.
+This standard specifies Requirements, Recommendations and Permissions for a Profile definition, and also conforms to the OGC Mod Spec Standard. It is envisaged that Profile definitions will emphasize strict testable Requirements, rather than the looser Recommendations and Permissions, thus improving interoperability between implementations of the OGC API-EDR Standard Parts.
 
 It is envisaged that this approach may be useful for other OGC API Standards.
 
@@ -91,8 +92,6 @@ All questions regarding this submission should be directed to the editor or the 
 //This clause is optional.
 
 Additional contributors to this Standard include the following:
-
-Individual name(s), Organization
 
 Shane Mill, National Weather Service
 
