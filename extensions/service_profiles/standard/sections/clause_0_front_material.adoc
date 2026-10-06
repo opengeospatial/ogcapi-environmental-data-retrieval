@@ -34,7 +34,7 @@ The OGC API-EDR Part 3: Service Profile Standard establishes a consistent approa
 
 The primary purpose of a Service Profile is to eliminate the "validation gap" by providing a machine-readable set of rules for service discovery and interaction. By standardizing collection structures and parameters, profiles allow clients to understand exactly what a specific implementation provides without manual intervention. To support this, each profile includes a dedicated OpenAPI definition that provides a precise, machine-readable description of the operations and responses required by that profile.
 
-As many Recommendations and Permissions cannot be readily tested strictly and by machine, it is envisaged that perhaps they could be objectively assessed by inspection, scoring and ranking of the implemented Recommendations and Permissions. 
+Many Recommendations and Permissions cannot be tested by machine; they could instead be assessed by inspection, scoring and ranking.
 
 Service profiles utilize a tiered architecture to maintain a clear distinction between standard rules and deployed instances:
 
