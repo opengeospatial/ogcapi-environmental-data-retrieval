@@ -190,7 +190,7 @@ The following parameters are supported by all OGC API-EDR queries.
 
 ===== Output Format parameter
 
-Also known as the -f parameter.
+Also known as the `f` parameter.
 
 Data format for the output data (available options are listed in the Collections response).
 
