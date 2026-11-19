@@ -3883,6 +3883,41 @@
           }
         ]
       },
+      "numericRegularlySpacedAxis": {
+        "description": "A regularly-spaced numeric axis",
+        "properties": {
+          "start": {
+            "type": "number"
+          },
+          "stop": {
+            "type": "number"
+          },
+          "num": {
+            "type": "integer",
+            "minimum": 1
+          }
+        },
+        "required": [
+          "start",
+          "stop",
+          "num"
+        ],
+        "additionalProperties": false
+      },
+      "numericAxis": {
+        "description": "Simple axis with numeric values",
+        "if": {
+          "required": [
+            "values"
+          ]
+        },
+        "then": {
+          "$ref": "#/components/schemas/numericValuesAxis"
+        },
+        "else": {
+          "$ref": "#/components/schemas/numericRegularlySpacedAxis"
+        }
+      },
       "stringValuesAxis": {
         "description": "Simple axis with string values (e.g. time strings)",
         "allOf": [
@@ -3902,6 +3937,112 @@
                 }
               }
             },
+            "additionalProperties": false
+          }
+        ]
+      },
+      "tupleValuesAxis": {
+        "description": "Tuple-based axis",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/valuesAxisBase"
+          },
+          {
+            "properties": {
+              "dataType": {
+                "const": "tuple"
+              },
+              "values": {
+                "items": {
+                  "description": "A tuple of axis values (numbers or strings)",
+                  "type": "array",
+                  "items": {
+                    "type": [
+                      "number",
+                      "string"
+                    ]
+                  },
+                  "minItems": 2
+                }
+              },
+              "coordinates": {}
+            },
+            "required": [
+              "dataType",
+              "values",
+              "coordinates"
+            ],
+            "additionalProperties": false
+          }
+        ]
+      },
+      "numericSingleValueAxis": {
+        "description": "Axis defined by single numeric value",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/numericValuesAxis"
+          },
+          {
+            "properties": {
+              "values": {
+                "maxItems": 1
+              }
+            }
+          }
+        ]
+      },
+      "stringSingleValueAxis": {
+        "description": "Axis defined by single string value",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/stringValuesAxis"
+          },
+          {
+            "properties": {
+              "values": {
+                "maxItems": 1
+              }
+            }
+          }
+        ]
+      },
+      "polygonValuesAxis": {
+        "description": "Polygon-based axis",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/valuesAxisBase"
+          },
+          {
+            "properties": {
+              "dataType": {
+                "const": "polygon"
+              },
+              "values": {
+                "items": {
+                  "description": "A GeoJSON polygon",
+                  "type": "array",
+                  "items": {
+                    "type": "array",
+                    "items": {
+                      "description": "The inner array: the coordinates themselves",
+                      "type": "array",
+                      "items": {
+                        "type": "number"
+                      },
+                      "minItems": 2
+                    },
+                    "minItems": 1
+                  },
+                  "minItems": 1
+                }
+              },
+              "coordinates": {}
+            },
+            "required": [
+              "dataType",
+              "values",
+              "coordinates"
+            ],
             "additionalProperties": false
           }
         ]
@@ -3967,7 +4108,7 @@
             }
           }
         ],
-        "dependencies": {
+        "dependentSchemas": {
           "dataType": {
             "allOf": [
               {
@@ -3979,7 +4120,7 @@
                   }
                 },
                 "then": {
-                  "$ref": "#/definitions/tupleValuesAxis"
+                  "$ref": "#/components/schemas/tupleValuesAxis"
                 }
               },
               {
@@ -3991,33 +4132,12 @@
                   }
                 },
                 "then": {
-                  "$ref": "#/definitions/polygonValuesAxis"
+                  "$ref": "#/components/schemas/polygonValuesAxis"
                 }
               }
             ]
           }
         }
-      },
-      "numericRegularlySpacedAxis": {
-        "description": "A regularly-spaced numeric axis",
-        "properties": {
-          "start": {
-            "type": "number"
-          },
-          "stop": {
-            "type": "number"
-          },
-          "num": {
-            "type": "integer",
-            "minimum": 1
-          }
-        },
-        "required": [
-          "start",
-          "stop",
-          "num"
-        ],
-        "additionalProperties": false
       },
       "anyAxis": {
         "description": "Validates any axis",
@@ -4033,7 +4153,7 @@
           "$ref": "#/components/schemas/numericRegularlySpacedAxis"
         }
       },
-      "i18n": {
+      "covjsonI18n": {
         "type": "object",
         "description": "Object representing an internationalised string where keys are BCP 47 language tags.",
         "patternProperties": {
@@ -4050,10 +4170,10 @@
             "type": "string"
           },
           "label": {
-            "$ref": "#/components/schemas/i18n"
+            "$ref": "#/components/schemas/covjsonI18n"
           },
           "description": {
-            "$ref": "#/components/schemas/i18n"
+            "$ref": "#/components/schemas/covjsonI18n"
           }
         },
         "required": [
@@ -4117,10 +4237,10 @@
                   "type": "string"
                 },
                 "label": {
-                  "$ref": "#/components/schemas/i18n"
+                  "$ref": "#/components/schemas/covjsonI18n"
                 },
                 "description": {
-                  "$ref": "#/components/schemas/i18n"
+                  "$ref": "#/components/schemas/covjsonI18n"
                 },
                 "targetConcept": {
                   "$ref": "#/components/schemas/targetConcept"
@@ -4192,7 +4312,7 @@
           "type",
           "axes"
         ],
-        "dependencies": {
+        "dependentSchemas": {
           "domainType": {
             "allOf": [
               {
@@ -4209,16 +4329,16 @@
                     "axes": {
                       "properties": {
                         "x": {
-                          "$ref": "#/definitions/numericAxis"
+                          "$ref": "#/components/schemas/numericAxis"
                         },
                         "y": {
-                          "$ref": "#/definitions/numericAxis"
+                          "$ref": "#/components/schemas/numericAxis"
                         },
                         "z": {
-                          "$ref": "#/definitions/numericAxis"
+                          "$ref": "#/components/schemas/numericAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringValuesAxis"
+                          "$ref": "#/components/schemas/stringValuesAxis"
                         }
                       },
                       "required": [
@@ -4246,7 +4366,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/tupleValuesAxis"
+                              "$ref": "#/components/schemas/tupleValuesAxis"
                             },
                             {
                               "properties": {
@@ -4277,7 +4397,7 @@
                           ]
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         }
                       },
                       "required": [
@@ -4302,16 +4422,16 @@
                     "axes": {
                       "properties": {
                         "x": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "y": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "z": {
-                          "$ref": "#/definitions/numericAxis"
+                          "$ref": "#/components/schemas/numericAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringSingleValueAxis"
+                          "$ref": "#/components/schemas/stringSingleValueAxis"
                         }
                       },
                       "required": [
@@ -4338,16 +4458,16 @@
                     "axes": {
                       "properties": {
                         "x": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "y": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringSingleValueAxis"
+                          "$ref": "#/components/schemas/stringSingleValueAxis"
                         }
                       },
                       "required": [
@@ -4373,16 +4493,16 @@
                     "axes": {
                       "properties": {
                         "x": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "y": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringValuesAxis"
+                          "$ref": "#/components/schemas/stringValuesAxis"
                         }
                       },
                       "required": [
@@ -4411,7 +4531,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/tupleValuesAxis"
+                              "$ref": "#/components/schemas/tupleValuesAxis"
                             },
                             {
                               "properties": {
@@ -4440,7 +4560,7 @@
                           ]
                         },
                         "t": {
-                          "$ref": "#/definitions/stringSingleValueAxis"
+                          "$ref": "#/components/schemas/stringSingleValueAxis"
                         }
                       },
                       "required": [
@@ -4467,7 +4587,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/tupleValuesAxis"
+                              "$ref": "#/components/schemas/tupleValuesAxis"
                             },
                             {
                               "properties": {
@@ -4496,7 +4616,7 @@
                           ]
                         },
                         "t": {
-                          "$ref": "#/definitions/stringValuesAxis"
+                          "$ref": "#/components/schemas/stringValuesAxis"
                         }
                       },
                       "required": [
@@ -4524,7 +4644,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/tupleValuesAxis"
+                              "$ref": "#/components/schemas/tupleValuesAxis"
                             },
                             {
                               "properties": {
@@ -4547,7 +4667,7 @@
                           ]
                         },
                         "z": {
-                          "$ref": "#/definitions/numericAxis"
+                          "$ref": "#/components/schemas/numericAxis"
                         }
                       },
                       "required": [
@@ -4575,7 +4695,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/polygonValuesAxis"
+                              "$ref": "#/components/schemas/polygonValuesAxis"
                             },
                             {
                               "properties": {
@@ -4594,10 +4714,10 @@
                           ]
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringSingleValueAxis"
+                          "$ref": "#/components/schemas/stringSingleValueAxis"
                         }
                       },
                       "required": [
@@ -4624,7 +4744,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/polygonValuesAxis"
+                              "$ref": "#/components/schemas/polygonValuesAxis"
                             },
                             {
                               "properties": {
@@ -4643,10 +4763,10 @@
                           ]
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringValuesAxis"
+                          "$ref": "#/components/schemas/stringValuesAxis"
                         }
                       },
                       "required": [
@@ -4673,7 +4793,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/polygonValuesAxis"
+                              "$ref": "#/components/schemas/polygonValuesAxis"
                             },
                             {
                               "properties": {
@@ -4688,10 +4808,10 @@
                           ]
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringSingleValueAxis"
+                          "$ref": "#/components/schemas/stringSingleValueAxis"
                         }
                       },
                       "required": [
@@ -4718,7 +4838,7 @@
                         "composite": {
                           "allOf": [
                             {
-                              "$ref": "#/definitions/polygonValuesAxis"
+                              "$ref": "#/components/schemas/polygonValuesAxis"
                             },
                             {
                               "properties": {
@@ -4733,10 +4853,10 @@
                           ]
                         },
                         "z": {
-                          "$ref": "#/definitions/numericSingleValueAxis"
+                          "$ref": "#/components/schemas/numericSingleValueAxis"
                         },
                         "t": {
-                          "$ref": "#/definitions/stringValuesAxis"
+                          "$ref": "#/components/schemas/stringValuesAxis"
                         }
                       },
                       "required": [
@@ -4751,188 +4871,14 @@
           }
         }
       },
-      "observedProperty": {
-        "type": "object",
-        "description": "A definition of the quantity being measured.",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "label": {
-            "$ref": "#/components/schemas/i18n"
-          },
-          "description": {
-            "$ref": "#/components/schemas/i18n"
-          },
-          "categories": {
-            "type": "array",
-            "items": {
-              "type": "object",
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "label": {
-                  "$ref": "#/components/schemas/i18n"
-                },
-                "description": {
-                  "$ref": "#/components/schemas/i18n"
-                }
-              },
-              "required": [
-                "id",
-                "label"
-              ]
-            },
-            "minItems": 1
-          }
-        },
-        "required": [
-          "label"
-        ]
-      },
-      "unit": {
-        "type": "object",
-        "description": "The units of measure",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "label": {
-            "$ref": "#/components/schemas/i18n"
-          },
-          "symbol": {
-            "allOf": [
-              {
-                "type": [
-                  "string",
-                  "object"
-                ]
-              },
-              {
-                "if": {
-                  "type": "object"
-                },
-                "then": {
-                  "properties": {
-                    "type": {
-                      "type": "string"
-                    },
-                    "value": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "type",
-                    "value"
-                  ]
-                }
-              }
-            ]
-          }
-        },
-        "anyOf": [
+      "domain": {
+        "allOf": [
           {
-            "required": [
-              "label"
-            ]
+            "$ref": "#/components/schemas/domainBase"
           },
           {
             "required": [
-              "symbol"
-            ]
-          }
-        ]
-      },
-      "parameter": {
-        "type": "object",
-        "description": "Represents metadata about the values of the coverage",
-        "properties": {
-          "id": {
-            "type": "string"
-          },
-          "type": {
-            "description": "Type of the parameter object, must be \"Parameter\"",
-            "const": "Parameter"
-          },
-          "description": {
-            "$ref": "#/components/schemas/i18n"
-          },
-          "observedProperty": {
-            "$ref": "#/components/schemas/observedProperty"
-          },
-          "unit": {
-            "$ref": "#/components/schemas/unit"
-          },
-          "categoryEncoding": {
-            "type": "object",
-            "description": "Maps IDs of categories in the observedProperty to range values",
-            "patternProperties": {
-              ".+": {
-                "oneOf": [
-                  {
-                    "type": "integer"
-                  },
-                  {
-                    "type": "array",
-                    "items": {
-                      "type": "integer"
-                    },
-                    "minItems": 1,
-                    "uniqueItems": true
-                  }
-                ]
-              }
-            }
-          }
-        },
-        "required": [
-          "type",
-          "observedProperty"
-        ]
-      },
-      "parameterGroup": {
-        "type": "object",
-        "description": "Represents logical groups of parameters",
-        "properties": {
-          "type": {
-            "description": "Type of the parameter group object, must be \"ParameterGroup\"",
-            "const": "ParameterGroup"
-          },
-          "id": {
-            "type": "string"
-          },
-          "label": {
-            "$ref": "#/components/schemas/i18n"
-          },
-          "description": {
-            "$ref": "#/components/schemas/i18n"
-          },
-          "observedProperty": {
-            "$ref": "#/components/schemas/observedProperty"
-          },
-          "members": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            },
-            "minItems": 1,
-            "uniqueItems": true
-          }
-        },
-        "required": [
-          "type",
-          "members"
-        ],
-        "anyOf": [
-          {
-            "required": [
-              "label"
-            ]
-          },
-          {
-            "required": [
-              "observedProperty"
+              "referencing"
             ]
           }
         ]
@@ -5152,6 +5098,192 @@
           "tileSets"
         ]
       },
+      "covjsonObservedProperty": {
+        "type": "object",
+        "description": "A definition of the quantity being measured.",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "$ref": "#/components/schemas/covjsonI18n"
+          },
+          "description": {
+            "$ref": "#/components/schemas/covjsonI18n"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "label": {
+                  "$ref": "#/components/schemas/covjsonI18n"
+                },
+                "description": {
+                  "$ref": "#/components/schemas/covjsonI18n"
+                }
+              },
+              "required": [
+                "id",
+                "label"
+              ]
+            },
+            "minItems": 1
+          }
+        },
+        "required": [
+          "label"
+        ]
+      },
+      "covjsonUnit": {
+        "type": "object",
+        "description": "The units of measure",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "$ref": "#/components/schemas/covjsonI18n"
+          },
+          "symbol": {
+            "allOf": [
+              {
+                "type": [
+                  "string",
+                  "object"
+                ]
+              },
+              {
+                "if": {
+                  "type": "object"
+                },
+                "then": {
+                  "properties": {
+                    "type": {
+                      "type": "string"
+                    },
+                    "value": {
+                      "type": "string"
+                    }
+                  },
+                  "required": [
+                    "type",
+                    "value"
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "anyOf": [
+          {
+            "required": [
+              "label"
+            ]
+          },
+          {
+            "required": [
+              "symbol"
+            ]
+          }
+        ]
+      },
+      "covjsonParameter": {
+        "type": "object",
+        "description": "Represents metadata about the values of the coverage",
+        "properties": {
+          "id": {
+            "type": "string"
+          },
+          "type": {
+            "description": "Type of the parameter object, must be \"Parameter\"",
+            "const": "Parameter"
+          },
+          "description": {
+            "$ref": "#/components/schemas/covjsonI18n"
+          },
+          "observedProperty": {
+            "$ref": "#/components/schemas/covjsonObservedProperty"
+          },
+          "unit": {
+            "$ref": "#/components/schemas/covjsonUnit"
+          },
+          "categoryEncoding": {
+            "type": "object",
+            "description": "Maps IDs of categories in the observedProperty to range values",
+            "patternProperties": {
+              ".+": {
+                "oneOf": [
+                  {
+                    "type": "integer"
+                  },
+                  {
+                    "type": "array",
+                    "items": {
+                      "type": "integer"
+                    },
+                    "minItems": 1,
+                    "uniqueItems": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "required": [
+          "type",
+          "observedProperty"
+        ]
+      },
+      "covjsonParameterGroup": {
+        "type": "object",
+        "description": "Represents logical groups of parameters",
+        "properties": {
+          "type": {
+            "description": "Type of the parameter group object, must be \"ParameterGroup\"",
+            "const": "ParameterGroup"
+          },
+          "id": {
+            "type": "string"
+          },
+          "label": {
+            "$ref": "#/components/schemas/covjsonI18n"
+          },
+          "description": {
+            "$ref": "#/components/schemas/covjsonI18n"
+          },
+          "observedProperty": {
+            "$ref": "#/components/schemas/covjsonObservedProperty"
+          },
+          "members": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "minItems": 1,
+            "uniqueItems": true
+          }
+        },
+        "required": [
+          "type",
+          "members"
+        ],
+        "anyOf": [
+          {
+            "required": [
+              "label"
+            ]
+          },
+          {
+            "required": [
+              "observedProperty"
+            ]
+          }
+        ]
+      },
       "coverageBase": {
         "description": "A Coverage, representing a mapping from a domain to sets of data values described by parameters.",
         "type": "object",
@@ -5187,14 +5319,14 @@
             "type": "object",
             "patternProperties": {
               ".+": {
-                "$ref": "#/components/schemas/parameter"
+                "$ref": "#/components/schemas/covjsonParameter"
               }
             }
           },
           "parameterGroups": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/parameterGroup"
+              "$ref": "#/components/schemas/covjsonParameterGroup"
             }
           },
           "ranges": {
@@ -5266,18 +5398,6 @@
           "ranges"
         ]
       },
-      "domain": {
-        "allOf": [
-          {
-            "$ref": "#/components/schemas/domainBase"
-          },
-          {
-            "required": [
-              "referencing"
-            ]
-          }
-        ]
-      },
       "coverage": {
         "allOf": [
           {
@@ -5315,14 +5435,14 @@
             "type": "object",
             "patternProperties": {
               ".+": {
-                "$ref": "#/components/schemas/parameter"
+                "$ref": "#/components/schemas/covjsonParameter"
               }
             }
           },
           "parameterGroups": {
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/parameterGroup"
+              "$ref": "#/components/schemas/covjsonParameterGroup"
             }
           },
           "referencing": {
@@ -5396,9 +5516,7 @@
           }
         ]
       },
-      "coveragejson": {
-        "$id": "https://schemas.opengis.net/covjson/1.0/coveragejson.json",
-        "$schema": "http://json-schema.org/draft-07/schema",
+      "coverageJSON": {
         "description": "A CoverageJSON object",
         "type": "object",
         "properties": {
@@ -5476,1696 +5594,7 @@
               "$ref": "#/components/schemas/coverageCollection"
             }
           }
-        ],
-        "definitions": {
-          "anyAxis": {
-            "description": "Validates any axis",
-            "if": {
-              "required": [
-                "values"
-              ]
-            },
-            "then": {
-              "$ref": "#/components/schemas/valuesAxis"
-            },
-            "else": {
-              "$ref": "#/components/schemas/numericRegularlySpacedAxis"
-            }
-          },
-          "coverage": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/coverageBase"
-              },
-              {
-                "required": [
-                  "parameters"
-                ],
-                "properties": {
-                  "domain": {
-                    "if": {
-                      "type": "object"
-                    },
-                    "then": {
-                      "required": [
-                        "referencing"
-                      ]
-                    }
-                  }
-                }
-              }
-            ]
-          },
-          "coverageBase": {
-            "description": "A Coverage, representing a mapping from a domain to sets of data values described by parameters.",
-            "type": "object",
-            "properties": {
-              "type": {
-                "const": "Coverage"
-              },
-              "id": {
-                "type": "string"
-              },
-              "domainType": {
-                "type": "string"
-              },
-              "domain": {
-                "allOf": [
-                  {
-                    "type": [
-                      "string",
-                      "object"
-                    ]
-                  },
-                  {
-                    "if": {
-                      "type": "object"
-                    },
-                    "then": {
-                      "$ref": "#/components/schemas/domainBase"
-                    }
-                  }
-                ]
-              },
-              "parameters": {
-                "type": "object",
-                "patternProperties": {
-                  ".+": {
-                    "$ref": "#/components/schemas/parameter"
-                  }
-                }
-              },
-              "parameterGroups": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/parameterGroup"
-                }
-              },
-              "ranges": {
-                "type": "object",
-                "patternProperties": {
-                  ".+": {
-                    "allOf": [
-                      {
-                        "type": [
-                          "string",
-                          "object"
-                        ]
-                      },
-                      {
-                        "if": {
-                          "type": "object"
-                        },
-                        "then": {
-                          "properties": {
-                            "type": {
-                              "enum": [
-                                "NdArray",
-                                "TiledNdArray"
-                              ]
-                            }
-                          },
-                          "required": [
-                            "type"
-                          ]
-                        }
-                      },
-                      {
-                        "if": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "const": "NdArray"
-                            }
-                          }
-                        },
-                        "then": {
-                          "$ref": "#/components/schemas/ndArray"
-                        }
-                      },
-                      {
-                        "if": {
-                          "type": "object",
-                          "properties": {
-                            "type": {
-                              "const": "TiledNdArray"
-                            }
-                          }
-                        },
-                        "then": {
-                          "$ref": "#/components/schemas/tiledNdArray"
-                        }
-                      }
-                    ]
-                  }
-                }
-              },
-              "rangeAlternates": {
-                "type": "object"
-              }
-            },
-            "required": [
-              "type",
-              "domain",
-              "ranges"
-            ]
-          },
-          "coverageCollection": {
-            "description": "A collection of coverage objects",
-            "properties": {
-              "type": {
-                "const": "CoverageCollection"
-              },
-              "domainType": {
-                "type": "string"
-              },
-              "parameters": {
-                "type": "object",
-                "patternProperties": {
-                  ".+": {
-                    "$ref": "#/components/schemas/parameter"
-                  }
-                }
-              },
-              "parameterGroups": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/parameterGroup"
-                }
-              },
-              "referencing": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/referenceSystemConnection"
-                }
-              },
-              "coverages": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/coverageBase"
-                }
-              }
-            },
-            "required": [
-              "type",
-              "coverages"
-            ],
-            "allOf": [
-              {
-                "$comment": "If no parameters are present at collection level then each coverage must have their own",
-                "if": {
-                  "not": {
-                    "required": [
-                      "parameters"
-                    ]
-                  }
-                },
-                "then": {
-                  "properties": {
-                    "coverages": {
-                      "items": {
-                        "required": [
-                          "parameters"
-                        ]
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "$comment": "If no \"referencing\" member is present at collection level then each coverage domain must have its own",
-                "if": {
-                  "not": {
-                    "required": [
-                      "referencing"
-                    ]
-                  }
-                },
-                "then": {
-                  "properties": {
-                    "coverages": {
-                      "items": {
-                        "properties": {
-                          "domain": {
-                            "if": {
-                              "type": "object"
-                            },
-                            "then": {
-                              "required": [
-                                "referencing"
-                              ]
-                            }
-                          }
-                        }
-                      }
-                    }
-                  }
-                }
-              }
-            ]
-          },
-          "domain": {
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/domainBase"
-              },
-              {
-                "required": [
-                  "referencing"
-                ]
-              }
-            ]
-          },
-          "domainBase": {
-            "description": "A Domain, which defines a set of positions and their extent in one or more referencing systems",
-            "type": "object",
-            "properties": {
-              "type": {
-                "const": "Domain"
-              },
-              "domainType": {
-                "type": "string"
-              },
-              "axes": {
-                "type": "object",
-                "description": "Set of Axis objects, keyed by axis identifier",
-                "minProperties": 1,
-                "patternProperties": {
-                  ".+": {
-                    "$ref": "#/components/schemas/anyAxis"
-                  }
-                }
-              },
-              "referencing": {
-                "type": "array",
-                "items": {
-                  "$ref": "#/components/schemas/referenceSystemConnection"
-                }
-              }
-            },
-            "required": [
-              "type",
-              "axes"
-            ],
-            "dependencies": {
-              "domainType": {
-                "allOf": [
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "Grid"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "Grid domain: x and y are required, z and t optional",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "x": {
-                              "$ref": "#/definitions/numericAxis"
-                            },
-                            "y": {
-                              "$ref": "#/definitions/numericAxis"
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringValuesAxis"
-                            }
-                          },
-                          "required": [
-                            "x",
-                            "y"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "Trajectory"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "Trajectory domain: mandatory composite axis and optional z axis",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/tupleValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "values": {
-                                      "items": {
-                                        "$comment": "In a Trajectory, tuples always have 3 (txy) or 4 (txyz) values",
-                                        "minItems": 3,
-                                        "maxItems": 4
-                                      }
-                                    },
-                                    "coordinates": {
-                                      "enum": [
-                                        [
-                                          "t",
-                                          "x",
-                                          "y",
-                                          "z"
-                                        ],
-                                        [
-                                          "t",
-                                          "x",
-                                          "y"
-                                        ]
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            }
-                          },
-                          "required": [
-                            "composite"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "VerticalProfile"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "Vertical Profile domain: mandatory x, y and z axis and optional t axis",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "x": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "y": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringSingleValueAxis"
-                            }
-                          },
-                          "required": [
-                            "x",
-                            "y",
-                            "z"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "Point"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "Point domain: mandatory x and y axis, optional z and t axis",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "x": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "y": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringSingleValueAxis"
-                            }
-                          },
-                          "required": [
-                            "x",
-                            "y"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "PointSeries"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "PointSeries domain: mandatory x, y and t axis, optional z axis",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "x": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "y": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringValuesAxis"
-                            }
-                          },
-                          "required": [
-                            "x",
-                            "y",
-                            "t"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "MultiPoint"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "MultiPoint domain: mandatory composite axis, optional t axis",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/tupleValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "values": {
-                                      "items": {
-                                        "$comment": "In a MultiPoint, tuples always have 2 (xy) or 3 values (xyz)",
-                                        "minItems": 2,
-                                        "maxItems": 3
-                                      }
-                                    },
-                                    "coordinates": {
-                                      "enum": [
-                                        [
-                                          "x",
-                                          "y",
-                                          "z"
-                                        ],
-                                        [
-                                          "x",
-                                          "y"
-                                        ]
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringSingleValueAxis"
-                            }
-                          },
-                          "required": [
-                            "composite"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "MultiPointSeries"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "MultiPointSeries domain: mandatory composite and t axes",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/tupleValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "values": {
-                                      "items": {
-                                        "$comment": "In a MultiPointSeries, tuples always have 2 (xy) or 3 values (xyz)",
-                                        "minItems": 2,
-                                        "maxItems": 3
-                                      }
-                                    },
-                                    "coordinates": {
-                                      "enum": [
-                                        [
-                                          "x",
-                                          "y",
-                                          "z"
-                                        ],
-                                        [
-                                          "x",
-                                          "y"
-                                        ]
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringValuesAxis"
-                            }
-                          },
-                          "required": [
-                            "composite",
-                            "t"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "Section"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "Section domain: mandatory composite and z axes",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/tupleValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "values": {
-                                      "items": {
-                                        "$comment": "In a Section, tuples always have 3 values (txy)",
-                                        "minItems": 3,
-                                        "maxItems": 3
-                                      }
-                                    },
-                                    "coordinates": {
-                                      "const": [
-                                        "t",
-                                        "x",
-                                        "y"
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericAxis"
-                            }
-                          },
-                          "required": [
-                            "composite",
-                            "z"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "Polygon"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "Polygon domain: mandatory composite axis, optional z and t axes",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/polygonValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "values": {
-                                      "$comment": "There can only be one polygon in the axis",
-                                      "maxItems": 1
-                                    },
-                                    "coordinates": {
-                                      "const": [
-                                        "x",
-                                        "y"
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringSingleValueAxis"
-                            }
-                          },
-                          "required": [
-                            "composite"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "PolygonSeries"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "PolygonSeries domain: mandatory composite axis, optional z and t axes",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/polygonValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "values": {
-                                      "$comment": "There can only be one polygon in the axis",
-                                      "maxItems": 1
-                                    },
-                                    "coordinates": {
-                                      "const": [
-                                        "x",
-                                        "y"
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringValuesAxis"
-                            }
-                          },
-                          "required": [
-                            "composite"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "MultiPolygon"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "MultiPolygon domain: mandatory composite axis, optional z and t axes",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/polygonValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "coordinates": {
-                                      "const": [
-                                        "x",
-                                        "y"
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringSingleValueAxis"
-                            }
-                          },
-                          "required": [
-                            "composite"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "domainType": {
-                          "const": "MultiPolygonSeries"
-                        }
-                      }
-                    },
-                    "then": {
-                      "description": "MultiPolygonSeries domain: mandatory composite axis, optional z and t axes",
-                      "properties": {
-                        "axes": {
-                          "properties": {
-                            "composite": {
-                              "allOf": [
-                                {
-                                  "$ref": "#/definitions/polygonValuesAxis"
-                                },
-                                {
-                                  "properties": {
-                                    "coordinates": {
-                                      "const": [
-                                        "x",
-                                        "y"
-                                      ]
-                                    }
-                                  }
-                                }
-                              ]
-                            },
-                            "z": {
-                              "$ref": "#/definitions/numericSingleValueAxis"
-                            },
-                            "t": {
-                              "$ref": "#/definitions/stringValuesAxis"
-                            }
-                          },
-                          "required": [
-                            "composite"
-                          ],
-                          "additionalProperties": false
-                        }
-                      }
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "i18n": {
-            "type": "object",
-            "description": "Object representing an internationalised string where keys are BCP 47 language tags.",
-            "patternProperties": {
-              "^(((([A-Za-z]{2,3}(-([A-Za-z]{3}(-[A-Za-z]{3}){0,2}))?)|[A-Za-z]{4}|[A-Za-z]{5,8})(-([A-Za-z]{4}))?(-([A-Za-z]{2}|[0-9]{3}))?(-([A-Za-z0-9]{5,8}|[0-9][A-Za-z0-9]{3}))*(-([0-9A-WY-Za-wy-z](-[A-Za-z0-9]{2,8})+))*))$": {
-                "type": "string"
-              }
-            },
-            "additionalProperties": false
-          },
-          "ndArray": {
-            "type": "object",
-            "description": "Object representing a multidimensional (>= 0D) array with named axes, encoded as a flat one-dimensional array in row-major order",
-            "properties": {
-              "type": {
-                "const": "NdArray"
-              },
-              "dataType": {
-                "enum": [
-                  "float",
-                  "integer",
-                  "string"
-                ]
-              },
-              "shape": {
-                "type": "array",
-                "items": {
-                  "type": "number"
-                }
-              },
-              "axisNames": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "uniqueItems": true
-              },
-              "values": {
-                "type": "array",
-                "minItems": 1
-              }
-            },
-            "allOf": [
-              {
-                "if": {
-                  "properties": {
-                    "dataType": {
-                      "const": "float"
-                    }
-                  }
-                },
-                "then": {
-                  "properties": {
-                    "values": {
-                      "items": {
-                        "type": [
-                          "number",
-                          "null"
-                        ]
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "if": {
-                  "properties": {
-                    "dataType": {
-                      "const": "integer"
-                    }
-                  }
-                },
-                "then": {
-                  "properties": {
-                    "values": {
-                      "items": {
-                        "type": [
-                          "integer",
-                          "null"
-                        ]
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "if": {
-                  "properties": {
-                    "dataType": {
-                      "const": "string"
-                    }
-                  }
-                },
-                "then": {
-                  "properties": {
-                    "values": {
-                      "items": {
-                        "type": [
-                          "string",
-                          "null"
-                        ]
-                      }
-                    }
-                  }
-                }
-              },
-              {
-                "if": {
-                  "anyOf": [
-                    {
-                      "properties": {
-                        "values": {
-                          "minItems": 2
-                        }
-                      }
-                    },
-                    {
-                      "properties": {
-                        "shape": {
-                          "minItems": 1
-                        }
-                      },
-                      "required": [
-                        "shape"
-                      ]
-                    },
-                    {
-                      "properties": {
-                        "axisNames": {
-                          "minItems": 1
-                        }
-                      },
-                      "required": [
-                        "axisNames"
-                      ]
-                    }
-                  ]
-                },
-                "then": {
-                  "properties": {
-                    "shape": {
-                      "minItems": 1
-                    },
-                    "axisNames": {
-                      "minItems": 1
-                    }
-                  },
-                  "required": [
-                    "shape",
-                    "axisNames"
-                  ]
-                }
-              }
-            ],
-            "required": [
-              "type",
-              "dataType",
-              "values"
-            ]
-          },
-          "numericAxis": {
-            "description": "Simple axis with numeric values",
-            "if": {
-              "required": [
-                "values"
-              ]
-            },
-            "then": {
-              "$ref": "#/components/schemas/numericValuesAxis"
-            },
-            "else": {
-              "$ref": "#/components/schemas/numericRegularlySpacedAxis"
-            }
-          },
-          "numericRegularlySpacedAxis": {
-            "description": "A regularly-spaced numeric axis",
-            "properties": {
-              "start": {
-                "type": "number"
-              },
-              "stop": {
-                "type": "number"
-              },
-              "num": {
-                "type": "integer",
-                "minimum": 1
-              }
-            },
-            "required": [
-              "start",
-              "stop",
-              "num"
-            ],
-            "additionalProperties": false
-          },
-          "numericSingleValueAxis": {
-            "description": "Axis defined by single numeric value",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/numericValuesAxis"
-              },
-              {
-                "properties": {
-                  "values": {
-                    "maxItems": 1
-                  }
-                }
-              }
-            ]
-          },
-          "numericValuesAxis": {
-            "description": "Axis defined by list of numeric axis values and optional bounds",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/valuesAxisBase"
-              },
-              {
-                "properties": {
-                  "values": {
-                    "items": {
-                      "type": "number"
-                    }
-                  },
-                  "bounds": {
-                    "items": {
-                      "type": "number"
-                    }
-                  }
-                },
-                "additionalProperties": false
-              }
-            ]
-          },
-          "observedProperty": {
-            "type": "object",
-            "description": "A definition of the quantity being measured.",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "label": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "description": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "categories": {
-                "type": "array",
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "label": {
-                      "$ref": "#/components/schemas/i18n"
-                    },
-                    "description": {
-                      "$ref": "#/components/schemas/i18n"
-                    }
-                  },
-                  "required": [
-                    "id",
-                    "label"
-                  ]
-                },
-                "minItems": 1
-              }
-            },
-            "required": [
-              "label"
-            ]
-          },
-          "parameter": {
-            "type": "object",
-            "description": "Represents metadata about the values of the coverage",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "type": {
-                "description": "Type of the parameter object, must be \"Parameter\"",
-                "const": "Parameter"
-              },
-              "description": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "observedProperty": {
-                "$ref": "#/components/schemas/observedProperty"
-              },
-              "unit": {
-                "$ref": "#/components/schemas/unit"
-              },
-              "categoryEncoding": {
-                "type": "object",
-                "description": "Maps IDs of categories in the observedProperty to range values",
-                "patternProperties": {
-                  ".+": {
-                    "oneOf": [
-                      {
-                        "type": "integer"
-                      },
-                      {
-                        "type": "array",
-                        "items": {
-                          "type": "integer"
-                        },
-                        "minItems": 1,
-                        "uniqueItems": true
-                      }
-                    ]
-                  }
-                }
-              }
-            },
-            "required": [
-              "type",
-              "observedProperty"
-            ]
-          },
-          "parameterGroup": {
-            "type": "object",
-            "description": "Represents logical groups of parameters",
-            "properties": {
-              "type": {
-                "description": "Type of the parameter group object, must be \"ParameterGroup\"",
-                "const": "ParameterGroup"
-              },
-              "id": {
-                "type": "string"
-              },
-              "label": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "description": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "observedProperty": {
-                "$ref": "#/components/schemas/observedProperty"
-              },
-              "members": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "minItems": 1,
-                "uniqueItems": true
-              }
-            },
-            "required": [
-              "type",
-              "members"
-            ],
-            "anyOf": [
-              {
-                "required": [
-                  "label"
-                ]
-              },
-              {
-                "required": [
-                  "observedProperty"
-                ]
-              }
-            ]
-          },
-          "polygonValuesAxis": {
-            "description": "Polygon-based axis",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/valuesAxisBase"
-              },
-              {
-                "properties": {
-                  "dataType": {
-                    "const": "polygon"
-                  },
-                  "values": {
-                    "items": {
-                      "description": "A GeoJSON polygon",
-                      "type": "array",
-                      "items": {
-                        "type": "array",
-                        "items": {
-                          "description": "The inner array: the coordinates themselves",
-                          "type": "array",
-                          "items": {
-                            "type": "number"
-                          },
-                          "minItems": 2
-                        },
-                        "minItems": 1
-                      },
-                      "minItems": 1
-                    }
-                  },
-                  "coordinates": {}
-                },
-                "required": [
-                  "dataType",
-                  "values",
-                  "coordinates"
-                ],
-                "additionalProperties": false
-              }
-            ]
-          },
-          "primitiveValuesAxis": {
-            "description": "Validates any axis with primitive values",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/valuesAxisBase"
-              },
-              {
-                "$comment": "This redundant branch exists to fail early with succinct errors",
-                "properties": {
-                  "values": {
-                    "items": {
-                      "oneOf": [
-                        {
-                          "type": "number"
-                        },
-                        {
-                          "type": "string"
-                        }
-                      ]
-                    }
-                  }
-                }
-              },
-              {
-                "if": {
-                  "properties": {
-                    "values": {
-                      "items": {
-                        "type": "number"
-                      }
-                    }
-                  }
-                },
-                "then": {
-                  "$ref": "#/components/schemas/numericValuesAxis"
-                },
-                "else": {
-                  "$ref": "#/components/schemas/stringValuesAxis"
-                }
-              }
-            ]
-          },
-          "referenceSystem": {
-            "type": "object",
-            "properties": {
-              "type": {
-                "type": "string"
-              }
-            },
-            "required": [
-              "type"
-            ],
-            "allOf": [
-              {
-                "if": {
-                  "properties": {
-                    "type": {
-                      "const": "TemporalRS"
-                    }
-                  }
-                },
-                "then": {
-                  "description": "Temporal reference system",
-                  "properties": {
-                    "calendar": {
-                      "type": "string",
-                      "oneOf": [
-                        {
-                          "const": "Gregorian"
-                        },
-                        {
-                          "pattern": "^https?://"
-                        }
-                      ]
-                    },
-                    "timeScale": {
-                      "type": "string"
-                    }
-                  },
-                  "required": [
-                    "calendar"
-                  ]
-                }
-              },
-              {
-                "if": {
-                  "properties": {
-                    "type": {
-                      "const": "IdentifierRS"
-                    }
-                  }
-                },
-                "then": {
-                  "description": "An identifier-based reference system",
-                  "properties": {
-                    "id": {
-                      "type": "string"
-                    },
-                    "label": {
-                      "$ref": "#/components/schemas/i18n"
-                    },
-                    "description": {
-                      "$ref": "#/components/schemas/i18n"
-                    },
-                    "targetConcept": {
-                      "$ref": "#/components/schemas/targetConcept"
-                    },
-                    "identifiers": {
-                      "type": "object",
-                      "patternProperties": {
-                        ".+": {
-                          "$ref": "#/components/schemas/targetConcept"
-                        }
-                      }
-                    }
-                  },
-                  "required": [
-                    "targetConcept"
-                  ]
-                }
-              }
-            ]
-          },
-          "referenceSystemConnection": {
-            "description": "Reference System Connection object: connects coordinates to reference systems",
-            "type": "object",
-            "properties": {
-              "coordinates": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "minItems": 1
-              },
-              "system": {
-                "$ref": "#/components/schemas/referenceSystem"
-              }
-            },
-            "required": [
-              "coordinates",
-              "system"
-            ]
-          },
-          "stringSingleValueAxis": {
-            "description": "Axis defined by single string value",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/stringValuesAxis"
-              },
-              {
-                "properties": {
-                  "values": {
-                    "maxItems": 1
-                  }
-                }
-              }
-            ]
-          },
-          "stringValuesAxis": {
-            "description": "Simple axis with string values (e.g. time strings)",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/valuesAxisBase"
-              },
-              {
-                "properties": {
-                  "values": {
-                    "items": {
-                      "type": "string"
-                    }
-                  },
-                  "bounds": {
-                    "items": {
-                      "type": "string"
-                    }
-                  }
-                },
-                "additionalProperties": false
-              }
-            ]
-          },
-          "targetConcept": {
-            "type": "object",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "label": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "description": {
-                "$ref": "#/components/schemas/i18n"
-              }
-            },
-            "required": [
-              "label"
-            ]
-          },
-          "tiledNdArray": {
-            "type": "object",
-            "description": "Object representing a multidimensional (>= 1D) array with named axes split up into sets of linked NdArray documents",
-            "properties": {
-              "type": {
-                "const": "TiledNdArray"
-              },
-              "dataType": {
-                "enum": [
-                  "float",
-                  "integer",
-                  "string"
-                ]
-              },
-              "shape": {
-                "type": "array",
-                "items": {
-                  "type": "number"
-                },
-                "minItems": 1
-              },
-              "axisNames": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "minItems": 1,
-                "uniqueItems": true
-              },
-              "tileSets": {
-                "type": "array",
-                "minItems": 1,
-                "items": {
-                  "type": "object",
-                  "properties": {
-                    "tileShape": {
-                      "type": "array",
-                      "items": {
-                        "type": [
-                          "number",
-                          "null"
-                        ]
-                      },
-                      "minItems": 1
-                    },
-                    "urlTemplate": {
-                      "type": "string",
-                      "description": "RFC 6570 Level 1 URI template"
-                    }
-                  },
-                  "required": [
-                    "tileShape",
-                    "urlTemplate"
-                  ]
-                }
-              }
-            },
-            "required": [
-              "type",
-              "dataType",
-              "shape",
-              "axisNames",
-              "tileSets"
-            ]
-          },
-          "tupleValuesAxis": {
-            "description": "Tuple-based axis",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/valuesAxisBase"
-              },
-              {
-                "properties": {
-                  "dataType": {
-                    "const": "tuple"
-                  },
-                  "values": {
-                    "items": {
-                      "description": "A tuple of axis values (numbers or strings)",
-                      "type": "array",
-                      "items": {
-                        "type": [
-                          "number",
-                          "string"
-                        ]
-                      },
-                      "minItems": 2
-                    }
-                  },
-                  "coordinates": {}
-                },
-                "required": [
-                  "dataType",
-                  "values",
-                  "coordinates"
-                ],
-                "additionalProperties": false
-              }
-            ]
-          },
-          "unit": {
-            "type": "object",
-            "description": "The units of measure",
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "label": {
-                "$ref": "#/components/schemas/i18n"
-              },
-              "symbol": {
-                "allOf": [
-                  {
-                    "type": [
-                      "string",
-                      "object"
-                    ]
-                  },
-                  {
-                    "if": {
-                      "type": "object"
-                    },
-                    "then": {
-                      "properties": {
-                        "type": {
-                          "type": "string"
-                        },
-                        "value": {
-                          "type": "string"
-                        }
-                      },
-                      "required": [
-                        "type",
-                        "value"
-                      ]
-                    }
-                  }
-                ]
-              }
-            },
-            "anyOf": [
-              {
-                "required": [
-                  "label"
-                ]
-              },
-              {
-                "required": [
-                  "symbol"
-                ]
-              }
-            ]
-          },
-          "valuesAxis": {
-            "description": "Validates any values-based axis",
-            "allOf": [
-              {
-                "$ref": "#/components/schemas/valuesAxisBase"
-              },
-              {
-                "if": {
-                  "not": {
-                    "required": [
-                      "dataType"
-                    ]
-                  }
-                },
-                "then": {
-                  "$ref": "#/components/schemas/primitiveValuesAxis"
-                }
-              }
-            ],
-            "dependencies": {
-              "dataType": {
-                "allOf": [
-                  {
-                    "if": {
-                      "properties": {
-                        "dataType": {
-                          "const": "tuple"
-                        }
-                      }
-                    },
-                    "then": {
-                      "$ref": "#/definitions/tupleValuesAxis"
-                    }
-                  },
-                  {
-                    "if": {
-                      "properties": {
-                        "dataType": {
-                          "const": "polygon"
-                        }
-                      }
-                    },
-                    "then": {
-                      "$ref": "#/definitions/polygonValuesAxis"
-                    }
-                  }
-                ]
-              }
-            }
-          },
-          "valuesAxisBase": {
-            "$comment": "Base schema for values-based axis schemas",
-            "properties": {
-              "dataType": {
-                "type": "string",
-                "not": {
-                  "const": "primitive"
-                }
-              },
-              "values": {
-                "type": "array",
-                "minItems": 1,
-                "uniqueItems": true
-              },
-              "coordinates": {
-                "type": "array",
-                "items": {
-                  "type": "string"
-                },
-                "minItems": 2
-              },
-              "bounds": {
-                "description": "Optional axis bounds. Must be twice as long (and same data type) as \"values\"",
-                "type": "array",
-                "minItems": 2
-              }
-            },
-            "required": [
-              "values"
-            ]
-          }
-        }
+        ]
       },
       "pointGeoJSON": {
         "type": "object",
@@ -7503,14 +5932,14 @@
           }
         }
       },
-      "i18n-2": {
+      "i18n": {
         "type": "object",
         "description": "Object representing an internationalised string.",
         "additionalProperties": {
           "type": "string"
         }
       },
-      "observedProperty-2": {
+      "observedProperty": {
         "type": "object",
         "description": "A definition of the quantity being measured.",
         "properties": {
@@ -7518,10 +5947,10 @@
             "type": "string"
           },
           "label": {
-            "$ref": "#/components/schemas/i18n-2"
+            "$ref": "#/components/schemas/i18n"
           },
           "description": {
-            "$ref": "#/components/schemas/i18n-2"
+            "$ref": "#/components/schemas/i18n"
           },
           "categories": {
             "type": "array",
@@ -7532,10 +5961,10 @@
                   "type": "string"
                 },
                 "label": {
-                  "$ref": "#/components/schemas/i18n-2"
+                  "$ref": "#/components/schemas/i18n"
                 },
                 "description": {
-                  "$ref": "#/components/schemas/i18n-2"
+                  "$ref": "#/components/schemas/i18n"
                 }
               },
               "required": [
@@ -7550,7 +5979,7 @@
           "label"
         ]
       },
-      "unit-2": {
+      "unit": {
         "type": "object",
         "description": "The units of measure",
         "properties": {
@@ -7558,7 +5987,7 @@
             "type": "string"
           },
           "label": {
-            "$ref": "#/components/schemas/i18n-2"
+            "$ref": "#/components/schemas/i18n"
           },
           "symbol": {
             "oneOf": [
@@ -7596,7 +6025,7 @@
           }
         ]
       },
-      "parameter-2": {
+      "parameter": {
         "type": "object",
         "description": "Represents metadata about the values of the coverage",
         "properties": {
@@ -7611,13 +6040,13 @@
             ]
           },
           "description": {
-            "$ref": "#/components/schemas/i18n-2"
+            "$ref": "#/components/schemas/i18n"
           },
           "observedProperty": {
-            "$ref": "#/components/schemas/observedProperty-2"
+            "$ref": "#/components/schemas/observedProperty"
           },
           "unit": {
-            "$ref": "#/components/schemas/unit-2"
+            "$ref": "#/components/schemas/unit"
           },
           "categoryEncoding": {
             "type": "object",
@@ -7681,7 +6110,7 @@
             "description": "list of the data parameters available in the collection",
             "type": "array",
             "items": {
-              "$ref": "#/components/schemas/parameter-2"
+              "$ref": "#/components/schemas/parameter"
             }
           },
           "links": {
@@ -7754,7 +6183,7 @@
         "content": {
           "application/vnd.cov+json": {
             "schema": {
-              "$ref": "#/components/schemas/coveragejson"
+              "$ref": "#/components/schemas/coverageJSON"
             }
           },
           "application/geo+json": {
